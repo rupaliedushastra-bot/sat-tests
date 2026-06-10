@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital SAT – Topic 2: Vocabulary in Context</title>
+<title>Digital SAT – Topic 3: Grammar & Usage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="questions2.js"></script>
+<script src="questions.js"></script>
 <link rel="stylesheet" href="../test.css">
 </head>
 <body>
@@ -22,10 +22,10 @@
 <!-- HEADER -->
 <header class="hdr">
   <div class="hdr-brand">
-    <span>📖</span>
+    <span>✏️</span>
     <span>Digital SAT</span>
     <span class="hdr-pill">Topic Test</span>
-    <span class="hdr-module">Vocabulary in Context</span>
+    <span class="hdr-module">Grammar & Usage</span>
   </div>
   <div class="timer" id="timerBox">
     <span>⏱</span>
@@ -38,14 +38,14 @@
   <div class="reg-wrap">
     <div class="reg-card">
       <div class="reg-top">
-        <span class="icon">📖</span>
-        <h2>Vocabulary in Context</h2>
-        <p>Topic Test 2 &nbsp;·&nbsp; 25 Questions &nbsp;·&nbsp; 32 Minutes</p>
+        <span class="icon">✏️</span>
+        <h2>Grammar & Usage</h2>
+        <p>Topic Test 3 &nbsp;·&nbsp; 25 Questions &nbsp;·&nbsp; 32 Minutes</p>
       </div>
       <div class="stat-strip">
         <div class="s"><div class="val">25</div><div class="lbl">Questions</div></div>
         <div class="s"><div class="val">32</div><div class="lbl">Minutes</div></div>
-        <div class="s"><div class="val">Vocabulary in Context</div><div class="lbl">Topic</div></div>
+        <div class="s"><div class="val">Grammar & Usage</div><div class="lbl">Topic</div></div>
         <div class="s"><div class="val">SAT</div><div class="lbl">Format</div></div>
       </div>
       <div class="reg-body">
@@ -60,7 +60,7 @@
         <div class="field">
           <label>Phone Number</label>
           <div class="phone-row">
-          <select id="regCC">
+            <select id="regCC">
               <option value="+91" selected>🇮🇳 +91 (India (भारत))</option>
               <option value="+93">🇦🇫 +93 (Afghanistan)</option>
               <option value="+358">🇦🇽 +358 (Åland Islands)</option>
@@ -327,7 +327,7 @@
     <main>
       <div class="mod-banner">
         <div>
-          <div class="mod-name">📖 Vocabulary in Context – Topic Test 2</div>
+          <div class="mod-name">✏️ Grammar & Usage – Topic Test 3</div>
           <div class="mod-info">25 Questions · SAT Format · Read each passage carefully</div>
         </div>
         <div style="font-size:0.8rem;color:var(--muted)" id="modProgress">Q 1 of 25</div>
@@ -335,7 +335,7 @@
       <div class="q-card">
         <div class="q-meta">
           <span class="q-badge" id="qBadge">Q 1</span>
-          <span class="q-topic-tag">Vocabulary in Context</span>
+          <span class="q-topic-tag" id="qTopic">Grammar & Usage</span>
         </div>
         <div class="q-text" id="qText">Loading question...</div>
         <div class="opts" id="qOpts"></div>
@@ -391,6 +391,6 @@
   </div>
 </div>
 
-<script src="script2.js"></script>
+<script src="script3.js"></script>
 </body>
 </html>

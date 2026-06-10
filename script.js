@@ -90,9 +90,28 @@ function showPage(id) {
 function startTest() {
   const name  = $('regName').value.trim();
   const email = $('regEmail').value.trim();
-  const phone = ($('regCC').value + ($('regPhone').value || '').trim()).trim();
-  if (!name)  { customAlert('Please enter your full name.');     $('regName').focus();  return; }
-  if (!email) { customAlert('Please enter your email address.'); $('regEmail').focus(); return; }
+  const phoneVal = ($('regPhone').value || '').trim();
+  const phone = phoneVal ? ($('regCC').value + ' ' + phoneVal).trim() : '';
+
+  if (!name || name.length < 2) { 
+    customAlert('Please enter a valid full name (at least 2 characters).'); 
+    $('regName').focus(); 
+    return; 
+  }
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) { 
+    customAlert('Please enter a valid email address.'); 
+    $('regEmail').focus(); 
+    return; 
+  }
+
+  if (phoneVal && !/^\d{7,15}$/.test(phoneVal.replace(/[- ]/g, ''))) {
+    customAlert('Please enter a valid phone number (7-15 digits).');
+    $('regPhone').focus();
+    return;
+  }
+
   student = { name, email, phone };
   saveUserToSupabase(student); // Save to Supabase when user starts
   showPage('pageTest');

@@ -20,7 +20,7 @@ async function saveUserToSupabase(student) {
         name: student.name,
         email: student.email,
         phone: student.phone,
-        topic: 'Vocabulary in Context',
+        topic: 'Sentence Completion',
         created_at: new Date().toISOString()
       })
     });
@@ -44,8 +44,8 @@ async function saveToSupabase(result) {
         name:         result.student.name,
         email:        result.student.email,
         phone:        result.student.phone || '',
-        topic:        'Vocabulary in Context',
-        topic_number: 2,
+        topic:        'Sentence Completion',
+        topic_number: 4,
         correct:      result.correct,
         wrong:        result.wrong,
         unattempted:  result.unattempted,
@@ -140,6 +140,7 @@ function paintTimer() {
 function renderQ() {
   const q = QUESTIONS[currentQ];
   $('qBadge').textContent = `Q ${q.id}`;
+  if ($('qTopic')) $('qTopic').textContent = q.topic || 'Sentence Completion';
   $('qText').textContent  = q.text;
   $('modProgress').textContent = `Q ${currentQ+1} of ${QUESTIONS.length}`;
   $('btnPrev').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
@@ -250,7 +251,7 @@ function renderResults(result, saveRes) {
 
   wrap.innerHTML = `
     <div class="res-hero">
-      <div style="font-size:0.8rem;opacity:.55;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;position:relative">Topic 2 · Vocabulary in Context</div>
+      <div style="font-size:0.8rem;opacity:.55;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;position:relative">Topic 4 · Sentence Completion</div>
       <div class="sat-score" style="color:${scoreColor}">${scaled}</div>
       <div class="score-line">Section Score · ${correct} / ${total} correct (${pct}%) · Grade: ${grade}</div>
       <div class="score-sub">${student.name} &nbsp;·&nbsp; ${new Date(result.submitTime).toLocaleString()}</div>
@@ -297,23 +298,28 @@ function renderResults(result, saveRes) {
   });
 
   const bands = [
-    { label:'Tone & Connot.', qs: details.slice(0,5) },
-    { label:'Context Meaning', qs: details.slice(5,10) },
-    { label:'Academic Vocab', qs: details.slice(10,15) },
-    { label:'Nuance & Reg.', qs: details.slice(15,20) },
-    { label:'Dual Passage', qs: details.slice(20,25) },
+    { label:'Vocab in Context', qs: details.filter(d=>d.topic==='Vocabulary in Context') },
+    { label:'Transitions', qs: details.filter(d=>d.topic==='Transitions') },
+    { label:'Rhetorical', qs: details.filter(d=>d.topic==='Rhetorical Skills') },
+    { label:'Std English', qs: details.filter(d=>['Standard English Conventions','Parallel Structure','Punctuation','Modifiers'].includes(d.topic)) },
   ];
   const bScores = bands.map(b => b.qs.filter(d=>d.status==='correct').length);
-  const bColors = bScores.map(s => s>=4?'#059669':s>=2?'#d97706':'#dc2626');
+  const bTotals = bands.map(b => b.qs.length || 1);
+  const maxTotal = Math.max(...bTotals);
+  
+  const bColors = bands.map((b, i) => {
+    const pct = bScores[i] / bTotals[i];
+    return pct >= 0.7 ? '#059669' : pct >= 0.4 ? '#d97706' : '#dc2626';
+  });
 
   new Chart($('barChart'), {
     type:'bar',
     data:{ labels: bands.map(b=>b.label),
-      datasets:[{ label:'Correct / 5', data: bScores,
+      datasets:[{ label:'Correct', data: bScores,
         backgroundColor: bColors.map(c=>c+'33'), borderColor: bColors,
         borderWidth:2, borderRadius:6 }] },
     options:{ plugins:{ legend:{display:false} },
-      scales:{ y:{ max:5, ticks:{ stepSize:1, font:{family:'IBM Plex Mono'} } },
+      scales:{ y:{ max: Math.max(8, maxTotal), ticks:{ stepSize:1, font:{family:'IBM Plex Mono'} } },
         x:{ ticks:{ font:{family:'IBM Plex Sans', size:10} } } } }
   });
 }
@@ -327,7 +333,7 @@ function downloadPDF() {
 
   const opt = {
     margin:       [10, 10, 10, 10],
-    filename:     `EduQuest_Report_${student.name.replace(/[^a-zA-Z0-9]/g, '_')}_Topic2.pdf`,
+    filename:     `EduQuest_Report_${student.name.replace(/[^a-zA-Z0-9]/g, '_')}_Topic3.pdf`,
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2, useCORS: true, scrollY: 0 },
     jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
