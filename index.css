@@ -8,7 +8,12 @@ body{font-family:'IBM Plex Sans',sans-serif;background:#0d0d14;color:#fff;min-he
 .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:12px}
 .hero h1 span{background:linear-gradient(135deg,#a78bfa,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{color:rgba(255,255,255,0.5);font-size:0.95rem;max-width:500px;line-height:1.7;margin-bottom:48px}
-.section-title{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.35);margin-bottom:16px;width:100%;max-width:880px;text-align:left;padding:0 8px}
+.tabs{display:flex;gap:12px;margin-bottom:24px;width:100%;max-width:880px;justify-content:center}
+.tab-btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:10px 24px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.2s}
+.tab-btn:hover{background:rgba(255,255,255,0.1);color:#fff}
+.tab-btn.active{background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;border-color:transparent}
+.tab-content{display:none;width:100%;max-width:880px}
+.tab-content.active{display:block}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;max-width:880px;width:100%;margin-bottom:32px}
 .exam-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;text-align:left;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
 .exam-card:hover{border-color:rgba(124,58,237,0.5);transform:translateY(-2px)}
