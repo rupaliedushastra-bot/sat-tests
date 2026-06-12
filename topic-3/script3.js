@@ -141,7 +141,7 @@ function renderQ() {
   const q = QUESTIONS[currentQ];
   $('qBadge').textContent = `Q ${q.id}`;
   if ($('qTopic')) $('qTopic').textContent = q.topic || 'Grammar & Usage';
-  $('qText').textContent  = q.text;
+  $('qText').innerHTML  = q.text.replace(/\n/g, '<br>');
   $('modProgress').textContent = `Q ${currentQ+1} of ${QUESTIONS.length}`;
   $('btnPrev').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
   $('btnNext').textContent = currentQ < QUESTIONS.length-1 ? 'Next →' : '🏁 Submit';

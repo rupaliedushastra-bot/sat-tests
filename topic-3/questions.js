@@ -4,7 +4,7 @@ const QUESTIONS = [
     id: 1,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "The committee discussed the plan for more than three hours, but they couldn't reach a consensus."
+Original Sentence: "The committee discussed the plan for more than three hours, <u>but they couldn't reach a consensus.</u>"
 
 Which choice correctly uses pronoun-antecedent agreement?`,
     options: [
@@ -21,7 +21,7 @@ Which choice correctly uses pronoun-antecedent agreement?`,
     id: 2,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "If the weather is nice, we can have the picnic outside, otherwise, we will stay indoors."
+Original Sentence: "If the weather is nice, we can have the picnic <u>outside, otherwise, we will stay indoors.</u>"
 
 Which choice correctly uses punctuation to join these two independent clauses?`,
     options: [
@@ -38,7 +38,7 @@ Which choice correctly uses punctuation to join these two independent clauses?`,
     id: 3,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "She likes to jog every morning; however, she enjoys the fresh air and quietness."
+Original Sentence: "She likes to jog every <u>morning; however, she enjoys</u> the fresh air and quietness."
 
 The semicolon usage here is problematic because the second clause does not contrast with the first. Which revision best fixes the logical and punctuation issue?`,
     options: [
@@ -55,7 +55,7 @@ The semicolon usage here is problematic because the second clause does not contr
     id: 4,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "Sheila and her friend visited the museum, and they found it to be both educational and fun."
+Original Sentence: "<u>Sheila and her friend visited the museum, and they found it to be both educational and fun.</u>"
 
 Which choice most effectively combines the ideas while maintaining clarity and correct grammar?`,
     options: [
@@ -72,7 +72,7 @@ Which choice most effectively combines the ideas while maintaining clarity and c
     id: 5,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "The manager's feedback was valuable it helped the employees improve their performance."
+Original Sentence: "The manager's feedback was <u>valuable it helped</u> the employees improve their performance."
 
 This sentence contains a run-on error. Which choice correctly fixes it?`,
     options: [
@@ -89,7 +89,7 @@ This sentence contains a run-on error. Which choice correctly fixes it?`,
     id: 6,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "After the meeting ended, the team members discussed their strategies in the conference room."
+Original Sentence: "After the meeting <u>ended, the team members discussed</u> their strategies in the conference room."
 
 Which version uses the correct verb form in the introductory clause?`,
     options: [
@@ -106,7 +106,7 @@ Which version uses the correct verb form in the introductory clause?`,
     id: 7,
     text: `Read the following sentence and choose the best version of the underlined part.
 
-Original Sentence: "The new policy was implemented, but it had a significant impact on employee morale."
+Original Sentence: "The new policy was implemented, <u>but it had a significant impact</u> on employee morale."
 
 The conjunction "but" implies contrast. Which revision better expresses the intended meaning — that the impact was a consequence of the policy?`,
     options: [
@@ -149,9 +149,7 @@ The conjunction "but" implies contrast. Which revision better expresses the inte
     id: 10,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "To ensure fairness, all candidates were given the same set of questions."
-
-The underlined portion is: "To ensure fairness"`,
+Sentence: "<u>To ensure fairness</u>, all candidates were given the same set of questions."`,
     options: [
       'It provides an example.',
       'It explains the reason for an action.',
@@ -166,9 +164,7 @@ The underlined portion is: "To ensure fairness"`,
     id: 11,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "By conducting a thorough review, the researcher ensured that all data was accurate."
-
-The underlined portion is: "By conducting a thorough review"`,
+Sentence: "<u>By conducting a thorough review</u>, the researcher ensured that all data was accurate."`,
     options: [
       'It explains the reason for an action.',
       'It provides an example.',
@@ -183,9 +179,7 @@ The underlined portion is: "By conducting a thorough review"`,
     id: 12,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "Despite the rain, the festival continued as planned."
-
-The underlined portion is: "Despite the rain"`,
+Sentence: "<u>Despite the rain</u>, the festival continued as planned."`,
     options: [
       'It provides an example.',
       'It explains the reason for an action.',
@@ -200,9 +194,7 @@ The underlined portion is: "Despite the rain"`,
     id: 13,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "Despite the initial setbacks, the project was completed on time."
-
-The underlined portion is: "Despite the initial setbacks"`,
+Sentence: "<u>Despite the initial setbacks</u>, the project was completed on time."`,
     options: [
       'It introduces a contrast.',
       'It provides an example.',
@@ -217,9 +209,7 @@ The underlined portion is: "Despite the initial setbacks"`,
     id: 14,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "Given the limited budget, the team decided to focus on the most critical issues first."
-
-The underlined portion is: "Given the limited budget"`,
+Sentence: "<u>Given the limited budget</u>, the team decided to focus on the most critical issues first."`,
     options: [
       'It introduces a consequence.',
       'It provides a contrast.',
@@ -378,7 +368,7 @@ What is one reason renewable energy sources are important according to the passa
     id: 25,
     text: `The following sentence contains an error in modifier placement. Choose the version that correctly places the modifier.
 
-Original Sentence: "Walking through the park, the flowers were beautiful."
+Original Sentence: "<u>Walking through the park, the flowers were beautiful.</u>"
 
 Which revision correctly attributes the action to a logical subject?`,
     options: [

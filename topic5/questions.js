@@ -128,9 +128,7 @@ const QUESTIONS = [
     id: 10,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "To ensure fairness, all candidates were given the same set of questions."
-
-Underlined: "To ensure fairness"`,
+Sentence: "<u>To ensure fairness</u>, all candidates were given the same set of questions."`,
     options: [
       'It provides an example.',
       'It explains the purpose of an action.',
@@ -145,9 +143,7 @@ Underlined: "To ensure fairness"`,
     id: 11,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "By analyzing the data thoroughly, the scientists were able to draw accurate conclusions."
-
-Underlined: "By analyzing the data thoroughly"`,
+Sentence: "<u>By analyzing the data thoroughly</u>, the scientists were able to draw accurate conclusions."`,
     options: [
       'It provides an example.',
       'It explains the method behind an action.',
@@ -162,9 +158,7 @@ Underlined: "By analyzing the data thoroughly"`,
     id: 12,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "Despite the rain, the festival continued as planned."
-
-Underlined: "Despite the rain"`,
+Sentence: "<u>Despite the rain</u>, the festival continued as planned."`,
     options: [
       'It provides an example of bad weather.',
       'It explains why the festival was cancelled.',
@@ -179,9 +173,7 @@ Underlined: "Despite the rain"`,
     id: 13,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "Because of her dedication, the team was able to meet its deadlines."
-
-Underlined: "Because of her dedication"`,
+Sentence: "<u>Because of her dedication</u>, the team was able to meet its deadlines."`,
     options: [
       'It provides an example.',
       'It explains the cause of an outcome.',
@@ -196,9 +188,7 @@ Underlined: "Because of her dedication"`,
     id: 14,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "In addition to her many talents, she is also a dedicated volunteer."
-
-Underlined: "In addition to her many talents"`,
+Sentence: "<u>In addition to her many talents</u>, she is also a dedicated volunteer."`,
     options: [
       'It provides an example of her volunteering.',
       'It explains the reason for volunteering.',
@@ -213,9 +203,7 @@ Underlined: "In addition to her many talents"`,
     id: 15,
     text: `Which choice best describes the function of the underlined portion in the sentence?
 
-Sentence: "By conducting a thorough review, the researcher ensured that all data was accurate."
-
-Underlined: "By conducting a thorough review"`,
+Sentence: "<u>By conducting a thorough review</u>, the researcher ensured that all data was accurate."`,
     options: [
       'It explains the method used to achieve an outcome.',
       'It introduces a contrasting approach.',
