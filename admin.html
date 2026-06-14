@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard – EduQuest</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: #0d0d14;
+      color: #fff;
+      min-height: 100vh
+    }
+
+    .hdr {
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .brand {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+    .logout {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: 6px
+    }
+
+    .logout:hover {
+      border-color: #1a56db;
+      color: #fff
+    }
+
+    /* Login */
+    .login-wrap {
+      max-width: 380px;
+      margin: 100px auto;
+      padding: 20px
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 36px 28px
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center
+    }
+
+    .field {
+      margin-bottom: 14px
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 6px
+    }
+
+    .field input {
+      width: 100%;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff
+    }
+
+    .field input:focus {
+      border-color: #1a56db
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: linear-gradient(135deg, #1a56db, #1e429f);
+      color: #fff;
+      margin-top: 6px
+    }
+
+    .btn:hover {
+      transform: translateY(-1px)
+    }
+
+    #loginMsg {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: #f87171;
+      min-height: 18px
+    }
+
+    /* Dashboard */
+    .wrap {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px
+    }
+
+    .stats {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 22px;
+      flex: 1;
+      min-width: 120px
+    }
+
+    .stat .num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #60a5fa
+    }
+
+    .stat .lbl {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-top: 2px
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px
+    }
+
+    .tab {
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.6)
+    }
+
+    .tab.active {
+      background: rgba(26, 86, 219, 0.2);
+      border-color: #1a56db;
+      color: #fff
+    }
+
+    .search {
+      width: 100%;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      margin-bottom: 16px
+    }
+
+    .search:focus {
+      border-color: #1a56db
+    }
+
+    .user-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .user-info {
+      flex: 1;
+      min-width: 200px
+    }
+
+    .user-info .email {
+      font-weight: 600;
+      font-size: 0.95rem
+    }
+
+    .user-info .meta {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: 3px
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 6px
+    }
+
+    .badge.granted {
+      background: rgba(5, 150, 105, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(5, 150, 105, 0.3)
+    }
+
+    .badge.pending {
+      background: rgba(217, 119, 6, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(217, 119, 6, 0.3)
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none
+    }
+
+    .btn-approve {
+      background: #059669;
+      color: #fff
+    }
+
+    .btn-approve:hover {
+      background: #047857
+    }
+
+    .btn-revoke {
+      background: rgba(220, 38, 38, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(220, 38, 38, 0.3)
+    }
+
+    .btn-revoke:hover {
+      background: rgba(220, 38, 38, 0.25)
+    }
+
+    .org-input {
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      font-family: inherit;
+      width: 120px
+    }
+
+    .empty {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      padding: 40px;
+      font-size: 0.9rem
+    }
+
+    .loading {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      padding: 40px
+    }
+
+    /* ── Reports Tab Styles ──────────────── */
+    .reports-section { display: none }
+    .reports-section.active { display: block }
+    .users-section.active { display: block }
+
+    .report-search {
+      width: 100%;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      margin-bottom: 16px
+    }
+
+    .report-search:focus { border-color: #7c3aed }
+
+    .student-report-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s
+    }
+
+    .student-report-card:hover { border-color: rgba(124, 58, 237, 0.3) }
+
+    .src-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      cursor: pointer;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .src-header:hover { background: rgba(255, 255, 255, 0.02) }
+
+    .src-info { flex: 1; min-width: 200px }
+    .src-email { font-weight: 600; font-size: 0.95rem }
+    .src-meta { font-size: 0.78rem; color: rgba(255, 255, 255, 0.4); margin-top: 3px }
+
+    .src-stats {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .src-stat {
+      text-align: center;
+      min-width: 55px
+    }
+
+    .src-stat .ss-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #a78bfa
+    }
+
+    .src-stat .ss-lbl {
+      font-size: 0.68rem;
+      color: rgba(255, 255, 255, 0.35);
+      text-transform: uppercase;
+      letter-spacing: .04em
+    }
+
+    .src-toggle {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s
+    }
+
+    .src-toggle.open { transform: rotate(180deg) }
+
+    .src-body {
+      display: none;
+      padding: 0 20px 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .src-body.open { display: block }
+
+    .src-test-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.85rem;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .src-test-row:last-child { border-bottom: none }
+
+    .str-topic { font-weight: 600; min-width: 140px }
+    .str-date { color: rgba(255, 255, 255, 0.4); font-size: 0.78rem }
+
+    .str-scores {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .str-scores span { font-size: 0.82rem }
+
+    .admin-score-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600
+    }
+
+    .admin-score-pill.high { background: rgba(5,150,105,0.15); color: #6ee7b7; border: 1px solid rgba(5,150,105,0.3) }
+    .admin-score-pill.mid { background: rgba(217,119,6,0.15); color: #fbbf24; border: 1px solid rgba(217,119,6,0.3) }
+    .admin-score-pill.low { background: rgba(220,38,38,0.15); color: #f87171; border: 1px solid rgba(220,38,38,0.3) }
+
+    .btn-combine-admin {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      color: #fff;
+      margin-top: 10px;
+      transition: all 0.2s
+    }
+
+    .btn-combine-admin:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3)
+    }
+
+    .admin-combined {
+      margin-top: 16px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(124, 58, 237, 0.2);
+      border-radius: 12px;
+      animation: fadeIn 0.3s ease
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px) }
+      to { opacity: 1; transform: translateY(0) }
+    }
+
+    .admin-combined h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 12px
+    }
+
+    .ac-stats {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px
+    }
+
+    .ac-stat {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 10px 14px;
+      text-align: center;
+      min-width: 70px
+    }
+
+    .ac-stat .acn {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800
+    }
+
+    .ac-stat .acl {
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.35);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-top: 2px
+    }
+
+    .admin-chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px
+    }
+
+    .admin-chart-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 14px
+    }
+
+    .admin-chart-box h5 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px
+    }
+
+    .report-empty {
+      text-align: center;
+      padding: 40px;
+      color: rgba(255, 255, 255, 0.35)
+    }
+
+    .report-stat-row {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap
+    }
+
+    .rstat {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 22px;
+      flex: 1;
+      min-width: 120px
+    }
+
+    .rstat .rnum {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #a78bfa
+    }
+
+    .rstat .rlbl {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-top: 2px
+    }
+
+    @media (max-width: 768px) {
+      .admin-chart-grid { grid-template-columns: 1fr }
+      .src-stats { gap: 10px }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="loginScreen">
+    <header class="hdr">
+      <div class="brand">📝 EduQuest Admin</div>
+      <div></div>
+    </header>
+    <div class="login-wrap">
+      <div class="card">
+        <h2>Admin Login</h2>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="adminEmail" placeholder="admin@email.com">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="adminPassword" placeholder="••••••••">
+        </div>
+        <button class="btn" onclick="adminLogin()">Login</button>
+        <p id="loginMsg"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none">
+    <header class="hdr">
+      <div class="brand">📝 EduQuest Admin</div>
+      <button class="logout" onclick="adminLogout()">Logout</button>
+    </header>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat">
+          <div class="num" id="statTotal">–</div>
+          <div class="lbl">Total Users</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="statSatApproved">–</div>
+          <div class="lbl">SAT Approved</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="statSatPending">–</div>
+          <div class="lbl">SAT Pending</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="statTopicApproved">–</div>
+          <div class="lbl">Topic Approved</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="statTopicPending">–</div>
+          <div class="lbl">Topic Pending</div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-filter="pending" onclick="setFilter('pending')">Pending</div>
+        <div class="tab" data-filter="approved" onclick="setFilter('approved')">Approved</div>
+        <div class="tab" data-filter="all" onclick="setFilter('all')">All</div>
+        <div class="tab" data-filter="reports" onclick="setFilter('reports')">📊 Reports</div>
+      </div>
+
+      <!-- Users Section -->
+      <div id="usersSection" class="users-section active">
+        <input type="text" class="search" id="searchBox" placeholder="Search by email..." oninput="renderList()">
+        <div id="userList">
+          <div class="loading">Loading...</div>
+        </div>
+      </div>
+
+      <!-- Reports Section -->
+      <div id="reportsSection" class="reports-section">
+        <div class="report-stat-row" id="reportOverviewStats"></div>
+        <input type="text" class="report-search" id="reportSearchBox" placeholder="Search student by email..." oninput="renderReportsList()">
+        <div id="reportsList">
+          <div class="loading">Loading reports...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script>
+    const ADMIN_EMAIL = 'rupali.eduquest@gmail.com'; // <-- yahan apna admin email daalo
+
+    const supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+
+    let allProfiles = [];
+    let currentFilter = 'pending';
+
+    // ── Check session on load ──────────────────────
+    (async function init() {
+      const { data: { session } } = await supabaseClient.auth.getSession();
+      if (session && session.user.email === ADMIN_EMAIL) {
+        showDashboard();
+      } else {
+        showLogin();
+      }
+    })();
+
+    function showLogin() {
+      document.getElementById('loginScreen').style.display = 'block';
+      document.getElementById('dashboard').style.display = 'none';
+    }
+
+    function showDashboard() {
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      loadProfiles();
+    }
+
+    // ── Login ───────────────────────────────────────
+    async function adminLogin() {
+      const email = document.getElementById('adminEmail').value.trim();
+      const password = document.getElementById('adminPassword').value;
+      const msg = document.getElementById('loginMsg');
+
+      if (email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+        msg.textContent = 'This account is not authorized as admin.';
+        return;
+      }
+
+      const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+      if (error) {
+        msg.textContent = error.message;
+        return;
+      }
+      showDashboard();
+    }
+
+    async function adminLogout() {
+      await supabaseClient.auth.signOut();
+      showLogin();
+    }
+
+    // ── Load profiles ────────────────────────────────
+    async function loadProfiles() {
+      const { data, error } = await supabaseClient
+        .from('profiles')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        document.getElementById('userList').innerHTML = `<div class="empty">Error loading data: ${error.message}</div>`;
+        return;
+      }
+
+      allProfiles = data || [];
+      updateStats();
+      renderList();
+    }
+
+    function updateStats() {
+      const total = allProfiles.length;
+      const satApproved = allProfiles.filter(p => p.has_access).length;
+      const topicApproved = allProfiles.filter(p => p.has_topic_access).length;
+
+      document.getElementById('statTotal').textContent = total;
+      document.getElementById('statSatApproved').textContent = satApproved;
+      document.getElementById('statSatPending').textContent = total - satApproved;
+      document.getElementById('statTopicApproved').textContent = topicApproved;
+      document.getElementById('statTopicPending').textContent = total - topicApproved;
+    }
+
+    // ── Filter tabs ───────────────────────────────────
+    function setFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelector(`.tab[data-filter="${filter}"]`).classList.add('active');
+
+      const usersSection = document.getElementById('usersSection');
+      const reportsSection = document.getElementById('reportsSection');
+
+      if (filter === 'reports') {
+        usersSection.style.display = 'none';
+        reportsSection.classList.add('active');
+        reportsSection.style.display = 'block';
+        loadReportsData();
+      } else {
+        usersSection.style.display = 'block';
+        reportsSection.classList.remove('active');
+        reportsSection.style.display = 'none';
+        renderList();
+      }
+    }
+
+    // ── Render list ───────────────────────────────────
+    function renderList() {
+      const search = document.getElementById('searchBox').value.trim().toLowerCase();
+      let list = allProfiles;
+
+      if (currentFilter === 'pending') {
+        // Pending approval on EITHER SAT or Topic tests
+        list = list.filter(p => !p.has_access || !p.has_topic_access);
+      } else if (currentFilter === 'approved') {
+        // Approved for BOTH
+        list = list.filter(p => p.has_access && p.has_topic_access);
+      }
+
+      if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search));
+
+      const container = document.getElementById('userList');
+      if (list.length === 0) {
+        container.innerHTML = `<div class="empty">No users found.</div>`;
+        return;
+      }
+
+      container.innerHTML = list.map(p => `
+    <div class="user-card">
+      <div class="user-info">
+        <div class="email">${p.email || '(no email)'}</div>
+        <div class="meta">Signed up: ${p.created_at ? new Date(p.created_at).toLocaleString() : '–'}</div>
+        <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="badge ${p.has_access ? 'granted' : 'pending'}">SAT: ${p.has_access ? '✓ Approved' : '⏳ Pending'}</span>
+          <span class="badge ${p.has_topic_access ? 'granted' : 'pending'}">Topic: ${p.has_topic_access ? '✓ Approved' : '⏳ Pending'}</span>
+        </div>
+        <div style="margin-top: 10px;">
+          <input type="text" class="org-input" placeholder="Organization" value="${p.organization || ''}"
+            onchange="updateOrg('${p.id}', this.value)">
+        </div>
+      </div>
+      <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 75px; text-align: right;">SAT Test:</span>
+          ${p.has_access
+            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'sat', false)">Revoke</button>`
+            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'sat', true)">Approve</button>`
+          }
+        </div>
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 75px; text-align: right;">SAT Topic:</span>
+          ${p.has_topic_access
+            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic', false)">Revoke</button>`
+            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic', true)">Approve</button>`
+          }
+        </div>
+      </div>
+    </div>
+  `).join('');
+    }
+
+    // ── Approve / Revoke ────────────────────────────
+    async function setAccess(userId, type, value) {
+      const updatePayload = {};
+      if (type === 'sat') {
+        updatePayload.has_access = value;
+      } else if (type === 'topic') {
+        updatePayload.has_topic_access = value;
+      }
+
+      const { error } = await supabaseClient
+        .from('profiles')
+        .update(updatePayload)
+        .eq('id', userId);
+
+      if (error) {
+        alert('Update failed: ' + error.message);
+        return;
+      }
+
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) {
+        if (type === 'sat') p.has_access = value;
+        else if (type === 'topic') p.has_topic_access = value;
+      }
+      updateStats();
+      if (currentFilter === 'reports') {
+        renderReportsList();
+      } else {
+        renderList();
+      }
+    }
+
+    // ── Update organization ──────────────────────────
+    async function updateOrg(userId, value) {
+      const { error } = await supabaseClient
+        .from('profiles')
+        .update({ organization: value })
+        .eq('id', userId);
+
+      if (error) {
+        alert('Update failed: ' + error.message);
+        return;
+      }
+
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) p.organization = value;
+    }
+
+    // ══════════════════════════════════════════════
+    // ── REPORTS TAB LOGIC ─────────────────────────
+    // ══════════════════════════════════════════════
+    let allReports = [];
+    let groupedReports = {};
+    let adminCharts = {};
+
+    async function loadReportsData() {
+      const { data, error } = await supabaseClient
+        .from('sat_topic_report')
+        .select('*')
+        .order('submit_time', { ascending: false });
+
+      if (error) {
+        document.getElementById('reportsList').innerHTML = `<div class="report-empty">Error: ${error.message}</div>`;
+        return;
+      }
+
+      allReports = data || [];
+
+      // Group by email
+      groupedReports = {};
+      allReports.forEach(r => {
+        const email = (r.email || 'unknown').toLowerCase();
+        if (!groupedReports[email]) groupedReports[email] = [];
+        groupedReports[email].push(r);
+      });
+
+      renderReportOverviewStats();
+      renderReportsList();
+    }
+
+    function renderReportOverviewStats() {
+      const totalReports = allReports.length;
+      const uniqueStudents = Object.keys(groupedReports).length;
+      const avgScore = totalReports > 0
+        ? Math.round(allReports.reduce((s, r) => s + (r.pct || 0), 0) / totalReports)
+        : 0;
+      const totalQs = allReports.reduce((s, r) => s + (r.total || 0), 0);
+
+      document.getElementById('reportOverviewStats').innerHTML = `
+        <div class="rstat"><div class="rnum">${uniqueStudents}</div><div class="rlbl">Students</div></div>
+        <div class="rstat"><div class="rnum">${totalReports}</div><div class="rlbl">Total Tests</div></div>
+        <div class="rstat"><div class="rnum">${avgScore}%</div><div class="rlbl">Avg Score</div></div>
+        <div class="rstat"><div class="rnum">${totalQs}</div><div class="rlbl">Total Qs</div></div>
+      `;
+    }
+
+    function renderReportsList() {
+      const search = (document.getElementById('reportSearchBox').value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedReports);
+
+      if (search) emails = emails.filter(e => e.includes(search));
+
+      if (emails.length === 0) {
+        document.getElementById('reportsList').innerHTML = `<div class="report-empty">No student reports found.</div>`;
+        return;
+      }
+
+      document.getElementById('reportsList').innerHTML = emails.map(email => {
+        const tests = groupedReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.pct || 0), 0) / totalTests);
+        const avgScaled = Math.round(tests.reduce((s, t) => s + (t.scaled || 0), 0) / totalTests);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+        
+        // Find profile to check access
+        const p = allProfiles.find(x => x.email && x.email.toLowerCase() === email);
+
+        return `
+        <div class="student-report-card" id="src-${safeEmail}">
+          <div class="src-header" onclick="toggleStudentReport('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg</div></div>
+              <div class="src-stat"><div class="ss-num">${avgScaled}</div><div class="ss-lbl">Scaled</div></div>
+            </div>
+            <div class="src-toggle" id="toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="body-${safeEmail}">
+            ${p ? `
+            <div style="margin-bottom: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+              <div style="font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.7);">Manage Access:</div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">SAT Test:</span>
+                ${p.has_access
+                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'sat', false)">Revoke</button>`
+                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'sat', true)">Approve</button>`
+                }
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">SAT Topic:</span>
+                ${p.has_topic_access
+                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic', false)">Revoke</button>`
+                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic', true)">Approve</button>`
+                }
+              </div>
+            </div>
+            ` : ''}
+            
+            ${tests.map(t => {
+              const p_score = t.pct || 0;
+              const pillClass = p_score >= 70 ? 'high' : p_score >= 50 ? 'mid' : 'low';
+              const date = t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '–';
+              return `
+              <div class="src-test-row">
+                <div class="str-topic">${t.topic || 'Unknown'}</div>
+                <div class="str-date">${date}</div>
+                <div class="str-scores">
+                  <span style="color:#6ee7b7">✓${t.correct||0}</span>
+                  <span style="color:#f87171">✗${t.wrong||0}</span>
+                  <span style="color:#fbbf24">⏭${t.unattempted||0}</span>
+                  <span class="admin-score-pill ${pillClass}">${p_score}%</span>
+                </div>
+              </div>`;
+            }).join('')}
+            <button class="btn-combine-admin" onclick="generateAdminCombined('${safeEmail}', '${email}')">📊 Generate Combined Report</button>
+            <div id="admin-combined-${safeEmail}"></div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleStudentReport(safeEmail) {
+      const body = document.getElementById(`body-${safeEmail}`);
+      const toggle = document.getElementById(`toggle-${safeEmail}`);
+      body.classList.toggle('open');
+      toggle.classList.toggle('open');
+    }
+
+    function generateAdminCombined(safeEmail, email) {
+      const tests = groupedReports[email];
+      if (!tests || tests.length === 0) return;
+
+      const totCorrect = tests.reduce((s, t) => s + (t.correct || 0), 0);
+      const totWrong = tests.reduce((s, t) => s + (t.wrong || 0), 0);
+      const totSkipped = tests.reduce((s, t) => s + (t.unattempted || 0), 0);
+      const totQs = tests.reduce((s, t) => s + (t.total || 0), 0);
+      const avgPct = totQs > 0 ? Math.round(totCorrect / totQs * 100) : 0;
+      const overallGrade = avgPct >= 90 ? 'A+' : avgPct >= 80 ? 'A' : avgPct >= 70 ? 'B' : avgPct >= 60 ? 'C' : 'D';
+
+      // Topic-wise
+      const topicMap = {};
+      tests.forEach(t => {
+        const name = t.topic || 'Unknown';
+        if (!topicMap[name]) topicMap[name] = { correct: 0, wrong: 0, skipped: 0, total: 0, count: 0 };
+        topicMap[name].correct += (t.correct || 0);
+        topicMap[name].wrong += (t.wrong || 0);
+        topicMap[name].skipped += (t.unattempted || 0);
+        topicMap[name].total += (t.total || 0);
+        topicMap[name].count++;
+      });
+
+      const topics = Object.keys(topicMap);
+      const topicPcts = topics.map(k => topicMap[k].total > 0 ? Math.round(topicMap[k].correct / topicMap[k].total * 100) : 0);
+      const barColors = topicPcts.map(p => p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626');
+
+      const pieId = `ac-pie-${safeEmail}`;
+      const barId = `ac-bar-${safeEmail}`;
+
+      document.getElementById(`admin-combined-${safeEmail}`).innerHTML = `
+        <div class="admin-combined" id="adminCombinedCard-${safeEmail}">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px;">
+            <h4 style="margin-bottom:0;">📊 Combined Report – ${email}</h4>
+            <button class="btn-sm" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; cursor:pointer;" onclick="downloadAdminCombinedPDF('${safeEmail}', '${email}')">📄 Download PDF</button>
+          </div>
+          <div class="ac-stats">
+            <div class="ac-stat"><div class="acn" style="color:#6ee7b7">${totCorrect}</div><div class="acl">Correct</div></div>
+            <div class="ac-stat"><div class="acn" style="color:#f87171">${totWrong}</div><div class="acl">Wrong</div></div>
+            <div class="ac-stat"><div class="acn" style="color:#fbbf24">${totSkipped}</div><div class="acl">Skipped</div></div>
+            <div class="ac-stat"><div class="acn" style="color:#93c5fd">${totQs}</div><div class="acl">Total</div></div>
+            <div class="ac-stat"><div class="acn" style="color:#a78bfa">${avgPct}%</div><div class="acl">Score</div></div>
+            <div class="ac-stat"><div class="acn" style="color:#a78bfa">${overallGrade}</div><div class="acl">Grade</div></div>
+          </div>
+          <div class="admin-chart-grid">
+            <div class="admin-chart-box"><h5>Score Breakdown</h5><canvas id="${pieId}" height="180"></canvas></div>
+            <div class="admin-chart-box"><h5>Topic Performance</h5><canvas id="${barId}" height="180"></canvas></div>
+          </div>
+        </div>
+      `;
+
+      // Destroy old charts for this student
+      if (adminCharts[pieId]) adminCharts[pieId].destroy();
+      if (adminCharts[barId]) adminCharts[barId].destroy();
+
+      adminCharts[pieId] = new Chart(document.getElementById(pieId), {
+        type: 'doughnut',
+        data: {
+          labels: ['Correct', 'Wrong', 'Skipped'],
+          datasets: [{ data: [totCorrect, totWrong, totSkipped], backgroundColor: ['#059669', '#dc2626', '#d97706'], borderWidth: 0 }]
+        },
+        options: {
+          plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.5)', font: { family: 'IBM Plex Sans', size: 10 } } } },
+          cutout: '60%'
+        }
+      });
+
+      adminCharts[barId] = new Chart(document.getElementById(barId), {
+        type: 'bar',
+        data: {
+          labels: topics.map(t => t.length > 14 ? t.substring(0, 12) + '…' : t),
+          datasets: [{
+            label: 'Score %',
+            data: topicPcts,
+            backgroundColor: barColors.map(c => c + '33'),
+            borderColor: barColors,
+            borderWidth: 2,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          indexAxis: topics.length > 3 ? 'y' : 'x',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { max: 100, ticks: { color: 'rgba(255,255,255,0.3)', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.04)' } },
+            y: { ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.04)' } }
+          }
+        }
+      });
+    }
+
+    function downloadAdminCombinedPDF(safeEmail, email) {
+      const element = document.getElementById(`adminCombinedCard-${safeEmail}`);
+      const buttons = element.querySelectorAll('button');
+      buttons.forEach(b => b.style.display = 'none');
+
+      html2pdf().set({
+        margin: [10, 10, 10, 10],
+        filename: `EduQuest_Combined_Report_${email}_${new Date().toISOString().slice(0, 10)}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0d0d14' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      }).from(element).save().then(() => {
+        buttons.forEach(b => b.style.display = '');
+      }).catch(err => {
+        console.error('PDF generation failed', err);
+        buttons.forEach(b => b.style.display = '');
+      });
+    }
+  </script>
+</body>
+
+</html>
