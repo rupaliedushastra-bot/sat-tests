@@ -599,6 +599,100 @@
       color: rgba(255, 255, 255, 0.5)
     }
 
+    .q-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .q-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .q-card-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 12px;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+    .q-image-container {
+      text-align: center;
+      margin-bottom: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .q-image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .q-card-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .q-card-opt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .q-card-opt-letter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      font-weight: 600;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+    .q-card-opt.correct {
+      border-color: #059669;
+      background: rgba(5, 150, 105, 0.1);
+      color: #6ee7b7;
+    }
+    .q-card-opt.correct .q-card-opt-letter {
+      background: #059669;
+      color: #fff;
+    }
+    .q-card-opt.wrong-chosen {
+      border-color: #dc2626;
+      background: rgba(220, 38, 38, 0.1);
+      color: #f87171;
+    }
+    .q-card-opt.wrong-chosen .q-card-opt-letter {
+      background: #dc2626;
+      color: #fff;
+    }
+    .q-card-exp {
+      background: rgba(124, 58, 237, 0.05);
+      border-left: 3px solid #7c3aed;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.8rem;
+      color: #c084fc;
+      line-height: 1.4;
+      text-align: left;
+    }
+
     /* ── Empty / Loading ───────────────────── */
     .empty-state {
       text-align: center;
@@ -736,6 +830,169 @@
     let selectedIds = new Set();
     let currentSession = null;
     let modalChart = null;
+
+    // ── Topic to Question file mapping ─────
+    const TOPIC_QUESTIONS_MAP = {
+      'Reading Comprehension': { q: './questions.js', dir: '.' },
+      'Vocabulary in Context': { q: './topic2/questions2.js', dir: './topic2' },
+      'Grammar & Usage': { q: './topic-3/questions.js', dir: './topic-3' },
+      'Sentence Completion': { q: './topic4/questions.js', dir: './topic4' },
+      'Rhetorical Skills': { q: './topic5/questions.js', dir: './topic5' },
+      'Critical Thinking & Data': { q: './test_6/questions.js', dir: './test_6' },
+      'Paired Passages': { q: './topic_7/questions.js', dir: './topic_7' },
+      'Research Notes Questions': { q: './topic_8/questions.js', dir: './topic_8' },
+      'Numbers & Operations': { q: './topic_9/questions.js', dir: './topic_9' },
+      'Linear Algebra': { q: './topic_10/questions.js', dir: './topic_10' },
+      'Functions & Graphs': { q: './topic_11/questions.js', dir: './topic_11' },
+      'Quadratics & Polynomials': { q: './topic_12/questions.js', dir: './topic_12' },
+      'Geometry': { q: './topic_13/questions.js', dir: './topic_13' },
+      'Trigonometry': { q: './topic_14/questions.js', dir: './topic_14' },
+      'Statistics & Probability': { q: './topic_15/questions.js', dir: './topic_15' },
+      'Advanced Math': { q: './topic_16/questions.js', dir: './topic_16' },
+      'Words in Context': { q: './wic/questions_wic.js', dir: './wic' },
+      'Text Structure and Purpose': { q: './text_structure_purpose/questions_sp.js', dir: './text_structure_purpose' }
+    };
+
+    const loadedQuestionsCache = {};
+    const loadedImagesCache = {};
+
+    function getTopicMapping(topicName) {
+      if (!topicName) return null;
+      const clean = topicName.trim().toLowerCase();
+      const key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => k.trim().toLowerCase() === clean);
+      return key ? { key, ...TOPIC_QUESTIONS_MAP[key] } : null;
+    }
+
+    function loadQuestionsForTopic(topicName) {
+      if (loadedQuestionsCache[topicName]) {
+        return Promise.resolve(loadedQuestionsCache[topicName]);
+      }
+      return new Promise((resolve) => {
+        const mapping = TOPIC_QUESTIONS_MAP[topicName];
+        const path = mapping ? mapping.q : null;
+        if (!path) {
+          resolve(null);
+          return;
+        }
+
+        const loadViaIframe = () => {
+          try {
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const script = doc.createElement('script');
+            script.src = path;
+            script.onload = () => {
+              try {
+                const qs = iframe.contentWindow.QUESTIONS;
+                if (qs && Array.isArray(qs)) {
+                  loadedQuestionsCache[topicName] = qs;
+                  resolve(qs);
+                } else {
+                  resolve(null);
+                }
+              } catch(e) {
+                resolve(null);
+              }
+              document.body.removeChild(iframe);
+            };
+            script.onerror = () => {
+              resolve(null);
+              document.body.removeChild(iframe);
+            };
+            doc.head.appendChild(script);
+          } catch(e) {
+            resolve(null);
+          }
+        };
+
+        fetch(path)
+          .then(res => {
+            if (!res.ok) throw new Error("Failed to load");
+            return res.text();
+          })
+          .then(text => {
+            let code = text.replace(/(const|let|var)\s+QUESTIONS\s*=/, "var local_qs =");
+            code += "\n; if (typeof local_qs !== 'undefined') { local_qs } else if (typeof QUESTIONS !== 'undefined') { QUESTIONS } else { null };";
+            try {
+              const fn = new Function(code);
+              const result = fn();
+              if (result && Array.isArray(result)) {
+                loadedQuestionsCache[topicName] = result;
+                resolve(result);
+              } else {
+                throw new Error("Eval did not yield array");
+              }
+            } catch(e) {
+              console.warn("Function execution failed, trying iframe loading", e);
+              loadViaIframe();
+            }
+          })
+          .catch(err => {
+            console.warn("Fetch failed, trying iframe loading", err);
+            loadViaIframe();
+          });
+      });
+    }
+
+    function loadImageMappingForTopic(topicName, dir) {
+      if (loadedImagesCache[topicName]) {
+        return Promise.resolve(loadedImagesCache[topicName]);
+      }
+      return new Promise((resolve) => {
+        if (dir === '.' || !dir) {
+          resolve({});
+          return;
+        }
+        const path = dir + '/images.js';
+
+        const loadViaIframe = () => {
+          try {
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const script = doc.createElement('script');
+            script.src = path;
+            script.onload = () => {
+              try {
+                const imgs = iframe.contentWindow.QUESTION_IMAGES;
+                loadedImagesCache[topicName] = imgs || {};
+                resolve(imgs || {});
+              } catch(e) {
+                resolve({});
+              }
+              document.body.removeChild(iframe);
+            };
+            script.onerror = () => {
+              resolve({});
+              document.body.removeChild(iframe);
+            };
+            doc.head.appendChild(script);
+          } catch(e) {
+            resolve({});
+          }
+        };
+
+        fetch(path)
+          .then(res => {
+            if (!res.ok) throw new Error("No images.js");
+            return res.text();
+          })
+          .then(text => {
+            let code = text.replace(/(const|let|var)\s+QUESTION_IMAGES\s*=/, "var local_imgs =");
+            code += "\n; if (typeof local_imgs !== 'undefined') { local_imgs } else if (typeof QUESTION_IMAGES !== 'undefined') { QUESTION_IMAGES } else { {} };";
+            const fn = new Function(code);
+            const result = fn();
+            loadedImagesCache[topicName] = result || {};
+            resolve(result || {});
+          })
+          .catch(() => {
+            loadViaIframe();
+          });
+      });
+    }
 
     // ── Auth Guard ──────────────────────────
     (async function init() {
@@ -884,7 +1141,7 @@
     }
 
     // ── Individual Test Detail Modal ────────
-    function openTestDetail(idx) {
+    async function openTestDetail(idx) {
       const t = allTests[idx];
       const pct = t.pct || 0;
       const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
@@ -892,6 +1149,40 @@
       try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
 
       const modal = document.getElementById('modalContent');
+      // Show loading inside modal while questions are fetched
+      modal.innerHTML = `
+        <div class="modal-hdr">
+          <h3>${t.topic || 'Test Detail'}</h3>
+          <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="loading-spinner">Loading question details...</div>
+      `;
+      document.getElementById('testModal').classList.add('open');
+
+      const topicMapping = getTopicMapping(t.topic);
+      const matchedTopicKey = topicMapping ? topicMapping.key : t.topic;
+      const dir = topicMapping ? topicMapping.dir : '.';
+      const qs = await loadQuestionsForTopic(matchedTopicKey);
+      const imgMapping = await loadImageMappingForTopic(matchedTopicKey, dir);
+
+      // Merge questions metadata
+      if (qs && details.length > 0) {
+        details = details.map(d => {
+          const matchedQ = qs.find(q => String(q.id) === String(d.id));
+          if (matchedQ) {
+            return {
+              ...d,
+              text: matchedQ.text,
+              options: matchedQ.options,
+              explanation: matchedQ.explanation || '',
+              useImage: matchedQ.useImage,
+              imageKey: matchedQ.imageKey
+            };
+          }
+          return d;
+        });
+      }
+
       modal.innerHTML = `
         <div class="modal-hdr">
           <h3>${t.topic || 'Test Detail'}</h3>
@@ -910,18 +1201,79 @@
         <div class="modal-chart-wrap"><canvas id="modalPie" height="200"></canvas></div>
         ${details.length > 0 ? `
           <div class="q-review-hdr">📋 Question Review (${details.length} questions)</div>
-          ${details.map((d, i) => `
-            <div class="q-item">
-              <span class="q-id">Q${d.id || (i+1)}</span>
-              <span class="q-status ${d.status}">${d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped'}</span>
-              ${d.status === 'wrong' ? `<div class="q-detail">Your answer: ${LETTERS[d.chosen] || '–'} · Correct: ${LETTERS[d.answer] || '–'}</div>` : ''}
-              ${d.status === 'unattempted' ? `<div class="q-detail">Correct answer: ${LETTERS[d.answer] || '–'}</div>` : ''}
-            </div>
-          `).join('')}
+          <div class="q-review-list">
+          ${details.map((d, i) => {
+            const hasText = !!d.text;
+            const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
+            const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
+            
+            // Build image source if used
+            let imgSrc = '';
+            if (d.useImage && d.imageKey && imgMapping[d.imageKey]) {
+              const val = imgMapping[d.imageKey];
+              imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (dir + '/' + val);
+            }
+
+            return `
+              <div class="q-card">
+                <div class="q-card-header">
+                  <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
+                  <span class="q-status ${statusClass}">${statusText}</span>
+                </div>
+                
+                ${hasText ? `<div class="q-card-text">${d.text}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
+                
+                ${imgSrc ? `<div class="q-image-container"><img src="${imgSrc}" alt="Question Image" /></div>` : ''}
+
+                ${hasText && d.options ? `
+                  <div class="q-card-opts">
+                    ${d.options.map((optText, optIdx) => {
+                      let optClass = '';
+                      // Mark correct option
+                      if (optIdx === d.answer) {
+                        optClass = 'correct';
+                      }
+                      // Mark chosen if incorrect
+                      if (d.status === 'wrong' && optIdx === d.chosen) {
+                        optClass = 'wrong-chosen';
+                      }
+                      
+                      let badgeIcon = '';
+                      if (optIdx === d.answer) {
+                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
+                      } else if (d.status === 'wrong' && optIdx === d.chosen) {
+                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
+                      } else if (d.status === 'correct' && optIdx === d.chosen) {
+                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
+                      }
+
+                      return `
+                        <div class="q-card-opt ${optClass}">
+                          <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
+                          <div class="q-card-opt-text">${optText}</div>
+                          ${badgeIcon}
+                        </div>
+                      `;
+                    }).join('')}
+                  </div>
+                ` : `
+                  <div class="q-detail" style="margin-top:8px;">
+                    ${d.status === 'wrong' ? `Your answer: <strong>${LETTERS[d.chosen] || '–'}</strong> · Correct: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                    ${d.status === 'unattempted' ? `Correct answer: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                  </div>
+                `}
+
+                ${d.explanation ? `
+                  <div class="q-card-exp">
+                    <strong>💡 Explanation:</strong> ${d.explanation}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+          </div>
         ` : '<p style="color:rgba(255,255,255,0.3);text-align:center;padding:20px">No question details available</p>'}
       `;
-
-      document.getElementById('testModal').classList.add('open');
 
       // Draw pie chart
       if (modalChart) modalChart.destroy();
@@ -955,9 +1307,29 @@
     // ── Combined Report ─────────────────────
     let combinedPie = null, combinedBar = null;
 
-    function generateCombinedReport() {
+    async function generateCombinedReport() {
       const tests = Array.from(selectedIds).map(i => allTests[i]);
       if (tests.length === 0) return;
+
+      const area = document.getElementById('combinedReportArea');
+      area.innerHTML = `
+        <div class="combined-report" style="text-align:center;padding:40px;">
+          <div class="loading-spinner">Generating combined report & loading questions...</div>
+        </div>
+      `;
+      area.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Gather unique topics in the selected tests and load their questions/images
+      const uniqueTopics = [...new Set(tests.map(t => t.topic).filter(Boolean))];
+      const topicsData = {};
+      for (const topic of uniqueTopics) {
+        const topicMapping = getTopicMapping(topic);
+        const matchedTopicKey = topicMapping ? topicMapping.key : topic;
+        const dir = topicMapping ? topicMapping.dir : '.';
+        const qs = await loadQuestionsForTopic(matchedTopicKey);
+        const imgMapping = await loadImageMappingForTopic(matchedTopicKey, dir);
+        topicsData[topic] = { qs, imgMapping, dir };
+      }
 
       const totCorrect = tests.reduce((s, t) => s + (t.correct || 0), 0);
       const totWrong = tests.reduce((s, t) => s + (t.wrong || 0), 0);
@@ -988,18 +1360,41 @@
       const strengths = sorted.filter(s => s.pct >= 70).slice(0, 3);
       const weaknesses = sorted.filter(s => s.pct < 70).sort((a, b) => a.pct - b.pct).slice(0, 3);
 
-      // Combine all question details
+      // Combine all question details with full questions
       let allDetails = [];
       tests.forEach((t, testIndex) => {
         try {
-          const details = JSON.parse(t.details_json || '[]');
+          let details = JSON.parse(t.details_json || '[]');
           if (details.length > 0) {
-            allDetails.push({ testName: t.topic || `Test ${testIndex+1}`, details });
+            const topicData = topicsData[t.topic];
+            if (topicData && topicData.qs) {
+              details = details.map(d => {
+                const matchedQ = topicData.qs.find(q => String(q.id) === String(d.id));
+                if (matchedQ) {
+                  return {
+                    ...d,
+                    text: matchedQ.text,
+                    options: matchedQ.options,
+                    explanation: matchedQ.explanation || '',
+                    useImage: matchedQ.useImage,
+                    imageKey: matchedQ.imageKey
+                  };
+                }
+                return d;
+              });
+            }
+            allDetails.push({ 
+              testName: t.topic || `Test ${testIndex+1}`, 
+              details,
+              dir: topicData ? topicData.dir : '.',
+              imgMapping: topicData ? topicData.imgMapping : {}
+            });
           }
-        } catch(e) {}
+        } catch(e) {
+          console.error("Failed to parse details for test", t, e);
+        }
       });
 
-      const area = document.getElementById('combinedReportArea');
       area.innerHTML = `
         <div class="combined-report" id="combinedReportCard">
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
@@ -1075,23 +1470,80 @@
           </div>` : ''}
 
           ${allDetails.length > 0 ? `
-          <div class="chart-box" style="margin-top:20px">
+          <div class="chart-box" style="margin-top:20px; text-align:left;">
             <h4>📋 Detailed Question Review</h4>
             ${allDetails.map(td => `
-              <div style="margin-top:16px;margin-bottom:8px;font-family:'Syne',sans-serif;font-weight:700;color:#93c5fd;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:6px">
+              <div style="margin-top:24px;margin-bottom:12px;font-family:'Syne',sans-serif;font-weight:700;color:#93c5fd;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:8px;font-size:1.1rem;text-align:left;">
                 ${td.testName}
               </div>
-              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px">
-              ${td.details.map((d, i) => `
-                <div class="q-item" style="border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:12px;background:rgba(255,255,255,0.02)">
-                  <div style="margin-bottom:6px">
-                    <span class="q-id" style="font-size:0.9rem">Q${d.id || (i+1)}</span>
-                    <span class="q-status ${d.status}">${d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped'}</span>
+              <div>
+              ${td.details.map((d, i) => {
+                const hasText = !!d.text;
+                const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
+                const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
+                
+                // Build image source if used
+                let imgSrc = '';
+                if (d.useImage && d.imageKey && td.imgMapping[d.imageKey]) {
+                  const val = td.imgMapping[d.imageKey];
+                  imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (td.dir + '/' + val);
+                }
+
+                return `
+                  <div class="q-card">
+                    <div class="q-card-header">
+                      <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
+                      <span class="q-status ${statusClass}">${statusText}</span>
+                    </div>
+                    
+                    ${hasText ? `<div class="q-card-text">${d.text}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
+                    
+                    ${imgSrc ? `<div class="q-image-container"><img src="${imgSrc}" alt="Question Image" /></div>` : ''}
+
+                    ${hasText && d.options ? `
+                      <div class="q-card-opts">
+                        ${d.options.map((optText, optIdx) => {
+                          let optClass = '';
+                          if (optIdx === d.answer) {
+                            optClass = 'correct';
+                          }
+                          if (d.status === 'wrong' && optIdx === d.chosen) {
+                            optClass = 'wrong-chosen';
+                          }
+                          
+                          let badgeIcon = '';
+                          if (optIdx === d.answer) {
+                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
+                          } else if (d.status === 'wrong' && optIdx === d.chosen) {
+                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
+                          } else if (d.status === 'correct' && optIdx === d.chosen) {
+                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
+                          }
+
+                          return `
+                            <div class="q-card-opt ${optClass}">
+                              <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
+                              <div class="q-card-opt-text">${optText}</div>
+                              ${badgeIcon}
+                            </div>
+                          `;
+                        }).join('')}
+                      </div>
+                    ` : `
+                      <div class="q-detail" style="margin-top:8px;">
+                        ${d.status === 'wrong' ? `Your answer: <strong>${LETTERS[d.chosen] || '–'}</strong> · Correct: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                        ${d.status === 'unattempted' ? `Correct answer: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                      </div>
+                    `}
+
+                    ${d.explanation ? `
+                      <div class="q-card-exp">
+                        <strong>💡 Explanation:</strong> ${d.explanation}
+                      </div>
+                    ` : ''}
                   </div>
-                  ${d.status === 'wrong' ? `<div class="q-detail">Your answer: <strong>${LETTERS[d.chosen] || '–'}</strong> &nbsp;·&nbsp; Correct: <strong>${LETTERS[d.answer] || '–'}</strong></div>` : ''}
-                  ${d.status === 'unattempted' ? `<div class="q-detail">Correct answer: <strong>${LETTERS[d.answer] || '–'}</strong></div>` : ''}
-                </div>
-              `).join('')}
+                `;
+              }).join('')}
               </div>
             `).join('')}
           </div>` : ''}
