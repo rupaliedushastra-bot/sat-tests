@@ -26,7 +26,7 @@
     // Determine correct relative paths based on whether we are in a subdirectory (like test_3)
     let loginUrl = 'login.html';
     let indexUrl = 'index.html';
-    if (window.location.pathname.match(/\/(topic|test_6)/i)) {
+    if (window.location.pathname.match(/\/(topic|test_6|wic|text_structure_purpose|cross_text_connections|Central_Ideas_and_Details|coe_textual|inferences)/i)) {
         loginUrl = '../login.html';
         indexUrl = '../index.html';
     }
