@@ -40,11 +40,26 @@
 
     const { data: profile, error } = await supabaseClient
         .from('profiles')
-        .select('has_topic_access')
+        .select('has_topic_reading_access, has_topic_math_access, has_topic_class_test_access')
         .eq('id', session.user.id)
         .single();
 
-    if (!isAdmin && (error || !profile || !profile.has_topic_access)) {
+    const pathname = window.location.pathname.toLowerCase();
+    const isMath = pathname.match(/\/(topic_9|topic_10|topic_11|topic_12|topic_13|topic_14|topic_15|topic_16)\//i);
+    const isClassTest = pathname.match(/\/(wic|text_structure_purpose|cross_text_connections|central_ideas_and_details|coe_textual|inferences)\//i);
+    
+    let hasAccess = false;
+    if (profile) {
+        if (isMath) {
+            hasAccess = profile.has_topic_math_access;
+        } else if (isClassTest) {
+            hasAccess = profile.has_topic_class_test_access;
+        } else {
+            hasAccess = profile.has_topic_reading_access;
+        }
+    }
+
+    if (!isAdmin && (error || !profile || !hasAccess)) {
         document.documentElement.style.visibility = 'visible';
         document.body.innerHTML = `
           <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;text-align:center;padding:20px;background:#0d0d14;color:#fff">

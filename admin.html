@@ -1179,7 +1179,7 @@
     function updateStats() {
       const total = allProfiles.length;
       const satApproved = allProfiles.filter(p => p.has_access).length;
-      const topicApproved = allProfiles.filter(p => p.has_topic_access).length;
+      const topicApproved = allProfiles.filter(p => p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access).length;
 
       document.getElementById('statTotal').textContent = total;
       document.getElementById('statSatApproved').textContent = satApproved;
@@ -1217,10 +1217,10 @@
 
       if (currentFilter === 'pending') {
         // Pending approval on EITHER SAT or Topic tests
-        list = list.filter(p => !p.has_access || !p.has_topic_access);
+        list = list.filter(p => !p.has_access || (!p.has_topic_reading_access && !p.has_topic_math_access && !p.has_topic_class_test_access));
       } else if (currentFilter === 'approved') {
         // Approved for BOTH
-        list = list.filter(p => p.has_access && p.has_topic_access);
+        list = list.filter(p => p.has_access && (p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access));
       }
 
       if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search));
@@ -1237,8 +1237,10 @@
         <div class="email">${p.email || '(no email)'}</div>
         <div class="meta">Signed up: ${p.created_at ? new Date(p.created_at).toLocaleString() : '–'}</div>
         <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-          <span class="badge ${p.has_access ? 'granted' : 'pending'}">SAT: ${p.has_access ? '✓ Approved' : '⏳ Pending'}</span>
-          <span class="badge ${p.has_topic_access ? 'granted' : 'pending'}">Topic: ${p.has_topic_access ? '✓ Approved' : '⏳ Pending'}</span>
+          <span class="badge ${p.has_access ? 'granted' : 'pending'}">SAT: ${p.has_access ? '✓' : '⏳'}</span>
+          <span class="badge ${p.has_topic_reading_access ? 'granted' : 'pending'}">Topic R&W: ${p.has_topic_reading_access ? '✓' : '⏳'}</span>
+          <span class="badge ${p.has_topic_math_access ? 'granted' : 'pending'}">Math: ${p.has_topic_math_access ? '✓' : '⏳'}</span>
+          <span class="badge ${p.has_topic_class_test_access ? 'granted' : 'pending'}">R&W Class Test: ${p.has_topic_class_test_access ? '✓' : '⏳'}</span>
         </div>
         <div style="margin-top: 10px;">
           <input type="text" class="org-input" placeholder="Organization" value="${p.organization || ''}"
@@ -1247,17 +1249,31 @@
       </div>
       <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
         <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 75px; text-align: right;">SAT Test:</span>
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">SAT Test:</span>
           ${p.has_access
             ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'sat', false)">Revoke</button>`
             : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'sat', true)">Approve</button>`
           }
         </div>
         <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 75px; text-align: right;">SAT Topic:</span>
-          ${p.has_topic_access
-            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic', false)">Revoke</button>`
-            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic', true)">Approve</button>`
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">Topic R&W:</span>
+          ${p.has_topic_reading_access
+            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_rw', false)">Revoke</button>`
+            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_rw', true)">Approve</button>`
+          }
+        </div>
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">Topic Math:</span>
+          ${p.has_topic_math_access
+            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_math', false)">Revoke</button>`
+            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_math', true)">Approve</button>`
+          }
+        </div>
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">R&W Class Test:</span>
+          ${p.has_topic_class_test_access
+            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_class_test', false)">Revoke</button>`
+            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
           }
         </div>
       </div>
@@ -1270,8 +1286,12 @@
       const updatePayload = {};
       if (type === 'sat') {
         updatePayload.has_access = value;
-      } else if (type === 'topic') {
-        updatePayload.has_topic_access = value;
+      } else if (type === 'topic_rw') {
+        updatePayload.has_topic_reading_access = value;
+      } else if (type === 'topic_math') {
+        updatePayload.has_topic_math_access = value;
+      } else if (type === 'topic_class_test') {
+        updatePayload.has_topic_class_test_access = value;
       }
 
       const { error } = await supabaseClient
@@ -1287,7 +1307,9 @@
       const p = allProfiles.find(x => x.id === userId);
       if (p) {
         if (type === 'sat') p.has_access = value;
-        else if (type === 'topic') p.has_topic_access = value;
+        else if (type === 'topic_rw') p.has_topic_reading_access = value;
+        else if (type === 'topic_math') p.has_topic_math_access = value;
+        else if (type === 'topic_class_test') p.has_topic_class_test_access = value;
       }
       updateStats();
       if (currentFilter === 'reports') {
@@ -1407,11 +1429,25 @@
                   : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'sat', true)">Approve</button>`
                 }
               </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">SAT Topic:</span>
-                ${p.has_topic_access
-                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic', false)">Revoke</button>`
-                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic', true)">Approve</button>`
+              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Topic R&W:</span>
+                ${p.has_topic_reading_access
+                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_rw', false)">Revoke</button>`
+                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_rw', true)">Approve</button>`
+                }
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Topic Math:</span>
+                ${p.has_topic_math_access
+                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_math', false)">Revoke</button>`
+                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_math', true)">Approve</button>`
+                }
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">R&W Class Test:</span>
+                ${p.has_topic_class_test_access
+                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_class_test', false)">Revoke</button>`
+                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
                 }
               </div>
             </div>

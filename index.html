@@ -25,7 +25,7 @@
   <div class="tabs">
     <button class="tab-btn active" onclick="showTab('reading')">📖 Reading &amp; Writing</button>
     <button class="tab-btn" onclick="showTab('math')">🔢 Math</button>
-    <button class="tab-btn" onclick="showTab('classtest')">🏫 Class Test</button>
+    <button class="tab-btn" onclick="showTab('classtest')">🏫 Reading &amp; Writing Class Test</button>
   </div>
 
   <!-- READING & WRITING TAB -->
@@ -219,6 +219,7 @@
       <span class="tag">Available</span>
       <a href="./inferences/index.html" class="card-btn">Start Test →</a>
     </div>
+    
   </div>
   </div>
 
@@ -278,14 +279,25 @@ function showTab(tabName) {
       window.location.reload();
     };
 
-    const { data: profile } = await supabaseClient.from('profiles').select('has_topic_access').eq('id', session.user.id).single();
+    const { data: profile } = await supabaseClient.from('profiles').select('has_topic_reading_access, has_topic_math_access, has_topic_class_test_access').eq('id', session.user.id).single();
     const isAdmin  = session.user.email === 'rupali.eduquest@gmail.com';
-    const hasAccess = (profile && profile.has_topic_access) || isAdmin;
 
     allBtns.forEach(btn => {
       const href = btn.getAttribute('href');
       if (!unlockedHrefs.includes(href)) {
-        if (!hasAccess) {
+        const btnSection = btn.closest('.tab-content');
+        let sectionAccess = isAdmin;
+        if (!isAdmin && profile) {
+          if (btnSection && btnSection.id === 'reading-section') {
+            sectionAccess = profile.has_topic_reading_access;
+          } else if (btnSection && btnSection.id === 'math-section') {
+            sectionAccess = profile.has_topic_math_access;
+          } else if (btnSection && btnSection.id === 'classtest-section') {
+            sectionAccess = profile.has_topic_class_test_access;
+          }
+        }
+
+        if (!sectionAccess) {
           btn.textContent = 'Request Access 🔒';
           btn.style.background = '#d97706';
           btn.style.color = '#fff';
