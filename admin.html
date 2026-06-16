@@ -887,6 +887,14 @@
           <div class="num" id="statTopicPending">–</div>
           <div class="lbl">Topic Pending</div>
         </div>
+        <div class="stat">
+          <div class="num" id="statActApproved">–</div>
+          <div class="lbl">ACT Approved</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="statActPending">–</div>
+          <div class="lbl">ACT Pending</div>
+        </div>
       </div>
 
       <div class="tabs">
@@ -1180,12 +1188,15 @@
       const total = allProfiles.length;
       const satApproved = allProfiles.filter(p => p.has_access).length;
       const topicApproved = allProfiles.filter(p => p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access).length;
+      const actApproved = allProfiles.filter(p => p.has_act_access).length;
 
       document.getElementById('statTotal').textContent = total;
       document.getElementById('statSatApproved').textContent = satApproved;
       document.getElementById('statSatPending').textContent = total - satApproved;
       document.getElementById('statTopicApproved').textContent = topicApproved;
       document.getElementById('statTopicPending').textContent = total - topicApproved;
+      document.getElementById('statActApproved').textContent = actApproved;
+      document.getElementById('statActPending').textContent = total - actApproved;
     }
 
     // ── Filter tabs ───────────────────────────────────
@@ -1241,6 +1252,7 @@
           <span class="badge ${p.has_topic_reading_access ? 'granted' : 'pending'}">Topic R&W: ${p.has_topic_reading_access ? '✓' : '⏳'}</span>
           <span class="badge ${p.has_topic_math_access ? 'granted' : 'pending'}">Math: ${p.has_topic_math_access ? '✓' : '⏳'}</span>
           <span class="badge ${p.has_topic_class_test_access ? 'granted' : 'pending'}">R&W Class Test: ${p.has_topic_class_test_access ? '✓' : '⏳'}</span>
+          <span class="badge ${p.has_act_access ? 'granted' : 'pending'}">ACT: ${p.has_act_access ? '✓' : '⏳'}</span>
         </div>
         <div style="margin-top: 10px;">
           <input type="text" class="org-input" placeholder="Organization" value="${p.organization || ''}"
@@ -1276,6 +1288,13 @@
             : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
           }
         </div>
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">ACT Test:</span>
+          ${p.has_act_access
+            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'act', false)">Revoke</button>`
+            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'act', true)">Approve</button>`
+          }
+        </div>
       </div>
     </div>
   `).join('');
@@ -1292,6 +1311,8 @@
         updatePayload.has_topic_math_access = value;
       } else if (type === 'topic_class_test') {
         updatePayload.has_topic_class_test_access = value;
+      } else if (type === 'act') {
+        updatePayload.has_act_access = value;
       }
 
       const { error } = await supabaseClient
@@ -1310,6 +1331,7 @@
         else if (type === 'topic_rw') p.has_topic_reading_access = value;
         else if (type === 'topic_math') p.has_topic_math_access = value;
         else if (type === 'topic_class_test') p.has_topic_class_test_access = value;
+        else if (type === 'act') p.has_act_access = value;
       }
       updateStats();
       if (currentFilter === 'reports') {
@@ -1343,17 +1365,56 @@
     let adminCharts = {};
 
     async function loadReportsData() {
-      const { data, error } = await supabaseClient
+      const { data: satData, error: satError } = await supabaseClient
         .from('sat_topic_report')
         .select('*')
         .order('submit_time', { ascending: false });
 
-      if (error) {
-        document.getElementById('reportsList').innerHTML = `<div class="report-empty">Error: ${error.message}</div>`;
+      if (satError) {
+        document.getElementById('reportsList').innerHTML = `<div class="report-empty">Error: ${satError.message}</div>`;
         return;
       }
 
-      allReports = data || [];
+      const { data: actData, error: actError } = await supabaseClient
+        .from('act_results')
+        .select('*')
+        .order('submitted_at', { ascending: false });
+
+      if (actError) {
+        console.warn("ACT reports fetch error:", actError);
+      }
+
+      const mappedActData = (actData || []).map(r => {
+        const detailsObj = r.student_answers || [];
+        const mappedDetails = detailsObj.map(a => {
+           const mapOpt = o => o === 'A' ? 0 : o === 'B' ? 1 : o === 'C' ? 2 : o === 'D' ? 3 : null;
+           return {
+               id: a.question_id,
+               status: a.status,
+               chosen: mapOpt(a.chosen_option),
+               answer: mapOpt(a.correct_option),
+               text: 'Section: ' + (a.section || 'Unknown') + '\\nTopic: ' + (a.topic || 'Unknown'),
+               options: ['Option A', 'Option B', 'Option C', 'Option D']
+           };
+        });
+
+        return {
+          email: r.student_email,
+          name: r.student_name,
+          topic: r.exam_name || 'ACT Test',
+          scaled: r.composite_score || 0,
+          pct: r.percentage || 0,
+          correct: r.correct || 0,
+          wrong: r.wrong || 0,
+          unattempted: r.skipped || 0,
+          total: r.total || 0,
+          submit_time: r.submitted_at,
+          details_json: JSON.stringify(mappedDetails)
+        };
+      });
+
+      allReports = [...(satData || []), ...mappedActData];
+      allReports.sort((a, b) => new Date(b.submit_time || 0) - new Date(a.submit_time || 0));
 
       // Group by email
       groupedReports = {};
@@ -1448,6 +1509,13 @@
                 ${p.has_topic_class_test_access
                   ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_class_test', false)">Revoke</button>`
                   : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
+                }
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">ACT Test:</span>
+                ${p.has_act_access
+                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'act', false)">Revoke</button>`
+                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'act', true)">Approve</button>`
                 }
               </div>
             </div>
