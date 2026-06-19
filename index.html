@@ -1,331 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital SAT – Topic Tests</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital SAT – Topic Tests</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-<header class="hdr">
-  <div class="brand">
-    <span>📝</span><span>EduQuest</span>
-    <span class="brand-pill">SAT Topic Tests</span>
-  </div>
-  <div id="auth-section" style="font-family: sans-serif; font-size: 0.9rem;">
-    <!-- Rendered dynamically via JS -->
-  </div>
-</header>
-<main class="hero">
-  <div class="hero-badge">✦ 16 Topic Tests · SAT Format</div>
-  <h1>Digital SAT<br><span>Topic Practice</span></h1>
-  <p>Master each topic individually with 25+ authentic SAT-style questions per test. Track your performance and identify weak areas.</p>
+  <header class="hdr">
+    <div class="brand">
+      <span>📝</span><span>EduQuest</span>
+      <span class="brand-pill">SAT Topic Tests</span>
+    </div>
+    <div id="auth-section" style="font-family: sans-serif; font-size: 0.9rem;">
+      <!-- Rendered dynamically via JS -->
+    </div>
+  </header>
+  <main class="hero">
+    <div class="hero-badge">✦ 16 Topic Tests · SAT Format</div>
+    <h1>Digital SAT<br><span>Topic Practice</span></h1>
+    <p>Master each topic individually with 25+ authentic SAT-style questions per test. Track your performance and
+      identify weak areas.</p>
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="showTab('reading')">📖 Reading &amp; Writing</button>
-    <button class="tab-btn" onclick="showTab('math')">🔢 Math</button>
-    <button class="tab-btn" onclick="showTab('classtest')">🏫 Reading &amp; Writing Class Test</button>
-  </div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('reading')">📖 Reading &amp; Writing</button>
+      <button class="tab-btn" onclick="showTab('math')">🔢 Math</button>
+      <button class="tab-btn" onclick="showTab('classtest')">🏫 Reading &amp; Writing Class Test</button>
+    </div>
 
-  <!-- READING & WRITING TAB -->
-  <div id="reading-section" class="tab-content active">
-  <div class="cards">
-    <div class="exam-card">
-      <div class="card-icon">📖</div>
-      <div class="card-num">Topic 01</div>
-      <div class="card-title">Reading Comprehension</div>
-      <div class="card-sub">25 Qs · 32 min · Passages &amp; inference</div>
-      <span class="tag">Available</span>
-      <a href="./test.html" class="card-btn">Start Test →</a>
+    <!-- READING & WRITING TAB -->
+    <div id="reading-section" class="tab-content active">
+      <div class="cards">
+        <div class="exam-card">
+          <div class="card-icon">📖</div>
+          <div class="card-num">Topic 01</div>
+          <div class="card-title">Reading Comprehension</div>
+          <div class="card-sub">25 Qs · 32 min · Passages &amp; inference</div>
+          <span class="tag">Available</span>
+          <a href="./test.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">📝</div>
+          <div class="card-num">Topic 02</div>
+          <div class="card-title">Vocabulary in Context</div>
+          <div class="card-sub">25 Qs · 32 min · Words &amp; meaning</div>
+          <span class="tag">Available</span>
+          <a href="./topic2/test2.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">✏️</div>
+          <div class="card-num">Topic 03</div>
+          <div class="card-title">Grammar &amp; Usage</div>
+          <div class="card-sub">25 Qs · 32 min · Standard English</div>
+          <span class="tag">Available</span>
+          <a href="./topic-3/test3.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔤</div>
+          <div class="card-num">Topic 04</div>
+          <div class="card-title">Sentence Completion</div>
+          <div class="card-sub">25 Qs · 32 min · Fill in the blank</div>
+          <span class="tag">Available</span>
+          <a href="./topic4/test4.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🗣️</div>
+          <div class="card-num">Topic 05</div>
+          <div class="card-title">Rhetorical Skills</div>
+          <div class="card-sub">25 Qs · 32 min · Transitions &amp; tone</div>
+          <span class="tag">Available</span>
+          <a href="./topic5/test.html" class="card-btn">Start Test</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">📊</div>
+          <div class="card-num">Topic 06</div>
+          <div class="card-title">Critical Thinking &amp; Data</div>
+          <div class="card-sub">25 Qs · 32 min · Charts &amp; evidence</div>
+          <span class="tag">Available</span>
+          <a href="./test_6/test6.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">📑</div>
+          <div class="card-num">Topic 07</div>
+          <div class="card-title">Paired Passages</div>
+          <div class="card-sub">25 Qs · 32 min · Compare viewpoints</div>
+          <span class="tag">Available</span>
+          <a href="./topic_7/test7.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔬</div>
+          <div class="card-num">Topic 08</div>
+          <div class="card-title">Research Notes Questions</div>
+          <div class="card-sub">25 Qs · 32 min · Lab notes &amp; synthesis</div>
+          <span class="tag">Available</span>
+          <a href="./topic_8/test8.html" class="card-btn">Start Test →</a>
+        </div>
+      </div>
     </div>
-    <div class="exam-card">
-      <div class="card-icon">📝</div>
-      <div class="card-num">Topic 02</div>
-      <div class="card-title">Vocabulary in Context</div>
-      <div class="card-sub">25 Qs · 32 min · Words &amp; meaning</div>
-      <span class="tag">Available</span>
-      <a href="./topic2/test2.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">✏️</div>
-      <div class="card-num">Topic 03</div>
-      <div class="card-title">Grammar &amp; Usage</div>
-      <div class="card-sub">25 Qs · 32 min · Standard English</div>
-      <span class="tag">Available</span>
-      <a href="./topic-3/test3.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔤</div>
-      <div class="card-num">Topic 04</div>
-      <div class="card-title">Sentence Completion</div>
-      <div class="card-sub">25 Qs · 32 min · Fill in the blank</div>
-      <span class="tag">Available</span>
-      <a href="./topic4/test4.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🗣️</div>
-      <div class="card-num">Topic 05</div>
-      <div class="card-title">Rhetorical Skills</div>
-      <div class="card-sub">25 Qs · 32 min · Transitions &amp; tone</div>
-      <span class="tag">Available</span>
-      <a href="./topic5/test.html" class="card-btn">Start Test</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">📊</div>
-      <div class="card-num">Topic 06</div>
-      <div class="card-title">Critical Thinking &amp; Data</div>
-      <div class="card-sub">25 Qs · 32 min · Charts &amp; evidence</div>
-      <span class="tag">Available</span>
-      <a href="./test_6/test6.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">📑</div>
-      <div class="card-num">Topic 07</div>
-      <div class="card-title">Paired Passages</div>
-      <div class="card-sub">25 Qs · 32 min · Compare viewpoints</div>
-      <span class="tag">Available</span>
-      <a href="./topic_7/test7.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔬</div>
-      <div class="card-num">Topic 08</div>
-      <div class="card-title">Research Notes Questions</div>
-      <div class="card-sub">25 Qs · 32 min · Lab notes &amp; synthesis</div>
-      <span class="tag">Available</span>
-      <a href="./topic_8/test8.html" class="card-btn">Start Test →</a>
-    </div>
-  </div>
-  </div>
 
-  <!-- MATH TAB -->
-  <div id="math-section" class="tab-content">
-  <div class="cards">
-    <div class="exam-card math">
-      <div class="card-icon">🔢</div>
-      <div class="card-num">Topic 09</div>
-      <div class="card-title">Numbers &amp; Operations</div>
-      <div class="card-sub">25 Qs · 35 min · Arithmetic &amp; number theory</div>
-      <span class="tag">Available</span>
-      <a href="./topic_9/test9.html" class="card-btn">Start Test →</a>
+    <!-- MATH TAB -->
+    <div id="math-section" class="tab-content">
+      <div class="cards">
+        <div class="exam-card math">
+          <div class="card-icon">🔢</div>
+          <div class="card-num">Topic 09</div>
+          <div class="card-title">Numbers &amp; Operations</div>
+          <div class="card-sub">25 Qs · 35 min · Arithmetic &amp; number theory</div>
+          <span class="tag">Available</span>
+          <a href="./topic_9/test9.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">📐</div>
+          <div class="card-num">Topic 10</div>
+          <div class="card-title">Linear Algebra</div>
+          <div class="card-sub">25 Qs · 35 min · Equations &amp; inequalities</div>
+          <span class="tag">Available</span>
+          <a href="./topic_10/test10.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">📈</div>
+          <div class="card-num">Topic 11</div>
+          <div class="card-title">Functions &amp; Graphs</div>
+          <div class="card-sub">25 Qs · 35 min · Graphing &amp; analysis</div>
+          <span class="tag">Available</span>
+          <a href="./topic_11/test11.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">🔡</div>
+          <div class="card-num">Topic 12</div>
+          <div class="card-title">Quadratics &amp; Polynomials</div>
+          <div class="card-sub">25 Qs · 35 min · Parabolas &amp; factoring</div>
+          <span class="tag">Available</span>
+          <a href="./topic_12/test12.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">📏</div>
+          <div class="card-num">Topic 13</div>
+          <div class="card-title">Geometry</div>
+          <div class="card-sub">25 Qs · 35 min · Shapes &amp; spatial reasoning</div>
+          <span class="tag">Available</span>
+          <a href="./topic_13/test13.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">📐</div>
+          <div class="card-num">Topic 14</div>
+          <div class="card-title">Trigonometry</div>
+          <div class="card-sub">25 Qs · 35 min · Sin, cos, tan &amp; more</div>
+          <span class="tag">Available</span>
+          <a href="./topic_14/test14.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">🎲</div>
+          <div class="card-num">Topic 15</div>
+          <div class="card-title">Statistics &amp; Probability</div>
+          <div class="card-sub">25 Qs · 35 min · Data &amp; chance</div>
+          <span class="tag">Available</span>
+          <a href="./topic_15/test15.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">🧮</div>
+          <div class="card-num">Topic 16</div>
+          <div class="card-title">Advanced Math</div>
+          <div class="card-sub">25 Qs · 35 min · Complex equations</div>
+          <span class="tag">Available</span>
+          <a href="./topic_16/test16.html" class="card-btn">Start Test →</a>
+        </div>
+      </div>
     </div>
-    <div class="exam-card math">
-      <div class="card-icon">📐</div>
-      <div class="card-num">Topic 10</div>
-      <div class="card-title">Linear Algebra</div>
-      <div class="card-sub">25 Qs · 35 min · Equations &amp; inequalities</div>
-      <span class="tag">Available</span>
-      <a href="./topic_10/test10.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card math">
-      <div class="card-icon">📈</div>
-      <div class="card-num">Topic 11</div>
-      <div class="card-title">Functions &amp; Graphs</div>
-      <div class="card-sub">25 Qs · 35 min · Graphing &amp; analysis</div>
-      <span class="tag">Available</span>
-      <a href="./topic_11/test11.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card math">
-      <div class="card-icon">🔡</div>
-      <div class="card-num">Topic 12</div>
-      <div class="card-title">Quadratics &amp; Polynomials</div>
-      <div class="card-sub">25 Qs · 35 min · Parabolas &amp; factoring</div>
-      <span class="tag">Available</span>
-      <a href="./topic_12/test12.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card math">
-      <div class="card-icon">📏</div>
-      <div class="card-num">Topic 13</div>
-      <div class="card-title">Geometry</div>
-      <div class="card-sub">25 Qs · 35 min · Shapes &amp; spatial reasoning</div>
-      <span class="tag">Available</span>
-      <a href="./topic_13/test13.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card math">
-      <div class="card-icon">📐</div>
-      <div class="card-num">Topic 14</div>
-      <div class="card-title">Trigonometry</div>
-      <div class="card-sub">25 Qs · 35 min · Sin, cos, tan &amp; more</div>
-      <span class="tag">Available</span>
-      <a href="./topic_14/test14.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card math">
-      <div class="card-icon">🎲</div>
-      <div class="card-num">Topic 15</div>
-      <div class="card-title">Statistics &amp; Probability</div>
-      <div class="card-sub">25 Qs · 35 min · Data &amp; chance</div>
-      <span class="tag">Available</span>
-      <a href="./topic_15/test15.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card math">
-      <div class="card-icon">🧮</div>
-      <div class="card-num">Topic 16</div>
-      <div class="card-title">Advanced Math</div>
-      <div class="card-sub">25 Qs · 35 min · Complex equations</div>
-      <span class="tag">Available</span>
-      <a href="./topic_16/test16.html" class="card-btn">Start Test →</a>
-    </div>
-  </div>
-  </div>
 
-  <!-- CLASS TEST TAB -->
-  <div id="classtest-section" class="tab-content">
-  <div class="cards">
-    <div class="exam-card">
-      <div class="card-icon">🔠</div>
-      <div class="card-num">Words in Context</div>
-      <div class="card-title">Words in Context</div>
-      <div class="card-sub">49 Qs · 60 min · Fill-in-blank &amp; meaning</div>
-      <span class="tag">Available</span>
-      <a href="./wic/test_wic.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔠</div>
-      <div class="card-num">Text Structure and Purpose</div>
-      <div class="card-title">Text Structure and Purpose</div>
-      <div class="card-sub">20 Qs · 60 min</div>
-      <span class="tag">Available</span>
-      <a href="./text_structure_purpose/test_tsp.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔠</div>
-      <div class="card-num">Cross-Text Connections</div>
-      <div class="card-title">Cross-Text Connections</div>
-      <div class="card-sub">31 Qs · 60 min</div>
-      <span class="tag">Available</span>
-      <a href="./cross_text_connections/cross_text_connections.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔠</div>
-      <div class="card-num">Central Ideas and Details</div>
-      <div class="card-title">Central Ideas and Details</div>
-      <div class="card-sub">34 Qs · 45 min</div>
-      <span class="tag">Available</span>
-      <a href="./Central_Ideas_and_Details/cid.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔠</div>
-      <div class="card-num">Command of Evidence: Textual</div>
-      <div class="card-title">Command of Evidence: Textual</div>
-      <div class="card-sub">11 Qs · 15 min</div>
-      <span class="tag">Available</span>
-      <a href="./coe_textual/index_coe_textual.html" class="card-btn">Start Test →</a>
-    </div>
-    <div class="exam-card">
-      <div class="card-icon">🔠</div>
-      <div class="card-num">Inferences</div>
-      <div class="card-title">Inferences</div>
-      <div class="card-sub">44 Qs · 66 min</div>
-      <span class="tag">Available</span>
-      <a href="./inferences/index.html" class="card-btn">Start Test →</a>
-    </div>
-    
-  </div>
-  </div>
+    <!-- CLASS TEST TAB -->
+    <div id="classtest-section" class="tab-content">
+      <div class="cards">
+        <div class="exam-card">
+          <div class="card-icon">🔠</div>
+          <div class="card-num">Words in Context</div>
+          <div class="card-title">Words in Context</div>
+          <div class="card-sub">49 Qs · 60 min · Fill-in-blank &amp; meaning</div>
+          <span class="tag">Available</span>
+          <a href="./wic/test_wic.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔠</div>
+          <div class="card-num">Text Structure and Purpose</div>
+          <div class="card-title">Text Structure and Purpose</div>
+          <div class="card-sub">20 Qs · 60 min</div>
+          <span class="tag">Available</span>
+          <a href="./text_structure_purpose/test_tsp.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔠</div>
+          <div class="card-num">Cross-Text Connections</div>
+          <div class="card-title">Cross-Text Connections</div>
+          <div class="card-sub">31 Qs · 60 min</div>
+          <span class="tag">Available</span>
+          <a href="./cross_text_connections/cross_text_connections.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔠</div>
+          <div class="card-num">Central Ideas and Details</div>
+          <div class="card-title">Central Ideas and Details</div>
+          <div class="card-sub">34 Qs · 45 min</div>
+          <span class="tag">Available</span>
+          <a href="./Central_Ideas_and_Details/cid.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔠</div>
+          <div class="card-num">Command of Evidence: Textual</div>
+          <div class="card-title">Command of Evidence: Textual</div>
+          <div class="card-sub">11 Qs · 15 min</div>
+          <span class="tag">Available</span>
+          <a href="./coe_textual/index_coe_textual.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔠</div>
+          <div class="card-num">Inferences</div>
+          <div class="card-title">Inferences</div>
+          <div class="card-sub">44 Qs · 66 min</div>
+          <span class="tag">Available</span>
+          <a href="./inferences/index.html" class="card-btn">Start Test →</a>
+        </div>
+      </div>
+      <h2
+        style="font-family: 'Syne', sans-serif; margin: 32px 0 16px; font-size: 1.5rem; text-align: left; width: 100%; max-width: 880px;">
+        Standard English Conventions</h2>
+      <div class="cards">
+        <div class="exam-card">
+          <div class="card-icon">✏️</div>
+          <div class="card-num">Boundaries</div>
+          <div class="card-title">Boundaries</div>
+          <div class="card-sub">54 Qs · 81 min</div>
+          <span class="tag">Available</span>
+          <a href="./boundaries/index.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔤</div>
+          <div class="card-num">Subject-Verb Agreement</div>
+          <div class="card-title">Subject-Verb Agreement</div>
+          <div class="card-sub">39 Qs · 59 min</div>
+          <span class="tag">Available</span>
+          <a href="./SVA/index.html" class="card-btn">Start Test →</a>
+        </div>
+        <!-- <div class="exam-card">
+          <div class="card-icon">👤</div>
+          <div class="card-num">Pronouns</div>
+          <div class="card-title">Pronouns</div>
+          <div class="card-sub">85 Qs · 128 min</div>
+          <span class="tag">Available</span>
+          <a href="./pronouns/index.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">📚</div>
+          <div class="card-num">Verb Tense &amp; Forms</div>
+          <div class="card-title">Verb Tense &amp; Forms</div>
+          <div class="card-sub">35 Qs · 53 min</div>
+          <span class="tag">Available</span>
+          <a href="./verbs/index.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card">
+          <div class="card-icon">🔍</div>
+          <div class="card-num">Modifiers</div>
+          <div class="card-title">Modifiers</div>
+          <div class="card-sub">50 Qs · 75 min</div>
+          <span class="tag">Available</span>
+          <a href="./modifiers/index.html" class="card-btn">Start Test →</a>
+        </div> -->
 
-</main>
+      </div>
+    </div>
 
-<script>
-function showTab(tabName) {
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-  if (tabName === 'reading') {
-    document.querySelectorAll('.tab-btn')[0].classList.add('active');
-    document.getElementById('reading-section').classList.add('active');
-  } else if (tabName === 'math') {
-    document.querySelectorAll('.tab-btn')[1].classList.add('active');
-    document.getElementById('math-section').classList.add('active');
-  } else if (tabName === 'classtest') {
-    document.querySelectorAll('.tab-btn')[2].classList.add('active');
-    document.getElementById('classtest-section').classList.add('active');
-  }
-}
-</script>
+  </main>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase.js"></script>
-<script src="email.js"></script>
-<script>
-  (async function initAuth() {
-    if (!window.supabase) return;
-    const supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
-    const { data: { session } } = await supabaseClient.auth.getSession();
-
-    const authSection = document.getElementById('auth-section');
-    const allBtns = document.querySelectorAll('.card-btn');
-    const unlockedHrefs = ['./test.html', './topic_9/test9.html'];
-
-    if (!session) {
-      authSection.innerHTML = `<a href="login.html" style="color:#60a5fa; text-decoration:none; border:1px solid #60a5fa; padding:5px 12px; border-radius:4px;">Log In</a>`;
-      allBtns.forEach(btn => {
-        const href = btn.getAttribute('href');
-        if (!unlockedHrefs.includes(href)) {
-          btn.textContent = 'Log in to Access 🔒';
-          btn.style.background = 'rgba(255,255,255,0.1)';
-          btn.style.color = '#fff';
-          btn.onclick = (e) => { e.preventDefault(); window.location.href = 'login.html'; };
-        }
-      });
-      return;
+  <script>
+    function showTab(tabName) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      if (tabName === 'reading') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('reading-section').classList.add('active');
+      } else if (tabName === 'math') {
+        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+        document.getElementById('math-section').classList.add('active');
+      } else if (tabName === 'classtest') {
+        document.querySelectorAll('.tab-btn')[2].classList.add('active');
+        document.getElementById('classtest-section').classList.add('active');
+      }
     }
+  </script>
 
-    authSection.innerHTML = `
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="email.js"></script>
+  <script>
+    (async function initAuth() {
+      if (!window.supabase) return;
+      const supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+      const { data: { session } } = await supabaseClient.auth.getSession();
+
+      const authSection = document.getElementById('auth-section');
+      const allBtns = document.querySelectorAll('.card-btn');
+      const unlockedHrefs = ['./test.html', './topic_9/test9.html'];
+
+      if (!session) {
+        authSection.innerHTML = `<a href="login.html" style="color:#60a5fa; text-decoration:none; border:1px solid #60a5fa; padding:5px 12px; border-radius:4px;">Log In</a>`;
+        allBtns.forEach(btn => {
+          const href = btn.getAttribute('href');
+          if (!unlockedHrefs.includes(href)) {
+            btn.textContent = 'Log in to Access 🔒';
+            btn.style.background = 'rgba(255,255,255,0.1)';
+            btn.style.color = '#fff';
+            btn.onclick = (e) => { e.preventDefault(); window.location.href = 'login.html'; };
+          }
+        });
+        return;
+      }
+
+      authSection.innerHTML = `
       <a href="dashboard.html" style="color:#a78bfa; text-decoration:none; border:1px solid rgba(167,139,250,0.3); padding:5px 12px; border-radius:4px; margin-right:8px; transition:all 0.2s;">📊 Dashboard</a>
       <span style="color:rgba(255,255,255,0.7); margin-right:10px;">${session.user.email}</span>
       <button onclick="logout()" style="background:none; border:1px solid rgba(255,255,255,0.2); color:#fff; padding:4px 10px; border-radius:4px; cursor:pointer;">Logout</button>`;
 
-    window.logout = async () => {
-      await supabaseClient.auth.signOut();
-      window.location.reload();
-    };
+      window.logout = async () => {
+        await supabaseClient.auth.signOut();
+        window.location.reload();
+      };
 
-    const { data: profile } = await supabaseClient.from('profiles').select('has_topic_reading_access, has_topic_math_access, has_topic_class_test_access').eq('id', session.user.id).single();
-    const isAdmin  = session.user.email === 'rupali.eduquest@gmail.com';
+      const { data: profile } = await supabaseClient.from('profiles').select('has_topic_reading_access, has_topic_math_access, has_topic_class_test_access').eq('id', session.user.id).single();
+      const isAdmin = session.user.email === 'rupali.eduquest@gmail.com';
 
-    allBtns.forEach(btn => {
-      const href = btn.getAttribute('href');
-      if (!unlockedHrefs.includes(href)) {
-        const btnSection = btn.closest('.tab-content');
-        let sectionAccess = isAdmin;
-        if (!isAdmin && profile) {
-          if (btnSection && btnSection.id === 'reading-section') {
-            sectionAccess = profile.has_topic_reading_access;
-          } else if (btnSection && btnSection.id === 'math-section') {
-            sectionAccess = profile.has_topic_math_access;
-          } else if (btnSection && btnSection.id === 'classtest-section') {
-            sectionAccess = profile.has_topic_class_test_access;
+      allBtns.forEach(btn => {
+        const href = btn.getAttribute('href');
+        if (!unlockedHrefs.includes(href)) {
+          const btnSection = btn.closest('.tab-content');
+          let sectionAccess = isAdmin;
+          if (!isAdmin && profile) {
+            if (btnSection && btnSection.id === 'reading-section') {
+              sectionAccess = profile.has_topic_reading_access;
+            } else if (btnSection && btnSection.id === 'math-section') {
+              sectionAccess = profile.has_topic_math_access;
+            } else if (btnSection && btnSection.id === 'classtest-section') {
+              sectionAccess = profile.has_topic_class_test_access;
+            }
+          }
+
+          if (!sectionAccess) {
+            btn.textContent = 'Request Access 🔒';
+            btn.style.background = '#d97706';
+            btn.style.color = '#fff';
+            btn.onclick = async (e) => {
+              e.preventDefault();
+              btn.textContent = 'Sending Request...';
+              try {
+                await supabaseClient.from('profiles').update({ topic_access_requested: true }).eq('id', session.user.id);
+              } catch (err) { console.error('DB Update failed:', err); }
+              if (typeof sendAccessRequest === 'function') {
+                await sendAccessRequest(session.user.email);
+              }
+              btn.textContent = 'Request Sent ✅';
+              btn.style.background = '#059669';
+              setTimeout(() => {
+                alert('Your request for access has been sent to the admin and is visible on their dashboard. Please wait for approval.');
+                btn.textContent = 'Request Access 🔒';
+                btn.style.background = '#d97706';
+              }, 500);
+            };
+          } else {
+            btn.textContent = 'Start Test →';
           }
         }
+      });
+    })();
+  </script>
 
-        if (!sectionAccess) {
-          btn.textContent = 'Request Access 🔒';
-          btn.style.background = '#d97706';
-          btn.style.color = '#fff';
-          btn.onclick = async (e) => {
-            e.preventDefault();
-            btn.textContent = 'Sending Request...';
-            try {
-              await supabaseClient.from('profiles').update({ topic_access_requested: true }).eq('id', session.user.id);
-            } catch(err) { console.error('DB Update failed:', err); }
-            if (typeof sendAccessRequest === 'function') {
-              await sendAccessRequest(session.user.email);
-            }
-            btn.textContent = 'Request Sent ✅';
-            btn.style.background = '#059669';
-            setTimeout(() => {
-              alert('Your request for access has been sent to the admin and is visible on their dashboard. Please wait for approval.');
-              btn.textContent = 'Request Access 🔒';
-              btn.style.background = '#d97706';
-            }, 500);
-          };
-        } else {
-          btn.textContent = 'Start Test →';
-        }
-      }
-    });
-  })();
-</script>
-
-<footer>© EduQuest · Digital SAT Topic Tests · 16 Topics + Words in Context · 400+ Questions</footer>
+  <footer>© EduQuest · Digital SAT Topic Tests · 16 Topics + Words in Context · 400+ Questions</footer>
 </body>
+
 </html>

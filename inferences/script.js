@@ -219,7 +219,12 @@ async function doSubmit() {
   const grade  = pct >= 90 ? 'A+' : pct >= 80 ? 'A' : pct >= 70 ? 'B' : pct >= 60 ? 'C' : 'D';
   const scaled = Math.round(200 + (correct / total) * 600);
 
-  const result = { student, correct, wrong, unattempted, total, pct, grade, scaled, details, answers, submitTime: new Date().toISOString() };
+  const result = { 
+      student, correct, wrong, unattempted, total, pct, grade, scaled, details, answers, 
+      submitTime: new Date().toISOString(),
+      examName: 'Inferences',
+      topicNumber: 17
+  };
   const saveResult = await saveToSupabase(result);
 
   $('savingOverlay').classList.remove('show');
