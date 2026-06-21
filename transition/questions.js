@@ -486,12 +486,14 @@ Which of the following sentences would provide the strongest conclusion?`,
     }
 ];
 
-const TOPIC_MAP = {
-    'Transitions': {
-        name: 'Transitions',
-        questions: QUESTIONS.map(q => q.id)
+const TOPIC_MAP = {};
+QUESTIONS.forEach(q => {
+    const key = q.topic || 'General';
+    if (!TOPIC_MAP[key]) {
+        TOPIC_MAP[key] = { name: key, questions: [] };
     }
-};
+    TOPIC_MAP[key].questions.push(q.id);
+});
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { QUESTIONS, TOPIC_MAP };
