@@ -1008,7 +1008,10 @@
             script.src = path;
             script.onload = () => {
               try {
-                const qs = iframe.contentWindow.QUESTIONS;
+                const extractScript = doc.createElement('script');
+                extractScript.textContent = "window.__extracted_qs = typeof QUESTIONS !== 'undefined' ? QUESTIONS : null;";
+                doc.body.appendChild(extractScript);
+                const qs = iframe.contentWindow.__extracted_qs;
                 if (qs && Array.isArray(qs)) {
                   loadedQuestionsCache[topicName] = qs;
                   resolve(qs);
