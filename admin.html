@@ -964,7 +964,16 @@
       'Text Structure and Purpose': { q: './text_structure_purpose/questions_sp.js', dir: './text_structure_purpose' },
       'Central Ideas and Details': { q: './Central_Ideas_and_Details/questions_cid.js', dir: './Central_Ideas_and_Details' },
       'Command of Evidence: Textual': { q: './coe_textual/questions_coe_textual.js', dir: './coe_textual' },
-      'Inferences': { q: './inferences/questions.js', dir: './inferences' }
+      'Inferences': { q: './inferences/questions.js', dir: './inferences' },
+      'Verb Tense and Forms': { q: './verbs/questions.js', dir: './verbs' },
+      'Modifiers': { q: './modifiers/questions.js', dir: './modifiers' },
+      'Plural Possessives': { q: './plural_poss/questions.js', dir: './plural_poss' },
+      'Transitions': { q: './transition/questions.js', dir: './transition' },
+      'Rhetorics': { q: './rhetorics/questions.js', dir: './rhetorics' },
+      'SAT Diagnostic Test': { q: './exam_sat_diag/questions.js', dir: './exam_sat_diag' },
+      'Lines, Angles & Triangles': { q: './angles/questions.js', dir: './angles' },
+      'Mensuration & Geometry': { q: './mensuration/questions.js', dir: './mensuration' },
+      'Trigonometry': { q: './Trigonometry/questions.js', dir: './Trigonometry' }
     };
 
     const loadedQuestionsCache = {};
@@ -1227,8 +1236,14 @@
       let list = allProfiles;
 
       if (currentFilter === 'pending') {
-        // Pending approval on EITHER SAT or Topic tests
-        list = list.filter(p => !p.has_access || (!p.has_topic_reading_access && !p.has_topic_math_access && !p.has_topic_class_test_access));
+        // Pending approval on EITHER SAT or Topic tests, or explicitly requested access
+        list = list.filter(p => p.topic_access_requested || !p.has_access || (!p.has_topic_reading_access && !p.has_topic_math_access && !p.has_topic_class_test_access));
+        // Sort requested access to top
+        list.sort((a, b) => {
+          if (a.topic_access_requested && !b.topic_access_requested) return -1;
+          if (!a.topic_access_requested && b.topic_access_requested) return 1;
+          return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+        });
       } else if (currentFilter === 'approved') {
         // Approved for BOTH
         list = list.filter(p => p.has_access && (p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access));
@@ -1245,7 +1260,7 @@
       container.innerHTML = list.map(p => `
     <div class="user-card">
       <div class="user-info">
-        <div class="email">${p.email || '(no email)'}</div>
+        <div class="email">${p.email || '(no email)'} ${p.topic_access_requested ? '<span style="margin-left:8px;background:#d97706;color:#fff;padding:3px 8px;border-radius:12px;font-size:0.7rem;font-weight:bold;">🔔 Requested Access</span>' : ''}</div>
         <div class="meta">Signed up: ${p.created_at ? new Date(p.created_at).toLocaleString() : '–'}</div>
         <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
           <span class="badge ${p.has_access ? 'granted' : 'pending'}">SAT: ${p.has_access ? '✓' : '⏳'}</span>
@@ -1315,6 +1330,11 @@
         updatePayload.has_act_access = value;
       }
 
+      // Automatically clear the requested flag when access is granted
+      if (value === true) {
+        updatePayload.topic_access_requested = false;
+      }
+
       const { error } = await supabaseClient
         .from('profiles')
         .update(updatePayload)
@@ -1332,6 +1352,8 @@
         else if (type === 'topic_math') p.has_topic_math_access = value;
         else if (type === 'topic_class_test') p.has_topic_class_test_access = value;
         else if (type === 'act') p.has_act_access = value;
+        
+        if (value === true) p.topic_access_requested = false;
       }
       updateStats();
       if (currentFilter === 'reports') {
