@@ -1237,7 +1237,7 @@
 
       if (currentFilter === 'pending') {
         // Pending approval on EITHER SAT or Topic tests, or explicitly requested access
-        list = list.filter(p => p.topic_access_requested || !p.has_access || (!p.has_topic_reading_access && !p.has_topic_math_access && !p.has_topic_class_test_access));
+        list = list.filter(p => p.topic_access_requested || !p.has_access || !p.has_topic_reading_access || !p.has_topic_math_access || !p.has_topic_class_test_access);
         // Sort requested access to top
         list.sort((a, b) => {
           if (a.topic_access_requested && !b.topic_access_requested) return -1;
