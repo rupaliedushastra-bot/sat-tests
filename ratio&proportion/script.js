@@ -1,9 +1,3 @@
-// =============================================
-// script.js – Lines, Angles & Triangles
-// Digital SAT Practice | EduQuest
-// 25 Questions | SAT Math – Geometry
-// =============================================
-
 async function saveUserToSupabase(student) {
     if (!window.SUPABASE_CONFIG || SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL') return;
     try {
@@ -19,7 +13,7 @@ async function saveUserToSupabase(student) {
                 name: student.name,
                 email: student.email,
                 phone: student.phone,
-                topic: 'Angles',
+                topic: 'Ratio & Proportion',
                 created_at: new Date().toISOString()
             })
         });
@@ -42,8 +36,8 @@ async function saveToSupabase(result) {
                 name: result.student.name,
                 email: result.student.email,
                 phone: result.student.phone || '',
-                topic: 'Angles',
-                topic_number: 28,
+                topic: 'Ratio & Proportion',
+                topic_number: 25,
                 correct: result.correct,
                 wrong: result.wrong,
                 unattempted: result.unattempted,
@@ -93,7 +87,7 @@ function startTest() {
     showPage('pageTest');
     buildPalette();
     renderQ();
-    startTimer(38 * 60);
+    startTimer(44 * 60);
     $('timerBox').style.display = 'flex';
 }
 
@@ -118,7 +112,7 @@ function paintTimer() {
 function renderQ() {
     const q = QUESTIONS[currentQ];
     $('qBadge').textContent = `Q ${q.id}`;
-    if ($('qTopic')) $('qTopic').textContent = q.topic || 'Angles';
+    if ($('qTopic')) $('qTopic').textContent = q.topic || 'Ratio & Proportion';
     $('modProgress').textContent = `Q ${currentQ + 1} of ${QUESTIONS.length}`;
     $('btnPrev').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
     $('btnNext').textContent = currentQ < QUESTIONS.length - 1 ? 'Next →' : '🏁 Submit';
@@ -237,7 +231,7 @@ function renderResults(result, saveRes) {
 
     wrap.innerHTML = `
     <div class="res-hero">
-      <div style="font-size:0.8rem;opacity:.55;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Angles · Topic Test</div>
+      <div style="font-size:0.8rem;opacity:.55;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Ratio &amp; Proportion · Topic Test</div>
       <div class="sat-score" style="color:${scoreColor}">${scaled}</div>
       <div class="score-line">Section Score · ${correct} / ${total} correct (${pct}%) · Grade: ${grade}</div>
       <div class="score-sub">${student.name} &nbsp;·&nbsp; ${new Date(result.submitTime).toLocaleString()}</div>
@@ -307,7 +301,7 @@ function downloadPDF() {
     if (actions) actions.style.display = 'none';
     html2pdf().set({
         margin: [10, 10, 10, 10],
-        filename: `EduQuest_Report_${student.name.replace(/[^a-zA-Z0-9]/g, '_')}_Angles.pdf`,
+        filename: `EduQuest_Report_${student.name.replace(/[^a-zA-Z0-9]/g, '_')}_RatioProportion.pdf`,
         image: { type: 'jpeg', quality: 0.95 },
         html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
