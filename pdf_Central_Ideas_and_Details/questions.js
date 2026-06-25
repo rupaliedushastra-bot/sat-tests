@@ -1,3 +1,8 @@
+// =============================================
+// Digital SAT Topic Practice
+// 25 Questions
+// =============================================
+
 const QUESTIONS = [
   {
     "id": 1,
@@ -322,97 +327,6 @@ const QUESTIONS = [
     ],
     "answer": 1,
     "explanation": ". The text says that Preemby was \"good-looking\" and gives a few general details about his appearance, but then focuses on his \"personality\" 'ND IDEAS or \"nature,\" which was \"given to reverie\" and led to \"abstraction\" or \"absent-mindedness\" that made it hard for him to be employed. The reader learns that Preemby finally \"comes to rest\" or \"is employed\" by a distant relative, implying that connections helped him get the job rather than that he had the drive and initiative to find a position for himself. Distractor Explanations: Choice A is incorrect because the text does not discuss \"many\" challenges, just the fact that his personality makes it hard for him to gain employment. Choice C is incorrect because the paragraph says that Preemby \"came to rest for several years,\" but that phrase implies that he moved on to other jobs. The employment was not a \"career\" or a \"lifetime path,\" only a \"rest\" or \"short stop\" along his path. Choice D is incorrect because the text does describe the character's \"appearance\" or \"physical looks\" in general, but spends more time focusing on the personality. Therefore, the appearance is only a minor part of the overall purpose. 26.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 26,
-    "text": "It is estimated that more than 91 percent of\nAustralian households own a car and many\nhouseholds own more than one motor vehicle.\nCars and private vehicles continue to be the\npreferred way of getting to work\nThe usage of public transport, especially trains,\nhas decreased significantly in the review period\n(between 2016 to 2021) and only 2.5 percent of\nthe population of Australia walks to work. This\nmay be attributed to the increase in the overall\ndistance people have to commute to work\nWhich choice best states the main theme of the\ntext?",
-    "options": [
-      "More Australians are using the train to commute.",
-      "It is an overview of the work travel statistics of",
-      "Australia.",
-      "Many Australians do not like to walk to work."
-    ],
-    "answer": 1,
-    "explanation": ". The passage talks about the various methods of transportation Australians use to get to work Distractor Explanations: Choice A is incorrect as the passage mentions that the usage of trains has decreased. Choices C and D are also incorrect as they do not represent the main theme but only point to certain characteristics of Australians. 27.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 27,
-    "text": "While it may be challenging to find a foolproof\ntactic for converting a largely state-controlled\neconomy into a free one, the experience of\nthe United Kingdom since 1979 clearly shows\none method that works: privatization, where\ngovernment-owned industries are sold to private\ncompanies. By 1979, the total borrowings and\nlosses of public sector industries were operating at\napproximately ?3 billion a year.\nBy selling many of these industries, the\ngovernment has reduced these borrowings and\nlosses, adding over ?34 billion to the treasury\nfrom such sales, and now receives tax revenues\nfrom the newly privatized companies.\nWhich choice best states the dominant theme of\nthe text?",
-    "options": [
-      "There are multiple advantages of privatization.",
-      "The United Kingdom has been able to overhaul its economy through privatization.",
-      "It is difficult to find a plan that would help the UK's economy recover.",
-      "The government is right in selling off public- sector companies Besides vast economic declines, there were also many social consequences of the Great"
-    ],
-    "answer": 1,
-    "explanation": "The majority of the passage points to how the economy of the United Kingdom has been improved by the process of privatization, and how the government has been able to reduce its losses while receiving taxes from the sold companies. Distractor Explanations: Choice A is incorrect because while the advantages of privatization are mentioned, the dominant theme is how the UK used privatization to its advantage. Similarly, choice C is incorrect because the difficulty of finding a plan to help the UK is not a dominant theme. Choice D is incorrect because this option is only an inference from the passage and is not the overarching theme. 28.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 28,
-    "text": "Besides vast economic declines, there were\nalso many social consequences of the Great\nDepression. lhere was a high demand for most\nfamilies to have only one full-time paying job.\nWomen were encouraged to stay home and grow\ntheir own produce and raise poultry and livestock\nfor their eggs and meat. During the Great\nDepression, the food eaten was always made with\nthe lowest cost ingredients that could be found.\nHorse meat was sold because it was cheap, and\na horse cost more than selling it to a\nbutcher at a loss.\nNew clothing was made of cotton sacks used to\npackage goods such as flour, sugar, or grain to\nfeed animals. When these clothes tore or were\noutgrown, the fabric was recycled into other uses,\nbecoming tablecloths, or quilts for the family.\nWhich choice best states the main idea of the\ntext?",
-    "options": [
-      "Men were the sole breadwinners of the family.",
-      "It was difficult for women to find jobs.",
-      "Horses were sold for their meat at a loss.",
-      "Most families tried to cut corners to survive the Great Depression."
-    ],
-    "answer": 3,
-    "explanation": "Most of the passage talks about the various ways people tried to save money in order to survive the economic impact of the Great Depression. For example, they grew their own produce, ate cheap meat, used cotton sacks to make clothing, etc. Distractor Explanations: Choice A is incorrect because it is not the main idea of the passage. In fact, it is an inferred idea as the passage says only one full-time job per family was permitted and women were encouraged to stay home. Choice B is incorrect because no evidence has been presented in the passage to support the idea that it was difficult for women to find jobs. Choice C is incorrect because similar to choice A, it is not the overall theme or main idea of the passage. 29. Level: Easy I Skill/Knowledge: Central Ideas and Details nd Details (Answers) 30.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 29,
-    "text": "From the First Assessment Report released in\n1990, the Intergovernmental Panel on Climate\nChange (IPCC) has been insisting on its\nconclusion which attributes modern climate\nwarming to the increase of anthropogenic\nGreenhouse Gases (GHGs) concentrations in\nthe atmosphere. This conclusion appears to be\nreinforced continuously by emerging scientific\nevidence in recent years.\nBased on the text, what does the IPCC ascribe\nmodern climate warming to?",
-    "options": [
-      "Emerging scientific evidence",
-      "Increase in the concentration of GHG",
-      "Increase in polluting gases",
-      "Increase in human population"
-    ],
-    "answer": 1,
-    "explanation": "The text mentions that the IPCC has attributed \"modern climate warming to the increase of anthropogenic Greenhouse Gases (GHGs) concentrations in the atmosphere.\" Distractor Explanations: Choice A is incorrect because the text mentions that emerging scientific evidence has only reinforced the conclusion that modern climate warming is caused by an increase in GHGs. Choices C and D are incorrect because the text does not offer any information to support these options.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 30,
-    "text": "The following text is adapted from the book\nEmotional Intelligence by Daniel Goleman.\nA view of human nature that ignores\nthe power of human emotion is sadly\nshortsighted. The very name homo sapiens,\nthe thinking species. is misleading in light\nof the new appreciation and vision of the\nplace of emotions in our lives that science\nnow offers. As we all know from experience,\nwhen it comes to shaping our decisions and\nour actions, feeling counts every bit as much\n- and often more - than thought. We have\ngone too far in emphasizing the value and\nimport of the pure rational - of what IQ\nmeasures - in human life. Intelligence can\ncome to nothing when the emotions hold\nBased on the text, what is the central idea that the\nauthor is trying to put forward?",
-    "options": [
-      "Emotions make humans weak",
-      "Emotions are stronger than intelligence.",
-      "Humans should no longer be called homo sapiens.",
-      "One cannot ignore the power of emotions any longer."
-    ],
-    "answer": 3,
-    "explanation": "The author has repeatedly mentioned the immense power of emotions and how ignoring emotions is shortsighted- For example, the author says, \"A view of human nature that ignores the power of human emotion is sadly shortsighted.\" He also mentions \"feeling counts every bit as much - and often more - than thought.\" Distractor Explanations: Choice A is incorrect because the text does not mention anywhere that emotions make humans weak Choice B is incorrect because it is not the central or dominant idea of the text. Choice C is incorrect because the text offers no information to support the idea that humans should no longer be called homo sapiens.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 31,
-    "text": "Ihe Pedra D' Anta Reserve, located within the\nSerra do Urubu forest, protects one of the last\nlarge fragments of Atlantic Rainforest left in\nBrazil's Pernambuco state. Despite the fact that\n98 percent of the forest in this area has been\ndestroyed, the reserve sustains a healthy and\nexceptionally diverse bird population. Scientists\nhave recorded a total of 257 bird species here,\nincluding endangered birds like the Orange-\nbellied Antwren, Scalloped Antbird, and Pinto's\nSpinetail. The threats to these species increases\nwith each acre of forest that is cleared for charcoal\nproduction or illegal timber extraction.\nBased on the text, what is true about the Pedra\nD'Anta Reserve?",
-    "options": [
-      "The Orange-bellied Antwren is found only in the pedra D'Anta Reserve.",
-      "The Pedra D Anta Reserve is located within the Amazon in Brazil.",
-      "Many habitats are being destroyed due to illegal timber extraction.",
-      "Only 2 percent of the forest in the area is home to endangered birds. If you're exploring the planet, Antarctica is the last stop on the train, a continent with no history of a native population, where passports are unnecessary, and where the fringing ocean still boils with life in a way great stretches of the Atlantic and Pacific no longer do. Unexplored valleys and unscaled mountains abound in this white brocade desert, with its ferocious winds and curve-of-the-earth vistas."
-    ],
-    "answer": 2,
-    "explanation": "The text mentions \"threats to these species increases with each acre of forest that is cleared for charcoal production or illegal timber extraction.\" INFORMATION Distractor Explanations: Choice A is incorrect because the text does not mention that the Orange-bellied Antwren is found only in the pedra D'Anta Reserve. Choice B is incorrect because the text mentions that the Pedra D'Anta Reserve is located within the Serra do Urubu Forest and protects the Atlantic Rainforest. Choice D is incorrect because the text does not offer any information to support the fact that only 2 percent of the forest in the area is home to endangered birds. 32.",
-    "topic": "Central Ideas and Details"
-  },
-  {
-    "id": 32,
-    "text": "If you're exploring the planet, Antarctica is\nthe last stop on the train, a continent with no\nhistory of a native population, where passports\nare unnecessary, and where the fringing ocean\nstill boils with life in a way great stretches of the\nAtlantic and Pacific no longer do. Unexplored\nvalleys and unscaled mountains abound in this\nwhite brocade desert, with its ferocious winds and\ncurve-of-the-earth vistas.\nWhich choice best states the main theme of the\ntext?",
-    "options": [
-      "More people are exploring the planet using",
-      "Antarctica is the last, unexplored frontier on the planet.",
-      "Many great stretches of the Atlantic and",
-      "Pacific are lifeless."
-    ],
-    "answer": 1,
-    "explanation": "The text continually emphasizes how remote Antarctica is (\"no history of a native population\") and how much of this continent remains unexplored (\"Unexplored valleys and unscaled mountains abound.\" ) 'ND IDEAS Distractor Explanations: Choices A and D are incorrect because the text offers no evidence to support these claims. Choice C is incorrect because the text only mentions that the ocean \"still boils with life... no longer do\" but it doesn't say that the Atlantic and Pacific are lifeless.",
     "topic": "Central Ideas and Details"
   }
 ];

@@ -1,6 +1,6 @@
 // =============================================
-// Digital SAT – Topic Test: Cross-Text Connections
-// 12 Questions | Single Timed Module
+// Digital SAT Topic Practice
+// 25 Questions
 // =============================================
 
 const QUESTIONS = [
@@ -159,6 +159,183 @@ const QUESTIONS = [
     "answer": 3,
     "explanation": "Both texts mention that protozoan parasites can cause infections like diarrhea. Text 1 mentions \"protozoan parasites more commonly cause gastrointestinal infections\" and text 2 mentions \"G. intestinalis is the most prevalent parasitic cause of gastrointestinal diseases like diarrhea.\" The first sentence in text 2 mentions that G. intestinalis is a common protozoan parasite. Distractor Explanations: Choices A and B are incorrect because neither of the two texts mention that efforts to destroy parasitic infections must be increased or that the frequency of parasitic infections is increasing. Choice C is incorrect because text I only mentions that \"intestinal parasites cause a significant morbidity and mortality in endemic countries\" and not that endemic countries are at risk 165. Level: Hard I Skill/Knowledge: Cross-Text Connections Key Explanations: Choice B is the correct answer as text 2 talks about what the theory of continental drift lacked. It also disapproves Wegener's theory of continental drift. Therefore, we can infer that scientists did not accept Wegener's theory of continental drift. Distractor Explanations: Choice A is incorrect because text 2 explains how Wegener's theory was incorrect- Choice C is incorrect because there is no information about alternate theories. Only one other theory is mentioned, (i.e., plate tectonics). Choice D is incorrect because text 2 does not mention anything about Wegener being one of the earliest geologists.",
     "topic": "Cross-Text Connections"
+  },
+  {
+    "id": 13,
+    "text": "Text 1\n\nFor decades, bluegrass musicians have debated whether their genre should exclude influences from mainstream genres such as rock. Many insist that bluegrass is defined by its adherence to the folk music of the US South, out of which bluegrass emerged. Such \"purists,\" as they are known, regard the recordings of Bill Monroe, which established the bluegrass sound in the 1940s, as a standard against which the genre should still be measured.\n\nText 2\n\nBluegrass isn't simply an extension of folk traditions into the era of recorded music. In reality, Bill Monroe created the bluegrass sound in the 1940s by combining Southern folk music with commercial genres that had arisen only a few decades before, such as jazz and the blues. Since bluegrass has always been a mixed genre, contemporary bluegrass musicians should not be forbidden from incorporating into it influences from rock and other mainstream genres.\n\nBased on the texts, how would the author of Text 2 most likely regard the perspective of bluegrass purists, as described in Text 1?",
+    "options": [
+      "As inconsistent, since bluegrass purists themselves enjoy other musical genres",
+      "As unrealistic, since bluegrass purists have no way of enforcing their musical preferences",
+      "As shortsighted, because bluegrass could enlarge its audience by including influences from mainstream genres",
+      "As illogical, because the purists overlook crucial aspects of how the bluegrass sound first originated"
+    ],
+    "answer": 3,
+    "explanation": "Purists (Text 1) treat Bill Monroe's 1940s recordings — rooted purely in Southern folk tradition, in their view — as the standard the genre should adhere to. Text 2 argues this view is mistaken because Monroe actually created bluegrass by blending folk with jazz and blues — i.e., bluegrass was always a \"mixed genre.\" So the author of Text 2 would see the purists' position as illogical because it overlooks this mixed origin. A, B, and C introduce claims (purists' personal taste, enforceability, audience growth) not addressed by either text.",
+    "topic": "Set 2 – Cross-Text Connections"
+  },
+  {
+    "id": 14,
+    "text": "Text 1\n\nHistorians studying pre-Inca Peru have looked to ceramic vessels to understand daily life among the Moche people. These mold-made sculptures present plants, animals, and human faces in precise ways—vessels representing human faces are so detailed that scholars have interpreted facial markings to represent scars and other skin irregularities. Some historians have even used these objects to identify potential skin diseases that may have afflicted people at the time.\n\nText 2\n\nArt historian and archaeologist Lisa Trever has argued that the interpretation of Moche \"portrait\" vessels as hyper-realistic portrayals of identifiable people may inadvertently disregard the creativity of the objects' creators. Moche ceramic vessels, Trever argues, are artworks in which sculptors could free their imagination, using realistic objects and people around them as inspiration to explore more abstract concepts.\n\nBased on the texts, what would Lisa Trever (Text 2) most likely say about the interpretation presented in the underlined portion of Text 1 (\"Some historians have even used these objects to identify potential skin diseases that may have afflicted people at the time.\")?",
+    "options": [
+      "Markings on depictions of human faces are not necessarily intended to portray particular details about the physical appearance of individuals.",
+      "Some vessels may have been damaged during their excavation and thus provide little insight into Moche culture.",
+      "Depictions of human faces are significantly more realistic than depictions of plants and other animals are.",
+      "It is likely that some depictions of human faces with extensive markings are intended to portray the same historical individual."
+    ],
+    "answer": 0,
+    "explanation": "Text 1 describes historians treating facial markings on vessels as literal evidence of real skin conditions in real people. Trever (Text 2) argues this hyper-realistic interpretation may overlook the sculptors' creative, imaginative use of realistic elements to explore \"more abstract concepts.\" So Trever would likely respond that such markings aren't necessarily meant to depict actual physical details of real individuals. B introduces excavation damage, not discussed; C makes a comparative claim about realism across subject types that neither text supports; D goes further than Trever's argument, which questions realism rather than affirming identifiable individuals.",
+    "topic": "Set 2 – Cross-Text Connections"
+  },
+  {
+    "id": 15,
+    "text": "Passage One — Adapted from \"The Every-day Life of Abraham Lincoln\" by Francis Fisher Browne (1913)\n\nIt is stated that Lincoln \"had an almost morbid dislike to an escort, or guard, and daily exposed himself to the deadly aim of an assassin.\" To the remonstrances of friends, who feared his constant exposure to danger, he had but one answer: \"If they kill me, the next man will be just as bad for them; and in a country like this, where our habits are simple, and must be, assassination is always possible, and will come if they are determined upon it.\" A cavalry guard was once placed at the gates of the White House for a while, and Lincoln said that he \"worried until he got rid of it.\" He once remarked to Colonel Halpine: \"It would never do for a President to have guards with drawn sabers at his door, as if he fancied he were, or were trying to be, or were assuming to be, an emperor.\" While the President's family were at their summer-house, near Washington, he rode into town of a morning, or out at night, attended by a mounted escort; but if he returned to town for a while after dark, he rode in unguarded, and often alone, in his open carriage. On more than one occasion, the same writer tells us, he \"has gone through the streets of Washington at a late hour of the night with the President, without escort, or even the company of a servant, walking all the way, going and returning.\" Considering the many open and secret threats to take his life, it is not surprising that Lincoln had many thoughts about his coming to a sudden and violent end.\n\nPassage Two — Adapted from Volume Two of \"Abraham Lincoln: The True Story of a Great Life\" by William H. Herndon and Jesse W. Weik (1896)\n\nBancroft's eulogy on Lincoln never pleased the latter's lifelong friends—those who knew him so thoroughly and well. February 16, 1866, David Davis, who had heard it, wrote me: \"You will see Mr. Bancroft's oration before this reaches you. It is able, but Mr. Lincoln is in the background. His analysis of Mr. Lincoln's character is superficial. It did not please me. How did it satisfy you?\" On the 22nd he again wrote: \"Mr. Bancroft totally misconceived Mr. Lincoln's character in applying 'unsteadiness' and confusion to it. Mr. Lincoln grew more steady and resolute, and his ideas were never confused. If there were any changes in him after he got here they were for the better. I thought him always master of his subject. He was a much more self-possessed man than I thought. He thought for himself, which is a rare quality nowadays. How could Bancroft know anything about Lincoln except as he judged of him as the public do? He never saw him, and is himself as cold as an icicle. I should never have selected an old Democratic politician, and that one from Massachusetts, to deliver an eulogy on Lincoln.\"\n\nBoth passages use quoted material in order to __________.",
+    "options": [
+      "criticize the people they are quoting",
+      "silence critics who cast doubts on the authors' credibility",
+      "humiliate rival authors",
+      "illuminate the authors' arguments with examples",
+      "prove their social superiority to the reader"
+    ],
+    "answer": 3,
+    "explanation": "In Passage One, Browne quotes Lincoln's own words and a contemporary's account to illustrate his attitude toward danger and security. In Passage Two, Herndon and Weik quote David Davis's letters to illustrate Davis's critique of Bancroft's eulogy. In both cases, quotations serve as concrete examples that support and clarify each author's broader point. A is too narrow — Passage One's quotes aren't critical of Lincoln; B and C describe motives not evident in either passage; E is unsupported by the content.",
+    "topic": "Set 3 – Ques 1 (Sub-Q3)"
+  },
+  {
+    "id": 16,
+    "text": "Passage One — Adapted from \"The Every-day Life of Abraham Lincoln\" by Francis Fisher Browne (1913)\n\nIt is stated that Lincoln \"had an almost morbid dislike to an escort, or guard, and daily exposed himself to the deadly aim of an assassin.\" To the remonstrances of friends, who feared his constant exposure to danger, he had but one answer: \"If they kill me, the next man will be just as bad for them; and in a country like this, where our habits are simple, and must be, assassination is always possible, and will come if they are determined upon it.\" ... Considering the many open and secret threats to take his life, it is not surprising that Lincoln had many thoughts about his coming to a sudden and violent end.\n\nPassage Two — Adapted from Volume Two of \"Abraham Lincoln: The True Story of a Great Life\" by William H. Herndon and Jesse W. Weik (1896)\n\n... David Davis, who had heard [Bancroft's eulogy], wrote: \"Mr. Bancroft totally misconceived Mr. Lincoln's character in applying 'unsteadiness' and confusion to it. Mr. Lincoln grew more steady and resolute, and his ideas were never confused. ... I thought him always master of his subject. He was a much more self-possessed man than I thought. He thought for himself, which is a rare quality nowadays.\"\n\nThe authors of Passage One and Two would both most likely agree with which of the following statements about Lincoln?",
+    "options": [
+      "Lincoln often behaved foolishly.",
+      "Lincoln's personal weaknesses were what made him a patient and thoughtful leader.",
+      "Lincoln did not often deviate from his ways.",
+      "Lincoln's behavior was often irrational and irresponsible.",
+      "Lincoln was beloved by many people, but he had a damning private life."
+    ],
+    "answer": 2,
+    "explanation": "Passage One depicts Lincoln as consistently rejecting guards and security despite repeated threats — a steady, unwavering habit. Passage Two (via Davis) describes Lincoln as having \"grew more steady and resolute,\" \"ideas were never confused,\" and someone who \"thought for himself\" — emphasizing consistency and steadiness of character. Both passages, then, support the idea that Lincoln maintained a steady, consistent approach rather than frequently changing his ways. A and D mischaracterize his behavior as foolish or irrational, contradicted by Davis's description; B introduces \"personal weaknesses,\" not discussed; E introduces a \"damning private life,\" which neither passage supports.",
+    "topic": "Set 3 – Ques 1 (Sub-Q4)"
+  },
+  {
+    "id": 17,
+    "text": "Passage One — Adapted from \"The Every-day Life of Abraham Lincoln\" by Francis Fisher Browne (1913)\n\nIt is stated that Lincoln \"had an almost morbid dislike to an escort, or guard, and daily exposed himself to the deadly aim of an assassin.\" ... Considering the many open and secret threats to take his life, it is not surprising that Lincoln had many thoughts about his coming to a sudden and violent end.\n\nPassage Two — Adapted from Volume Two of \"Abraham Lincoln: The True Story of a Great Life\" by William H. Herndon and Jesse W. Weik (1896)\n\nBancroft's eulogy on Lincoln never pleased the latter's lifelong friends—those who knew him so thoroughly and well. February 16, 1866, David Davis, who had heard it, wrote me: \"You will see Mr. Bancroft's oration before this reaches you. It is able, but Mr. Lincoln is in the background. His analysis of Mr. Lincoln's character is superficial. It did not please me. ... Mr. Bancroft totally misconceived Mr. Lincoln's character...\"\n\nIn what way does the content of Passage One differ from Passage Two?",
+    "options": [
+      "Passage Two examines a eulogy, while Passage One does not.",
+      "Passage Two criticizes a leader, while Passage One praises him.",
+      "Passage One is opinionated, while Passage Two is not.",
+      "Passage One speaks out against current funereal practices, while Passage Two avoids the topic.",
+      "Passage Two evaluates a eulogy, while Passage One is a eulogy."
+    ],
+    "answer": 0,
+    "explanation": "Passage Two is specifically about reactions to \"Bancroft's eulogy on Lincoln\" — it evaluates how well that eulogy captured Lincoln's character. Passage One, by contrast, simply recounts anecdotes about Lincoln's attitude toward personal security; it does not discuss any eulogy. This is the clearest content-based difference. B mischaracterizes Passage Two as criticizing Lincoln himself (it actually criticizes Bancroft's portrayal of Lincoln, while defending Lincoln); C is inaccurate since both passages reflect their authors' perspectives; D introduces \"funereal practices,\" not discussed; E incorrectly frames Passage One as itself being a eulogy.",
+    "topic": "Set 3 – Ques 1 (Sub-Q5)"
+  },
+  {
+    "id": 18,
+    "text": "Passage One — Adapted from \"The Picture of Dorian Gray\" by Oscar Wilde (1891)\n\nThe studio was filled with the rich odor of roses, and when the light summer wind stirred amidst the trees of the garden, there came through the open door the heavy scent of the lilac, or the more delicate perfume of the pink-flowering thorn. From the corner of the divan of Persian saddlebags on which he was lying, smoking, as was his custom, innumerable cigarettes, Lord Henry Wotton could just catch the gleam of the honey-sweet and honey-colored blossoms of a laburnum... In the center of the room, clamped to an upright easel, stood the full-length portrait of a young man of extraordinary personal beauty, and in front of it, some little distance away, was sitting the artist himself, Basil Hallward, whose sudden disappearance some years ago caused, at the time, such public excitement, and gave rise to so many strange conjectures.\n\nPassage Two — Adapted from \"Sketches by Boz\" by Charles Dickens (1836)\n\nHow much is conveyed in those two short words—\"The parish!\" And with how many tales of distress and misery, of broken fortune and ruined hopes, too often of unrelieved wretchedness and successful knavery, are they associated! A poor man, with small earnings, and a large family, just manages to live on from hand to mouth... His goods are distrained, his children are crying with cold and hunger, and the very bed on which his sick wife is lying, is dragged from beneath her. What can he do? ... There are the parish vestry, the parish infirmary, the parish surgeon, the parish officers, the parish beadle—gentle, kind-hearted men. The woman dies—she is buried by the parish. The children have no protector—they are taken care of by the parish.\n\nWhich of the following aspects of the setting described in Passage Two would a character in Passage One value most? (Some of the aspects of the setting of Passage Two are hypothetical.)",
+    "options": [
+      "The \"successful knavery\"",
+      "The poor man's diligent efforts to feed his family",
+      "The parish church's stained glass windows",
+      "The charitable works intended to help the poor",
+      "The parish beadle's knowledge of the Christian Bible"
+    ],
+    "answer": 2,
+    "explanation": "Passage One establishes the aesthetic, sensory world that the characters (such as Lord Henry Wotton and Basil Hallward) inhabit — one defined by beauty, rich scents, art, and visual splendor. Among the elements of Passage Two's setting, the parish church's stained glass windows are the only detail that aligns with this aesthetic, beauty-oriented sensibility. The other options (knavery, the poor man's struggle, charitable works, the beadle's religious knowledge) reflect Passage Two's themes of poverty and social institutions, which are foreign to the aestheticism of Passage One's characters.",
+    "topic": "Set 3 – Ques 2 (Sub-Q1)"
+  },
+  {
+    "id": 19,
+    "text": "Passage One — Adapted from \"The Picture of Dorian Gray\" by Oscar Wilde (1891)\n\nThe studio was filled with the rich odor of roses, and when the light summer wind stirred amidst the trees of the garden, there came through the open door the heavy scent of the lilac, or the more delicate perfume of the pink-flowering thorn... In the center of the room, clamped to an upright easel, stood the full-length portrait of a young man of extraordinary personal beauty, and in front of it, some little distance away, was sitting the artist himself, Basil Hallward.\n\nPassage Two — Adapted from \"Sketches by Boz\" by Charles Dickens (1836)\n\nHow much is conveyed in those two short words—\"The parish!\" ... A poor man, with small earnings, and a large family, just manages to live on from hand to mouth, and to procure food from day to day; he has barely sufficient to satisfy the present cravings of nature, and can take no heed of the future. His taxes are in arrear, quarter-day passes by, another quarter-day arrives... His goods are distrained, his children are crying with cold and hunger, and the very bed on which his sick wife is lying, is dragged from beneath her.\n\nBased on the content of their writing, the authors of Passages One and Two would most likely agree that __________.",
+    "options": [
+      "beauty can be found in unlikely places",
+      "art must supersede religion in the public sphere",
+      "equality of the sexes is essential for a functioning society",
+      "there is an unequal distribution of wealth in society",
+      "religion plays an essential role in society"
+    ],
+    "answer": 3,
+    "explanation": "Passage One depicts a world of leisure, beauty, art, and material comfort (a studio filled with roses, lilac, fine furnishings, portraits of beautiful young men). Passage Two depicts grinding poverty — a family losing their possessions, a sick wife, children crying from cold and hunger, dependence on the parish. The stark contrast between these two worlds, when read together, points to a shared recognition (across both texts) of unequal distribution of wealth in society. A, B, C, and E introduce themes (finding beauty in unlikely places, art vs. religion, gender equality, religion's societal role) that neither passage actually develops.",
+    "topic": "Set 3 – Ques 2 (Sub-Q2)"
+  },
+  {
+    "id": 20,
+    "text": "Passage #1 — Adapted from \"On War\" by James Boswell (1777)\n\nWhen I saw workingmen engaged with grave assiduity in fashioning weapons of death, I was struck with wonder at the shortsightedness of human beings, who were soberly preparing the instruments of destruction of their own species. I have since found upon a closer study of man, that my wonder might have been spared. The views of most individuals are limited to their own happiness, and the workmen whom I beheld so busy in the arsenal of Venice saw nothing but what was good in the labor for which they received such wages as procured them the comforts of life. That their immediate satisfaction was not hindered by a view of the remote consequential and contingent evils for which they were responsible would not surprise one who has had seen too much of the world. We must have the telescope of philosophy to make us perceive distant ills...\n\nPassage #2 — Adapted from \"What is Patriotism?\" by Max Eastman (1915)\n\nWith proper recognition of the possible variation of individuals, we can say that patriotism is one of these unalterable facts of man's nature. A talent for fighting solidarity with a group is a part of the instinct of human beings... It is far better though that we should conquer our instinct to fight and put faith in reason. It may seem gigantic; but it is by no means a utopian undertaking to unite the whole world of nations in such a federation... Let men but understand themselves, and the mechanism of their emotions by which they are brought into this perennial catastrophe, and they will be ready enough to take gigantic measures to prevent it.\n\nIn what way does Passage 1 differ from Passage 2?",
+    "options": [
+      "Passage 2 constructs a narrative.",
+      "Passage 1 draws on a reference to authority.",
+      "Passage 1 offers a personal account.",
+      "Passage 1 is more argumentative in tone."
+    ],
+    "answer": 2,
+    "explanation": "Passage 1 opens with Boswell's firsthand experience — \"When I saw workingmen engaged...\" and \"I was struck with wonder\" — framing the discussion around his own personal observation and reflection. Passage 2, by contrast, presents a general analytical argument about human nature and patriotism without a personal anecdote as its foundation. A is incorrect because Passage 2 does not construct a narrative either; B is incorrect because neither passage cites an external authority; D is inaccurate because Passage 2 is, if anything, more explicitly argumentative (advocating for a federation of nations), making Passage 1 comparatively more reflective/personal.",
+    "topic": "Set 3 – Ques 3 (Sub-Q1)"
+  },
+  {
+    "id": 21,
+    "text": "Passage #1 — Adapted from \"On War\" by James Boswell (1777)\n\nWhen I saw workingmen engaged with grave assiduity in fashioning weapons of death, I was struck with wonder at the shortsightedness of human beings... The views of most individuals are limited to their own happiness, and the workmen whom I beheld so busy in the arsenal of Venice saw nothing but what was good in the labor for which they received such wages as procured them the comforts of life... We must have the telescope of philosophy to make us perceive distant ills; further, we know that there are individuals of our species to whom the immediate misery of others is nothing in comparison with their own advantage—for we know that in every age there have been found men very willing to perform the office of executioner.\n\nPassage #2 — Adapted from \"What is Patriotism?\" by Max Eastman (1915)\n\nWith proper recognition of the possible variation of individuals, we can say that patriotism is one of these unalterable facts of man's nature... It is far better though that we should conquer our instinct to fight and put faith in reason... War and the mere joy of existence are incompatible. War makes it impossible to live, and it makes it impossible even to die for a noble purpose. Let men but understand themselves, and the mechanism of their emotions by which they are brought into this perennial catastrophe, and they will be ready enough to take gigantic measures to prevent it.\n\nHow would the author of Passage 2 likely respond to the statement made by the author of Passage 1 that \"the views of most individuals are limited to their own happiness\"?",
+    "options": [
+      "Happiness is not relevant to the understanding of war.",
+      "Happiness can never come from patriotic fever.",
+      "Individual happiness is nonetheless often derived from group association.",
+      "Most individuals lack the understanding to work for anything other than their own happiness."
+    ],
+    "answer": 2,
+    "explanation": "Passage 2 describes patriotism as rooted in \"pugnacity and gregariousness, or group-loyalty\" — instincts that connect individual satisfaction to belonging within a group. This suggests that, for Eastman, individual happiness (as Boswell describes it) is not purely self-contained but is often bound up with group association and loyalty. A and B are too extreme and not supported — Eastman doesn't dismiss happiness or claim it can \"never\" come from patriotic feeling. D essentially restates Passage 1's claim rather than offering Eastman's likely response, which would nuance it by connecting happiness to group ties.",
+    "topic": "Set 3 – Ques 3 (Sub-Q5)"
+  },
+  {
+    "id": 22,
+    "text": "Passage #1 — Adapted from \"On War\" by James Boswell (1777)\n\nWhen I saw workingmen engaged with grave assiduity in fashioning weapons of death, I was struck with wonder at the shortsightedness of human beings, who were soberly preparing the instruments of destruction of their own species. I have since found upon a closer study of man, that my wonder might have been spared. The views of most individuals are limited to their own happiness... That their immediate satisfaction was not hindered by a view of the remote consequential and contingent evils for which they were responsible would not surprise one who has had seen too much of the world. We must have the telescope of philosophy to make us perceive distant ills; further, we know that there are individuals of our species to whom the immediate misery of others is nothing in comparison with their own advantage—for we know that in every age there have been found men very willing to perform the office of executioner.\n\nPassage #2 — Adapted from \"What is Patriotism?\" by Max Eastman (1915)\n\n... Let men but understand themselves, and the mechanism of their emotions by which they are brought into this perennial catastrophe, and they will be ready enough to take gigantic measures to prevent it.\n\nWhich statement made by the author of Passage 1 would support the concluding argument made by the author of Passage 2 that if \"men but understand themselves ... they will be ready enough to take gigantic measures to prevent [war]\"?",
+    "options": [
+      "\"I have since found upon a closer study of man, that my wonder might have been spared.\"",
+      "\"Their immediate satisfaction was not hindered by a view of the remote consequential and contingent evils for which they were responsible.\"",
+      "\"We must have the telescope of philosophy to perceive distant ills.\"",
+      "\"For we know that in every age there have been found men very willing to perform the office of executioner.\""
+    ],
+    "answer": 2,
+    "explanation": "Eastman's conclusion is that self-understanding will lead people to take measures to prevent war — implying that a lack of perspective (failure to see consequences) is what currently prevents such action. Boswell's statement that \"we must have the telescope of philosophy to perceive distant ills\" expresses the same idea: people need a special tool (philosophical perspective/understanding) to see beyond immediate self-interest to the broader, \"distant\" consequences of their actions — directly paralleling Eastman's claim that self-understanding enables preventive action. A is too general and doesn't connect to self-understanding leading to action; B and D describe the problem (limited perspective, willingness to harm) rather than the solution Eastman proposes (understanding leading to action).",
+    "topic": "Set 3 – Ques 3 (Sub-Q6)"
+  },
+  {
+    "id": 23,
+    "text": "Passage 1 — Adapted from Samuel Adams's \"Letter to James Warren: November 4, 1775\"\n\nWe may look up to Armies for our Defense, but Virtue is our best Security. It is not possible that any State should long remain free, where Virtue is not supremely honored... Our Ancestors in the most early Times laid an excellent Foundation for the security of Liberty by setting up in a few years after their Arrival a public Seminary of Learning; and by their Laws they obliged every Town consisting of a certain Number of Families to keep and maintain a Grammar School... impressing upon the Minds of the People, the Necessity & Importance of encouraging that System of Education, which in my opinion is so well calculated to diffuse among the Individuals of the Community the Principles of Morality, so essentially necessary to the Preservation of public Liberty. ... He who is void of virtuous Attachments in private Life, is, or very soon will be void of all Regard for his Country.\n\nPassage 2 — Adapted from the \"First Inaugural Address\" of Thomas Jefferson (March 4, 1801)\n\nLet us restore to social intercourse that harmony and affection without which liberty and even life itself are but dreary things. And let us reflect that, having banished from our land that religious intolerance under which mankind so long bled and suffered, we have yet gained little if we countenance a political intolerance as despotic, as wicked, and capable of as bitter and bloody persecutions... But every difference of opinion is not a difference of principle. We have called by different names brethren of the same principle. We are all Republicans, we are all Federalists... I believe this, on the contrary, the strongest government on earth.\n\nWhich of the following options accurately describes the main purpose shared by the passages?",
+    "options": [
+      "To attack specific political opponents or points of view",
+      "To offer an exclusively intellectual treatment of a philosophical principle",
+      "To enact political change, and to justify the reasoning for that change, privately to members of the political elite",
+      "To offer an intellectual treatment of the idea of political community, while addressing contemporary political concerns",
+      "To make clear the spirit in which both authors plan to rule to the public"
+    ],
+    "answer": 3,
+    "explanation": "Adams discusses the relationship between virtue, education, and liberty as foundations of a free community — a reflective, conceptual treatment of political community — while also addressing the practical, contemporary concern of towns dismissing schoolmasters. Jefferson discusses the idea of national unity and harmony as essential to a functioning republic — also a conceptual treatment of community — while addressing the immediate post-election political divisions of his time. Both blend abstract reflection on political community with concrete contemporary concerns. A is too combative for either text's tone; B ignores the contemporary concerns both texts raise; C mischaracterizes the audience (Jefferson's is a public address, not private correspondence to elites); E is too narrow, focusing only on \"spirit of rule\" rather than the broader ideas discussed.",
+    "topic": "Set 3 – Ques 4 (Sub-Q1)"
+  },
+  {
+    "id": 24,
+    "text": "Passage 1 — Adapted from Samuel Adams's \"Letter to James Warren: November 4, 1775\"\n\nWe may look up to Armies for our Defense, but Virtue is our best Security. It is not possible that any State should long remain free, where Virtue is not supremely honored... He who is void of virtuous Attachments in private Life, is, or very soon will be void of all Regard for his Country. There is seldom an Instance of a Man guilty of betraying his Country, who had not before lost the Feeling of moral Obligations in his private Connections.\n\nPassage 2 — Adapted from the \"First Inaugural Address\" of Thomas Jefferson (March 4, 1801)\n\nLet us restore to social intercourse that harmony and affection without which liberty and even life itself are but dreary things. And let us reflect that, having banished from our land that religious intolerance under which mankind so long bled and suffered, we have yet gained little if we countenance a political intolerance as despotic, as wicked, and capable of as bitter and bloody persecutions...\n\nHow would Adams most likely respond to Jefferson's underlined opening statement in Passage 2 (\"Let us restore to social intercourse that harmony and affection without which liberty and even life itself are but dreary things.\")?",
+    "options": [
+      "The opening sentence of Passage 2 has no bearing on Adams' subject matter in Passage 1, so it is impossible to say",
+      "He would passionately disagree with this statement of support for nontraditional political values",
+      "He would agree, in a general way, with the notion of community put forward in this statement",
+      "Adams would agree wholeheartedly with this statement of support for public schools",
+      "Adams would disagree that liberty could ever be dreary"
+    ],
+    "answer": 2,
+    "explanation": "Jefferson's call for \"harmony and affection\" in social relations, as a foundation for liberty, resonates with Adams's emphasis on virtue and moral attachments in private life as essential to preserving public liberty. Both authors connect the health of personal/social bonds to the health of the broader political community. So Adams would likely find general agreement with Jefferson's notion of community as foundational to liberty. A is too dismissive given the clear thematic overlap; B mischaracterizes Jefferson's statement as \"nontraditional,\" when it actually echoes traditional civic-virtue ideas; D introduces \"public schools,\" a topic from elsewhere in Adams's letter but not the focus of this comparison; E misreads the statement, which Adams would likely affirm rather than dispute.",
+    "topic": "Set 3 – Ques 4 (Sub-Q2)"
+  },
+  {
+    "id": 25,
+    "text": "Passage 1 — Adapted from Samuel Adams's \"Letter to James Warren: November 4, 1775\"\n\n... impressing upon the Minds of the People, the Necessity & Importance of encouraging that System of Education, which in my opinion is so well calculated to diffuse among the Individuals of the Community the Principles of Morality, so essentially necessary to the Preservation of public Liberty. ... Therefore \"Wise and able Politicians will guard against other Vices,\" and be attentive to promote every Virtue. He who is void of virtuous Attachments in private Life, is, or very soon will be void of all Regard for his Country.\n\nPassage 2 — Adapted from the \"First Inaugural Address\" of Thomas Jefferson (March 4, 1801)\n\nLet us restore to social intercourse that harmony and affection without which liberty and even life itself are but dreary things...\n\nWhat is the best evidence for the connection between the passages outlined in the previous question (Adams's likely agreement with Jefferson's call for social harmony and affection as foundational to liberty)?",
+    "options": [
+      "\"Perhaps the Form of Government now adopted and set up in the Colony may be permanent.\"",
+      "\"impressing upon the Minds of the People, the Necessity & Importance of encouraging that System of Education, which in my opinion is so well calculated to diffuse among the Individuals of the Community the Principles of Morality\"",
+      "The two passages are not connected",
+      "\"Therefore 'Wise and able Politicians will guard against other Vices,'\"",
+      "\"I shall be very sorry, if it be true as I have been informed, that some of our Towns have dismissed their Schoolmasters.\""
+    ],
+    "answer": 1,
+    "explanation": "Adams directly links education to the spread of \"Principles of Morality\" throughout the community, which he sees as essential to preserving liberty — paralleling Jefferson's claim that social harmony and affection are necessary for liberty to be meaningful. Both statements tie the health of social/moral bonds within a community to the preservation of liberty, making this the strongest piece of evidence for the connection. A is about the permanence of government structure, unrelated to social harmony; D is a general statement about guarding against vice, less directly tied to community bonds; E is a specific local concern (schoolmasters) that, while related to education, doesn't as directly connect to the \"harmony and affection\" theme.",
+    "topic": "Set 3 – Ques 4 (Sub-Q3)"
   }
 ];
 

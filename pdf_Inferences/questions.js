@@ -1,3 +1,8 @@
+// =============================================
+// Digital SAT Topic Practice
+// 25 Questions
+// =============================================
+
 const QUESTIONS = [
   {
     "id": 1,
@@ -172,7 +177,7 @@ const QUESTIONS = [
     "id": 14,
     "text": "A vicious cycle is occurring in Lope National Park\nin Gabon. Low rainfall and higher temperatures\nled to a decline in tree fruits, which are the staple\nfood of African forest elephants. The seeds are\nusually dispersed in the dung over the wide\nrange of each elephant. The elephant population\nnow faces pressures from starvation, as well as\nthe ongoing problem of poaching. In fact, the\npopulation has decreased by over eighty percent\nin the past thirty years.\nBased on the text, what is most likely true about\nthe fruit trees in Lope National park?",
     "options": [
-      "Elephants are changing to different f\ufffdod sources because there are fewer trees.",
+      "Elephants are changing to different f�od sources because there are fewer trees.",
       "The seeds are not being dispersed as effectively because there are fewer elephants.",
       "Conservationists are starting to plant more fruit trees to provide food for the elephants.",
       "The elephants are no longer dispersing the seeds very far from the original trees."
@@ -186,7 +191,7 @@ const QUESTIONS = [
     "text": "100 ================\nThe Rosetta Stone, discovered in 1799, was\nthe key to understanding how to read ancient\nEgyptian hieroglyphic writing. The stone is a\nfragment of a larger stele carved in 196 B.C in\nMemphis, Egypt, under the reign of King Ptolemy\nV Epiphanes. Ihe first bilingual text known\nto contain hieroglyphics, scholars circulated\ncopies in the hopes of translating the language,\nwhich was written in ancient Greek, Egyptian\nhieroglyphics, and also a more casual form of\nEgyptian writing called Demotic. Jean-Francois\nChampollion found the key to solving the puzzle\nin 1822, when\nWhich choice most logically completes the text?",
     "options": [
       "he realized that both the Demotic writing and hieroglyphs contained phonetic spellings.",
-      "he gave a lecture about his findings at the Acad\ufffdmie des Inscriptions et Belles-Lettres.",
+      "he gave a lecture about his findings at the Acad�mie des Inscriptions et Belles-Lettres.",
       "others assumed the writing was pictographic but he was curious about the meaning.",
       "his announcement led to a new wave of learning about the Egyptian language."
     ],
@@ -271,6 +276,58 @@ const QUESTIONS = [
     "answer": 2,
     "explanation": ". According to the text, an onomatopoeia is a word that sounds exactly like the sound that it describes. The word \"miaow\" sounds exactly like the sound of a cat, which is what the word is describing. Distractor Explanation: All the other choices are incorrect because they are not words that sound like what they are describing. For example, \"glitter\" does not make a sound, and neither does \"Twinkle.\" [PAGE 109 LEFT] Cha Crai Stru This chapter includes questions on ttu \u0007 Words in Context \u0007 Text Structure and Purpose \u0007 Cross-Text Connection [PAGE 109 RIGHT] pter 4 ft and Icture following topics:",
     "topic": "Inferences"
+  },
+  {
+    "id": 22,
+    "text": "Grey Wolf\nThe grey wolf also known as the timber wolf or wolf is a mammal of the order Carnivore. Genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and might be its ancestor. Many other grey wolf subspecies have been identified however the actual number of subspecies is still open to discussion. Though once abundant over much of North America and areas of Europe and Asia, the grey wolf inhabits a very small portion of its former range because of the widespread destruction of its habitat. Gray wolves are highly adaptable and have thrived in forests, deserts, mountains, tundra and grasslands. They function as social predators and hunt in packs organized according to strict social hierarchies. It was originally believed that this comparatively high level of social organization was related to hunting success, and while this still may be true to a certain extent, emerging theories suggest that the pack has less to do with hunting and more to do with reproductive success.\n\nIt is understood from the passage that ----.",
+    "options": [
+      "the number of grey wolf subspecies has been determined with certainty by researchers",
+      "there are few grey wolf subspecies which continue living today",
+      "grey wolf subspecies have increased in number in the last decades",
+      "there is no consensus on how many grey wolf subspecies exist"
+    ],
+    "answer": 3,
+    "explanation": "The text states that the actual number of grey wolf subspecies is 'still open to discussion', indicating there is no consensus. Choice (D) is correct. Choice (A) is contradicted. Choices (B) and (C) are not discussed.",
+    "topic": "Grey Wolf Subspecies"
+  },
+  {
+    "id": 23,
+    "text": "Grey Wolf\nThe grey wolf also known as the timber wolf or wolf is a mammal of the order Carnivore. Genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and might be its ancestor. Many other grey wolf subspecies have been identified however the actual number of subspecies is still open to discussion. Though once abundant over much of North America and areas of Europe and Asia, the grey wolf inhabits a very small portion of its former range because of the widespread destruction of its habitat. Gray wolves are highly adaptable and have thrived in forests, deserts, mountains, tundra and grasslands. They function as social predators and hunt in packs organized according to strict social hierarchies. It was originally believed that this comparatively high level of social organization was related to hunting success, and while this still may be true to a certain extent, emerging theories suggest that the pack has less to do with hunting and more to do with reproductive success.\n\nAccording to the passage, in the light of the genetic studies carried out, It has been found out that ----.",
+    "options": [
+      "the domestic dog could have descended from the grey wolf",
+      "the grey wolf and the domestic dog are the subspecies of a kind of wolf having lived thousands of years ago",
+      "the dog is believed to be ancestor of the grey wolf",
+      "grey wolves live in very large packs"
+    ],
+    "answer": 0,
+    "explanation": "The text states that genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and 'might be its ancestor', meaning the dog could have descended from the grey wolf. Choice (A) is correct. Choices (B), (C), and (D) are not supported.",
+    "topic": "Grey Wolf and Dog Ancestry"
+  },
+  {
+    "id": 24,
+    "text": "Autism\nAutism is a brain development disorder that impairs social interaction and communication and causes restricted and repetitive behavior, all starting before a child is three years old. The genetics of autism are complex and it is generally unclear which genes are responsible for it. Autism affects many parts of the brain but how this occurs is also poorly understood. Autism is strongly associated with agents that cause birth defects. Other proposed causes, such as childhood vaccines, are controversial and the vaccine hypotheses lack convincing scientific evidence. The number of people known to have autism has increased dramatically since the 1980s. Parents usually notice signs in the first two years of their child's life. Early behavioral cognitive intervention can help children gain self-care, social and communication skills but there is no cure for it. Few children with autism live independently after reaching adulthood, but some become successful and an autistic culture has developed, with some seeking a cure and others believing that autism is a condition rather than a disorder.\n\nAccording to the passage, autism is a developmental disorder of the human brain ----.",
+    "options": [
+      "that gives its first signs early in the childhood period",
+      "which is caused by childhood vaccines",
+      "which can't be diagnosed until after the child is three years old",
+      "for which there has been a successful cure in recent years"
+    ],
+    "answer": 0,
+    "explanation": "The text states that all signs start before a child is three, and parents usually notice signs in the first two years of life, which means it shows early signs in childhood. Choice (A) is correct. Choice (B) is described as controversial and lacking evidence. Choice (C) and (D) are contradicted.",
+    "topic": "Autism Early Signs"
+  },
+  {
+    "id": 25,
+    "text": "Autism\nAutism is a brain development disorder that impairs social interaction and communication and causes restricted and repetitive behavior, all starting before a child is three years old. The genetics of autism are complex and it is generally unclear which genes are responsible for it. Autism affects many parts of the brain but how this occurs is also poorly understood. Autism is strongly associated with agents that cause birth defects. Other proposed causes, such as childhood vaccines, are controversial and the vaccine hypotheses lack convincing scientific evidence. The number of people known to have autism has increased dramatically since the 1980s. Parents usually notice signs in the first two years of their child's life. Early behavioral cognitive intervention can help children gain self-care, social and communication skills but there is no cure for it. Few children with autism live independently after reaching adulthood, but some become successful and an autistic culture has developed, with some seeking a cure and others believing that autism is a condition rather than a disorder.\n\nIt can be understood from the passage that autism ----.",
+    "options": [
+      "is caused by a childhood vaccine that affects the development of the brain",
+      "is accepted as a condition rather than a disorder by all specialists",
+      "is a condition in which a child suffers from severe pains in the head",
+      "is characterized by abnormalities of behavior patterns"
+    ],
+    "answer": 3,
+    "explanation": "The text states that autism causes impaired social interaction and communication, as well as restricted and repetitive behavior. These constitute abnormalities of behavior patterns. Choice (D) is correct. Choices (A) and (C) are incorrect or not in text. Choice (B) is incorrect because only 'some' believe it is a condition rather than disorder.",
+    "topic": "Autism Behavior Patterns"
   }
 ];
 

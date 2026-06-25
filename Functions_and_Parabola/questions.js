@@ -1,12 +1,12 @@
 // =============================================
-// SAT Math – Topic Test: Functions & Parabola
-// 16 Questions | Single Timed Module
+// Digital SAT Topic Practice
+// 25 Questions
 // =============================================
 
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "Question 1 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 1 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -19,7 +19,7 @@ const QUESTIONS = [
   },
   {
     "id": 2,
-    "text": "Question 2 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 2 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -32,7 +32,7 @@ const QUESTIONS = [
   },
   {
     "id": 3,
-    "text": "Question 3 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 3 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -45,7 +45,7 @@ const QUESTIONS = [
   },
   {
     "id": 4,
-    "text": "Question 4 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 4 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -58,7 +58,7 @@ const QUESTIONS = [
   },
   {
     "id": 5,
-    "text": "Question 5 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 5 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -71,7 +71,7 @@ const QUESTIONS = [
   },
   {
     "id": 6,
-    "text": "Question 6 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 6 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -84,7 +84,7 @@ const QUESTIONS = [
   },
   {
     "id": 7,
-    "text": "Question 7 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 7 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -97,7 +97,7 @@ const QUESTIONS = [
   },
   {
     "id": 8,
-    "text": "Question 8 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 8 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -110,7 +110,7 @@ const QUESTIONS = [
   },
   {
     "id": 9,
-    "text": "Question 9 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 9 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -123,7 +123,7 @@ const QUESTIONS = [
   },
   {
     "id": 10,
-    "text": "Question 10 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 10 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -136,7 +136,7 @@ const QUESTIONS = [
   },
   {
     "id": 11,
-    "text": "Question 11 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 11 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -149,7 +149,7 @@ const QUESTIONS = [
   },
   {
     "id": 12,
-    "text": "Question 12 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 12 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -162,7 +162,7 @@ const QUESTIONS = [
   },
   {
     "id": 13,
-    "text": "Question 13 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 13 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -175,7 +175,7 @@ const QUESTIONS = [
   },
   {
     "id": 14,
-    "text": "Question 14 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 14 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -188,7 +188,7 @@ const QUESTIONS = [
   },
   {
     "id": 15,
-    "text": "Question 15 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 15 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -201,7 +201,7 @@ const QUESTIONS = [
   },
   {
     "id": 16,
-    "text": "Question 16 \u2014 Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Question 16 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
     "options": [
       "A",
       "B",
@@ -210,6 +210,123 @@ const QUESTIONS = [
     ],
     "answer": 0,
     "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 17,
+    "text": "Question 17 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 18,
+    "text": "Question 18 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 19,
+    "text": "Question 19 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 20,
+    "text": "Question 20 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 21,
+    "text": "Question 21 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 22,
+    "text": "Question 22 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 23,
+    "text": "Question 23 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 24,
+    "text": "Question 24 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Functions & Parabola"
+  },
+  {
+    "id": 25,
+    "text": "Question 25 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   }
 ];

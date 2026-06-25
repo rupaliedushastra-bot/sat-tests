@@ -1,6 +1,6 @@
 // =============================================
-// Digital SAT – Topic Test: Transitions
-// 29 Questions | Single Timed Module
+// Digital SAT Topic Practice
+// 25 Questions
 // =============================================
 
 const QUESTIONS = [
@@ -327,58 +327,6 @@ const QUESTIONS = [
     ],
     "answer": 0,
     "explanation": "It is used to show that something is rather paradoxical. In this case, it fits the context of showing the rather odd fact that the potato was transported from South America to Europe and back to North America rather than just moving the comparatively short distance through the Americas. Distractor Explanations: None of the other choices establishes the correct relationship between the ideas. Choice B is used to show the logical conclusion of the previous argument, not an unexpected fact. Choice C is used to add a new point to building an argument rather than give more specific detail on the same point. Choice [PAGE 217 RIGHT] ins (Answers) D is used to show that the following idea comes after the previous idea in time. It breaks up the order because the previous sentence mentions that potatoes were brought to North America, but the following sentence shows an event-the transport to Europe-that happened before the action in the previous sentence.",
-    "topic": "Transitions"
-  },
-  {
-    "id": 26,
-    "text": "At 6,190 meters above sea level. Mt. Denali in\nAlaska is the highest point in North America.\nthe lowest point in North America is Death\nValley in Eastern California; it is 86 meters below\nsea level. Death Valley is also the hottest place in\nthe world in the summer.\nWhich choice completes the text with the most\neffective transition?",
-    "options": [
-      "Nonetheless,",
-      "To illustrate,",
-      "Conversely,",
-      "Indeed,"
-    ],
-    "answer": 0,
-    "explanation": "It is used to emphasize a point that might come as a surprise. The previous sentence discusses the idea that dendrochronology can be used to date wood, and the following sentence offers the potentially surprising detail that the wood can be dated to be thousands of years old. Choice A, therefore, accentuates the point that the map is \"so comprehensive.\" Distractor Explanations: Choice B is incorrect because it is used to show a logical conclusion to a discussion, but it is not obvious from the discussion that the map extends so far back in time; that is surprising new information. Choice C introduces something that happens despite what has been stated, not something which happens because of the previous information. Choice D is incorrect because it introduces something opposite of what has been stated.",
-    "topic": "Transitions"
-  },
-  {
-    "id": 27,
-    "text": "In December of 1783, John Wordsworth,\nreturning home from a business trip, lost his way\nand was forced to spend a cold night in the open.\nhe was very ill when he reached home,\nand died December 30.\nWhich of the following words best completes the\ntext with the most logical transition?",
-    "options": [
-      "Subsequently",
-      "Consequently",
-      "But",
-      "However"
-    ],
-    "answer": 1,
-    "explanation": "It is used to show that something happens despite something else. It fits the context of showing that equality was not legally enforced for almost 100 years even though slavery was abolished. [PAGE 218 LEFT] EXPRESSION ( Distractor Explanations: None of the other ideas effectively show the contrast between the preceding idea that slavery was abolished and the following idea that equality was not legally established. Choice A is used to highlight a similarity, but \"not\" in the second sentence shows that the author is not highlighting the similarity between two laws, but rather showing a contrast. Choice C is used to show the logical result of an action. Choice D is used to add more information on the same idea, not create a change in tone.",
-    "topic": "Transitions"
-  },
-  {
-    "id": 28,
-    "text": "Nurtured by a loving mother and father, Dodgs\nbegan writing at an early age.\nat the\nRichmond School in 1845, Dodgson composed\nUseful and Instructive Poetry, his first family\nmagazine, for the edification of his seven-year-\nold brother, Wilfred Longley Dodgson, and his\nfive-year-old sister, Louisa Fletcher Dodgson.\nWhich choice completes the text with the most\nlogical transition?",
-    "options": [
-      "so",
-      "While",
-      "Therefore",
-      "Meanwhile"
-    ],
-    "answer": 1,
-    "explanation": "It is used to establish a contrast. It fits the context of showing that the first idea, that Pissarides has a modest background, contrasts greatly with the fame he accomplished. Distractor Explanations: None of the other choices establishes a contrast between two ideas that are very distinct: what \"might be expected\" did not happen. Choice A is used to show that two things happened, but does not indicate contrast. Choices C and D are used to show that the following is the reason for the former, which does not fit the context.",
-    "topic": "Transitions"
-  },
-  {
-    "id": 29,
-    "text": "Ihe use of and\nthe heightening of the\nspeaker's emotions.\nthe speaker's\ndespair and sorrow seem never-ending; although\nthe speaker continues to progress on the walk,\nthe speaker doesn't actually go anywhere on\na figurative and emotional level. This sense of\ndespair and sorrow is inescapable, like the night\nitself.\nWhich choice completes the text with the most\nlogical transition?",
-    "options": [
-      "Likewise",
-      "In case",
-      "Therefore",
-      "In fact"
-    ],
-    "answer": 2,
-    "explanation": "It is used to introduce an idea that contrasts or is the opposite of a previous claim. It fits the context of describing the lowest place in North America after describing the highest place, based on sea level. Distractor Explanations: Choice A is incorrect because it is used to show that something happens despite something else, but there is no reason that [PAGE 218 RIGHT] IDEAS the two facts should not occur simultaneously. Choice B is used to introduce a specific example of a general claim, not offer a contrast. Choice D is used to emphasize the previous statement by adding more information that supports it rather than bringing up a different subject. 220",
     "topic": "Transitions"
   }
 ];

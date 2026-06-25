@@ -1,6 +1,6 @@
 // =============================================
-// Digital SAT – Topic Test: Form, Structure, and Sense
-// 35 Questions | Single Timed Module
+// Digital SAT Topic Practice
+// 25 Questions
 // =============================================
 
 const QUESTIONS = [
@@ -14,7 +14,7 @@ const QUESTIONS = [
       "is having"
     ],
     "answer": 0,
-    "explanation": "\"and\" should join two items that are grammatically equivalent. The first item is \"the pleasant flavors,\ufffd a noun. Choice A is also a noun. Distractor Explanations: Choices B and C can be eliminated because they are clauses, so they are not parallel with \"the pleasant flavors.\" Choice D is a noun, but \"and\" gives the same idea as \"also\" and \"as well,\" so using all three words is redundant.",
+    "explanation": "\"and\" should join two items that are grammatically equivalent. The first item is \"the pleasant flavors,� a noun. Choice A is also a noun. Distractor Explanations: Choices B and C can be eliminated because they are clauses, so they are not parallel with \"the pleasant flavors.\" Choice D is a noun, but \"and\" gives the same idea as \"also\" and \"as well,\" so using all three words is redundant.",
     "topic": "Form, Structure, and Sense"
   },
   {
@@ -327,136 +327,6 @@ const QUESTIONS = [
     ],
     "answer": 0,
     "explanation": "The sentence includes the idiom \"not only... but also.. Therefore, Choice A is needed to complete the idiom according to standard conventions. Distractor Explanations: All of the other choices can be eliminated because they do not follow standard conventions for completing the idiom \"not only... but also..",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 26,
-    "text": "Marion Donovan invented the disposable diaper\nand greatly simplified one aspect of childcare.\nHer invention was notable because it not only had\nabsorbent pads _ snaps that replaced more\ndangerous safety pins.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "but also",
-      "and even",
-      "also",
-      "and"
-    ],
-    "answer": 1,
-    "explanation": "It starts a relative clause referring to a place. It fits the context of saying that the place of Romania is where Brancusi learned to carve. Distractor Explanations: Choice A is incorrect because it is not used after a comma. Choice C is incorrect because it is not the start of a relative clause; Choice C is a pronoun, so it creates a comma splice between two independent clauses. [PAGE 256 RIGHT] CONVENTIONS Choice D is incorrect because it refers to being inside an object or situation, not a country.",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 27,
-    "text": "Called the patriarch of modern sculpture,\nConstantin Brancusi ( 1876-1957) grew up in\nhe learned to carve by making\nRomania,\nfarm tools.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "that",
-      "where",
-      "there",
-      "in which"
-    ],
-    "answer": 2,
-    "explanation": "It is an adverb, so can correctly be used to refer to \"1,000,\" which in the context, is an adjective describing the species. Choice B shows that the number is not exact. Distractor Explanations: None of the other choices fits the grammatical structure of the sentence, as only an adverb can modify an adjective. Choice A can be either an adjective or a verb. Choice B is a verb, and Choice D is a noun.",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 28,
-    "text": "Jeannie Raharimampionona is a Malagasy\nconservationist and biologist who has helped\nestablish dozens of refuges to protect the\n1,000 species of orchid in Madagascar from\ndeforestation and habitat loss.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "approximate",
-      "approximates",
-      "approximately",
-      "approximation\nIhe planet Jupiter's Great Red Spot is a massive\nstorm that astronomers believe has lasted for at\nleast 350 years. The size has been slowly shrinking\nover the past few decades, but in 2004, was about\nthree times"
-    ],
-    "answer": 3,
-    "explanation": "\"three times\" refers to the subject \"the size.\" Therefore, the blank portion needs to refer to a size. Choice D gives a specific size, Earth's diameter. Distractor Explanations: All of the other choices can be eliminated because they do not form a comparison of size. Choice A compares the size of the storm to Earth itself, rather than the size of Earth. In Choice B, \"one\" is ambiguous with no clear referent. Choice C is incorrect because \"the size of\" fits the context, but \"Earth's\" should not be plural. \"Of\" contains the idea of possession.",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 29,
-    "text": "Which choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "A) Earth",
-      "B) one of Earth",
-      "C) the size of Earth's",
-      "D) the diameter of Earth"
-    ],
-    "answer": 0,
-    "explanation": "A general action that goes on now is expressed in the present tense. Distractor Explanations: Choice B is incorrect because \"still\" shows that the action has not stopped, so the past tense does not fit. Choice C is used to show an action that is simultaneous with another stated action, but there is no other action mentioned in the text that happens in the present. Choice D is incorrect because it is used to show that something happened before something else in the past, but the people did not \"still visit\" before the monument was opened.",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 30,
-    "text": "Opened in 1922, the Lincoln Memorial in\nWashington, D.C was envisioned as an imposing\nmonument to the sixteenth president of the\nUnited States. Every year, millions of people still\nthe edifice made of 35,000 tons of granite,\nmarble, and limestone.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "visit",
-      "visited",
-      "are visiting",
-      "had visited\nin 2008, and half of the\nA young country,\npopulation of approximately 1.8 million citizens\nare under the age of 30."
-    ],
-    "answer": 1,
-    "explanation": "\"a young country\" is a modifier that must be followed by the noun it refers to. Only Choice B starts with the young country, Kosovo. Distractor Explanations: All of the other choices can be eliminated because a modifier at the start of a sentence needs to refer to the first word of the following clause. In Choices A and D, \"a young country\" erroneously refers to the \"declaration.\" In Choice C, the modifier refers to \"independen",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 31,
-    "text": "Which choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "",
-      "",
-      "",
-      "the declaration of KosovoS independence\nfrom Serbia was made"
-    ],
-    "answer": 1,
-    "explanation": "The blank portion refers to the position of the leader. Since hyenas are \"matriarchal,\" the leader is female. Choice B is a female possessive pronoun. Even if the meaning of \"matriarchal\" is unclear, \"other females\" indicates that another female has been mentioned; in the context, that referent has to be the leader. [PAGE 257 RIGHT] and Sense (Answers) Distractor Explanations: Choice A is incorrect because it is a male pronoun, but the text establishes that the leader is female. Choice C is a plural pronoun, so does not agree with the singular \"the leader.\" Choice D is a general pronoun used only when there is no clear referent, but the blank portion refers to \"the leader.\"",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 32,
-    "text": "Kosovo only declared its independence from\nSerbia\nindependence from Serbia was declared by\nKosovo's declaration of independence was\ngiven to Serbia\nHyenas, carnivorous mammals from Africa, have\na complex social structure that is matriarchal, and\nthe leader of the clan maintains\nposition\nthrough alliances with other females.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "his",
-      "her",
-      "their",
-      "one's\nIhe Doppler Shift is a concept first described by"
-    ],
-    "answer": 1,
-    "explanation": "\"when\" shows that the following portion is a time clause that refers to the previous verb, \"change,\" to show the time that the change happens. \"When\" should be followed by a verb with either the \"-ed\" or \"-ing\" ending since the subject of the clause, the ambulance siren, is the object of the verb \"to perceive.\" Distractor Explanations: None of the other choices are correct verb forms in the context. Choices A and C are active present tense verbs which makes it appear that the siren is doing the perceiving or listening. Choice D is incorrect because it shows that something occurred before rather than simultaneously with another action in the sentence.",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 33,
-    "text": "Austrian physicist Christian Doppler in 1842\nto explain why waves such as sound change\nfrequency when\nfrom a stationary point. A\nclassic example is that ambulance sirens appear to\npitch as the vehicle approaches.\nincrease in\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "perceive",
-      "perceived",
-      "are perceiving",
-      "have been perceived"
-    ],
-    "answer": 3,
-    "explanation": "It is used to show that an action started in the past and continues to the present. Choice D, therefore, fits the context of saying that the action of working started in 1971 and continues today. Distractor Explanations: Choices A and B are incorrect because they only refer to the present, so do not accurately show that the work began in [PAGE 258 LEFT] STANDARD ENGLISH 1971. Choice B discusses an ongoing state, but is used when there is another, simultaneous action in the sentence. Choice C is incorrect because it is used to show that an action in the past ended before another action, but there is no second action nor indication that the work has ended.",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 34,
-    "text": "Since 1971, researchers in Kenya studying the\nAmboseli baboon population\nto determine\nhow social behaviors alter the animals' chances of\nsurvival.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "work",
-      "are working",
-      "had worked",
-      "have been working"
-    ],
-    "answer": 0,
-    "explanation": "The idiom \"not only.. -but also. needs to be completed with the same grammatical structure in both halves. In the text, \"not only\" is followed by a noun, \"the freedom.. Therefore, the part after \"but also\" must also be a noun. Distractor Explanations: All of the other choices can be eliminated because they do not have the same grammatical structure as \"the freedom... Choice B is a complete clause and Choices C and D are verb phrases. [PAGE 258 RIGHT] CONVENTIONS",
-    "topic": "Form, Structure, and Sense"
-  },
-  {
-    "id": 35,
-    "text": "In the Blackfoot Siksikaitsitapi language, the word\naatsimoiyihkaan means \"sovereignty.\" However,\nthe definition is slightly different as it includes not\nonly the freedom to decide personal acts but also\nmaintain balance in the world.\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
-    "options": [
-      "the responsibility to",
-      "they are responsible for",
-      "including the responsibility to",
-      "includes being responsible for\n30(I"
-    ],
-    "answer": 2,
-    "explanation": "The blank portion is part of the passive verb showing that an unnamed person did the act of \"adapting\" or \"changing\" the Indian game into chess. Ihe passive past tense form of \"adapt\" is \"was adapted.\" Distractor Explanations: Choices A and D are incorrect because they are adjectives. While an adjective can follow \"was,\" the phrase \"into chess\" is grammatically correct. Choice B also can be eliminated because it is a noun that can follow \"was,\" but \"adaptable\" is not something that turned into chess.",
     "topic": "Form, Structure, and Sense"
   }
 ];

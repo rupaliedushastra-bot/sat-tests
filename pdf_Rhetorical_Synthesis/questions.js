@@ -1,6 +1,6 @@
 // =============================================
-// Digital SAT – Topic Test: Rhetorical Synthesis
-// 22 Questions | Single Timed Module
+// Digital SAT Topic Practice
+// 25 Questions
 // =============================================
 
 const QUESTIONS = [
@@ -288,6 +288,45 @@ const QUESTIONS = [
     ],
     "answer": 2,
     "explanation": "It provides a comprehensive summary of the process of naming a plant. It mentions the \"International Code of Botanical Nomenclature\" is based on a two-name (binomial) system, and that the plant name is divided into genus and species. Distractor Explanations: All the other choices are incorrect as they do not provide accurate information on how a plant is named. [PAGE 201 RIGHT] mthesis (Answers)",
+    "topic": "Rhetorical Synthesis"
+  },
+  {
+    "id": 23,
+    "text": "Read the following passage and answer the question.\n\n\"Public transportation systems, such as buses and trains, play a crucial role in urban areas. They reduce traffic congestion, lower pollution levels, and provide an affordable mode of transportation for many people. Investing in public transportation infrastructure is essential for sustainable city development.\"\n\nWhich sentence would WEAKEN the argument made in this passage?",
+    "options": [
+      "A recent report showed that cities with expanded metro systems saw a 30% reduction in car usage.",
+      "Public transportation is used daily by millions of commuters in major cities worldwide.",
+      "Studies indicate that in low-density suburban areas, public transit is underutilized and often runs at a financial loss.",
+      "Electric buses produce zero direct emissions, making them an environmentally friendly option."
+    ],
+    "answer": 2,
+    "explanation": "The passage argues that public transportation is essential for sustainable city development. Option C weakens this by showing that in some areas (low-density suburbs), public transit is ineffective and financially unsustainable — directly challenging the claim that it is broadly essential. Options A, B, and D all support the passage's argument.",
+    "topic": "Rhetorical Synthesis"
+  },
+  {
+    "id": 24,
+    "text": "Read the following passage and answer the question.\n\n\"Reading fiction has numerous benefits for the mind. It can improve empathy by allowing readers to experience different perspectives. Additionally, reading fiction enhances creativity and reduces stress, making it a valuable activity for overall mental well-being.\"\n\nWhich sentence would most STRENGTHEN the argument in this passage?",
+    "options": [
+      "Some people find fiction unrealistic and prefer nonfiction.",
+      "A neuroscience study found that reading literary fiction activates the same brain regions involved in real-life social reasoning.",
+      "Many popular fiction novels are adapted into films each year.",
+      "Reading habits have declined with the rise of digital media."
+    ],
+    "answer": 1,
+    "explanation": "Option B directly strengthens the claim that reading fiction benefits the mind — specifically the claim about empathy — by citing neuroscience research showing that fiction activates social reasoning areas of the brain. Option A weakens the argument. Options C and D are tangential observations with no direct connection to the passage's benefits claims.",
+    "topic": "Rhetorical Synthesis"
+  },
+  {
+    "id": 25,
+    "text": "A student is writing a paragraph arguing that schools should extend the school year. The student wants to include a sentence that most effectively supports this argument.\n\nWhich of the following would be the best choice?",
+    "options": [
+      "Many students enjoy having long summer breaks to relax and travel with their families.",
+      "Some teachers have expressed concerns about burnout from extended academic calendars.",
+      "Research from several countries shows that students in longer school-year systems consistently outperform peers in core academic subjects.",
+      "Extending the school year would require significant budget increases that many districts cannot afford."
+    ],
+    "answer": 2,
+    "explanation": "Option C directly supports the argument for extending the school year by citing research evidence showing academic benefits (higher performance in core subjects). Options A, B, and D each provide reasons to oppose the extension — they would weaken the argument. A supporting sentence must align with and reinforce the paragraph's central claim.",
     "topic": "Rhetorical Synthesis"
   }
 ];

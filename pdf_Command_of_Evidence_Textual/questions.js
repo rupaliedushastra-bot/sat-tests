@@ -1,3 +1,8 @@
+// =============================================
+// Digital SAT Topic Practice
+// 25 Questions
+// =============================================
+
 const QUESTIONS = [
   {
     "id": 1,
@@ -322,84 +327,6 @@ const QUESTIONS = [
     ],
     "answer": 1,
     "explanation": ", based on the text, the factor second after genetics that explains height is nutrition. In all the cases by country and gender, the figures for the past were lower than for the present. Since genetics probably did not change that significantly, one other solution is that nutrition changed and people are eating more things like protein that increase Distractor Explanations: Choice A is incorrect because \"never exceeds\" means \"never gets higher,\" but the average height for women in Belgium in 1996 is 165.49 and for men in India is 164.95. Choice C is incorrect because both men and women in Egypt had a greater change in the average height between 1896 and 1996 than in India. Their average height is also higher than in India, so this statement has no support in the data. Choice D is incorrect because the passage points out that nutrition is important, but genetics is [PAGE 91 LEFT] Command of I more so. Therefore, there would still be differences in average height, even if the diets were the same. 58.",
-    "topic": "Command of Evidence: Quantitative"
-  },
-  {
-    "id": 26,
-    "text": "2021 Global Lithium Market (USS6.62 billion):\n\n<table class=\"test-table\">\n  <thead>\n    <tr>\n      <th>Sector</th>\n      <th>Lithium Market Share (%)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>Automotive Industry</td><td>45%</td></tr>\n    <tr><td>Consumer Electronics</td><td>15%</td></tr>\n    <tr><td>Glass and Ceramics</td><td>15%</td></tr>\n    <tr><td>Grid Storage</td><td>10%</td></tr>\n    <tr><td>Other Sectors</td><td>15%</td></tr>\n  </tbody>\n</table>\n\nThe global lithium market has experienced rapid growth since the development of rechargeable batteries for electric vehicles, which require massive amounts of the mineral. In fact, lithium is often considered an essential resource for many countries as they attempt to move away from combustion engines. By contrast, grid storage uses only a minor portion of the market, though that sector is expected to expand over time:\n\nWhich choice most effectively uses data from the table to complete the claim?",
-    "options": [
-      "about 45 percent of all vehicles use lithium in their production.",
-      "glass and ceramics and consumer electronics use about 15 percent of the lithium.",
-      "more lithium is used in the automotive Industry than in grid storage.",
-      "the automotive industry comprises about 45"
-    ],
-    "answer": 3,
-    "explanation": "Level: Medium I Skill/Knowledge: Command of Evidence (Quantitative) Key Explanation: The passage is discussing the lithium market, and the blank portion needs to complete the idea of something that is \"a consequence off or \"a result of\" the \"rising push\" or \"trend\" towards electric vehicles. Ihe graph shows that just under half of the use of lithium in the world market is used in the automotive Industry. Therefore, Choice D shows that the increase in electric cars has led to a large percentage of lithium being used in cars. Distractor Explanations: Choice A is incorrect because the graph does not show how many cars use lithium; it shows what percentage of the total lithium is used in cars. Choice B is incorrect because it is unrelated to the result of an increase in electric vehicles. Choice C is too vague to be useful because there is no reference for the use of either industry. 59.",
-    "topic": "Command of Evidence: Quantitative"
-  },
-  {
-    "id": 27,
-    "text": "Leading Countries for International Tourists Arrivals (in 2019, in millions):\n\n<table class=\"test-table\">\n  <thead>\n    <tr>\n      <th>Country</th>\n      <th>International Tourist Arrivals (Millions)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>France</td><td>89</td></tr>\n    <tr><td>Spain</td><td>83</td></tr>\n    <tr><td>United States</td><td>79</td></tr>\n    <tr><td>China</td><td>65</td></tr>\n    <tr><td>Italy</td><td>62</td></tr>\n    <tr><td>Turkey</td><td>51</td></tr>\n  </tbody>\n</table>\n\nInternational tourism can greatly affect a country's revenue. If the country has a solid infrastructure, it can safely and comfortably provide the necessary services for visitors to enjoy their journey. As more visitors arrive, they spend money on travel, lodging, food, souvenirs, and entertainment. The tourists also post their impressions\u2014be it positive or negative\u2014on social media for all their friends and family to see. In fact, the development of social media has greatly influenced the number of visitors to different tourist sites around the world.\n\nWhich choice most effectively uses information from the text to describe data from the table/graph?",
-    "options": [
-      "People do not enjoy visits to Turkey and post poor comments on social media.",
-      "France has the highest number of tourists because it has many famous sites to visit.",
-      "Spain has a good infrastructure for visitors and is often positively reviewed on social media.",
-      "China has a less developed infrastructure but better social media reviews than Turkey."
-    ],
-    "answer": 2,
-    "explanation": "The text refers to two different factors that attract tourists: a good infrastructure and good reviews on social media. Since Spain had the second largest number of tourists per year in 2019 according to the chart, it is most likely strong in both aspects. Distractor Explanations: Choice A is incorrect because Turkey is the lowest of the six countries given on the chart, but these are the leading countries for tourists in the world. Therefore, [PAGE 91 RIGHT] Evidence (Answers) 60. 61. Turkey attracts more tourists than most other countries, so probably gets good enough reviews to do so. Choice B is incorrect because there is no discussion in the text about \"famous sites.\" Instead, the text refers to safe and comfortable services. Choice D is incorrect because the text says that both infrastructure and reviews are important; since China attracts more tourists, it presumably is good at both. There is no evidence that it has a worse infrastructure than a country that attracts fewer tourists.",
-    "topic": "Command of Evidence: Quantitative"
-  },
-  {
-    "id": 28,
-    "text": "Estimated African Elephant Population (in wild by year):\n\n<table class=\"test-table\">\n  <thead>\n    <tr>\n      <th>Year</th>\n      <th>Estimated Population</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>1940</td><td>~4,000,000</td></tr>\n    <tr><td>1979</td><td>~1,300,000</td></tr>\n    <tr><td>1989</td><td>~600,000</td></tr>\n    <tr><td>1998</td><td>~500,000</td></tr>\n    <tr><td>2003</td><td>~550,000</td></tr>\n    <tr><td>2016</td><td>~415,000</td></tr>\n  </tbody>\n</table>\n\nIn Africa, there are two types of elephants. One is a savannah elephant, which lives in the wide grasslands. There are also much rarer forest elephants, which are smaller and have straighter, down-pointing tusks. There were over four million at the start of the twentieth century, but hunters prized the giant tusks. Bans on the sale of ivory in 1989 have helped prevent the dramatic decline in numbers that was occurring before that time. Unfortunately, habitat loss and poaching also take a toll on the populations of both. Despite conservation efforts,\n\nWhich choice most effectively completes the text with data from the table/graph?",
-    "options": [
-      "savannah elephant populations have declined more than forest elephants.",
-      "there was a slight increase in total numbers between 2003 and 2016.",
-      "the combined population of elephants is now less than 500.000.",
-      "populations have started to rebuild since the"
-    ],
-    "answer": 2,
-    "explanation": "The blank is completing the idea of something that happens \"despite\" conservation efforts. In other words, the sentence needs to show that even though there are conservation efforts, they are not successful or there is another negative result Choice C offers such a result: despite efforts. the elephant population is very low compared to the past. Distractor Explanations: Choice A is incorrect because the information is not shown on the graph; the graph only shows the total elephant count. Choice B is incorrect because it shows a positive effect of conservation, not a negative effect as indicated by the transition \"despite.\" Choice D is incorrect because in 1987, when the ivory ban was implemented, there were about 600,000 elephants. After that, there was a slight increase, but then, the numbers dropped again and are closer to 400,000. There is no overall \"rebuilding\" or \"increase.\"",
-    "topic": "Command of Evidence: Quantitative"
-  },
-  {
-    "id": 29,
-    "text": "ban on the sale of ivory.\nMost Expensive Prices for Paintings in the World\n(as of 2021)\nSalvator\nMundi\nInterchange\nlhe card\nPlayers\nNafea Faa\nIpoipo\nLeonardo 2017\nda Vinci\n(Attributed)\nWillem de 2015\nPaul\nCezanne\nPaul Gaugin 2015\nUSS400 USS475.4\nUSS300 USS32S\nUSS250 USS288\nUSS210 USS229\nThe value of art is subjective: some people like\none painting, whereas others do not. Ihe fame of\nthe artist or the appeal of the subject may affect\nthe end price, but ultimately, a painting is worth\nas much as anyone is willing to pay for it. Ihe\nmost expensive painting sold in the world to date\nis the Salvator Mundi, which exists in several\ncopies made by Leonardo da students; the\none sold in 2017 for USS40() million may have\nbeen painted by the great master himself. By\ncontrast, the next most expensive painting\nWhich choice most logically completes the text\nusing data from the table?",
-    "options": [
-      "is Interchange, painted by William de Kooning and sold for USS328 million in 2017.",
-      "cost USS300 million less at the time it was sold: Interchange, by William de Kooning.",
-      "sold in 2017 for less than Salvator Mundi; it is William de Koonin* Interchange.",
-      "is William de Kooning's painting Interchange, sold in 2017 for USS300 million."
-    ],
-    "answer": 3,
-    "explanation": "It accurately reports the name of the second-most-expensive painting, who painted it, when it was sold, and the price at the time it was sold. Distractor Explanations: Choice A is incorrect because it inaccurately says that the painting sold for SS328 million, but that is the price adjusted for inflation. Choice B is incorrect because \"cost USS300 million less\" has no comparison to show what it was less than; USS300 million was the total price. Choice C is incorrect because the painting sold for USSIOO million less, not USSIOO less. 62.",
-    "topic": "Command of Evidence: Quantitative"
-  },
-  {
-    "id": 30,
-    "text": "Amount of Chocolate Consumed per Person (in 2021, in kilograms):\n\n<table class=\"test-table\">\n  <thead>\n    <tr>\n      <th>Country</th>\n      <th>Chocolate Consumed per Person (kg)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>Switzerland</td><td>11.6</td></tr>\n    <tr><td>Germany</td><td>9.5</td></tr>\n    <tr><td>United Kingdom</td><td>9.0</td></tr>\n    <tr><td>France</td><td>6.2</td></tr>\n    <tr><td>United States</td><td>5.5</td></tr>\n    <tr><td>China</td><td>0.1</td></tr>\n  </tbody>\n</table>\n\nChocolate is a popular treat around the world, but the consumption of chocolate varies greatly from country to country. Although Europeans consume a large amount, the same is not as true in Asia. For example:\n\nWhich choice most effectively uses data from the table/graph to complete the claim?",
-    "options": [
-      "The U.S. average chocolate consumption is about 9 kilograms, whereas it is closer to 3.5 kilograms in France.",
-      "The average chocolate consumption in the U.K. is about 3 kilograms. but consumption in Switzerland is about 11.5 kilograms.",
-      "The average chocolate consumption in China is about .5 kilograms, but the consumption in Germany is about 5.5 kilograms.",
-      "People in Germany consume more chocolate on average than people in France or the U.K."
-    ],
-    "answer": 2,
-    "explanation": "The passage points out that _lhough Europeans consume a large amount, the same is not as true in Asian countries.\" Choice C gives statistics that show people in a European country, significantly more chocolate , consume than people in an Asian country. China. Distractor Explanations: All of the other choices contain true data, but they do not support claims made by the passage. Choice A is incorrect because the passage says that Europeans consume a lot of chocolate, but that does not appear to be true since people in the U.S. consume so much more. Choice B is incorrect because the figures make it appear that people in Europe might not eat much chocolate compared to the Swiss. Choice is incorrect because the passage does not discuss the relative amounts consumed in most European countries, only that the people consume a lot of chocolate. [PAGE 92 RIGHT] 'ND IDEAS 63.",
-    "topic": "Command of Evidence: Quantitative"
-  },
-  {
-    "id": 31,
-    "text": "Client group(\u0007)\nFamily and\ndomestic violence\nCurrent mental\nhealth issue\nIndigenous\nAustralians\nYoung people\npresenting alone\n( 15-24 years)\nOlder people (55\nyears or older)\nChildren (O- 17\nyears)\non care and\nprotection\norders(b)\nNumber\nof clients\n116,200\n88,200\n73,300\n41,700\n8,300\nFemale\nHomeless\nat the\nbeginning of\nsupport (%)\nMedian\nlength of\nsupport\n(days)\nReceiving\naccommodation\n(96)\nHomelessness is a growing problem in Australia. Australians known to be at particular\nrisk of homelessness include those who have experienced family and domestic violence,\nyoung people, children in care and under protection orders, Indigenous Australians,\npeople leaving health or social care arrangements, and Australians aged 55 or older. Older\npeople are especially disadvantaged, as only 20 percent receive housing support. However,\nIndigenous Australians\nWhich choice most effectively completes the text using information from the table?",
-    "options": [
-      "receive considerably higher housing support as compared to older Australians",
-      "receive even lesser housing support than older Australians",
-      "make up less of the overall clientele as compared to older Australians",
-      "are the most disadvantaged of all Australians"
-    ],
-    "answer": 0,
-    "explanation": "41 percent of Indigenous Australians receive housing support as compared to only 20 percent of older people. Distractor Explanation: Choice B is incorrect as Indigenous Australians receive more support as compared to older people. Choice C is incorrect as Indigenous Australians make up 73,300 clients as compared to 23,900 clients who are aged 55 years or older. Choice D is incorrect because the text offers no information to support the statement that Indigenous Australians are the most disadvantaged of all Australians.",
     "topic": "Command of Evidence: Quantitative"
   }
 ];

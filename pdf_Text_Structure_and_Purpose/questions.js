@@ -1,6 +1,6 @@
 // =============================================
-// Digital SAT – Topic Test: Text Structure and Purpose
-// 32 Questions | Single Timed Module
+// Digital SAT Topic Practice
+// 25 Questions
 // =============================================
 
 const QUESTIONS = [
@@ -71,7 +71,7 @@ const QUESTIONS = [
   },
   {
     "id": 6,
-    "text": "A new range of technologies, devices, and sub-\nsystems regarding wave and tidal current energy\nproduction need in-depth analysis. Competing\npressures and uses such as climate change, fishing,\nand marine transport should be considered\nwhen looking at environmental impacts of such\nsystems. The literature research shows that\nonly a small number of LCA on wave and tidal\nenergy converters have been performed. The\nmain focus was on devices that are in advanced\nstages of development, so there is little data for\nprototype models. So far, most of the studies\nfocused only on the impact of energy and carbon.\nEsisu.ng..d.ata.ar.g-xgr.u.nush.d\ufffdggrsgd.amgng\nseuntligs..l.gsgar.shus..a,nd-dg.yglqggrs, Since\nmost wave energy and tidal energy technologies\nare at an early development stage, no data exists\non environmental effects from large integrated\nsystems.\nWhat is the main function of the underlined\nsentence in the overall structure of the text?",
+    "text": "A new range of technologies, devices, and sub-\nsystems regarding wave and tidal current energy\nproduction need in-depth analysis. Competing\npressures and uses such as climate change, fishing,\nand marine transport should be considered\nwhen looking at environmental impacts of such\nsystems. The literature research shows that\nonly a small number of LCA on wave and tidal\nenergy converters have been performed. The\nmain focus was on devices that are in advanced\nstages of development, so there is little data for\nprototype models. So far, most of the studies\nfocused only on the impact of energy and carbon.\nEsisu.ng..d.ata.ar.g-xgr.u.nush.d�ggrsgd.amgng\nseuntligs..l.gsgar.shus..a,nd-dg.yglqggrs, Since\nmost wave energy and tidal energy technologies\nare at an early development stage, no data exists\non environmental effects from large integrated\nsystems.\nWhat is the main function of the underlined\nsentence in the overall structure of the text?",
     "options": [
       "",
       "",
@@ -162,7 +162,7 @@ const QUESTIONS = [
   },
   {
     "id": 13,
-    "text": "It describes the tactics used by certain guards.\nIt offers the reason that guards must be\nremoved.\nIt suggests that guards overreached the orders\nof the mine owners.\nIt emphasizes the inhumanity exhibited by the\nguards.\nThe following text is adapted from E Scott\nFitzgerald's 1922 novel, The Beautiful and the\nDamned.\nEarly in his career Adam Patch had married\nan anemic lady of thirty, Alicia Withers, who\nbrought him one hundred thousand dollars\nand an impeccable entr\ufffd into the banking\ncircles of New York Immediately and rather\npunkily she had borne him a son and. as if\ns\ncompletely devitalized by the magnificence of\nthis performance, she had thenceforth effaced\nherself within the shadowy dimensions\nof the nursery. The boy, Adam Ulysses\nPatch, became an inveterate joiner of clubs,\nconnoisseur of good form. and driver of\ntandems-at the astonishing age of twenty-six\nhe began his memoirs under the title \"New\nYork Society as I Have Seen It.\" On the rumor\nof its conception this work was eagerly bid\nfor among publishers, but as it proved after\nhis death to be immoderately verbose and\noverpoweringly dull, it never obtained even a\nprivate printing.\nWhat is the main function of the word\n\"astonishing\" in the overall structure of the text?",
+    "text": "It describes the tactics used by certain guards.\nIt offers the reason that guards must be\nremoved.\nIt suggests that guards overreached the orders\nof the mine owners.\nIt emphasizes the inhumanity exhibited by the\nguards.\nThe following text is adapted from E Scott\nFitzgerald's 1922 novel, The Beautiful and the\nDamned.\nEarly in his career Adam Patch had married\nan anemic lady of thirty, Alicia Withers, who\nbrought him one hundred thousand dollars\nand an impeccable entr� into the banking\ncircles of New York Immediately and rather\npunkily she had borne him a son and. as if\ns\ncompletely devitalized by the magnificence of\nthis performance, she had thenceforth effaced\nherself within the shadowy dimensions\nof the nursery. The boy, Adam Ulysses\nPatch, became an inveterate joiner of clubs,\nconnoisseur of good form. and driver of\ntandems-at the astonishing age of twenty-six\nhe began his memoirs under the title \"New\nYork Society as I Have Seen It.\" On the rumor\nof its conception this work was eagerly bid\nfor among publishers, but as it proved after\nhis death to be immoderately verbose and\noverpoweringly dull, it never obtained even a\nprivate printing.\nWhat is the main function of the word\n\"astonishing\" in the overall structure of the text?",
     "options": [
       "It indicates irony.",
       "It expresses admiration.",
@@ -175,7 +175,7 @@ const QUESTIONS = [
   },
   {
     "id": 14,
-    "text": "The following text is adapted from Chapter 1\nof Moby Dick; or The Whale. copyright 1851 by\nHerman Melville.\nI always go to sea as a sailor, because of\nthe wholesome exercise and pure air of the\nfore-castle deck. For as in this world, head\nwinds are far more prevalent than winds from\nastern, so for the most part the Commodore\non the quarter-deck gets his atmosphere\nat second hand from the sailors on the\nforecastle. He thinks he breathes it first; but\nnot so. But wherefore it was that after having\nrepeatedly smelt the sea as a merchant sailor,\nI should now take it into my head to go on\na whaling voyage; this the invisible police\nofficer of the Fates, who has the constant\nsurveillance of me, and secretly dogs me,\nand influences me in some unaccountable\nway-he can better answer than any one else.\nIt-gamg.\ufffdn.as-a..sqr.LQf brief-interlude-and.solsu\nWhat is the main function of the final sentence in\nthe context of the text?",
+    "text": "The following text is adapted from Chapter 1\nof Moby Dick; or The Whale. copyright 1851 by\nHerman Melville.\nI always go to sea as a sailor, because of\nthe wholesome exercise and pure air of the\nfore-castle deck. For as in this world, head\nwinds are far more prevalent than winds from\nastern, so for the most part the Commodore\non the quarter-deck gets his atmosphere\nat second hand from the sailors on the\nforecastle. He thinks he breathes it first; but\nnot so. But wherefore it was that after having\nrepeatedly smelt the sea as a merchant sailor,\nI should now take it into my head to go on\na whaling voyage; this the invisible police\nofficer of the Fates, who has the constant\nsurveillance of me, and secretly dogs me,\nand influences me in some unaccountable\nway-he can better answer than any one else.\nIt-gamg.�n.as-a..sqr.LQf brief-interlude-and.solsu\nWhat is the main function of the final sentence in\nthe context of the text?",
     "options": [
       "",
       "",
@@ -327,97 +327,6 @@ const QUESTIONS = [
     ],
     "answer": 1,
     "explanation": "The underlined portion says that the percentage of ice melting due to human causes may be greater than one hundred percent. That number expands on the previous claim that a study shows one hundred percent of the ice has been lost. In other words, the underlined portion stresses the fact that the problem of melting may be even greater than the study suggests. Distractor Explanations: Choice A is incorrect because the passage does not say that there is a \"discrepancy\" or \"error,\" only that the true situation might be even greater if another factor, the lack of rebuilding ice, is taken into account. Choice C is incorrect because the added information is not an \"alternative\" or \"different\" explanation, it is an expansion on the same idea. Choice D is incorrect because the underlined portion only offers a statistical fact; the following portion is the reason that the numbers might be true.",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 26,
-    "text": "The following text is adapted from Charlotte\nBront& 1853 novel, Villette.\nMy godmother lived in a handsome house\nin the clean and ancient town of Bretton.\nHer husban& family had been residents\nthere for generations, and bore, indeed. the\nname of their birthplace-Bretton of Bretton:\nwhether by coincidence, or because some\nremote ancestor had been a personage of\nsufficient importance to leave his name to his\nneighbourhood, I know not. When I was a girl\nI went to Bretton about twice a year, and well\nI liked the visit. The house and its inmates\nspecially suited me. The large peaceful rooms\nthe well-arranged furniture, the clear wide\nwindows, the balcony outside, looking down\non a fine antique street, where Sundays and\nholidays seemed always to abide-so quiet\nwas its atmosphere, so clean its pavement-\nthese things pleased me well.\nWhat is the main purpose of the text?",
-    "options": [
-      "It describes a character's appearance.",
-      "It establishes an agreeable setting.",
-      "It hints at a change in circumstances.",
-      "It shows where the narrator resides."
-    ],
-    "answer": 1,
-    "explanation": "\"agreeable\" refers to \"pleasant,\" and the entire passage is about the \"handsome house\" where the godmother lived. The description is a comfortable place that the narrator says \"pleased me well.\" Distractor Explanations: Choice A is incorrect because the passage describes a place, not a \"character\" or \"person.\" The grandmother is discussed, but not her \"appearance\" or \"how she looks.\" Choice C is incorrect because there is no \"hint\" or \"clue\" that the \"circumstances\" or \"situation\" will change. The story could be a pleasant memory that took place in Bretton. Choice D is incorrect because the passage shows where the godmother, not the narrator, resides. The narrator says she only went \"about twice a year.\"",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 27,
-    "text": "The following text is adapted from Emily\nDickenson's poem, With a Flower, published after\nher death in 1886.\nI hide myself within my flower,\nThat wearing on your breast,\nYou, unsuspecting, wear me too -\nAnd angels know the rest.\nI hide myself within my flower,\nThat, fading from your vase,\nYou, unsuspecting, feel for me\nAlmost a loneliness.\nWhich choice best describes the overall structure\nof the text?",
-    "options": [
-      "One paragraph shows the writer's love and the\nother shows the rejection of that",
-      "One paragraph shows how love grows and the\nsecond explains that love always dies.",
-      "The writer describes her desire to share her\nlove and then what happens when she does\nexpress it.",
-      "The writer describes situations where she\nwants to show love but the recipient does not"
-    ],
-    "answer": 3,
-    "explanation": ". The writer talks about two situations: when the recipient is wearing the flower and when the flower is in a vase. In both situations, the recipient is \"unsuspecting\" or \"does not know\" that the author has \"hidden herself within the flower,\" meaning that she is giving her love but not saying anything. Distractor Explanations: Choice A is incorrect because both paragraphs include references to the love, but the recipient never \"rejects\" or \"turns down\" the love. Instead, the recipient does not realize that the author feels that way; he is \"unsuspecting.\" Choice B is incorrect because while the first paragraph may show that the author's love flourishes while the man is wearing her flower on his lapel, the second does not [PAGE 154 RIGHT] RUCTURE explain that love \"always\" or \"every time\" dies. Choice C is incorrect because the author never \"expresses\" or \"tells\" about her love.",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 28,
-    "text": "Ihe brightly-colored board game known as\nParcheesi was introduced into the United States in\nthe late 1860s, but the game actually predates that\ndebut. In 1860, the British brought it from India,\nwhere it was known as pachisi. But that game.\ntoo, has older origins: it was derived from a game\ncalled chaupar that is referred to in texts as early\nas 540 to 300 B.C.\nWhat is the overall purpose of the text?",
-    "options": [
-      "To offer a counterargument to a claim",
-      "To givea brief historical outline",
-      "To explain the rules of a game",
-      "To point out a factual error"
-    ],
-    "answer": 1,
-    "explanation": "The text offers the various dates that led up to the invention of the game Parcheesi. Therefore, it offers the \"history\" or \"background\" of the Distractor Explanations: Choice A is incorrect because there is no claim that is being disproved with a \"counterargument\" or \"opposing view.\" Choice C is incorrect because the reader does not learn how to play the game. Choice D is incorrect because there is no \"factual error\" or \"untrue detail\" discussed; the text just says that the game was invented elsewhere before it was introduced to the United States.",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 29,
-    "text": "The following text is adapted from a speech\ngiven in 326 BC by Alexander the Great to his\nexhausted and dispirited soldiers on the banks of\nthe Hydaspes River.\nI could not have blamed you for being the\nfirst to lose heart if I, your commander, had\nnot shared in your exhausting marches and\nyour perilous campaigns; it would have been\nnatural enough if you had done all the work\nmerely for others to reap the reward. But it\nis not so. you and l. gentlemen. have shared\nthe labour and shared the danger. and the\nC.E.AEdS-a\ufffd-fQE-us_all. The conquered territory\nbelongs to you; already the greater part of its\ntreasure passes into your hands, and when all\nAsia is overrun, the utmost hopes of riches or\npower which each one of you cherishes will be\nfar surpassed, and whoever wishes to return\nhome will be allowed to go, either with me or\nwithout me.\nWhat is the main purpose of the underlined\nsentence in the text?",
-    "options": [
-      "To explain that he would share the rewards\nwith his soldiers",
-      "To motivate his soldiers to fight harder\nbecause the rewards would be shared",
-      "To emphasize that the wars being fought were\na shared effort",
-      "To tempt his soldiers with the spoils of war"
-    ],
-    "answer": 1,
-    "explanation": "It is initially mentioned that the soldiers are dispirited. Hence, Alexander is trying to motivate his soldiers to fight harder so that they may get a larger share. Distractor Explanations: Choice A is incorrect because as mentioned in the underlined sentence, the reward has already been shared. Choice C is incorrect because he is not only emphasizing the shared effort. Rather, he is focused on sharing the rewards with his soldiers. Choice D is incorrect because there is no evidence that he is tempting his soldiers. [PAGE 155 LEFT] Text Structure al",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 30,
-    "text": "William Wordsworth was one of the founders\nof English Romanticism and one its most\ncentral figures and important intellects. He\nis remembered as a poet of spiritual and\nepistemological speculation, a poet concerned\nwith the human relationship to nature and a fierce\nadvocate of using the vocabulary and speech\npatterns of common people in poetry.\nWhat is the main purpose of the text?",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": 1,
-    "explanation": "The passage mainly talks about what William Wordsworth is remembered for, akas his legacy. Distractor Explanations: Choice A is incorrect because the text does not describe the work of Wordsworth. Choice C is incorrect because no information is given about his life. Choice D is incorrect because the majority of text does not give us information about importance. Rather, the text details his legacy.",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 31,
-    "text": "It describes the work of William Wordsworth.\nIt details the legacy of William Wordsworth.\nIt talks about the life of William Wordsworth.\nIt shows how important William Wordsworth\nwas to English poetry.\nWordsworth's deep love for the \"beauteous forms\"\nof the natural world was established early. The\nWordsworth children seem to have lived in a\nsort of rural paradise along the Derwent River,\nwhich ran past the terraced garden below their\nample house. He began writing poetry as a young\nboy in grammar school, and before graduating\nfrom college, he went on a walking tour of\nEurope, which deepened his love for nature and\nhis sympathy for the common man: both major\nthemes in his poetry.\nWhat is the main purpose of the text?",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": 2,
-    "explanation": "The text primarily focuses on the ways Wordsworth was influenced by nature. For example, he lived in a \"rural paradise along the Derwent River\" and he went on a walking tour of Europe, which deepened his love for nature. Distractor Explanations: Choice A is incorrect because the text does not focus only on his early life. Choice B is incorrect because the text does not mention that his poetry was solely based on nature, instead mentioning that \"sympathy for the common man\" was also a major theme. Choice D is incorrect because the text does not focus on the importance of nature to Wordsworth. [PAGE 155 RIGHT] ld Purpose (Answers)",
-    "topic": "Text Structure and Purpose"
-  },
-  {
-    "id": 32,
-    "text": "It explains the early life of Wordsworth.\nWordsworth's poetry was solely based on\nIt explains why and how Wordsworth was\ninfluenced by nature.\nIt shows how important nature was to\nWordsworth.\nDzoodzo Baniwa, a member of an Indigenous\ncommunity in BraziB Amazonas state, has been\ncollecting data on the regiorfi biodiversity for\naround 15 years. He lives in a remote village\ncalled Canad\ufffd on the Ayari River, a tributary of\nthe Iqana, which in turn, feeds the Rio Negro,\none\nof the main branches of the Amazon.\nby motorboat.\nWhat is the purpose of the underlined portion in\nthe overall structure of the text?",
-    "options": [
-      "It emphasizes how remote the village of\nCanad\ufffd is.",
-      "It shows the vastness of the Amazonas state.",
-      "It highlights Dzoodzo Baniwa' life.",
-      "It describes the river network of the Amazon."
-    ],
-    "answer": 0,
-    "explanation": "The underlined portion only reinforces the already- mentioned idea that the village of Canad\ufffd is very remote (\"He lives in a village called Canad\ufffd.\") Distractor Explanations: Choice B is incorrect because the underlined portion talks about how far Canada is from the nearest city (\"a three-day trip by motorboat\") and does not mention the Amazonas state at all. Choice C is incorrect because the underlined portion does not mention Baniwa\u0007s life. Choice D is incorrect because the river network of the Amazon is not discussed in the underlined sentence.",
     "topic": "Text Structure and Purpose"
   }
 ];
