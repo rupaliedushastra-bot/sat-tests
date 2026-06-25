@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAT Topic Test</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="test-container">
+    <header class="test-header">
+      <div class="header-left">
+        <a href="../index.html" class="back-btn">← Back</a>
+        <h2>SAT Topic Test - Percentages</h2>
+      </div>
+      <div class="timer">Time Remaining: <span id="time-left">--:--</span></div>
+    </header>
+
+    <div class="split-view">
+      <!-- Question Section -->
+      <section class="question-section">
+        <div class="question-header">
+          <span class="question-number">Question <span id="current-q-num">1</span> of <span id="total-q-num">27</span></span>
+          <button class="mark-review-btn" id="mark-review">⚑ Mark for Review</button>
+        </div>
+        
+        <div class="question-content" id="question-text">
+          <!-- Question text goes here -->
+        </div>
+
+        <div class="options-grid" id="options-container">
+          <!-- Options will be injected here -->
+        </div>
+      </section>
+    </div>
+
+    <footer class="test-footer">
+      <div class="footer-left">
+        <button class="nav-btn" id="prev-btn" disabled>Previous</button>
+      </div>
+      <div class="footer-center">
+        <button class="nav-btn" id="grid-btn">⊞ Question Grid</button>
+      </div>
+      <div class="footer-right">
+        <button class="nav-btn" id="next-btn">Next</button>
+        <button class="submit-btn" id="submit-btn" style="display: none;">Submit Test</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Question Grid Modal -->
+  <div class="modal-overlay" id="grid-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Question Navigator</h3>
+        <button class="close-btn" id="close-grid">×</button>
+      </div>
+      <div class="q-grid" id="question-grid">
+        <!-- Grid items injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- Questions Data -->
+  <script src="./questions.js"></script>
+  <!-- Main Logic -->
+  <script src="./script.js"></script>
+</body>
+</html>
