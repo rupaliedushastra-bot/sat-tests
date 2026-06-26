@@ -1,119 +1,345 @@
+// =============================================
+// Digital SAT Practice - Topic: topic_inferences
+// 25 Questions
+// =============================================
+
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "There is a natural tendency to confuse change with progress. This is\nperfectly understandable, especially considering that we went from\ninventing electricity to perfecting aviation to reaching the moon all in\na time analogous to just a blink in the grand scheme of human history.\nSuch prodigious leaps have left us hungry for more leaps, and there\nare benefits to restlessness, even if entropic; __________\nWhich choice most logically completes the text?",
+    "text": "93 ================\nIhe following text is adapted from Jane Austin's\n1811 novel. Sense and Sensibility.\nMr. John Dashwood told his mother again\nand again how exceedingly sorry he was that\nshe had taken a house at such a distance from\nNorland as to prevent his being of any service\nto her in removing her furniture. He really\nfelt conscientiously vexed on the occasion; for\nthe very exertion to which he had limited the\nperformance of his promise to his father was\nby this arrangement rendered impractical.\nThe furniture was all sent around by water.\nIt chiefly consisted of household linen,\nplates, china, and books, with a handsome\npianoforte.\nBased on the text, what is most likely true about\nMr. John Dashwood?",
     "options": [
-      "systematic, focused research will lead to a successful result.",
-      "amateur researchers should be put on equal footing with\nacademic researchers.",
-      "nearly all useful recent innovations have come as the result of\nchaotic creativity.",
-      "throw enough aimless darts in every direction and you\u2019ll find a\nbull\u2019s eye, even if by accident."
+      "He had given his father a pledge regarding his care.",
+      "He is too busy to assist with the details of his move.",
+      "He feels that his mother is taking too many belongings.",
+      "He wishes that his mother would remain at Norland."
     ],
     "answer": 0,
-    "explanation": "The author makes sure to differentiate soaps and detergents even\nthough they \u201care sometimes used interchangeably.\u201d Choices (B) and\n(C) give misleading information that doesn\u2019t account for the text\u2019s",
+    "explanation": "The text says, \"the very exertion to which he had limited the performance of his promise to his father was by this arrangement rendered impracticable.\" Therefore, it can be determined that Mr. Dashwood had made a \"promise\" or \"pledge\" to take care of his mother, but could not because she was moving too far away. Distractor Explanations: Choice B is incorrect because Mr. Dashwood is \"vexed\" that he cannot help due to the distance, not due to a lack of time. Choice C is incorrect because, while Mrs. Dashwood is taking many things, there is no indication that her son feels that the number is too large. Choice D is incorrect because there is no discussion that Mr. John Dashwood wishes that his mother would stay, only that she would not travel so far away. 65.",
     "topic": "Inferences"
   },
   {
     "id": 2,
-    "text": "Many parents, as they lovingly tuck their children into bed, repeat a\nshort rhyme that has been around for centuries: night-night, sleep\ntight, don\u2019t let the bedbugs bite! This phrase refers to a time when\neven the wealthy had to deal with the constant scourge of bedbugs and\nother pests that preyed on sleeping humans. With the advent of\nmodern pesticides, bedbugs were, for a time, largely an issue of the\npast. However, in the past few years they have come back with a\nvengeance, __________\nWhich choice most logically completes the text?",
+    "text": "It is estimated that over 5 million slaves were\ntransported from Africa to Brazil before Brazil\nabolished slavery in 1888; it was the last country\nin the Western Hemisphere to do so. Escaped\nslaves formed small, tight-knit communities\ncalled quilombo in inaccessible regions and\ntypically survived through farming and raiding.\nEven after slavery officially ended, the residents\nsuffered prejudice and persecution for their\nrace. Today, there are still about 5,900 quilombo\nscattered in remote areas around the country.\nBased on the text, what is most likely true about\nmodern-day quilombo?",
     "options": [
-      "as modern science has successfully eradicated the threat of\nbedbugs.",
-      "once again plaguing people rich and poor and proving very\ndifficult to eradicate.",
-      "given the lack of interest that modern city dwellers have in\nattaining a good night\u2019s rest.",
-      "since the anatomy of bedbugs are now better understood thanks\nto advances in technology."
+      "A large percentage of the residents are descendants of slaves.",
+      "They do not have basic facilities such as electricity and running water.",
+      "Residents of each quilombo seldom have contact with other quilombo.",
+      "The combined population of all the quilombo is about 5 million."
     ],
     "answer": 0,
-    "explanation": "\u201cMild\u201d is an appropriate word since the text refers to \u201cminor\nearthquakes.\u201d The other choices do not accurately depict a level of\nseverity or magnitude.",
+    "explanation": ". The passage points out that the quilombo were tight-knit communities of escaped slaves, and after slavery ended, the residents \"suffered prejudice and persecution for their race.\" This sentence implies that most of the residents had a race that was different from local people in Brazil. In other words, the communities are probably still close-knit groups of people whose ancestors were slaves. Distractor Explanations: Choice B is incorrect because there is no discussion in the passage about the situation of quilombo today. It is possible that most have electricity and running water, though being \"remote,\" they might not have extremely advanced technology. Choice C is impossible to [PAGE 103 RIGHT] (Answers) 66. determine from the passage because there is no discussion of how often quilombo residents travel or meet. Even if the quilombo are remote, the residents might interact with each other and not outside groups. Choice D is also impossible to tell from the passage. Just because there were about 5 million slaves does not mean that all of them escaped, nor that all of them averaged one child each.",
     "topic": "Inferences"
   },
   {
     "id": 3,
-    "text": "Our nation\u2019s heroes are not the only ones who may experience the\ndetrimental effects of fireworks. Furry companions also can be\nfrightened by the loud blasts above for nights on end. Veterinary\npractices, animal shelters, and other animal organizations frequently\nsend out reminders in the weeks leading up to the Fourth of July to\nprotect our pets from running away out of fright. These may include\nreminders to microchip our pets, keep pets indoors, and take pets on\nwalks early in the day in case they are too afraid to relieve themselves\nduring the fireworks. Their efforts are not without reason. In fact,\n__________\nWhich choice most logically completes the text?",
+    "text": "94 ================\nAstronomers from the University of California,\nBerkeley worked out there could be as many\nas 40 billion Earth-sized exoplanets in the\nso-called \"habitable zone\" around their star,\nwhere temperatures are mild enough for liquid\nwater to exist on the surface. There's even a\npotentially Earth-like world orbiting our nearest\nneighboring star, Proxima Centauri. At just\nfour light years away, that system might be close\nenough for us to reach using current technology.\nWith the Breakthrough Starshot project launched\nby Stephen Hawking in 2016, plans for this are\nalready afoot. It seems inevitable other life is out\nthere, especially considering that life appeared on\nEarth so soon after the planet was formed.\nWhat is implied in the passage about Stephen\nHawking's Breakthrough Starshot project?",
     "options": [
-      "many pets enjoy the spectacle of fireworks just as much as their\nhuman counterparts.",
-      "veterinarians recommend that pet owners should take their pets\nto firework displays.",
-      "days on which fireworks are displayed statistically have the\nsame number of pet injuries as days on which fireworks are not\ndisplayed.",
-      "more pets run away on the night of the Fourth of July than any\nother night of the year."
+      "It was designed to search for Earth-sized planets in the \"habitable zone.\"",
+      "It intends to send spacecraft to the Proxima Centauri system in the future.",
+      "It wants to prove that life appeared in the Proxima Centauri system soon after it formed.",
+      "It is trying to show that humans can survive on a planet circling Proxima Centauri."
     ],
-    "answer": 3,
-    "explanation": "The narrator states their goal of wanting to spend a semester or\ntwo abroad; the narrator then goes on to provide specific reasons why\nthis is a worthy goal. All of this aligns with choice (D). It is not (A)\nbecause the narrator does not focus on considering objections. It is not\n(B) because the narrator provides just one statistic\u2014this cannot be\nconsidered a statistical analysis of a dilemma. It is not (C) because the\nnarrator is not doing self-reflection but is convincing the reader of the\nworthiness of this goal.",
+    "answer": 1,
+    "explanation": "The Breakthrough Starshot project is introduced in a sentence with \"with\" showing that it is the method of achieving the main part of the sentence. The main clause is \"plans for this are already afoot,\" and \"this\" refers to the previous sentence, \"that system might be close enough for us to reach using current technology.\" Therefore, the Breakthrough Starshot project is the method that may be possible for reaching the star system of Proxima Centauri, presumably via a spacecraft of some sort. Distractor Explanations: Choice A is incorrect because there is no indication of how the researchers worked out or searched for Earth- sized planets in the \"habitable zone.\" Choice C is incorrect because, while the project is designed to look for life, it is not trying to prove that life appeared at a certain time period. Ihe project would presumably be a success if it proved that life appeared at any time, even very recently. Choice D is incorrect because there is no evidence to support the claim that the project wants to send humans to a different planet, only that it wants to look for life. [PAGE 104 LEFT] INFORMATION 67.",
     "topic": "Inferences"
   },
   {
     "id": 4,
-    "text": "Since the transition from alkylation to acylation for benzene reactions,\nchemists\u2019 abilities to safely modify benzene have expanded\nexponentially. What seemed revolutionary in the late 1800s is now\npart of undergraduate organic chemistry experiments in courses\nthroughout universities worldwide. Benzene is no longer solely\nthought of as a carcinogenic and volatile compound. It now used in a\nvariety of products including plastics, drugs, pesticides, detergents,\netc. Its importance to modern chemistry, materials science and\npharmaceuticals is therefore __________\nWhich choice most logically completes the text?",
+    "text": "The following text is adapted from Fyodor\n1848 book, White Nights and Other\nStories.\nI took long walks, succeeding, as I usually\ndid, in quite forgetting where I was, when\nI suddenly found myself at the city gates.\nInstantly I felt lighthearted, and I passed the\nbarrier and walked between cultivated fields\nand meadows, unconscious of fatigue, and\nfeeling only all over as though a burden were\nfalling off my soul All the passers-by gave me\nsuch friendly looks that they seemed almost\ngreeting me, they all seemed so pleased at\nsomething. And I felt pleased as I never had\nbefore. It was as though I had suddenly found\nmyself in Italy-so strong was the effect of\nnature upon a half-sick townsman like me,\nalmost stifling between city walls.\nBased on the text, what is the most likely reason\nthat the narrator takes a walk?",
     "options": [
-      "unquestioned in the scientific community.",
-      "a subject of great debate among practicing chemists.",
-      "ridiculed by economists and politicians.",
-      "a matter on which the jury is still out."
+      "He wants to spend time with new people.",
+      "He is displeased with his daily life.",
+      "He hopes to have an exciting adventure.",
+      "He is trying to forget a sad event."
     ],
-    "answer": 0,
-    "explanation": "The text overall is focused on showing what makes for a good\nclassroom environment, with this final sentence showing how students\nwho learn under a \u201ctrue teacher\u201d will be perpetually curious. This goes\nalong with choice (A). It is not (B) because it complements the text\nrather than contradicts it. It is not (C) because it makes a broad rather\nthan a specific statement. It is not (D) because it does not get into\ncareer specifics.",
+    "answer": 1,
+    "explanation": "The narrator says he felt \"lighthearted\" when he saw the city gates and felt \"as though a burden were falling off my soul\" when he left the city. Later, he refers to the walk as making him feel better because he had been \"half-sick\" and \"stifling between city walls.\" Therefore, it can be presumed that he was \"displeased\" or \"not happy\" with being in town all the time, which would have been his \"daily\" or \"regular\" life since he was a \"townsman.\" He felt discontent with his conditions, feeling trapped within a city, rather than with a specific event. Distractor Explanations: Choice A is incorrect because, while the narrator greets people on his walk, there is no indication that meeting them was the purpose of his going for the walk. Choice C is incorrect because there is no indication that the narrator was trying to find adventure, only that he was trying to relax- Choice D is incorrect because there is no reference to the narrator having a \"sad event.\" He does not refer to a specific occurrence that bothered him, only the stifling nature of in the city. 68.",
     "topic": "Inferences"
   },
   {
     "id": 5,
-    "text": "Varroa mites are an issue for bee colonies for several reasons. The\nprimary issue is that they attach themselves to the bodies of worker\nbees and feed on them. This can affect a bee\u2019s immune system, ability\nto flush out pesticides, and regulation of hormones. When the mite\nabandons the bee for a fresh host, it leaves behind an open wound\nwhich often leads to infection by one of the many bee viruses that the\nmites carry. The overall effect is that the bees are much weaker when\nmites are present. This weakness means that worker bees __________\nWhich choice most logically completes the text?",
+    "text": "95 ================\nAccording to Clark, a neutral model would\npredict that the variation among the sites\nwould increase over time, as random chance\ncaused different species to go extinct in some\nareas but not others. Some sites, just by chance,\nshould come to be dominated by one species,\nwhile others would come to be dominated by\nanother species. However, the researchers found\nthat variance among the sites did not increase\nover the millennia, leading them to conclude\nthat stabilizing forces were maintaining forest\ndiversity. Clark emphasized, however, that\neven though the role of stabilizing mechanisms\nremains unknown, the results from his and\nMcLachlan's studies offer cautionary lessons:\n\"Our findings suggest that forest biodiversity\nhas probably been stabilized in some important\nways, so extinction of species should cause\nus greater concern than if we believed that\nbiodiversity was maintained in the past by\ncontinual replenishment of random extinction by\ngeneration of new species.\"\nBased on the text, what is one implication of\nstudy?",
     "options": [
-      "become increasingly able to thrive given their auspicious\ncircumstances.",
-      "are much less able to perform their crucial tasks as they try to\nmaintain the colony.",
-      "are animals that live in colonies under the control of a queen bee\nthat they protect.",
-      "will increase their overall capacity to benefit other members of\nthe bee colony."
+      "Due to biodiversity stabilization, there is a smaller chance of ecosystems collapsing than previously theorized.",
+      "Due to biodiversity stabilization, extinction is a random event that is compensated for by evolution of new species.",
+      "Due to biodiversity stabilization, as time progresses, fewer new species will evolve than did in the past.",
+      "Due to biodiversity stabilization, an extinction could indicate a larger-scale collapse of the region's equilibrium."
     ],
-    "answer": 2,
-    "explanation": "The author of Text 2 asserts that hats are making a comeback, so it\nis most logical to state that the author of Text 2 would strongly\ndisagree with this statement. The other options do not capture the\nprecise likely opinion.",
+    "answer": 3,
+    "explanation": "Clark claims, \"extinction of species should cause us greater concern than if we believed that biodiversity was maintained in the past by continual replenishment of random extinction by generation of new species.\" In other words, he feels that if one species goes extinct. it would show that the biodiversity is not being maintained as it should be; the stabilizing forces would not be functioning properly. That could indicate a \"collapse\" or \"failure\" of the entire system. Distractor Explanations: Choice A is incorrect because Clark implies that because of stabilization, [PAGE 104 RIGHT] 'ND IDEAS ecosystems remain in balance, but if one part of the balance is disrupted, the entire system may collapse. Therefore, a total collapse is more likely than if the system is random. Choice B is incorrect because it refers to the situation in the neutral theory, not the biodiversity stabilization theory. Choice C is incorrect because the stabilization theory proposes that the number of species remains about the same. It is implied that the rate of addition and extinction would therefore be about the same. 69.",
     "topic": "Inferences"
   },
   {
     "id": 6,
-    "text": "One of the primary effects of social media use that has already been\nobserved in populations that utilize social media regularly is a\ndecrease in mental health and self-esteem. As far back as 1998, a\nstudy showed that increased social media use correlated with\ndecreased in-person interactions with their friends and family. This\nwas hypothesized to lead to issues with symptoms of depression. As\nmodern social media developed, this decrease in personal face-to-face\ninteractions increased. In England a recent study by the National\nInstitute of Health (NIH) found a significant correlation between\nsocial media usage and symptoms of depression in high school aged\nsubjects. This correlation was not found among older social media\nusers. Of course, correlation is not causation: __________\nWhich choice most logically completes the text?",
+    "text": "Salt stress, too much salt in the soil for plants\nto thrive, is one of the major environmental\nconstraints limiting agricultural productivity\nand influencing the concentration of bioactive\ncompounds of vegetables. A recent study assessed\nthe effect of NaCl salt stress on flowering,\nfructification and fruit nutritional quality of a\nlocal cultivar of chili pepper. Chili pepper belongs\nto the crops grown throughout the world for their\nnutraceutical (nutritional and medicinal) and\neconomic virtue. In Benin, chili is the second\ncash gardening crop after the tomato. Its annual\nproduction is about 47.162 tons. Pepper plants\nproduce the compound capsaicin, primarily in the\nfruits, possibly to deter mammalian herbivores.\nIn Benin, chili pepper is grown only for food\npartially in the cultivable lands of the coastal\nareas, where soil salinity and water irrigation are\na reality.\nBased on the text, which is most likely true about\nchili pepper production in Benin?",
     "options": [
-      "depression most likely comes because of using social media.",
-      "social media use is not associated with an increased likelihood\nof depression.",
-      "an increase in depression is associated with a decrease in social\nmedia use.",
-      "already depressed people could just tend to use social media\nmore."
+      "Farmers do not realize the problem of salt stress.",
+      "It an important source of income for many farmers.",
+      "It is one of the largest sectors of the economy.",
+      "Most plants produce no fruits because of salt."
     ],
-    "answer": 2,
-    "explanation": "The narrator emphasizes how social media posting leads to a\n\u201cfalse online environment\u201d that makes it seem like other people are\nliving amazing and exciting lives. This would logically lead to some\npeople feeling worse about their own personal situations by\ncomparison. It is not (A) because the users are not described as\nactively conversing with friends, but rather passively watching the\nactivities of others. It is not (C) because there is no emphasis on\npersonal fulfillment. It is not (D) because the use of social media is\nnot described as academic in this context.",
+    "answer": 1,
+    "explanation": "The passage states that \"in Benin, chili is the second cash gardening crop besides tomato.\" This statement shows that chili is the second largest crop grown to be sold rather than used by the farmer. Without chili, one of the major crops that provides income would be missing, so it is important to many farmers. Distractor Explanations: Choice A is incorrect because the passage states that \"This stress is known to negatively affect plant growth at all developmental stages,\" which indicates that the farmers also know about the negative effect. Choice C is incorrect because there is no discussion of other sources of income in Benin. In reality, textiles and cotton are more important than the cash crops sold for food. Choice D is impossible to determine from the text because, while the passage hints that many plants are raised in areas with salt, it does not say that the plants are very unproductive. Since it is an important cash crop, the implication is that the plants grow and make fruit. [PAGE 105 LEFT] Inferenc 70.",
     "topic": "Inferences"
   },
   {
     "id": 7,
-    "text": "It\u2019s fair to say that the world in which we live is made up of chemicals,\nthough the cultural emphasis in recent years on natural or \u201corganic\u201d\nproducts has somewhat demonized this notion. \u201cChemophobia,\u201d in\nfact, is a term that has emerged to describe the irrational fear of\nchemistry and chemical nomenclature. In general, individuals affected\nby chemophobia tend to view the precisely planned manipulation of\nmolecular compounds with suspicion, and perceive products rendered\nby these means as both \u201cunnatural\u201d and inherently inferior to those\nderived through cruder avenues. In reality, __________\nWhich choice most logically completes the text?",
+    "text": "96 ================\nThe following text is adapted from Abraham\nLincolnfi last public address, given April 11, 1965.\nThe amount of constituency, so to speak,\non which the new Louisiana government\nrests, would be more satisfactory to all,\nif it contained fifty, thirty, or even twenty\nthousand, instead of only about twelve\nthousand, as it does. It is also unsatisfactory\nto some that the elective franchise is not given\nto the colored man. I would myself prefer that\nit were now conferred on the very intelligent,\nand on those who serve our cause as soldiers.\nStill the question is not whether the Louisiana\ngovernment, as it stands, is quite all that\ndesirable. Ihe question is. \"Will it be wiser\nto take it as it is, and help to improve it; or\nto reject, and disperse it? Can Louisiana be\nbrought into proper practical relation with the\nUnion sooner by sustaining, or by discarding\nher new State government?\"\nBased on the text, Lincoln would most likely\nagree with which statement regarding former\nslaves?",
     "options": [
-      "nothing could be more natural than the intricate, multistep\nreactions of organic chemistry.",
-      "artificial substances present a clear and present danger to the\nhealth and safety of humans.",
-      "psychology provides a more promising avenue for the\nimprovement of wellbeing than does chemistry.",
-      "organic agriculture provides a safe alternative to commercial\ncrops raised with chemical fertilizers."
+      "Most of them are not qualified to vote.",
+      "They have an inalienable right to vote.",
+      "Some should be granted the privilege of",
+      "They are not capable of voting effectively."
     ],
-    "answer": 1,
-    "explanation": "Based on the first column at the top of the graph, all occupations\nexperienced an 11% growth from 2012\u20132022, and based on the middle\ncolumn of the graph, occupational therapists experienced a 29%\nincrease in employment in the same period. The other options give\nincorrect information based on the graph.\nAdvanced Drills\nThe following questions are designed to represent the most challenging\nsorts of questions you could encounter on the SAT Reading. Take about ten\nminutes for each exercise.\nAdvanced Drill 1\n1. Oils, which contain primarily nonpolar hydrocarbon bonds, are\nimmiscible with aqueous solutions, meaning they will not\nspontaneously dissolve in water, which consists of highly polar\nhydrogen-oxygen bonds. Instead, oils will tend to form a film over\npolar solvents, while surface tension serves to stabilize this film at the\noil-water interface. Because they are amphiphilic\u2014meaning they\npossess both polar and nonpolar domains\u2014surfactants may interact\nwith both components of this interface and interfere with the\nelectrochemical forces that maintain its integrity. Due to this unique\nproperty, surface tension lowering agents have found a host of\napplications in diverse commercial products, and are used as\nemulsifiers, foaming agents, and detergents.\nAs used in the text, what does the word \u201cintegrity\u201d most nearly mean?\n(A) Rectitude\n(B) Solidarity\n(C) Cohesion\n(D) Decadence\n2. At the risk of oversimplifying, soaps are created by exposing\ntriglycerides gathered from either plant or animal sources to a strong\nbase in a process called saponification. The base hydrolyzes\ntriglycerides to form glycerol and amphipathic free fatty acids. The\nglycerol, in turn, is removed, and the fatty acids are complexed with\nsodium. While the words \u201csoap\u201d and \u201cdetergent\u201d are sometimes used\ninterchangeably in common parlance, one should note that detergents\nare not synthesized by saponification.\nThe author\u2019s overall description of soaps and detergents is that they\nare\n(A) commonly thought of as interchangeable but in fact having an\nimportant difference.\n(B) one and the same insofar as their chemical properties, such as\nmolecular structure.\n(C) different with respect to their capacity to mix in emulsions.\n(D) major obstacles to the widespread acceptance of biosurfactants.\n3. The following excerpt is from James Joyce\u2019s 1916 novel A Portrait of\nthe Artist as a Young Man.\nThe snares of the world were its ways of sin. He would fall. He had\nnot yet fallen but he would fall silently, in an instant. Not to fall\nwas too hard, too hard; and he felt the silent lapse of his soul, as it\nwould be at some instant to come, falling, falling, but not yet\nfallen, still unfallen, but about to fall.\nThe tone of the text is best described as one of\n(A) resignation.\n(B) terror.\n(C) corruption.\n(D) decreasing.\n4. The following excerpt is from Meditations on First Philosophy, by\nRen\u00e9 Descartes, 1641, in which he muses about the nature of\nknowledge.\nBut it may be said, perhaps, that, although the senses occasionally\nmislead us respecting minute objects, and such as are so far removed\nfrom us as to be beyond the reach of close observation, there are yet\nmany other of their informations (presentations), of the truth of which\nit is manifestly impossible to doubt; as for example, that I am in this\nplace, seated by the fire, clothed in a winter dressing gown, that I hold\nin my hands this piece of paper.\nThe main purpose of the text is to illustrate Descartes\u2019 thinking about\n(A) the pitfalls of human perception.\n(B) the superiority of logical reasoning.\n(C) the importance of proper observational tools.\n(D) the spectrum of sensory certainty.\n5. Within the red blood cell, hemoglobin exists as a four-subunit\ncomplex, or \u201ctetramer,\u201d each subunit of which is made up of one\n\u201cheme\u201d metalloprotein, and one of several varieties of \u201cglobin.\u201d\nComprised of iron and a carbon-nitrogen ring, heme is responsible for\nboth the oxygen-binding capacity of hemoglobin, and for the red\ncoloration of blood. Globin, meanwhile, refers to a folded chain of\npolypeptides, and it is the combination of these chains that imparts\neach type of hemoglobin with its unique characteristics.\nBased on the text, what makes the hemoglobin varieties distinct?\n(A) Whether there is a carbon-nitrogen ring\n(B) Whether there is a red coloration of the blood\n(C) Variation in the arrangement of metalloprotein chains\n(D) Variation in the arrangement of polypeptide chains\n6. The following text is adapted from 1894 short story \u201cThe End of\nBooks,\u201d by Octave Uzanne. In this story, a group of gentlemen gather\nafter dinner to discuss what they think the future holds. Eventually\nthey come to the topic of the future of books, and the following\nmonologue is given by one of the group.\nI take my stand upon this incontestable fact, that the man of leisure\nbecomes daily more reluctant to undergo fatigue, that he eagerly seeks\nfor what he calls the comfortable, that is to say for every means of\nsparing himself the play and the waste of the organs. You will surely\nagree with me that reading, as we practice it today, soon brings on\ngreat weariness; for not only does it require of the brain a sustained\nattention which consumes a large proportion of the cerebral\nphosphates but it also forces our bodies into various fatiguing\nattitudes. If we are reading one of our great newspapers it constrains\nus to acquire a certain dexterity in the art of turning and folding the\nsheets; if we hold the paper wide open it is not long before the\nmuscles of tension are overtaxed, and finally, if we address ourselves\nto the book, the necessity of cutting the leaves and turning them one\nafter another, ends by producing an enervated condition very\ndistressing in the long run.\nAccording to the text, the narrator considers a major issue with\nreading to be\n(A) its physical demands.\n(B) its dull subject matter.\n(C) its intellectual requirements.\n(D) its obscure language.\n7. The following text is from John Cobden\u2019s 1854 book The White Slaves\nof England, published to decry the horrible working and living\nconditions among the poor working classes of England.\nOur plan has been to quote English authorities wherever possible. Out\nof their own mouths shall they be condemned. We have been much\nindebted to the publications of distinguished democrats of England,\nwho have keenly felt the evils under which their country groans, and\nstriven, with a hearty will, to remove them. They have the sympathies\nof civilized mankind with their cause. May their efforts soon be\ncrowned with success, for the British masses and oppressed nations\nfar away in the East will shout loud and long when the aristocracy is\nbrought to the dust!\nWhich choice best describes the function of the underlined sentence in\nthe text as a whole?\n(A) It shares the heartfelt confessions of those who were formerly\noppressors.\n(B) It considers the objections of those who dismiss democracy.\n(C) It expresses a desire to use the words of authorities against them.\n(D) It demonstrates the widespread acceptance of a point of view.\n8. Scientists have demonstrated that most animal genes participate in\nalternative splicing to one extent or another; far from a mere\nbiochemical curiosity, it is a vital biological strategy to maximize the\neconomy of genetic material, which must be laboriously reproduced\nwith each cell division, while maintaining an immense diversity in the\nprotein-encoding capacity of a genome. In an extreme example, the\ngenome of the insect species Drosophila melanogaster contains the\nlarge sum of about 15,000 genes. Yet, through alternative splicing, one\nsingle D melanogaster gene\u2014known as DSCAM\u2014has been shown to\nencode as many as 38,000 different proteins.\nBased on the text, which expression gives the most likely range of\nvalues for the total number of proteins in a Drosophila melanogaster\ngenome?\n(A) Number of total proteins = 15,000 + 38,000\n(B) Number of total proteins = 38,000 \u2212 15,000\n(C) Number of total proteins \u2264 38,000 \u00d7 15,000\n(D) Number of total proteins > 38,000 / 15,000\nAnswer Explanations",
+    "answer": 2,
+    "explanation": "Lincoln expresses his personal opinion, \"I would myself prefer that it were now conferred on the very intelligent, and on those who serve our cause as soldiers.\" This quote indicates that he feels that some former slaves, such as intelligent men and soldiers, should be \"granted\" or \"given\" the right to vote. Distractor Explanations: Choice A is incorrect because \"most\" implies over half. Lincoln expresses his view that some former slaves should be able to vote, suggesting that others are not capable of doing so. However. there is no indication that the \"incapable\" or \"not qualified\" group is over half of the former slave population. Choice B is incorrect because \"inalienable\" means \"absolute\" or \"inherent.\" Lincoln, though, does not say that there is an obligation to give all former slaves the right to vote. He limits his suggestion to giving voting rights to intelligent men and soldiers. Choice D is incorrect because Lincoln indicates that some freed slaves would be capable of voting effectively; otherwise, he would not suggest allowing intelligent men and soldiers to vote. 71.",
     "topic": "Inferences"
   },
   {
     "id": 8,
-    "text": "The first way that many teachers approach classroom discipline is the\n\u201cpermissive\u201d approach. To relate to the students, the teachers put up\nvery few personal barriers. Positive outcomes in contrast with\nnegative consequences are emphasized. What does the permissive\nclassroom look like? Teachers let the students take control, asking for\nthem to act properly rather than demanding it. Looking at their\nteachers as friends, the students do not look at them as authority\nfigures. Students may like their teachers but will probably not respect\nthem. Detentions are not an option, but extra credit for good behavior\nis abundant. Little actual learning can proceed in a classroom like this\nsince __________\nWhich choice most logically completes the text?",
+    "text": "The global oceans are an important sink for\nhuman-released CO absorbing nearly a quarter\nof the total C02 emissions every year. Although\nit comprises only 26 percent of the total ocean\narea, the Southern Ocean has absorbed nearly\n40 percent of all anthropogenic C02 taken up by\nthe global oceans up to the present. By analyzing\nmore than one million surface ocean observations\ntaken over 13 years. the researchers could tease\nout subtle differences between the C02 trends\nin the surface ocean and the atmosphere. This\nchange is most pronounced in the southern half\nof the Drake Passage during winter. Although the\nresearchers sure of the exact mechanism\ndriving these changes, it's likely that winter\nmixing with deep waters that have not had\ncontact with the atmosphere for several hundred\nyears plays an important role.\nAccording to the text, why does the Drake\nPassage study fall short of being definitive?",
     "options": [
-      "respect will be maintained.",
-      "chaos will reign.",
-      "punishment is freely meted out.",
-      "trust is encouraged."
+      "It did not collect sufficient data to come to a solid conclusion.",
+      "It was unable to collect data during critical time periods.",
+      "It only focused on one region rather than the world's oceans.",
+      "It isolated an effect but not the cause of that effect."
     ],
-    "answer": 1,
-    "explanation": "The text outlines the permissive approach to classroom discipline,\nin which students get to run the classroom, respect is lacking, and\ndetentions are not possible. It would make sense to say that in a\nclassroom like this in which little learning is taking place that \u201cchaos\nwill reign.\u201d The other options contradict the description of what a\nclassroom managed in the permissive style will be like.",
+    "answer": 3,
+    "explanation": "\"definitive\" means \"conclusive\" or \"final.\" The data was complete enough to determine that \"the Southern Ocean has absorbed nearly 40 percent of all anthropogenic C02 taken up by the global oceans up to the present.\" so the \"effect\" of removing C02 was \"isolated\" or \"identified.\" However, the cause of the removal of CO is still unknown: \"the researchers aren't sure of the exact [PAGE 105 RIGHT] (Answers) 72. mechanism driving these changes.\" Therefore, the study does not conclusively answer all questions. Distractor Explanation: Choice A is incorrect because the researchers were able to collect \"sufficient\" or \"enough\" data to come to the \"solid\" or \"well-supported\" conclusion that the Southern Ocean has recently been removing more C02 from the atmosphere. Choice B is incorrect because the passage says that the research took place over 13 years, and there is no indication that \"critical\" or \"important\" time periods were missed during the study. Choice C is incorrect because there is no indication that the results are missing important information because they focused on one region- the Southern Ocean-rather than a wider area. Ihe conclusion drawn from that data about C02 absorption is valid.",
     "topic": "Inferences"
   },
   {
     "id": 9,
-    "text": "Although the signaling pathway for light production in fireflies is\ncomplex enough, the methods by which different species regulate their\nluminescence are as various as the uses for luminescence that those\nspecies employ. As we have seen, fireflies tend to use their light to\nattract a mate, but females of one large species of firefly have been\nknown to mimic the glow pattern of another, smaller variety, to attract\nmales of the smaller species and eat them. Similarly, __________\nWhich choice most logically completes the text?",
+    "text": "97 ================\nDaisy Taugelchee is the most famous Navajo\nweaver of the 20th century and was noted for the\nextreme fineness of her tapestries. Typical weavers\nin her area used the fine gauge of 60 stitches to\nthe inch, but after a dare, she exceeded 80, and\nin her prime could make a record 115. Moreover,\nshe created unique variations on traditional\npatterns that made her artwork distinct and\npopular among collectors. For over 40 years, she\nwon first place in the local art show, the Gallup\nCeremonial.\nBased on the text, which choice is most likely true\nabout Daisy Taugelchee?",
     "options": [
-      "Amazonian spiders craft nearly invisible webs that they use to\ntrap their dinner.",
-      "bats use echolocation, a capacity akin to sonar, to locate food\nsources despite a dark environment.",
-      "the deep-sea dwelling anglerfish uses its glowing appendage to\nlure in unsuspecting prey.",
-      "humans who camp sometimes utilize global positioning systems\nin addition to their compasses should they become lost."
+      "She was greatly respected in the Navajo community for her originality.",
+      "She was able to earn a good living from selling her weaving.",
+      "Her art used colors that were not typically used by Navajo weavers.",
+      "No other weaver in her area could make as many stitches per inch."
+    ],
+    "answer": 3,
+    "explanation": "The text says that she could weave \"a record 115,\" which implies that no one else was able to reach her record. Distractor Explanations: Choice A is incorrect because there is no indication about how other Navajos viewed Taugelchee's work; since she used non-traditional designs and was popular among collectors, it is possible that the local community thought she was too different. Choice B is incorrect because there is no indication about how much Taugelchee earned from selling to collectors; they could have purchased her work for very little. Choice C is incorrect because the text only refers to designs; it is possible she used traditional colors. [PAGE 106 LEFT] INFORMATION 73.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 10,
+    "text": "The following text is adapted from Emily\nDickinsorfi poem Book, published after her death\nHe ate and drank the precious words,\nHis spirit grew robust;\nHe knew no more that he was poor,\nNor that his frame was dust.\nHe danced along the dingy days,\nAnd this bequest of wings\nWas but a book. What liberty\nA loosened spirit brings!\nBased on the text, what is the benefit of a book?",
+    "options": [
+      "It can increase a person's tangible wealth.",
+      "It can return a person to his youth.",
+      "It can free a person from true bondage.",
+      "It can provide sustenance for a person's soul."
+    ],
+    "answer": 3,
+    "explanation": "\"sustenance\" refers to \"support\" or \"food and drink\" In the text, the person \"ate and drank\" the words, showing that he received support as if he were eating. His \"soul\" or \"spirit\" grew \"robust\" Distractor Explanations: Choice A is incorrect because \"tangible\" refers to real wealth. Though the person \"knew no more\" or \"forgot\" that he was poor. he remained poor financially. Choice B is incorrect because there is no indication that the person felt or became young, only less tired. Choice C is incorrect because \"true bondage\" means \"real imprisonment.\" Though the person mentally escaped the imprisonment of his poor situation, he did not actually leave the living conditions. 74.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 11,
+    "text": "98 ================\nTapirs are ancient animals that date back about\n50 million years. and they are one of the few\nlarge mammals to survive the megafauna\nextinctions ofthe last ice age. Tapirs live in\nBrazilian lowlands and help regrow the degraded\nforests though seeds that are spread when they\ndefecate. Unfortunately, all tapir species are now\ncategorized as either vulnerable or endangered\ndue to hunting, vehicle strikes, and habitat loss.\nBased on the text, what is most likely true about\ntapirs?",
+    "options": [
+      "They did not go extinct because they are intelligent.",
+      "They used to have a much wider range than Brazil.",
+      "They are too slow to get out of the way of vehicles.",
+      "They are not purely carnivorous animals."
+    ],
+    "answer": 3,
+    "explanation": "The text states that tapirs \"help regrow the degraded forests though seeds that are spread when they defecate.\" In other words. they must eat something that has seeds in order to defecate them, so they must be eating some kind of plant. Therefore, they are not purely \"carnivorous\" or \"meat-eating\" animals. Distractor Explanations: Choice A cannot be determined based on the text because there is no discussion about why tapirs survived the Ice Age extinction; they could just be well-adapted to cold. Choice B is also not supported by any evidence from the text. Choice C is one possible explanation for the vehicle strikes, but there could be other reasons such as having poor [PAGE 106 RIGHT] 'ND IDEAS eyesight so they do not see the cars, or being well- camouflaged when cars travel at night. 75.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 12,
+    "text": "Inbal Ben-Ami Bartal of Tel Aviv University\nconducted a series of experiments to determine\nwhether rats had the emotion of empathy. She\nplaced a rat in a clear, narrow tube in a cage where\nanother rat roamed freely. The free rats had been\ntaught the method to open the door and release\nthe trapped rat. Invariably, if the free rat and\nthe rat in the tube had been raised together, the\nloose rat would rapidly release the trapped one.\nInterestingly, the free rat would often ignore the\nplight of the trapped rat as if it were a complete\nBased on the text, what is most likely true about\nrats?",
+    "options": [
+      "They do not like other rats that are complete strangers.",
+      "They feel compelled to assist only if there is an established relationship.",
+      "They are genetically inclined to help others of their species.",
+      "They only feel the need to help if there is a proven danger to the other."
+    ],
+    "answer": 1,
+    "explanation": ". The passage says that the rats helped if \"they had been raised together,\" meaning that the rats had a connection of some kind to the other when releasing it. However, the fact that they \"would often ignore the plight\" of strange rats indicates that they did not feel \"compelled\" or \"forced\" to help strangers in any way. Distractor Explanations: Choice A is incorrect because there is no indication of liking or disliking, only assisting or not. The choice could be based on survival benefits and not emotions. Choice C is incorrect because, if they were \"inclined\" or \"had a tendency\" to help others in the species, they would help the strange rats, as all rats are the same species. Choice D is incorrect because there is no discussion of \"danger\" to the rat in the tube, only the inability to free itself. It is referred to as \"trapped\" but not as being at risk of injury or death. 76.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 13,
+    "text": "99 ================\nAfghanistan has one of the highest child mortality\nrates and levels of malnutrition in the world\nbecause large portions of the population live in\npoverty. That is sadly ironic because geologists\nestimate that there are trillions of dollars of\nuntapped mineral reserves within the country, but\nthere is a dearth of infrastructure to extract and\npurify them.\nBased on the text, what is most likely true about\nthe mineral reserves in Afghanistan?",
+    "options": [
+      "If the minerals were to be mined, there would be enough money to raise the standard of living.",
+      "Ihe people in Afghanistan are currently mining the minerals using ineffective or dangerous tools.",
+      "The country is spending its money on addressing the problem of poverty rather than extracting the minerals.",
+      "The leaders in Afghanistan do not want any foreign companies to invest in infrastructure."
+    ],
+    "answer": 0,
+    "explanation": "The paragraph says it is \"sadly ironic\" that the people live in poverty with health issues while there is a wealth of mineral resources. Ihat comparison implies that the resources would provide enough money to solve some of the problems, raising the overall standard of living, if the resources were mined and sold. Distractor Explanations: Choice B is incorrect because the minerals are referred to as \"untapped,\" meaning they are not yet being removed. [PAGE 107 LEFT] Inferenc Therefore, no equipment has been used to take the minerals out yet. Choices C and D are not addressed by the passage; there is no indication of where the country's money is being spent, or whether the leaders want other countries to participate. It is possible that Afghanistan could set up the infrastructure without foreign assistance. 77.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 14,
+    "text": "A vicious cycle is occurring in Lope National Park\nin Gabon. Low rainfall and higher temperatures\nled to a decline in tree fruits, which are the staple\nfood of African forest elephants. The seeds are\nusually dispersed in the dung over the wide\nrange of each elephant. The elephant population\nnow faces pressures from starvation, as well as\nthe ongoing problem of poaching. In fact, the\npopulation has decreased by over eighty percent\nin the past thirty years.\nBased on the text, what is most likely true about\nthe fruit trees in Lope National park?",
+    "options": [
+      "Elephants are changing to different f�od sources because there are fewer trees.",
+      "The seeds are not being dispersed as effectively because there are fewer elephants.",
+      "Conservationists are starting to plant more fruit trees to provide food for the elephants.",
+      "The elephants are no longer dispersing the seeds very far from the original trees."
+    ],
+    "answer": 1,
+    "explanation": "The passage refers to the \"vicious cycle,\" which refers to one thing causing something else to happen. and that result causes the first thing to happen again. The text describes a decrease in fruit trees and the \"pressure from starvation\" on the elephants that eat the fruit. In other words, there are not enough fruits for the elephants, who spread the seeds. As a result, elephants starve and there are fewer elephants to eat and \"disperse\" or \"spread\" the seeds. Fewer trees then grow in different places around the forest, creating even less food for the elephants. Distractor Explanations: Choice A is incorrect because there is no indication that the elephants eat anything other than their \"staple\" or mam diet of fruit; otherwise, they might not be facing starvation. Choice C is incorrect because there is no discussion of conservation in the text. Choice D is incorrect because the text refers to a \"wide range\" for the elephants. There is no indication that the range has changed, only the number of elephants. 78.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 15,
+    "text": "100 ================\nThe Rosetta Stone, discovered in 1799, was\nthe key to understanding how to read ancient\nEgyptian hieroglyphic writing. The stone is a\nfragment of a larger stele carved in 196 B.C in\nMemphis, Egypt, under the reign of King Ptolemy\nV Epiphanes. Ihe first bilingual text known\nto contain hieroglyphics, scholars circulated\ncopies in the hopes of translating the language,\nwhich was written in ancient Greek, Egyptian\nhieroglyphics, and also a more casual form of\nEgyptian writing called Demotic. Jean-Francois\nChampollion found the key to solving the puzzle\nin 1822, when\nWhich choice most logically completes the text?",
+    "options": [
+      "he realized that both the Demotic writing and hieroglyphs contained phonetic spellings.",
+      "he gave a lecture about his findings at the Acad�mie des Inscriptions et Belles-Lettres.",
+      "others assumed the writing was pictographic but he was curious about the meaning.",
+      "his announcement led to a new wave of learning about the Egyptian language."
+    ],
+    "answer": 0,
+    "explanation": "It gives a reason that Champollion was able to \"find the key\" or \"decipher\" the writing: [PAGE 107 RIGHT] (Answers) 79. 80. he noticed a similarity between the texts that had \"phonetic\" or \"sound-based\" letters. Distractor Explanations: Choice B is a true event about Champollion's presentation of solving the meaning of the writing, but it does not complete the sentence saying \"when\" he \"found the key\" or \"solved\" the problem of how to read the texts. Choice C is weak because it is too vague for the reader to know how Champollion solved the problem; it only suggests that he was \"curious\" or \"interested\" in it. Choice D is incorrect because it shows what happened after he \"found the key\" and announced what he had found.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 16,
+    "text": "The Amish might not be considered the most\ntechnologically advanced people in North\nAmerica, seeing as to how they denounce the\nusage of modern essentials, including electricity\nand motor vehicles.\nYet the most extraordinary things to note about\nthe Amish are not their quaint routines and\ntheir self-made clothes, but the organic growth\nof their community, their rapid efficiency in\nbuilding structures, and their socially cohesive\nnature. Although they till their lands using\narchaic horse-drawn machines, and farm without\nthe use of chemical fertilizers, their\nis, interestingly, among the most productive in\nNorth America.\nWhich word most logically completes the text?",
+    "options": [
+      "Agriculture",
+      "Lifestyle",
+      "Methods",
+      "Culture"
+    ],
+    "answer": 0,
+    "explanation": "The sentence is talking about how the Amish are able to be productive without the use of modern farming equipment and fertilizers. Therefore, logically, choice A is the most fitting in this context. Distractor Explanations: Choice B is incorrect because their lifestyle has already been mentioned in the first sentence of the second paragraph as not being the most extraordinary. Choice C is incorrect because the sentence will be grammatically incorrect if one inserts the option in the blank space (\"their methods is\" isn't grammatically correct). Option D is incorrect because the sentence is talking about their farming methods and not about the culture or lifestyle of the Amish.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 17,
+    "text": "101 ================\nso\nThe following text is adapted from Jane Austen's\nMansfield Park.\nSir Thomas was indeed the life of the party.\nwho at his suggestion, now seated themselves\nround the fire. He had the best right to be the\ntalker; and the delight of his sensations in\nbeing again in his own house, in the centre of\nhis family, after such a separation, made him\ncommunicative and chatty in a very unusual\ndegree: and he was ready to give every\ninformation as to his voyage, and answer\nevery question of his two sons almost bef)re it\nwas put. His business in Antigua had latterly\nbeen prosperously rapid, and he came directly\nfrom Liverpool, having had an opportunity\nof making his passage thither in a private\nvessel, instead of waiting for the packet; and\nall the little particulars of his proceedings and\nevents, his arrivals and departures, were most\npromptly delivered, as he sat by Lady Bertram\nand looked with heartfelt satisfaction on the\nfaces around him - interrupting himself\nmore than once, however, to remark on his\ngood fortune in finding them all at home -\ncoming unexpectedly as he did - all collected\ntogether exactly as he could have wished, but\ndared not depend on.\nBased on the text, what is most true about Sir\nThomas?",
+    "options": [
+      "He was a rich man.",
+      "He was not usually a talkative man.",
+      "He was fortunate to see his friends and family r.",
+      "He had many sad tales about his voyage."
+    ],
+    "answer": 1,
+    "explanation": "The text mentions that Sir Thomas was happy to be back home, and this made him [PAGE 108 LEFT] INFORMATION \"communicative and chatty to a very unusual degree.\" This implies that he wasnt usually this Distractor Explanations: Choice A is incorrect because the text does not mention that he is rich, and his business has only \"latterly been prosperously rapid.\" Choice C is incorrect because the text doesn't say he is fortunate, but that Sir Thomas considers himself fortunate. Choice D is incorrect because the text does not mention that his stories are sad. 81.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 18,
+    "text": "As ancient Egyptian rulers, pharaohs were both\nthe heads of state and the religious leaders of\ntheir people. The word \"pharaoh\" means \"great\nhouse,\" a reference to the palace where the\npharaoh resides. As the religious leader of the\nEgyptians, the pharaoh was considered the divine\nintermediary between the gods and Egyptians.\nMaintaining religious harmony and participating\nin ceremonies were part of the pharaoh's role as\nhead of the religion. As a statesman, the pharaoh\nmade laws, waged war, collected taxes, and\noversaw all the land in Egypt (which was owned\nby the pharaoh).\nBased on the text, what is true about ancient\nEgyptians?",
+    "options": [
+      "Ancient Egyptians did not own any land.",
+      "The pharaoh was an ancient Egyptian God.",
+      "The Egyptians believed in one God.",
+      "The pharaoh did not participate in social conventions and were religious leaders only."
+    ],
+    "answer": 0,
+    "explanation": "Since the text mentions that all the land in Egypt was owned by the pharaoh. Distractor Explanations: Choice B is incorrect because the text mentions that the pharaoh was the \"divine intermediary between the gods and Egyptians.\" Choice C is incorrect because the text mentions that the pharaoh was the divine intermediary between the gods and the Egyptians, implying that there were several Gods. Choice D is incorrect because the text mentions the responsibilities included \"participating in ceremonies.\" 82.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 19,
+    "text": "102 ================\nIn the fall of 1954, at the age of 18, I discovered\nthe other half of the world. I began that journey\nthrough the eyes of an encyclopedic professor\nwho guided me to China and the neighboring\nAltay Mountains, to Japan and their elaborate\nmethods of making swords. Then India, Tibet and\nthe Potala Palace, Burma and the Burma Road,\nand, of course. the Khmer Empire and Cambodia.\nThese places had all been hidden from my view by\nmy Philadelphia suburban education.\nBased on the text, what is most likely true about\nthe author?",
+    "options": [
+      "The author was transfixed by the world because he had not traveled before",
+      "The author grew up in a small town of Philadelphia",
+      "The author was helped by a professor in China",
+      "The author had already traveled extensively"
     ],
     "answer": 2,
-    "explanation": "We need to come up with a situation that is like the one outlined in\nthe previous sentence. One species of firefly uses its glow to attract\nfood. Similarly, in choice (C), the anglerfish uses its glow to lure prey.\nChoices (A) and (B) discuss how animals can find food, but they use\ndifferent methods from what the firefly does. Choice (D) does not\nfocus on food location.\nAdditional Practice Exercises\nThe problems in these exercises represent the variety of SAT Reading\nquestions you could encounter. Take about ten minutes for each exercise.\nAdditional Practice Drill 1\n1. Veterinary students will research, diagnose, and treat medical\nconditions of pets, livestock, and other animals. Some will\n__________ companion animals and work in private clinics and\nhospitals, while others will choose to work with farm animals or in\nresearch facilities.\nWhich choice completes the text with the most logical and precise\nword or phrase?\n(A) specialize in\n(B) be hired by\n(C) despair about\n(D) become ill from\n2. Relaxation strategies are used across disciplines to address a wide\nvariety of diagnoses. These strategies are beneficial in managing\nanxious feelings and feelings of not being __________ Relaxation\ntechniques are used to address stress and impulse management. Some\napproaches may include meditation, progressive muscle relaxation,\nyoga, deep breathing, progressive muscle relaxation, and personal\nmantras.\nWhich choice completes the text with the most logical and precise\nword or phrase?\n(A) away from one another.\n(B) across the way.\n(C) in debt to someone.\n(D) in control of oneself.\n3. In 1970, Norman Borlaug was awarded the Nobel Peace Prize and\ncredited with saving over a billion people from starvation. In what is\nnow called the Green Revolution, Borlaug led the research and\ndevelopment over a two-decade span beginning in the 1940\u2019s to\ndramatically increase agricultural production worldwide. He\nintroduced the synthetic farming methods already common in the\nUnited States and Britain to a global market, focusing particularly on\nthe developing world, and succeeded in hiking food production and\nsaving lives. Borlaug\u2019s initiative calls for celebration.\nAs used in the text, what does the word \u201ccommon\u201d most nearly mean?\n(A) Widespread\n(B) Lowly\n(C) Communal\n(D) Corporate\n4. The following text is from Nathaniel Hawthorne\u2019s 1852 novel The\nBlithedale Romance.\nHappy the man that has such a man beside him when he comes to die!\nAnd unless a friend like Hollingsworth be at hand\u2014as most probably\nthere will not\u2014he had better make up his mind to die alone. How\nmany men, I wonder, does one meet with, in a lifetime, whom he\nwould choose for his death-bed companion? At the crisis of my fever,\nI besought Hollingsworth to let nobody else enter the room, but\ncontinually to make me sensible of his own presence, by a grasp of the\nhand, a word, a prayer, if he thought good to utter it; and that then he\nshould be the witness to how courageously I would encounter the\nworst.\nWhich choice best states the main purpose of the text?\n(A) To recount a generally light-hearted anecdote for the reader\n(B) To describe a character for whom the narrator is quite grateful\n(C) To contemplate the meaning of life at the outset of a hopeful\njourney\n(D) To interrogate another character about his suitability for a\nposition\n5. Text 1\nWhen a couple gets married, a classic purchase is the diamond\nengagement ring. There are many different styles to choose from:\nround, princess, cushion, emerald, and marquise. A lot of thought is\ngiven to the specifications of the ring; given its significant cost, it is\nsomething for which the purchaser might save for quite some time.\nOften missed, however, is the story behind the diamond. The first use\nof diamond engagement rings was in Austria in 1477. Since then,\nthese jewels have been sought after and shaped into glittering\ncenterpieces atop gold bands.\nText 2\nA new option has become available in the wedding industry\u2014lab-\ncreated diamonds. These diamonds are not found naturally in the\nenvironment but created in a laboratory. What makes this option so\nappealing to buyers is that these artificially created diamonds are 50\u2013\n60% less expensive than a naturally mined diamond. Because of this,\nthe popularity for laboratory jewels has been skyrocketing.\nBased on the texts, how might the \u201ccouple\u201d in Text 1 most likely\nrespond to the notion of lab-created diamonds in Text 2?\n(A) By questioning the lack of statistical evidence in the text\n(B) By considering it as a possibility to save money for an important\npurchase\n(C) By dismissing the need to purchase an expensive symbol of love\n(D) By disputing the historical origins of a recent invention\n6. Could robots soon be delivering your mail? Allow me to set the scene:\nyou\u2019re coming home from school, walking toward your front door,\nand bam\u2014a flying robot drops your oldest sister\u2019s just-ordered movie\ncollection on your front porch. This is not as farfetched as it sounds.\nToday is the age of the drone, also known as the unmanned aerial\nvehicle (UAV), so __________\nWhich choice most logically completes the text?\n(A) it is difficult to predict what the future holds.\n(B) it\u2019s only a matter of time before it becomes an everyday\noccurrence.\n(C) advances in technology will lead to revolutionary health care\ntreatments.\n(D) nothing can replace the personal touch of a human delivering\nyour order.\n7. In the past, politicians have touted their \u201ctrickle down\u201d policies as\nbeing in the best interest of everyday Americans. It was commonly\nthought that tax breaks and other assistance for companies and\nindividuals at the top would lead the wealth to slowly move down to\nmiddle class and impoverished families. Many politicians still use the\ntrickle-down argument when pushing for aid to large corporations and\nwealthy individuals. After all, it makes sense that a wealthy person\nwho comes into money will spend that money and that money will end\nup in the hands of service people and other workers. Economists,\nhowever, have struggled to find evidence of such policies helping\nanyone but those at the top.\nWhich statement, if true, would most directly support the claim of the\n\u201ceconomists\u201d mentioned in the last sentence?\n(A) An investigation of recent political rhetoric demonstrating the\npopularity of the \u201ctrickle down\u201d argument.\n(B) Statistics showing an increase in poverty in towns that have had\nrecent factory closures by major businesses.\n(C) A historical analysis showing increased economic stratification\nafter tax breaks for the wealthy are implemented.\n(D) A survey of the economic beliefs of wealthy individuals that\nindicates a preference for \u201ctrickle down\u201d political policies.\n8.\nSource: https://www.census.gov/en.html\nDespite significant advances in medicine, there has been a limited\nincrease in human longevity. While there are certainly many\noctogenarians and nonagenarians, this is more the exception than the\nrule. Most of the population is younger, not older.\nWhich choice best describes data from the graph that supports the\nconclusion outlined in the text?\n(A) The majority of the 2015 U.S. population was under 40 years of\nage.\n(B) It is about three times as likely that a randomly selected U.S.\ncitizen is in their 40s or 50s as it is that they would be in their\n60s or 70s.\n(C) Women represent a slight minority of the overall U.S.\npopulation.\n(D) Significant numbers of Americans in 2015 were in their 80s and\n90s.\nAnswer Explanations",
+    "explanation": "According to the text, the author \"began that journey through the eyes of an encyclopedic professor who guided me to China,\" Distractor Explanations: Choice A is incorrect because there is no evidence to support the claim that the author had not traveled before. He only mentions he \"discovered the other half of the world,\" meaning he was familiar with one [PAGE 108 RIGHT] 'ND IDEAS half. Choice B is incorrect because the text only mentions a \"Philadelphia suburban education.\" Choice D is incorrect because the text offers no evidence that the author had already traveled 83.",
     "topic": "Inferences"
+  },
+  {
+    "id": 20,
+    "text": "The London and Northwestern Railway War\nMemorial is a First World War memorial\noutside Euston Station in London, England.\nThe memorial was designed by Reginald Wynn\nOwen and\nemployees of the London and\nNorthwestern Railway (LNWR) who were killed\nin the First World War.\nWhich word most logically completes the text?",
+    "options": [
+      "Commemorates",
+      "Idolizes",
+      "Celebrates",
+      "Overlooks"
+    ],
+    "answer": 0,
+    "explanation": "To commemorate something means to remember the event and by doing so. to honor it. Here, the memorial commemorates the employees of LMWR killed in the First World War. Distractor Explanations: Choice B is incorrect because to idolize is to respect or admire someone extensively. Here the memorial has been built to remember martyrs and not only show respect. Choice C is incorrect because \"celebrate\" is not a word used to describe the purpose of a memorial. Choice D is incorrect because the memorial has been built for the fallen LNWR employees and hence, cannot overlook or ignore therm 84.",
+    "topic": "Inferences"
+  },
+  {
+    "id": 21,
+    "text": "Onomatopoeia is the process of creating a word\nthat phonetically imitates, resembles, or suggests\nthe sound that it describes. Such a word itself is\nalso called an onomatopoeia.\nBased on the above text, which of the following is\nthe best example of an onomatopoeia?",
+    "options": [
+      "Bell",
+      "Twinkle",
+      "Miaow",
+      "Glitter"
+    ],
+    "answer": 2,
+    "explanation": ". According to the text, an onomatopoeia is a word that sounds exactly like the sound that it describes. The word \"miaow\" sounds exactly like the sound of a cat, which is what the word is describing. Distractor Explanation: All the other choices are incorrect because they are not words that sound like what they are describing. For example, \"glitter\" does not make a sound, and neither does \"Twinkle.\" [PAGE 109 LEFT] Cha Crai Stru This chapter includes questions on ttu \u0007 Words in Context \u0007 Text Structure and Purpose \u0007 Cross-Text Connection [PAGE 109 RIGHT] pter 4 ft and Icture following topics:",
+    "topic": "Inferences"
+  },
+  {
+    "id": 22,
+    "text": "Grey Wolf\nThe grey wolf also known as the timber wolf or wolf is a mammal of the order Carnivore. Genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and might be its ancestor. Many other grey wolf subspecies have been identified however the actual number of subspecies is still open to discussion. Though once abundant over much of North America and areas of Europe and Asia, the grey wolf inhabits a very small portion of its former range because of the widespread destruction of its habitat. Gray wolves are highly adaptable and have thrived in forests, deserts, mountains, tundra and grasslands. They function as social predators and hunt in packs organized according to strict social hierarchies. It was originally believed that this comparatively high level of social organization was related to hunting success, and while this still may be true to a certain extent, emerging theories suggest that the pack has less to do with hunting and more to do with reproductive success.\n\nIt is understood from the passage that ----.",
+    "options": [
+      "the number of grey wolf subspecies has been determined with certainty by researchers",
+      "there are few grey wolf subspecies which continue living today",
+      "grey wolf subspecies have increased in number in the last decades",
+      "there is no consensus on how many grey wolf subspecies exist"
+    ],
+    "answer": 3,
+    "explanation": "The text states that the actual number of grey wolf subspecies is 'still open to discussion', indicating there is no consensus. Choice (D) is correct. Choice (A) is contradicted. Choices (B) and (C) are not discussed.",
+    "topic": "Grey Wolf Subspecies"
+  },
+  {
+    "id": 23,
+    "text": "Grey Wolf\nThe grey wolf also known as the timber wolf or wolf is a mammal of the order Carnivore. Genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and might be its ancestor. Many other grey wolf subspecies have been identified however the actual number of subspecies is still open to discussion. Though once abundant over much of North America and areas of Europe and Asia, the grey wolf inhabits a very small portion of its former range because of the widespread destruction of its habitat. Gray wolves are highly adaptable and have thrived in forests, deserts, mountains, tundra and grasslands. They function as social predators and hunt in packs organized according to strict social hierarchies. It was originally believed that this comparatively high level of social organization was related to hunting success, and while this still may be true to a certain extent, emerging theories suggest that the pack has less to do with hunting and more to do with reproductive success.\n\nAccording to the passage, in the light of the genetic studies carried out, It has been found out that ----.",
+    "options": [
+      "the domestic dog could have descended from the grey wolf",
+      "the grey wolf and the domestic dog are the subspecies of a kind of wolf having lived thousands of years ago",
+      "the dog is believed to be ancestor of the grey wolf",
+      "grey wolves live in very large packs"
+    ],
+    "answer": 0,
+    "explanation": "The text states that genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and 'might be its ancestor', meaning the dog could have descended from the grey wolf. Choice (A) is correct. Choices (B), (C), and (D) are not supported.",
+    "topic": "Grey Wolf and Dog Ancestry"
+  },
+  {
+    "id": 24,
+    "text": "Autism\nAutism is a brain development disorder that impairs social interaction and communication and causes restricted and repetitive behavior, all starting before a child is three years old. The genetics of autism are complex and it is generally unclear which genes are responsible for it. Autism affects many parts of the brain but how this occurs is also poorly understood. Autism is strongly associated with agents that cause birth defects. Other proposed causes, such as childhood vaccines, are controversial and the vaccine hypotheses lack convincing scientific evidence. The number of people known to have autism has increased dramatically since the 1980s. Parents usually notice signs in the first two years of their child's life. Early behavioral cognitive intervention can help children gain self-care, social and communication skills but there is no cure for it. Few children with autism live independently after reaching adulthood, but some become successful and an autistic culture has developed, with some seeking a cure and others believing that autism is a condition rather than a disorder.\n\nAccording to the passage, autism is a developmental disorder of the human brain ----.",
+    "options": [
+      "that gives its first signs early in the childhood period",
+      "which is caused by childhood vaccines",
+      "which can't be diagnosed until after the child is three years old",
+      "for which there has been a successful cure in recent years"
+    ],
+    "answer": 0,
+    "explanation": "The text states that all signs start before a child is three, and parents usually notice signs in the first two years of life, which means it shows early signs in childhood. Choice (A) is correct. Choice (B) is described as controversial and lacking evidence. Choice (C) and (D) are contradicted.",
+    "topic": "Autism Early Signs"
+  },
+  {
+    "id": 25,
+    "text": "Autism\nAutism is a brain development disorder that impairs social interaction and communication and causes restricted and repetitive behavior, all starting before a child is three years old. The genetics of autism are complex and it is generally unclear which genes are responsible for it. Autism affects many parts of the brain but how this occurs is also poorly understood. Autism is strongly associated with agents that cause birth defects. Other proposed causes, such as childhood vaccines, are controversial and the vaccine hypotheses lack convincing scientific evidence. The number of people known to have autism has increased dramatically since the 1980s. Parents usually notice signs in the first two years of their child's life. Early behavioral cognitive intervention can help children gain self-care, social and communication skills but there is no cure for it. Few children with autism live independently after reaching adulthood, but some become successful and an autistic culture has developed, with some seeking a cure and others believing that autism is a condition rather than a disorder.\n\nIt can be understood from the passage that autism ----.",
+    "options": [
+      "is caused by a childhood vaccine that affects the development of the brain",
+      "is accepted as a condition rather than a disorder by all specialists",
+      "is a condition in which a child suffers from severe pains in the head",
+      "is characterized by abnormalities of behavior patterns"
+    ],
+    "answer": 3,
+    "explanation": "The text states that autism causes impaired social interaction and communication, as well as restricted and repetitive behavior. These constitute abnormalities of behavior patterns. Choice (D) is correct. Choices (A) and (C) are incorrect or not in text. Choice (B) is incorrect because only 'some' believe it is a condition rather than disorder.",
+    "topic": "Autism Behavior Patterns"
   }
 ];
+
+const TOPIC_MAP = {};
+QUESTIONS.forEach(q => {
+  const key = q.topic || 'General';
+  if (!TOPIC_MAP[key]) {
+    TOPIC_MAP[key] = { name: key, questions: [] };
+  }
+  TOPIC_MAP[key].questions.push(q.id);
+});
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { QUESTIONS, TOPIC_MAP };
+}

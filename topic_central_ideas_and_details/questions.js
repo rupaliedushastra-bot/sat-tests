@@ -1,119 +1,345 @@
+// =============================================
+// Digital SAT Practice - Topic: topic_central_ideas_and_details
+// 25 Questions
+// =============================================
+
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "The following is an excerpt from Jane Austen\u2019s novel Mansfield Park\n(1814). The novel\u2019s protagonist, Fanny Price, returns home after many\nyears of living with her wealthy relatives at Mansfield Park.\nOf her two sisters, Mrs. Price very much more resembled Lady\nBertram than Mrs. Norris. She was a manager by necessity, without\nany of Mrs. Norris\u2019s inclination for it, or any of her activity. Her\ndisposition was naturally easy and indolent, like Lady Bertram\u2019s;\nand a situation of similar affluence and do-nothingness would have\nbeen much more suited to her capacity than the exertions and self-\ndenials of the one which her imprudent marriage had placed her in.\nShe might have made just as good a woman of consequence as\nLady Bertram, but Mrs. Norris would have been a more\nrespectable mother of nine children on a small income.\nAccording to the text, Mrs. Norris is",
+    "text": "Our observations suggest increasingly that Earth-\nsize planets orbiting within the habitable zone\nmay be common in the galaxy-current estimates\nsuggest that more than 40 percent of stars have\nat least one. But are any of them inhabited? With\nno ability to send probes there to sample, we will\nhave to derive the answer from the light and other\nradiation that come to us from these faraway\nsystems. If we manage to separate out a clean\nsignal from the planet and find some features in\nthe light spectrum that might be indicative of life,\nwe will need to work hard to think of any non\nbiological process that might account for them.\nWe also might not be able to detect biospheres\neven if they exist.\nWhich is most likely true according to\ninformation suggested in the text?",
     "options": [
-      "more capable than Mrs. Price.",
-      "similar in personality to Mrs. Price.",
-      "more lethargic than Mrs. Price.",
-      "less respectable than Mrs. Price."
+      "Even if life is present on other planets, we may not be able to recognize it.",
+      "Life probably exists on about 40 percent of all the planets in the galaxy.",
+      "It is impossible to find life on other planets using currently available technology.",
+      "Theories about life on other planets have not considered the practicality of finding it."
     ],
-    "answer": 2,
-    "explanation": "For all the days after the start of the study, the beans cultivated in\nthe hydroponics system had an average height greater than the beans\ncultivated in the potting soil. Therefore, the graph most strongly\nsuggests that planting French bean plants in hydroponics generally\nresults in greater plant height than when French bean plants are\nplanted in potting soil. It is not choice (A) because the results diverge,\nand it is not choice (B) because the plants do indeed grow, suggesting\nthat there is not a negative impact from these environments.",
+    "answer": 0,
+    "explanation": "The passage begins by saying that many planets might potentially host life, but we only can use \"light and other radiation\" to find out if they do. It is possible that life exists, but \"we also might not be able to detect biospheres even if they exist.\" Distractor Explanations: Choice B is incorrect because the passage only says that 40 percent of stars may have planets in the habitable zone. It does not say that all of those planets probably host life. Choice C is incorrect because, while the passage points out that identifying life will be hard, it is still possible to do so using light and other radiation detectable by current equipment. Choice D is incorrect because the passage does not critique theories about extraterrestrial life; it does not complain that the theories make it appear easy to find.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 2,
-    "text": "The trillion-dollar question is, when the ink dries, will the European\nUnion be listed in the chapters of current events? Or will it be\nrelegated to the annals of academia, its skeleton but a diplomatic case\nstudy of oil and water, its ashes little more than a Kennedy School\nlecture on the perils of collaboration between square pegs and round\nholes?\nWhat is the main concern of the text?",
+    "text": "The following text is adapted from Charles\nStearns' 1849 article, -The Way to Abolish\nSlavery.\"\nThe Government of the United States creates\nno Slaves; it only recognises as lawful the\nSlavery existing in the several States, or to use\nthe words of the Constitution, \"held to service\nor labor, under the laws thereof.\" The laws of\nthe several slave-holding States are made the\nstandard for the general government's action\nupon this subject. No quibble can possibly\nevade this. From this decision there is no\nappeal. What then is necessary to be done\nto remove this prop from under the colossal\nstatue of Slavery? plainly, to repeal all laws\nrecognising its existence. Do this, and refuse\nto obey any of the claims of the South in\nreference to this matter, and Slavery ceases as\nsoon as the earth would cease to turn upon its\nWhich choice best states the central idea of the\ntext?",
     "options": [
-      "Will the countries of the European Union end their conflicts\npeacefully or by resorting to an expensive arms race?",
-      "Will the European Union become obsolete and only read about\nin textbooks as a lesson in things that are dysfunctional?",
-      "Will the Kennedy School give frequent lectures about the\nEuropean Union and its success?",
-      "Will the European Union extend loans to their members to\nensure future success and prosperity for all countries?"
+      "The U.S. government has no binding authority regarding slavery.",
+      "The US government rather than states should make laws regarding slavery.",
+      "Slaveholders should be responsible for proving ownership of slaves.",
+      "Any legislation that upholds slavery should be rescinded."
     ],
-    "answer": 1,
-    "explanation": "The graph provides 60 days of observations, so look at the final set\nof points on the far right side of the graph to compare. At 60 days, the\nhydroponics sample has an average height of 45, while the potting soil\nsample has an average height of 28. Subtract 28 from 45 to get 17 cm\nas the difference in height.",
+    "answer": 3,
+    "explanation": "The author begins by saying that the U.S. government does not create slaves, it only recognizes laws that permit people to own slaves. His conclusion is that if all slavery-related laws were \"resc'inded\" or \"removed,\" then slavery would no longer exist. Distractor Explanations: Choice A is incorrect because, while the author feels that laws related to slavery should be revoked, he accepts that the laws are currently \"binding\" or \"can be upheld.\" Choice B is incorrect because the author feels that all laws should be ended; he does not feel that one government is better than another at enforcing slavery. Choice C is also incorrect because the 'ND IDEAS 3. 4. author does not want to continue slavery, so there would be no need to prove ownership of slaves.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 3,
-    "text": "The following text is adapted from F. Scott Fitzgerald\u2019s 1920 novel\nThis Side of Paradise. The novel opens with the following character\nintroduction of Fitzgerald\u2019s semi-autobiographical protagonist, Amory\nBlaine.\nWhen Amory was five, he was already a delightful companion for\nher. He was an auburn-haired boy, with great, handsome eyes\nwhich he would grow up to in time, a facile imaginative mind, and\na taste for fancy dress. From his fourth to his tenth year, he did the\ncountry with his mother in her father\u2019s private car, from Coronado,\nwhere his mother became so bored that she had a nervous\nbreakdown in a fashionable hotel, down to Mexico City, where she\ntook a mild, almost epidemic consumption. . .\nSo, while more or less fortunate little rich boys were defying\ngovernesses on the beach at Newport or being spanked or tutored\nor read to from \u201cDo and Dare,\u201d or \u201cFrank on the Mississippi,\u201d\nAmory was biting acquiescent bell-boys in the Waldorf,\noutgrowing a natural repugnance to chamber music and\nsymphonies, and deriving a highly specialized education from his\nmother.\nAccording to the text, Amory\u2019s upbringing and education can best be\ndescribed as",
+    "text": "Scientist James Clark and graduate student\nJason McLachlan of Duke University conducted\na study to address a central scientific problem\nin explaining the diversity of tree species in a\nforest. \"In the mathematical models ecologists\nuse to describe how different species compete for\nresources such as light, moisture and nutrients, it\ncan be difficult to get species to coexist,\" he said.\n\"In models. slight advantages allow one species\nto 'out-compete' the other, leading to extinction,\nthat is, loss of biodiversity. And so, ecologists have\nput a lot of effort into trying to understand the\ndifferences among species that allow one species\nto coexist with another species.\" Explaining such\ncoexistence that occurs routinely in real life is\ncritical, if ecologists are to truly understand forest\nbiodiversity and the forces that sustain or reduce\nit.\nAccording to the text, why does Clark feel that\nmathematical models are insufficient to study\nbiodiversity?",
     "options": [
-      "demanding.",
-      "scholarly.",
-      "exhausting.",
-      "unique."
+      "They do not account for changes that take place over the course of centuries.",
+      "Their results do not accurately reflect observations in the natural world.",
+      "They do not include enough different species of plants from a specific area.",
+      "Their calculations are based on obsolete data that needs to be updated. Studies have shown that a single, subanesthetic- dose (a lower dose than would cause anesthesia) ketamine infusion can often rapidly relieve depressive symptoms within hours in people who have not responded to conventional antidepressants, which typically take weeks or months to work. However, widespread off-label use of intravenous subanesthetic-dose ketamine for treatment-resistant depression has raised concerns about side effects, especially given its history as a drug of abuse."
     ],
-    "answer": 0,
-    "explanation": "The two very large cities in the table are Boston and Los Angeles.\nTheir average annual fuel wasted due to traffic congestion roughly\ndoubled between 1985 and 2010, with Boston\u2019s going from 29.5 to\n67.3, and L.A.\u2019s going from 119.9 to 238.4.",
+    "answer": 1,
+    "explanation": "Clark says that in mathematical models, \"slight advantages allow one species to \u0007out- compete' the other, leading to extinction, that is, loss of biodiversity,\" but that in real life, species coexist with each other \"routinely\" or \"very regularly.\" Therefore, the mathematical models do not accurately \"reflect\" or \"demonstrate\" what is observed in natural systems. Distractor Explanations: None of the other choices are supported by evidence from the passage. There is no indication that the problem with mathematical models is the time frame, the number of plants included, or the age of the data.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 4,
-    "text": "\u201cI\u2019m Nobody! Who Are You\u201d is a poem by Emily Dickinson,\npublished in 1890.\nI\u2019m Nobody! Who are you?\nAre you \u2013 Nobody \u2013 too?\nThen there\u2019s a pair of us!\nDon\u2019t tell! they\u2019d advertise \u2013 you know!\nHow dreary \u2013 to be \u2013 Somebody!\nHow public \u2013 like a Frog \u2013\nTo tell one\u2019s name \u2013 the livelong June \u2013\nTo an admiring Bog!\nWhich choice best states the main idea of the text?",
+    "text": "Studies have shown that a single, subanesthetic-\ndose (a lower dose than would cause anesthesia)\nketamine infusion can often rapidly relieve\ndepressive symptoms within hours in people\nwho have not responded to conventional\nantidepressants, which typically take weeks or\nmonths to work. However, widespread off-label\nuse of intravenous subanesthetic-dose ketamine\nfor treatment-resistant depression has raised\nconcerns about side effects, especially given its\nhistory as a drug of abuse.\nAccording to the text, why is ketamine a preferred\ndrug for treating serious depressive symptoms?",
     "options": [
-      "The public at large will recognize artists for their\naccomplishments.",
-      "Charitable giving is preferable to selfish accumulation of wealth.",
-      "It is better to be anonymous than to be famous.",
-      "Modern commercialism has impacted natural beauty."
+      "Because it acts faster than traditional medications for depression",
+      "Because it has fewer side effects that most other depression medications do",
+      "Because there is no apparent risk of addiction when administered long-term",
+      "Because it can be administered to the patient in multiple different ways"
     ],
-    "answer": 2,
-    "explanation": "In the year 2000, the large city of Orlando had 15.9, and the large\ncity of Salt Lake City had 9.4. An unknown city with a level of 12\nwould come closest to the levels of these large cities.",
+    "answer": 0,
+    "explanation": "The text says that \"ketamine infusion can often rapidly relieve depressive symptoms within hours in people who have not responded to conventional antidepressants, which typically take weeks or months to work,\" which indicates that ketamine is \"preferred\" or \"often used\" because it works quickly in cases where other antidepressants did not work at all. Distractor Explanations: Choice B is incorrect because the text does not compare the number of side effects with those of other drugs. Choice C is incorrect because the long-term risks are not assessed in the text. There are no apparent short-term risks of addiction when applied once. 5. 6. Central Ideas a Choice D is incorrect because the text addresses only \"intravenous subanesthetic-dose ketamine.\" Other forms of administration are not mentioned in the passage.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 5,
-    "text": "The following is an adaptation from The Three Stages of Clarinda\nThorbald by William T. Hamilton, Jr. In it, young Clarinda is waiting\nfor the day of her wedding to arrive.\nClarinda sat in an old chair and read a thesis upon love, and she\nfound set forth in this thesis that without love the world would not\ngo around. Further, without love life would be but dross and\nhideous calamity. She also found therein that men have died from\nlove, and women have languished in torments when it was\nunrequited.\nAccording to the text, the message in the thesis that Clarinda reads can\nbest be summarized as:",
+    "text": "In general, deep ocean habitats will be affected by\ntidal current energy systems due to the change\nof water flows, materials in the ocean floor,\nand movement of sediment. Potential other\neffects include mortality of fish passing through\nturbines (blade-strike) and the collision risk of\nmarine mammals. A study showed that change\nin sediment patterns will most likely follow the\ninstallation of tidal arrays, impacting the local\nunderwater habitat. This, in turn, could impact\nanimal and plant species. Species of marine\nmammals and fish could experience distress and\ndiscomfort. However, Lewis et al. contend that,\n\"while current technologies have moving parts\n(rotating rotor blades or flapping hydrofoils) that\nmay harm marine life, there is no evidence to\ndate of harm from tidal current devices to larger\nmarine animals, such as whales, dolphins, seals,\nand sharks.\"\nBased on the text, why may marine life be harmed\nby tidal energy systems?",
     "options": [
-      "Love is not important to life since it leads to trivial distractions.",
-      "Love is essential to life; without it, life would be dreadfully dull.",
-      "Love takes hard work from both parties to be successful.",
-      "Love cannot be fully understood without a literary education."
+      "'lhe systems have dangerous moving parts.",
+      "The systems are located where animals are most plentiful.",
+      "The systems attract animals with their sounds.",
+      "The systems provide habitats for marine species."
     ],
-    "answer": 3,
-    "explanation": "Between the years 2005 and 2010, the level in Dayton decreased\nfrom 7.2 to 7.1, and the level in Los Angeles decreased from 242.1 to\n238.4. Since these are the only examples of a decrease in average\nannual fuel waste over a period of time, the economist would likely\nbelieve that during the interval of 2005\u20132010, an economic downturn\ntook place. The only option that has a year within this interval is 2007.",
+    "answer": 0,
+    "explanation": "The text directly states that there may be \"mortality of fish passing through turbines (blade- strike),\" meaning that the moving blades kill the fish, and \"current technologies have moving parts (rotating rotor blades or flapping hydrofoils) that may harm marine life.\" This shows that harm may occur, even though there is no documentation of such accidents to larger mammals. Distractor Explanations: All of the other choices can be eliminated because there is no evidence in the text to support the claims. For Choice B, animals may be present, but there is no indication that they are \"most\" plentiful. For Choice C, sounds are not discussed in the text. Choice D is incorrect because it is a benefit rather than a \"harmful thing.\"",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 6,
-    "text": "The following is an excerpt from a letter by Mary Wollstonecraft. In it,\nshe discusses a trip to Sweden and her observations of the Swedish\nservant class in the late 19th century.\nThe population of Sweden has been estimated from two million and a\nhalf to three million; a small number for such an immense tract of\ncountry, of which only so much is cultivated\u2014and that in the simplest\nmanner\u2014as is absolutely requisite to supply the necessaries of life;\nand near the seashore, whence herrings are easily procured, there\nscarcely appears a vestige of cultivation. The scattered huts that stand\nshivering on the naked rocks, braving the pitiless elements, are formed\nof logs of wood rudely hewn; and so little pains are taken with the\ncraggy foundation that nothing like a pathway points out the door.\nAccording to the text, how does the author describe Sweden\u2019s\nrelationship to its natural resources?",
+    "text": "A study led by Sarah Mann aimed to provide\na fuller picture of the vegan diet in which no\nanimal products are eaten, encompassing both\nthe nutrition and health of the vegan diet as well\nas related ethical beliefs by studying scientific and\npopular literature in tandem. Furthermore, the\nstudy aimed to provide an insider's perspective\nof the vegan diet as a means of combating\nstereotypes and making the diet more relatable/\nunderstandable to those who are not vegan. By\ncombining all three sources, the project aims to\neducate the public regarding a diet and lifestyle\nthat is often perceived, at least partially, in a\nnegative manner.\nAccording to the text, what is one of the main\nobjectives of Sarah Manrfi study?",
     "options": [
-      "Overly exploiting them",
-      "Lacking in them",
-      "Not taking full advantage of them",
-      "Allowing foreigners to interfere with them"
+      "To encourage others to adopt a vegan lifestyle",
+      "To examine why people are opposed to a vegan diet",
+      "To teach others about the nature of veganism",
+      "To determine the anthropological origins of a vegan diet"
     ],
     "answer": 2,
-    "explanation": "The real median household income is represented by the lower\nline, and in the interval between 1995 and 2010, it stays relatively\nconstant.",
+    "explanation": "The last sentence in the text summarizes the purpose of the study: \"By combining all three sources, the project aims to educate the public regarding a diet and lifestyle that is often perceived, at least partially, in a negative manner: In other words, Mann is trying to \"educate\" or \"teach\" people about the \"nature\" or \"basic features\" of the diet. nd Details (Answers) 7. 8. Distractor Explanations: Choice A is incorrect because the text does not try to \"encourage\" or \"persuade\" anyone to become a vegan. Choice B is incorrect because, while the study was trying to fight stereotypes (\"Furthermore, the study.. eare not vegan\"), it did not specifically try to analyze why people are \"opposed\" or \"against\" it. It just tried to get a better idea of why people choose to become vegan and explain those reasons to others. Choice D is incorrect because the study did not delve into \"anthropological origins\" or \"historic al causes\" of the diet.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 7,
-    "text": "This is an adaptation of a letter written in April of 1775, shortly before\nthe American Revolution, by John Adams under the pen name\nNovanglus. In it, he discusses the relationship between Great Britain\nand her colonies.\nThere is no provision in the common law, in English precedents, in\nthe English government or constitution, made for the case of the\ncolonies. It is not a conquered, but a discovered country. It came\nnot to the king by descent, but was explored by the settlers. It came\nnot by marriage to the king, but was purchased by the settlers . . . It\nwas not granted by the king of his grace, but was dearly, very\ndearly earned by the planters, in the labour, blood, and treasure\nwhich they expended to subdue it to cultivation. It stands upon no\ngrounds then of law or policy, but what are found in the law of\nnature, and their express contracts in their charters, and their\nimplied contracts in the commissions to governors and terms of\nsettlement.\nAccording to the text, Adams most likely considered which of the\nfollowing as most responsible for creating the colonies?",
+    "text": "The following text is adapted from Louisa May\nAlcott's 1868 novel. Little Women.\nWhen their father lost his property in trying\nto help an unfortunate friend, the two oldest\ngirls begged to be allowed to do something\ntoward their own support, at least. Believing\nthat they could not begin too early to cultivate\nenergy, industry, and independence, their\nparents consented, and both fell to work\nwith the hearty good will which in spite of all\nobstacles is sure to succeed at last.\nAccording to the text, what is true about the two\noldest girls?",
     "options": [
-      "The British monarch",
-      "Foreign dominions",
-      "Settlers",
-      "The English government"
+      "They were discouraged by all the obstacles.",
+      "They looked for jobs despite their parents' reservations.",
+      "They voluntarily accepted their new positions.",
+      "They lost their money trying to help a friend. Ihe first bottled carbonated mineral water was sold in Geneva in 1783 by Johann Jacob Schweppe, who relocated his business to London in 1792. Not long after, manufacturers started offering flavorings mixed with the mineral water and mostly advertised them as having medicinal purposes; one such drink, ginger beer, is first mentioned in a treatise on beverages written in 1809. However, the drinks were extremely popular, and over time, were consumed for pleasure as well as health purposes."
     ],
-    "answer": 3,
-    "explanation": "In the first and third economic recessions indicated in the graph, in\nthe years 1991 and 2008, the average sale price of houses sold in the\nUnited States decreased. In the second economic recession in 2001,\nthe average increased. Therefore, it would be accurate to say that the\naverage sales prices for homes in the United States sometimes\nincrease and sometimes decrease after recessions.",
+    "answer": 2,
+    "explanation": "The girls \"begged\" or \"asked strongly\" to be able to at least help support themselves, so they \"volunteered\" or \"offered\" to get \"new positions\" or \"jobs\" to earn money for themselves. Distractor Explanations: Choice A is incorrect because the girls were not \"discouraged\" or \"wanted to give up\" because of the obstacles; they maintained a \"hearty good will\" or \"good spirit\" even though there were obstacles. Choice B is incorrect because their parents did not have \"reservations\" or \"concerns\" about new jobs; the parents \"consented\" or \"agreed.\" Choice D is incorrect because their father, not the girls, lost his \"property\" or \"money.\"",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 8,
-    "text": "The following text is adapted from William Shakespeare\u2019s 1609 poem\n\u201cSonnet 12,\u201d in which he addresses another person.\nWhen I do count the clock that tells the time,\nAnd see the brave day sunk in hideous night;\nWhen I behold the violet past prime,\nAnd sable curls, all silvered o\u2019er with white;\nWhen lofty trees I see barren of leaves,\nWhich erst from heat did canopy the herd,\nAnd summer\u2019s green all girded up in sheaves,\nBorne on the bier with white and bristly beard,\nThen of thy beauty do I question make,\nThat thou among the wastes of time must go\nWhat is the main idea of the text?",
+    "text": "Ihe first bottled carbonated mineral water\nwas sold in Geneva in 1783 by Johann Jacob\nSchweppe, who relocated his business to London\nin 1792. Not long after, manufacturers started\noffering flavorings mixed with the mineral water\nand mostly advertised them as having medicinal\npurposes; one such drink, ginger beer, is first\nmentioned in a treatise on beverages written\nin 1809. However, the drinks were extremely\npopular, and over time, were consumed for\npleasure as well as health purposes.\nAccording to the passage, what is true about\nginger beer?",
     "options": [
-      "Love for the person the narrator addresses endures just as much\nas the beautiful things found in nature.",
-      "The beauty of the person the narrator addresses is just as fleeting\nas natural beauty.",
-      "To attain true serenity, it is most helpful to mediate in a setting\nsurrounded by beautiful living things.",
-      "When time goes by too quickly, one can seemingly slow time\u2019s\npassage through contemplation."
+      "It was the most popular flavored drink",
+      "It was the first carbonated drink",
+      "It was sold as having curative properties.",
+      "It was first offered for sale by Johann"
     ],
-    "answer": 0,
-    "explanation": "In 1990, the average home price was approximately 150,000,\nwhile the average household income was around 55,000\u2014the home\nprice was about three times that of household income. By 2019, the\nhome price was approximately 380,000, while household income was\naround 70,000\u2014the home price was then about five times that of\nhousehold income. Given the increase in the ratio over time, it would\nbe reasonable to state that based on this data, a home has become\nincreasingly unaffordable for the typical U.S. household. It is not\nchoice (B) because there is nothing in the graph to compare home\nprices in the United States to those in other countries. It is not choice\n(C) because only the average sales prices of homes are presented\u2014\nthere is no breakdown into least expensive vs. most expensive homes.\nAnd it is not choice (D) because the amount a household must pay per\nmonth to buy a house is not presented; it is possible that factors other\nthan the home price, such as interest rates and taxes, would affect the\naverage monthly payment.",
+    "answer": 2,
+    "explanation": "\"curative properties\" refers to -the ability to heal;\" it is a synonym for \"medicinal.\" The text says that \"one such drink\" is ginger beer, with \"such drink\" referring to those \"advertised 9. INFORMATION as having medicinal purposes\" in the previous sentence. Distractor Explanations: Choice A is incorrect because there is no discussion of how popular ginger beer was compared to other bottled drinks. Choice B is incorrect because the text states that first Schweppe sold mineral water, and that flavorings like ginger were added later. Choice D is incorrect because the text does not say who sold the first ginger beer.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 9,
-    "text": "The following excerpt is from Mary Shelley\u2019s 1826 novel The Last\nMan.\nI am the native of a sea-surrounded nook, a cloud-enshadowed\nland, which, when the surface of the globe, with its shoreless ocean\nand trackless continents, presents itself to my mind, appears only\nas an inconsiderable speck in the immense whole; and yet, when\nbalanced in the scale of mental power, far outweighed countries of\nlarger extent and more numerous population. So true it is, that\nman\u2019s mind alone was the creator of all that was good or great to\nman, and that Nature herself was only his first minister. England,\nseated far north in the turbid sea, now visits my dreams in the\nsemblance of a vast and well-manned ship, which mastered the\nwinds and rode proudly over the waves.\nAccording to the text, England is a country that",
+    "text": "Paleontologists recently found the almost\ncomplete skeleton of a new species of dinosaur\nwhich they named Mbiresaurus raathi after the\nMbire region in Zimbabwe where it was found.\nWith parts of the skull, spine, and all four legs,\nscientists have been able to determine that it was\nabout 5 feet long, fast, and omnivorous, standing\non two legs. The little creature may not look very\nimpressive compared to the giant sauropods that\nare its descendants that roamed the earth on four\nfeet in later eras, but it is notable as the oldest\ndinosaur fossil found in Africa to date.\nAccording to the text, why is the discovery of the\nMbiresaurus raathi fossil significant?",
     "options": [
-      "is limited in its influence due to its unfavorable geography.",
-      "he has not personally visited, but dreams of with great\nfrequency.",
-      "has exceeded what might be expected of it given its size and\nlocation.",
-      "has weather that made him determined to seek a more pleasant\nclimate."
+      "Ihe dinosaur was much smaller than later sauropods.",
+      "The dinosaur stood on two legs instead of four.",
+      "The fossil is the oldest from Africa.",
+      "The fossil is almost a complete skeleton."
+    ],
+    "answer": 2,
+    "explanation": "The text directly says that the fossil is \"notable\" or \"significant\" because it was \"the oldest dinosaur fossil found in Africa.\" Distractor Explanations: All of the other choices are true statements about the fossil according to the text, but they are not listed as the reason that the fossil is \"significant\" or \"important\" compared to other fossils. IO.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 10,
+    "text": "The following text is adapted from Mark Twain's\n1869 novel. The Innocents Abroad.\nA little after noon on that distinguished\nSaturday I reached the ship and went on\nboard. All was bustle and confusion. 11 have\nseen that remark before somewhere.] The\npier was crowded with carriages and men;\npassengers were arriving and hurrying on\nboard; the vessel's decks were encumbered\nwith trunks and valises; groups of\nexcursionists, arrayed in unattractive traveling\ncostumes, were moping about in a drizzling\nrain and looking as droopy and woebegone\nas so many molting chickens. The gallant flag\nwas up, but it was under the spell, too. and\nhung limp and disheartened by the mast.\nAltogether, it was the bluest, bluest spectacle!\nIt was a pleasure excursion-there was no\ngainsaying that, because the program said\nso-it was so nominated in the bond-but it\nsurely hadn't the general aspect of one.\nWhat is the main idea of the text?",
+    "options": [
+      "A voyage has a very inauspicious beginning.",
+      "The weather is unpleasant where a ship is going.",
+      "It is busy and exciting as people prepare for a journey.",
+      "Many people are worried about what will happen."
+    ],
+    "answer": 0,
+    "explanation": "\"inauspicious\" refers to something that is \"unpromising.\" It describes the text, in which people are supposed to be going on a \"pleasure excursion\" or \"fun trip,\" but instead, they are \"moping\" or \"feeling dejected\" and \"woebegone\" or \"pathetic.\" Even the flag was \"limp and disheartened.\" The summary is, \"Altogether, it was the bluest, bluest spectacle!\" meaning that it was very glum. 'ND IDEAS Distractor Explanations: Choice B is incorrect because there is no indication that \"where the ship is going\" is unpleasant; the start of the trip where the people are now is unpleasant. Choice C is incorrect because the scene is portrayed as having \"bustle\" or \"busy,\" there is no indication that it is \"exciting\" or \"fun.\" Instead, everyone is bleak Choice D is incorrect because there is no discussion of \"worry\" or \"concern,\" only a lack of energy and spirit. 11.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 11,
+    "text": "In the 1970s, the California condor, the largest\nbird in North America with a wingspan of\nabout 9.5 feet (3 meters), was on the brink\nof extinction and went extinct in the wild\nin 1987. Conservationists began a captive\nbreeding program, and part of the program\nwas to eliminate all the parasites on the birds.\nThe California condor populations are slowly\nrebuilding. but the California condor louse, a\nparasite that had evolved to survive only on\nthat species, has apparently gone extinct. The\nCalifornia condor louse is one of the best-\ndocumented cases of the loss of a parasite due to a\ndepletion of the host population.\nWhat is the main idea of the text?",
+    "options": [
+      "California condors have recovered after almost going extinct.",
+      "California condors have evolved to live with the California condor louse.",
+      "The California condor louse has gone extinct due to efforts to save the California condor.",
+      "The California condor louse was one of the causes of the near-extinction of the California condor."
+    ],
+    "answer": 2,
+    "explanation": ". The concluding sentence summarizes the important part of the text, that the \"California condor louse is one of the best-documented cases of the loss of a parasite due to a depletion of the host population.\" In other words, the parasite was \"lost\" or \"went extinct\" because the parasites were removed from the birds in the captive breeding program. Distractor Explanations: Choice A is incorrect because it is the reason that the louse went extinct, not the main idea in the text. Choice B is incorrect because the fact that the creatures co-evolved is only a minor idea in the description of the louse. Choice D is incorrect because there is no indication of why the condor almost went 12.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 12,
+    "text": "The following text is adapted from Kenneth\nGrahame's 1908 novel, The Wind in the Willows.\nIt all seemed too good to be true. Hither and\nthither through the meadows Mole rambled\nbusily, along the hedgerows, across the copses,\nfinding everywhere birds building. flowers\nbudding, leaves thrusting-everything happy,\nand progressive, and occupied. And instead\nof having an uneasy conscience pricking him\nand whispering \"whitewash!\" he somehow\ncould only feel how jolly it was to be the only\nidle dog among all these busy citizens. After\nall, the best part of a holiday is perhaps not so\nmuch to be resting yourself, as to see all the\nother fellows busy working.\nBased on the text, what is true about Mole?",
+    "options": [
+      "He was traveling through the countryside.",
+      "He was being encouraged by other animals to work",
+      "He never had any type of employment.",
+      "He usually felt uncomfortable when he was idle."
+    ],
+    "answer": 0,
+    "explanation": "Mole is \"rambling\" or \"walking\" \"hither and thither through the meadows\" and along the hedgerows, across the copses.\" These are fields, Central Ideas a bushes, and small clumps of trees, so he must be walking through the countryside. Distractor Explanations: Choice B is incorrect because he watches others work, but there is no indication that they \"encourage\" or \"urge\" him to work, too. Choice C is incorrect because the passage refers to him being \"on holiday,\" which implies that he usually has work, but not at the present time. Choice D is unsupported by the text, which indicates that Mole likes watching others work when he has nothing to do. 13.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 13,
+    "text": "The following text is adapted from Edgar Allen\nPoe's 1829 poem, Alone.\nFrom childhood's hour I have not been\nAs others were; I have not seen\nAs others saw; I could not bring\nMy passions from a common spring.\nFrom the same source I have not taken\nMy sorrow; I could not awaken\nMy heart to joy at the same tone;\nAnd all I loved I loved alone.\nAccording to the text, what is true about the\nnarrator?",
+    "options": [
+      "He is an extremely sad person.",
+      "He has no ambitions and desires.",
+      "He felt isolated as a child.",
+      "He is unable to find joy in life."
+    ],
+    "answer": 2,
+    "explanation": "The narrator says that the emotions he describes are from \"childhoods hour,\" meaning from when he was very young. The text describes how he was alone and did not enjoy the same things as other people did. \"Isolated\" can refer to the feeling of being different or apart from others emotionally, not just physically, so fits the context of describing his uniqueness. Distractor Explanations: The other choices are incorrect because the text does not say that the narrator is without emotions of sadness, desire, or joy. The text only says that his versions of these emotions come from different sources. In other words, he feels happiness and sadness, but for different reasons than most people do. 14.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 14,
+    "text": "The following text is adapted from Edith\nWhartorfi 1911 novel, Ethan Frome.\nAll the dwellers in Starkfield, as in more\nnotable communities, had had troubles\nenough of their own to make them\ncomparatively indifferent to those of their\nneighbours; and though all conceded that\nEthan Frome's had been beyond the common\nmeasure, no one gave me an explanation\nof the look in his face which, as I persisted\nin thinking, neither poverty nor physical\nsuffering could have put there. Nevertheless,\nI might have contented myself with the\nstory pieced together from these hints had it\nnot been for the provocation of Mrs. Hale's\nsilence, and-a little later-for the accident of\npersonal contact with the man.\nAccording to the text, what is true about the\nresidents of Starkfield?",
+    "options": [
+      "They felt that Ethan Frome overplayed his problems.",
+      "They tried to hide Ethan Frome's secret from the narrator.",
+      "They were more concerned about themselves than about Ethan Frome's.",
+      "They were surprised that the narrator was interested in Ethan Frome"
+    ],
+    "answer": 2,
+    "explanation": "\"residents\" refers to \"dwellers.\" The first sentence states that \"All the dwellers in Starkfield.. .had had troubles enough of their own nd Details (Answers) 15. to make them comparatively indifferent to those of their neighbours.\" In other words, they were more worried about their own \"troubles\" or \"problems\" and were \"comparatively indifferent\" or \"relatively unconcerned\" about problems of other residents, which would include Ethan Frome- Distractor Explanations: None of the other choices are supported by evidence from the text. For Choice A, the residents \"all conceded that Ethan Frome's [troubles] had been beyond the common measure,\" so they \"conceded\" or \"agreed\" that he had more than the usual number of problems rather than feeling that he was \"overplaying\" or \"being too histrionic\" about them. For Choice B, there is no indication of \"hiding\" or \"trying to conceal\" the information from the narrator; the people were just more interested in what was happening to themselves. For Choice D, there is no clue how the people felt about the interest in Frome",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 15,
+    "text": "The following text is adapted from a 2011\nstatement by Jefferson Keel, President of the\nNational Congress of American Indians. in \"The\nIndian Reorganization Act-75 Years Later:\nRenewing our Commitment to Restore Tribal\nHomelands and Promote Self-determination.\"\nToday, 75 years later, the Indian\nReorganization Act (IRA) is as necessary\nas it was in 1934. The purposes of the IRA\nwere frustrated first by World War 11 and\nthen by the termination era. Work did not\nbegin again until the 1970s with the self-\ndetermination policy, and since then Indian\ntribes are building economies from the\nground up and they must earn every penny\nto buy back their own land. Still today, many\ntribes have no land base and many tribes have\ninsufficient lands to support housing and\nself-government and culture. We will need\nthe IRA for many more years until the tribal\nneeds for self-support and self-determination\nare met.\nAccording to the text, what is the only way that\npresent-day Native Americans can acquire their\ntribal lands?",
+    "options": [
+      "By applying for a grant to reimburse the property owner",
+      "By proving to the state that the land was historically theirs",
+      "By paying money to buy the land from the property owner",
+      "By exercising their right to become a member of the IRA"
+    ],
+    "answer": 2,
+    "explanation": "The text directly says, \"they must earn every penny to buy back their own land.\" In other words, the tribes must earn the money to buy back land from the people who currently own it. Distractor Explanations: None of the other choices are supported by evidence from the passage. For Choice A, there is no discussion of \"grants\" or \"money given by an organization to use for a specific purpose.\" For Choice B, the text does not refer to who must provide proof of land ownership. For Choice D, no one is a \"member\" of the IRA. Rather, the IRA is legislation that applies to some tribes and not others. INFORMATION 16.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 16,
+    "text": "The following text is adapted from Fyodor\nDostoevsky's 1866 novel, Crime and Punishment.\nOn an exceptionally hot evening early in July\na young man came out of the garret in which\nhe lodged in S. Place and walked slowly, as\nthough in hesitation, towards K. bridge. He\nhad successfully avoided meeting his landlady\non the staircase. His garret was under the roof\nof a high, five-storied house and was more\nlike a cupboard than a room. The landlady\nwho provided him with garret, dinners, and\nattendance, lived on the floor below, and\nevery time he went out he was obliged to pass\nher kitchen, the door of which invariably\nstood open. And each time he passed, the\nyoung man had a sick, frightened feeling,\nwhich made him scowl and feel ashamed. He\nwas hopelessly in debt to his landlady, and\nwas afraid of meeting her.\nAccording to the passage, what is true about the\nyoung man?",
+    "options": [
+      "He felt he had a great obligation.",
+      "He disliked the meals.",
+      "He seldom ran into his landlady.",
+      "He was extremely ill."
+    ],
+    "answer": 0,
+    "explanation": "The final sentence says that, \"He was hopelessly in debt to his landlady.\" Therefore, he had an \"obligation\" or \"owed something to\" his landlady. This obligation was probably \"great\" or \"large\" because he was \"hopelessly\" in debt, meaning he could not even dream of getting out of the debt. Distractor Explanations: Choice B is incorrect because the text only says the young man avoided the kitchen door. presumably because he \"avoided meeting his landlady,\" not that he disliked the food. Choice C is incorrect because there is no indication how often the man actually meets the lady. He avoided her this time, but might have been seen often as her kitchen door bly\" or \"always\" open. Choice D is was Invaria incorrect because the man has a \"sick feeling,\" but the text does not say that he is actually sick. 17.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 17,
+    "text": "The following text is adapted from Sinclair Lewi\"\n1920 novel, Main Street.\nOn a hill by the Mississippi where Chippewas\ncamped two generations ago, a girl stood in\nrelief against the cornflower blue of Northern\nsky. She saw no Indians now; she saw flour-\nmills and the blinking windows of skyscrapers\nin Minneapolis and St. Paul. Nor was she\nthinking of squaws and portages, and the\nYankee fur-traders whose shadows were all\nabout her. She was meditating upon walnut\nfudge, the reasons why heels run over, and the\nfact that the chemistry instructor had stared\nat the new coiffure which concealed her ears.\nIt is Carol Milford, fleeing for an hour from\nBlodgett College. The days of pioneering, of\nlassies in sunbonnets, and bears killed with\naxes in piney clearings, are deader now than\nCamelot; and a rebellious girl is the spirit of\nthat bewildered empire called the American\nMiddlewest.\nAccording to the text, what is true about the place\nwhere Carol Milford is standing?",
+    "options": [
+      "The hills are covered by cornflowers.",
+      "Chippewa Indians now reside there.",
+      "It has become quite industrialized.",
+      "It is the site of the now-dead Camelot."
+    ],
+    "answer": 2,
+    "explanation": "It says that the \"girl,\" who is Milford, saw \"flour-mills and the blinking windows of skyscrapers in Minneapolis and St. Paul.\" In other words, she is looking at \"industrialized\" or \"built- up\" areas rather than at fields. Distractor Explanations: Choice A is incorrect because the sky is cornflower blue; the plants are not described. Choice B is incorrect because the Chippewas \"camped two generations ago\" or \"lived there in the past\" rather than the present, as \"she saw no Indians now.\" Choice D is incorrect because there is no indication that Camelot was 'ND IDEAS in that place; the reference is to show that the \"pioneering days\" are gone, just as Camelot is 18.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 18,
+    "text": "Snow blindness is a condition in which UV\nrays from the sun temporarily damage the eyes,\ncausing painfulness and sometimes disrupting\nvision. Typically, such conditions heal on their\nown in a few days, but repeated cases can lead\nto more serious conditions such as vision loss\nor cancer. Despite the name, snow blindness\ncan occur without the presence of snow. Bright\nreflected light from sources such as light-colored\npavement, white sandy beaches, and water all\ncreate the same effect.\nBased on the text, what is true about snow\nblindness?",
+    "options": [
+      "It does not actually harm the eyes at all unless a person repeatedly gets it.",
+      "It is most severe when caused by snow, but other situations can cause it.",
+      "It can negatively affect a person's eyesight for several days before recovery.",
+      "It is impossible to avoid situations that are conducive to causing it."
+    ],
+    "answer": 2,
+    "explanation": "The text says that snow blindness \"sometimes disrupt[sl vision,\" so the eyesight is \"negatively affected\" or \"impacted in a bad way.\" The text also says that \"such conditions heal on their own in a few days\" or \"get better in several Distractor Explanations: Choice A is incorrect because the text says that snow blindness is when \"UV rays from the sun temporarily damage the eyes,\" so there is \"harm\" or \"damage\" even in mild cases, though it gets better. Choice B is incorrect because the text does not say that cases are \"more severe\" or \"worse\" when there is snow; the text only says that different situations cause it. Choice D is incorrect because the text does not say it is e\" or \"no one can\" stay away from situations that are \"conducive\" or \"likely\" to cause snow blindness. The text only says that many situations cause it. 19.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 19,
+    "text": "Giant oarfish are the longest bony fish in the\nworld, reaching up to eight meters long, though\nthere have been reports of oarfish as long as\nseventeen meters. They live in the deep sea\naround 1,000 meters underwater and seldom\ncome to the surface. Most likely, these unusual\nfish are the origin of stories of sea serpents from\nancient times. In Japan, when a giant oarfish\ndoes wash ashore, people say it is an omen of an\nearthquake.\nWhat is the main idea of the text?",
+    "options": [
+      "Giant oarfish are large fish but not often seen.",
+      "One of the most famous deep-sea fish is the giant oarfish.",
+      "Giant oarfish were mistakenly viewed to be different creatures.",
+      "The longest bony fish in the world is seventeen meters long."
+    ],
+    "answer": 0,
+    "explanation": "The passage describes the size as being the longest bony fish, and it also says they \"seldom come to the surface.\" Since they are \"unusual\" and the source of legends, they are most likely not seen often. Distractor Explanations: Choice B is incorrect because the passage does not say how \"famous\" or Central Ideas a \"well-known\" giant oarfish are compared to other types of fish. Choice C is incorrect because there is no discussion of a \"mistake\" in recognizing the animal; people just made up stories about sea serpents based on them. Choice D is incorrect because it is a minor detail in the text, which only refers to the fish as being up to eight meters long. The comment about seventeen meters is a \"report,\" which means it may or may not be true. 20.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 20,
+    "text": "Nephi and Golden Griggs worked on their family\nfarm in Ontario, Oregon, raising and selling\npotatoes and corn. However, their French fry\ncutting machine was inefficient and resulted\nin huge amounts of fragments. The brothers\nexperimented with ways to use them until in 1954\nthey created the iconic food known as the Tater\nTot.\nBased on the text, what can be inferred about the\nGriggs's Tater Tot?",
+    "options": [
+      "It was a typical potato product at the time.",
+      "It was made from material that was considered waste.",
+      "It was the first product that the family invented.",
+      "It included both corn and potatoes in the"
     ],
     "answer": 1,
-    "explanation": "\u201cRespectively\u201d is a word that sometimes comes up in questions,\nmeaning that the descriptions apply in the order the items are\nmentioned\u2014in this situation it means that the first adjective will apply\nto the first item, and the second adjective will apply to the second\nterm. In the year 2000, pensions were the largest category at 25% of\ngovernment spending. In the year 2020, health care was the largest\ncategory at 23% of government spending.",
+    "explanation": "The text says that the brothers \"experimented with ways to use\" the fragments from the cutting machine, which implies that they did not have a way that was usually used. In other words, the fragments were probably typically thrown away, or wasted, rather than used. Distractor Explanations: Choice A is incorrect because the Tater Tot was \"iconic,\" which indicates that it was special or unusual rather than typical or normal. Choice C is impossible to determine from the text; it is possible the family invented many foods. Choice D is also not explained, as no ingredients other than potatoes are mentioned. 21.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 21,
+    "text": "The ear is a complex organ that is responsible for\nboth hearing and balance. The outer, visible part\nis called the auricle, and it helps funnel sounds to\nthe tympanic membrane, which is also called the\neardrum. The tympanic membrane vibrates and\ntransfers the sound waves to three bones in the\nmiddle ear, which in turn conveys the sound to\nthe inner ear, where it is converted into electrical\nimpulses in a fluid-filled part called the cochlea.\nThose electrical impulses are transferred to the\nbrain, where they are interpreted as sound. The\ninner ear also contains two structures called the\nvestibule and semicircular canals, which are both\nrelated to maintaining proper balance.\nAccording to the text, what is the function of the\ncochlea?",
+    "options": [
+      "It funnels sounds into the inner ear.",
+      "It assists with ensuring good balance.",
+      "Its fluid slows sound vibrations.",
+      "It changes sound into electrical impulses."
+    ],
+    "answer": 3,
+    "explanation": "The text directly says that the three bones in the middle ear \"convey\" or \"carry\" the sound \"to the inner ear, where it is converted into electrical impulses in a fluid-filled part called the cochlea.\" Distractor Explanations: Choice A is incorrect because the auricle funnels sound to the middle nd Details (Answers) 22. 23. ear, and the tympanic membrane and bones of the middle ear carry the sound to the inner ear. Choice B is incorrect because the vestibule and semicircular canals are related to balance. Choice C is incorrect because there is no discussion of \"slowing\" the sound, only that the cochlea contains fluid.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 22,
+    "text": "The first restaurant franchise in the United States\nwas an A&W root beer stand. The restaurant\nwas founded in 1919 by Roy Allen and Frank\nWright, who used their initials for the name.\nThat first root beer stand was in Lodi, California,\nand it proved so popular that they leased it\nfor other people to run so that they would be\nable to expand to other locations, starting with\nSacramento, California.\nAccording to the text, why did Allen and Wright\ncreate the idea of a restaurant franchise?",
+    "options": [
+      "They hoped to open more restaurants than they could personally operate.",
+      "They thought that root beer was more marketable in a chain than from only one store.",
+      "They realized that people did not want to travel far to purchase a root beer.",
+      "They understood that using their full names might be less marketable."
+    ],
+    "answer": 0,
+    "explanation": "The passage says that they \"leased it for other people to run so that they would be able to expand to other locations.\" In other words, they created the \"franchise\" or \"lease system\" in order to expand to other places because they could not \"operate\" or \"run\" the restaurants \"personally\" or \"by themselves.\" Distractor Explanations: Choice B is incorrect because the first restaurant was \"so popular.\" In other words, a single store had no problems selling the product. Choice C is not supported by the text, as the first stand was popular enough that people probably were willing to travel to buy root beer there. Choice D is incorrect because it refers to the reasons for using the name A&W rather than the start of the franchise.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 23,
+    "text": "In 2011, treasure hunters Peter Lindberg and\nDenis Aberg disclosed astounding sonar footage\nof an unusual object that they had found about 90\nmeters deep under the Baltic Sea. Further studies\nrevealed a stone structure about 13 meters tall and\n60 meters wide, with a similar object about 200\nmeters away. There also appears to be pavement-\nlike platforms leading to the object. Many people\nclaimed it was a UFO; some geologists theorized\nit was volcanic material deposited by a melting\nglacier, and others suspect it is a German military\nrelic from WWII. Since all electronic equipment,\neven that from reputable scientific institutions,\nmalfunctions when close to the object, the true\nnature and origin may never be known.\nWhat is the main idea of the text?",
+    "options": [
+      "Treasure hunters have found a stone structure under the Baltic Sea which may be a UFO",
+      "A large stone object was found in the Baltic Sea in 2011, but its purpose is a mystery.",
+      "In 2011, treasure hunters showed sonar images of an undersea object that is likely a",
+      "Under the Baltic Sea, there is a stone structure that is 60 meters wide with platforms. Narcissa Whitman (1808-1847) was one of the first female pioneers to travel along the Oregon"
+    ],
+    "answer": 1,
+    "explanation": "It contains the key ideas of the text. The first three sentences describe the stone object that is very large and was found in the ocean. The final portion delves into possible purposes or origins, but ends by saying that \"the true nature and origin may never be known,\" meaning it is a \"mystery.\" INFORMATION Distractor Explanations: Choice A is incorrect because the idea of a UFO is a minor detail of the text; the main conclusion is that there are different possibilities about what the structure is, but it is not known. Choice C is incorrect because there is no discussion about the object being a \"hoax\" or \"not real.\" In fact, the text refers to electronic equipment \"from reputable scientific institutions,\" so likely respected places also have verified that the object exists. Choice D is incorrect because it does not discuss the speculation about what the object might be caused by or came from, which are essential parts of the text. 24.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 24,
+    "text": "Narcissa Whitman (1808-1847) was one of the\nfirst female pioneers to travel along the Oregon\nTrail, and she gave birth to the first white child\nborn in the Oregon Territory. She lived at a\nmission near Walla Walla, Washington, which\nbecame an important stopping point for pioneers\nheading to the Willamette Valley in Oregon.\nUnfortunately, she never learned the native\nlanguage and refused to adopt any of the local\nculture, which ultimately led to discontent and\ndistrust among the local people.\nAccording to the texts, what was one drawback of\nNarcissa Whitman's attempts to set up a new life\nin the Oregon Territory?",
+    "options": [
+      "She gave birth to a child that was not a Native",
+      "American.",
+      "She stopped in Washington rather than in",
+      "Oregon."
+    ],
+    "answer": 2,
+    "explanation": "The text says that Whitman \"never learned the native language and refused to adopt any of the local culture.\" In other words, she did not make efforts to \"assimilate\" or \"become part of\" the Native American society. Distractor Explanations: Choice A is incorrect because there is no indication that having a child was a \"drawback\" or \"problem\" with starting a new life. Choice B is incorrect because the mission where she lived was \"an important stopping point,\" so she was able to settle in enough to help others who were traveling. Choice D is not discussed in the text; the \"local people\" showed distrust, but there is no sign that she did not believe them. 25.",
+    "topic": "Central Ideas and Details"
+  },
+  {
+    "id": 25,
+    "text": "The following text is adapted from H.G. Wells's\n1925 novel, Christina Alberta's Father.\nYoung Albert Edward Preemby was then a\ngood-looking, slender youth of sixteen, with\nhis curliness and his fair\nhair and eyes of horizon blue, dreamy and\nIndisposed for regular employment. Even as\na child he had been given to reverie; at school\nhe would sit with sums or book neglected\nbefore him, looking beyond them at unknown\nthings; his early experiences in business were\ndisappointing by reason of this abstraction.\nAfter a number of unsuccessful attempts to\nexploit his gifts at some favourable point in\nthe complex machinery of our civilization, he\ncame to rest for several years in the office of a\nhouse-agent and coal-merchant in Norwich\nto whom his mother was distantly related.\nWhat is the main purpose of the text?",
+    "options": [
+      "It discusses many challenges facing a character.",
+      "It hints at the personality of a character.",
+      "It establishes the career of a character.",
+      "It describes the appearance ofa character."
+    ],
+    "answer": 1,
+    "explanation": ". The text says that Preemby was \"good-looking\" and gives a few general details about his appearance, but then focuses on his \"personality\" 'ND IDEAS or \"nature,\" which was \"given to reverie\" and led to \"abstraction\" or \"absent-mindedness\" that made it hard for him to be employed. The reader learns that Preemby finally \"comes to rest\" or \"is employed\" by a distant relative, implying that connections helped him get the job rather than that he had the drive and initiative to find a position for himself. Distractor Explanations: Choice A is incorrect because the text does not discuss \"many\" challenges, just the fact that his personality makes it hard for him to gain employment. Choice C is incorrect because the paragraph says that Preemby \"came to rest for several years,\" but that phrase implies that he moved on to other jobs. The employment was not a \"career\" or a \"lifetime path,\" only a \"rest\" or \"short stop\" along his path. Choice D is incorrect because the text does describe the character's \"appearance\" or \"physical looks\" in general, but spends more time focusing on the personality. Therefore, the appearance is only a minor part of the overall purpose. 26.",
     "topic": "Central Ideas and Details"
   }
 ];
+
+const TOPIC_MAP = {};
+QUESTIONS.forEach(q => {
+  const key = q.topic || 'General';
+  if (!TOPIC_MAP[key]) {
+    TOPIC_MAP[key] = { name: key, questions: [] };
+  }
+  TOPIC_MAP[key].questions.push(q.id);
+});
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { QUESTIONS, TOPIC_MAP };
+}

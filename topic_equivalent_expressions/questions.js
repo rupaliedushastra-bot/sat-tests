@@ -1,93 +1,345 @@
+// =============================================
+// Digital SAT Practice - Topic: topic_equivalent_expressions
+// 25 Questions
+// =============================================
+
 const QUESTIONS = [
   {
-    "id": 26,
-    "text": "If x > 0, which of the following is equivalent to \n1\n\ud835\udc65 + \n1\n2\ud835\udc65 ?",
+    "id": 1,
+    "text": "Question 1 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "1\n\ud835\udc65",
-      "1\n2\ud835\udc65",
-      "3\n2\ud835\udc65",
-      "2\n3\ud835\udc65"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
-    "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "answer": 2,
+    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   },
   {
-    "id": 27,
-    "text": "Which expression is equivalent to (2\ud835\udc652 + 3x \u2013 2) \u2013 (5\ud835\udc652 \u2013 x \u2013 7)?",
+    "id": 2,
+    "text": "Question 2 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "7\ud835\udc652 + 4x + 9",
-      "3\ud835\udc652 + 4x + 5",
-      "-3\ud835\udc652 + 2x - 9",
-      "-3\ud835\udc652 + 4x + 5"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
-    "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   },
   {
-    "id": 30,
-    "text": "Which expression is equivalent to \u221a\ud835\udc653\n5\n. \u221a\ud835\udc65  \n5\n, where x > 0?",
+    "id": 3,
+    "text": "Question 3 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "\ud835\udc65\n4\n5",
-      "\ud835\udc65\n5\n4",
-      "\ud835\udc65\n3\n25",
-      "\ud835\udc65\n25\n3"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
-    "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   },
   {
-    "id": 31,
-    "text": "x (x + 2) = 8 \nWhich of the following lists all solutions to the quadratic equation above?",
+    "id": 4,
+    "text": "Question 4 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "8 and 6",
-      "4 and - 2",
-      "- 4 and 2",
-      "\u221a6"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
-    "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   },
   {
-    "id": 32,
-    "text": "\ud835\udc652 \u2013 6x + 11 = y \n       x = y + 1 \nThe system of equations above is graphed in the xy-plane. Which of the following is \nthe y-coordinate of an intersection point (x, y) of the graphs of the two equations?",
+    "id": 5,
+    "text": "Question 5 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "-4",
-      "-2",
-      "2",
-      "4"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
-    "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   },
   {
-    "id": 33,
-    "text": "If \ud835\udc654 \u2013 \ud835\udc664 = -15 and \ud835\udc652 \u2013 \ud835\udc662 = -3, what is the value of \ud835\udc652 + \ud835\udc662?",
+    "id": 6,
+    "text": "Question 6 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "5",
-      "4",
-      "2",
-      "1"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   },
   {
-    "id": 34,
-    "text": "The polynomial \ud835\udc5d4 + 4\ud835\udc5d3 + 3\ud835\udc5d2 \u2013 4p \u2013 4 can be written as ( \ud835\udc5d2 \u22121) (\ud835\udc5d+ 2)2. What \nare all of the roots of the polynomial?",
+    "id": 7,
+    "text": "Question 7 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
     "options": [
-      "-2 and 1",
-      "-2, 1, and 4",
-      "-2, -1, and 1",
-      "-1, 1, and 2"
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 8,
+    "text": "Question 8 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "answer": 0,
-    "explanation": "Please refer to the book for detailed explanation.",
-    "topic": "EQUIVALENT EXPRESSIONS"
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 9,
+    "text": "Question 9 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 10,
+    "text": "Question 10 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 11,
+    "text": "Question 11 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 12,
+    "text": "Question 12 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 13,
+    "text": "Question 13 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 14,
+    "text": "Question 14 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 15,
+    "text": "Question 15 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 16,
+    "text": "Question 16 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 17,
+    "text": "Question 17 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 18,
+    "text": "Question 18 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 19,
+    "text": "Question 19 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 20,
+    "text": "Question 20 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 21,
+    "text": "Question 21 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 22,
+    "text": "Question 22 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 23,
+    "text": "Question 23 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 24,
+    "text": "Question 24 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
+  },
+  {
+    "id": 25,
+    "text": "Question 25 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "topic": "Exponents & Square Roots"
   }
 ];
+
+const TOPIC_MAP = {};
+QUESTIONS.forEach(q => {
+  const key = q.topic || 'General';
+  if (!TOPIC_MAP[key]) {
+    TOPIC_MAP[key] = { name: key, questions: [] };
+  }
+  TOPIC_MAP[key].questions.push(q.id);
+});
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { QUESTIONS, TOPIC_MAP };
+}
