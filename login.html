@@ -262,6 +262,9 @@
                     </button>
                 </div>
             </div>
+            <div style="display:flex; justify-content:flex-end; margin-top:6px; margin-bottom:14px;">
+                <a href="#" onclick="openForgotPassword('student'); return false;" style="color:#60a5fa; font-size:0.82rem; text-decoration:none;">Forgot Password?</a>
+            </div>
             <button class="btn btn-primary" onclick="studentLogin()">Login as Student</button>
         </div>
 
@@ -298,6 +301,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                     </button>
                 </div>
+            </div>
+            <div style="display:flex; justify-content:flex-end; margin-top:6px; margin-bottom:14px;">
+                <a href="#" onclick="openForgotPassword('admin'); return false;" style="color:#a78bfa; font-size:0.82rem; text-decoration:none;">Forgot Password?</a>
             </div>
             <button class="btn btn-primary admin" onclick="adminLogin()">Login as Admin</button>
         </div>
@@ -356,6 +362,168 @@
             }
         }
 
+        
+        let fpRole = 'student';
+        let generatedResetOtp = '';
+
+        function openForgotPassword(role) {
+            fpRole = role;
+            document.getElementById('forgotModal').style.display = 'flex';
+            document.getElementById('fpStep1').style.display = 'block';
+            document.getElementById('fpStep2').style.display = 'none';
+            const emailField = role === 'student' ? 'stuLoginEmail' : 'adminLoginEmail';
+            const val = document.getElementById(emailField) ? document.getElementById(emailField).value : '';
+            document.getElementById('fpEmail').value = val;
+            document.getElementById('fpMsg').textContent = '';
+            document.getElementById('fpSub').textContent = 'Enter your registered email address to receive a 6-digit verification code.';
+        }
+
+        function closeForgotPassword() {
+            document.getElementById('forgotModal').style.display = 'none';
+        }
+
+        async function sendResetOtp() {
+            const email = document.getElementById('fpEmail').value.trim().toLowerCase();
+            const msgEl = document.getElementById('fpMsg');
+            if (!email) {
+                msgEl.textContent = 'Please enter your email.';
+                msgEl.style.color = '#f87171';
+                return;
+            }
+
+            const btn = document.getElementById('fpSendBtn');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            generatedResetOtp = Math.floor(100000 + Math.random() * 900000).toString();
+
+            try {
+                const res = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'forgot_password_otp',
+                        userEmail: email,
+                        otp: generatedResetOtp
+                    })
+                });
+
+                if (res.ok) {
+                    document.getElementById('fpStep1').style.display = 'none';
+                    document.getElementById('fpStep2').style.display = 'block';
+                    document.getElementById('fpSub').textContent = 'Code sent to ' + email + '. Check your inbox/spam.';
+                    msgEl.textContent = 'OTP code sent successfully!';
+                    msgEl.style.color = '#34d399';
+                } else {
+                    if (res.status === 405 || window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+                        document.getElementById('fpStep1').style.display = 'none';
+                        document.getElementById('fpStep2').style.display = 'block';
+                        document.getElementById('fpSub').innerHTML = `⚠️ <b>Local Dev Mode (Live Server):</b><br>Backend emails cannot be sent from static port ${window.location.port}.<br>Your Demo OTP Code is: <b style="color:#a78bfa;font-size:1.15rem;letter-spacing:3px;">${generatedResetOtp}</b>`;
+                        msgEl.textContent = 'Demo OTP auto-generated for local testing!';
+                        msgEl.style.color = '#fbbf24';
+                    } else {
+                        msgEl.textContent = 'Failed to send OTP email.';
+                        msgEl.style.color = '#f87171';
+                    }
+                }
+            } catch (err) {
+                if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+                    document.getElementById('fpStep1').style.display = 'none';
+                    document.getElementById('fpStep2').style.display = 'block';
+                    document.getElementById('fpSub').innerHTML = `⚠️ <b>Local Dev Mode (Live Server):</b><br>Backend emails cannot be sent from static port ${window.location.port}.<br>Your Demo OTP Code is: <b style="color:#a78bfa;font-size:1.15rem;letter-spacing:3px;">${generatedResetOtp}</b>`;
+                    msgEl.textContent = 'Demo OTP auto-generated for local testing!';
+                    msgEl.style.color = '#fbbf24';
+                } else {
+                    msgEl.textContent = 'Network error sending OTP.';
+                    msgEl.style.color = '#f87171';
+                }
+            } finally {
+                btn.textContent = 'Send OTP Code';
+                btn.disabled = false;
+            }
+        }
+
+        async function verifyAndResetPassword() {
+            const email = document.getElementById('fpEmail').value.trim().toLowerCase();
+            const otp = document.getElementById('fpOtp').value.trim();
+            const newPass = document.getElementById('fpNewPassword').value;
+            const confPass = document.getElementById('fpConfirmPassword').value;
+            const msgEl = document.getElementById('fpMsg');
+
+            if (!otp || !newPass || !confPass) {
+                msgEl.textContent = 'Please fill all fields.';
+                msgEl.style.color = '#f87171';
+                return;
+            }
+            if (otp !== generatedResetOtp) {
+                msgEl.textContent = 'Invalid OTP code.';
+                msgEl.style.color = '#f87171';
+                return;
+            }
+            if (newPass.length < 6) {
+                msgEl.textContent = 'Password must be at least 6 characters.';
+                msgEl.style.color = '#f87171';
+                return;
+            }
+            if (newPass !== confPass) {
+                msgEl.textContent = 'Passwords do not match.';
+                msgEl.style.color = '#f87171';
+                return;
+            }
+
+            const btn = document.getElementById('fpResetBtn');
+            btn.textContent = 'Resetting...';
+            btn.disabled = true;
+
+            try {
+                // Check if profile exists
+                const { data: prof } = await supabaseClient.from('profiles').select('*').eq('email', email).maybeSingle();
+                if (prof) {
+                    await supabaseClient.from('profiles').update({ reset_password: newPass }).eq('email', email);
+                } else {
+                    await supabaseClient.from('profiles').insert({
+                        id: 'custom_' + Date.now(),
+                        email: email,
+                        reset_password: newPass,
+                        has_access: true,
+                        has_topic_access: true,
+                        created_at: new Date().toISOString()
+                    });
+                }
+
+                // Notify admin via email
+                fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'forgot_password_admin_notice',
+                        userEmail: email
+                    })
+                }).catch(e => console.error("Admin notice send error:", e));
+
+                msgEl.textContent = 'Password reset successful! Logging you in...';
+                msgEl.style.color = '#34d399';
+
+                setTimeout(() => {
+                    closeForgotPassword();
+                    if (fpRole === 'student') {
+                        document.getElementById('stuLoginEmail').value = email;
+                        document.getElementById('stuLoginPassword').value = newPass;
+                    } else {
+                        document.getElementById('adminLoginEmail').value = email;
+                        document.getElementById('adminLoginPassword').value = newPass;
+                    }
+                }, 1500);
+            } catch (e) {
+                msgEl.textContent = 'Error resetting password.';
+                msgEl.style.color = '#f87171';
+            } finally {
+                btn.textContent = 'Verify & Reset Password';
+                btn.disabled = false;
+            }
+        }
+
+
         function getRedirect() {
             const params = new URLSearchParams(window.location.search);
             return params.get('redirect') || 'index.html';
@@ -399,7 +567,17 @@
             const password = document.getElementById('stuLoginPassword').value;
             if (!email || !password) { showMsg('Please fill all fields.', 'error'); return; }
 
-            const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+            let { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+            if (error) {
+                try {
+                    const { data: prof } = await supabaseClient.from('profiles').select('*').eq('email', email.toLowerCase()).maybeSingle();
+                    if (prof && prof.reset_password === password) {
+                        error = null;
+                        data = { user: { id: prof.id, email: prof.email } };
+                        localStorage.setItem('eduquest_custom_session', JSON.stringify({ user: data.user }));
+                    }
+                } catch(e){}
+            }
             if (error) { showMsg(error.message, 'error'); return; }
 
             // Ensure profile exists in profiles table
@@ -467,7 +645,17 @@
             const password = document.getElementById('adminLoginPassword').value;
             if (!email || !password) { showMsg('Please fill all fields.', 'error'); return; }
 
-            const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+            let { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+            if (error) {
+                try {
+                    const { data: prof } = await supabaseClient.from('profiles').select('*').eq('email', email.toLowerCase()).maybeSingle();
+                    if (prof && prof.reset_password === password) {
+                        error = null;
+                        data = { user: { id: prof.id, email: prof.email } };
+                        localStorage.setItem('eduquest_custom_session', JSON.stringify({ user: data.user }));
+                    }
+                } catch(e){}
+            }
             if (error) { showMsg(error.message, 'error'); return; }
 
             // Ensure profile exists in profiles table for admin
@@ -528,6 +716,41 @@
             showMsg('Admin account created! You can now login as admin. Make sure this email matches ADMIN_EMAIL in admin.html.', 'success');
         }
     </script>
+
+    <!-- FORGOT PASSWORD MODAL -->
+    <div id="forgotModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; padding:20px;">
+        <div style="background:#0d0d14; border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:32px; max-width:420px; width:100%; position:relative; box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);">
+            <button onclick="closeForgotPassword()" style="position:absolute; right:20px; top:20px; background:none; border:none; color:rgba(255,255,255,0.5); font-size:1.6rem; cursor:pointer;">&times;</button>
+            <h3 id="fpTitle" style="font-family:'Syne',sans-serif; font-size:1.4rem; margin-bottom:8px; color:#fff;">Reset Password</h3>
+            <p id="fpSub" style="color:rgba(255,255,255,0.5); font-size:0.85rem; margin-bottom:20px; line-height:1.5;">Enter your registered email address to receive a 6-digit verification code.</p>
+            
+            <div id="fpStep1">
+                <div class="field">
+                    <label>Registered Email</label>
+                    <input type="email" id="fpEmail" placeholder="you@example.com" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                </div>
+                <button class="btn btn-primary" id="fpSendBtn" onclick="sendResetOtp()" style="width:100%; margin-top:16px; padding:12px; border-radius:10px; font-weight:600; cursor:pointer; border:none;">Send OTP Code</button>
+            </div>
+
+            <div id="fpStep2" style="display:none;">
+                <div class="field" style="margin-bottom:14px;">
+                    <label>6-Digit OTP Code</label>
+                    <input type="text" id="fpOtp" placeholder="123456" maxlength="6" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; letter-spacing:6px; font-weight:700; text-align:center; font-size:1.3rem; outline:none; margin-top:6px;">
+                </div>
+                <div class="field" style="margin-bottom:14px;">
+                    <label>New Password</label>
+                    <input type="password" id="fpNewPassword" placeholder="At least 6 characters" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                </div>
+                <div class="field" style="margin-bottom:14px;">
+                    <label>Confirm Password</label>
+                    <input type="password" id="fpConfirmPassword" placeholder="Repeat new password" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                </div>
+                <button class="btn btn-primary" id="fpResetBtn" onclick="verifyAndResetPassword()" style="width:100%; margin-top:10px; padding:12px; border-radius:10px; font-weight:600; cursor:pointer; border:none;">Verify &amp; Reset Password</button>
+            </div>
+            <p id="fpMsg" style="text-align:center; font-size:0.85rem; margin-top:14px; min-height:20px;"></p>
+        </div>
+    </div>
+
 </body>
 
 </html>

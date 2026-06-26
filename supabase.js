@@ -3,6 +3,42 @@ const SUPABASE_CONFIG = {
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5dnZobXVlZ3R6b29panJ0d3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwOTk5MTEsImV4cCI6MjA5NDY3NTkxMX0.pksVza66eu3WlM1_r_IGARkjd19BwUvbKntoUIwPhRY', // Settings > API > anon public key
 };
 
+// =============================================
+// Supabase Client Wrapper (Session Interceptor)
+// =============================================
+if (typeof window !== 'undefined' && window.supabase && !window._origSupabaseCreateClient) {
+    window._origSupabaseCreateClient = window.supabase.createClient.bind(window.supabase);
+    window.supabase.createClient = function(url, key, opts) {
+        const client = window._origSupabaseCreateClient(url, key, opts);
+        if (client && client.auth) {
+            const origGetSess = client.auth.getSession.bind(client.auth);
+            client.auth.getSession = async function() {
+                const res = await origGetSess();
+                if (!res.data || !res.data.session) {
+                    const custom = localStorage.getItem('eduquest_custom_session');
+                    if (custom) {
+                        try {
+                            const parsed = JSON.parse(custom);
+                            if (parsed && parsed.user) {
+                                if (!res.data) res.data = {};
+                                res.data.session = parsed;
+                            }
+                        } catch(e) {}
+                    }
+                }
+                return res;
+            };
+
+            const origSignOut = client.auth.signOut.bind(client.auth);
+            client.auth.signOut = async function() {
+                localStorage.removeItem('eduquest_custom_session');
+                return await origSignOut();
+            };
+        }
+        return client;
+    };
+}
+
 // ── Save registration to Supabase ─────────────
 // Jab student form fill kare aur test start kare
 async function saveRegistration(studentData, examName) {

@@ -68,6 +68,72 @@ module.exports = async (req, res) => {
       return res.status(200).json({ ok: true, message: "Signup notification sent" });
     }
 
+    // ── TYPE: forgot_password_otp ────────────────────────────
+    if (body.type === "forgot_password_otp") {
+      const { userEmail, otp } = body;
+      await transport.sendMail({
+        from: `"${fromName}" <${fromEmail}>`,
+        to: userEmail,
+        subject: `🔑 Password Reset OTP – EduQuest SAT Portal`,
+        html: `
+          <div style="font-family:sans-serif;max-width:540px;margin:0 auto;padding:28px;background:#0B1C3D;color:#f1f5ff;border-radius:16px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+              <h2 style="color:#a78bfa;margin:0;">🔑 Password Reset</h2>
+              <span style="background:#7c3aed22;border:1px solid #7c3aed55;color:#a78bfa;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700;">OTP</span>
+            </div>
+            <hr style="border-color:rgba(255,255,255,.1);margin-bottom:20px"/>
+            <p style="font-size:14px;line-height:1.6;color:rgba(241,245,255,.8);">
+              We received a request to reset your password for the EduQuest SAT Practice Portal. Use the One-Time Password (OTP) below to verify your identity:
+            </p>
+            <div style="margin:24px 0;padding:20px;background:rgba(124,58,237,.15);border:2px dashed rgba(124,58,237,.5);border-radius:12px;text-align:center;">
+              <div style="font-size:36px;font-weight:800;letter-spacing:6px;color:#fff;">${otp}</div>
+            </div>
+            <p style="font-size:12px;color:rgba(241,245,255,.5);line-height:1.5;">
+              This OTP is valid for 10 minutes. If you did not request a password reset, please ignore this email.
+            </p>
+            <hr style="border-color:rgba(255,255,255,.08);margin:24px 0 12px"/>
+            <p style="color:rgba(241,245,255,.25);font-size:11px;text-align:center;margin:0;">EduQuest SAT Practice Portal</p>
+          </div>
+        `
+      });
+      return res.status(200).json({ ok: true, message: "OTP sent" });
+    }
+
+    // ── TYPE: forgot_password_admin_notice ───────────────────
+    if (body.type === "forgot_password_admin_notice") {
+      const { userEmail } = body;
+      await transport.sendMail({
+        from: `"${fromName}" <${fromEmail}>`,
+        to: adminEmail,
+        subject: `🔒 Password Reset Notice: ${userEmail}`,
+        html: `
+          <div style="font-family:sans-serif;max-width:540px;margin:0 auto;padding:28px;background:#0B1C3D;color:#f1f5ff;border-radius:16px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+              <h2 style="color:#f87171;margin:0;">🔒 Password Reset Notice</h2>
+              <span style="background:#ef444422;border:1px solid #ef444455;color:#f87171;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700;">ALERT</span>
+            </div>
+            <hr style="border-color:rgba(255,255,255,.1);margin-bottom:20px"/>
+            <p style="font-size:14px;line-height:1.6;color:rgba(241,245,255,.8);">
+              This is an automated notification to inform you that a user has successfully reset their password.
+            </p>
+            <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+              <tr>
+                <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;width:140px;">User Email</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;">${userEmail}</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;">Time</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;">${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST</td>
+              </tr>
+            </table>
+            <hr style="border-color:rgba(255,255,255,.08);margin:24px 0 12px"/>
+            <p style="color:rgba(241,245,255,.25);font-size:11px;text-align:center;margin:0;">EduQuest SAT Practice Portal</p>
+          </div>
+        `
+      });
+      return res.status(200).json({ ok: true, message: "Admin notice sent" });
+    }
+
     // ── TYPE: result ─────────────────────────────────────────
     if (body.type === "result") {
       const r = body.result;
