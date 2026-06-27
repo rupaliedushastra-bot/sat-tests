@@ -744,11 +744,74 @@
       .wrap { padding: 20px 14px 40px }
       .stat-card .num { font-size: 1.5rem }
       .history-card { overflow-x: auto }
+      .portal-switcher { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .portal-btn { justify-content: center; padding: 10px 12px; font-size: 0.85rem; }
     }
 
     @media (max-width: 480px) {
       .stats-row { grid-template-columns: repeat(2, 1fr) }
       .hdr-email { display: none }
+    }
+
+    /* Portal Switcher */
+    .portal-switcher {
+      display: flex;
+      gap: 12px;
+      margin: 10px 0 24px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      width: fit-content;
+    }
+    .portal-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .portal-btn.active {
+      background: #1a56db;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(26, 86, 219, 0.4);
+    }
+    .portal-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+    }
+    .tmua-locked-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 60px 24px;
+      text-align: center;
+      max-width: 550px;
+      margin: 40px auto;
+    }
+    .tmua-test-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tmua-test-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -773,44 +836,108 @@
     <h1 class="page-title">📊 My Dashboard</h1>
     <p class="page-sub" id="welcomeMsg">Your test performance at a glance</p>
 
-    <!-- Overview Stats -->
-    <div class="stats-row" id="overviewStats">
-      <div class="stat-card">
-        <div class="num" id="statTests">–</div>
-        <div class="lbl">Tests Taken</div>
-      </div>
-      <div class="stat-card">
-        <div class="num" id="statAvg">–</div>
-        <div class="lbl">Avg Score %</div>
-      </div>
-      <div class="stat-card">
-        <div class="num" id="statBest">–</div>
-        <div class="lbl">Best Score</div>
-      </div>
-      <div class="stat-card">
-        <div class="num" id="statQs">–</div>
-        <div class="lbl">Total Questions</div>
-      </div>
+    <div class="portal-switcher">
+      <button class="portal-btn active" id="btnStuPortalSat" onclick="switchStuPortal('sat')">📘 SAT Portal</button>
+      <button class="portal-btn" id="btnStuPortalTmua" onclick="switchStuPortal('tmua')">📐 TMUA Portal</button>
     </div>
 
-    <!-- Test History Section -->
-    <div class="section-hdr">
-      <h2 class="section-title">📝 Test History</h2>
-      <div class="combine-bar">
-        <span class="selected-count" id="selCount">0 selected</span>
-        <button class="btn btn-outline" id="selectAllBtn" onclick="toggleSelectAll()">Select All</button>
-        <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined Report</button>
+    <!-- SAT PORTAL CONTENT -->
+    <div id="satStuSection">
+      <!-- Overview Stats -->
+      <div class="stats-row" id="overviewStats">
+        <div class="stat-card">
+          <div class="num" id="statTests">–</div>
+          <div class="lbl">Tests Taken</div>
+        </div>
+        <div class="stat-card">
+          <div class="num" id="statAvg">–</div>
+          <div class="lbl">Avg Score %</div>
+        </div>
+        <div class="stat-card">
+          <div class="num" id="statBest">–</div>
+          <div class="lbl">Best Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="num" id="statQs">–</div>
+          <div class="lbl">Total Questions</div>
+        </div>
       </div>
+
+      <!-- Test History Section -->
+      <div class="section-hdr">
+        <h2 class="section-title">📝 Test History</h2>
+        <div class="combine-bar">
+          <span class="selected-count" id="selCount">0 selected</span>
+          <button class="btn btn-outline" id="selectAllBtn" onclick="toggleSelectAll()">Select All</button>
+          <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined Report</button>
+        </div>
+      </div>
+
+      <div class="history-card">
+        <div id="historyContent">
+          <div class="loading-spinner">Loading your tests...</div>
+        </div>
+      </div>
+
+      <!-- Combined Report (generated dynamically) -->
+      <div id="combinedReportArea"></div>
     </div>
 
-    <div class="history-card">
-      <div id="historyContent">
-        <div class="loading-spinner">Loading your tests...</div>
+    <!-- TMUA PORTAL CONTENT -->
+    <div id="tmuaStuSection" style="display:none">
+      <div id="tmuaLockedState" style="display:none" class="tmua-locked-box">
+        <div style="font-size: 3.5rem; margin-bottom: 16px;">🔒</div>
+        <h2 style="font-family: 'Syne', sans-serif; font-size: 1.6rem; margin-bottom: 12px;">TMUA Portal Locked</h2>
+        <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 24px;">
+          Your account currently does not have active access to TMUA diagnostic or topic tests. Please request access from your instructor or admin.
+        </p>
+        <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: #93c5fd; display: inline-block;">
+          Admin Email: <strong>rupali.eduquest@gmail.com</strong>
+        </div>
+      </div>
+
+      <div id="tmuaUnlockedState" style="display:none">
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px;">
+          <a href="../tmua/index.html" class="btn btn-primary" style="background: #1a56db; padding: 12px 24px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; text-decoration: none; border-radius: 8px; color: #fff;">🚀 Take TMUA Tests</a>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="num" id="stuTmuaTests">0</div>
+            <div class="lbl">Tests Taken</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="stuTmuaAvg" style="color:#34d399">0%</div>
+            <div class="lbl">Avg Score %</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="stuTmuaBest" style="color:#60a5fa">–</div>
+            <div class="lbl">Best TMUA Score</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="stuTmuaQs" style="color:#c084fc">0</div>
+            <div class="lbl">Total Questions</div>
+          </div>
+        </div>
+
+        <div class="section-hdr" style="margin-top: 32px;">
+          <h2 class="section-title">Completed TMUA Practice Exams</h2>
+        </div>
+
+        <div class="history-card" style="padding: 20px;" id="tmuaStuHistoryContainer">
+          <div style="text-align: center; padding: 40px; color: rgba(255,255,255,0.4);">No TMUA exams completed yet.</div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Combined Report (generated dynamically) -->
-    <div id="combinedReportArea"></div>
+  <!-- Modal for TMUA Report Review -->
+  <div class="modal-overlay" id="tmuaReportModal">
+    <div class="modal-box" style="max-width: 800px;">
+      <button class="modal-close" onclick="closeTmuaModal()">✕</button>
+      <h2 style="font-family: 'Syne', sans-serif; font-size: 1.8rem; text-align: center; margin-bottom: 20px;" id="tmuaModalTitle">TMUA Test Review</h2>
+      <div id="tmuaModalContent"></div>
+    </div>
   </div>
 
   <!-- ── Individual Test Detail Modal ────── -->
@@ -1140,6 +1267,7 @@
       if (allTests.length >= 2) {
         toggleSelectAll(true);
       }
+      loadTmuaStudentData(currentSession.user.email);
     }
 
     // ── Overview Stats ──────────────────────
@@ -1721,8 +1849,138 @@
         buttons.forEach(b => b.style.display = '');
       }).catch(err => {
         console.error('PDF generation failed', err);
+      }).catch(err => {
+        console.error('PDF generation failed', err);
         buttons.forEach(b => b.style.display = '');
       });
+    }
+
+    // ── TMUA Student Portal Logic ──────────────────────────
+    let stuTmuaReports = [];
+    let stuHasTmuaAccess = false;
+
+    function switchStuPortal(portal) {
+      document.getElementById('btnStuPortalSat').classList.toggle('active', portal === 'sat');
+      document.getElementById('btnStuPortalTmua').classList.toggle('active', portal === 'tmua');
+      document.getElementById('satStuSection').style.display = portal === 'sat' ? 'block' : 'none';
+      document.getElementById('tmuaStuSection').style.display = portal === 'tmua' ? 'block' : 'none';
+    }
+
+    async function loadTmuaStudentData(email) {
+      try {
+        const { data: profile } = await supabaseClient
+          .from('profiles')
+          .select('*')
+          .ilike('email', email)
+          .single();
+
+        const { data: reports } = await supabaseClient
+          .from('tmua_report')
+          .select('*')
+          .ilike('email', email)
+          .order('submit_time', { ascending: false });
+
+        stuTmuaReports = reports || [];
+        stuHasTmuaAccess = (profile && (profile.has_tmua_diag_access || profile.has_tmua_topic_access)) || stuTmuaReports.length > 0;
+        renderTmuaStuDashboard();
+      } catch (err) {
+        console.error('Error loading TMUA student data:', err);
+      }
+    }
+
+    function renderTmuaStuDashboard() {
+      const lockedEl = document.getElementById('tmuaLockedState');
+      const unlockedEl = document.getElementById('tmuaUnlockedState');
+      if (!stuHasTmuaAccess) {
+        lockedEl.style.display = 'block';
+        unlockedEl.style.display = 'none';
+        return;
+      }
+      lockedEl.style.display = 'none';
+      unlockedEl.style.display = 'block';
+
+      const n = stuTmuaReports.length;
+      document.getElementById('stuTmuaTests').textContent = n;
+      if (n === 0) {
+        document.getElementById('stuTmuaAvg').textContent = '0%';
+        document.getElementById('stuTmuaBest').textContent = '–';
+        document.getElementById('stuTmuaQs').textContent = '0';
+        document.getElementById('tmuaStuHistoryContainer').innerHTML = `<div style="text-align: center; padding: 40px; color: rgba(255,255,255,0.4);">No TMUA exams completed yet. Click 'Take TMUA Tests' above to begin!</div>`;
+        return;
+      }
+
+      const avgPct = Math.round(stuTmuaReports.reduce((s, r) => s + (r.pct || 0), 0) / n);
+      const bestScaledRaw = Math.max(...stuTmuaReports.map(r => Number(r.scaled || 0)));
+      const bestScaled = bestScaledRaw < 10 ? bestScaledRaw.toFixed(1) : bestScaledRaw;
+      const totalQs = stuTmuaReports.reduce((s, r) => s + (r.total || 0), 0);
+
+      document.getElementById('stuTmuaAvg').textContent = avgPct + '%';
+      document.getElementById('stuTmuaBest').textContent = bestScaled;
+      document.getElementById('stuTmuaQs').textContent = totalQs;
+
+      document.getElementById('tmuaStuHistoryContainer').innerHTML = stuTmuaReports.map((t, i) => {
+        const pct = t.pct || 0;
+        const date = t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '–';
+        return `
+          <div class="tmua-test-card" onclick="openTmuaTestDetail(${i})">
+            <div>
+              <div style="font-weight: 700; font-size: 1.05rem; color: #fff; margin-bottom: 4px;">${t.topic || 'TMUA Test'}</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4);">Submitted: ${date} &middot; Grade ${t.grade || '–'}</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="text-align: right;">
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.4); text-transform: uppercase;">Scaled Score</div>
+                <div style="font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; color: #6ee7b7;">${t.scaled || '–'}</div>
+              </div>
+              <span style="background: rgba(255,255,255,0.06); padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; color: #93c5fd;">${pct}%</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openTmuaTestDetail(idx) {
+      const t = stuTmuaReports[idx];
+      const pct = t.pct || 0;
+      const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
+      let details = [];
+      try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
+
+      document.getElementById('tmuaModalTitle').textContent = t.topic || 'TMUA Review';
+      document.getElementById('tmuaModalContent').innerHTML = `
+        <div style="text-align:center; margin-bottom: 24px;">
+          <div style="font-family:'Syne'; font-size:2.6rem; font-weight:800; color:${scoreColor};">${t.scaled || '–'}</div>
+          <div style="font-size:0.85rem; color:rgba(255,255,255,0.4);">TMUA Scaled Score &middot; Grade ${t.grade || '–'}</div>
+        </div>
+        <div style="display:flex; justify-content:space-around; background:rgba(255,255,255,0.03); padding:16px; border-radius:12px; margin-bottom:24px; text-align:center;">
+          <div><div style="font-weight:700; font-size:1.2rem; color:#6ee7b7;">${t.correct || 0}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Correct</div></div>
+          <div><div style="font-weight:700; font-size:1.2rem; color:#f87171;">${t.wrong || 0}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Wrong</div></div>
+          <div><div style="font-weight:700; font-size:1.2rem; color:#fbbf24;">${t.unattempted || 0}</div><div class="stat-lbl" style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Skipped</div></div>
+          <div><div style="font-weight:700; font-size:1.2rem; color:#93c5fd;">${pct}%</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Percentage</div></div>
+        </div>
+        ${details.length > 0 ? `
+          <h4 style="margin-bottom:12px; font-size:1rem; color:#fff;">Question by Question Breakdown</h4>
+          <div style="max-height: 400px; overflow-y: auto; display:flex; flex-direction:column; gap:8px;">
+            ${details.map(d => {
+              const isCorrect = d.status === 'correct';
+              const isSkipped = d.status === 'unattempted';
+              const color = isCorrect ? '#34d399' : isSkipped ? '#fbbf24' : '#f87171';
+              const icon = isCorrect ? '✅' : isSkipped ? '➖' : '❌';
+              return `
+                <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); padding:10px 14px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+                  <span style="font-weight:600; color:#fff;">Question ${d.id}</span>
+                  <span style="color:${color}; font-weight:600;">${icon} Your Answer: ${d.chosen || 'Skipped'} ${!isCorrect ? `(Correct: ${d.answer})` : ''}</span>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        ` : `<div style="text-align:center; color:rgba(255,255,255,0.4);">No detailed question logs available for this test.</div>`}
+      `;
+      document.getElementById('tmuaReportModal').classList.add('active');
+    }
+
+    function closeTmuaModal() {
+      document.getElementById('tmuaReportModal').classList.remove('active');
     }
   </script>
 </body>

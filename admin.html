@@ -571,7 +571,21 @@
 
     @media (max-width: 768px) {
       .admin-chart-grid { grid-template-columns: 1fr }
-      .src-stats { gap: 10px }
+      .hdr { padding: 0 16px; }
+      .brand { font-size: 0.95rem; }
+      .wrap { padding: 0 12px; margin: 16px auto; }
+      .portal-switcher { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .portal-btn { justify-content: center; padding: 10px 12px; font-size: 0.85rem; }
+      .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .stat { padding: 12px 14px; min-width: auto; }
+      .stat .num { font-size: 1.5rem; }
+      .tabs { flex-wrap: wrap; gap: 6px; }
+      .tab { flex: 1; text-align: center; padding: 8px 12px; font-size: 0.8rem; }
+      .user-card { flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px; }
+      .user-card > div:last-child { width: 100%; display: flex; flex-wrap: wrap; gap: 6px; }
+      .user-card > div:last-child button { flex: 1; min-width: 120px; text-align: center; justify-content: center; }
+      .src-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .src-stats { width: 100%; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 10px; gap: 10px; }
     }
 
     /* ── Modal (Individual Test Detail) ────── */
@@ -831,6 +845,60 @@
       from { opacity: 0; transform: translateY(16px) }
       to { opacity: 1; transform: translateY(0) }
     }
+
+    /* Portal Switcher */
+    .portal-switcher {
+      display: flex;
+      gap: 12px;
+      margin: 20px 0 24px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      width: fit-content;
+    }
+    .portal-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .portal-btn.active {
+      background: #1a56db;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(26, 86, 219, 0.4);
+    }
+    .portal-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+    }
+    .btn-approve-tmua { background: #059669; color: #fff; border: none; padding: 6px 14px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+    .btn-approve-tmua:hover { background: #10b981; }
+    .btn-revoke-tmua { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 6px 14px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .btn-revoke-tmua:hover { background: rgba(239, 68, 68, 0.3); }
+    
+    /* Student Report Cards in Admin */
+    .student-report-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.15s; }
+    .student-report-card:hover { border-color: rgba(255, 255, 255, 0.15); }
+    .src-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; background: rgba(255, 255, 255, 0.01); }
+    .src-info { display: flex; flex-direction: column; gap: 4px; }
+    .src-email { font-weight: 600; font-size: 0.95rem; color: #fff; }
+    .src-meta { font-size: 0.78rem; color: rgba(255, 255, 255, 0.4); }
+    .src-stats { display: flex; gap: 24px; align-items: center; }
+    .src-stat { text-align: center; }
+    .ss-num { font-weight: 700; font-size: 1.1rem; color: #fff; }
+    .ss-lbl { font-size: 0.7rem; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.05em; }
+    .src-toggle { font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); transition: transform 0.2s; }
+    .src-body { display: none; padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.06); background: rgba(0, 0, 0, 0.2); }
   </style>
 </head>
 
@@ -866,58 +934,105 @@
       <button class="logout" onclick="adminLogout()">Logout</button>
     </header>
     <div class="wrap">
-      <div class="stats">
-        <div class="stat">
-          <div class="num" id="statTotal">–</div>
-          <div class="lbl">Total Users</div>
+      <div class="portal-switcher">
+        <button class="portal-btn active" id="btnPortalSat" onclick="switchPortal('sat')">📘 SAT Portal</button>
+        <button class="portal-btn" id="btnPortalTmua" onclick="switchPortal('tmua')">📐 TMUA Portal</button>
+      </div>
+
+      <div id="satPortalSection">
+        <div class="stats">
+          <div class="stat">
+            <div class="num" id="statTotal">–</div>
+            <div class="lbl">Total Users</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="statSatApproved">–</div>
+            <div class="lbl">SAT Approved</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="statSatPending">–</div>
+            <div class="lbl">SAT Pending</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="statTopicApproved">–</div>
+            <div class="lbl">Topic Approved</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="statTopicPending">–</div>
+            <div class="lbl">Topic Pending</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="statActApproved">–</div>
+            <div class="lbl">ACT Approved</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="statActPending">–</div>
+            <div class="lbl">ACT Pending</div>
+          </div>
         </div>
-        <div class="stat">
-          <div class="num" id="statSatApproved">–</div>
-          <div class="lbl">SAT Approved</div>
+
+        <div class="tabs">
+          <div class="tab active" data-filter="pending" onclick="setFilter('pending')">Pending</div>
+          <div class="tab" data-filter="approved" onclick="setFilter('approved')">Approved</div>
+          <div class="tab" data-filter="all" onclick="setFilter('all')">All</div>
+          <div class="tab" data-filter="reports" onclick="setFilter('reports')">📊 Reports</div>
         </div>
-        <div class="stat">
-          <div class="num" id="statSatPending">–</div>
-          <div class="lbl">SAT Pending</div>
+
+        <!-- Users Section -->
+        <div id="usersSection" class="users-section active">
+          <input type="text" class="search" id="searchBox" placeholder="Search by email..." oninput="renderList()">
+          <div id="userList">
+            <div class="loading">Loading...</div>
+          </div>
         </div>
-        <div class="stat">
-          <div class="num" id="statTopicApproved">–</div>
-          <div class="lbl">Topic Approved</div>
-        </div>
-        <div class="stat">
-          <div class="num" id="statTopicPending">–</div>
-          <div class="lbl">Topic Pending</div>
-        </div>
-        <div class="stat">
-          <div class="num" id="statActApproved">–</div>
-          <div class="lbl">ACT Approved</div>
-        </div>
-        <div class="stat">
-          <div class="num" id="statActPending">–</div>
-          <div class="lbl">ACT Pending</div>
+
+        <!-- Reports Section -->
+        <div id="reportsSection" class="reports-section">
+          <div class="report-stat-row" id="reportOverviewStats"></div>
+          <input type="text" class="report-search" id="reportSearchBox" placeholder="Search student by email..." oninput="renderReportsList()">
+          <div id="reportsList">
+            <div class="loading">Loading reports...</div>
+          </div>
         </div>
       </div>
 
-      <div class="tabs">
-        <div class="tab active" data-filter="pending" onclick="setFilter('pending')">Pending</div>
-        <div class="tab" data-filter="approved" onclick="setFilter('approved')">Approved</div>
-        <div class="tab" data-filter="all" onclick="setFilter('all')">All</div>
-        <div class="tab" data-filter="reports" onclick="setFilter('reports')">📊 Reports</div>
-      </div>
-
-      <!-- Users Section -->
-      <div id="usersSection" class="users-section active">
-        <input type="text" class="search" id="searchBox" placeholder="Search by email..." oninput="renderList()">
-        <div id="userList">
-          <div class="loading">Loading...</div>
+      <div id="tmuaPortalSection" style="display:none">
+        <div class="stats">
+          <div class="stat">
+            <div class="num" id="tmuaStatTotal">–</div>
+            <div class="lbl">Total Users</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="tmuaStatDiagApproved">–</div>
+            <div class="lbl">Diag Approved</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="tmuaStatTopicApproved">–</div>
+            <div class="lbl">Topic Approved</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="tmuaStatReports">–</div>
+            <div class="lbl">TMUA Tests Taken</div>
+          </div>
         </div>
-      </div>
 
-      <!-- Reports Section -->
-      <div id="reportsSection" class="reports-section">
-        <div class="report-stat-row" id="reportOverviewStats"></div>
-        <input type="text" class="report-search" id="reportSearchBox" placeholder="Search student by email..." oninput="renderReportsList()">
-        <div id="reportsList">
-          <div class="loading">Loading reports...</div>
+        <div class="tabs">
+          <div class="tab active" data-tmua-tab="users" onclick="switchTmuaTab('users')">👥 Access Management</div>
+          <div class="tab" data-tmua-tab="reports" onclick="switchTmuaTab('reports')">📊 TMUA Reports</div>
+        </div>
+
+        <div id="tmuaUsersSection">
+          <input type="text" class="search" id="tmuaSearchBox" placeholder="Search users by email or name..." oninput="renderTmuaUsers()">
+          <div id="tmuaUserList">
+            <div class="loading">Loading TMUA users...</div>
+          </div>
+        </div>
+
+        <div id="tmuaReportsSection" style="display:none">
+          <input type="text" class="search" id="tmuaReportSearchBox" placeholder="Search TMUA reports by email..." oninput="renderTmuaReports()">
+          <div id="tmuaReportsList">
+            <div class="loading">Loading TMUA reports...</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1192,9 +1307,27 @@
         return;
       }
 
+      const { data: tmuaResults, error: errTmua } = await supabaseClient
+        .from('tmua_report')
+        .select('*')
+        .order('submit_time', { ascending: false });
+
+      if (errTmua) console.warn("Could not fetch tmua reports", errTmua);
+
+      allTmuaReports = tmuaResults || [];
+      groupedTmuaReports = {};
+      allTmuaReports.forEach(r => {
+        const e = (r.email || 'unknown').toLowerCase().trim();
+        if (!groupedTmuaReports[e]) groupedTmuaReports[e] = [];
+        groupedTmuaReports[e].push(r);
+      });
+
       allProfiles = data || [];
       updateStats();
       renderList();
+      updateTmuaStats();
+      renderTmuaUsers();
+      renderTmuaReports();
     }
 
     function updateStats() {
@@ -1972,6 +2105,174 @@
         console.error('PDF generation failed', err);
         buttons.forEach(b => b.style.display = '');
       });
+    }
+
+    // ── TMUA Portal Logic ──────────────────────────
+    let currentPortal = 'sat';
+    let currentTmuaTab = 'users';
+    let allTmuaReports = [];
+    let groupedTmuaReports = {};
+
+    function switchPortal(portal) {
+      currentPortal = portal;
+      document.getElementById('btnPortalSat').classList.toggle('active', portal === 'sat');
+      document.getElementById('btnPortalTmua').classList.toggle('active', portal === 'tmua');
+      document.getElementById('satPortalSection').style.display = portal === 'sat' ? 'block' : 'none';
+      document.getElementById('tmuaPortalSection').style.display = portal === 'tmua' ? 'block' : 'none';
+    }
+
+    function switchTmuaTab(tab) {
+      currentTmuaTab = tab;
+      document.querySelectorAll('[data-tmua-tab]').forEach(t => t.classList.toggle('active', t.dataset.tmuaTab === tab));
+      document.getElementById('tmuaUsersSection').style.display = tab === 'users' ? 'block' : 'none';
+      document.getElementById('tmuaReportsSection').style.display = tab === 'reports' ? 'block' : 'none';
+    }
+
+    function updateTmuaStats() {
+      const total = allProfiles.length;
+      const diagApproved = allProfiles.filter(p => p.has_tmua_diag_access).length;
+      const topicApproved = allProfiles.filter(p => p.has_tmua_topic_access).length;
+      document.getElementById('tmuaStatTotal').textContent = total;
+      document.getElementById('tmuaStatDiagApproved').textContent = diagApproved;
+      document.getElementById('tmuaStatTopicApproved').textContent = topicApproved;
+      document.getElementById('tmuaStatReports').textContent = allTmuaReports.length;
+    }
+
+    function renderTmuaUsers() {
+      const search = (document.getElementById('tmuaSearchBox')?.value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (search) {
+        list = list.filter(p => (p.email || '').toLowerCase().includes(search) || (p.name || '').toLowerCase().includes(search));
+      }
+      const container = document.getElementById('tmuaUserList');
+      if (!container) return;
+      if (list.length === 0) {
+        container.innerHTML = `<div class="empty">No users found.</div>`;
+        return;
+      }
+
+      container.innerHTML = list.map(p => {
+        return `
+          <div class="user-card">
+            <div class="user-info">
+              <div class="email">${p.email || '(no email)'}</div>
+              <div class="meta">
+                <span>Name: ${p.name || '–'}</span> &middot; 
+                <span>Registered: ${p.created_at ? new Date(p.created_at).toLocaleDateString('en-IN') : '–'}</span>
+              </div>
+              <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="badge ${p.has_tmua_diag_access ? 'granted' : 'pending'}">TMUA Diag: ${p.has_tmua_diag_access ? '✓ Granted' : '⏳ Pending'}</span>
+                <span class="badge ${p.has_tmua_topic_access ? 'granted' : 'pending'}">TMUA Topic: ${p.has_tmua_topic_access ? '✓ Granted' : '⏳ Pending'}</span>
+              </div>
+            </div>
+            <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 85px; text-align: right;">Diag Access:</span>
+                ${p.has_tmua_diag_access
+                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'diag', false)">Revoke</button>`
+                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'diag', true)">Approve</button>`
+                }
+              </div>
+              <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 85px; text-align: right;">Topic Access:</span>
+                ${p.has_tmua_topic_access
+                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'topic', false)">Revoke</button>`
+                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'topic', true)">Approve</button>`
+                }
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function setTmuaAccess(userId, type, value) {
+      const payload = {};
+      if (type === 'diag') payload.has_tmua_diag_access = value;
+      else if (type === 'topic') payload.has_tmua_topic_access = value;
+      
+      const { error } = await supabaseClient.from('profiles').update(payload).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) {
+        if (type === 'diag') p.has_tmua_diag_access = value;
+        else if (type === 'topic') p.has_tmua_topic_access = value;
+      }
+      updateTmuaStats();
+      renderTmuaUsers();
+    }
+
+    function renderTmuaReports() {
+      const search = (document.getElementById('tmuaReportSearchBox')?.value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedTmuaReports);
+      if (search) emails = emails.filter(e => e.includes(search));
+      const container = document.getElementById('tmuaReportsList');
+      if (!container) return;
+      if (emails.length === 0) {
+        container.innerHTML = `<div class="empty">No TMUA test reports found.</div>`;
+        return;
+      }
+
+      container.innerHTML = emails.map(email => {
+        const tests = groupedTmuaReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.pct || 0), 0) / totalTests);
+        const avgScaledRaw = tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / totalTests;
+        const avgScaled = avgScaledRaw < 10 ? avgScaledRaw.toFixed(1) : Math.round(avgScaledRaw);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+
+        return `
+        <div class="student-report-card" id="tmua-src-${safeEmail}">
+          <div class="src-header" onclick="toggleTmuaReportCard('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
+              <div class="src-stat"><div class="ss-num" style="color:#6ee7b7">${avgScaled}</div><div class="ss-lbl">TMUA Score</div></div>
+            </div>
+            <div class="src-toggle" id="tmua-toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="tmua-body-${safeEmail}">
+            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                  <th style="padding:8px 4px;">Topic</th>
+                  <th style="padding:8px 4px;">Date</th>
+                  <th style="padding:8px 4px;">Score</th>
+                  <th style="padding:8px 4px;">TMUA Scale</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tests.map(t => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:8px 4px; font-weight:600;">${t.topic || 'TMUA Test'}</td>
+                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN') : '–'}</td>
+                    <td style="padding:8px 4px; color:#fbbf24;">${t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
+                    <td style="padding:8px 4px; color:#6ee7b7; font-weight:700;">${t.scaled || '–'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleTmuaReportCard(safeEmail) {
+      const body = document.getElementById(`tmua-body-${safeEmail}`);
+      const toggle = document.getElementById(`tmua-toggle-${safeEmail}`);
+      if (body.style.display === 'block') {
+        body.style.display = 'none';
+        if (toggle) toggle.textContent = '▼';
+      } else {
+        body.style.display = 'block';
+        if (toggle) toggle.textContent = '▲';
+      }
     }
   </script>
 </body>
