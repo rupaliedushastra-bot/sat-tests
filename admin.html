@@ -2221,6 +2221,7 @@
         const avgScaledRaw = tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / totalTests;
         const avgScaled = avgScaledRaw < 10 ? avgScaledRaw.toFixed(1) : Math.round(avgScaledRaw);
         const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+        const p = allProfiles.find(x => (x.email && x.email.toLowerCase() === email) || (x.name && x.name.toLowerCase() === tests[0].name?.toLowerCase()));
 
         return `
         <div class="student-report-card" id="tmua-src-${safeEmail}">
@@ -2237,8 +2238,27 @@
             <div class="src-toggle" id="tmua-toggle-${safeEmail}">▼</div>
           </div>
           <div class="src-body" id="tmua-body-${safeEmail}">
+            ${p ? `
+            <div style="margin-bottom: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+              <div style="font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.7);">Manage TMUA Access:</div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Diag Access:</span>
+                ${p.has_tmua_diag_access
+                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'diag', false)">Revoke</button>`
+                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'diag', true)">Approve</button>`
+                }
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Topic Access:</span>
+                ${p.has_tmua_topic_access
+                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'topic', false)">Revoke</button>`
+                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'topic', true)">Approve</button>`
+                }
+              </div>
+            </div>
+            ` : ''}
             <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
-            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left; margin-bottom:14px;">
               <thead>
                 <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
                   <th style="padding:8px 4px;">Topic</th>
@@ -2258,6 +2278,8 @@
                 `).join('')}
               </tbody>
             </table>
+            <button class="btn-approve-tmua" style="background:#1a56db; font-size:0.82rem; padding:8px 16px;" onclick="generateAdminTmuaCombined('${safeEmail}', '${email}')">📊 Generate Combined TMUA Report</button>
+            <div id="admin-tmua-combined-${safeEmail}"></div>
           </div>
         </div>`;
       }).join('');
@@ -2273,6 +2295,87 @@
         body.style.display = 'block';
         if (toggle) toggle.textContent = '▲';
       }
+    }
+
+    async function generateAdminTmuaCombined(safeEmail, email) {
+      const tests = groupedTmuaReports[email];
+      if (!tests || tests.length === 0) return;
+
+      const container = document.getElementById(`admin-tmua-combined-${safeEmail}`);
+      const totCorrect = tests.reduce((s, t) => s + (t.correct || 0), 0);
+      const totWrong = tests.reduce((s, t) => s + (t.wrong || 0), 0);
+      const totSkipped = tests.reduce((s, t) => s + (t.unattempted || 0), 0);
+      const totQs = tests.reduce((s, t) => s + (t.total || 0), 0);
+      const avgPct = totQs > 0 ? Math.round(totCorrect / totQs * 100) : 0;
+      const avgScaledRaw = tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / tests.length;
+      const avgScaled = avgScaledRaw < 10 ? avgScaledRaw.toFixed(1) : Math.round(avgScaledRaw);
+      const overallGrade = avgPct >= 90 ? 'A+' : avgPct >= 80 ? 'A' : avgPct >= 70 ? 'B' : avgPct >= 60 ? 'C' : 'D';
+
+      const topicMap = {};
+      tests.forEach(t => {
+        const name = t.topic || 'Unknown';
+        if (!topicMap[name]) topicMap[name] = { correct: 0, wrong: 0, skipped: 0, total: 0, count: 0 };
+        topicMap[name].correct += (t.correct || 0);
+        topicMap[name].wrong += (t.wrong || 0);
+        topicMap[name].skipped += (t.unattempted || 0);
+        topicMap[name].total += (t.total || 0);
+        topicMap[name].count++;
+      });
+
+      const topics = Object.keys(topicMap);
+      const topicPcts = topics.map(k => topicMap[k].total > 0 ? Math.round(topicMap[k].correct / topicMap[k].total * 100) : 0);
+      const barColors = topicPcts.map(p => p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626');
+      const pieId = `tmua-ac-pie-${safeEmail}`;
+      const barId = `tmua-ac-bar-${safeEmail}`;
+
+      container.innerHTML = `
+        <div class="admin-combined" id="adminTmuaCombinedCard-${safeEmail}" style="margin-top:16px; padding:20px; background:rgba(255,255,255,0.03); border:1px solid rgba(5,150,105,0.3); border-radius:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+            <h4 style="margin-bottom:0; font-family:'Syne',sans-serif; font-size:1rem; color:#6ee7b7;">📊 Combined TMUA Report – ${email}</h4>
+            <button class="btn-sm" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; cursor:pointer; padding:6px 12px; border-radius:6px;" onclick="downloadAdminTmuaCombinedPDF('${safeEmail}', '${email}')">📄 Download PDF</button>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(100px, 1fr)); gap:10px; margin-bottom:20px; text-align:center;">
+            <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"><div style="font-weight:700; font-size:1.1rem; color:#6ee7b7;">${totCorrect}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Correct</div></div>
+            <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"><div style="font-weight:700; font-size:1.1rem; color:#f87171;">${totWrong}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Wrong</div></div>
+            <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"><div style="font-weight:700; font-size:1.1rem; color:#fbbf24;">${totSkipped}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Skipped</div></div>
+            <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"><div style="font-weight:700; font-size:1.1rem; color:#93c5fd;">${totQs}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Total Qs</div></div>
+            <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"><div style="font-weight:700; font-size:1.1rem; color:#34d399;">${avgPct}%</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Avg Score</div></div>
+            <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"><div style="font-weight:700; font-size:1.1rem; color:#6ee7b7;">${avgScaled}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">TMUA Scale</div></div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-bottom:16px;">
+            <div style="background:rgba(255,255,255,0.02); padding:14px; border-radius:8px;"><h5 style="margin-bottom:8px; font-size:0.85rem; color:rgba(255,255,255,0.7);">Score Breakdown</h5><canvas id="${pieId}" height="160"></canvas></div>
+            <div style="background:rgba(255,255,255,0.02); padding:14px; border-radius:8px;"><h5 style="margin-bottom:8px; font-size:0.85rem; color:rgba(255,255,255,0.7);">Topic Performance</h5><canvas id="${barId}" height="160"></canvas></div>
+          </div>
+        </div>
+      `;
+
+      if (adminCharts[pieId]) adminCharts[pieId].destroy();
+      if (adminCharts[barId]) adminCharts[barId].destroy();
+
+      adminCharts[pieId] = new Chart(document.getElementById(pieId), {
+        type: 'doughnut',
+        data: { labels: ['Correct', 'Wrong', 'Skipped'], datasets: [{ data: [totCorrect, totWrong, totSkipped], backgroundColor: ['#059669', '#dc2626', '#d97706'], borderWidth: 0 }] },
+        options: { plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.6)', font: { family: 'IBM Plex Sans', size: 11 } } } }, cutout: '60%' }
+      });
+
+      adminCharts[barId] = new Chart(document.getElementById(barId), {
+        type: 'bar',
+        data: { labels: topics.map(t => t.length > 14 ? t.substring(0, 12) + '…' : t), datasets: [{ label: 'Score %', data: topicPcts, backgroundColor: barColors.map(c => c + '33'), borderColor: barColors, borderWidth: 2, borderRadius: 4 }] },
+        options: { indexAxis: topics.length > 3 ? 'y' : 'x', plugins: { legend: { display: false } }, scales: { x: { max: 100, ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } }, y: { ticks: { color: 'rgba(255,255,255,0.6)', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } } } }
+      });
+    }
+
+    function downloadAdminTmuaCombinedPDF(safeEmail, email) {
+      const element = document.getElementById(`adminTmuaCombinedCard-${safeEmail}`);
+      if (!element) return;
+      const opt = {
+        margin: [10, 10, 10, 10],
+        filename: `TMUA_Combined_Report_${email.split('@')[0]}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0d0d14' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
     }
   </script>
 </body>

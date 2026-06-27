@@ -47,16 +47,21 @@ async function saveRegistration(studentData, examName) {
         return;
     }
 
+    const isTmua = (examName && examName.toUpperCase().includes('TMUA')) || 
+                   (window.location && window.location.pathname && window.location.pathname.toUpperCase().includes('TMUA'));
+    const table = isTmua ? 'tmua_user' : 'sat_topic_user';
+    const defaultTopic = isTmua ? 'TMUA Topic Test' : 'SAT Topic Test';
+
     const row = {
         name: studentData.name,
         email: studentData.email,
         phone: studentData.phone,
-        topic: examName || 'SAT Topic Test',
+        topic: examName || defaultTopic,
         created_at: new Date().toISOString()
     };
 
     try {
-        const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/sat_topic_user`, {
+        const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${table}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -68,10 +73,10 @@ async function saveRegistration(studentData, examName) {
         });
 
         if (res.ok || res.status === 201) {
-            console.log('✅ Registration saved to Supabase successfully');
+            console.log(`✅ Registration saved to ${table} successfully`);
         } else {
             const errText = await res.text();
-            console.error('❌ Supabase registration save failed:', res.status, errText);
+            console.error(`❌ Supabase registration save to ${table} failed:`, res.status, errText);
         }
     } catch (err) {
         console.error('❌ Supabase registration network error:', err);
@@ -86,12 +91,17 @@ async function saveToSupabase(result) {
         return { ok: false, msg: 'Supabase not configured' };
     }
 
-    // Row to insert into sat_topic_report table
+    const isTmua = (result && result.examName && result.examName.toUpperCase().includes('TMUA')) || 
+                   (window.location && window.location.pathname && window.location.pathname.toUpperCase().includes('TMUA'));
+    const table = isTmua ? 'tmua_report' : 'sat_topic_report';
+    const defaultTopic = isTmua ? 'TMUA Topic Test' : 'SAT Topic Test';
+
+    // Row to insert into report table
     const row = {
         name:         result.student.name,
         email:        result.student.email,
         phone:        result.student.phone || '',
-        topic:        result.examName || 'SAT Topic Test',
+        topic:        result.examName || defaultTopic,
         topic_number: result.topicNumber || 1,
         correct:      result.correct,
         wrong:        result.wrong,
@@ -109,7 +119,7 @@ async function saveToSupabase(result) {
     };
 
     try {
-        const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/sat_topic_report`, {
+        const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${table}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
