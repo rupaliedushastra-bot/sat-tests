@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard – EduQuest SAT</title>
+  <meta name="description" content="View your SAT topic test history, individual results, and combined performance reports.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: #0d0d14;
+      color: #fff;
+      min-height: 100vh
+    }
+
+    /* ── Header ────────────────────────────── */
+    .hdr {
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      position: sticky;
+      top: 0;
+      background: rgba(13, 13, 20, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100
+    }
+
+    .brand {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .brand-pill {
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 0.72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .hdr-right {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .hdr-email {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.82rem
+    }
+
+    .hdr-link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 5px 12px;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      border-radius: 6px;
+      transition: all 0.2s
+    }
+
+    .hdr-link:hover {
+      background: rgba(96, 165, 250, 0.1);
+      border-color: #60a5fa
+    }
+
+    .logout-btn {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.5);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s
+    }
+
+    .logout-btn:hover {
+      border-color: #dc2626;
+      color: #f87171
+    }
+
+    /* ── Main Wrapper ──────────────────────── */
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 20px 60px
+    }
+
+    .page-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 6px
+    }
+
+    .page-sub {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.88rem;
+      margin-bottom: 28px
+    }
+
+    /* ── Stats Row ─────────────────────────── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.2s
+    }
+
+    .stat-card:hover {
+      border-color: rgba(124, 58, 237, 0.4);
+      transform: translateY(-2px)
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #7c3aed, #a78bfa);
+      opacity: 0.7
+    }
+
+    .stat-card .num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .stat-card .lbl {
+      font-size: 0.74rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 4px
+    }
+
+    /* ── Section Headers ───────────────────── */
+    .section-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700
+    }
+
+    /* ── Test History Table ─────────────────── */
+    .history-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 32px
+    }
+
+    .history-table {
+      width: 100%;
+      border-collapse: collapse
+    }
+
+    .history-table thead th {
+      text-align: left;
+      padding: 14px 16px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      white-space: nowrap
+    }
+
+    .history-table tbody tr {
+      cursor: pointer;
+      transition: background 0.15s
+    }
+
+    .history-table tbody tr:hover {
+      background: rgba(124, 58, 237, 0.08)
+    }
+
+    .history-table td {
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      white-space: nowrap
+    }
+
+    .history-table .topic-cell {
+      font-weight: 600;
+      white-space: normal;
+      min-width: 140px
+    }
+
+    .score-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600
+    }
+
+    .score-pill.high { background: rgba(5, 150, 105, 0.15); color: #6ee7b7; border: 1px solid rgba(5, 150, 105, 0.3) }
+    .score-pill.mid { background: rgba(217, 119, 6, 0.15); color: #fbbf24; border: 1px solid rgba(217, 119, 6, 0.3) }
+    .score-pill.low { background: rgba(220, 38, 38, 0.15); color: #f87171; border: 1px solid rgba(220, 38, 38, 0.3) }
+
+    .grade-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif
+    }
+
+    .grade-badge.a { background: rgba(5, 150, 105, 0.2); color: #6ee7b7 }
+    .grade-badge.b { background: rgba(96, 165, 250, 0.2); color: #93c5fd }
+    .grade-badge.c { background: rgba(217, 119, 6, 0.2); color: #fbbf24 }
+    .grade-badge.d { background: rgba(220, 38, 38, 0.2); color: #f87171 }
+
+    .check-col { width: 40px; text-align: center }
+    .check-col input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #7c3aed;
+      cursor: pointer
+    }
+
+    /* ── Combined Report Controls ──────────── */
+    .combine-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35)
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none
+    }
+
+    .btn-outline {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.7)
+    }
+
+    .btn-outline:hover {
+      border-color: #7c3aed;
+      color: #fff
+    }
+
+    .btn-green {
+      background: linear-gradient(135deg, #059669, #047857);
+      color: #fff
+    }
+
+    .btn-green:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.35)
+    }
+
+    .selected-count {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.45)
+    }
+
+    /* ── Combined Report Card ──────────────── */
+    .combined-report {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 32px;
+      animation: fadeSlide 0.4s ease
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(16px) }
+      to { opacity: 1; transform: translateY(0) }
+    }
+
+    .combined-report .report-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 4px
+    }
+
+    .combined-report .report-sub {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px
+    }
+
+    .combined-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px
+    }
+
+    .cstat {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center
+    }
+
+    .cstat .cn {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800
+    }
+
+    .cstat .cn.green { color: #6ee7b7 }
+    .cstat .cn.red { color: #f87171 }
+    .cstat .cn.amber { color: #fbbf24 }
+    .cstat .cn.blue { color: #93c5fd }
+    .cstat .cn.purple { color: #a78bfa }
+
+    .cstat .cl {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-top: 3px
+    }
+
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px
+    }
+
+    .chart-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 20px
+    }
+
+    .chart-box h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, 0.8)
+    }
+
+    /* ── Topic Breakdown Table ─────────────── */
+    .topic-breakdown {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px
+    }
+
+    .topic-breakdown th {
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .topic-breakdown td {
+      padding: 10px 12px;
+      font-size: 0.84rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+    }
+
+    .perf-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      min-width: 80px
+    }
+
+    .perf-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.6s ease
+    }
+
+    /* ── Modal (Individual Test Detail) ────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px
+    }
+
+    .modal-overlay.open {
+      display: flex
+    }
+
+    .modal-box {
+      background: #13131e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 28px;
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      animation: fadeSlide 0.3s ease
+    }
+
+    .modal-box::-webkit-scrollbar { width: 6px }
+    .modal-box::-webkit-scrollbar-track { background: transparent }
+    .modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px }
+
+    .modal-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px
+    }
+
+    .modal-hdr h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+    .modal-close {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s
+    }
+
+    .modal-close:hover {
+      background: rgba(220, 38, 38, 0.2);
+      border-color: rgba(220, 38, 38, 0.4)
+    }
+
+    .modal-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 20px
+    }
+
+    .modal-stat {
+      text-align: center;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .modal-stat .ms-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800
+    }
+
+    .modal-stat .ms-lbl {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-top: 2px
+    }
+
+    .modal-chart-wrap {
+      margin-bottom: 20px;
+      max-width: 260px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .q-review-hdr {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+    }
+
+    .q-item {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.84rem
+    }
+
+    .q-item .q-id {
+      font-weight: 600;
+      margin-right: 6px
+    }
+
+    .q-item .q-status {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      margin-left: 6px
+    }
+
+    .q-status.correct { background: rgba(5,150,105,0.15); color: #6ee7b7 }
+    .q-status.wrong { background: rgba(220,38,38,0.15); color: #f87171 }
+    .q-status.unattempted { background: rgba(217,119,6,0.15); color: #fbbf24 }
+
+    .q-detail {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5)
+    }
+
+    .q-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .q-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .q-card-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 12px;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+    .q-image-container {
+      text-align: center;
+      margin-bottom: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .q-image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .q-card-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .q-card-opt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .q-card-opt-letter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      font-weight: 600;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+    .q-card-opt.correct {
+      border-color: #059669;
+      background: rgba(5, 150, 105, 0.1);
+      color: #6ee7b7;
+    }
+    .q-card-opt.correct .q-card-opt-letter {
+      background: #059669;
+      color: #fff;
+    }
+    .q-card-opt.wrong-chosen {
+      border-color: #dc2626;
+      background: rgba(220, 38, 38, 0.1);
+      color: #f87171;
+    }
+    .q-card-opt.wrong-chosen .q-card-opt-letter {
+      background: #dc2626;
+      color: #fff;
+    }
+    .q-card-exp {
+      background: rgba(124, 58, 237, 0.05);
+      border-left: 3px solid #7c3aed;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.8rem;
+      color: #c084fc;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    /* ── Empty / Loading ───────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: rgba(255, 255, 255, 0.35)
+    }
+
+    .empty-state .empty-icon {
+      font-size: 3rem;
+      margin-bottom: 12px
+    }
+
+    .empty-state h3 {
+      font-family: 'Syne', sans-serif;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 8px
+    }
+
+    .loading-spinner {
+      text-align: center;
+      padding: 60px;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    .loading-spinner::after {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border: 3px solid rgba(124, 58, 237, 0.2);
+      border-top-color: #7c3aed;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-top: 12px
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg) }
+    }
+
+    /* ── Responsive ────────────────────────── */
+    @media (max-width: 768px) {
+      .charts-grid { grid-template-columns: 1fr }
+      .modal-stats { grid-template-columns: repeat(2, 1fr) }
+      .history-table { font-size: 0.8rem }
+      .history-table td, .history-table th { padding: 10px 10px }
+      .hdr { padding: 0 14px }
+      .page-title { font-size: 1.4rem }
+      .wrap { padding: 20px 14px 40px }
+      .stat-card .num { font-size: 1.5rem }
+      .history-card { overflow-x: auto }
+      .portal-switcher { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .portal-btn { justify-content: center; padding: 10px 12px; font-size: 0.85rem; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr) }
+      .hdr-email { display: none }
+    }
+
+    /* Portal Switcher */
+    .portal-switcher {
+      display: flex;
+      gap: 12px;
+      margin: 10px 0 24px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      width: fit-content;
+    }
+    .portal-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .portal-btn.active {
+      background: #1a56db;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(26, 86, 219, 0.4);
+    }
+    .portal-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+    }
+    .tmua-locked-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 60px 24px;
+      text-align: center;
+      max-width: 550px;
+      margin: 40px auto;
+    }
+    .tmua-test-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tmua-test-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Header ──────────────────────────── -->
+  <header class="hdr">
+    <div class="brand">
+      <span>📝</span><span>EduQuest</span>
+      <span class="brand-pill">Dashboard</span>
+    </div>
+    <div class="hdr-right">
+      <span class="hdr-email" id="userEmail"></span>
+      <a href="index.html" class="hdr-link">🏠 Home</a>
+      <button class="logout-btn" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <!-- ── Main Content ────────────────────── -->
+  <div class="wrap" id="mainContent" style="display:none">
+    <h1 class="page-title">📊 My Dashboard</h1>
+    <p class="page-sub" id="welcomeMsg">Your test performance at a glance</p>
+
+    <div class="portal-switcher" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+      <button class="portal-btn active" id="btnStuPortalAll" onclick="switchStuPortal('all')">🌐 All Exams</button>
+      <button class="portal-btn" id="btnStuPortalMock" onclick="switchStuPortal('mock')">📘 SAT Mock</button>
+      <button class="portal-btn" id="btnStuPortalTopic" onclick="switchStuPortal('topic')">📙 SAT Topic</button>
+      <button class="portal-btn" id="btnStuPortalTmua" onclick="switchStuPortal('tmua')">📐 TMUA</button>
+      <button class="portal-btn" id="btnStuPortalUcat" onclick="switchStuPortal('ucat')">🩺 UCAT</button>
+      <button class="portal-btn" id="btnStuPortalAct" onclick="switchStuPortal('act')">📝 ACT</button>
+      <button class="portal-btn" id="btnStuPortalAp" onclick="switchStuPortal('ap')">🎓 AP</button>
+    </div>
+
+    <!-- UNIFIED STUDENT DASHBOARD CONTENT -->
+    <div id="stuDashboardContent">
+      <!-- Locked State Box -->
+      <div id="stuLockedState" style="display:none" class="tmua-locked-box">
+        <div style="font-size: 3.5rem; margin-bottom: 16px;">🔒</div>
+        <h2 style="font-family: 'Syne', sans-serif; font-size: 1.6rem; margin-bottom: 12px;" id="stuLockedTitle">Portal Locked</h2>
+        <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 24px;" id="stuLockedText">
+          Your account currently does not have active access to these practice tests. Please request access from your instructor or admin.
+        </p>
+        <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: #93c5fd; display: inline-block;">
+          Admin Email: <strong>rupali.eduquest@gmail.com</strong>
+        </div>
+      </div>
+
+      <!-- Unlocked / Active State -->
+      <div id="stuActiveState">
+        <!-- Action Bar (Take Tests button) -->
+        <div id="stuActionBar" style="display:none; gap:14px; flex-wrap:wrap; margin-bottom:24px;"></div>
+
+        <!-- Overview Stats -->
+        <div class="stats-row" id="overviewStats">
+          <div class="stat-card">
+            <div class="num" id="statTests">–</div>
+            <div class="lbl">Tests Taken</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="statAvg" style="color:#34d399">–</div>
+            <div class="lbl">Avg Score %</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="statBest" style="color:#60a5fa">–</div>
+            <div class="lbl">Best Score</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="statQs" style="color:#c084fc">–</div>
+            <div class="lbl">Total Questions</div>
+          </div>
+        </div>
+
+        <!-- Test History Section -->
+        <div class="section-hdr">
+          <h2 class="section-title" id="historySectionTitle">📝 Test History</h2>
+          <div class="combine-bar">
+            <span class="selected-count" id="selCount">0 selected</span>
+            <button class="btn btn-outline" id="selectAllBtn" onclick="toggleSelectAll()">Select All</button>
+            <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined Report</button>
+          </div>
+        </div>
+
+        <div class="history-card">
+          <div id="historyContent">
+            <div class="loading-spinner">Loading your tests...</div>
+          </div>
+        </div>
+
+        <!-- Combined Report (generated dynamically) -->
+        <div id="combinedReportArea"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Individual Test Detail Modal ────── -->
+  <div class="modal-overlay" id="testModal">
+    <div class="modal-box" id="modalContent">
+      <!-- Filled dynamically -->
+    </div>
+  </div>
+
+  <!-- ── Scripts ─────────────────────────── -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script>
+    const supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+    const LETTERS = ['A', 'B', 'C', 'D'];
+    let allTests = [];
+    let selectedIds = new Set();
+    let currentSession = null;
+    let modalChart = null;
+
+    // ── Topic to Question file mapping ─────
+    const TOPIC_QUESTIONS_MAP = {
+      'Words In Context': { q: '../topic_words_in_context/questions.js', dir: '../topic_words_in_context' },
+      'Structure And Purpose': { q: '../topic_structure_and_purpose/questions.js', dir: '../topic_structure_and_purpose' },
+      'Cross-Text Connections': { q: '../topic_cross_text_connections/questions.js', dir: '../topic_cross_text_connections' },
+      'Central Ideas And Details': { q: '../topic_central_ideas_and_details/questions.js', dir: '../topic_central_ideas_and_details' },
+      'Textual Evidence': { q: '../topic_textual_evidence/questions.js', dir: '../topic_textual_evidence' },
+      'Inferences': { q: '../topic_inferences/questions.js', dir: '../topic_inferences' },
+      'Linear Equation In One Variable & Linear Equation In Two Variables': { q: '../topic_linear_equation_in_one_variable_linear_equation_in_two_variables/questions.js', dir: '../topic_linear_equation_in_one_variable_linear_equation_in_two_variables' },
+      'Linear Functions': { q: '../topic_linear_functions/questions.js', dir: '../topic_linear_functions' },
+      'Systems Of Two Linear Equations In Two Variables': { q: '../topic_systems_of_two_linear_equations_in_two_variables/questions.js', dir: '../topic_systems_of_two_linear_equations_in_two_variables' },
+      'Linear Inequalities In One Or Two Variables': { q: '../topic_linear_inequalities_in_one_or_two_variables/questions.js', dir: '../topic_linear_inequalities_in_one_or_two_variables' },
+      'Equivalent Expressions': { q: '../topic_equivalent_expressions/questions.js', dir: '../topic_equivalent_expressions' },
+      'Nonlinear Functions': { q: '../topic_nonlinear_functions/questions.js', dir: '../topic_nonlinear_functions' },
+      'Ratios, Rates, Proportional Relationships, And Units': { q: '../topic_ratios_rates_proportional_relationships_and_units/questions.js', dir: '../topic_ratios_rates_proportional_relationships_and_units' },
+      'Percentages': { q: '../topic_percentages/questions.js', dir: '../topic_percentages' },
+      'Two-Variable Data: Models And Scatter Plots': { q: '../topic_two_variable_data_models_and_scatter_plots/questions.js', dir: '../topic_two_variable_data_models_and_scatter_plots' },
+      'Probability And Conditional Probability': { q: '../topic_probability_and_conditional_probability/questions.js', dir: '../topic_probability_and_conditional_probability' },
+      'Inference From Sample Statistics And Margin Of Error': { q: '../topic_inference_from_sample_statistics_and_margin_of_error/questions.js', dir: '../topic_inference_from_sample_statistics_and_margin_of_error' },
+      'Area And Volume': { q: '../topic_area_and_volume/questions.js', dir: '../topic_area_and_volume' },
+      'Lines, Angles, And Triangles': { q: '../topic_lines_angles_and_triangles/questions.js', dir: '../topic_lines_angles_and_triangles' },
+      'Right Triangles And Trigonometry': { q: '../topic_right_triangles_and_trigonometry/questions.js', dir: '../topic_right_triangles_and_trigonometry' },
+      'Circles': { q: '../topic_circles/questions.js', dir: '../topic_circles' },
+      'Information And Ideas': { q: '../topic_information_and_ideas/questions.js', dir: '../topic_information_and_ideas' },
+      'Expression Of Ideas': { q: '../topic_expression_of_ideas/questions.js', dir: '../topic_expression_of_ideas' },
+      'Craft And Structure': { q: '../topic_craft_and_structure/questions.js', dir: '../topic_craft_and_structure' },
+      'Reading Comprehension': { q: '../questions.js', dir: '..' },
+      'Vocabulary in Context': { q: '../topic2/questions2.js', dir: '../topic2' },
+      'Grammar & Usage': { q: '../topic-3/questions.js', dir: '../topic-3' },
+      'Sentence Completion': { q: '../topic4/questions.js', dir: '../topic4' },
+      'Rhetorical Skills': { q: '../topic5/questions.js', dir: '../topic5' },
+      'Critical Thinking & Data': { q: '../test_6/questions.js', dir: '../test_6' },
+      'Paired Passages': { q: '../topic_7/questions.js', dir: '../topic_7' },
+      'Research Notes Questions': { q: '../topic_8/questions.js', dir: '../topic_8' },
+      'Numbers & Operations': { q: '../topic_9/questions.js', dir: '../topic_9' },
+      'Linear Algebra': { q: '../topic_10/questions.js', dir: '../topic_10' },
+      'Functions & Graphs': { q: '../topic_11/questions.js', dir: '../topic_11' },
+      'Quadratics & Polynomials': { q: '../topic_12/questions.js', dir: '../topic_12' },
+      'Geometry': { q: '../topic_13/questions.js', dir: '../topic_13' },
+      'Trigonometry': { q: '../topic_14/questions.js', dir: '../topic_14' },
+      'Statistics & Probability': { q: '../topic_15/questions.js', dir: '../topic_15' },
+      'Advanced Math': { q: '../topic_16/questions.js', dir: '../topic_16' },
+      'Words in Context': { q: '../wic/questions_wic.js', dir: '../wic' },
+      'Text Structure and Purpose': { q: '../text_structure_purpose/questions_sp.js', dir: '../text_structure_purpose' },
+      'Central Ideas and Details': { q: '../Central_Ideas_and_Details/questions_cid.js', dir: '../Central_Ideas_and_Details' },
+      'PDF - Central Ideas and Details': { q: '../pdf_Central_Ideas_and_Details/questions.js', dir: '../pdf_Central_Ideas_and_Details' },
+      'PDF - Command of Evidence Textual': { q: '../pdf_Command_of_Evidence_Textual/questions.js', dir: '../pdf_Command_of_Evidence_Textual' },
+      'PDF - Inferences': { q: '../pdf_Inferences/questions.js', dir: '../pdf_Inferences' },
+      'PDF - Words in Context': { q: '../pdf_Words_in_Context/questions.js', dir: '../pdf_Words_in_Context' },
+      'PDF - Text Structure and Purpose': { q: '../pdf_Text_Structure_and_Purpose/questions.js', dir: '../pdf_Text_Structure_and_Purpose' },
+      'PDF - Cross-Text Connections': { q: '../pdf_Cross_Text_Connections/questions.js', dir: '../pdf_Cross_Text_Connections' },
+      'PDF - Rhetorical Synthesis': { q: '../pdf_Rhetorical_Synthesis/questions.js', dir: '../pdf_Rhetorical_Synthesis' },
+      'PDF - Transitions': { q: '../pdf_Transitions/questions.js', dir: '../pdf_Transitions' },
+      'PDF - Boundaries': { q: '../pdf_Boundaries/questions.js', dir: '../pdf_Boundaries' },
+      'PDF - Form, Structure, and Sense': { q: '../pdf_Form_Structure_and_Sense/questions.js', dir: '../pdf_Form_Structure_and_Sense' },
+      'Exponents & Square Roots': { q: '../Exponents_and_Square_Roots/questions.js', dir: '../Exponents_and_Square_Roots' },
+      'Polynomials': { q: '../Polynomials/questions.js', dir: '../Polynomials' },
+      'Quadratic Equations': { q: '../Quadratic_Equations/questions.js', dir: '../Quadratic_Equations' },
+      'Functions & Parabola': { q: '../Functions_and_Parabola/questions.js', dir: '../Functions_and_Parabola' },
+      'Quadratic Equations (Set 2)': { q: '../Quadratic_Equations_2/questions.js', dir: '../Quadratic_Equations_2' },
+      'Command of Evidence: Textual': { q: '../coe_textual/questions_coe_textual.js', dir: '../coe_textual' },
+      'Inferences': { q: '../inferences/questions.js', dir: '../inferences' },
+      'Verb Tense and Forms': { q: '../verbs/questions.js', dir: '../verbs' },
+      'Modifiers': { q: '../modifiers/questions.js', dir: '../modifiers' },
+      'Plural Possessives': { q: '../plural_poss/questions.js', dir: '../plural_poss' },
+      'Transitions': { q: '../transition/questions.js', dir: '../transition' },
+      'Rhetorics': { q: '../rhetorics/questions.js', dir: '../rhetorics' },
+      'SAT Diagnostic Test': { q: '../exam_sat_diag/questions.js', dir: '../exam_sat_diag' },
+      'Lines, Angles & Triangles': { q: '../angles&triangles/questions.js', dir: '../angles&triangles' },
+      'Angles': { q: '../angles/questions.js', dir: '../angles' },
+      'Mensuration & Geometry': { q: '../mensuration/questions.js', dir: '../mensuration' },
+      'Trigonometry': { q: '../Trigonometry/questions.js', dir: '../Trigonometry' },
+      'Percentage': { q: '../percentage/questions.js', dir: '../percentage' },
+      'Ratio & Proportion': { q: '../ratio&proportion/questions.js', dir: '../ratio&proportion' },
+      'Mixed Reading Practice 1': { q: '../new_test_1/questions_rw.js', dir: '../new_test_1' },
+      'Mixed Math Practice 1': { q: '../new_test_1/questions_math.js', dir: '../new_test_1' },
+      'Mixed Reading Practice 2': { q: '../new_test_2/questions_rw.js', dir: '../new_test_2' },
+      'Mixed Math Practice 2': { q: '../new_test_2/questions_math.js', dir: '../new_test_2' },
+      'Mixed Reading Practice 3': { q: '../new_test_3/questions_rw.js', dir: '../new_test_3' },
+      'Mixed Math Practice 3': { q: '../new_test_3/questions_math.js', dir: '../new_test_3' },
+      'SAT Mock Test': { q: './questions.js', dir: '.' },
+      'Mock SAT Test': { q: './questions.js', dir: '.' },
+      'Mock SAT Test 1': { q: './questions.js', dir: '.' },
+      'Mock SAT Test 2': { q: './questions2.js', dir: '.' },
+      'Practice Exam 1': { q: './questions.js', dir: '.' },
+      'Practice Exam 2': { q: './questions2.js', dir: '.' },
+      'Practice Exam 3': { q: './test_3/questions3.js', dir: './test_3' },
+      'Diagnostic Test 4': { q: './test_4/questions4.js', dir: './test_4' },
+      'Practice Test 5': { q: './test_5/questions5.js', dir: './test_5' },
+      'Practice Test 6': { q: './test_6/questions6.js', dir: './test_6' },
+      'SAT Prep Test 1 – R&W': { q: './test_7/questions7.js', dir: './test_7' },
+      'Practice Test 8': { q: './test_8/questions8.js', dir: './test_8' },
+      'Practice Test 9': { q: './test_9/questions9.js', dir: './test_9' },
+      'Practice Test 10': { q: './test_10/questions10.js', dir: './test_10' },
+      'Practice Test 11': { q: './test_11/questions11.js', dir: './test_11' },
+      'Practice Test 12': { q: './test_12/questions12.js', dir: './test_12' },
+      'Practice Test 13': { q: './test_13/questions13.js', dir: './test_13' },
+      'Digital SAT – Practice Exam 1': { q: './questions.js', dir: '.' },
+      'Digital SAT – Practice Exam 2': { q: './questions2.js', dir: '.' },
+      'Digital SAT – Practice Exam 3': { q: './test_3/questions3.js', dir: './test_3' },
+      'Digital SAT – Diagnostic Test 4': { q: './test_4/questions4.js', dir: './test_4' },
+      'Digital SAT – Practice Test 5': { q: './test_5/questions5.js', dir: './test_5' },
+      'Digital SAT – Practice Test 6': { q: './test_6/questions6.js', dir: './test_6' },
+      'Digital SAT – SAT Prep Test 1 – R&W': { q: './test_7/questions7.js', dir: './test_7' },
+      'Digital SAT – Practice Test 8': { q: './test_8/questions8.js', dir: './test_8' },
+      'Digital SAT – Practice Test 9': { q: './test_9/questions9.js', dir: './test_9' },
+      'Digital SAT – Practice Test 10': { q: './test_10/questions10.js', dir: './test_10' },
+      'Digital SAT – Practice Test 11': { q: './test_11/questions11.js', dir: './test_11' },
+      'Digital SAT – Practice Test 12': { q: './test_12/questions12.js', dir: './test_12' },
+      'Digital SAT – Practice Test 13': { q: './test_13/questions13.js', dir: './test_13' }
+    };
+
+    const loadedQuestionsCache = {};
+    const loadedImagesCache = {};
+
+    function getTopicMapping(topicName) {
+      if (!topicName) return null;
+      const clean = topicName.trim().toLowerCase();
+      
+      // 1. Direct or substring match against TOPIC_QUESTIONS_MAP keys
+      let key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => {
+        const kClean = k.trim().toLowerCase();
+        return kClean === clean || clean.includes(kClean) || kClean.includes(clean);
+      });
+      if (key) return { key, ...TOPIC_QUESTIONS_MAP[key] };
+
+      const isMockDir = typeof TOPIC_QUESTIONS_MAP['Grammar & Usage'] !== 'undefined' && TOPIC_QUESTIONS_MAP['Grammar & Usage'].q.startsWith('../');
+      const topicPrefix = isMockDir ? '../' : './';
+      const mockPrefix = isMockDir ? './' : './mock/';
+
+      // 2. Fallback: match "topic X", "topic-X", "topic_X" (e.g. Topic-14 -> topic_14)
+      const topicMatch = clean.match(/topic[\s-_]*([0-9]+)/);
+      if (topicMatch && topicMatch[1]) {
+        const num = parseInt(topicMatch[1], 10);
+        const numMap = {
+          1: { q: topicPrefix + 'questions.js', dir: topicPrefix.replace(/\/$/, '') || '.' },
+          2: { q: topicPrefix + 'topic2/questions2.js', dir: topicPrefix + 'topic2' },
+          3: { q: topicPrefix + 'topic-3/questions.js', dir: topicPrefix + 'topic-3' },
+          4: { q: topicPrefix + 'topic4/questions.js', dir: topicPrefix + 'topic4' },
+          5: { q: topicPrefix + 'topic5/questions.js', dir: topicPrefix + 'topic5' },
+          6: { q: topicPrefix + 'test_6/questions.js', dir: topicPrefix + 'test_6' },
+          7: { q: topicPrefix + 'topic_7/questions.js', dir: topicPrefix + 'topic_7' },
+          8: { q: topicPrefix + 'topic_8/questions.js', dir: topicPrefix + 'topic_8' },
+          9: { q: topicPrefix + 'topic_9/questions.js', dir: topicPrefix + 'topic_9' },
+          10: { q: topicPrefix + 'topic_10/questions.js', dir: topicPrefix + 'topic_10' },
+          11: { q: topicPrefix + 'topic_11/questions.js', dir: topicPrefix + 'topic_11' },
+          12: { q: topicPrefix + 'topic_12/questions.js', dir: topicPrefix + 'topic_12' },
+          13: { q: topicPrefix + 'topic_13/questions.js', dir: topicPrefix + 'topic_13' },
+          14: { q: topicPrefix + 'topic_14/questions.js', dir: topicPrefix + 'topic_14' },
+          15: { q: topicPrefix + 'topic_15/questions.js', dir: topicPrefix + 'topic_15' },
+          16: { q: topicPrefix + 'topic_16/questions.js', dir: topicPrefix + 'topic_16' }
+        };
+        if (numMap[num]) return { key: 'Topic ' + num, ...numMap[num] };
+      }
+
+      // 3. Fallback: match practice exam / mock test / test numbers
+      const testMatch = clean.match(/(?:test|exam|mock)[\s-_]*([0-9]+)/);
+      if (testMatch && testMatch[1]) {
+        const num = parseInt(testMatch[1], 10);
+        const testMap = {
+          1: { q: mockPrefix + 'questions.js', dir: mockPrefix.replace(/\/$/, '') || '.' },
+          2: { q: mockPrefix + 'questions2.js', dir: mockPrefix.replace(/\/$/, '') || '.' },
+          3: { q: mockPrefix + 'test_3/questions3.js', dir: mockPrefix + 'test_3' },
+          4: { q: mockPrefix + 'test_4/questions4.js', dir: mockPrefix + 'test_4' },
+          5: { q: mockPrefix + 'test_5/questions5.js', dir: mockPrefix + 'test_5' },
+          6: { q: mockPrefix + 'test_6/questions6.js', dir: mockPrefix + 'test_6' },
+          7: { q: mockPrefix + 'test_7/questions7.js', dir: mockPrefix + 'test_7' },
+          8: { q: mockPrefix + 'test_8/questions8.js', dir: mockPrefix + 'test_8' },
+          9: { q: mockPrefix + 'test_9/questions9.js', dir: mockPrefix + 'test_9' },
+          10: { q: mockPrefix + 'test_10/questions10.js', dir: mockPrefix + 'test_10' },
+          11: { q: mockPrefix + 'test_11/questions11.js', dir: mockPrefix + 'test_11' },
+          12: { q: mockPrefix + 'test_12/questions12.js', dir: mockPrefix + 'test_12' },
+          13: { q: mockPrefix + 'test_13/questions13.js', dir: mockPrefix + 'test_13' }
+        };
+        if (/(?:mock|sat|digital|practice|diagnostic|exam|prep)/.test(clean) && testMap[num]) {
+          return { key: 'Practice Exam ' + num, ...testMap[num] };
+        }
+      }
+
+      return null;
+    }
+
+    function loadQuestionsForTopic(topicName) {
+      if (loadedQuestionsCache[topicName]) {
+        return Promise.resolve(loadedQuestionsCache[topicName]);
+      }
+      return new Promise((resolve) => {
+        const mapping = TOPIC_QUESTIONS_MAP[topicName] || getTopicMapping(topicName);
+        let path = mapping ? mapping.q : null;
+        if (!path) {
+          resolve(null);
+          return;
+        }
+        if (window.location.pathname.includes('/mock/') && path.startsWith('./')) {
+          path = '../' + path.slice(2);
+        }
+
+        const loadViaIframe = () => {
+          try {
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const script = doc.createElement('script');
+            script.src = path;
+            script.onload = () => {
+              try {
+                const extractScript = doc.createElement('script');
+                extractScript.textContent = `
+                  window.__extracted_qs = null;
+                  for (let prop in window) {
+                    if (prop.toUpperCase().includes('QUESTIONS') || prop === 'questions' || prop === 'local_qs') {
+                      if (Array.isArray(window[prop]) && window[prop].length > 0) {
+                        window.__extracted_qs = window[prop];
+                        break;
+                      }
+                    }
+                  }
+                `;
+                doc.body.appendChild(extractScript);
+                const qs = iframe.contentWindow.__extracted_qs;
+                if (qs && Array.isArray(qs)) {
+                  loadedQuestionsCache[topicName] = qs;
+                  resolve(qs);
+                } else {
+                  resolve(null);
+                }
+              } catch(e) {
+                resolve(null);
+              }
+              document.body.removeChild(iframe);
+            };
+            script.onerror = () => {
+              resolve(null);
+              document.body.removeChild(iframe);
+            };
+            doc.head.appendChild(script);
+          } catch(e) {
+            resolve(null);
+          }
+        };
+
+        fetch(path)
+          .then(res => {
+            if (!res.ok) throw new Error("Failed to load");
+            return res.text();
+          })
+          .then(text => {
+            let code = text.replace(/(const|let|var)\s+([A-Za-z0-9_]*QUESTIONS[A-Za-z0-9_]*)\s*=/gi, "var local_qs =");
+            code += `
+;
+if (typeof local_qs !== 'undefined' && Array.isArray(local_qs)) { return local_qs; }
+if (typeof QUESTIONS !== 'undefined' && Array.isArray(QUESTIONS)) { return QUESTIONS; }
+if (typeof QUESTIONS2 !== 'undefined' && Array.isArray(QUESTIONS2)) { return QUESTIONS2; }
+if (typeof QUESTIONS3 !== 'undefined' && Array.isArray(QUESTIONS3)) { return QUESTIONS3; }
+if (typeof QUESTIONS4 !== 'undefined' && Array.isArray(QUESTIONS4)) { return QUESTIONS4; }
+if (typeof QUESTIONS5 !== 'undefined' && Array.isArray(QUESTIONS5)) { return QUESTIONS5; }
+if (typeof QUESTIONS6 !== 'undefined' && Array.isArray(QUESTIONS6)) { return QUESTIONS6; }
+if (typeof QUESTIONS7 !== 'undefined' && Array.isArray(QUESTIONS7)) { return QUESTIONS7; }
+if (typeof QUESTIONS8 !== 'undefined' && Array.isArray(QUESTIONS8)) { return QUESTIONS8; }
+if (typeof QUESTIONS9 !== 'undefined' && Array.isArray(QUESTIONS9)) { return QUESTIONS9; }
+if (typeof QUESTIONS10 !== 'undefined' && Array.isArray(QUESTIONS10)) { return QUESTIONS10; }
+if (typeof QUESTIONS11 !== 'undefined' && Array.isArray(QUESTIONS11)) { return QUESTIONS11; }
+if (typeof QUESTIONS12 !== 'undefined' && Array.isArray(QUESTIONS12)) { return QUESTIONS12; }
+if (typeof QUESTIONS13 !== 'undefined' && Array.isArray(QUESTIONS13)) { return QUESTIONS13; }
+return null;
+`;
+            try {
+              const fn = new Function(code);
+              const result = fn();
+              if (result && Array.isArray(result)) {
+                loadedQuestionsCache[topicName] = result;
+                resolve(result);
+              } else {
+                throw new Error("Eval did not yield array");
+              }
+            } catch(e) {
+              console.warn("Function execution failed, trying iframe loading", e);
+              loadViaIframe();
+            }
+          })
+          .catch(err => {
+            console.warn("Fetch failed, trying iframe loading", err);
+            loadViaIframe();
+          });
+      });
+    }
+
+    function loadImageMappingForTopic(topicName, dir) {
+      if (loadedImagesCache[topicName]) {
+        return Promise.resolve(loadedImagesCache[topicName]);
+      }
+      return new Promise((resolve) => {
+        if (dir === '.' || !dir) {
+          resolve({});
+          return;
+        }
+        const path = dir + '/images.js';
+
+        const loadViaIframe = () => {
+          try {
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const script = doc.createElement('script');
+            script.src = path;
+            script.onload = () => {
+              try {
+                const imgs = iframe.contentWindow.QUESTION_IMAGES;
+                loadedImagesCache[topicName] = imgs || {};
+                resolve(imgs || {});
+              } catch(e) {
+                resolve({});
+              }
+              document.body.removeChild(iframe);
+            };
+            script.onerror = () => {
+              resolve({});
+              document.body.removeChild(iframe);
+            };
+            doc.head.appendChild(script);
+          } catch(e) {
+            resolve({});
+          }
+        };
+
+        fetch(path)
+          .then(res => {
+            if (!res.ok) throw new Error("No images.js");
+            return res.text();
+          })
+          .then(text => {
+            let code = text.replace(/(const|let|var)\s+QUESTION_IMAGES\s*=/, "var local_imgs =");
+            code += "\n; if (typeof local_imgs !== 'undefined') { local_imgs } else if (typeof QUESTION_IMAGES !== 'undefined') { QUESTION_IMAGES } else { {} };";
+            const fn = new Function(code);
+            const result = fn();
+            loadedImagesCache[topicName] = result || {};
+            resolve(result || {});
+          })
+          .catch(() => {
+            loadViaIframe();
+          });
+      });
+    }
+
+    function closeModal() {
+      document.getElementById('testModal').classList.remove('open');
+    }
+
+    // Close modal on overlay click
+    document.getElementById('testModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // ── Combined Report ─────────────────────
+    let combinedPie = null, combinedBar = null;
+
+    async function generateCombinedReport() {
+      const tests = Array.from(selectedIds).map(i => allTests[i]);
+      if (tests.length === 0) return;
+
+      const area = document.getElementById('combinedReportArea');
+      area.innerHTML = `
+        <div class="combined-report" style="text-align:center;padding:40px;">
+          <div class="loading-spinner">Generating combined report & loading questions...</div>
+        </div>
+      `;
+      area.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Gather unique topics in the selected tests and load their questions/images
+      const uniqueTopics = [...new Set(tests.map(t => t.topic).filter(Boolean))];
+      const topicsData = {};
+      for (const topic of uniqueTopics) {
+        const topicMapping = getTopicMapping(topic);
+        const matchedTopicKey = topicMapping ? topicMapping.key : topic;
+        const dir = topicMapping ? topicMapping.dir : '.';
+        const qs = await loadQuestionsForTopic(matchedTopicKey);
+        const imgMapping = await loadImageMappingForTopic(matchedTopicKey, dir);
+        topicsData[topic] = { qs, imgMapping, dir };
+      }
+
+      const totCorrect = tests.reduce((s, t) => s + (t.correct || 0), 0);
+      const totWrong = tests.reduce((s, t) => s + (t.wrong || 0), 0);
+      const totSkipped = tests.reduce((s, t) => s + (t.unattempted || 0), 0);
+      const totQs = tests.reduce((s, t) => s + (t.total || 0), 0);
+      const avgPct = totQs > 0 ? Math.round(totCorrect / totQs * 100) : 0;
+      const avgScaled = Math.round(tests.reduce((s, t) => s + (t.scaled || 0), 0) / tests.length);
+      const overallGrade = avgPct >= 90 ? 'A+' : avgPct >= 80 ? 'A' : avgPct >= 70 ? 'B' : avgPct >= 60 ? 'C' : 'D';
+
+      // Topic-wise breakdown
+      const topicMap = {};
+      tests.forEach(t => {
+        const name = t.topic || 'Unknown';
+        if (!topicMap[name]) topicMap[name] = { correct: 0, wrong: 0, skipped: 0, total: 0, count: 0 };
+        topicMap[name].correct += (t.correct || 0);
+        topicMap[name].wrong += (t.wrong || 0);
+        topicMap[name].skipped += (t.unattempted || 0);
+        topicMap[name].total += (t.total || 0);
+        topicMap[name].count++;
+      });
+
+      const topics = Object.keys(topicMap);
+      const topicPcts = topics.map(k => topicMap[k].total > 0 ? Math.round(topicMap[k].correct / topicMap[k].total * 100) : 0);
+      const barColors = topicPcts.map(p => p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626');
+
+      // Strengths & Weaknesses
+      const sorted = topics.map((t, i) => ({ topic: t, pct: topicPcts[i] })).sort((a, b) => b.pct - a.pct);
+      const strengths = sorted.filter(s => s.pct >= 70).slice(0, 3);
+      const weaknesses = sorted.filter(s => s.pct < 70).sort((a, b) => a.pct - b.pct).slice(0, 3);
+
+      // Combine all question details with full questions
+      let allDetails = [];
+      tests.forEach((t, testIndex) => {
+        try {
+          let details = JSON.parse(t.details_json || '[]');
+          if (details.length > 0) {
+            const topicData = topicsData[t.topic];
+            if (topicData && topicData.qs) {
+              details = details.map(d => {
+                const qId = d.id || (i + 1);
+                const matchedQ = topicData.qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || topicData.qs[i];
+                if (matchedQ) {
+                  return {
+                    ...d,
+                    text: d.text || matchedQ.text || matchedQ.question || '',
+                    options: d.options || matchedQ.options || matchedQ.choices || [],
+                    answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
+                    chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
+                    status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
+                    explanation: d.explanation || matchedQ.explanation || matchedQ.solution || '',
+                    useImage: d.useImage !== undefined ? d.useImage : matchedQ.useImage,
+                    imageKey: d.imageKey || matchedQ.imageKey
+                  };
+                }
+                return d;
+              });
+            }
+            allDetails.push({ 
+              testName: t.topic || `Test ${testIndex+1}`, 
+              details,
+              dir: topicData ? topicData.dir : '.',
+              imgMapping: topicData ? topicData.imgMapping : {}
+            });
+          }
+        } catch(e) {
+          console.error("Failed to parse details for test", t, e);
+        }
+      });
+
+      area.innerHTML = `
+        <div class="combined-report" id="combinedReportCard">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+            <div>
+              <div class="report-title">📊 Combined Report</div>
+              <div class="report-sub">${tests.length} test(s) selected · Generated ${new Date().toLocaleString()}</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-green" onclick="downloadCombinedPDF()">📄 Download PDF</button>
+              <button class="btn btn-outline" onclick="closeCombinedReport()">✕ Close</button>
+            </div>
+          </div>
+
+          <div class="combined-stats">
+            <div class="cstat"><div class="cn green">${totCorrect}</div><div class="cl">Total Correct</div></div>
+            <div class="cstat"><div class="cn red">${totWrong}</div><div class="cl">Total Wrong</div></div>
+            <div class="cstat"><div class="cn amber">${totSkipped}</div><div class="cl">Total Skipped</div></div>
+            <div class="cstat"><div class="cn blue">${totQs}</div><div class="cl">Total Questions</div></div>
+            <div class="cstat"><div class="cn purple">${avgPct}%</div><div class="cl">Overall Score</div></div>
+            <div class="cstat"><div class="cn purple">${overallGrade}</div><div class="cl">Grade</div></div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-box">
+              <h4>📊 Overall Breakdown</h4>
+              <canvas id="combinedPie" height="220"></canvas>
+            </div>
+            <div class="chart-box">
+              <h4>📈 Topic-wise Performance</h4>
+              <canvas id="combinedBar" height="220"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-box" style="margin-bottom:20px">
+            <h4>📋 Topic-wise Breakdown</h4>
+            <table class="topic-breakdown">
+              <thead><tr><th>Topic</th><th>Tests</th><th>Correct</th><th>Wrong</th><th>Skipped</th><th>Score</th><th>Performance</th></tr></thead>
+              <tbody>${topics.map((t, i) => {
+                const d = topicMap[t];
+                const p = topicPcts[i];
+                const color = p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626';
+                return `<tr>
+                  <td style="font-weight:600">${t}</td>
+                  <td>${d.count}</td>
+                  <td style="color:#6ee7b7">${d.correct}</td>
+                  <td style="color:#f87171">${d.wrong}</td>
+                  <td style="color:#fbbf24">${d.skipped}</td>
+                  <td><span class="score-pill ${p>=70?'high':p>=50?'mid':'low'}">${p}%</span></td>
+                  <td><div class="perf-bar"><div class="perf-bar-fill" style="width:${p}%;background:${color}"></div></div></td>
+                </tr>`;
+              }).join('')}</tbody>
+            </table>
+          </div>
+
+          ${strengths.length > 0 || weaknesses.length > 0 ? `
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            ${strengths.length > 0 ? `
+            <div class="chart-box">
+              <h4>💪 Strengths</h4>
+              ${strengths.map(s => `<div style="padding:6px 0;font-size:0.85rem">
+                <span style="color:#6ee7b7;font-weight:600">${s.pct}%</span>
+                <span style="margin-left:8px">${s.topic}</span>
+              </div>`).join('')}
+            </div>` : ''}
+            ${weaknesses.length > 0 ? `
+            <div class="chart-box">
+              <h4>🎯 Areas to Improve</h4>
+              ${weaknesses.map(s => `<div style="padding:6px 0;font-size:0.85rem">
+                <span style="color:#f87171;font-weight:600">${s.pct}%</span>
+                <span style="margin-left:8px">${s.topic}</span>
+              </div>`).join('')}
+            </div>` : ''}
+          </div>` : ''}
+
+          ${allDetails.length > 0 ? `
+          <div class="chart-box" style="margin-top:20px; text-align:left;">
+            <h4>📋 Detailed Question Review</h4>
+            ${allDetails.map(td => `
+              <div style="margin-top:24px;margin-bottom:12px;font-family:'Syne',sans-serif;font-weight:700;color:#93c5fd;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:8px;font-size:1.1rem;text-align:left;">
+                ${td.testName}
+              </div>
+              <div>
+              ${td.details.map((d, i) => {
+                const hasText = !!d.text;
+                const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
+                const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
+                
+                // Build image source if used
+                let imgSrc = '';
+                if (d.useImage && d.imageKey && td.imgMapping[d.imageKey]) {
+                  const val = td.imgMapping[d.imageKey];
+                  imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (td.dir + '/' + val);
+                }
+
+                return `
+                  <div class="q-card">
+                    <div class="q-card-header">
+                      <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
+                      <span class="q-status ${statusClass}">${statusText}</span>
+                    </div>
+                    
+                    ${hasText ? `<div class="q-card-text">${d.text}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
+                    
+                    ${imgSrc ? `<div class="q-image-container"><img src="${imgSrc}" alt="Question Image" /></div>` : ''}
+
+                    ${hasText && d.options ? `
+                      <div class="q-card-opts">
+                        ${d.options.map((optText, optIdx) => {
+                          let optClass = '';
+                          if (optIdx === d.answer) {
+                            optClass = 'correct';
+                          }
+                          if (d.status === 'wrong' && optIdx === d.chosen) {
+                            optClass = 'wrong-chosen';
+                          }
+                          
+                          let badgeIcon = '';
+                          if (optIdx === d.answer) {
+                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
+                          } else if (d.status === 'wrong' && optIdx === d.chosen) {
+                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
+                          } else if (d.status === 'correct' && optIdx === d.chosen) {
+                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
+                          }
+
+                          return `
+                            <div class="q-card-opt ${optClass}">
+                              <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
+                              <div class="q-card-opt-text">${optText}</div>
+                              ${badgeIcon}
+                            </div>
+                          `;
+                        }).join('')}
+                      </div>
+                    ` : `
+                      <div class="q-detail" style="margin-top:8px;">
+                        ${d.status === 'wrong' ? `Your answer: <strong>${LETTERS[d.chosen] || '–'}</strong> · Correct: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                        ${d.status === 'unattempted' ? `Correct answer: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                      </div>
+                    `}
+
+                    ${d.explanation ? `
+                      <div class="q-card-exp">
+                        <strong>💡 Explanation:</strong> ${d.explanation}
+                      </div>
+                    ` : ''}
+                  </div>
+                `;
+              }).join('')}
+              </div>
+            `).join('')}
+          </div>` : ''}
+        </div>
+      `;
+
+      // Scroll to combined report
+      area.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Draw charts
+      if (combinedPie) combinedPie.destroy();
+      combinedPie = new Chart(document.getElementById('combinedPie'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Correct', 'Wrong', 'Skipped'],
+          datasets: [{
+            data: [totCorrect, totWrong, totSkipped],
+            backgroundColor: ['#059669', '#dc2626', '#d97706'],
+            borderWidth: 0,
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.6)', font: { family: 'IBM Plex Sans' } } } },
+          cutout: '65%'
+        }
+      });
+
+      if (combinedBar) combinedBar.destroy();
+      combinedBar = new Chart(document.getElementById('combinedBar'), {
+        type: 'bar',
+        data: {
+          labels: topics.map(t => t.length > 18 ? t.substring(0, 16) + '…' : t),
+          datasets: [{
+            label: 'Score %',
+            data: topicPcts,
+            backgroundColor: barColors.map(c => c + '33'),
+            borderColor: barColors,
+            borderWidth: 2,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          indexAxis: topics.length > 4 ? 'y' : 'x',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { max: 100, ticks: { color: 'rgba(255,255,255,0.4)', font: { family: 'IBM Plex Sans', size: 10 } }, grid: { color: 'rgba(255,255,255,0.04)' } },
+            y: { ticks: { color: 'rgba(255,255,255,0.5)', font: { family: 'IBM Plex Sans', size: 10 } }, grid: { color: 'rgba(255,255,255,0.04)' } }
+          }
+        }
+      });
+    }
+
+    function closeCombinedReport() {
+      document.getElementById('combinedReportArea').innerHTML = '';
+    }
+
+    function downloadCombinedPDF() {
+      const element = document.getElementById('combinedReportCard');
+      const buttons = element.querySelectorAll('.btn');
+      buttons.forEach(b => b.style.display = 'none');
+
+      html2pdf().set({
+        margin: [10, 10, 10, 10],
+        filename: `EduQuest_Combined_Report_${new Date().toISOString().slice(0, 10)}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#13131e' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      }).from(element).save().then(() => {
+        buttons.forEach(b => b.style.display = '');
+      }).catch(err => {
+        console.error('PDF generation failed', err);
+        buttons.forEach(b => b.style.display = '');
+      });
+    }
+  </script>
+</body>
+
+</html>

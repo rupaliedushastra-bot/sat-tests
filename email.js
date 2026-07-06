@@ -48,7 +48,7 @@ async function sendEmails(result) {
 }
 
 // ── Send admin email when a new user signs up ───────
-async function sendSignupNotification(userEmail) {
+async function sendSignupNotification(userEmail, userPhone) {
   try {
     const res = await fetch(EMAIL_API_URL, {
       method: 'POST',
@@ -56,6 +56,7 @@ async function sendSignupNotification(userEmail) {
       body: JSON.stringify({
         type: 'signup',
         userEmail: userEmail,
+        userPhone: userPhone || '',
       })
     });
 

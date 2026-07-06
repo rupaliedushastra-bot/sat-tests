@@ -117,7 +117,7 @@
             margin-bottom: 6px
         }
 
-        .field input {
+        .field input, .field select {
             width: 100%;
             border: 1.5px solid rgba(255, 255, 255, 0.12);
             border-radius: 8px;
@@ -129,8 +129,13 @@
             color: #fff
         }
 
-        .field input:focus {
+        .field input:focus, .field select:focus {
             border-color: #1a56db
+        }
+
+        .field select option {
+            background: #0d0d14;
+            color: #fff;
         }
 
         .hint {
@@ -273,6 +278,13 @@
             <div class="field">
                 <label>Email</label>
                 <input type="email" id="stuSignupEmail" placeholder="you@example.com">
+            </div>
+            <div class="field">
+                <label>Phone Number <span style="color:#f87171">*</span></label>
+                <div style="display: flex; gap: 8px;">
+                    <select id="stuSignupCC" style="width: 140px; flex-shrink: 0; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 8px; color: #fff; padding: 11px 12px; font-size: 0.95rem; outline: none;"></select>
+                    <input type="tel" id="stuSignupPhone" placeholder="Phone number (7-15 digits)" style="flex-grow: 1; width: auto;" required>
+                </div>
             </div>
             <div class="field">
                 <label>Password</label>
@@ -611,10 +623,29 @@
         async function studentSignup() {
             const email = document.getElementById('stuSignupEmail').value.trim();
             const password = document.getElementById('stuSignupPassword').value;
-            if (!email || !password) { showMsg('Please fill all fields.', 'error'); return; }
-            if (password.length < 6) { showMsg('Password must be at least 6 characters.', 'error'); return; }
+            const ccEl = document.getElementById('stuSignupCC');
+            const cc = ccEl ? (ccEl.value || '+91') : '+91';
+            const phoneVal = (document.getElementById('stuSignupPhone').value || '').trim();
 
-            const { data, error } = await supabaseClient.auth.signUp({ email, password });
+            if (!email || !password || !phoneVal) { showMsg('Please fill all required fields including Phone Number.', 'error'); return; }
+            if (password.length < 6) { showMsg('Password must be at least 6 characters.', 'error'); return; }
+            if (!/^\d{7,15}$/.test(phoneVal.replace(/[- ]/g, ''))) {
+                showMsg('Please enter a valid phone number (7-15 digits).', 'error');
+                document.getElementById('stuSignupPhone').focus();
+                return;
+            }
+
+            const fullPhone = `${cc} ${phoneVal}`.trim();
+
+            const { data, error } = await supabaseClient.auth.signUp({ 
+                email, 
+                password,
+                options: {
+                    data: {
+                        phone: fullPhone
+                    }
+                }
+            });
             if (error) { showMsg(error.message, 'error'); return; }
 
             // Create client-side profile entry in profiles
@@ -623,6 +654,7 @@
                     await supabaseClient.from('profiles').insert({
                         id: data.user.id,
                         email: email.toLowerCase(),
+                        phone: fullPhone,
                         has_access: false,
                         has_topic_access: false,
                         created_at: new Date().toISOString()
@@ -635,7 +667,7 @@
             showMsg('Account created! You can now login. Note: access must be approved by admin.', 'success');
             
             if (typeof sendSignupNotification === 'function') {
-                sendSignupNotification(email);
+                sendSignupNotification(email, fullPhone);
             }
         }
 

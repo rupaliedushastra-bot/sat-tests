@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduQuest – Digital SAT Practice</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: #0d0d14;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column
+    }
+
+    /* Header */
+    .hdr {
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .brand {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .brand-pill {
+      background: #1a56db;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 0.72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .contact {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    .hdr-right {
+      display: flex;
+      align-items: center;
+      gap: 18px
+    }
+
+    .login-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      background: rgba(26, 86, 219, 0.15);
+      border: 1px solid rgba(26, 86, 219, 0.3);
+      padding: 7px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all .15s
+    }
+
+    .login-btn:hover {
+      background: rgba(26, 86, 219, 0.28);
+      border-color: rgba(26, 86, 219, 0.5);
+      transform: translateY(-1px)
+    }
+
+    /* Hero */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+      text-align: center
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(26, 86, 219, 0.15);
+      border: 1px solid rgba(26, 86, 219, 0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #60a5fa;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 28px
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 1.05rem;
+      max-width: 460px;
+      line-height: 1.7;
+      margin-bottom: 52px
+    }
+
+    /* Exam cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 840px;
+      width: 100%
+    }
+
+    @media(max-width:580px) {
+      .cards {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .exam-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .2s, transform .2s, box-shadow .2s
+    }
+
+    .exam-card:hover {
+      border-color: rgba(26, 86, 219, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4)
+    }
+
+    .exam-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #1a56db, #3b82f6)
+    }
+
+    .exam-card.exam2::before {
+      background: linear-gradient(90deg, #059669, #34d399)
+    }
+
+    .exam-card.exam3::before {
+      background: linear-gradient(90deg, #7c3aed, #a78bfa)
+    }
+
+    .exam-card.exam4::before {
+      background: linear-gradient(90deg, #d97706, #fbbf24)
+    }
+
+    .exam-card.exam5::before {
+      background: linear-gradient(90deg, #0891b2, #22d3ee)
+    }
+
+    .card-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.08);
+      margin-bottom: 8px
+    }
+
+    .card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .card-sub {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 24px;
+      line-height: 1.5
+    }
+
+    .card-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 24px
+    }
+
+    .cm {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 10px 12px
+    }
+
+    .cm .val {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .cm .lbl {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-top: 2px
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-weight: 600;
+      background: rgba(26, 86, 219, 0.15);
+      color: #93c5fd;
+      border: 1px solid rgba(26, 86, 219, 0.2)
+    }
+
+    .exam2 .tag {
+      background: rgba(5, 150, 105, 0.15);
+      color: #6ee7b7;
+      border-color: rgba(5, 150, 105, 0.2)
+    }
+
+    .exam3 .tag {
+      background: rgba(124, 58, 237, 0.15);
+      color: #c4b5fd;
+      border-color: rgba(124, 58, 237, 0.2)
+    }
+
+    .exam4 .tag {
+      background: rgba(217, 119, 6, 0.15);
+      color: #fcd34d;
+      border-color: rgba(217, 119, 6, 0.2)
+    }
+
+    .exam5 .tag {
+      background: rgba(8, 145, 178, 0.15);
+      color: #67e8f9;
+      border-color: rgba(8, 145, 178, 0.2)
+    }
+
+    .card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1a56db, #1e429f);
+      color: #fff;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.94rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: all .15s
+    }
+
+    .card-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(26, 86, 219, 0.45)
+    }
+
+    .exam2 .card-btn {
+      background: linear-gradient(135deg, #059669, #047857)
+    }
+
+    .exam2 .card-btn:hover {
+      box-shadow: 0 8px 25px rgba(5, 150, 105, 0.45)
+    }
+
+    .exam3 .card-btn {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9)
+    }
+
+    .exam3 .card-btn:hover {
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45)
+    }
+
+    .exam4 .card-btn {
+      background: linear-gradient(135deg, #d97706, #b45309)
+    }
+
+    .exam4 .card-btn:hover {
+      box-shadow: 0 8px 25px rgba(217, 119, 6, 0.45)
+    }
+
+    .exam5 .card-btn {
+      background: linear-gradient(135deg, #0891b2, #0e7490)
+    }
+
+    .exam5 .card-btn:hover {
+      box-shadow: 0 8px 25px rgba(8, 145, 178, 0.45)
+    }
+
+    /* Features row */
+    .features {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      max-width: 760px;
+      width: 100%;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .feat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    .feat-icon {
+      font-size: 1rem
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.05)
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hdr">
+    <div class="brand">
+      <span>📝</span>
+      <span>EduQuest</span>
+      <span class="brand-pill">SAT Portal</span>
+    </div>
+    <div class="hdr-right" id="hdrRight">
+      <div class="contact">rupali.eduquest@gmail.com</div>
+      <a href="login.html" class="login-btn">Login / Sign Up</a>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-badge">✦ Full-Length Practice Tests</div>
+    <h1>Digital SAT<br><span>Practice Exams</span></h1>
+    <p>Authentic SAT-format practice with real questions, timed modules, detailed score reports, and instant PDF
+      download.</p>
+
+    <div class="cards">
+
+      <!-- Exam 2 -->
+      <div class="exam-card ">
+        <div class="card-num">01</div>
+        <div class="card-title">Practice Exam 1</div>
+        <div class="card-sub">2 modules · English & Math mixed<br>Integrated format</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+
+        <a href="sat2.html" class="card-btn">Start Exam 1 →</a>
+      </div>
+
+      <!-- Exam 1 -->
+      <div class="exam-card exam2">
+        <div class="card-num">02</div>
+        <div class="card-title">Practice Exam 2</div>
+        <div class="card-sub">2 modules · Reading & Writing + Math<br>Classic SAT format</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+
+        <a href="sat.html" class="card-btn" id="btn-exam1">Start Exam 2 →</a>
+      </div>
+
+
+      <!-- Exam 3 -->
+      <div class="exam-card">
+        <div class="card-num">03</div>
+        <div class="card-title">Practice Exam 3</div>
+        <div class="card-sub">1 module · Reading &amp; Writing<br>Classic SAT format</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">33</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">39</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">1</div>
+            <div class="lbl">Module</div>
+          </div>
+          <div class="cm">
+            <div class="val">200–800</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+
+        <a href="test_3/sat3.html" class="card-btn" id="btn-exam3">Start Exam 3 →</a>
+      </div>
+
+      <!-- Exam 4 -->
+      <div class="exam-card">
+        <div class="card-num">04</div>
+        <div class="card-title">Diagnostic Test 4</div>
+        <div class="card-sub">2 modules · English &amp; Maths<br>Practice Test 1 (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_4/sat4.html" class="card-btn" id="btn-exam4">Start Diagnostic Test 4 →</a>
+      </div>
+
+      <!-- Exam 5 -->
+      <div class="exam-card exam3">
+        <div class="card-num">05</div>
+        <div class="card-title">Practice Test 5</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>Practice Test 2 (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_5/sat5.html" class="card-btn" id="btn-exam5">Start Practice Test 5 →</a>
+      </div>
+
+      <!-- Exam 6 -->
+      <div class="exam-card exam4">
+        <div class="card-num">06</div>
+        <div class="card-title">Practice Test 6</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>Practice Test 3 (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_6/sat6.html" class="card-btn" id="btn-exam6">Start Practice Test 6 →</a>
+      </div>
+
+      <!-- Exam 7 – SAT Prep Test 1 R&W -->
+      <div class="exam-card exam5">
+        <div class="card-num">07</div>
+        <div class="card-title">SAT Prep Test 1 – R&amp;W</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing only<br>Princeton Review Practice Test 1</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">54</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">64</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">200–800</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_7/sat7.html" class="card-btn" id="btn-exam7">Start SAT Prep Test 1 →</a>
+      </div>
+
+      <!-- Exam 8 – SAT Prep Test 2 -->
+      <div class="exam-card">
+        <div class="card-num">08</div>
+        <div class="card-title">SAT Prep Test 2</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>Princeton Review Practice Test 2</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_8/sat8.html" class="card-btn" id="btn-exam8">Start SAT Prep Test 2 →</a>
+      </div>
+
+      <!-- Exam 9 – Practice Test 9 -->
+      <div class="exam-card">
+        <div class="card-num">09</div>
+        <div class="card-title">Practice Test 9</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>March 2021 SAT Full Test (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_9/sat9.html" class="card-btn" id="btn-exam9">Start Practice Test 9 →</a>
+      </div>
+
+      <!-- Exam 10 – Practice Test 10 -->
+      <div class="exam-card">
+        <div class="card-num">10</div>
+        <div class="card-title">Practice Test 10</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>March 2021 SAT Full Test Mutated (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_10/sat10.html" class="card-btn" id="btn-exam10">Start Practice Test 10 →</a>
+      </div>
+
+      <!-- Exam 11 – Practice Test 11 -->
+      <div class="exam-card">
+        <div class="card-num">11</div>
+        <div class="card-title">Practice Test 11</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>Practice Test 1 Abstracted (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_11/sat11.html" class="card-btn" id="btn-exam11">Start Practice Test 11 →</a>
+      </div>
+
+      <!-- Exam 12 – Practice Test 12 -->
+      <div class="exam-card">
+        <div class="card-num">12</div>
+        <div class="card-title">Practice Test 12</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>Practice Test 5 Abstracted (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_12/sat12.html" class="card-btn" id="btn-exam12">Start Practice Test 12 →</a>
+      </div>
+
+      <!-- Exam 13 – Practice Test 13 -->
+      <div class="exam-card">
+        <div class="card-num">13</div>
+        <div class="card-title">Practice Test 13</div>
+        <div class="card-sub">2 modules · Reading &amp; Writing + Math<br>Practice Test 6 Abstracted (98Q)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">2</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+        <a href="test_13/sat13.html" class="card-btn" id="btn-exam13">Start Practice Test 13 →</a>
+      </div>
+
+    </div>
+
+    <div class="features">
+      <div class="feat"><span class="feat-icon">⏱</span> Timed modules</div>
+      <div class="feat"><span class="feat-icon">📊</span> Detailed score report</div>
+      <div class="feat"><span class="feat-icon">📥</span> PDF download</div>
+      <div class="feat"><span class="feat-icon">🖼</span> Real diagrams from book</div>
+    </div>
+  </main>
+
+  <footer>© EduQuest · Digital SAT Practice Portal · rupali.eduquest@gmail.com</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script>
+    const ADMIN_EMAIL = 'rupali.eduquest@gmail.com';
+    const supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+
+    async function initIndex() {
+      const { data: { session } } = await supabaseClient.auth.getSession();
+
+      const btn1 = document.getElementById('btn-exam1');
+      const btn3 = document.getElementById('btn-exam3');
+      const btn4 = document.getElementById('btn-exam4');
+      const btn5 = document.getElementById('btn-exam5');
+      const btn6 = document.getElementById('btn-exam6');
+      const btn7 = document.getElementById('btn-exam7');
+      const btn8 = document.getElementById('btn-exam8');
+      const btn9 = document.getElementById('btn-exam9');
+      const btn10 = document.getElementById('btn-exam10');
+      const btn11 = document.getElementById('btn-exam11');
+      const btn12 = document.getElementById('btn-exam12');
+      const btn13 = document.getElementById('btn-exam13');
+
+      if (!session) {
+        // Not logged in -> Show locks on all gated exams
+        if (btn1) {
+          btn1.innerHTML = '🔒 Unlock & Start Exam 1 →';
+          btn1.href = 'login.html?redirect=sat.html';
+        }
+        if (btn3) {
+          btn3.innerHTML = '🔒 Unlock & Start Exam 3 →';
+          btn3.href = 'login.html?redirect=test_3/sat3.html';
+        }
+        if (btn4) {
+          btn4.innerHTML = '🔒 Unlock & Start Test 4 →';
+          btn4.href = 'login.html?redirect=test_4/sat4.html';
+        }
+        if (btn5) {
+          btn5.innerHTML = '🔒 Unlock & Start Test 5 →';
+          btn5.href = 'login.html?redirect=test_5/sat5.html';
+        }
+        if (btn6) {
+          btn6.innerHTML = '🔒 Unlock &amp; Start Test 6 →';
+          btn6.href = 'login.html?redirect=test_6/sat6.html';
+        }
+        if (btn7) {
+          btn7.innerHTML = '🔒 Unlock &amp; Start SAT Prep Test 1 →';
+          btn7.href = 'login.html?redirect=test_7/sat7.html';
+        }
+        if (btn8) {
+          btn8.innerHTML = '🔒 Unlock &amp; Start SAT Prep Test 2 →';
+          btn8.href = 'login.html?redirect=test_8/sat8.html';
+        }
+        if (btn9) {
+          btn9.innerHTML = '🔒 Unlock &amp; Start Practice Test 9 →';
+          btn9.href = 'login.html?redirect=test_9/sat9.html';
+        }
+        if (btn10) {
+          btn10.innerHTML = '🔒 Unlock &amp; Start Practice Test 10 →';
+          btn10.href = 'login.html?redirect=test_10/sat10.html';
+        }
+        if (btn11) {
+          btn11.innerHTML = '🔒 Unlock &amp; Start Practice Test 11 →';
+          btn11.href = 'login.html?redirect=test_11/sat11.html';
+        }
+        if (btn12) {
+          btn12.innerHTML = '🔒 Unlock &amp; Start Practice Test 12 →';
+          btn12.href = 'login.html?redirect=test_12/sat12.html';
+        }
+        if (btn13) {
+          btn13.innerHTML = '🔒 Unlock &amp; Start Practice Test 13 →';
+          btn13.href = 'login.html?redirect=test_13/sat13.html';
+        }
+        return;
+      }
+
+      // Logged in
+      const email = session.user.email;
+      const isAdmin = email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+
+      // Update header
+      let hdrHtml = `<div class="contact">${email}</div>`;
+      if (isAdmin) {
+        hdrHtml += `<a href="admin.html" class="login-btn" style="background:rgba(124,58,237,0.15);border-color:rgba(124,58,237,0.3);margin-right:8px">Admin Dashboard</a>`;
+      } else {
+        hdrHtml += `<a href="dashboard.html" class="login-btn" style="background:#059669;border-color:#059669;margin-right:8px">🎓 Student Dashboard</a>`;
+      }
+      hdrHtml += `<button onclick="supabaseLogout()" class="login-btn" style="background:none;border-color:rgba(255,255,255,0.2);cursor:pointer">Logout</button>`;
+      document.getElementById('hdrRight').innerHTML = hdrHtml;
+
+      // Define logout helper globally
+      window.supabaseLogout = async function () {
+        await supabaseClient.signOut();
+        window.location.reload();
+      };
+
+      if (isAdmin) {
+        // Admin has access to everything
+        if (btn1) { btn1.innerHTML = 'Start Exam 1 (Admin) →'; btn1.href = 'sat.html'; }
+        if (btn3) { btn3.innerHTML = 'Start Exam 3 (Admin) →'; btn3.href = 'test_3/sat3.html'; }
+        if (btn4) { btn4.innerHTML = 'Start Test 4 (Admin) →'; btn4.href = 'test_4/sat4.html'; }
+        if (btn5) { btn5.innerHTML = 'Start Test 5 (Admin) →'; btn5.href = 'test_5/sat5.html'; }
+        if (btn6) { btn6.innerHTML = 'Start Test 6 (Admin) →'; btn6.href = 'test_6/sat6.html'; }
+        if (btn7) { btn7.innerHTML = 'Start SAT Prep Test 1 (Admin) →'; btn7.href = 'test_7/sat7.html'; }
+        if (btn8) { btn8.innerHTML = 'Start SAT Prep Test 2 (Admin) →'; btn8.href = 'test_8/sat8.html'; }
+        if (btn9) { btn9.innerHTML = 'Start Practice Test 9 (Admin) →'; btn9.href = 'test_9/sat9.html'; }
+        if (btn10) { btn10.innerHTML = 'Start Practice Test 10 (Admin) →'; btn10.href = 'test_10/sat10.html'; }
+        if (btn11) { btn11.innerHTML = 'Start Practice Test 11 (Admin) →'; btn11.href = 'test_11/sat11.html'; }
+        if (btn12) { btn12.innerHTML = 'Start Practice Test 12 (Admin) →'; btn12.href = 'test_12/sat12.html'; }
+        if (btn13) { btn13.innerHTML = 'Start Practice Test 13 (Admin) →'; btn13.href = 'test_13/sat13.html'; }
+        return;
+      }
+
+      // If student, check has_access from profiles table
+      try {
+        const { data: profile, error } = await supabaseClient
+          .from('profiles')
+          .select('has_access')
+          .eq('id', session.user.id)
+          .single();
+
+        if (error || !profile || !profile.has_access) {
+          // No access -> lock cards
+          if (btn1) { btn1.innerHTML = '🔒 Request Access (Exam 1) →'; btn1.href = 'sat.html'; }
+          if (btn3) { btn3.innerHTML = '🔒 Request Access (Exam 3) →'; btn3.href = 'test_3/sat3.html'; }
+          if (btn4) { btn4.innerHTML = '🔒 Request Access (Test 4) →'; btn4.href = 'test_4/sat4.html'; }
+          if (btn5) { btn5.innerHTML = '🔒 Request Access (Test 5) →'; btn5.href = 'test_5/sat5.html'; }
+          if (btn6) { btn6.innerHTML = '🔒 Request Access (Test 6) →'; btn6.href = 'test_6/sat6.html'; }
+          if (btn7) { btn7.innerHTML = '🔒 Request Access (SAT Prep Test 1) →'; btn7.href = 'test_7/sat7.html'; }
+          if (btn8) { btn8.innerHTML = '🔒 Request Access (SAT Prep Test 2) →'; btn8.href = 'test_8/sat8.html'; }
+          if (btn9) { btn9.innerHTML = '🔒 Request Access (Practice Test 9) →'; btn9.href = 'test_9/sat9.html'; }
+          if (btn10) { btn10.innerHTML = '🔒 Request Access (Practice Test 10) →'; btn10.href = 'test_10/sat10.html'; }
+          if (btn11) { btn11.innerHTML = '🔒 Request Access (Practice Test 11) →'; btn11.href = 'test_11/sat11.html'; }
+          if (btn12) { btn12.innerHTML = '🔒 Request Access (Practice Test 12) →'; btn12.href = 'test_12/sat12.html'; }
+          if (btn13) { btn13.innerHTML = '🔒 Request Access (Practice Test 13) →'; btn13.href = 'test_13/sat13.html'; }
+        } else {
+          // Has access -> unlocked
+          if (btn1) { btn1.innerHTML = 'Start Exam 1 →'; btn1.href = 'sat.html'; }
+          if (btn3) { btn3.innerHTML = 'Start Exam 3 →'; btn3.href = 'test_3/sat3.html'; }
+          if (btn4) { btn4.innerHTML = 'Start Diagnostic Test 4 →'; btn4.href = 'test_4/sat4.html'; }
+          if (btn5) { btn5.innerHTML = 'Start Practice Test 5 →'; btn5.href = 'test_5/sat5.html'; }
+          if (btn6) { btn6.innerHTML = 'Start Practice Test 6 →'; btn6.href = 'test_6/sat6.html'; }
+          if (btn7) { btn7.innerHTML = 'Start SAT Prep Test 1 →'; btn7.href = 'test_7/sat7.html'; }
+          if (btn8) { btn8.innerHTML = 'Start SAT Prep Test 2 →'; btn8.href = 'test_8/sat8.html'; }
+          if (btn9) { btn9.innerHTML = 'Start Practice Test 9 →'; btn9.href = 'test_9/sat9.html'; }
+          if (btn10) { btn10.innerHTML = 'Start Practice Test 10 →'; btn10.href = 'test_10/sat10.html'; }
+          if (btn11) { btn11.innerHTML = 'Start Practice Test 11 →'; btn11.href = 'test_11/sat11.html'; }
+          if (btn12) { btn12.innerHTML = 'Start Practice Test 12 →'; btn12.href = 'test_12/sat12.html'; }
+          if (btn13) { btn13.innerHTML = 'Start Practice Test 13 →'; btn13.href = 'test_13/sat13.html'; }
+        }
+      } catch (err) {
+        console.error('Error fetching profile:', err);
+      }
+    }
+
+    initIndex();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "sat-test-v2",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "nodemailer": "^6.9.0",
+    "pdf-parse": "^2.4.5"
+  }
+}

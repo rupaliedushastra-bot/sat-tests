@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
 
     // ── TYPE: signup ─────────────────────────────────────────
     if (body.type === "signup") {
-      const { userEmail } = body;
+      const { userEmail, userPhone } = body;
 
       await transport.sendMail({
         from: `"${fromName}" <${fromEmail}>`,
@@ -51,6 +51,11 @@ module.exports = async (req, res) => {
                 <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;width:180px;">Username / Email</td>
                 <td style="padding:8px 0;font-weight:600;font-size:13px;">${userEmail}</td>
               </tr>
+              ${userPhone ? `
+              <tr>
+                <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;">Phone Number</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;">${userPhone}</td>
+              </tr>` : ''}
               <tr>
                 <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;">Signup Time</td>
                 <td style="padding:8px 0;font-weight:600;font-size:13px;">${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST</td>

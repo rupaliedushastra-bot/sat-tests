@@ -934,105 +934,205 @@
       <button class="logout" onclick="adminLogout()">Logout</button>
     </header>
     <div class="wrap">
-      <div class="portal-switcher">
-        <button class="portal-btn active" id="btnPortalSat" onclick="switchPortal('sat')">📘 SAT Portal</button>
+      <div class="portal-switcher" style="flex-wrap: wrap;">
+        <button class="portal-btn active" id="btnPortalMock" onclick="switchPortal('mock')">🎯 Mock Portal</button>
+        <button class="portal-btn" id="btnPortalTopic" onclick="switchPortal('topic')">📖 Topic Portal</button>
         <button class="portal-btn" id="btnPortalTmua" onclick="switchPortal('tmua')">📐 TMUA Portal</button>
+        <button class="portal-btn" id="btnPortalUcat" onclick="switchPortal('ucat')">🔬 UCAT Portal</button>
+        <button class="portal-btn" id="btnPortalAct" onclick="switchPortal('act')">📝 ACT Portal</button>
+        <button class="portal-btn" id="btnPortalAp" onclick="switchPortal('ap')">🎓 AP Portal</button>
       </div>
 
-      <div id="satPortalSection">
+      <!-- 🎯 MOCK PORTAL -->
+      <div id="mockPortalSection">
         <div class="stats">
-          <div class="stat">
-            <div class="num" id="statTotal">–</div>
-            <div class="lbl">Total Users</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="statSatApproved">–</div>
-            <div class="lbl">SAT Approved</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="statSatPending">–</div>
-            <div class="lbl">SAT Pending</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="statTopicApproved">–</div>
-            <div class="lbl">Topic Approved</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="statTopicPending">–</div>
-            <div class="lbl">Topic Pending</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="statActApproved">–</div>
-            <div class="lbl">ACT Approved</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="statActPending">–</div>
-            <div class="lbl">ACT Pending</div>
-          </div>
+          <div class="stat"><div class="num" id="mockStatTotal">–</div><div class="lbl">Total Users</div></div>
+          <div class="stat"><div class="num" id="mockStatApproved">–</div><div class="lbl">Mock Approved</div></div>
+          <div class="stat"><div class="num" id="mockStatPending">–</div><div class="lbl">Mock Pending</div></div>
+          <div class="stat"><div class="num" id="mockStatReports">–</div><div class="lbl">Mock Tests Taken</div></div>
         </div>
-
         <div class="tabs">
-          <div class="tab active" data-filter="pending" onclick="setFilter('pending')">Pending</div>
-          <div class="tab" data-filter="approved" onclick="setFilter('approved')">Approved</div>
-          <div class="tab" data-filter="all" onclick="setFilter('all')">All</div>
-          <div class="tab" data-filter="reports" onclick="setFilter('reports')">📊 Reports</div>
+          <div class="tab active" data-mock-tab="pending" onclick="setMockFilter('pending')">Pending</div>
+          <div class="tab" data-mock-tab="approved" onclick="setMockFilter('approved')">Approved</div>
+          <div class="tab" data-mock-tab="all" onclick="setMockFilter('all')">All</div>
+          <div class="tab" data-mock-tab="reports" onclick="setMockFilter('reports')">📊 Mock Reports</div>
+          <div class="tab" data-mock-tab="forms" onclick="setMockFilter('forms')">📝 Form Registrations</div>
         </div>
-
-        <!-- Users Section -->
-        <div id="usersSection" class="users-section active">
-          <input type="text" class="search" id="searchBox" placeholder="Search by email..." oninput="renderList()">
-          <div id="userList">
-            <div class="loading">Loading...</div>
+        <div id="mockUsersSection" class="users-section active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <input type="text" class="search" id="mockSearchBox" placeholder="Search by email..." oninput="renderMockUsers()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <button class="btn-sm btn-approve" onclick="grantAllMockAccess()" style="padding: 10px 16px; font-size: 0.85rem;">⚡ Grant All Pending Access</button>
           </div>
+          <div id="mockUserList"><div class="loading">Loading Mock users...</div></div>
         </div>
-
-        <!-- Reports Section -->
-        <div id="reportsSection" class="reports-section">
-          <div class="report-stat-row" id="reportOverviewStats"></div>
-          <input type="text" class="report-search" id="reportSearchBox" placeholder="Search student by email..." oninput="renderReportsList()">
-          <div id="reportsList">
-            <div class="loading">Loading reports...</div>
-          </div>
+        <div id="mockReportsSection" class="reports-section" style="display:none">
+          <input type="text" class="search" id="mockReportSearchBox" placeholder="Search Mock reports by email..." oninput="renderMockReports()">
+          <div id="mockReportsList"><div class="loading">Loading Mock reports...</div></div>
+        </div>
+        <div id="mockFormsSection" class="users-section" style="display:none">
+          <input type="text" class="search" id="mockFormSearchBox" placeholder="Search Mock registrations by email..." oninput="renderMockForms()">
+          <div id="mockFormsList"><div class="loading">Loading Mock registrations...</div></div>
         </div>
       </div>
 
+      <!-- 📖 TOPIC PORTAL -->
+      <div id="topicPortalSection" style="display:none">
+        <div class="stats">
+          <div class="stat"><div class="num" id="topicStatTotal">–</div><div class="lbl">Total Users</div></div>
+          <div class="stat"><div class="num" id="topicStatApproved">–</div><div class="lbl">Topic Approved</div></div>
+          <div class="stat"><div class="num" id="topicStatPending">–</div><div class="lbl">Topic Pending</div></div>
+          <div class="stat"><div class="num" id="topicStatReports">–</div><div class="lbl">Topic Tests Taken</div></div>
+        </div>
+        <div class="tabs">
+          <div class="tab active" data-topic-tab="pending" onclick="setTopicFilter('pending')">Pending</div>
+          <div class="tab" data-topic-tab="approved" onclick="setTopicFilter('approved')">Approved</div>
+          <div class="tab" data-topic-tab="all" onclick="setTopicFilter('all')">All</div>
+          <div class="tab" data-topic-tab="reports" onclick="setTopicFilter('reports')">📊 Topic Reports</div>
+          <div class="tab" data-topic-tab="forms" onclick="setTopicFilter('forms')">📝 Form Registrations</div>
+        </div>
+        <div id="topicUsersSection" class="users-section active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <input type="text" class="search" id="topicSearchBox" placeholder="Search by email..." oninput="renderTopicUsers()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <button class="btn-sm btn-approve" onclick="grantAllTopicAccess()" style="padding: 10px 16px; font-size: 0.85rem;">⚡ Grant All Pending Access</button>
+          </div>
+          <div id="topicUserList"><div class="loading">Loading Topic users...</div></div>
+        </div>
+        <div id="topicReportsSection" class="reports-section" style="display:none">
+          <div class="report-stat-row" id="topicReportOverviewStats"></div>
+          <input type="text" class="search" id="topicReportSearchBox" placeholder="Search Topic reports by email..." oninput="renderTopicReports()">
+          <div id="topicReportsList"><div class="loading">Loading Topic reports...</div></div>
+        </div>
+        <div id="topicFormsSection" class="users-section" style="display:none">
+          <input type="text" class="search" id="topicFormSearchBox" placeholder="Search Topic registrations by email..." oninput="renderTopicForms()">
+          <div id="topicFormsList"><div class="loading">Loading Topic registrations...</div></div>
+        </div>
+      </div>
+
+      <!-- 📐 TMUA PORTAL -->
       <div id="tmuaPortalSection" style="display:none">
         <div class="stats">
-          <div class="stat">
-            <div class="num" id="tmuaStatTotal">–</div>
-            <div class="lbl">Total Users</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="tmuaStatDiagApproved">–</div>
-            <div class="lbl">Diag Approved</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="tmuaStatTopicApproved">–</div>
-            <div class="lbl">Topic Approved</div>
-          </div>
-          <div class="stat">
-            <div class="num" id="tmuaStatReports">–</div>
-            <div class="lbl">TMUA Tests Taken</div>
-          </div>
+          <div class="stat"><div class="num" id="tmuaStatTotal">–</div><div class="lbl">Total Users</div></div>
+          <div class="stat"><div class="num" id="tmuaStatApproved">–</div><div class="lbl">Approved</div></div>
+          <div class="stat"><div class="num" id="tmuaStatPending">–</div><div class="lbl">Pending</div></div>
+          <div class="stat"><div class="num" id="tmuaStatReports">–</div><div class="lbl">TMUA Tests Taken</div></div>
         </div>
-
         <div class="tabs">
-          <div class="tab active" data-tmua-tab="users" onclick="switchTmuaTab('users')">👥 Access Management</div>
-          <div class="tab" data-tmua-tab="reports" onclick="switchTmuaTab('reports')">📊 TMUA Reports</div>
+          <div class="tab active" data-tmua-tab="pending" onclick="setTmuaFilter('pending')">Pending</div>
+          <div class="tab" data-tmua-tab="approved" onclick="setTmuaFilter('approved')">Approved</div>
+          <div class="tab" data-tmua-tab="all" onclick="setTmuaFilter('all')">All</div>
+          <div class="tab" data-tmua-tab="reports" onclick="setTmuaFilter('reports')">📊 TMUA Reports</div>
+          <div class="tab" data-tmua-tab="forms" onclick="setTmuaFilter('forms')">📝 Form Registrations</div>
         </div>
-
-        <div id="tmuaUsersSection">
-          <input type="text" class="search" id="tmuaSearchBox" placeholder="Search users by email or name..." oninput="renderTmuaUsers()">
-          <div id="tmuaUserList">
-            <div class="loading">Loading TMUA users...</div>
+        <div id="tmuaUsersSection" class="users-section active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <input type="text" class="search" id="tmuaSearchBox" placeholder="Search users by email or name..." oninput="renderTmuaUsers()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <button class="btn-sm btn-approve" onclick="grantAllTmuaAccess()" style="padding: 10px 16px; font-size: 0.85rem;">⚡ Grant All Pending Access</button>
           </div>
+          <div id="tmuaUserList"><div class="loading">Loading TMUA users...</div></div>
         </div>
-
-        <div id="tmuaReportsSection" style="display:none">
+        <div id="tmuaReportsSection" class="reports-section" style="display:none">
           <input type="text" class="search" id="tmuaReportSearchBox" placeholder="Search TMUA reports by email..." oninput="renderTmuaReports()">
-          <div id="tmuaReportsList">
-            <div class="loading">Loading TMUA reports...</div>
+          <div id="tmuaReportsList"><div class="loading">Loading TMUA reports...</div></div>
+        </div>
+        <div id="tmuaFormsSection" class="users-section" style="display:none">
+          <input type="text" class="search" id="tmuaFormSearchBox" placeholder="Search TMUA registrations by email..." oninput="renderTmuaForms()">
+          <div id="tmuaFormsList"><div class="loading">Loading TMUA registrations...</div></div>
+        </div>
+      </div>
+
+      <!-- 🔬 UCAT PORTAL -->
+      <div id="ucatPortalSection" style="display:none">
+        <div class="stats">
+          <div class="stat"><div class="num" id="ucatStatTotal">–</div><div class="lbl">Total Users</div></div>
+          <div class="stat"><div class="num" id="ucatStatApproved">–</div><div class="lbl">Approved</div></div>
+          <div class="stat"><div class="num" id="ucatStatPending">–</div><div class="lbl">Pending</div></div>
+          <div class="stat"><div class="num" id="ucatStatReports">–</div><div class="lbl">UCAT Tests Taken</div></div>
+        </div>
+        <div class="tabs">
+          <div class="tab active" data-ucat-tab="pending" onclick="setUcatFilter('pending')">Pending</div>
+          <div class="tab" data-ucat-tab="approved" onclick="setUcatFilter('approved')">Approved</div>
+          <div class="tab" data-ucat-tab="all" onclick="setUcatFilter('all')">All</div>
+          <div class="tab" data-ucat-tab="reports" onclick="setUcatFilter('reports')">📊 UCAT Reports</div>
+          <div class="tab" data-ucat-tab="forms" onclick="setUcatFilter('forms')">📝 Form Registrations</div>
+        </div>
+        <div id="ucatUsersSection" class="users-section active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <input type="text" class="search" id="ucatSearchBox" placeholder="Search users by email or name..." oninput="renderUcatUsers()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <button class="btn-sm btn-approve" onclick="grantAllUcatAccess()" style="padding: 10px 16px; font-size: 0.85rem;">⚡ Grant All Pending Access</button>
           </div>
+          <div id="ucatUserList"><div class="loading">Loading UCAT users...</div></div>
+        </div>
+        <div id="ucatReportsSection" class="reports-section" style="display:none">
+          <input type="text" class="search" id="ucatReportSearchBox" placeholder="Search UCAT reports by email..." oninput="renderUcatReports()">
+          <div id="ucatReportsList"><div class="loading">Loading UCAT reports...</div></div>
+        </div>
+        <div id="ucatFormsSection" class="users-section" style="display:none">
+          <input type="text" class="search" id="ucatFormSearchBox" placeholder="Search UCAT registrations by email..." oninput="renderUcatForms()">
+          <div id="ucatFormsList"><div class="loading">Loading UCAT registrations...</div></div>
+        </div>
+      </div>
+
+      <!-- 📝 ACT PORTAL -->
+      <div id="actPortalSection" style="display:none">
+        <div class="stats">
+          <div class="stat"><div class="num" id="actStatTotal">–</div><div class="lbl">Total Users</div></div>
+          <div class="stat"><div class="num" id="actStatApproved">–</div><div class="lbl">Approved</div></div>
+          <div class="stat"><div class="num" id="actStatPending">–</div><div class="lbl">Pending</div></div>
+          <div class="stat"><div class="num" id="actStatReports">–</div><div class="lbl">ACT Tests Taken</div></div>
+        </div>
+        <div class="tabs">
+          <div class="tab active" data-act-tab="pending" onclick="setActFilter('pending')">Pending</div>
+          <div class="tab" data-act-tab="approved" onclick="setActFilter('approved')">Approved</div>
+          <div class="tab" data-act-tab="all" onclick="setActFilter('all')">All</div>
+          <div class="tab" data-act-tab="reports" onclick="setActFilter('reports')">📊 ACT Reports</div>
+          <div class="tab" data-act-tab="forms" onclick="setActFilter('forms')">📝 Form Registrations</div>
+        </div>
+        <div id="actUsersSection" class="users-section active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <input type="text" class="search" id="actSearchBox" placeholder="Search users by email or name..." oninput="renderActUsers()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <button class="btn-sm btn-approve" onclick="grantAllActAccess()" style="padding: 10px 16px; font-size: 0.85rem;">⚡ Grant All Pending Access</button>
+          </div>
+          <div id="actUserList"><div class="loading">Loading ACT users...</div></div>
+        </div>
+        <div id="actReportsSection" class="reports-section" style="display:none">
+          <input type="text" class="search" id="actReportSearchBox" placeholder="Search ACT reports by email..." oninput="renderActReports()">
+          <div id="actReportsList"><div class="loading">Loading ACT reports...</div></div>
+        </div>
+        <div id="actFormsSection" class="users-section" style="display:none">
+          <input type="text" class="search" id="actFormSearchBox" placeholder="Search ACT registrations by email..." oninput="renderActForms()">
+          <div id="actFormsList"><div class="loading">Loading ACT registrations...</div></div>
+        </div>
+      </div>
+
+      <!-- 🎓 AP PORTAL -->
+      <div id="apPortalSection" style="display:none">
+        <div class="stats">
+          <div class="stat"><div class="num" id="apStatTotal">–</div><div class="lbl">Total Users</div></div>
+          <div class="stat"><div class="num" id="apStatApproved">–</div><div class="lbl">Approved</div></div>
+          <div class="stat"><div class="num" id="apStatPending">–</div><div class="lbl">Pending</div></div>
+          <div class="stat"><div class="num" id="apStatReports">–</div><div class="lbl">AP Tests Taken</div></div>
+        </div>
+        <div class="tabs">
+          <div class="tab active" data-ap-tab="pending" onclick="setApFilter('pending')">Pending</div>
+          <div class="tab" data-ap-tab="approved" onclick="setApFilter('approved')">Approved</div>
+          <div class="tab" data-ap-tab="all" onclick="setApFilter('all')">All</div>
+          <div class="tab" data-ap-tab="reports" onclick="setApFilter('reports')">📊 AP Reports</div>
+          <div class="tab" data-ap-tab="forms" onclick="setApFilter('forms')">📝 Form Registrations</div>
+        </div>
+        <div id="apUsersSection" class="users-section active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <input type="text" class="search" id="apSearchBox" placeholder="Search users by email or name..." oninput="renderApUsers()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <button class="btn-sm btn-approve" onclick="grantAllApAccess()" style="padding: 10px 16px; font-size: 0.85rem;">⚡ Grant All Pending Access</button>
+          </div>
+          <div id="apUserList"><div class="loading">Loading AP users...</div></div>
+        </div>
+        <div id="apReportsSection" class="reports-section" style="display:none">
+          <input type="text" class="search" id="apReportSearchBox" placeholder="Search AP reports by email..." oninput="renderApReports()">
+          <div id="apReportsList"><div class="loading">Loading AP reports...</div></div>
+        </div>
+        <div id="apFormsSection" class="users-section" style="display:none">
+          <input type="text" class="search" id="apFormSearchBox" placeholder="Search AP registrations by email..." oninput="renderApForms()">
+          <div id="apFormsList"><div class="loading">Loading AP registrations...</div></div>
         </div>
       </div>
     </div>
@@ -1059,6 +1159,30 @@
 
     // ── Topic to Question file mapping ─────
     const TOPIC_QUESTIONS_MAP = {
+      'Words In Context': { q: './topic_words_in_context/questions.js', dir: './topic_words_in_context' },
+      'Structure And Purpose': { q: './topic_structure_and_purpose/questions.js', dir: './topic_structure_and_purpose' },
+      'Cross-Text Connections': { q: './topic_cross_text_connections/questions.js', dir: './topic_cross_text_connections' },
+      'Central Ideas And Details': { q: './topic_central_ideas_and_details/questions.js', dir: './topic_central_ideas_and_details' },
+      'Textual Evidence': { q: './topic_textual_evidence/questions.js', dir: './topic_textual_evidence' },
+      'Inferences': { q: './topic_inferences/questions.js', dir: './topic_inferences' },
+      'Linear Equation In One Variable & Linear Equation In Two Variables': { q: './topic_linear_equation_in_one_variable_linear_equation_in_two_variables/questions.js', dir: './topic_linear_equation_in_one_variable_linear_equation_in_two_variables' },
+      'Linear Functions': { q: './topic_linear_functions/questions.js', dir: './topic_linear_functions' },
+      'Systems Of Two Linear Equations In Two Variables': { q: './topic_systems_of_two_linear_equations_in_two_variables/questions.js', dir: './topic_systems_of_two_linear_equations_in_two_variables' },
+      'Linear Inequalities In One Or Two Variables': { q: './topic_linear_inequalities_in_one_or_two_variables/questions.js', dir: './topic_linear_inequalities_in_one_or_two_variables' },
+      'Equivalent Expressions': { q: './topic_equivalent_expressions/questions.js', dir: './topic_equivalent_expressions' },
+      'Nonlinear Functions': { q: './topic_nonlinear_functions/questions.js', dir: './topic_nonlinear_functions' },
+      'Ratios, Rates, Proportional Relationships, And Units': { q: './topic_ratios_rates_proportional_relationships_and_units/questions.js', dir: './topic_ratios_rates_proportional_relationships_and_units' },
+      'Percentages': { q: './topic_percentages/questions.js', dir: './topic_percentages' },
+      'Two-Variable Data: Models And Scatter Plots': { q: './topic_two_variable_data_models_and_scatter_plots/questions.js', dir: './topic_two_variable_data_models_and_scatter_plots' },
+      'Probability And Conditional Probability': { q: './topic_probability_and_conditional_probability/questions.js', dir: './topic_probability_and_conditional_probability' },
+      'Inference From Sample Statistics And Margin Of Error': { q: './topic_inference_from_sample_statistics_and_margin_of_error/questions.js', dir: './topic_inference_from_sample_statistics_and_margin_of_error' },
+      'Area And Volume': { q: './topic_area_and_volume/questions.js', dir: './topic_area_and_volume' },
+      'Lines, Angles, And Triangles': { q: './topic_lines_angles_and_triangles/questions.js', dir: './topic_lines_angles_and_triangles' },
+      'Right Triangles And Trigonometry': { q: './topic_right_triangles_and_trigonometry/questions.js', dir: './topic_right_triangles_and_trigonometry' },
+      'Circles': { q: './topic_circles/questions.js', dir: './topic_circles' },
+      'Information And Ideas': { q: './topic_information_and_ideas/questions.js', dir: './topic_information_and_ideas' },
+      'Expression Of Ideas': { q: './topic_expression_of_ideas/questions.js', dir: './topic_expression_of_ideas' },
+      'Craft And Structure': { q: './topic_craft_and_structure/questions.js', dir: './topic_craft_and_structure' },
       'Reading Comprehension': { q: './questions.js', dir: '.' },
       'Vocabulary in Context': { q: './topic2/questions2.js', dir: './topic2' },
       'Grammar & Usage': { q: './topic-3/questions.js', dir: './topic-3' },
@@ -1078,6 +1202,21 @@
       'Words in Context': { q: './wic/questions_wic.js', dir: './wic' },
       'Text Structure and Purpose': { q: './text_structure_purpose/questions_sp.js', dir: './text_structure_purpose' },
       'Central Ideas and Details': { q: './Central_Ideas_and_Details/questions_cid.js', dir: './Central_Ideas_and_Details' },
+      'PDF - Central Ideas and Details': { q: './pdf_Central_Ideas_and_Details/questions.js', dir: './pdf_Central_Ideas_and_Details' },
+      'PDF - Command of Evidence Textual': { q: './pdf_Command_of_Evidence_Textual/questions.js', dir: './pdf_Command_of_Evidence_Textual' },
+      'PDF - Inferences': { q: './pdf_Inferences/questions.js', dir: './pdf_Inferences' },
+      'PDF - Words in Context': { q: './pdf_Words_in_Context/questions.js', dir: './pdf_Words_in_Context' },
+      'PDF - Text Structure and Purpose': { q: './pdf_Text_Structure_and_Purpose/questions.js', dir: './pdf_Text_Structure_and_Purpose' },
+      'PDF - Cross-Text Connections': { q: './pdf_Cross_Text_Connections/questions.js', dir: './pdf_Cross_Text_Connections' },
+      'PDF - Rhetorical Synthesis': { q: './pdf_Rhetorical_Synthesis/questions.js', dir: './pdf_Rhetorical_Synthesis' },
+      'PDF - Transitions': { q: './pdf_Transitions/questions.js', dir: './pdf_Transitions' },
+      'PDF - Boundaries': { q: './pdf_Boundaries/questions.js', dir: './pdf_Boundaries' },
+      'PDF - Form, Structure, and Sense': { q: './pdf_Form_Structure_and_Sense/questions.js', dir: './pdf_Form_Structure_and_Sense' },
+      'Exponents & Square Roots': { q: './Exponents_and_Square_Roots/questions.js', dir: './Exponents_and_Square_Roots' },
+      'Polynomials': { q: './Polynomials/questions.js', dir: './Polynomials' },
+      'Quadratic Equations': { q: './Quadratic_Equations/questions.js', dir: './Quadratic_Equations' },
+      'Functions & Parabola': { q: './Functions_and_Parabola/questions.js', dir: './Functions_and_Parabola' },
+      'Quadratic Equations (Set 2)': { q: './Quadratic_Equations_2/questions.js', dir: './Quadratic_Equations_2' },
       'Command of Evidence: Textual': { q: './coe_textual/questions_coe_textual.js', dir: './coe_textual' },
       'Inferences': { q: './inferences/questions.js', dir: './inferences' },
       'Verb Tense and Forms': { q: './verbs/questions.js', dir: './verbs' },
@@ -1087,9 +1226,47 @@
       'Rhetorics': { q: './rhetorics/questions.js', dir: './rhetorics' },
       'SAT Diagnostic Test': { q: './exam_sat_diag/questions.js', dir: './exam_sat_diag' },
       'Lines, Angles & Triangles': { q: './angles&triangles/questions.js', dir: './angles&triangles' },
+      'Angles': { q: './angles/questions.js', dir: './angles' },
       'Mensuration & Geometry': { q: './mensuration/questions.js', dir: './mensuration' },
       'Trigonometry': { q: './Trigonometry/questions.js', dir: './Trigonometry' },
-      'Percentage': { q: './percentage/questions.js', dir: './percentage' }
+      'Percentage': { q: './percentage/questions.js', dir: './percentage' },
+      'Ratio & Proportion': { q: './ratio&proportion/questions.js', dir: './ratio&proportion' },
+      'Mixed Reading Practice 1': { q: './new_test_1/questions_rw.js', dir: './new_test_1' },
+      'Mixed Math Practice 1': { q: './new_test_1/questions_math.js', dir: './new_test_1' },
+      'Mixed Reading Practice 2': { q: './new_test_2/questions_rw.js', dir: './new_test_2' },
+      'Mixed Math Practice 2': { q: './new_test_2/questions_math.js', dir: './new_test_2' },
+      'Mixed Reading Practice 3': { q: './new_test_3/questions_rw.js', dir: './new_test_3' },
+      'Mixed Math Practice 3': { q: './new_test_3/questions_math.js', dir: './new_test_3' },
+      'SAT Mock Test': { q: './mock/questions.js', dir: './mock' },
+      'Mock SAT Test': { q: './mock/questions.js', dir: './mock' },
+      'Mock SAT Test 1': { q: './mock/questions.js', dir: './mock' },
+      'Mock SAT Test 2': { q: './mock/questions2.js', dir: './mock' },
+      'Practice Exam 1': { q: './mock/questions.js', dir: './mock' },
+      'Practice Exam 2': { q: './mock/questions2.js', dir: './mock' },
+      'Practice Exam 3': { q: './mock/test_3/questions3.js', dir: './mock/test_3' },
+      'Diagnostic Test 4': { q: './mock/test_4/questions4.js', dir: './mock/test_4' },
+      'Practice Test 5': { q: './mock/test_5/questions5.js', dir: './mock/test_5' },
+      'Practice Test 6': { q: './mock/test_6/questions6.js', dir: './mock/test_6' },
+      'SAT Prep Test 1 – R&W': { q: './mock/test_7/questions7.js', dir: './mock/test_7' },
+      'Practice Test 8': { q: './mock/test_8/questions8.js', dir: './mock/test_8' },
+      'Practice Test 9': { q: './mock/test_9/questions9.js', dir: './mock/test_9' },
+      'Practice Test 10': { q: './mock/test_10/questions10.js', dir: './mock/test_10' },
+      'Practice Test 11': { q: './mock/test_11/questions11.js', dir: './mock/test_11' },
+      'Practice Test 12': { q: './mock/test_12/questions12.js', dir: './mock/test_12' },
+      'Practice Test 13': { q: './mock/test_13/questions13.js', dir: './mock/test_13' },
+      'Digital SAT – Practice Exam 1': { q: './mock/questions.js', dir: './mock' },
+      'Digital SAT – Practice Exam 2': { q: './mock/questions2.js', dir: './mock' },
+      'Digital SAT – Practice Exam 3': { q: './mock/test_3/questions3.js', dir: './mock/test_3' },
+      'Digital SAT – Diagnostic Test 4': { q: './mock/test_4/questions4.js', dir: './mock/test_4' },
+      'Digital SAT – Practice Test 5': { q: './mock/test_5/questions5.js', dir: './mock/test_5' },
+      'Digital SAT – Practice Test 6': { q: './mock/test_6/questions6.js', dir: './mock/test_6' },
+      'Digital SAT – SAT Prep Test 1 – R&W': { q: './mock/test_7/questions7.js', dir: './mock/test_7' },
+      'Digital SAT – Practice Test 8': { q: './mock/test_8/questions8.js', dir: './mock/test_8' },
+      'Digital SAT – Practice Test 9': { q: './mock/test_9/questions9.js', dir: './mock/test_9' },
+      'Digital SAT – Practice Test 10': { q: './mock/test_10/questions10.js', dir: './mock/test_10' },
+      'Digital SAT – Practice Test 11': { q: './mock/test_11/questions11.js', dir: './mock/test_11' },
+      'Digital SAT – Practice Test 12': { q: './mock/test_12/questions12.js', dir: './mock/test_12' },
+      'Digital SAT – Practice Test 13': { q: './mock/test_13/questions13.js', dir: './mock/test_13' }
     };
 
     const loadedQuestionsCache = {};
@@ -1098,8 +1275,68 @@
     function getTopicMapping(topicName) {
       if (!topicName) return null;
       const clean = topicName.trim().toLowerCase();
-      const key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => k.trim().toLowerCase() === clean);
-      return key ? { key, ...TOPIC_QUESTIONS_MAP[key] } : null;
+      
+      // 1. Direct or substring match against TOPIC_QUESTIONS_MAP keys
+      let key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => {
+        const kClean = k.trim().toLowerCase();
+        return kClean === clean || clean.includes(kClean) || kClean.includes(clean);
+      });
+      if (key) return { key, ...TOPIC_QUESTIONS_MAP[key] };
+
+      const isMockDir = typeof TOPIC_QUESTIONS_MAP['Grammar & Usage'] !== 'undefined' && TOPIC_QUESTIONS_MAP['Grammar & Usage'].q.startsWith('../');
+      const topicPrefix = isMockDir ? '../' : './';
+      const mockPrefix = isMockDir ? './' : './mock/';
+
+      // 2. Fallback: match "topic X", "topic-X", "topic_X" (e.g. Topic-14 -> topic_14)
+      const topicMatch = clean.match(/topic[\s-_]*([0-9]+)/);
+      if (topicMatch && topicMatch[1]) {
+        const num = parseInt(topicMatch[1], 10);
+        const numMap = {
+          1: { q: topicPrefix + 'questions.js', dir: topicPrefix.replace(/\/$/, '') || '.' },
+          2: { q: topicPrefix + 'topic2/questions2.js', dir: topicPrefix + 'topic2' },
+          3: { q: topicPrefix + 'topic-3/questions.js', dir: topicPrefix + 'topic-3' },
+          4: { q: topicPrefix + 'topic4/questions.js', dir: topicPrefix + 'topic4' },
+          5: { q: topicPrefix + 'topic5/questions.js', dir: topicPrefix + 'topic5' },
+          6: { q: topicPrefix + 'test_6/questions.js', dir: topicPrefix + 'test_6' },
+          7: { q: topicPrefix + 'topic_7/questions.js', dir: topicPrefix + 'topic_7' },
+          8: { q: topicPrefix + 'topic_8/questions.js', dir: topicPrefix + 'topic_8' },
+          9: { q: topicPrefix + 'topic_9/questions.js', dir: topicPrefix + 'topic_9' },
+          10: { q: topicPrefix + 'topic_10/questions.js', dir: topicPrefix + 'topic_10' },
+          11: { q: topicPrefix + 'topic_11/questions.js', dir: topicPrefix + 'topic_11' },
+          12: { q: topicPrefix + 'topic_12/questions.js', dir: topicPrefix + 'topic_12' },
+          13: { q: topicPrefix + 'topic_13/questions.js', dir: topicPrefix + 'topic_13' },
+          14: { q: topicPrefix + 'topic_14/questions.js', dir: topicPrefix + 'topic_14' },
+          15: { q: topicPrefix + 'topic_15/questions.js', dir: topicPrefix + 'topic_15' },
+          16: { q: topicPrefix + 'topic_16/questions.js', dir: topicPrefix + 'topic_16' }
+        };
+        if (numMap[num]) return { key: 'Topic ' + num, ...numMap[num] };
+      }
+
+      // 3. Fallback: match practice exam / mock test / test numbers
+      const testMatch = clean.match(/(?:test|exam|mock)[\s-_]*([0-9]+)/);
+      if (testMatch && testMatch[1]) {
+        const num = parseInt(testMatch[1], 10);
+        const testMap = {
+          1: { q: mockPrefix + 'questions.js', dir: mockPrefix.replace(/\/$/, '') || '.' },
+          2: { q: mockPrefix + 'questions2.js', dir: mockPrefix.replace(/\/$/, '') || '.' },
+          3: { q: mockPrefix + 'test_3/questions3.js', dir: mockPrefix + 'test_3' },
+          4: { q: mockPrefix + 'test_4/questions4.js', dir: mockPrefix + 'test_4' },
+          5: { q: mockPrefix + 'test_5/questions5.js', dir: mockPrefix + 'test_5' },
+          6: { q: mockPrefix + 'test_6/questions6.js', dir: mockPrefix + 'test_6' },
+          7: { q: mockPrefix + 'test_7/questions7.js', dir: mockPrefix + 'test_7' },
+          8: { q: mockPrefix + 'test_8/questions8.js', dir: mockPrefix + 'test_8' },
+          9: { q: mockPrefix + 'test_9/questions9.js', dir: mockPrefix + 'test_9' },
+          10: { q: mockPrefix + 'test_10/questions10.js', dir: mockPrefix + 'test_10' },
+          11: { q: mockPrefix + 'test_11/questions11.js', dir: mockPrefix + 'test_11' },
+          12: { q: mockPrefix + 'test_12/questions12.js', dir: mockPrefix + 'test_12' },
+          13: { q: mockPrefix + 'test_13/questions13.js', dir: mockPrefix + 'test_13' }
+        };
+        if (/(?:mock|sat|digital|practice|diagnostic|exam|prep)/.test(clean) && testMap[num]) {
+          return { key: 'Practice Exam ' + num, ...testMap[num] };
+        }
+      }
+
+      return null;
     }
 
     function loadQuestionsForTopic(topicName) {
@@ -1107,11 +1344,14 @@
         return Promise.resolve(loadedQuestionsCache[topicName]);
       }
       return new Promise((resolve) => {
-        const mapping = TOPIC_QUESTIONS_MAP[topicName];
-        const path = mapping ? mapping.q : null;
+        const mapping = TOPIC_QUESTIONS_MAP[topicName] || getTopicMapping(topicName);
+        let path = mapping ? mapping.q : null;
         if (!path) {
           resolve(null);
           return;
+        }
+        if (window.location.pathname.includes('/mock/') && path.startsWith('./')) {
+          path = '../' + path.slice(2);
         }
 
         const loadViaIframe = () => {
@@ -1125,7 +1365,17 @@
             script.onload = () => {
               try {
                 const extractScript = doc.createElement('script');
-                extractScript.textContent = "window.__extracted_qs = typeof QUESTIONS !== 'undefined' ? QUESTIONS : null;";
+                extractScript.textContent = `
+                  window.__extracted_qs = null;
+                  for (let prop in window) {
+                    if (prop.toUpperCase().includes('QUESTIONS') || prop === 'questions' || prop === 'local_qs') {
+                      if (Array.isArray(window[prop]) && window[prop].length > 0) {
+                        window.__extracted_qs = window[prop];
+                        break;
+                      }
+                    }
+                  }
+                `;
                 doc.body.appendChild(extractScript);
                 const qs = iframe.contentWindow.__extracted_qs;
                 if (qs && Array.isArray(qs)) {
@@ -1155,8 +1405,25 @@
             return res.text();
           })
           .then(text => {
-            let code = text.replace(/(const|let|var)\s+QUESTIONS\s*=/, "var local_qs =");
-            code += "\n; if (typeof local_qs !== 'undefined') { local_qs } else if (typeof QUESTIONS !== 'undefined') { QUESTIONS } else { null };";
+            let code = text.replace(/(const|let|var)\s+([A-Za-z0-9_]*QUESTIONS[A-Za-z0-9_]*)\s*=/gi, "var local_qs =");
+            code += `
+;
+if (typeof local_qs !== 'undefined' && Array.isArray(local_qs)) { return local_qs; }
+if (typeof QUESTIONS !== 'undefined' && Array.isArray(QUESTIONS)) { return QUESTIONS; }
+if (typeof QUESTIONS2 !== 'undefined' && Array.isArray(QUESTIONS2)) { return QUESTIONS2; }
+if (typeof QUESTIONS3 !== 'undefined' && Array.isArray(QUESTIONS3)) { return QUESTIONS3; }
+if (typeof QUESTIONS4 !== 'undefined' && Array.isArray(QUESTIONS4)) { return QUESTIONS4; }
+if (typeof QUESTIONS5 !== 'undefined' && Array.isArray(QUESTIONS5)) { return QUESTIONS5; }
+if (typeof QUESTIONS6 !== 'undefined' && Array.isArray(QUESTIONS6)) { return QUESTIONS6; }
+if (typeof QUESTIONS7 !== 'undefined' && Array.isArray(QUESTIONS7)) { return QUESTIONS7; }
+if (typeof QUESTIONS8 !== 'undefined' && Array.isArray(QUESTIONS8)) { return QUESTIONS8; }
+if (typeof QUESTIONS9 !== 'undefined' && Array.isArray(QUESTIONS9)) { return QUESTIONS9; }
+if (typeof QUESTIONS10 !== 'undefined' && Array.isArray(QUESTIONS10)) { return QUESTIONS10; }
+if (typeof QUESTIONS11 !== 'undefined' && Array.isArray(QUESTIONS11)) { return QUESTIONS11; }
+if (typeof QUESTIONS12 !== 'undefined' && Array.isArray(QUESTIONS12)) { return QUESTIONS12; }
+if (typeof QUESTIONS13 !== 'undefined' && Array.isArray(QUESTIONS13)) { return QUESTIONS13; }
+return null;
+`;
             try {
               const fn = new Function(code);
               const result = fn();
@@ -1295,338 +1562,499 @@
       showLogin();
     }
 
-    // ── Load profiles ────────────────────────────────
+    // ── Global Variables ─────────────────────────────
+    let currentPortal = 'mock';
+    let currentMockFilter = 'pending';
+    let currentTopicFilter = 'pending';
+    let currentTmuaFilter = 'pending';
+    let currentUcatFilter = 'pending';
+    let currentActFilter = 'pending';
+    let currentApFilter = 'pending';
+
+    let allMockReports = [];
+    let groupedMockReports = {};
+    let allTopicReports = [];
+    let groupedTopicReports = {};
+    let allTmuaReports = [];
+    let groupedTmuaReports = {};
+    let allUcatReports = [];
+    let groupedUcatReports = {};
+    let allActReports = [];
+    let groupedActReports = {};
+    let allApReports = [];
+    let groupedApReports = {};
+
+    let allMockForms = [];
+    let allTopicForms = [];
+    let allTmuaForms = [];
+    let allUcatForms = [];
+    let allActForms = [];
+    let allApForms = [];
+
+    let groupedReports = {}; // For compatibility with openAdminTestDetail
+    let allReports = []; // For compatibility
+
+    // ── Load profiles & all reports ──────────────────
     async function loadProfiles() {
-      const { data, error } = await supabaseClient
+      const { data: profilesData, error: errP } = await supabaseClient
         .from('profiles')
         .select('*')
         .order('created_at', { ascending: false });
 
-      if (error) {
-        document.getElementById('userList').innerHTML = `<div class="empty">Error loading data: ${error.message}</div>`;
+      if (errP) {
+        document.getElementById('mockUserList').innerHTML = `<div class="empty">Error loading data: ${errP.message}</div>`;
         return;
       }
+      allProfiles = profilesData || [];
 
-      const { data: tmuaResults, error: errTmua } = await supabaseClient
-        .from('tmua_report')
-        .select('*')
-        .order('submit_time', { ascending: false });
+      // 1. Mock SAT reports
+      const { data: mockRes } = await supabaseClient.from('sat_results').select('*').order('submitted_at', { ascending: false });
+      allMockReports = mockRes || [];
+      groupedMockReports = {};
+      allMockReports.forEach(r => {
+        const e = (r.student_email || r.email || '').toLowerCase().trim();
+        if (!groupedMockReports[e]) groupedMockReports[e] = [];
+        groupedMockReports[e].push(r);
+      });
 
-      if (errTmua) console.warn("Could not fetch tmua reports", errTmua);
+      // 2. Topic SAT reports
+      const { data: topicRes } = await supabaseClient.from('sat_topic_report').select('*').order('submit_time', { ascending: false });
+      allTopicReports = topicRes || [];
+      groupedTopicReports = {};
+      allTopicReports.forEach(r => {
+        const e = (r.email || '').toLowerCase().trim();
+        if (!groupedTopicReports[e]) groupedTopicReports[e] = [];
+        groupedTopicReports[e].push(r);
+      });
 
-      allTmuaReports = tmuaResults || [];
+      // 3. TMUA reports
+      const { data: tmuaRes } = await supabaseClient.from('tmua_report').select('*').order('submit_time', { ascending: false });
+      allTmuaReports = tmuaRes || [];
       groupedTmuaReports = {};
       allTmuaReports.forEach(r => {
-        const e = (r.email || 'unknown').toLowerCase().trim();
+        const e = (r.email || '').toLowerCase().trim();
         if (!groupedTmuaReports[e]) groupedTmuaReports[e] = [];
         groupedTmuaReports[e].push(r);
       });
 
-      allProfiles = data || [];
-      updateStats();
-      renderList();
-      updateTmuaStats();
-      renderTmuaUsers();
-      renderTmuaReports();
+      // 4. UCAT reports
+      const { data: ucatRes } = await supabaseClient.from('Ucat_diagnosis').select('*').order('submit_time', { ascending: false });
+      allUcatReports = (ucatRes || []).filter(r => r.submit_time);
+      groupedUcatReports = {};
+      allUcatReports.forEach(r => {
+        const e = (r.email || '').toLowerCase().trim();
+        if (!groupedUcatReports[e]) groupedUcatReports[e] = [];
+        groupedUcatReports[e].push(r);
+      });
+
+      // 5. ACT reports
+      const { data: actRes } = await supabaseClient.from('act_results').select('*').order('submitted_at', { ascending: false });
+      allActReports = actRes || [];
+      groupedActReports = {};
+      allActReports.forEach(r => {
+        const e = (r.student_email || r.email || '').toLowerCase().trim();
+        if (!groupedActReports[e]) groupedActReports[e] = [];
+        groupedActReports[e].push(r);
+      });
+
+      // 6. AP reports
+      const { data: apRes } = await supabaseClient.from('ap_report').select('*').order('submit_time', { ascending: false });
+      allApReports = apRes || [];
+      groupedApReports = {};
+      allApReports.forEach(r => {
+        const e = (r.email || '').toLowerCase().trim();
+        if (!groupedApReports[e]) groupedApReports[e] = [];
+        groupedApReports[e].push(r);
+      });
+
+      // 7. Form Registrations
+      try {
+        const { data: mockForms } = await supabaseClient.from('sat_registrations').select('*').order('created_at', { ascending: false });
+        allMockForms = mockForms || [];
+        const { data: topicForms } = await supabaseClient.from('sat_topic_user').select('*').order('created_at', { ascending: false });
+        allTopicForms = topicForms || [];
+        const { data: tmuaForms } = await supabaseClient.from('tmua_user').select('*').order('created_at', { ascending: false });
+        allTmuaForms = tmuaForms || [];
+        const { data: ucatForms } = await supabaseClient.from('ucat_user').select('*').order('created_at', { ascending: false });
+        allUcatForms = ucatForms || [];
+        const { data: actForms } = await supabaseClient.from('act_user').select('*').order('created_at', { ascending: false });
+        allActForms = actForms || [];
+        const { data: apForms } = await supabaseClient.from('ap_user').select('*').order('created_at', { ascending: false });
+        allApForms = apForms || [];
+      } catch(e) { console.warn('Error loading form registrations:', e); }
+
+      // Render all
+      updateMockStats(); renderMockUsers(); renderMockReports(); renderMockForms();
+      updateTopicStats(); renderTopicUsers(); renderTopicReports(); renderTopicForms();
+      updateTmuaStats(); renderTmuaUsers(); renderTmuaReports(); renderTmuaForms();
+      updateUcatStats(); renderUcatUsers(); renderUcatReports(); renderUcatForms();
+      updateActStats(); renderActUsers(); renderActReports(); renderActForms();
+      updateApStats(); renderApUsers(); renderApReports(); renderApForms();
+
+      switchPortal('mock');
     }
 
-    function updateStats() {
-      const total = allProfiles.length;
-      const satApproved = allProfiles.filter(p => p.has_access).length;
-      const topicApproved = allProfiles.filter(p => p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access).length;
-      const actApproved = allProfiles.filter(p => p.has_act_access).length;
+    // ── Switch Portal ────────────────────────────────
+    function switchPortal(portal) {
+      currentPortal = portal;
+      document.getElementById('btnPortalMock').classList.toggle('active', portal === 'mock');
+      document.getElementById('btnPortalTopic').classList.toggle('active', portal === 'topic');
+      document.getElementById('btnPortalTmua').classList.toggle('active', portal === 'tmua');
+      document.getElementById('btnPortalUcat').classList.toggle('active', portal === 'ucat');
+      document.getElementById('btnPortalAct').classList.toggle('active', portal === 'act');
+      document.getElementById('btnPortalAp').classList.toggle('active', portal === 'ap');
 
-      document.getElementById('statTotal').textContent = total;
-      document.getElementById('statSatApproved').textContent = satApproved;
-      document.getElementById('statSatPending').textContent = total - satApproved;
-      document.getElementById('statTopicApproved').textContent = topicApproved;
-      document.getElementById('statTopicPending').textContent = total - topicApproved;
-      document.getElementById('statActApproved').textContent = actApproved;
-      document.getElementById('statActPending').textContent = total - actApproved;
+      document.getElementById('mockPortalSection').style.display = portal === 'mock' ? 'block' : 'none';
+      document.getElementById('topicPortalSection').style.display = portal === 'topic' ? 'block' : 'none';
+      document.getElementById('tmuaPortalSection').style.display = portal === 'tmua' ? 'block' : 'none';
+      document.getElementById('ucatPortalSection').style.display = portal === 'ucat' ? 'block' : 'none';
+      document.getElementById('actPortalSection').style.display = portal === 'act' ? 'block' : 'none';
     }
 
-    // ── Filter tabs ───────────────────────────────────
-    function setFilter(filter) {
-      currentFilter = filter;
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.querySelector(`.tab[data-filter="${filter}"]`).classList.add('active');
+    // ── Update Org ───────────────────────────────────
+    async function updateOrg(userId, value) {
+      const { error } = await supabaseClient.from('profiles').update({ organization: value }).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) p.organization = value;
+    }
 
-      const usersSection = document.getElementById('usersSection');
-      const reportsSection = document.getElementById('reportsSection');
+    // ── Generic Helpers for Tabs & Forms ─────────────
+    function setPortalFilter(portal, filter, renderUsersFn, renderReportsFn, renderFormsFn) {
+      if (portal === 'mock') currentMockFilter = filter;
+      else if (portal === 'topic') currentTopicFilter = filter;
+      else if (portal === 'tmua') currentTmuaFilter = filter;
+      else if (portal === 'ucat') currentUcatFilter = filter;
+      else if (portal === 'act') currentActFilter = filter;
+      else if (portal === 'ap') currentApFilter = filter;
+
+      document.querySelectorAll(`[data-${portal}-tab]`).forEach(t => t.classList.toggle('active', t.getAttribute(`data-${portal}-tab`) === filter));
+      const usersSec = document.getElementById(`${portal}UsersSection`);
+      const reportsSec = document.getElementById(`${portal}ReportsSection`);
+      const formsSec = document.getElementById(`${portal}FormsSection`);
+      if (usersSec) usersSec.style.display = 'none';
+      if (reportsSec) reportsSec.style.display = 'none';
+      if (formsSec) formsSec.style.display = 'none';
 
       if (filter === 'reports') {
-        usersSection.style.display = 'none';
-        reportsSection.classList.add('active');
-        reportsSection.style.display = 'block';
-        loadReportsData();
+        if (reportsSec) reportsSec.style.display = 'block';
+        if (renderReportsFn) renderReportsFn();
+      } else if (filter === 'forms') {
+        if (formsSec) formsSec.style.display = 'block';
+        if (renderFormsFn) renderFormsFn();
       } else {
-        usersSection.style.display = 'block';
-        reportsSection.classList.remove('active');
-        reportsSection.style.display = 'none';
-        renderList();
+        if (usersSec) usersSec.style.display = 'block';
+        if (renderUsersFn) renderUsersFn();
       }
     }
 
-    // ── Render list ───────────────────────────────────
-    function renderList() {
-      const search = document.getElementById('searchBox').value.trim().toLowerCase();
-      let list = allProfiles;
+    function renderGenericForms(list, containerId, searchBoxId, examLabel) {
+      const search = (document.getElementById(searchBoxId)?.value || '').trim().toLowerCase();
+      let filtered = list || [];
+      if (search) filtered = filtered.filter(p => (p.student_email || p.email || '').toLowerCase().includes(search) || (p.student_name || p.name || '').toLowerCase().includes(search));
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      if (filtered.length === 0) { container.innerHTML = `<div class="empty">No ${examLabel} registration forms found.</div>`; return; }
 
-      if (currentFilter === 'pending') {
-        // Pending approval on EITHER SAT or Topic tests, or explicitly requested access
-        list = list.filter(p => p.topic_access_requested || !p.has_access || !p.has_topic_reading_access || !p.has_topic_math_access || !p.has_topic_class_test_access);
-        // Sort requested access to top
+      container.innerHTML = filtered.map(p => `
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.student_email || p.email || '(no email)'}</div>
+            <div class="meta">Name: ${p.student_name || p.name || '–'} &middot; Phone: ${p.student_phone || p.phone || '–'} &middot; Topic/Exam: ${p.exam_name || p.topic || '–'}</div>
+            <div style="margin-top: 4px; font-size: 0.8rem; color: rgba(255,255,255,0.4);">Registered: ${p.registered_at || p.created_at ? new Date(p.registered_at || p.created_at).toLocaleString('en-IN') : '–'}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderMockForms() { renderGenericForms(allMockForms, 'mockFormsList', 'mockFormSearchBox', 'Mock SAT'); }
+    function renderTopicForms() { renderGenericForms(allTopicForms, 'topicFormsList', 'topicFormSearchBox', 'Topic SAT'); }
+    function renderTmuaForms() { renderGenericForms(allTmuaForms, 'tmuaFormsList', 'tmuaFormSearchBox', 'TMUA'); }
+    function renderUcatForms() { renderGenericForms(allUcatForms, 'ucatFormsList', 'ucatFormSearchBox', 'UCAT'); }
+    function renderActForms() { renderGenericForms(allActForms, 'actFormsList', 'actFormSearchBox', 'ACT'); }
+    function renderApForms() { renderGenericForms(allApForms, 'apFormsList', 'apFormSearchBox', 'AP'); }
+
+    // ═════════════════════════════════════════════════
+    // ── 🎯 MOCK PORTAL LOGIC ─────────────────────────
+    // ═════════════════════════════════════════════════
+    function setMockFilter(filter) { setPortalFilter('mock', filter, renderMockUsers, renderMockReports, renderMockForms); }
+
+    async function grantAllMockAccess() {
+      if (!confirm('Are you sure you want to grant Mock SAT access to ALL pending users?')) return;
+      const pending = allProfiles.filter(p => !p.has_access);
+      if (pending.length === 0) { alert('No pending users found.'); return; }
+      for (const p of pending) {
+        await supabaseClient.from('profiles').update({ has_access: true }).eq('id', p.id);
+        p.has_access = true;
+      }
+      updateMockStats();
+      renderMockUsers();
+      alert(`Granted access to ${pending.length} users!`);
+    }
+
+    function updateMockStats() {
+      const total = allProfiles.length;
+      const approved = allProfiles.filter(p => p.has_access).length;
+      document.getElementById('mockStatTotal').textContent = total;
+      document.getElementById('mockStatApproved').textContent = approved;
+      document.getElementById('mockStatPending').textContent = total - approved;
+      document.getElementById('mockStatReports').textContent = allMockReports.length;
+    }
+
+    function renderMockUsers() {
+      const search = (document.getElementById('mockSearchBox').value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (currentMockFilter === 'pending') list = list.filter(p => !p.has_access);
+      else if (currentMockFilter === 'approved') list = list.filter(p => p.has_access);
+      if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search));
+
+      const container = document.getElementById('mockUserList');
+      if (list.length === 0) { container.innerHTML = `<div class="empty">No users found.</div>`; return; }
+
+      container.innerHTML = list.map(p => `
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.email || '(no email)'}</div>
+            <div class="meta">Signed up: ${p.created_at ? new Date(p.created_at).toLocaleString() : '–'}</div>
+            <div style="margin-top: 8px;">
+              <span class="badge ${p.has_access ? 'granted' : 'pending'}">Mock SAT Access: ${p.has_access ? '✓ Granted' : '⏳ Pending'}</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <input type="text" class="org-input" placeholder="Organization" value="${p.organization || ''}" onchange="updateOrg('${p.id}', this.value)">
+            </div>
+          </div>
+          <div class="actions" style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Mock SAT:</span>
+            ${p.has_access
+              ? `<button class="btn-sm btn-revoke" onclick="setMockAccess('${p.id}', false)">Revoke</button>`
+              : `<button class="btn-sm btn-approve" onclick="setMockAccess('${p.id}', true)">Approve</button>`
+            }
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function setMockAccess(userId, value) {
+      const { error } = await supabaseClient.from('profiles').update({ has_access: value }).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) p.has_access = value;
+      updateMockStats();
+      renderMockUsers();
+    }
+
+    function renderMockReports() {
+      const search = (document.getElementById('mockReportSearchBox').value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedMockReports);
+      if (search) emails = emails.filter(e => e.includes(search));
+      const container = document.getElementById('mockReportsList');
+      if (emails.length === 0) { container.innerHTML = `<div class="report-empty">No Mock SAT test reports found.</div>`; return; }
+
+      container.innerHTML = emails.map(email => {
+        const tests = groupedMockReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.percentage || t.pct || 0), 0) / totalTests);
+        const avgScaled = Math.round(tests.reduce((s, t) => s + Number(t.composite_score || t.scaled || 0), 0) / totalTests);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+
+        return `
+        <div class="student-report-card" id="mock-src-${safeEmail}">
+          <div class="src-header" onclick="toggleMockReportCard('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].student_name || tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
+              <div class="src-stat"><div class="ss-num" style="color:#6ee7b7">${avgScaled}</div><div class="ss-lbl">Composite</div></div>
+            </div>
+            <div class="src-toggle" id="mock-toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="mock-body-${safeEmail}">
+            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Mock Tests Breakdown</h4>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                  <th style="padding:8px 4px;">Exam Name</th>
+                  <th style="padding:8px 4px;">Date</th>
+                  <th style="padding:8px 4px;">Score</th>
+                  <th style="padding:8px 4px;">Scaled Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tests.map((t, testIdx) => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05); cursor:pointer;" onclick="openAdminTestDetail('${email}', ${testIdx}, 'mock')" title="Click to view full question report">
+                    <td style="padding:8px 4px; font-weight:600;">${t.exam_name || t.topic || 'Mock SAT Test'}</td>
+                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submitted_at ? new Date(t.submitted_at).toLocaleDateString('en-IN') : '–'}</td>
+                    <td style="padding:8px 4px; color:#fbbf24;">${t.percentage || t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
+                    <td style="padding:8px 4px; color:#6ee7b7; font-weight:700;">${t.composite_score || t.scaled || '–'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleMockReportCard(safeEmail) {
+      const body = document.getElementById(`mock-body-${safeEmail}`);
+      const toggle = document.getElementById(`mock-toggle-${safeEmail}`);
+      if (body.style.display === 'block') {
+        body.style.display = 'none';
+        if (toggle) toggle.textContent = '▼';
+      } else {
+        body.style.display = 'block';
+        if (toggle) toggle.textContent = '▲';
+      }
+    }
+
+    // ═════════════════════════════════════════════════
+    // ── 📖 TOPIC PORTAL LOGIC ────────────────────────
+    // ═════════════════════════════════════════════════
+    function setTopicFilter(filter) { setPortalFilter('topic', filter, renderTopicUsers, renderTopicReports, renderTopicForms); }
+
+    async function grantAllTopicAccess() {
+      if (!confirm('Are you sure you want to grant Topic access to ALL pending users?')) return;
+      const pending = allProfiles.filter(p => !p.has_topic_reading_access || !p.has_topic_math_access || !p.has_topic_class_test_access);
+      if (pending.length === 0) { alert('No pending users found.'); return; }
+      for (const p of pending) {
+        await supabaseClient.from('profiles').update({ 
+          has_topic_reading_access: true,
+          has_topic_math_access: true,
+          has_topic_class_test_access: true,
+          topic_access_requested: false
+        }).eq('id', p.id);
+        p.has_topic_reading_access = true;
+        p.has_topic_math_access = true;
+        p.has_topic_class_test_access = true;
+        p.topic_access_requested = false;
+      }
+      updateTopicStats();
+      renderTopicUsers();
+      alert(`Granted topic access to ${pending.length} users!`);
+    }
+
+    function updateTopicStats() {
+      const total = allProfiles.length;
+      const approved = allProfiles.filter(p => p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access).length;
+      document.getElementById('topicStatTotal').textContent = total;
+      document.getElementById('topicStatApproved').textContent = approved;
+      document.getElementById('topicStatPending').textContent = total - approved;
+      document.getElementById('topicStatReports').textContent = allTopicReports.length;
+    }
+
+    function renderTopicUsers() {
+      const search = (document.getElementById('topicSearchBox').value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (currentTopicFilter === 'pending') {
+        list = list.filter(p => p.topic_access_requested || !p.has_topic_reading_access || !p.has_topic_math_access || !p.has_topic_class_test_access);
         list.sort((a, b) => {
           if (a.topic_access_requested && !b.topic_access_requested) return -1;
           if (!a.topic_access_requested && b.topic_access_requested) return 1;
           return new Date(b.created_at || 0) - new Date(a.created_at || 0);
         });
-      } else if (currentFilter === 'approved') {
-        // Approved for BOTH
-        list = list.filter(p => p.has_access && (p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access));
+      } else if (currentTopicFilter === 'approved') {
+        list = list.filter(p => p.has_topic_reading_access || p.has_topic_math_access || p.has_topic_class_test_access);
       }
-
       if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search));
 
-      const container = document.getElementById('userList');
-      if (list.length === 0) {
-        container.innerHTML = `<div class="empty">No users found.</div>`;
-        return;
-      }
+      const container = document.getElementById('topicUserList');
+      if (list.length === 0) { container.innerHTML = `<div class="empty">No users found.</div>`; return; }
 
       container.innerHTML = list.map(p => `
-    <div class="user-card">
-      <div class="user-info">
-        <div class="email">${p.email || '(no email)'} ${p.topic_access_requested ? '<span style="margin-left:8px;background:#d97706;color:#fff;padding:3px 8px;border-radius:12px;font-size:0.7rem;font-weight:bold;">🔔 Requested Access</span>' : ''}</div>
-        <div class="meta">Signed up: ${p.created_at ? new Date(p.created_at).toLocaleString() : '–'}</div>
-        <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-          <span class="badge ${p.has_access ? 'granted' : 'pending'}">SAT: ${p.has_access ? '✓' : '⏳'}</span>
-          <span class="badge ${p.has_topic_reading_access ? 'granted' : 'pending'}">Topic R&W: ${p.has_topic_reading_access ? '✓' : '⏳'}</span>
-          <span class="badge ${p.has_topic_math_access ? 'granted' : 'pending'}">Math: ${p.has_topic_math_access ? '✓' : '⏳'}</span>
-          <span class="badge ${p.has_topic_class_test_access ? 'granted' : 'pending'}">R&W Class Test: ${p.has_topic_class_test_access ? '✓' : '⏳'}</span>
-          <span class="badge ${p.has_act_access ? 'granted' : 'pending'}">ACT: ${p.has_act_access ? '✓' : '⏳'}</span>
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.email || '(no email)'} ${p.topic_access_requested ? '<span style="margin-left:8px;background:#d97706;color:#fff;padding:3px 8px;border-radius:12px;font-size:0.7rem;font-weight:bold;">🔔 Requested Access</span>' : ''}</div>
+            <div class="meta">Signed up: ${p.created_at ? new Date(p.created_at).toLocaleString() : '–'}</div>
+            <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="badge ${p.has_topic_reading_access ? 'granted' : 'pending'}">Topic R&W: ${p.has_topic_reading_access ? '✓' : '⏳'}</span>
+              <span class="badge ${p.has_topic_math_access ? 'granted' : 'pending'}">Math: ${p.has_topic_math_access ? '✓' : '⏳'}</span>
+              <span class="badge ${p.has_topic_class_test_access ? 'granted' : 'pending'}">R&W Class Test: ${p.has_topic_class_test_access ? '✓' : '⏳'}</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <input type="text" class="org-input" placeholder="Organization" value="${p.organization || ''}" onchange="updateOrg('${p.id}', this.value)">
+            </div>
+          </div>
+          <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">Topic R&W:</span>
+              ${p.has_topic_reading_access
+                ? `<button class="btn-sm btn-revoke" onclick="setTopicAccess('${p.id}', 'topic_rw', false)">Revoke</button>`
+                : `<button class="btn-sm btn-approve" onclick="setTopicAccess('${p.id}', 'topic_rw', true)">Approve</button>`
+              }
+            </div>
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">Topic Math:</span>
+              ${p.has_topic_math_access
+                ? `<button class="btn-sm btn-revoke" onclick="setTopicAccess('${p.id}', 'topic_math', false)">Revoke</button>`
+                : `<button class="btn-sm btn-approve" onclick="setTopicAccess('${p.id}', 'topic_math', true)">Approve</button>`
+              }
+            </div>
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">R&W Class Test:</span>
+              ${p.has_topic_class_test_access
+                ? `<button class="btn-sm btn-revoke" onclick="setTopicAccess('${p.id}', 'topic_class_test', false)">Revoke</button>`
+                : `<button class="btn-sm btn-approve" onclick="setTopicAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
+              }
+            </div>
+          </div>
         </div>
-        <div style="margin-top: 10px;">
-          <input type="text" class="org-input" placeholder="Organization" value="${p.organization || ''}"
-            onchange="updateOrg('${p.id}', this.value)">
-        </div>
-      </div>
-      <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">SAT Test:</span>
-          ${p.has_access
-            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'sat', false)">Revoke</button>`
-            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'sat', true)">Approve</button>`
-          }
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">Topic R&W:</span>
-          ${p.has_topic_reading_access
-            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_rw', false)">Revoke</button>`
-            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_rw', true)">Approve</button>`
-          }
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">Topic Math:</span>
-          ${p.has_topic_math_access
-            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_math', false)">Revoke</button>`
-            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_math', true)">Approve</button>`
-          }
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">R&W Class Test:</span>
-          ${p.has_topic_class_test_access
-            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_class_test', false)">Revoke</button>`
-            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
-          }
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-          <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 95px; text-align: right;">ACT Test:</span>
-          ${p.has_act_access
-            ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'act', false)">Revoke</button>`
-            : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'act', true)">Approve</button>`
-          }
-        </div>
-      </div>
-    </div>
-  `).join('');
+      `).join('');
     }
 
-    // ── Approve / Revoke ────────────────────────────
-    async function setAccess(userId, type, value) {
+    async function setTopicAccess(userId, type, value) {
       const updatePayload = {};
-      if (type === 'sat') {
-        updatePayload.has_access = value;
-      } else if (type === 'topic_rw') {
-        updatePayload.has_topic_reading_access = value;
-      } else if (type === 'topic_math') {
-        updatePayload.has_topic_math_access = value;
-      } else if (type === 'topic_class_test') {
-        updatePayload.has_topic_class_test_access = value;
-      } else if (type === 'act') {
-        updatePayload.has_act_access = value;
-      }
+      if (type === 'topic_rw') updatePayload.has_topic_reading_access = value;
+      else if (type === 'topic_math') updatePayload.has_topic_math_access = value;
+      else if (type === 'topic_class_test') updatePayload.has_topic_class_test_access = value;
+      if (value === true) updatePayload.topic_access_requested = false;
 
-      // Automatically clear the requested flag when access is granted
-      if (value === true) {
-        updatePayload.topic_access_requested = false;
-      }
-
-      const { error } = await supabaseClient
-        .from('profiles')
-        .update(updatePayload)
-        .eq('id', userId);
-
-      if (error) {
-        alert('Update failed: ' + error.message);
-        return;
-      }
+      const { error } = await supabaseClient.from('profiles').update(updatePayload).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
 
       const p = allProfiles.find(x => x.id === userId);
       if (p) {
-        if (type === 'sat') p.has_access = value;
-        else if (type === 'topic_rw') p.has_topic_reading_access = value;
+        if (type === 'topic_rw') p.has_topic_reading_access = value;
         else if (type === 'topic_math') p.has_topic_math_access = value;
         else if (type === 'topic_class_test') p.has_topic_class_test_access = value;
-        else if (type === 'act') p.has_act_access = value;
-        
         if (value === true) p.topic_access_requested = false;
       }
-      updateStats();
-      if (currentFilter === 'reports') {
-        renderReportsList();
-      } else {
-        renderList();
-      }
+      updateTopicStats();
+      renderTopicUsers();
     }
 
-    // ── Update organization ──────────────────────────
-    async function updateOrg(userId, value) {
-      const { error } = await supabaseClient
-        .from('profiles')
-        .update({ organization: value })
-        .eq('id', userId);
+    function renderTopicReports() {
+      const search = (document.getElementById('topicReportSearchBox').value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedTopicReports);
+      if (search) emails = emails.filter(e => e.includes(search));
 
-      if (error) {
-        alert('Update failed: ' + error.message);
-        return;
-      }
+      const totalReports = allTopicReports.length;
+      const uniqueStudents = emails.length;
+      const avgScore = totalReports > 0 ? Math.round(allTopicReports.reduce((s, r) => s + (r.pct || 0), 0) / totalReports) : 0;
+      const totalQs = allTopicReports.reduce((s, r) => s + (r.total || 0), 0);
 
-      const p = allProfiles.find(x => x.id === userId);
-      if (p) p.organization = value;
-    }
-
-    // ══════════════════════════════════════════════
-    // ── REPORTS TAB LOGIC ─────────────────────────
-    // ══════════════════════════════════════════════
-    let allReports = [];
-    let groupedReports = {};
-    let adminCharts = {};
-
-    async function loadReportsData() {
-      const { data: satData, error: satError } = await supabaseClient
-        .from('sat_topic_report')
-        .select('*')
-        .order('submit_time', { ascending: false });
-
-      if (satError) {
-        document.getElementById('reportsList').innerHTML = `<div class="report-empty">Error: ${satError.message}</div>`;
-        return;
-      }
-
-      const { data: actData, error: actError } = await supabaseClient
-        .from('act_results')
-        .select('*')
-        .order('submitted_at', { ascending: false });
-
-      if (actError) {
-        console.warn("ACT reports fetch error:", actError);
-      }
-
-      const mappedActData = (actData || []).map(r => {
-        const detailsObj = r.student_answers || [];
-        const mappedDetails = detailsObj.map(a => {
-           const mapOpt = o => o === 'A' ? 0 : o === 'B' ? 1 : o === 'C' ? 2 : o === 'D' ? 3 : null;
-           return {
-               id: a.question_id,
-               status: a.status,
-               chosen: mapOpt(a.chosen_option),
-               answer: mapOpt(a.correct_option),
-               text: 'Section: ' + (a.section || 'Unknown') + '\\nTopic: ' + (a.topic || 'Unknown'),
-               options: ['Option A', 'Option B', 'Option C', 'Option D']
-           };
-        });
-
-        return {
-          email: r.student_email,
-          name: r.student_name,
-          topic: r.exam_name || 'ACT Test',
-          scaled: r.composite_score || 0,
-          pct: r.percentage || 0,
-          correct: r.correct || 0,
-          wrong: r.wrong || 0,
-          unattempted: r.skipped || 0,
-          total: r.total || 0,
-          submit_time: r.submitted_at,
-          details_json: JSON.stringify(mappedDetails)
-        };
-      });
-
-      allReports = [...(satData || []), ...mappedActData];
-      allReports.sort((a, b) => new Date(b.submit_time || 0) - new Date(a.submit_time || 0));
-
-      // Group by email
-      groupedReports = {};
-      allReports.forEach(r => {
-        const email = (r.email || 'unknown').toLowerCase();
-        if (!groupedReports[email]) groupedReports[email] = [];
-        groupedReports[email].push(r);
-      });
-
-      renderReportOverviewStats();
-      renderReportsList();
-    }
-
-    function renderReportOverviewStats() {
-      const totalReports = allReports.length;
-      const uniqueStudents = Object.keys(groupedReports).length;
-      const avgScore = totalReports > 0
-        ? Math.round(allReports.reduce((s, r) => s + (r.pct || 0), 0) / totalReports)
-        : 0;
-      const totalQs = allReports.reduce((s, r) => s + (r.total || 0), 0);
-
-      document.getElementById('reportOverviewStats').innerHTML = `
+      document.getElementById('topicReportOverviewStats').innerHTML = `
         <div class="rstat"><div class="rnum">${uniqueStudents}</div><div class="rlbl">Students</div></div>
         <div class="rstat"><div class="rnum">${totalReports}</div><div class="rlbl">Total Tests</div></div>
         <div class="rstat"><div class="rnum">${avgScore}%</div><div class="rlbl">Avg Score</div></div>
         <div class="rstat"><div class="rnum">${totalQs}</div><div class="rlbl">Total Qs</div></div>
       `;
-    }
 
-    function renderReportsList() {
-      const search = (document.getElementById('reportSearchBox').value || '').trim().toLowerCase();
-      let emails = Object.keys(groupedReports);
+      const container = document.getElementById('topicReportsList');
+      if (emails.length === 0) { container.innerHTML = `<div class="report-empty">No Topic test reports found.</div>`; return; }
 
-      if (search) emails = emails.filter(e => e.includes(search));
-
-      if (emails.length === 0) {
-        document.getElementById('reportsList').innerHTML = `<div class="report-empty">No student reports found.</div>`;
-        return;
-      }
-
-      document.getElementById('reportsList').innerHTML = emails.map(email => {
-        const tests = groupedReports[email];
+      container.innerHTML = emails.map(email => {
+        const tests = groupedTopicReports[email];
         const totalTests = tests.length;
         const avgPct = Math.round(tests.reduce((s, t) => s + (t.pct || 0), 0) / totalTests);
         const avgScaled = Math.round(tests.reduce((s, t) => s + (t.scaled || 0), 0) / totalTests);
         const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
-        
-        // Find profile to check access
-        const p = allProfiles.find(x => x.email && x.email.toLowerCase() === email);
 
         return `
         <div class="student-report-card" id="src-${safeEmail}">
-          <div class="src-header" onclick="toggleStudentReport('${safeEmail}')">
+          <div class="src-header" onclick="toggleTopicReportCard('${safeEmail}')">
             <div class="src-info">
               <div class="src-email">${email}</div>
               <div class="src-meta">${tests[0].name || '–'}</div>
@@ -1639,53 +2067,12 @@
             <div class="src-toggle" id="toggle-${safeEmail}">▼</div>
           </div>
           <div class="src-body" id="body-${safeEmail}">
-            ${p ? `
-            <div style="margin-bottom: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-              <div style="font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.7);">Manage Access:</div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">SAT Test:</span>
-                ${p.has_access
-                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'sat', false)">Revoke</button>`
-                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'sat', true)">Approve</button>`
-                }
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Topic R&W:</span>
-                ${p.has_topic_reading_access
-                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_rw', false)">Revoke</button>`
-                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_rw', true)">Approve</button>`
-                }
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Topic Math:</span>
-                ${p.has_topic_math_access
-                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_math', false)">Revoke</button>`
-                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_math', true)">Approve</button>`
-                }
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">R&W Class Test:</span>
-                ${p.has_topic_class_test_access
-                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'topic_class_test', false)">Revoke</button>`
-                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'topic_class_test', true)">Approve</button>`
-                }
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">ACT Test:</span>
-                ${p.has_act_access
-                  ? `<button class="btn-sm btn-revoke" onclick="setAccess('${p.id}', 'act', false)">Revoke</button>`
-                  : `<button class="btn-sm btn-approve" onclick="setAccess('${p.id}', 'act', true)">Approve</button>`
-                }
-              </div>
-            </div>
-            ` : ''}
-            
             ${tests.map((t, testIdx) => {
               const p_score = t.pct || 0;
               const pillClass = p_score >= 70 ? 'high' : p_score >= 50 ? 'mid' : 'low';
               const date = t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '–';
               return `
-              <div class="src-test-row" style="cursor: pointer;" onclick="openAdminTestDetail('${email}', ${testIdx})">
+              <div class="src-test-row" style="cursor: pointer;" onclick="openAdminTestDetail('${email}', ${testIdx}, 'topic')">
                 <div class="str-topic">${t.topic || 'Unknown'}</div>
                 <div class="str-date">${date}</div>
                 <div class="str-scores">
@@ -1703,66 +2090,662 @@
       }).join('');
     }
 
-    function toggleStudentReport(safeEmail) {
+    function toggleTopicReportCard(safeEmail) {
       const body = document.getElementById(`body-${safeEmail}`);
       const toggle = document.getElementById(`toggle-${safeEmail}`);
       body.classList.toggle('open');
       toggle.classList.toggle('open');
     }
 
-    async function openAdminTestDetail(email, testIdx) {
-      const tests = groupedReports[email.toLowerCase()];
+    // ═════════════════════════════════════════════════
+    // ── 📐 TMUA PORTAL LOGIC ─────────────────────────
+    // ═════════════════════════════════════════════════
+    function setTmuaFilter(filter) { setPortalFilter('tmua', filter, renderTmuaUsers, renderTmuaReports, renderTmuaForms); }
+
+    async function grantAllTmuaAccess() {
+      if (!confirm('Are you sure you want to grant TMUA Diag & Topic access to ALL pending users?')) return;
+      const pending = allProfiles.filter(p => !p.has_tmua_diag_access || !p.has_tmua_topic_access || p.tmua_access_requested);
+      if (pending.length === 0) { alert('No pending users found.'); return; }
+      for (const p of pending) {
+        await supabaseClient.from('profiles').update({ 
+          has_tmua_diag_access: true,
+          has_tmua_topic_access: true,
+          tmua_access_requested: false
+        }).eq('id', p.id);
+        p.has_tmua_diag_access = true;
+        p.has_tmua_topic_access = true;
+        p.tmua_access_requested = false;
+      }
+      updateTmuaStats();
+      renderTmuaUsers();
+      alert(`Granted TMUA access to ${pending.length} users!`);
+    }
+
+    function updateTmuaStats() {
+      const total = allProfiles.length;
+      const approved = allProfiles.filter(p => p.has_tmua_diag_access || p.has_tmua_topic_access).length;
+      document.getElementById('tmuaStatTotal').textContent = total;
+      document.getElementById('tmuaStatApproved').textContent = approved;
+      document.getElementById('tmuaStatPending').textContent = total - approved;
+      document.getElementById('tmuaStatReports').textContent = allTmuaReports.length;
+    }
+
+    function renderTmuaUsers() {
+      const search = (document.getElementById('tmuaSearchBox')?.value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (currentTmuaFilter === 'pending') list = list.filter(p => !p.has_tmua_diag_access || !p.has_tmua_topic_access || p.tmua_access_requested);
+      else if (currentTmuaFilter === 'approved') list = list.filter(p => p.has_tmua_diag_access || p.has_tmua_topic_access);
+      if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search) || (p.name || '').toLowerCase().includes(search));
+      const container = document.getElementById('tmuaUserList');
+      if (!container) return;
+      if (list.length === 0) { container.innerHTML = `<div class="empty">No users found.</div>`; return; }
+
+      container.innerHTML = list.map(p => `
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.email || '(no email)'}</div>
+            <div class="meta">Name: ${p.name || '–'} &middot; Registered: ${p.created_at ? new Date(p.created_at).toLocaleDateString('en-IN') : '–'}</div>
+            <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="badge ${p.has_tmua_diag_access ? 'granted' : 'pending'}">Diag: ${p.has_tmua_diag_access ? '✓' : '⏳'}</span>
+              <span class="badge ${p.has_tmua_topic_access ? 'granted' : 'pending'}">Topic: ${p.has_tmua_topic_access ? '✓' : '⏳'}</span>
+            </div>
+          </div>
+          <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 85px; text-align: right;">Diag Access:</span>
+              ${p.has_tmua_diag_access
+                ? `<button class="btn-sm btn-revoke" onclick="setTmuaAccess('${p.id}', 'diag', false)">Revoke</button>`
+                : `<button class="btn-sm btn-approve" onclick="setTmuaAccess('${p.id}', 'diag', true)">Approve</button>`
+              }
+            </div>
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 85px; text-align: right;">Topic Access:</span>
+              ${p.has_tmua_topic_access
+                ? `<button class="btn-sm btn-revoke" onclick="setTmuaAccess('${p.id}', 'topic', false)">Revoke</button>`
+                : `<button class="btn-sm btn-approve" onclick="setTmuaAccess('${p.id}', 'topic', true)">Approve</button>`
+              }
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function setTmuaAccess(userId, type, value) {
+      const payload = {};
+      if (type === 'diag') payload.has_tmua_diag_access = value;
+      else if (type === 'topic') payload.has_tmua_topic_access = value;
+      const { error } = await supabaseClient.from('profiles').update(payload).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) {
+        if (type === 'diag') p.has_tmua_diag_access = value;
+        else if (type === 'topic') p.has_tmua_topic_access = value;
+      }
+      updateTmuaStats();
+      renderTmuaUsers();
+    }
+
+    function renderTmuaReports() {
+      const search = (document.getElementById('tmuaReportSearchBox')?.value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedTmuaReports);
+      if (search) emails = emails.filter(e => e.includes(search));
+      const container = document.getElementById('tmuaReportsList');
+      if (!container) return;
+      if (emails.length === 0) { container.innerHTML = `<div class="empty">No TMUA test reports found.</div>`; return; }
+
+      container.innerHTML = emails.map(email => {
+        const tests = groupedTmuaReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.pct || 0), 0) / totalTests);
+        const avgScaledRaw = tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / totalTests;
+        const avgScaled = avgScaledRaw < 10 ? avgScaledRaw.toFixed(1) : Math.round(avgScaledRaw);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+
+        return `
+        <div class="student-report-card" id="tmua-src-${safeEmail}">
+          <div class="src-header" onclick="toggleTmuaReportCard('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
+              <div class="src-stat"><div class="ss-num" style="color:#6ee7b7">${avgScaled}</div><div class="ss-lbl">TMUA Score</div></div>
+            </div>
+            <div class="src-toggle" id="tmua-toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="tmua-body-${safeEmail}">
+            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left; margin-bottom:14px;">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                  <th style="padding:8px 4px;">Topic</th>
+                  <th style="padding:8px 4px;">Date</th>
+                  <th style="padding:8px 4px;">Score</th>
+                  <th style="padding:8px 4px;">TMUA Scale</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tests.map((t, testIdx) => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05); cursor:pointer;" onclick="openAdminTestDetail('${email}', ${testIdx}, 'tmua')" title="Click to view full question report">
+                    <td style="padding:8px 4px; font-weight:600;">${t.topic || 'TMUA Test'}</td>
+                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN') : '–'}</td>
+                    <td style="padding:8px 4px; color:#fbbf24;">${t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
+                    <td style="padding:8px 4px; color:#6ee7b7; font-weight:700;">${t.scaled || '–'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+            <button class="btn-sm btn-approve" style="background:#1a56db; font-size:0.82rem; padding:8px 16px;" onclick="generateAdminTmuaCombined('${safeEmail}', '${email}')">📊 Generate Combined TMUA Report</button>
+            <div id="admin-tmua-combined-${safeEmail}"></div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleTmuaReportCard(safeEmail) {
+      const body = document.getElementById(`tmua-body-${safeEmail}`);
+      const toggle = document.getElementById(`tmua-toggle-${safeEmail}`);
+      if (body.style.display === 'block') {
+        body.style.display = 'none';
+        if (toggle) toggle.textContent = '▼';
+      } else {
+        body.style.display = 'block';
+        if (toggle) toggle.textContent = '▲';
+      }
+    }
+
+    // ═════════════════════════════════════════════════
+    // ── 🔬 UCAT PORTAL LOGIC ─────────────────────────
+    // ═════════════════════════════════════════════════
+    function setUcatFilter(filter) { setPortalFilter('ucat', filter, renderUcatUsers, renderUcatReports, renderUcatForms); }
+
+    async function grantAllUcatAccess() {
+      if (!confirm('Are you sure you want to grant UCAT access to ALL pending users?')) return;
+      const pending = allProfiles.filter(p => !p.has_ucat_access || p.ucat_access_requested);
+      if (pending.length === 0) { alert('No pending users found.'); return; }
+      for (const p of pending) {
+        await supabaseClient.from('profiles').update({ has_ucat_access: true, ucat_access_requested: false }).eq('id', p.id);
+        p.has_ucat_access = true;
+        p.ucat_access_requested = false;
+      }
+      updateUcatStats();
+      renderUcatUsers();
+      alert(`Granted UCAT access to ${pending.length} users!`);
+    }
+
+    function updateUcatStats() {
+      const total = allProfiles.length;
+      const approved = allProfiles.filter(p => p.has_ucat_access).length;
+      document.getElementById('ucatStatTotal').textContent = total;
+      document.getElementById('ucatStatApproved').textContent = approved;
+      document.getElementById('ucatStatPending').textContent = total - approved;
+      document.getElementById('ucatStatReports').textContent = allUcatReports.length;
+    }
+
+    function renderUcatUsers() {
+      const search = (document.getElementById('ucatSearchBox')?.value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (currentUcatFilter === 'pending') list = list.filter(p => !p.has_ucat_access || p.ucat_access_requested);
+      else if (currentUcatFilter === 'approved') list = list.filter(p => p.has_ucat_access);
+      if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search) || (p.name || '').toLowerCase().includes(search));
+      const container = document.getElementById('ucatUserList');
+      if (!container) return;
+      if (list.length === 0) { container.innerHTML = `<div class="empty">No users found.</div>`; return; }
+
+      container.innerHTML = list.map(p => `
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.email || '(no email)'}</div>
+            <div class="meta">Name: ${p.name || '–'} &middot; Registered: ${p.created_at ? new Date(p.created_at).toLocaleDateString('en-IN') : '–'}</div>
+            <div style="margin-top: 8px;">
+              <span class="badge ${p.has_ucat_access ? 'granted' : 'pending'}">UCAT Access: ${p.has_ucat_access ? '✓ Granted' : '⏳ Pending'}</span>
+            </div>
+          </div>
+          <div class="actions" style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">UCAT Access:</span>
+            ${p.has_ucat_access
+              ? `<button class="btn-sm btn-revoke" onclick="setUcatAccess('${p.id}', false)">Revoke</button>`
+              : `<button class="btn-sm btn-approve" onclick="setUcatAccess('${p.id}', true)">Approve</button>`
+            }
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function setUcatAccess(userId, value) {
+      const { error } = await supabaseClient.from('profiles').update({ has_ucat_access: value }).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) p.has_ucat_access = value;
+      updateUcatStats();
+      renderUcatUsers();
+    }
+
+    function renderUcatReports() {
+      const search = (document.getElementById('ucatReportSearchBox')?.value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedUcatReports);
+      if (search) emails = emails.filter(e => e.includes(search));
+      const container = document.getElementById('ucatReportsList');
+      if (!container) return;
+      if (emails.length === 0) { container.innerHTML = `<div class="empty">No UCAT test reports found.</div>`; return; }
+
+      container.innerHTML = emails.map(email => {
+        const tests = groupedUcatReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.pct || 0), 0) / totalTests);
+        const avgScaled = Math.round(tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / totalTests);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+
+        return `
+        <div class="student-report-card" id="ucat-src-${safeEmail}">
+          <div class="src-header" onclick="toggleUcatReportCard('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
+              <div class="src-stat"><div class="ss-num" style="color:#6ee7b7">${avgScaled}</div><div class="ss-lbl">Scaled Score</div></div>
+            </div>
+            <div class="src-toggle" id="ucat-toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="ucat-body-${safeEmail}">
+            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                  <th style="padding:8px 4px;">Exam Name</th>
+                  <th style="padding:8px 4px;">Date</th>
+                  <th style="padding:8px 4px;">Score</th>
+                  <th style="padding:8px 4px;">Scaled</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tests.map((t, testIdx) => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05); cursor:pointer;" onclick="openAdminTestDetail('${email}', ${testIdx}, 'ucat')" title="Click to view full question report">
+                    <td style="padding:8px 4px; font-weight:600;">${t.topic || t.exam_name || 'UCAT Test'}</td>
+                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN') : '–'}</td>
+                    <td style="padding:8px 4px; color:#fbbf24;">${t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
+                    <td style="padding:8px 4px; color:#6ee7b7; font-weight:700;">${t.scaled || '–'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleUcatReportCard(safeEmail) {
+      const body = document.getElementById(`ucat-body-${safeEmail}`);
+      const toggle = document.getElementById(`ucat-toggle-${safeEmail}`);
+      if (body.style.display === 'block') {
+        body.style.display = 'none';
+        if (toggle) toggle.textContent = '▼';
+      } else {
+        body.style.display = 'block';
+        if (toggle) toggle.textContent = '▲';
+      }
+    }
+
+    // ═════════════════════════════════════════════════
+    // ── 📝 ACT PORTAL LOGIC ──────────────────────────
+    // ═════════════════════════════════════════════════
+    function setActFilter(filter) { setPortalFilter('act', filter, renderActUsers, renderActReports, renderActForms); }
+
+    async function grantAllActAccess() {
+      if (!confirm('Are you sure you want to grant ACT access to ALL pending users?')) return;
+      const pending = allProfiles.filter(p => !p.has_act_access || p.act_access_requested);
+      if (pending.length === 0) { alert('No pending users found.'); return; }
+      for (const p of pending) {
+        await supabaseClient.from('profiles').update({ has_act_access: true, act_access_requested: false }).eq('id', p.id);
+        p.has_act_access = true;
+        p.act_access_requested = false;
+      }
+      updateActStats();
+      renderActUsers();
+      alert(`Granted ACT access to ${pending.length} users!`);
+    }
+
+    function updateActStats() {
+      const total = allProfiles.length;
+      const approved = allProfiles.filter(p => p.has_act_access).length;
+      document.getElementById('actStatTotal').textContent = total;
+      document.getElementById('actStatApproved').textContent = approved;
+      document.getElementById('actStatPending').textContent = total - approved;
+      document.getElementById('actStatReports').textContent = allActReports.length;
+    }
+
+    function renderActUsers() {
+      const search = (document.getElementById('actSearchBox')?.value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (currentActFilter === 'pending') list = list.filter(p => !p.has_act_access || p.act_access_requested);
+      else if (currentActFilter === 'approved') list = list.filter(p => p.has_act_access);
+      if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search) || (p.name || '').toLowerCase().includes(search));
+      const container = document.getElementById('actUserList');
+      if (!container) return;
+      if (list.length === 0) { container.innerHTML = `<div class="empty">No users found.</div>`; return; }
+
+      container.innerHTML = list.map(p => `
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.email || '(no email)'}</div>
+            <div class="meta">Name: ${p.name || '–'} &middot; Registered: ${p.created_at ? new Date(p.created_at).toLocaleDateString('en-IN') : '–'}</div>
+            <div style="margin-top: 8px;">
+              <span class="badge ${p.has_act_access ? 'granted' : 'pending'}">ACT Access: ${p.has_act_access ? '✓ Granted' : '⏳ Pending'}</span>
+            </div>
+          </div>
+          <div class="actions" style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">ACT Access:</span>
+            ${p.has_act_access
+              ? `<button class="btn-sm btn-revoke" onclick="setActAccess('${p.id}', false)">Revoke</button>`
+              : `<button class="btn-sm btn-approve" onclick="setActAccess('${p.id}', true)">Approve</button>`
+            }
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function setActAccess(userId, value) {
+      const { error } = await supabaseClient.from('profiles').update({ has_act_access: value }).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) p.has_act_access = value;
+      updateActStats();
+      renderActUsers();
+    }
+
+    function renderActReports() {
+      const search = (document.getElementById('actReportSearchBox')?.value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedActReports);
+      if (search) emails = emails.filter(e => e.includes(search));
+      const container = document.getElementById('actReportsList');
+      if (!container) return;
+      if (emails.length === 0) { container.innerHTML = `<div class="empty">No ACT test reports found.</div>`; return; }
+
+      container.innerHTML = emails.map(email => {
+        const tests = groupedActReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.percentage || t.pct || 0), 0) / totalTests);
+        const avgComposite = Math.round(tests.reduce((s, t) => s + Number(t.composite_score || t.scaled || 0), 0) / totalTests);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+
+        return `
+        <div class="student-report-card" id="act-src-${safeEmail}">
+          <div class="src-header" onclick="toggleActReportCard('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].student_name || tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
+              <div class="src-stat"><div class="ss-num" style="color:#6ee7b7">${avgComposite}</div><div class="ss-lbl">Composite Score</div></div>
+            </div>
+            <div class="src-toggle" id="act-toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="act-body-${safeEmail}">
+            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                  <th style="padding:8px 4px;">Exam Name</th>
+                  <th style="padding:8px 4px;">Date</th>
+                  <th style="padding:8px 4px;">Score</th>
+                  <th style="padding:8px 4px;">Composite</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tests.map((t, testIdx) => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05); cursor:pointer;" onclick="openAdminTestDetail('${email}', ${testIdx}, 'act')" title="Click to view full question report">
+                    <td style="padding:8px 4px; font-weight:600;">${t.exam_name || t.topic || 'ACT Test'}</td>
+                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submitted_at || t.submit_time ? new Date(t.submitted_at || t.submit_time).toLocaleDateString('en-IN') : '–'}</td>
+                    <td style="padding:8px 4px; color:#fbbf24;">${t.percentage || t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
+                    <td style="padding:8px 4px; color:#6ee7b7; font-weight:700;">${t.composite_score || t.scaled || '–'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleActReportCard(safeEmail) {
+      const body = document.getElementById(`act-body-${safeEmail}`);
+      const toggle = document.getElementById(`act-toggle-${safeEmail}`);
+      if (body.style.display === 'block') {
+        body.style.display = 'none';
+        if (toggle) toggle.textContent = '▼';
+      } else {
+        body.style.display = 'block';
+        if (toggle) toggle.textContent = '▲';
+      }
+    }
+
+    // ═════════════════════════════════════════════════
+    // ── 🎓 AP PORTAL LOGIC ───────────────────────────
+    // ═════════════════════════════════════════════════
+    function setApFilter(filter) { setPortalFilter('ap', filter, renderApUsers, renderApReports, renderApForms); }
+
+    async function grantAllApAccess() {
+      if (!confirm('Are you sure you want to grant AP access to ALL pending users?')) return;
+      const pending = allProfiles.filter(p => !p.has_ap_access || p.ap_access_requested);
+      if (pending.length === 0) { alert('No pending users found.'); return; }
+      for (const p of pending) {
+        await supabaseClient.from('profiles').update({ has_ap_access: true, ap_access_requested: false }).eq('id', p.id);
+        p.has_ap_access = true;
+        p.ap_access_requested = false;
+      }
+      updateApStats();
+      renderApUsers();
+      alert(`Granted AP access to ${pending.length} users!`);
+    }
+
+    function updateApStats() {
+      const total = allProfiles.length;
+      const approved = allProfiles.filter(p => p.has_ap_access).length;
+      document.getElementById('apStatTotal').textContent = total;
+      document.getElementById('apStatApproved').textContent = approved;
+      document.getElementById('apStatPending').textContent = total - approved;
+      document.getElementById('apStatReports').textContent = allApReports.length;
+    }
+
+    function renderApUsers() {
+      const search = (document.getElementById('apSearchBox')?.value || '').trim().toLowerCase();
+      let list = allProfiles;
+      if (currentApFilter === 'pending') list = list.filter(p => !p.has_ap_access || p.ap_access_requested);
+      else if (currentApFilter === 'approved') list = list.filter(p => p.has_ap_access);
+      if (search) list = list.filter(p => (p.email || '').toLowerCase().includes(search) || (p.name || '').toLowerCase().includes(search));
+      const container = document.getElementById('apUserList');
+      if (!container) return;
+      if (list.length === 0) { container.innerHTML = `<div class="empty">No users found.</div>`; return; }
+
+      container.innerHTML = list.map(p => `
+        <div class="user-card">
+          <div class="user-info">
+            <div class="email">${p.email || '(no email)'}</div>
+            <div class="meta">Name: ${p.name || '–'} &middot; Registered: ${p.created_at ? new Date(p.created_at).toLocaleDateString('en-IN') : '–'}</div>
+            <div style="margin-top: 8px;">
+              <span class="badge ${p.has_ap_access ? 'granted' : 'pending'}">AP Access: ${p.has_ap_access ? '✓ Granted' : '⏳ Pending'}</span>
+            </div>
+          </div>
+          <div class="actions" style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">AP Access:</span>
+            ${p.has_ap_access
+              ? `<button class="btn-sm btn-revoke" onclick="setApAccess('${p.id}', false)">Revoke</button>`
+              : `<button class="btn-sm btn-approve" onclick="setApAccess('${p.id}', true)">Approve</button>`
+            }
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function setApAccess(userId, value) {
+      const { error } = await supabaseClient.from('profiles').update({ has_ap_access: value, ap_access_requested: false }).eq('id', userId);
+      if (error) { alert('Update failed: ' + error.message); return; }
+      const p = allProfiles.find(x => x.id === userId);
+      if (p) { p.has_ap_access = value; p.ap_access_requested = false; }
+      updateApStats();
+      renderApUsers();
+    }
+
+    function renderApReports() {
+      const search = (document.getElementById('apReportSearchBox')?.value || '').trim().toLowerCase();
+      let emails = Object.keys(groupedApReports);
+      if (search) emails = emails.filter(e => e.includes(search));
+      const container = document.getElementById('apReportsList');
+      if (!container) return;
+      if (emails.length === 0) { container.innerHTML = `<div class="empty">No AP test reports found.</div>`; return; }
+
+      container.innerHTML = emails.map(email => {
+        const tests = groupedApReports[email];
+        const totalTests = tests.length;
+        const avgPct = Math.round(tests.reduce((s, t) => s + (t.percentage || t.pct || 0), 0) / totalTests);
+        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
+
+        return `
+        <div class="student-report-card" id="ap-src-${safeEmail}">
+          <div class="src-header" onclick="toggleApReportCard('${safeEmail}')">
+            <div class="src-info">
+              <div class="src-email">${email}</div>
+              <div class="src-meta">${tests[0].student_name || tests[0].name || '–'}</div>
+            </div>
+            <div class="src-stats">
+              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
+              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
+            </div>
+            <div class="src-toggle" id="ap-toggle-${safeEmail}">▼</div>
+          </div>
+          <div class="src-body" id="ap-body-${safeEmail}">
+            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                  <th style="padding:8px 4px;">Exam Name</th>
+                  <th style="padding:8px 4px;">Date</th>
+                  <th style="padding:8px 4px;">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tests.map((t, testIdx) => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05); cursor:pointer;" onclick="openAdminTestDetail('${email}', ${testIdx}, 'ap')" title="Click to view full question report">
+                    <td style="padding:8px 4px; font-weight:600;">${t.exam_name || t.topic || 'AP Test'}</td>
+                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submit_time || t.submitted_at ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-IN') : '–'}</td>
+                    <td style="padding:8px 4px; color:#fbbf24;">${t.percentage || t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleApReportCard(safeEmail) {
+      const body = document.getElementById(`ap-body-${safeEmail}`);
+      const toggle = document.getElementById(`ap-toggle-${safeEmail}`);
+      if (body.style.display === 'block') {
+        body.style.display = 'none';
+        if (toggle) toggle.textContent = '▼';
+      } else {
+        body.style.display = 'block';
+        if (toggle) toggle.textContent = '▲';
+      }
+    }
+
+    async function openAdminTestDetail(email, testIdx, portal = 'topic') {
+      let tests = null;
+      const cleanEmail = email.toLowerCase().trim();
+      if (portal === 'mock') tests = groupedMockReports[email] || groupedMockReports[cleanEmail];
+      else if (portal === 'tmua') tests = groupedTmuaReports[email] || groupedTmuaReports[cleanEmail];
+      else if (portal === 'ucat') tests = groupedUcatReports[email] || groupedUcatReports[cleanEmail];
+      else if (portal === 'act') tests = groupedActReports[email] || groupedActReports[cleanEmail];
+      else if (portal === 'ap') tests = groupedApReports[email] || groupedApReports[cleanEmail];
+      else tests = groupedTopicReports[email] || groupedTopicReports[cleanEmail] || groupedReports[email] || groupedReports[cleanEmail];
+
       if (!tests || !tests[testIdx]) return;
       const t = tests[testIdx];
-      const pct = t.pct || 0;
+      const pct = t.percentage || t.pct || 0;
       const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
       let details = [];
       try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
+      if (details.length === 0 && t.student_answers) {
+        try { details = typeof t.student_answers === 'string' ? JSON.parse(t.student_answers) : t.student_answers; } catch(e) {}
+      }
 
       const modal = document.getElementById('modalContent');
       // Show loading inside modal while questions are fetched
       modal.innerHTML = `
         <div class="modal-hdr">
-          <h3>${t.topic || 'Test Detail'}</h3>
+          <h3>${t.exam_name || t.topic || 'Test Detail'}</h3>
           <button class="modal-close" onclick="closeModal()">✕</button>
         </div>
         <div class="loading-spinner">Loading question details...</div>
       `;
       document.getElementById('testModal').classList.add('open');
 
-      const topicMapping = getTopicMapping(t.topic);
-      const matchedTopicKey = topicMapping ? topicMapping.key : t.topic;
+      const topicName = t.topic || t.exam_name || 'Unknown Exam';
+      const topicMapping = getTopicMapping(topicName);
+      const matchedTopicKey = topicMapping ? topicMapping.key : topicName;
       const dir = topicMapping ? topicMapping.dir : '.';
       const qs = await loadQuestionsForTopic(matchedTopicKey);
       const imgMapping = await loadImageMappingForTopic(matchedTopicKey, dir);
 
       // Merge questions metadata
       if (qs && details.length > 0) {
-        details = details.map(d => {
-          const matchedQ = qs.find(q => String(q.id) === String(d.id));
+        details = details.map((d, i) => {
+          const qId = d.id || (i + 1);
+          const matchedQ = qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || qs[i];
           if (matchedQ) {
             return {
               ...d,
-              text: matchedQ.text,
-              options: matchedQ.options,
-              explanation: matchedQ.explanation || '',
-              useImage: matchedQ.useImage,
-              imageKey: matchedQ.imageKey
+              text: d.text || matchedQ.text || matchedQ.question || '',
+              options: d.options || matchedQ.options || matchedQ.choices || [],
+              answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
+              chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
+              status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
+              explanation: d.explanation || matchedQ.explanation || matchedQ.solution || '',
+              useImage: d.useImage !== undefined ? d.useImage : matchedQ.useImage,
+              imageKey: d.imageKey || matchedQ.imageKey
             };
           }
           return d;
         });
+      } else if (details.length === 0 && qs && qs.length > 0) {
+        let parsedAnswers = [];
+        try { parsedAnswers = JSON.parse(t.answers_json || t.student_answers || '[]'); } catch(e) {}
+        details = qs.map((q, i) => {
+          const chosen = parsedAnswers[i] !== undefined ? parsedAnswers[i] : -1;
+          const answer = q.answer !== undefined ? q.answer : q.correctAnswer;
+          const status = chosen === answer ? 'correct' : (chosen !== undefined && chosen !== null && chosen !== -1 ? 'wrong' : 'unattempted');
+          return {
+            id: q.id || (i + 1),
+            text: q.text || q.question || '',
+            options: q.options || q.choices || [],
+            answer: answer,
+            chosen: chosen,
+            status: status,
+            explanation: q.explanation || q.solution || '',
+            useImage: q.useImage,
+            imageKey: q.imageKey
+          };
+        });
       }
+      
 
       modal.innerHTML = `
         <div class="modal-hdr">
-          <h3>${t.topic || 'Test Detail'}</h3>
+          <h3>${t.exam_name || t.topic || 'Test Detail'}</h3>
           <button class="modal-close" onclick="closeModal()">✕</button>
         </div>
         <div style="text-align:center;margin-bottom:8px">
           <div style="font-size:0.95rem;font-weight:600;color:rgba(255,255,255,0.6);margin-bottom:4px">Student: ${email}</div>
-          <div style="font-family:'Syne';font-size:2.2rem;font-weight:800;color:${scoreColor}">${t.scaled || '–'}</div>
-          <div style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Scaled Score · ${t.submit_time ? new Date(t.submit_time).toLocaleString() : '–'}</div>
+          <div style="font-family:'Syne';font-size:2.2rem;font-weight:800;color:${scoreColor}">${t.composite_score || t.scaled || '–'}</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Score · ${(t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleString() : '–'}</div>
         </div>
         <div class="modal-stats">
           <div class="modal-stat"><div class="ms-num" style="color:#6ee7b7">${t.correct || 0}</div><div class="ms-lbl">Correct</div></div>
@@ -1833,11 +2816,10 @@
                   </div>
                 `}
 
-                ${d.explanation ? `
-                  <div class="q-card-exp">
-                    <strong>💡 Explanation:</strong> ${d.explanation}
-                  </div>
-                ` : ''}
+                <div class="q-card-exp" style="margin-top:12px; padding:10px 14px; background:rgba(255,255,255,0.03); border-left:3px solid #60a5fa; border-radius:6px; font-size:0.85rem; line-height:1.4;">
+                  <strong style="color:#60a5fa; display:block; margin-bottom:4px;">💡 Explanation:</strong> 
+                  ${d.explanation ? d.explanation : 'No detailed explanation available for this question. Please review the relevant concept or consult the solution guide.'}
+                </div>
               </div>
             `;
           }).join('')}
@@ -1923,15 +2905,19 @@
             const topicData = topicsData[t.topic];
             if (topicData && topicData.qs) {
               details = details.map(d => {
-                const matchedQ = topicData.qs.find(q => String(q.id) === String(d.id));
+                const qId = d.id || (i + 1);
+                const matchedQ = topicData.qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || topicData.qs[i];
                 if (matchedQ) {
                   return {
                     ...d,
-                    text: matchedQ.text,
-                    options: matchedQ.options,
-                    explanation: matchedQ.explanation || '',
-                    useImage: matchedQ.useImage,
-                    imageKey: matchedQ.imageKey
+                    text: d.text || matchedQ.text || matchedQ.question || '',
+                    options: d.options || matchedQ.options || matchedQ.choices || [],
+                    answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
+                    chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
+                    status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
+                    explanation: d.explanation || matchedQ.explanation || matchedQ.solution || '',
+                    useImage: d.useImage !== undefined ? d.useImage : matchedQ.useImage,
+                    imageKey: d.imageKey || matchedQ.imageKey
                   };
                 }
                 return d;
@@ -2105,196 +3091,6 @@
         console.error('PDF generation failed', err);
         buttons.forEach(b => b.style.display = '');
       });
-    }
-
-    // ── TMUA Portal Logic ──────────────────────────
-    let currentPortal = 'sat';
-    let currentTmuaTab = 'users';
-    let allTmuaReports = [];
-    let groupedTmuaReports = {};
-
-    function switchPortal(portal) {
-      currentPortal = portal;
-      document.getElementById('btnPortalSat').classList.toggle('active', portal === 'sat');
-      document.getElementById('btnPortalTmua').classList.toggle('active', portal === 'tmua');
-      document.getElementById('satPortalSection').style.display = portal === 'sat' ? 'block' : 'none';
-      document.getElementById('tmuaPortalSection').style.display = portal === 'tmua' ? 'block' : 'none';
-    }
-
-    function switchTmuaTab(tab) {
-      currentTmuaTab = tab;
-      document.querySelectorAll('[data-tmua-tab]').forEach(t => t.classList.toggle('active', t.dataset.tmuaTab === tab));
-      document.getElementById('tmuaUsersSection').style.display = tab === 'users' ? 'block' : 'none';
-      document.getElementById('tmuaReportsSection').style.display = tab === 'reports' ? 'block' : 'none';
-    }
-
-    function updateTmuaStats() {
-      const total = allProfiles.length;
-      const diagApproved = allProfiles.filter(p => p.has_tmua_diag_access).length;
-      const topicApproved = allProfiles.filter(p => p.has_tmua_topic_access).length;
-      document.getElementById('tmuaStatTotal').textContent = total;
-      document.getElementById('tmuaStatDiagApproved').textContent = diagApproved;
-      document.getElementById('tmuaStatTopicApproved').textContent = topicApproved;
-      document.getElementById('tmuaStatReports').textContent = allTmuaReports.length;
-    }
-
-    function renderTmuaUsers() {
-      const search = (document.getElementById('tmuaSearchBox')?.value || '').trim().toLowerCase();
-      let list = allProfiles;
-      if (search) {
-        list = list.filter(p => (p.email || '').toLowerCase().includes(search) || (p.name || '').toLowerCase().includes(search));
-      }
-      const container = document.getElementById('tmuaUserList');
-      if (!container) return;
-      if (list.length === 0) {
-        container.innerHTML = `<div class="empty">No users found.</div>`;
-        return;
-      }
-
-      container.innerHTML = list.map(p => {
-        return `
-          <div class="user-card">
-            <div class="user-info">
-              <div class="email">${p.email || '(no email)'}</div>
-              <div class="meta">
-                <span>Name: ${p.name || '–'}</span> &middot; 
-                <span>Registered: ${p.created_at ? new Date(p.created_at).toLocaleDateString('en-IN') : '–'}</span>
-              </div>
-              <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-                <span class="badge ${p.has_tmua_diag_access ? 'granted' : 'pending'}">TMUA Diag: ${p.has_tmua_diag_access ? '✓ Granted' : '⏳ Pending'}</span>
-                <span class="badge ${p.has_tmua_topic_access ? 'granted' : 'pending'}">TMUA Topic: ${p.has_tmua_topic_access ? '✓ Granted' : '⏳ Pending'}</span>
-              </div>
-            </div>
-            <div class="actions" style="display: flex; flex-direction: column; gap: 8px;">
-              <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 85px; text-align: right;">Diag Access:</span>
-                ${p.has_tmua_diag_access
-                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'diag', false)">Revoke</button>`
-                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'diag', true)">Approve</button>`
-                }
-              </div>
-              <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); min-width: 85px; text-align: right;">Topic Access:</span>
-                ${p.has_tmua_topic_access
-                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'topic', false)">Revoke</button>`
-                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'topic', true)">Approve</button>`
-                }
-              </div>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    async function setTmuaAccess(userId, type, value) {
-      const payload = {};
-      if (type === 'diag') payload.has_tmua_diag_access = value;
-      else if (type === 'topic') payload.has_tmua_topic_access = value;
-      
-      const { error } = await supabaseClient.from('profiles').update(payload).eq('id', userId);
-      if (error) { alert('Update failed: ' + error.message); return; }
-      
-      const p = allProfiles.find(x => x.id === userId);
-      if (p) {
-        if (type === 'diag') p.has_tmua_diag_access = value;
-        else if (type === 'topic') p.has_tmua_topic_access = value;
-      }
-      updateTmuaStats();
-      renderTmuaUsers();
-    }
-
-    function renderTmuaReports() {
-      const search = (document.getElementById('tmuaReportSearchBox')?.value || '').trim().toLowerCase();
-      let emails = Object.keys(groupedTmuaReports);
-      if (search) emails = emails.filter(e => e.includes(search));
-      const container = document.getElementById('tmuaReportsList');
-      if (!container) return;
-      if (emails.length === 0) {
-        container.innerHTML = `<div class="empty">No TMUA test reports found.</div>`;
-        return;
-      }
-
-      container.innerHTML = emails.map(email => {
-        const tests = groupedTmuaReports[email];
-        const totalTests = tests.length;
-        const avgPct = Math.round(tests.reduce((s, t) => s + (t.pct || 0), 0) / totalTests);
-        const avgScaledRaw = tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / totalTests;
-        const avgScaled = avgScaledRaw < 10 ? avgScaledRaw.toFixed(1) : Math.round(avgScaledRaw);
-        const safeEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
-        const p = allProfiles.find(x => (x.email && x.email.toLowerCase() === email) || (x.name && x.name.toLowerCase() === tests[0].name?.toLowerCase()));
-
-        return `
-        <div class="student-report-card" id="tmua-src-${safeEmail}">
-          <div class="src-header" onclick="toggleTmuaReportCard('${safeEmail}')">
-            <div class="src-info">
-              <div class="src-email">${email}</div>
-              <div class="src-meta">${tests[0].name || '–'}</div>
-            </div>
-            <div class="src-stats">
-              <div class="src-stat"><div class="ss-num">${totalTests}</div><div class="ss-lbl">Tests</div></div>
-              <div class="src-stat"><div class="ss-num">${avgPct}%</div><div class="ss-lbl">Avg %</div></div>
-              <div class="src-stat"><div class="ss-num" style="color:#6ee7b7">${avgScaled}</div><div class="ss-lbl">TMUA Score</div></div>
-            </div>
-            <div class="src-toggle" id="tmua-toggle-${safeEmail}">▼</div>
-          </div>
-          <div class="src-body" id="tmua-body-${safeEmail}">
-            ${p ? `
-            <div style="margin-bottom: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-              <div style="font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.7);">Manage TMUA Access:</div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Diag Access:</span>
-                ${p.has_tmua_diag_access
-                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'diag', false)">Revoke</button>`
-                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'diag', true)">Approve</button>`
-                }
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Topic Access:</span>
-                ${p.has_tmua_topic_access
-                  ? `<button class="btn-revoke-tmua" onclick="setTmuaAccess('${p.id}', 'topic', false)">Revoke</button>`
-                  : `<button class="btn-approve-tmua" onclick="setTmuaAccess('${p.id}', 'topic', true)">Approve</button>`
-                }
-              </div>
-            </div>
-            ` : ''}
-            <h4 style="margin-bottom:12px; font-size:0.9rem; color:#93c5fd;">Completed Tests Breakdown</h4>
-            <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left; margin-bottom:14px;">
-              <thead>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
-                  <th style="padding:8px 4px;">Topic</th>
-                  <th style="padding:8px 4px;">Date</th>
-                  <th style="padding:8px 4px;">Score</th>
-                  <th style="padding:8px 4px;">TMUA Scale</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${tests.map(t => `
-                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                    <td style="padding:8px 4px; font-weight:600;">${t.topic || 'TMUA Test'}</td>
-                    <td style="padding:8px 4px; color:rgba(255,255,255,0.6);">${t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN') : '–'}</td>
-                    <td style="padding:8px 4px; color:#fbbf24;">${t.pct || 0}% (${t.correct || 0}/${t.total || 0})</td>
-                    <td style="padding:8px 4px; color:#6ee7b7; font-weight:700;">${t.scaled || '–'}</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-            <button class="btn-approve-tmua" style="background:#1a56db; font-size:0.82rem; padding:8px 16px;" onclick="generateAdminTmuaCombined('${safeEmail}', '${email}')">📊 Generate Combined TMUA Report</button>
-            <div id="admin-tmua-combined-${safeEmail}"></div>
-          </div>
-        </div>`;
-      }).join('');
-    }
-
-    function toggleTmuaReportCard(safeEmail) {
-      const body = document.getElementById(`tmua-body-${safeEmail}`);
-      const toggle = document.getElementById(`tmua-toggle-${safeEmail}`);
-      if (body.style.display === 'block') {
-        body.style.display = 'none';
-        if (toggle) toggle.textContent = '▼';
-      } else {
-        body.style.display = 'block';
-        if (toggle) toggle.textContent = '▲';
-      }
     }
 
     async function generateAdminTmuaCombined(safeEmail, email) {

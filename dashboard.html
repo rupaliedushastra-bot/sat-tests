@@ -836,117 +836,74 @@
     <h1 class="page-title">📊 My Dashboard</h1>
     <p class="page-sub" id="welcomeMsg">Your test performance at a glance</p>
 
-    <div class="portal-switcher">
-      <button class="portal-btn active" id="btnStuPortalSat" onclick="switchStuPortal('sat')">📘 SAT Portal</button>
-      <button class="portal-btn" id="btnStuPortalTmua" onclick="switchStuPortal('tmua')">📐 TMUA Portal</button>
+    <div class="portal-switcher" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+      <button class="portal-btn active" id="btnStuPortalAll" onclick="switchStuPortal('all')">🌐 All Exams</button>
+      <button class="portal-btn" id="btnStuPortalMock" onclick="switchStuPortal('mock')">📘 SAT Mock</button>
+      <button class="portal-btn" id="btnStuPortalTopic" onclick="switchStuPortal('topic')">📙 SAT Topic</button>
+      <button class="portal-btn" id="btnStuPortalTmua" onclick="switchStuPortal('tmua')">📐 TMUA</button>
+      <button class="portal-btn" id="btnStuPortalUcat" onclick="switchStuPortal('ucat')">🩺 UCAT</button>
+      <button class="portal-btn" id="btnStuPortalAct" onclick="switchStuPortal('act')">📝 ACT</button>
+      <button class="portal-btn" id="btnStuPortalAp" onclick="switchStuPortal('ap')">🎓 AP</button>
     </div>
 
-    <!-- SAT PORTAL CONTENT -->
-    <div id="satStuSection">
-      <!-- Overview Stats -->
-      <div class="stats-row" id="overviewStats">
-        <div class="stat-card">
-          <div class="num" id="statTests">–</div>
-          <div class="lbl">Tests Taken</div>
-        </div>
-        <div class="stat-card">
-          <div class="num" id="statAvg">–</div>
-          <div class="lbl">Avg Score %</div>
-        </div>
-        <div class="stat-card">
-          <div class="num" id="statBest">–</div>
-          <div class="lbl">Best Score</div>
-        </div>
-        <div class="stat-card">
-          <div class="num" id="statQs">–</div>
-          <div class="lbl">Total Questions</div>
-        </div>
-      </div>
-
-      <!-- Test History Section -->
-      <div class="section-hdr">
-        <h2 class="section-title">📝 Test History</h2>
-        <div class="combine-bar">
-          <span class="selected-count" id="selCount">0 selected</span>
-          <button class="btn btn-outline" id="selectAllBtn" onclick="toggleSelectAll()">Select All</button>
-          <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined Report</button>
-        </div>
-      </div>
-
-      <div class="history-card">
-        <div id="historyContent">
-          <div class="loading-spinner">Loading your tests...</div>
-        </div>
-      </div>
-
-      <!-- Combined Report (generated dynamically) -->
-      <div id="combinedReportArea"></div>
-    </div>
-
-    <!-- TMUA PORTAL CONTENT -->
-    <div id="tmuaStuSection" style="display:none">
-      <div id="tmuaLockedState" style="display:none" class="tmua-locked-box">
+    <!-- UNIFIED STUDENT DASHBOARD CONTENT -->
+    <div id="stuDashboardContent">
+      <!-- Locked State Box -->
+      <div id="stuLockedState" style="display:none" class="tmua-locked-box">
         <div style="font-size: 3.5rem; margin-bottom: 16px;">🔒</div>
-        <h2 style="font-family: 'Syne', sans-serif; font-size: 1.6rem; margin-bottom: 12px;">TMUA Portal Locked</h2>
-        <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 24px;">
-          Your account currently does not have active access to TMUA diagnostic or topic tests. Please request access from your instructor or admin.
+        <h2 style="font-family: 'Syne', sans-serif; font-size: 1.6rem; margin-bottom: 12px;" id="stuLockedTitle">Portal Locked</h2>
+        <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 24px;" id="stuLockedText">
+          Your account currently does not have active access to these practice tests. Please request access from your instructor or admin.
         </p>
         <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: #93c5fd; display: inline-block;">
           Admin Email: <strong>rupali.eduquest@gmail.com</strong>
         </div>
       </div>
 
-      <div id="tmuaUnlockedState" style="display:none">
-        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px;">
-          <a href="../tmua/index.html" class="btn btn-primary" style="background: #1a56db; padding: 12px 24px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; text-decoration: none; border-radius: 8px; color: #fff;">🚀 Take TMUA Tests</a>
-        </div>
+      <!-- Unlocked / Active State -->
+      <div id="stuActiveState">
+        <!-- Action Bar (Take Tests button) -->
+        <div id="stuActionBar" style="display:none; gap:14px; flex-wrap:wrap; margin-bottom:24px;"></div>
 
-        <div class="stats-row">
+        <!-- Overview Stats -->
+        <div class="stats-row" id="overviewStats">
           <div class="stat-card">
-            <div class="num" id="stuTmuaTests">0</div>
+            <div class="num" id="statTests">–</div>
             <div class="lbl">Tests Taken</div>
           </div>
           <div class="stat-card">
-            <div class="num" id="stuTmuaAvg" style="color:#34d399">0%</div>
+            <div class="num" id="statAvg" style="color:#34d399">–</div>
             <div class="lbl">Avg Score %</div>
           </div>
           <div class="stat-card">
-            <div class="num" id="stuTmuaBest" style="color:#60a5fa">–</div>
-            <div class="lbl">Best TMUA Score</div>
+            <div class="num" id="statBest" style="color:#60a5fa">–</div>
+            <div class="lbl">Best Score</div>
           </div>
           <div class="stat-card">
-            <div class="num" id="stuTmuaQs" style="color:#c084fc">0</div>
+            <div class="num" id="statQs" style="color:#c084fc">–</div>
             <div class="lbl">Total Questions</div>
           </div>
         </div>
 
-        <div class="section-hdr" style="margin-top: 32px;">
-          <h2 class="section-title">Completed TMUA Practice Exams</h2>
+        <!-- Test History Section -->
+        <div class="section-hdr">
+          <h2 class="section-title" id="historySectionTitle">📝 Test History</h2>
+          <div class="combine-bar">
+            <span class="selected-count" id="selCount">0 selected</span>
+            <button class="btn btn-outline" id="selectAllBtn" onclick="toggleSelectAll()">Select All</button>
+            <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined Report</button>
+          </div>
         </div>
 
-        <div class="combine-bar" id="tmuaCombineBar" style="margin-top: 16px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; background:rgba(255,255,255,0.04); padding:8px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.08); font-size:0.85rem;">
-            <input type="checkbox" id="selectAllTmua" onchange="toggleSelectAllTmua(this.checked)"> Select All
-          </label>
-          <span style="font-size:0.85rem; color:rgba(255,255,255,0.5);" id="tmuaSelectedCount">0 selected</span>
-          <button class="btn btn-primary" id="tmuaCombineBtn" disabled onclick="generateTmuaCombinedReport()">📊 Combined Report</button>
+        <div class="history-card">
+          <div id="historyContent">
+            <div class="loading-spinner">Loading your tests...</div>
+          </div>
         </div>
 
-        <div id="tmuaCombinedReportArea"></div>
-
-        <div class="history-card" style="padding: 20px;" id="tmuaStuHistoryContainer">
-          <div style="text-align: center; padding: 40px; color: rgba(255,255,255,0.4);">No TMUA exams completed yet.</div>
-        </div>
+        <!-- Combined Report (generated dynamically) -->
+        <div id="combinedReportArea"></div>
       </div>
-    </div>
-  </div>
-
-  <!-- Modal for TMUA Report Review -->
-  <div class="modal-overlay" id="tmuaReportModal">
-    <div class="modal-box" style="max-width: 800px;">
-      <button class="modal-close" onclick="closeTmuaModal()">✕</button>
-      <h2 style="font-family: 'Syne', sans-serif; font-size: 1.8rem; text-align: center; margin-bottom: 20px;" id="tmuaModalTitle">TMUA Test Review</h2>
-      <div id="tmuaModalContent"></div>
     </div>
   </div>
 
@@ -1047,7 +1004,37 @@
       'Mixed Reading Practice 2': { q: './new_test_2/questions_rw.js', dir: './new_test_2' },
       'Mixed Math Practice 2': { q: './new_test_2/questions_math.js', dir: './new_test_2' },
       'Mixed Reading Practice 3': { q: './new_test_3/questions_rw.js', dir: './new_test_3' },
-      'Mixed Math Practice 3': { q: './new_test_3/questions_math.js', dir: './new_test_3' }
+      'Mixed Math Practice 3': { q: './new_test_3/questions_math.js', dir: './new_test_3' },
+      'SAT Mock Test': { q: './mock/questions.js', dir: './mock' },
+      'Mock SAT Test': { q: './mock/questions.js', dir: './mock' },
+      'Mock SAT Test 1': { q: './mock/questions.js', dir: './mock' },
+      'Mock SAT Test 2': { q: './mock/questions2.js', dir: './mock' },
+      'Practice Exam 1': { q: './mock/questions.js', dir: './mock' },
+      'Practice Exam 2': { q: './mock/questions2.js', dir: './mock' },
+      'Practice Exam 3': { q: './mock/test_3/questions3.js', dir: './mock/test_3' },
+      'Diagnostic Test 4': { q: './mock/test_4/questions4.js', dir: './mock/test_4' },
+      'Practice Test 5': { q: './mock/test_5/questions5.js', dir: './mock/test_5' },
+      'Practice Test 6': { q: './mock/test_6/questions6.js', dir: './mock/test_6' },
+      'SAT Prep Test 1 – R&W': { q: './mock/test_7/questions7.js', dir: './mock/test_7' },
+      'Practice Test 8': { q: './mock/test_8/questions8.js', dir: './mock/test_8' },
+      'Practice Test 9': { q: './mock/test_9/questions9.js', dir: './mock/test_9' },
+      'Practice Test 10': { q: './mock/test_10/questions10.js', dir: './mock/test_10' },
+      'Practice Test 11': { q: './mock/test_11/questions11.js', dir: './mock/test_11' },
+      'Practice Test 12': { q: './mock/test_12/questions12.js', dir: './mock/test_12' },
+      'Practice Test 13': { q: './mock/test_13/questions13.js', dir: './mock/test_13' },
+      'Digital SAT – Practice Exam 1': { q: './mock/questions.js', dir: './mock' },
+      'Digital SAT – Practice Exam 2': { q: './mock/questions2.js', dir: './mock' },
+      'Digital SAT – Practice Exam 3': { q: './mock/test_3/questions3.js', dir: './mock/test_3' },
+      'Digital SAT – Diagnostic Test 4': { q: './mock/test_4/questions4.js', dir: './mock/test_4' },
+      'Digital SAT – Practice Test 5': { q: './mock/test_5/questions5.js', dir: './mock/test_5' },
+      'Digital SAT – Practice Test 6': { q: './mock/test_6/questions6.js', dir: './mock/test_6' },
+      'Digital SAT – SAT Prep Test 1 – R&W': { q: './mock/test_7/questions7.js', dir: './mock/test_7' },
+      'Digital SAT – Practice Test 8': { q: './mock/test_8/questions8.js', dir: './mock/test_8' },
+      'Digital SAT – Practice Test 9': { q: './mock/test_9/questions9.js', dir: './mock/test_9' },
+      'Digital SAT – Practice Test 10': { q: './mock/test_10/questions10.js', dir: './mock/test_10' },
+      'Digital SAT – Practice Test 11': { q: './mock/test_11/questions11.js', dir: './mock/test_11' },
+      'Digital SAT – Practice Test 12': { q: './mock/test_12/questions12.js', dir: './mock/test_12' },
+      'Digital SAT – Practice Test 13': { q: './mock/test_13/questions13.js', dir: './mock/test_13' }
     };
 
     const loadedQuestionsCache = {};
@@ -1056,8 +1043,68 @@
     function getTopicMapping(topicName) {
       if (!topicName) return null;
       const clean = topicName.trim().toLowerCase();
-      const key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => k.trim().toLowerCase() === clean);
-      return key ? { key, ...TOPIC_QUESTIONS_MAP[key] } : null;
+      
+      // 1. Direct or substring match against TOPIC_QUESTIONS_MAP keys
+      let key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => {
+        const kClean = k.trim().toLowerCase();
+        return kClean === clean || clean.includes(kClean) || kClean.includes(clean);
+      });
+      if (key) return { key, ...TOPIC_QUESTIONS_MAP[key] };
+
+      const isMockDir = typeof TOPIC_QUESTIONS_MAP['Grammar & Usage'] !== 'undefined' && TOPIC_QUESTIONS_MAP['Grammar & Usage'].q.startsWith('../');
+      const topicPrefix = isMockDir ? '../' : './';
+      const mockPrefix = isMockDir ? './' : './mock/';
+
+      // 2. Fallback: match "topic X", "topic-X", "topic_X" (e.g. Topic-14 -> topic_14)
+      const topicMatch = clean.match(/topic[\s-_]*([0-9]+)/);
+      if (topicMatch && topicMatch[1]) {
+        const num = parseInt(topicMatch[1], 10);
+        const numMap = {
+          1: { q: topicPrefix + 'questions.js', dir: topicPrefix.replace(/\/$/, '') || '.' },
+          2: { q: topicPrefix + 'topic2/questions2.js', dir: topicPrefix + 'topic2' },
+          3: { q: topicPrefix + 'topic-3/questions.js', dir: topicPrefix + 'topic-3' },
+          4: { q: topicPrefix + 'topic4/questions.js', dir: topicPrefix + 'topic4' },
+          5: { q: topicPrefix + 'topic5/questions.js', dir: topicPrefix + 'topic5' },
+          6: { q: topicPrefix + 'test_6/questions.js', dir: topicPrefix + 'test_6' },
+          7: { q: topicPrefix + 'topic_7/questions.js', dir: topicPrefix + 'topic_7' },
+          8: { q: topicPrefix + 'topic_8/questions.js', dir: topicPrefix + 'topic_8' },
+          9: { q: topicPrefix + 'topic_9/questions.js', dir: topicPrefix + 'topic_9' },
+          10: { q: topicPrefix + 'topic_10/questions.js', dir: topicPrefix + 'topic_10' },
+          11: { q: topicPrefix + 'topic_11/questions.js', dir: topicPrefix + 'topic_11' },
+          12: { q: topicPrefix + 'topic_12/questions.js', dir: topicPrefix + 'topic_12' },
+          13: { q: topicPrefix + 'topic_13/questions.js', dir: topicPrefix + 'topic_13' },
+          14: { q: topicPrefix + 'topic_14/questions.js', dir: topicPrefix + 'topic_14' },
+          15: { q: topicPrefix + 'topic_15/questions.js', dir: topicPrefix + 'topic_15' },
+          16: { q: topicPrefix + 'topic_16/questions.js', dir: topicPrefix + 'topic_16' }
+        };
+        if (numMap[num]) return { key: 'Topic ' + num, ...numMap[num] };
+      }
+
+      // 3. Fallback: match practice exam / mock test / test numbers
+      const testMatch = clean.match(/(?:test|exam|mock)[\s-_]*([0-9]+)/);
+      if (testMatch && testMatch[1]) {
+        const num = parseInt(testMatch[1], 10);
+        const testMap = {
+          1: { q: mockPrefix + 'questions.js', dir: mockPrefix.replace(/\/$/, '') || '.' },
+          2: { q: mockPrefix + 'questions2.js', dir: mockPrefix.replace(/\/$/, '') || '.' },
+          3: { q: mockPrefix + 'test_3/questions3.js', dir: mockPrefix + 'test_3' },
+          4: { q: mockPrefix + 'test_4/questions4.js', dir: mockPrefix + 'test_4' },
+          5: { q: mockPrefix + 'test_5/questions5.js', dir: mockPrefix + 'test_5' },
+          6: { q: mockPrefix + 'test_6/questions6.js', dir: mockPrefix + 'test_6' },
+          7: { q: mockPrefix + 'test_7/questions7.js', dir: mockPrefix + 'test_7' },
+          8: { q: mockPrefix + 'test_8/questions8.js', dir: mockPrefix + 'test_8' },
+          9: { q: mockPrefix + 'test_9/questions9.js', dir: mockPrefix + 'test_9' },
+          10: { q: mockPrefix + 'test_10/questions10.js', dir: mockPrefix + 'test_10' },
+          11: { q: mockPrefix + 'test_11/questions11.js', dir: mockPrefix + 'test_11' },
+          12: { q: mockPrefix + 'test_12/questions12.js', dir: mockPrefix + 'test_12' },
+          13: { q: mockPrefix + 'test_13/questions13.js', dir: mockPrefix + 'test_13' }
+        };
+        if (/(?:mock|sat|digital|practice|diagnostic|exam|prep)/.test(clean) && testMap[num]) {
+          return { key: 'Practice Exam ' + num, ...testMap[num] };
+        }
+      }
+
+      return null;
     }
 
     function loadQuestionsForTopic(topicName) {
@@ -1065,11 +1112,14 @@
         return Promise.resolve(loadedQuestionsCache[topicName]);
       }
       return new Promise((resolve) => {
-        const mapping = TOPIC_QUESTIONS_MAP[topicName];
-        const path = mapping ? mapping.q : null;
+        const mapping = TOPIC_QUESTIONS_MAP[topicName] || getTopicMapping(topicName);
+        let path = mapping ? mapping.q : null;
         if (!path) {
           resolve(null);
           return;
+        }
+        if (window.location.pathname.includes('/mock/') && path.startsWith('./')) {
+          path = '../' + path.slice(2);
         }
 
         const loadViaIframe = () => {
@@ -1083,7 +1133,17 @@
             script.onload = () => {
               try {
                 const extractScript = doc.createElement('script');
-                extractScript.textContent = "window.__extracted_qs = typeof QUESTIONS !== 'undefined' ? QUESTIONS : null;";
+                extractScript.textContent = `
+                  window.__extracted_qs = null;
+                  for (let prop in window) {
+                    if (prop.toUpperCase().includes('QUESTIONS') || prop === 'questions' || prop === 'local_qs') {
+                      if (Array.isArray(window[prop]) && window[prop].length > 0) {
+                        window.__extracted_qs = window[prop];
+                        break;
+                      }
+                    }
+                  }
+                `;
                 doc.body.appendChild(extractScript);
                 const qs = iframe.contentWindow.__extracted_qs;
                 if (qs && Array.isArray(qs)) {
@@ -1113,8 +1173,25 @@
             return res.text();
           })
           .then(text => {
-            let code = text.replace(/(const|let|var)\s+QUESTIONS\s*=/, "var local_qs =");
-            code += "\n; if (typeof local_qs !== 'undefined') { local_qs } else if (typeof QUESTIONS !== 'undefined') { QUESTIONS } else { null };";
+            let code = text.replace(/(const|let|var)\s+([A-Za-z0-9_]*QUESTIONS[A-Za-z0-9_]*)\s*=/gi, "var local_qs =");
+            code += `
+;
+if (typeof local_qs !== 'undefined' && Array.isArray(local_qs)) { return local_qs; }
+if (typeof QUESTIONS !== 'undefined' && Array.isArray(QUESTIONS)) { return QUESTIONS; }
+if (typeof QUESTIONS2 !== 'undefined' && Array.isArray(QUESTIONS2)) { return QUESTIONS2; }
+if (typeof QUESTIONS3 !== 'undefined' && Array.isArray(QUESTIONS3)) { return QUESTIONS3; }
+if (typeof QUESTIONS4 !== 'undefined' && Array.isArray(QUESTIONS4)) { return QUESTIONS4; }
+if (typeof QUESTIONS5 !== 'undefined' && Array.isArray(QUESTIONS5)) { return QUESTIONS5; }
+if (typeof QUESTIONS6 !== 'undefined' && Array.isArray(QUESTIONS6)) { return QUESTIONS6; }
+if (typeof QUESTIONS7 !== 'undefined' && Array.isArray(QUESTIONS7)) { return QUESTIONS7; }
+if (typeof QUESTIONS8 !== 'undefined' && Array.isArray(QUESTIONS8)) { return QUESTIONS8; }
+if (typeof QUESTIONS9 !== 'undefined' && Array.isArray(QUESTIONS9)) { return QUESTIONS9; }
+if (typeof QUESTIONS10 !== 'undefined' && Array.isArray(QUESTIONS10)) { return QUESTIONS10; }
+if (typeof QUESTIONS11 !== 'undefined' && Array.isArray(QUESTIONS11)) { return QUESTIONS11; }
+if (typeof QUESTIONS12 !== 'undefined' && Array.isArray(QUESTIONS12)) { return QUESTIONS12; }
+if (typeof QUESTIONS13 !== 'undefined' && Array.isArray(QUESTIONS13)) { return QUESTIONS13; }
+return null;
+`;
             try {
               const fn = new Function(code);
               const result = fn();
@@ -1194,350 +1271,6 @@
       });
     }
 
-    // ── Auth Guard ──────────────────────────
-    (async function init() {
-      const { data: { session } } = await supabaseClient.auth.getSession();
-      if (!session) {
-        window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.href);
-        return;
-      }
-      currentSession = session;
-      document.getElementById('userEmail').textContent = session.user.email;
-      document.getElementById('mainContent').style.display = 'block';
-
-      document.getElementById('logoutBtn').onclick = async () => {
-        await supabaseClient.auth.signOut();
-        window.location.href = 'login.html';
-      };
-
-      await loadTests();
-    })();
-
-    // ── Load Tests ──────────────────────────
-    async function loadTests() {
-      const { data: satData, error: satError } = await supabaseClient
-        .from('sat_topic_report')
-        .select('*')
-        .eq('email', currentSession.user.email)
-        .order('submit_time', { ascending: false });
-
-      if (satError) {
-        document.getElementById('historyContent').innerHTML =
-          `<div class="empty-state"><div class="empty-icon">⚠️</div><h3>Error loading data</h3><p>${satError.message}</p></div>`;
-        return;
-      }
-
-      const { data: actData, error: actError } = await supabaseClient
-        .from('act_results')
-        .select('*')
-        .eq('student_email', currentSession.user.email)
-        .order('submitted_at', { ascending: false });
-
-      if (actError) {
-        console.warn("ACT reports fetch error:", actError);
-      }
-
-      const mappedActData = (actData || []).map(r => {
-        const detailsObj = r.student_answers || [];
-        const mappedDetails = detailsObj.map(a => {
-           const mapOpt = o => o === 'A' ? 0 : o === 'B' ? 1 : o === 'C' ? 2 : o === 'D' ? 3 : null;
-           return {
-               id: a.question_id,
-               status: a.status,
-               chosen: mapOpt(a.chosen_option),
-               answer: mapOpt(a.correct_option),
-               text: 'Section: ' + (a.section || 'Unknown') + '\\nTopic: ' + (a.topic || 'Unknown'),
-               options: ['Option A', 'Option B', 'Option C', 'Option D']
-           };
-        });
-
-        return {
-          email: r.student_email,
-          name: r.student_name,
-          topic: r.exam_name || 'ACT Test',
-          scaled: r.composite_score || 0,
-          pct: r.percentage || 0,
-          correct: r.correct || 0,
-          wrong: r.wrong || 0,
-          unattempted: r.skipped || 0,
-          total: r.total || 0,
-          grade: r.grade || 'D',
-          submit_time: r.submitted_at,
-          details_json: JSON.stringify(mappedDetails)
-        };
-      });
-
-      allTests = [...(satData || []), ...mappedActData];
-      allTests.sort((a, b) => new Date(b.submit_time || 0) - new Date(a.submit_time || 0));
-
-      updateOverviewStats();
-      renderHistory();
-      
-      // Auto-select all if user has taken 2 or more tests
-      if (allTests.length >= 2) {
-        toggleSelectAll(true);
-      }
-      loadTmuaStudentData(currentSession.user.email);
-    }
-
-    // ── Overview Stats ──────────────────────
-    function updateOverviewStats() {
-      const n = allTests.length;
-      document.getElementById('statTests').textContent = n;
-
-      if (n === 0) {
-        document.getElementById('statAvg').textContent = '–';
-        document.getElementById('statBest').textContent = '–';
-        document.getElementById('statQs').textContent = '0';
-        return;
-      }
-
-      const avgPct = Math.round(allTests.reduce((s, t) => s + (t.pct || 0), 0) / n);
-      const bestScaled = Math.max(...allTests.map(t => t.scaled || 0));
-      const totalQs = allTests.reduce((s, t) => s + (t.total || 0), 0);
-
-      document.getElementById('statAvg').textContent = avgPct + '%';
-      document.getElementById('statBest').textContent = bestScaled;
-      document.getElementById('statQs').textContent = totalQs;
-    }
-
-    // ── Render Test History Table ────────────
-    function renderHistory() {
-      if (allTests.length === 0) {
-        document.getElementById('historyContent').innerHTML = `
-          <div class="empty-state">
-            <div class="empty-icon">📋</div>
-            <h3>No tests taken yet</h3>
-            <p>Go to <a href="index.html" style="color:#60a5fa">Topic Tests</a> and take your first test!</p>
-          </div>`;
-        return;
-      }
-
-      let html = `<table class="history-table">
-        <thead><tr>
-          <th class="check-col"><input type="checkbox" id="headerCheck" onchange="toggleSelectAll(this.checked)"></th>
-          <th>#</th>
-          <th>Topic</th>
-          <th>Date</th>
-          <th>Correct</th>
-          <th>Wrong</th>
-          <th>Skipped</th>
-          <th>Score</th>
-          <th>Grade</th>
-          <th>Scaled</th>
-        </tr></thead><tbody>`;
-
-      allTests.forEach((t, i) => {
-        const pct = t.pct || 0;
-        const pillClass = pct >= 70 ? 'high' : pct >= 50 ? 'mid' : 'low';
-        const gradeClass = (t.grade || 'D')[0].toLowerCase();
-        const date = t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '–';
-        const time = t.submit_time ? new Date(t.submit_time).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }) : '';
-
-        html += `<tr onclick="openTestDetail(${i})" id="row-${i}">
-          <td class="check-col" onclick="event.stopPropagation()">
-            <input type="checkbox" data-idx="${i}" onchange="toggleSelect(${i}, this.checked)">
-          </td>
-          <td style="color:rgba(255,255,255,0.3)">${i + 1}</td>
-          <td class="topic-cell">${t.topic || 'Unknown Topic'}</td>
-          <td><div>${date}</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.3)">${time}</div></td>
-          <td style="color:#6ee7b7">${t.correct || 0}</td>
-          <td style="color:#f87171">${t.wrong || 0}</td>
-          <td style="color:#fbbf24">${t.unattempted || 0}</td>
-          <td><span class="score-pill ${pillClass}">${pct}%</span></td>
-          <td><span class="grade-badge ${gradeClass}">${t.grade || '–'}</span></td>
-          <td style="font-weight:600;color:#93c5fd">${t.scaled || '–'}</td>
-        </tr>`;
-      });
-
-      html += '</tbody></table>';
-      document.getElementById('historyContent').innerHTML = html;
-    }
-
-    // ── Selection Logic ─────────────────────
-    function toggleSelect(idx, checked) {
-      if (checked) selectedIds.add(idx);
-      else selectedIds.delete(idx);
-      updateSelectionUI();
-    }
-
-    function toggleSelectAll(forceState) {
-      const checkboxes = document.querySelectorAll('.history-table tbody input[type="checkbox"]');
-      const shouldCheck = forceState !== undefined ? forceState : selectedIds.size < allTests.length;
-      checkboxes.forEach(cb => {
-        cb.checked = shouldCheck;
-        const idx = parseInt(cb.dataset.idx);
-        if (shouldCheck) selectedIds.add(idx);
-        else selectedIds.delete(idx);
-      });
-      const headerCb = document.getElementById('headerCheck');
-      if (headerCb) headerCb.checked = shouldCheck;
-      updateSelectionUI();
-    }
-
-    function updateSelectionUI() {
-      const count = selectedIds.size;
-      document.getElementById('selCount').textContent = count + ' selected';
-      document.getElementById('combineBtn').disabled = count < 1;
-      document.getElementById('selectAllBtn').textContent =
-        selectedIds.size === allTests.length ? 'Deselect All' : 'Select All';
-    }
-
-    // ── Individual Test Detail Modal ────────
-    async function openTestDetail(idx) {
-      const t = allTests[idx];
-      const pct = t.pct || 0;
-      const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
-      let details = [];
-      try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
-
-      const modal = document.getElementById('modalContent');
-      // Show loading inside modal while questions are fetched
-      modal.innerHTML = `
-        <div class="modal-hdr">
-          <h3>${t.topic || 'Test Detail'}</h3>
-          <button class="modal-close" onclick="closeModal()">✕</button>
-        </div>
-        <div class="loading-spinner">Loading question details...</div>
-      `;
-      document.getElementById('testModal').classList.add('open');
-
-      const topicMapping = getTopicMapping(t.topic);
-      const matchedTopicKey = topicMapping ? topicMapping.key : t.topic;
-      const dir = topicMapping ? topicMapping.dir : '.';
-      const qs = await loadQuestionsForTopic(matchedTopicKey);
-      const imgMapping = await loadImageMappingForTopic(matchedTopicKey, dir);
-
-      // Merge questions metadata
-      if (qs && details.length > 0) {
-        details = details.map(d => {
-          const matchedQ = qs.find(q => String(q.id) === String(d.id));
-          if (matchedQ) {
-            return {
-              ...d,
-              text: matchedQ.text,
-              options: matchedQ.options,
-              explanation: matchedQ.explanation || '',
-              useImage: matchedQ.useImage,
-              imageKey: matchedQ.imageKey
-            };
-          }
-          return d;
-        });
-      }
-
-      modal.innerHTML = `
-        <div class="modal-hdr">
-          <h3>${t.topic || 'Test Detail'}</h3>
-          <button class="modal-close" onclick="closeModal()">✕</button>
-        </div>
-        <div style="text-align:center;margin-bottom:4px">
-          <div style="font-family:'Syne';font-size:2.2rem;font-weight:800;color:${scoreColor}">${t.scaled || '–'}</div>
-          <div style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Scaled Score · ${t.submit_time ? new Date(t.submit_time).toLocaleString() : '–'}</div>
-        </div>
-        <div class="modal-stats">
-          <div class="modal-stat"><div class="ms-num" style="color:#6ee7b7">${t.correct || 0}</div><div class="ms-lbl">Correct</div></div>
-          <div class="modal-stat"><div class="ms-num" style="color:#f87171">${t.wrong || 0}</div><div class="ms-lbl">Wrong</div></div>
-          <div class="modal-stat"><div class="ms-num" style="color:#fbbf24">${t.unattempted || 0}</div><div class="ms-lbl">Skipped</div></div>
-          <div class="modal-stat"><div class="ms-num" style="color:#93c5fd">${pct}%</div><div class="ms-lbl">Score</div></div>
-        </div>
-        <div class="modal-chart-wrap"><canvas id="modalPie" height="200"></canvas></div>
-        ${details.length > 0 ? `
-          <div class="q-review-hdr">📋 Question Review (${details.length} questions)</div>
-          <div class="q-review-list">
-          ${details.map((d, i) => {
-            const hasText = !!d.text;
-            const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
-            const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
-            
-            // Build image source if used
-            let imgSrc = '';
-            if (d.useImage && d.imageKey && imgMapping[d.imageKey]) {
-              const val = imgMapping[d.imageKey];
-              imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (dir + '/' + val);
-            }
-
-            return `
-              <div class="q-card">
-                <div class="q-card-header">
-                  <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
-                  <span class="q-status ${statusClass}">${statusText}</span>
-                </div>
-                
-                ${hasText ? `<div class="q-card-text">${d.text}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
-                
-                ${imgSrc ? `<div class="q-image-container"><img src="${imgSrc}" alt="Question Image" /></div>` : ''}
-
-                ${hasText && d.options ? `
-                  <div class="q-card-opts">
-                    ${d.options.map((optText, optIdx) => {
-                      let optClass = '';
-                      // Mark correct option
-                      if (optIdx === d.answer) {
-                        optClass = 'correct';
-                      }
-                      // Mark chosen if incorrect
-                      if (d.status === 'wrong' && optIdx === d.chosen) {
-                        optClass = 'wrong-chosen';
-                      }
-                      
-                      let badgeIcon = '';
-                      if (optIdx === d.answer) {
-                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
-                      } else if (d.status === 'wrong' && optIdx === d.chosen) {
-                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
-                      } else if (d.status === 'correct' && optIdx === d.chosen) {
-                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
-                      }
-
-                      return `
-                        <div class="q-card-opt ${optClass}">
-                          <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
-                          <div class="q-card-opt-text">${optText}</div>
-                          ${badgeIcon}
-                        </div>
-                      `;
-                    }).join('')}
-                  </div>
-                ` : `
-                  <div class="q-detail" style="margin-top:8px;">
-                    ${d.status === 'wrong' ? `Your answer: <strong>${LETTERS[d.chosen] || '–'}</strong> · Correct: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
-                    ${d.status === 'unattempted' ? `Correct answer: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
-                  </div>
-                `}
-
-                ${d.explanation ? `
-                  <div class="q-card-exp">
-                    <strong>💡 Explanation:</strong> ${d.explanation}
-                  </div>
-                ` : ''}
-              </div>
-            `;
-          }).join('')}
-          </div>
-        ` : '<p style="color:rgba(255,255,255,0.3);text-align:center;padding:20px">No question details available</p>'}
-      `;
-
-      // Draw pie chart
-      if (modalChart) modalChart.destroy();
-      modalChart = new Chart(document.getElementById('modalPie'), {
-        type: 'doughnut',
-        data: {
-          labels: ['Correct', 'Wrong', 'Skipped'],
-          datasets: [{
-            data: [t.correct || 0, t.wrong || 0, t.unattempted || 0],
-            backgroundColor: ['#059669', '#dc2626', '#d97706'],
-            borderWidth: 0,
-            hoverOffset: 4
-          }]
-        },
-        options: {
-          plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.6)', font: { family: 'IBM Plex Sans' } } } },
-          cutout: '65%'
-        }
-      });
-    }
-
     function closeModal() {
       document.getElementById('testModal').classList.remove('open');
     }
@@ -1612,15 +1345,19 @@
             const topicData = topicsData[t.topic];
             if (topicData && topicData.qs) {
               details = details.map(d => {
-                const matchedQ = topicData.qs.find(q => String(q.id) === String(d.id));
+                const qId = d.id || (i + 1);
+                const matchedQ = topicData.qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || topicData.qs[i];
                 if (matchedQ) {
                   return {
                     ...d,
-                    text: matchedQ.text,
-                    options: matchedQ.options,
-                    explanation: matchedQ.explanation || '',
-                    useImage: matchedQ.useImage,
-                    imageKey: matchedQ.imageKey
+                    text: d.text || matchedQ.text || matchedQ.question || '',
+                    options: d.options || matchedQ.options || matchedQ.choices || [],
+                    answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
+                    chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
+                    status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
+                    explanation: d.explanation || matchedQ.explanation || matchedQ.solution || '',
+                    useImage: d.useImage !== undefined ? d.useImage : matchedQ.useImage,
+                    imageKey: d.imageKey || matchedQ.imageKey
                   };
                 }
                 return d;
@@ -1863,290 +1600,6 @@
         console.error('PDF generation failed', err);
         buttons.forEach(b => b.style.display = '');
       });
-    }
-
-    // ── TMUA Student Portal Logic ──────────────────────────
-    let stuTmuaReports = [];
-    let stuHasTmuaAccess = false;
-
-    function switchStuPortal(portal) {
-      document.getElementById('btnStuPortalSat').classList.toggle('active', portal === 'sat');
-      document.getElementById('btnStuPortalTmua').classList.toggle('active', portal === 'tmua');
-      document.getElementById('satStuSection').style.display = portal === 'sat' ? 'block' : 'none';
-      document.getElementById('tmuaStuSection').style.display = portal === 'tmua' ? 'block' : 'none';
-    }
-
-    let selectedTmuaIndices = new Set();
-    let tmuaCombinedPie = null, tmuaCombinedBar = null;
-
-    async function loadTmuaStudentData(email) {
-      try {
-        let profile = null;
-        if (currentSession && currentSession.user && currentSession.user.id) {
-          const { data } = await supabaseClient.from('profiles').select('*').eq('id', currentSession.user.id).single();
-          profile = data;
-        }
-        if (!profile && email) {
-          const { data } = await supabaseClient.from('profiles').select('*').ilike('email', email).single();
-          profile = data;
-        }
-
-        const { data: reports } = await supabaseClient
-          .from('tmua_report')
-          .select('*')
-          .ilike('email', email)
-          .order('submit_time', { ascending: false });
-
-        stuTmuaReports = reports || [];
-        stuHasTmuaAccess = (profile && (profile.has_tmua_diag_access || profile.has_tmua_topic_access)) || stuTmuaReports.length > 0;
-        renderTmuaStuDashboard();
-      } catch (err) {
-        console.error('Error loading TMUA student data:', err);
-      }
-    }
-
-    function renderTmuaStuDashboard() {
-      const lockedEl = document.getElementById('tmuaLockedState');
-      const unlockedEl = document.getElementById('tmuaUnlockedState');
-      if (!stuHasTmuaAccess) {
-        lockedEl.style.display = 'block';
-        unlockedEl.style.display = 'none';
-        return;
-      }
-      lockedEl.style.display = 'none';
-      unlockedEl.style.display = 'block';
-
-      const n = stuTmuaReports.length;
-      document.getElementById('stuTmuaTests').textContent = n;
-      if (n === 0) {
-        document.getElementById('stuTmuaAvg').textContent = '0%';
-        document.getElementById('stuTmuaBest').textContent = '–';
-        document.getElementById('stuTmuaQs').textContent = '0';
-        document.getElementById('tmuaStuHistoryContainer').innerHTML = `<div style="text-align: center; padding: 40px; color: rgba(255,255,255,0.4);">No TMUA exams completed yet. Click 'Take TMUA Tests' above to begin!</div>`;
-        return;
-      }
-
-      const avgPct = Math.round(stuTmuaReports.reduce((s, r) => s + (r.pct || 0), 0) / n);
-      const bestScaledRaw = Math.max(...stuTmuaReports.map(r => Number(r.scaled || 0)));
-      const bestScaled = bestScaledRaw < 10 ? bestScaledRaw.toFixed(1) : bestScaledRaw;
-      const totalQs = stuTmuaReports.reduce((s, r) => s + (r.total || 0), 0);
-
-      document.getElementById('stuTmuaAvg').textContent = avgPct + '%';
-      document.getElementById('stuTmuaBest').textContent = bestScaled;
-      document.getElementById('stuTmuaQs').textContent = totalQs;
-
-      document.getElementById('tmuaStuHistoryContainer').innerHTML = stuTmuaReports.map((t, i) => {
-        const pct = t.pct || 0;
-        const date = t.submit_time ? new Date(t.submit_time).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '–';
-        return `
-          <div class="tmua-test-card" style="display:flex; justify-content:space-between; align-items:center; cursor:pointer;" onclick="openTmuaTestDetail(${i})">
-            <div style="display:flex; align-items:center; gap:14px;">
-              <input type="checkbox" class="tmua-test-cb" data-idx="${i}" onchange="updateTmuaSelectedCount()" onclick="event.stopPropagation()">
-              <div>
-                <div style="font-weight: 700; font-size: 1.05rem; color: #fff; margin-bottom: 4px;">${t.topic || 'TMUA Test'}</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4);">Submitted: ${date} &middot; Grade ${t.grade || '–'}</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 16px;">
-              <div style="text-align: right;">
-                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.4); text-transform: uppercase;">Scaled Score</div>
-                <div style="font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; color: #6ee7b7;">${t.scaled || '–'}</div>
-              </div>
-              <span style="background: rgba(255,255,255,0.06); padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; color: #93c5fd;">${pct}%</span>
-            </div>
-          </div>
-        `;
-      }).join('');
-
-      if (n >= 2) {
-        toggleSelectAllTmua(true);
-      } else {
-        updateTmuaSelectedCount();
-      }
-    }
-
-    function toggleSelectAllTmua(chk) {
-      document.querySelectorAll('.tmua-test-cb').forEach(c => {
-        c.checked = chk;
-      });
-      updateTmuaSelectedCount();
-    }
-
-    function updateTmuaSelectedCount() {
-      selectedTmuaIndices.clear();
-      document.querySelectorAll('.tmua-test-cb:checked').forEach(c => {
-        selectedTmuaIndices.add(Number(c.dataset.idx));
-      });
-      const cnt = selectedTmuaIndices.size;
-      const el = document.getElementById('tmuaSelectedCount');
-      if (el) el.textContent = `${cnt} selected`;
-      const btn = document.getElementById('tmuaCombineBtn');
-      if (btn) btn.disabled = cnt < 1;
-      const sa = document.getElementById('selectAllTmua');
-      if (sa) sa.checked = cnt > 0 && cnt === stuTmuaReports.length;
-    }
-
-    function closeTmuaCombinedReport() {
-      const area = document.getElementById('tmuaCombinedReportArea');
-      if (area) area.innerHTML = '';
-    }
-
-    function generateTmuaCombinedReport() {
-      const tests = Array.from(selectedTmuaIndices).map(i => stuTmuaReports[i]).filter(Boolean);
-      if (tests.length === 0) return;
-
-      const area = document.getElementById('tmuaCombinedReportArea');
-      const totCorrect = tests.reduce((s, t) => s + (t.correct || 0), 0);
-      const totWrong = tests.reduce((s, t) => s + (t.wrong || 0), 0);
-      const totSkipped = tests.reduce((s, t) => s + (t.unattempted || 0), 0);
-      const totQs = tests.reduce((s, t) => s + (t.total || 0), 0);
-      const avgPct = totQs > 0 ? Math.round(totCorrect / totQs * 100) : 0;
-      const avgScaledRaw = tests.reduce((s, t) => s + Number(t.scaled || 0), 0) / tests.length;
-      const avgScaled = avgScaledRaw < 10 ? avgScaledRaw.toFixed(1) : Math.round(avgScaledRaw);
-      const overallGrade = avgPct >= 90 ? 'A+' : avgPct >= 80 ? 'A' : avgPct >= 70 ? 'B' : avgPct >= 60 ? 'C' : 'D';
-
-      const topicMap = {};
-      tests.forEach(t => {
-        const name = t.topic || 'Unknown';
-        if (!topicMap[name]) topicMap[name] = { correct: 0, wrong: 0, skipped: 0, total: 0, count: 0 };
-        topicMap[name].correct += (t.correct || 0);
-        topicMap[name].wrong += (t.wrong || 0);
-        topicMap[name].skipped += (t.unattempted || 0);
-        topicMap[name].total += (t.total || 0);
-        topicMap[name].count++;
-      });
-
-      const topics = Object.keys(topicMap);
-      const topicPcts = topics.map(k => topicMap[k].total > 0 ? Math.round(topicMap[k].correct / topicMap[k].total * 100) : 0);
-      const barColors = topicPcts.map(p => p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626');
-
-      area.innerHTML = `
-        <div class="combined-report" id="tmuaCombinedReportCard" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(5,150,105,0.3); border-radius: 16px; padding: 28px; margin-bottom: 32px;">
-          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
-            <div>
-              <div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;">📊 Combined TMUA Report</div>
-              <div style="font-size:0.82rem;color:rgba(255,255,255,0.4);">${tests.length} test(s) combined · Generated ${new Date().toLocaleString()}</div>
-            </div>
-            <div style="display:flex;gap:8px">
-              <button class="btn btn-green" style="background:#059669;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600;" onclick="downloadTmuaCombinedPDF()">📄 Download PDF</button>
-              <button class="btn btn-outline" style="background:none;color:#fff;border:1px solid rgba(255,255,255,0.2);padding:8px 16px;border-radius:8px;cursor:pointer;" onclick="closeTmuaCombinedReport()">✕ Close</button>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));gap:12px;margin-bottom:24px;text-align:center;">
-            <div style="background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;"><div style="font-weight:700;font-size:1.3rem;color:#6ee7b7">${totCorrect}</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">Correct</div></div>
-            <div style="background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;"><div style="font-weight:700;font-size:1.3rem;color:#f87171">${totWrong}</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">Wrong</div></div>
-            <div style="background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;"><div style="font-weight:700;font-size:1.3rem;color:#fbbf24">${totSkipped}</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">Skipped</div></div>
-            <div style="background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;"><div style="font-weight:700;font-size:1.3rem;color:#93c5fd">${totQs}</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">Total Qs</div></div>
-            <div style="background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;"><div style="font-weight:700;font-size:1.3rem;color:#34d399">${avgPct}%</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">Overall Score</div></div>
-            <div style="background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;"><div style="font-weight:700;font-size:1.3rem;color:#6ee7b7">${avgScaled}</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">TMUA Scale</div></div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;margin-bottom:24px;">
-            <div style="background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;"><h4 style="margin-bottom:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">📊 Overall Breakdown</h4><canvas id="tmuaCombinedPie" height="220"></canvas></div>
-            <div style="background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;"><h4 style="margin-bottom:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">📈 Topic-wise Performance</h4><canvas id="tmuaCombinedBar" height="220"></canvas></div>
-          </div>
-          <div style="background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;">
-            <h4 style="margin-bottom:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">📋 Topic-wise Breakdown Table</h4>
-            <table style="width:100%;border-collapse:collapse;font-size:0.85rem;text-align:left;">
-              <thead>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);">
-                  <th style="padding:8px;">Topic</th>
-                  <th style="padding:8px;">Tests</th>
-                  <th style="padding:8px;">Correct</th>
-                  <th style="padding:8px;">Wrong</th>
-                  <th style="padding:8px;">Skipped</th>
-                  <th style="padding:8px;">Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${topics.map((t, i) => {
-                  const d = topicMap[t];
-                  const p = topicPcts[i];
-                  return `<tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                    <td style="padding:8px;font-weight:600;">${t}</td>
-                    <td style="padding:8px;">${d.count}</td>
-                    <td style="padding:8px;color:#6ee7b7;">${d.correct}</td>
-                    <td style="padding:8px;color:#f87171;">${d.wrong}</td>
-                    <td style="padding:8px;color:#fbbf24;">${d.skipped}</td>
-                    <td style="padding:8px;font-weight:700;color:#34d399;">${p}%</td>
-                  </tr>`;
-                }).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      `;
-
-      if (tmuaCombinedPie) tmuaCombinedPie.destroy();
-      if (tmuaCombinedBar) tmuaCombinedBar.destroy();
-
-      tmuaCombinedPie = new Chart(document.getElementById('tmuaCombinedPie'), {
-        type: 'doughnut',
-        data: { labels: ['Correct', 'Wrong', 'Skipped'], datasets: [{ data: [totCorrect, totWrong, totSkipped], backgroundColor: ['#059669', '#dc2626', '#d97706'], borderWidth: 0 }] },
-        options: { plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.6)', font: { family: 'IBM Plex Sans', size: 11 } } } }, cutout: '60%' }
-      });
-
-      tmuaCombinedBar = new Chart(document.getElementById('tmuaCombinedBar'), {
-        type: 'bar',
-        data: { labels: topics.map(t => t.length > 16 ? t.substring(0, 14) + '…' : t), datasets: [{ label: 'Score %', data: topicPcts, backgroundColor: barColors.map(c => c + '33'), borderColor: barColors, borderWidth: 2, borderRadius: 4 }] },
-        options: { indexAxis: topics.length > 3 ? 'y' : 'x', plugins: { legend: { display: false } }, scales: { x: { max: 100, ticks: { color: 'rgba(255,255,255,0.4)' }, grid: { color: 'rgba(255,255,255,0.05)' } }, y: { ticks: { color: 'rgba(255,255,255,0.6)' }, grid: { color: 'rgba(255,255,255,0.05)' } } } }
-      });
-    }
-
-    function downloadTmuaCombinedPDF() {
-      const element = document.getElementById('tmuaCombinedReportCard');
-      if (!element) return;
-      const opt = {
-        margin: [10, 10, 10, 10],
-        filename: `My_TMUA_Combined_Report.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0d0d14' },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
-      html2pdf().set(opt).from(element).save();
-    }
-
-    function openTmuaTestDetail(idx) {
-      const t = stuTmuaReports[idx];
-      const pct = t.pct || 0;
-      const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
-      let details = [];
-      try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
-
-      document.getElementById('tmuaModalTitle').textContent = t.topic || 'TMUA Review';
-      document.getElementById('tmuaModalContent').innerHTML = `
-        <div style="text-align:center; margin-bottom: 24px;">
-          <div style="font-family:'Syne'; font-size:2.6rem; font-weight:800; color:${scoreColor};">${t.scaled || '–'}</div>
-          <div style="font-size:0.85rem; color:rgba(255,255,255,0.4);">TMUA Scaled Score &middot; Grade ${t.grade || '–'}</div>
-        </div>
-        <div style="display:flex; justify-content:space-around; background:rgba(255,255,255,0.03); padding:16px; border-radius:12px; margin-bottom:24px; text-align:center;">
-          <div><div style="font-weight:700; font-size:1.2rem; color:#6ee7b7;">${t.correct || 0}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Correct</div></div>
-          <div><div style="font-weight:700; font-size:1.2rem; color:#f87171;">${t.wrong || 0}</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Wrong</div></div>
-          <div><div style="font-weight:700; font-size:1.2rem; color:#fbbf24;">${t.unattempted || 0}</div><div class="stat-lbl" style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Skipped</div></div>
-          <div><div style="font-weight:700; font-size:1.2rem; color:#93c5fd;">${pct}%</div><div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Percentage</div></div>
-        </div>
-        ${details.length > 0 ? `
-          <h4 style="margin-bottom:12px; font-size:1rem; color:#fff;">Question by Question Breakdown</h4>
-          <div style="max-height: 400px; overflow-y: auto; display:flex; flex-direction:column; gap:8px;">
-            ${details.map(d => {
-              const isCorrect = d.status === 'correct';
-              const isSkipped = d.status === 'unattempted';
-              const color = isCorrect ? '#34d399' : isSkipped ? '#fbbf24' : '#f87171';
-              const icon = isCorrect ? '✅' : isSkipped ? '➖' : '❌';
-              return `
-                <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); padding:10px 14px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
-                  <span style="font-weight:600; color:#fff;">Question ${d.id}</span>
-                  <span style="color:${color}; font-weight:600;">${icon} Your Answer: ${d.chosen || 'Skipped'} ${!isCorrect ? `(Correct: ${d.answer})` : ''}</span>
-                </div>
-              `;
-            }).join('')}
-          </div>
-        ` : `<div style="text-align:center; color:rgba(255,255,255,0.4);">No detailed question logs available for this test.</div>`}
-      `;
-      document.getElementById('tmuaReportModal').classList.add('active');
-    }
-
-    function closeTmuaModal() {
-      document.getElementById('tmuaReportModal').classList.remove('active');
     }
   </script>
 </body>
