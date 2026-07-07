@@ -1274,11 +1274,11 @@
 
     function getTopicMapping(topicName) {
       if (!topicName) return null;
-      const clean = topicName.trim().toLowerCase();
+      const clean = topicName.trim().toLowerCase().replace(/[–—_]/g, '-');
       
       // 1. Direct or substring match against TOPIC_QUESTIONS_MAP keys
       let key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => {
-        const kClean = k.trim().toLowerCase();
+        const kClean = k.trim().toLowerCase().replace(/[–—_]/g, '-');
         return kClean === clean || clean.includes(kClean) || kClean.includes(clean);
       });
       if (key) return { key, ...TOPIC_QUESTIONS_MAP[key] };
@@ -2703,7 +2703,7 @@ return null;
           if (matchedQ) {
             return {
               ...d,
-              text: d.text || matchedQ.text || matchedQ.question || '',
+              text: d.text || d.question || d.prompt || (matchedQ ? (matchedQ.text || matchedQ.question || matchedQ.prompt) : '') || '',
               options: d.options || matchedQ.options || matchedQ.choices || [],
               answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
               chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
@@ -2758,7 +2758,8 @@ return null;
           <div class="q-review-hdr">📋 Question Review (${details.length} questions)</div>
           <div class="q-review-list">
           ${details.map((d, i) => {
-            const hasText = !!d.text;
+            const qText = d.text || d.question || d.prompt || '';
+            const hasText = !!qText;
             const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
             const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
             
@@ -2776,7 +2777,7 @@ return null;
                   <span class="q-status ${statusClass}">${statusText}</span>
                 </div>
                 
-                ${hasText ? `<div class="q-card-text">${d.text}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
+                ${hasText ? `<div class="q-card-text">${qText}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
                 
                 ${imgSrc ? `<div class="q-image-container"><img src="${imgSrc}" alt="Question Image" /></div>` : ''}
 
@@ -2904,13 +2905,13 @@ return null;
           if (details.length > 0) {
             const topicData = topicsData[t.topic];
             if (topicData && topicData.qs) {
-              details = details.map(d => {
+              details = details.map((d, i) => {
                 const qId = d.id || (i + 1);
                 const matchedQ = topicData.qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || topicData.qs[i];
                 if (matchedQ) {
                   return {
                     ...d,
-                    text: d.text || matchedQ.text || matchedQ.question || '',
+                    text: d.text || d.question || d.prompt || (matchedQ ? (matchedQ.text || matchedQ.question || matchedQ.prompt) : '') || '',
                     options: d.options || matchedQ.options || matchedQ.choices || [],
                     answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
                     chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
