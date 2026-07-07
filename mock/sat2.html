@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAT Diagnostic Test</title>
+  <title>SAT Diagnostic Test 1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
@@ -1091,8 +1091,8 @@
   <header class="hdr">
     <div class="hdr-brand">
       <span>📝</span>
-      <a href="sat.html" style="color:inherit;text-decoration:none">Digital SAT</a>
-      <span class="hdr-pill">Practice Exam 1</span>
+      <a href="index.html" style="color:inherit;text-decoration:none">Digital SAT</a>
+      <span class="hdr-pill">Diagnostic Test 1</span>
       <span class="hdr-module" id="hdrModule"></span>
     </div>
     <div class="timer" id="timerBox">
@@ -1107,9 +1107,9 @@
       <div class="reg-card">
         <div class="reg-top">
           <span class="icon">📝</span>
-          <h2> Diagnostic </h2>
+          <h2>Diagnostic Test 1</h2>
           <h2>Digital SAT</h2>
-          <p>Practice Exam 1 · Full Length · 1 Modules</p>
+          <p>Diagnostic Test 1 · Full Length · 1 Modules</p>
         </div>
         <div class="stat-strip">
           <div class="s">
@@ -1149,7 +1149,7 @@
               <input type="tel" id="regPhone" placeholder="Phone number" autocomplete="tel">
             </div>
           </div>
-          <button class="btn btn-primary" onclick="startTest()">Begin Practice Test →</button>
+          <button class="btn btn-primary" onclick="startTest()">Begin Diagnostic Test →</button>
         </div>
       </div>
     </div>
@@ -1295,7 +1295,7 @@
       sessionStorage.setItem('student', JSON.stringify(student));
 
       // Save registration data to Supabase
-      if (typeof saveRegistration === 'function') saveRegistration(student, 'SAT Practice Exam 2');
+      if (typeof saveRegistration === 'function') saveRegistration(student, 'SAT Diagnostic Test 1');
 
       startModule(0);
       window.addEventListener('beforeunload', e => { e.preventDefault(); e.returnValue = ''; });
@@ -1518,7 +1518,7 @@
         student, correct, wrong, unattempted,
         total, pct, grade, scaled, rwScore, mathScore, details,
         submitTime: new Date().toISOString(),
-        examName: 'Digital SAT – Practice Exam 2'
+        examName: 'Digital SAT – Diagnostic Test 1'
       };
       result.topicAnalysis = buildTopics(details);
 
@@ -1625,8 +1625,8 @@
 
     <div class="res-actions">
       <button class="btn btn-primary" onclick="downloadPDF()">⬇ Download PDF Again</button>
-      <button class="btn btn-outline" onclick="location.reload()">🔄 Retake Exam 2</button>
-      <a href="sat.html" class="btn btn-outline" style="text-decoration:none">← Back to Exam 1</a>
+      <button class="btn btn-outline" onclick="location.reload()">🔄 Retake Diagnostic Test 1</button>
+      <a href="index.html" class="btn btn-outline" style="text-decoration:none">← Back to Diagnostic Tests</a>
     </div>`;
 
       new Chart($('pieChart'), {
