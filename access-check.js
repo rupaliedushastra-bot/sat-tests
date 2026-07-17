@@ -26,7 +26,7 @@
     // Determine correct relative paths based on whether we are in a subdirectory (like test_3)
     let loginUrl = 'login.html';
     let indexUrl = 'index.html';
-    if (window.location.pathname.match(/\/(topic|test_6|wic|text_structure_purpose|cross_text_connections|Central_Ideas_and_Details|coe_textual|inferences|verbs|modifiers|plural_poss|transition|rhetorics|exam_sat_diag|angles|angles&triangles|mensuration|trigonometry|percentage)/i)) {
+    if (window.location.pathname.match(/\/(topic|test_6|wic|text_structure_purpose|cross_text_connections|Central_Ideas_and_Details|coe_textual|inferences|verbs|modifiers|plural_poss|transition|rhetorics|exam_sat_diag|angles|angles&triangles|mensuration|trigonometry|percentage|Advanced_Problem_Set)/i)) {
         loginUrl = '../login.html';
         indexUrl = '../index.html';
     }
@@ -45,7 +45,7 @@
         .single();
 
     const pathname = window.location.pathname.toLowerCase();
-    const isMath = pathname.match(/\/(topic_9|topic_10|topic_11|topic_12|topic_13|topic_14|topic_15|topic_16|angles|angles&triangles|mensuration|trigonometry|percentage)\//i);
+    const isMath = pathname.match(/\/(topic_9|topic_10|topic_11|topic_12|topic_13|topic_14|topic_15|topic_16|angles|angles&triangles|mensuration|trigonometry|percentage|Advanced_Problem_Set)\//i);
     const isClassTest = pathname.match(/\/(wic|text_structure_purpose|cross_text_connections|central_ideas_and_details|coe_textual|inferences)\//i);
     
     let hasAccess = false;
