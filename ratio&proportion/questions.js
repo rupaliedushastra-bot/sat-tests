@@ -6,11 +6,11 @@
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "If Rs. 510 be divided among A, B, C in such a way that A gets 2/3 of what B gets and B gets 1/4 of what C gets, then their shares are respectively:",
+    "text": "If \(\text{Rs. } 510\) be divided among A, B, C in such a way that A gets \(\frac{2}{3}\) of what B gets and B gets \(\frac{1}{4}\) of what C gets, then their shares are respectively:",
     "options": [
-      "Rs. 120, Rs. 240, Rs. 150",
-      "Rs. 60, Rs. 90, Rs. 360",
-      "Rs. 150, Rs. 300, Rs. 60",
+      "\(\text{Rs. } 120\), \(\text{Rs. } 240\), \(\text{Rs. } 150\)",
+      "\(\text{Rs. } 60\), \(\text{Rs. } 90\), \(\text{Rs. } 360\)",
+      "\(\text{Rs. } 150\), \(\text{Rs. } 300\), \(\text{Rs. } 60\)",
       "None of these"
     ],
     "answer": 1,
@@ -19,7 +19,7 @@ const QUESTIONS = [
   },
   {
     "id": 2,
-    "text": "The sum of three numbers is 98. If the ratio of the first to the second is 2 : 3 and that of the second to the third is 5 : 8, then the second number is:",
+    "text": "The sum of three numbers is 98. If the ratio of the first to the second is \(2 : 3\) and that of the second to the third is \(5 : 8\), then the second number is:",
     "options": [
       "20",
       "30",
@@ -27,69 +27,69 @@ const QUESTIONS = [
       "58"
     ],
     "answer": 1,
-    "explanation": "First : Second : Third = 10 : 15 : 24 (combined ratio). Sum of parts = 49. Total = 98, each part = 2. Second = 15 × 2 = 30. Answer: B.",
+    "explanation": "First : Second : Third = \(10 : 15 : 24\) (combined ratio). Sum of parts = 49. Total = 98, each part = 2. Second = 15 × 2 = 30. Answer: B.",
     "topic": "Three Numbers"
   },
   {
     "id": 3,
-    "text": "A fraction which bears the same ratio to 1/27 that 3/11 does to 5/9, is equal to:",
+    "text": "A fraction which bears the same ratio to \(\frac{1}{27}\) that \(\frac{3}{11}\) does to \(\frac{5}{9}\), is equal to:",
     "options": [
-      "1/55",
-      "1/11",
-      "3/11",
+      "\(\frac{1}{55}\)",
+      "\(\frac{1}{11}\)",
+      "\(\frac{3}{11}\)",
       "55"
     ],
     "answer": 0,
-    "explanation": "x / (1/27) = (3/11) / (5/9). x = (1/27) × (3/11) × (9/5) = 1/55. Answer: A.",
+    "explanation": "x / (\(\frac{1}{27}\)) = (\(\frac{3}{11}\)) / (\(\frac{5}{9}\)). x = (\(\frac{1}{27}\)) × (\(\frac{3}{11}\)) × (\(\frac{9}{5}\)) = \(\frac{1}{55}\). Answer: A.",
     "topic": "Fourth Proportional"
   },
   {
     "id": 4,
-    "text": "Rs. 366 are divided amongst A, B and C so that A may get 1/2 as much as B and C together, B may get 2/3 as much as A and C together. The share of A is:",
+    "text": "\(\text{Rs. } 366\) are divided amongst A, B and C so that A may get \(\frac{1}{2}\) as much as B and C together, B may get \(\frac{2}{3}\) as much as A and C together. The share of A is:",
     "options": [
-      "Rs. 122",
-      "Rs. 129.60",
-      "Rs. 146.60",
-      "Rs. 183"
+      "\(\text{Rs. } 122\)",
+      "\(\text{Rs. } 129.60\)",
+      "\(\text{Rs. } 146.60\)",
+      "\(\text{Rs. } 183\)"
     ],
     "answer": 0,
-    "explanation": "A = (1/2)(B+C) → A : (B+C) = 1 : 2 → A = 366/3 = Rs. 122. Answer: A.",
+    "explanation": "A = (\(\frac{1}{2}\))(B+C) → A : (B+C) = \(1 : 2\) → A = \(\frac{366}{3}\) = \(\text{Rs. } 122\). Answer: A.",
     "topic": "Division of Amount"
   },
   {
     "id": 5,
-    "text": "A sum of Rs. 1300 is divided amongst P, Q, R and S such that P's share / Q's share = Q's share / R's share = R's share / S's share = 2/3. Then P's share is:",
+    "text": "A sum of \(\text{Rs. } 1300\) is divided amongst P, Q, R and S such that P's share / Q's share = Q's share / R's share = R's share / S's share = \(\frac{2}{3}\). Then P's share is:",
     "options": [
-      "Rs. 140",
-      "Rs. 160",
-      "Rs. 240",
-      "Rs. 320"
+      "\(\text{Rs. } 140\)",
+      "\(\text{Rs. } 160\)",
+      "\(\text{Rs. } 240\)",
+      "\(\text{Rs. } 320\)"
     ],
     "answer": 1,
-    "explanation": "P:Q:R:S = 8:12:18:27. Sum = 65. P = (8/65) × 1300 = Rs. 160. Answer: B.",
+    "explanation": "P:Q:R:S = 8:12:18:27. Sum = 65. P = (\(\frac{8}{65}\)) × 1300 = \(\text{Rs. } 160\). Answer: B.",
     "topic": "Four Quantities"
   },
   {
     "id": 6,
-    "text": "A and B together have Rs. 1210. If 4/15 of A's amount is equal to 2/5 of B's amount, how much amount does B have?",
+    "text": "A and B together have \(\text{Rs. } 1210\). If \(\frac{4}{15}\) of A's amount is equal to \(\frac{2}{5}\) of B's amount, how much amount does B have?",
     "options": [
-      "Rs. 460",
-      "Rs. 484",
-      "Rs. 550",
-      "Rs. 664"
+      "\(\text{Rs. } 460\)",
+      "\(\text{Rs. } 484\)",
+      "\(\text{Rs. } 550\)",
+      "\(\text{Rs. } 664\)"
     ],
     "answer": 1,
-    "explanation": "(4/15)A = (2/5)B → A:B = 3:2. B = (2/5) × 1210 = Rs. 484. Answer: B.",
+    "explanation": "(\(\frac{4}{15}\))A = (\(\frac{2}{5}\))B → A:B = 3:2. B = (\(\frac{2}{5}\)) × 1210 = \(\text{Rs. } 484\). Answer: B.",
     "topic": "Two Quantities"
   },
   {
     "id": 7,
-    "text": "Two numbers are respectively 20% and 50% more than a third number. The ratio of the two numbers is:",
+    "text": "Two numbers are respectively \(20\%\) and \(50\%\) more than a third number. The ratio of the two numbers is:",
     "options": [
-      "2 : 5",
-      "3 : 5",
-      "4 : 5",
-      "6 : 7"
+      "\(2 : 5\)",
+      "\(3 : 5\)",
+      "\(4 : 5\)",
+      "\(6 : 7\)"
     ],
     "answer": 2,
     "explanation": "Let third = 100. First = 120, Second = 150. Ratio = 120:150 = 4:5. Answer: C.",
@@ -99,10 +99,10 @@ const QUESTIONS = [
     "id": 8,
     "text": "Two whole numbers whose sum is 72 cannot be in the ratio:",
     "options": [
-      "5 : 7",
-      "3 : 5",
-      "3 : 4",
-      "4 : 5"
+      "\(5 : 7\)",
+      "\(3 : 5\)",
+      "\(3 : 4\)",
+      "\(4 : 5\)"
     ],
     "answer": 2,
     "explanation": "Sum of ratio parts must divide 72. 5+7=12 ✓; 3+5=8 ✓; 3+4=7 → 72÷7 is not integer ✗; 4+5=9 ✓. So 3:4 is impossible. Answer: C.",
@@ -112,10 +112,10 @@ const QUESTIONS = [
     "id": 9,
     "text": "If a carton containing a dozen mirrors is dropped, which of the following cannot be the ratio of broken mirrors to unbroken mirrors?",
     "options": [
-      "2 : 1",
-      "3 : 1",
-      "3 : 2",
-      "7 : 5"
+      "\(2 : 1\)",
+      "\(3 : 1\)",
+      "\(3 : 2\)",
+      "\(7 : 5\)"
     ],
     "answer": 2,
     "explanation": "Total = 12. Sum of parts must divide 12. 2+1=3 ✓; 3+1=4 ✓; 3+2=5 → 12÷5=2.4 ✗; 7+5=12 ✓. So 3:2 is impossible. Answer: C.",
@@ -123,11 +123,11 @@ const QUESTIONS = [
   },
   {
     "id": 10,
-    "text": "Seats for Mathematics, Physics and Biology in a school are in the ratio 5 : 7 : 8. There is a proposal to increase these seats by 40%, 50% and 75% respectively. What will be the ratio of increased seats?",
+    "text": "Seats for Mathematics, Physics and Biology in a school are in the ratio \(5 : 7 : 8\). There is a proposal to increase these seats by \(40\%\), \(50\%\) and \(75\%\) respectively. What will be the ratio of increased seats?",
     "options": [
-      "2 : 3 : 4",
-      "6 : 7 : 8",
-      "6 : 8 : 9",
+      "\(2 : 3 : 4\)",
+      "\(6 : 7 : 8\)",
+      "\(6 : 8 : 9\)",
       "None of these"
     ],
     "answer": 0,
@@ -136,11 +136,11 @@ const QUESTIONS = [
   },
   {
     "id": 11,
-    "text": "The ratio of the number of boys and girls in a college is 7 : 8. If the percentage increase in the number of boys and girls be 20% and 10% respectively, what will be the new ratio?",
+    "text": "The ratio of the number of boys and girls in a college is \(7 : 8\). If the percentage increase in the number of boys and girls be \(20\%\) and \(10\%\) respectively, what will be the new ratio?",
     "options": [
-      "8 : 9",
-      "17 : 18",
-      "21 : 22",
+      "\(8 : 9\)",
+      "\(17 : 18\)",
+      "\(21 : 22\)",
       "Cannot be determined"
     ],
     "answer": 2,
@@ -149,37 +149,37 @@ const QUESTIONS = [
   },
   {
     "id": 12,
-    "text": "A sum of money is to be distributed among A, B, C, D in the proportion of 5 : 2 : 4 : 3. If C gets Rs. 1000 more than D, what is B's share?",
+    "text": "A sum of money is to be distributed among A, B, C, D in the proportion of \(5 : 2 : 4\) : 3. If C gets \(\text{Rs. } 1000\) more than D, what is B's share?",
     "options": [
-      "Rs. 500",
-      "Rs. 1500",
-      "Rs. 2000",
+      "\(\text{Rs. } 500\)",
+      "\(\text{Rs. } 1500\)",
+      "\(\text{Rs. } 2000\)",
       "None of these"
     ],
     "answer": 2,
-    "explanation": "C−D = 4−3 = 1 part = Rs. 1000. Total = 14 parts = Rs. 14,000. B = 2 × 1000 = Rs. 2000. Answer: C.",
+    "explanation": "C−D = 4−3 = 1 part = \(\text{Rs. } 1000\). Total = 14 parts = \(\text{Rs. } 14\),000. B = 2 × 1000 = \(\text{Rs. } 2000\). Answer: C.",
     "topic": "Division with Condition"
   },
   {
     "id": 13,
-    "text": "If 40% of a number is equal to two-third of another number, what is the ratio of first number to the second number?",
+    "text": "If \(40\%\) of a number is equal to two-third of another number, what is the ratio of first number to the second number?",
     "options": [
-      "2 : 5",
-      "3 : 7",
-      "5 : 3",
-      "7 : 3"
+      "\(2 : 5\)",
+      "\(3 : 7\)",
+      "\(5 : 3\)",
+      "\(7 : 3\)"
     ],
     "answer": 2,
-    "explanation": "0.4A = (2/3)B → A/B = (2/3)/(2/5) = 5/3. Ratio A:B = 5:3. Answer: C.",
+    "explanation": "0.4A = (\(\frac{2}{3}\))B → A/B = (\(\frac{2}{3}\))/(\(\frac{2}{5}\)) = \(\frac{5}{3}\). Ratio A:B = 5:3. Answer: C.",
     "topic": "Percentage Relation"
   },
   {
     "id": 14,
-    "text": "Ratio of the earnings of A and B is 4 : 7. If the earnings of A increase by 50% and those of B decrease by 25%, the new ratio of their earnings becomes 8 : 7. What are A's earnings?",
+    "text": "Ratio of the earnings of A and B is \(4 : 7\). If the earnings of A increase by \(50\%\) and those of B decrease by \(25\%\), the new ratio of their earnings becomes \(8 : 7\). What are A's earnings?",
     "options": [
-      "Rs. 21,000",
-      "Rs. 26,000",
-      "Rs. 28,000",
+      "\(\text{Rs. } 21\),000",
+      "\(\text{Rs. } 26\),000",
+      "\(\text{Rs. } 28\),000",
       "Data inadequate"
     ],
     "answer": 3,
@@ -201,7 +201,7 @@ const QUESTIONS = [
   },
   {
     "id": 16,
-    "text": "In a mixture of 60 litres, the ratio of milk and water is 2 : 1. If this ratio is to be 1 : 2, then the quantity of water to be further added is:",
+    "text": "In a mixture of 60 litres, the ratio of milk and water is \(2 : 1\). If this ratio is to be \(1 : 2\), then the quantity of water to be further added is:",
     "options": [
       "20 litres",
       "30 litres",
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "0.94"
     ],
     "answer": 0,
-    "explanation": "0.36:0.48 = 0.48:x → x = (0.48×0.48)/0.36 = 0.2304/0.36 = 0.64. Answer: A.",
+    "explanation": "0.36:0.48 = 0.48:x → x = (0.48×0.48)/0.36 = 0.\(\frac{2304}{0}\).36 = 0.64. Answer: A.",
     "topic": "Third Proportional"
   },
   {
@@ -268,10 +268,10 @@ const QUESTIONS = [
     "id": 21,
     "text": "The ratio of third proportional to 12 and 30 and the mean proportional between 9 and 25 is:",
     "options": [
-      "2 : 1",
-      "5 : 1",
-      "7 : 15",
-      "9 : 14"
+      "\(2 : 1\)",
+      "\(5 : 1\)",
+      "\(7 : 15\)",
+      "\(9 : 14\)"
     ],
     "answer": 1,
     "explanation": "Third proportional to 12 & 30: 12:30=30:x → x=75. Mean proportional of 9 & 25 = √225 = 15. Ratio = 75:15 = 5:1. Answer: B.",
@@ -279,7 +279,7 @@ const QUESTIONS = [
   },
   {
     "id": 22,
-    "text": "In a ratio which is equal to 3 : 4, if the antecedent is 12, then the consequent is:",
+    "text": "In a ratio which is equal to \(3 : 4\), if the antecedent is 12, then the consequent is:",
     "options": [
       "9",
       "16",
@@ -287,46 +287,46 @@ const QUESTIONS = [
       "24"
     ],
     "answer": 1,
-    "explanation": "3/4 = 12/x → x = (12×4)/3 = 16. Answer: B.",
+    "explanation": "\(\frac{3}{4}\) = 12/x → x = (12×4)/3 = 16. Answer: B.",
     "topic": "Antecedent & Consequent"
   },
   {
     "id": 23,
-    "text": "The prices of a scooter and a T.V. are in the ratio 7 : 5. If the scooter costs Rs. 8000 more than a T.V. set, then the price of a T.V. set is:",
+    "text": "The prices of a scooter and a T.V. are in the ratio \(7 : 5\). If the scooter costs \(\text{Rs. } 8000\) more than a T.V. set, then the price of a T.V. set is:",
     "options": [
-      "Rs. 20,000",
-      "Rs. 24,000",
-      "Rs. 28,000",
-      "Rs. 32,000"
+      "\(\text{Rs. } 20\),000",
+      "\(\text{Rs. } 24\),000",
+      "\(\text{Rs. } 28\),000",
+      "\(\text{Rs. } 32\),000"
     ],
     "answer": 0,
-    "explanation": "Difference = 2 parts = Rs. 8000 → 1 part = Rs. 4000. T.V. = 5×4000 = Rs. 20,000. Answer: A.",
+    "explanation": "Difference = 2 parts = \(\text{Rs. } 8000\) → 1 part = \(\text{Rs. } 4000\). T.V. = 5×4000 = \(\text{Rs. } 20\),000. Answer: A.",
     "topic": "Price Problems"
   },
   {
     "id": 24,
-    "text": "An amount of Rs. 735 was divided between A, B and C. If each of them had received Rs. 25 less, their shares would have been in the ratio 1 : 3 : 2. The money received by C was:",
+    "text": "An amount of \(\text{Rs. } 735\) was divided between A, B and C. If each of them had received \(\text{Rs. } 25\) less, their shares would have been in the ratio \(1 : 3 : 2\). The money received by C was:",
     "options": [
-      "Rs. 195",
-      "Rs. 200",
-      "Rs. 225",
-      "Rs. 245"
+      "\(\text{Rs. } 195\)",
+      "\(\text{Rs. } 200\)",
+      "\(\text{Rs. } 225\)",
+      "\(\text{Rs. } 245\)"
     ],
     "answer": 3,
-    "explanation": "Reduced total = 735−75 = 660. C's reduced share = (2/6)×660 = 220. C's actual = 220+25 = Rs. 245. Answer: D.",
+    "explanation": "Reduced total = 735−75 = 660. C's reduced share = (\(\frac{2}{6}\))×660 = 220. C's actual = 220+25 = \(\text{Rs. } 245\). Answer: D.",
     "topic": "Division with Reduction"
   },
   {
     "id": 25,
-    "text": "An amount of Rs. 2430 is divided among A, B and C such that if their shares be reduced by Rs. 5, Rs. 10 and Rs. 15 respectively, the remainders shall be in the ratio of 3 : 4 : 5. Then B's share was:",
+    "text": "An amount of \(\text{Rs. } 2430\) is divided among A, B and C such that if their shares be reduced by \(\text{Rs. } 5\), \(\text{Rs. } 10\) and \(\text{Rs. } 15\) respectively, the remainders shall be in the ratio of \(3 : 4 : 5\). Then B's share was:",
     "options": [
-      "Rs. 605",
-      "Rs. 790",
-      "Rs. 800",
-      "Rs. 810"
+      "\(\text{Rs. } 605\)",
+      "\(\text{Rs. } 790\)",
+      "\(\text{Rs. } 800\)",
+      "\(\text{Rs. } 810\)"
     ],
     "answer": 3,
-    "explanation": "Reduced total = 2430−30 = 2400. B's reduced = (4/12)×2400 = 800. B's actual = 800+10 = Rs. 810. Answer: D.",
+    "explanation": "Reduced total = 2430−30 = 2400. B's reduced = (\(\frac{4}{12}\))×2400 = 800. B's actual = 800+10 = \(\text{Rs. } 810\). Answer: D.",
     "topic": "Division with Reduction"
   }
 ];

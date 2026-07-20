@@ -49,7 +49,7 @@ const E2_RW_M1 = [
     id:7, section:'rw', module:1,
     text:'Non-chronological storytelling is not new to modern novels and films; in the Odyssey, for example, Homer uses flashbacks to ____________ earlier scenes in Odysseus\' adventures.\n\nWhich choice completes the text with the most logical and precise word?',
     options:['recount','reuse','reinstate','rescind'],
-    answer:2, topic:'Words in Context'
+    answer:0, topic:'Words in Context'
   },
   {
     id:8, section:'rw', module:1,
@@ -203,7 +203,7 @@ const E2_RW_M1 = [
       'his heart pounded wildly as he',
       'Charlie had to clutch the wheel quickly as his car'
     ],
-    answer:1, topic:'Standard English Conventions'
+    answer:3, topic:'Standard English Conventions'
   },
   {
     id:24, section:'rw', module:1,
@@ -215,13 +215,13 @@ const E2_RW_M1 = [
     id:25, section:'rw', module:1,
     text:'The Nez Percé National Historic Trail ranges from the ____________ incised Columbia River Plateau, across the Continental Divide and a succession of ranges, canyons, and valleys, through forests and plains, across thermal areas and major rivers. The Trail winds through some of the most rugged and spectacular scenery in western America.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?',
     options:['deeply','deep','deeper','deepest'],
-    answer:1, topic:'Standard English Conventions'
+    answer:0, topic:'Standard English Conventions'
   },
   {
     id:26, section:'rw', module:1,
     text:'While researching a topic, a student has taken the following notes:\n• An organism\'s complete set of DNA is called its genome. Virtually every single cell in the body contains a complete copy of the approximately 3 billion DNA base pairs, or letters, that make up the human genome.\n• With its four-letter language, DNA contains the information needed to build the entire human body.\n• A gene traditionally refers to the unit of DNA that carries the instructions for making a specific protein or set of proteins.\n• The human genome is a complete set of nucleic acid sequences for humans, encoded as DNA within the 23 chromosome pairs in cell nuclei and in a small DNA molecule found within individual mitochondria.\n• Unlocking the genetic code allows scientists to assess an individual\'s genetic susceptibility to specific diseases, to diagnose genetic disorders, and to formulate new drugs.\n• Proteins make up body structures like organs and tissue, as well as control chemical reactions and carry signals between cells. If a cell\'s DNA is mutated, an abnormal protein may be produced, which can disrupt the body\'s usual processes and lead to a disease such as cancer.\n\nThe student wants to emphasize the aim of the research study. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     options:[
-      'Each of the estimated 20,000 to 25,000 genes in the human genome codes for an average of three proteins.',
+      'Each of the estimated \\( 20,000 \\) to 25,000 genes in the human genome codes for an average of three proteins.',
       'Understanding the structure and function of DNA and unlocking an individual\'s genetic code has helped scientists revolutionize the investigation of disease pathways.',
       'Abnormal proteins caused by mutated DNA can be the source of life-threatening diseases such as cancer.',
       'By mapping the human genome, scientists can obtain a complete set of nucleic acid sequences.'
@@ -282,7 +282,7 @@ const E2_MATH_M1 = [
     id:33, section:'math', module:1,
     text:'Melvin, Chris, Enoch, Dave, Carey, Mike, Dan, and Peter are choosing dorm rooms for college. Each room holds four people. They have the following requirements:\nI. Mike and Melvin refuse to live together.\nII. Enoch will live with Chris or Carey (or possibly both).\nIII. If Dave and Dan live together, Peter will live with them.\n\nWhen rooms are chosen, Melvin, Carey, and Dan live together. Which of the following groups must live in the other room?',
     options:['Chris, Dave, and Mike','Chris, Mike, and Peter','Dave, Enoch, and Peter','Dave, Mike, and Peter'],
-    answer:3, topic:'Problem Solving & Data'
+    answer:0, topic:'Problem Solving & Data'
   },
   {
     id:34, section:'math', module:1,
@@ -292,15 +292,15 @@ const E2_MATH_M1 = [
   },
   {
     id:35, section:'math', module:1,
-    text:'In a certain game, there are only two ways to score points; one way is worth 3 points, and the other is worth 5 points. If Brandon\'s total score is 61, which of the following could be the number of 3-point scores that Brandon had?',
+    text:'In a certain game, there are only two ways to score points; one way is worth 3 points, and the other is worth 5 points. If Brandon\'s total score is \\( 61 \\), which of the following could be the number of 3-point scores that Brandon had?',
     options:['10','11','12','13'],
-    answer:1, topic:'Problem Solving & Data'
+    answer:2, topic:'Problem Solving & Data'
   },
   {
     id:36, section:'math', module:1,
-    text:'Which of the following complex numbers is equal to (2 − 3i) − (4i² + 5i) for i² = −1?',
-    options:['6 + 2i','6 − 2i','6 − 8i','6 − 12i'],
-    answer:0, topic:'Advanced Math'
+    text:'Which of the following complex numbers is equal to $ (2 - 3i) - (4i^2 + 5i) $ for i² = −1?',
+    options:['\\( 6 + 2i \\)','\\( 6 - 2i \\)','\\( 6 - 8i \\)','\\( 6 - 12i \\)'],
+    answer:2, topic:'Advanced Math'
   },
   {
     id:37, section:'math', module:1,
@@ -329,23 +329,23 @@ const E2_MATH_M1 = [
   },
   {
     id:41, section:'math', module:1,
-    text:'A square with an area of 25 is changed into a rectangle with an area of 24 by increasing the width and reducing the length. If the length was reduced by 2, by how much was the width increased?',
+    text:'A square with an area of \\( 25 \\) is changed into a rectangle with an area of \\( 24 \\) by increasing the width and reducing the length. If the length was reduced by 2, by how much was the width increased?',
     options:['2','3','4','5'],
-    answer:0, topic:'Algebra'
+    answer:1, topic:'Algebra'
   },
   {
     id:42, section:'math', module:1,
     image:'assets/images/exam2/math1_q14_triangle_bac.png',
     text:'In triangle BAC shown, what is sin B?',
-    options:['5/13','12/13','5/12','13/5'],
+    options:['\\( \\frac{5}{13} \\)','\\( \\frac{12}{13} \\)','\\( \\frac{5}{12} \\)','13/5'],
     answer:1, topic:'Geometry'
   },
   {
     id:43, section:'math', module:1,
     image:'assets/images/exam2/math1_q15_triangle.png',
-    text:'In triangle ABC above, if sin B = 12/13 and cos B = 5/13, what is tan C?',
-    options:['5/13','12/13','5/12','12/5'],
-    answer:3, topic:'Geometry'
+    text:'In triangle ABC above, if \\( \\sin B = \\frac{12}{13} \\) and \\( \\cos B = \\frac{5}{13} \\), what is \\( \\tan C \\)?',
+    options:['5/13','12/13','5/12','\\( \\frac{12}{5} \\)'],
+    answer:2, topic:'Geometry'
   },
   {
     id:44, section:'math', module:1,
@@ -604,7 +604,7 @@ const E2_RW_M2 = [
     id:72, section:'rw', module:2,
     text:'The following was adapted from an article titled "Women in the Civil Rights Movement Historic Context Statement and AACRN Listing Guidance" on the National Park Service website.\n\nSeptima Poinsette Clark, the daughter of a formerly enslaved father and a free-born mother, was born in 1898 and raised in Charleston, South Carolina. After graduating from the Avery Normal Institute in 1916, Clark began her career as a teacher. Black teachers were not allowed to teach in the Charleston public schools ____________ found themselves teaching in rural, underfunded schools. After Clark joined the Charleston branch of the National Association for the Advancement of Colored People (NAACP), she began to get more involved in social justice issues.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?',
     options:['system, though; most','system, though, most','system; though. Most','system, though most,'],
-    answer:1, topic:'Standard English Conventions'
+    answer:0, topic:'Standard English Conventions'
   },
   {
     id:73, section:'rw', module:2,
@@ -704,15 +704,15 @@ const E2_MATH_M2 = [
   },
   {
     id:86, section:'math', module:2,
-    text:'p(t) = 20,000(2)^(t/4)\n\nThe preceding equation represents the population of a yeast culture, p, for t weeks after the population was seeded. What is the population after 8 weeks?',
-    options:['10,000','20,000','40,000','160,000'],
-    answer:3, topic:'Advanced Math'
+    text:'$ p(t) = 20,000(2)^{\\frac{t}{4}} $\n\nThe preceding equation represents the population of a yeast culture, p, for t weeks after the population was seeded. What is the population after \\( 8 \\) weeks?',
+    options:['20,000','\\( 40,000 \\)','\\( 80,000 \\)','\\( 160,000 \\)'],
+    answer:2, topic:'Advanced Math'
   },
   {
     id:87, section:'math', module:2,
-    text:'A certain radioactive element has a half-life of 20 years. Thus, a sample of 100 grams deposited in 1980 would have decayed to 50 grams by 2000 and to 25 grams by 2020. How much of this sample would remain in 2100?',
-    options:['25/16 grams','25/8 grams','25/4 grams','25/2 grams'],
-    answer:1, topic:'Advanced Math'
+    text:'A certain radioactive element has a half-life of \\( 20 \\) years. Thus, a sample of \\( 100 \\) grams deposited in 1980 would have decayed to 50 grams by 2000 and to 25 grams by 2020. How much of this sample would remain in 2100?',
+    options:['\\( \\frac{25}{16} \\) grams','\\( \\frac{25}{8} \\) grams','\\( \\frac{25}{4} \\) grams','\\( \\frac{25}{2} \\) grams'],
+    answer:0, topic:'Advanced Math'
   },
   {
     id:88, section:'math', module:2,
@@ -762,7 +762,7 @@ const E2_MATH_M2 = [
   },
   {
     id:95, section:'math', module:2,
-    text:'y = x² − 2x + 6\ny = 2x + 3\n\nIf the ordered pair (x, y) satisfies the preceding system of equations, what is one possible value of x?',
+    text:'y = x² − 2x + 6\ny = 2x + 3\n\nIf the ordered pair \\((x, y)\\) satisfies the preceding system of equations, what is one possible value of x?',
     options:['1','3','5','7'],
     answer:1, topic:'Advanced Math',
     isFillIn:true, fillAnswer:'1 or 3'
@@ -802,7 +802,7 @@ const QUESTIONS2 = [...E2_RW_M1, ...E2_MATH_M1, ...E2_RW_M2, ...E2_MATH_M2];
 // ── Module config for Exam 2 (2 modules only) ─
 const MODULE_MAP2 = {
   1: { id:1, label:'Module 1 – English & Math', timeMin:67, startIdx:0,  count:49 },
-  2: { id:2, label:'Module 2 – English & Math', timeMin:67, startIdx:49, count:50 },
+  2: { id:2, label:'Module 2 – English & Math', timeMin:67, startIdx:49, count:49 },
 };
 
 // ── Topic Map ─────────────────────────────────

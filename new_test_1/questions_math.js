@@ -139,7 +139,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 2,
-    "explanation": "To solve for \ud835\udc65, add 7 to both sides of the equation:\n3\ud835\udc65 \u2013 7 + 7 = 11 + 7\n3\ud835\udc65 = 18\nThen, divide both sides by 3:\n\ud835\udc65 = 18/3\n\ud835\udc65 = 6\nA) Incorrect; result from incorrect addition.\nB) Incorrect; mistake in dividing step.\nD) Incorrect; unrelated calculation error.",
+    "explanation": "To solve for \ud835\udc65, add 7 to both sides of the equation:\n3\ud835\udc65 \u2013 7 + 7 = 11 + 7\n3\ud835\udc65 = 18\nThen, divide both sides by 3:\n\ud835\udc65 = \frac{18}{3}\n\ud835\udc65 = 6\nA) Incorrect; result from incorrect addition.\nB) Incorrect; mistake in dividing step.\nD) Incorrect; unrelated calculation error.",
     "topic": "Math"
   },
   {
@@ -217,7 +217,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 1,
-    "explanation": "First, subtract 2 from both sides:\n5\ud835\udc66 + 2 \u2013 2 = 17 \u2212 2\n5\ud835\udc66 = 15\nThen, divide both sides by 5:\n\ud835\udc66 = 15/5\n\ud835\udc66 = 3\nA) Incorrect; misunderstanding subtraction.\nC) Incorrect; mistake in division.\nD) Incorrect; unrelated result.",
+    "explanation": "First, subtract 2 from both sides:\n5\ud835\udc66 + 2 \u2013 2 = 17 \u2212 2\n5\ud835\udc66 = 15\nThen, divide both sides by 5:\n\ud835\udc66 = \frac{15}{5}\n\ud835\udc66 = 3\nA) Incorrect; misunderstanding subtraction.\nC) Incorrect; mistake in division.\nD) Incorrect; unrelated result.",
     "topic": "Math"
   },
   {
@@ -256,7 +256,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 2,
-    "explanation": "First, distribute the 3:\n6\ud835\udc65 \u2013 3 = 18\nAdd 3 to both sides:\n6\ud835\udc65 = 21\nDivide by 6:\n\ud835\udc65 = 21/6 = 3.5\nA) Incorrect; mistake in distributing.\nB) Incorrect; error in adding step.\nD) Incorrect; misunderstanding division.",
+    "explanation": "First, distribute the 3:\n6\ud835\udc65 \u2013 3 = 18\nAdd 3 to both sides:\n6\ud835\udc65 = 21\nDivide by 6:\n\ud835\udc65 = \frac{21}{6} = 3.5\nA) Incorrect; mistake in distributing.\nB) Incorrect; error in adding step.\nD) Incorrect; misunderstanding division.",
     "topic": "Math"
   },
   {
@@ -308,7 +308,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 2,
-    "explanation": "First, add 9 to both sides:\n7\ud835\udc66 \u2013 9 + 9 = 12 + 9\n7\ud835\udc66 = 21\nDivide by 7:\n\ud835\udc66 = 21/7\n\ud835\udc66 = 3\nA) Incorrect; mistake in addition.\nB) Incorrect; error in division.\nD) Incorrect; wrong arithmetic.",
+    "explanation": "First, add 9 to both sides:\n7\ud835\udc66 \u2013 9 + 9 = 12 + 9\n7\ud835\udc66 = 21\nDivide by 7:\n\ud835\udc66 = \frac{21}{7}\n\ud835\udc66 = 3\nA) Incorrect; mistake in addition.\nB) Incorrect; error in division.\nD) Incorrect; wrong arithmetic.",
     "topic": "Math"
   },
   {
@@ -347,7 +347,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "The perimeter of a square is given by:\n4 \u00d7 side length\nSet up the equation:\n4 \u00d7 side\u00a0length = 20\nDivide by 4:\nside\u00a0length = 20/4 = 5\nA) Incorrect; misunderstanding the perimeter formula.\nC) Incorrect; wrong arithmetic.\nD) Incorrect; unrelated result.",
+    "explanation": "The perimeter of a square is given by:\n4 \u00d7 side length\nSet up the equation:\n4 \u00d7 side\u00a0length = 20\nDivide by 4:\nside\u00a0length = \frac{20}{4} = 5\nA) Incorrect; misunderstanding the perimeter formula.\nC) Incorrect; wrong arithmetic.\nD) Incorrect; unrelated result.",
     "topic": "Math"
   },
   {
@@ -386,7 +386,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 0,
-    "explanation": "Substitute \ud835\udc4e = 2 into the equation:\n3(2) + 4\ud835\udc4f = 12\n6 + 4\ud835\udc4f = 12\nSubtract 6 from both sides:\n4\ud835\udc4f = 6\nDivide by 4:\n\ud835\udc4f = 6/4\n\ud835\udc4f = 1.5\nA) Incorrect; mistake in solving for \ud835\udc4f.\nB) Incorrect; misunderstanding the equation.\nD) Incorrect; unrelated calculation.",
+    "explanation": "Substitute \ud835\udc4e = 2 into the equation:\n3(2) + 4\ud835\udc4f = 12\n6 + 4\ud835\udc4f = 12\nSubtract 6 from both sides:\n4\ud835\udc4f = 6\nDivide by 4:\n\ud835\udc4f = \frac{6}{4}\n\ud835\udc4f = 1.5\nA) Incorrect; mistake in solving for \ud835\udc4f.\nB) Incorrect; misunderstanding the equation.\nD) Incorrect; unrelated calculation.",
     "topic": "Math"
   },
   {

@@ -1,343 +1,137 @@
 // =============================================
-// Digital SAT Topic Practice
-// 25 Questions
+// Digital SAT Practice - Regenerated
+// 10 Questions
 // =============================================
 
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "Question 1 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 1x - 6 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 2, 3 \\)",
+      "\\( x = -2, -3 \\)",
+      "\\( x = -2, 3 \\)",
+      "\\( x = 2, -3 \\)"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "answer": 3,
+    "explanation": "Factor the quadratic equation: \\( (x + -2)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 2 \\) and \\( x = -3 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 2,
-    "text": "Question 2 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 3x - 4 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 1, 4 \\)",
+      "\\( x = 1, -4 \\)",
+      "\\( x = -1, -4 \\)",
+      "\\( x = -1, 4 \\)"
     ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "answer": 1,
+    "explanation": "Factor the quadratic equation: \\( (x + -1)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = 1 \\) and \\( x = -4 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 3,
-    "text": "Question 3 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 5x + 4 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = -4, -1 \\)",
+      "\\( x = 4, -1 \\)",
+      "\\( x = 4, 1 \\)",
+      "\\( x = -4, 1 \\)"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "answer": 0,
+    "explanation": "Factor the quadratic equation: \\( (x + 4)(x + 1) = 0 \\). Setting each factor to zero gives \\( x = -4 \\) and \\( x = -1 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 4,
-    "text": "Question 4 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 2x - 8 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = -2, -4 \\)",
+      "\\( x = -2, 4 \\)",
+      "\\( x = 2, 4 \\)",
+      "\\( x = 2, -4 \\)"
     ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "answer": 3,
+    "explanation": "Factor the quadratic equation: \\( (x + -2)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = 2 \\) and \\( x = -4 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 5,
-    "text": "Question 5 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 5x + 6 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 2, -3 \\)",
+      "\\( x = 2, 3 \\)",
+      "\\( x = -2, -3 \\)",
+      "\\( x = -2, 3 \\)"
     ],
     "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "explanation": "Factor the quadratic equation: \\( (x + 2)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = -2 \\) and \\( x = -3 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 6,
-    "text": "Question 6 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 - 2x - 15 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 5, 3 \\)",
+      "\\( x = -5, 3 \\)",
+      "\\( x = 5, -3 \\)",
+      "\\( x = -5, -3 \\)"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "answer": 2,
+    "explanation": "Factor the quadratic equation: \\( (x + -5)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 5 \\) and \\( x = -3 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 7,
-    "text": "Question 7 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 - 2x - 3 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 3, -1 \\)",
+      "\\( x = -3, -1 \\)",
+      "\\( x = -3, 1 \\)",
+      "\\( x = 3, 1 \\)"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "explanation": "Factor the quadratic equation: \\( (x + -3)(x + 1) = 0 \\). Setting each factor to zero gives \\( x = 3 \\) and \\( x = -1 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 8,
-    "text": "Question 8 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 4x - 5 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = -1, -5 \\)",
+      "\\( x = 1, -5 \\)",
+      "\\( x = -1, 5 \\)",
+      "\\( x = 1, 5 \\)"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "explanation": "Factor the quadratic equation: \\( (x + -1)(x + 5) = 0 \\). Setting each factor to zero gives \\( x = 1 \\) and \\( x = -5 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 9,
-    "text": "Question 9 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 + 8x + 16 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 4, -4 \\)",
+      "\\( x = 4, 4 \\)",
+      "\\( x = -4, 4 \\)",
+      "\\( x = -4, -4 \\)"
     ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "answer": 3,
+    "explanation": "Factor the quadratic equation: \\( (x + 4)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = -4 \\) and \\( x = -4 \\).",
+    "topic": "Quadratic Equations"
   },
   {
     "id": 10,
-    "text": "Question 10 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
+    "text": "What are the solutions to the quadratic equation \\( x^2 - 1x - 12 = 0 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( x = 4, 3 \\)",
+      "\\( x = -4, -3 \\)",
+      "\\( x = -4, 3 \\)",
+      "\\( x = 4, -3 \\)"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 11,
-    "text": "Question 11 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 12,
-    "text": "Question 12 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 13,
-    "text": "Question 13 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 14,
-    "text": "Question 14 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 15,
-    "text": "Question 15 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 16,
-    "text": "Question 16 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 17,
-    "text": "Question 17 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 18,
-    "text": "Question 18 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 19,
-    "text": "Question 19 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 20,
-    "text": "Question 20 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 21,
-    "text": "Question 21 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 22,
-    "text": "Question 22 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 23,
-    "text": "Question 23 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 24,
-    "text": "Question 24 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
-  },
-  {
-    "id": 25,
-    "text": "Question 25 — Quadratic Equations (Set 2)\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Quadratic Equations (Set 2)"
+    "explanation": "Factor the quadratic equation: \\( (x + -4)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 4 \\) and \\( x = -3 \\).",
+    "topic": "Quadratic Equations"
   }
 ];
-
-const TOPIC_MAP = {
-  'Quadratic Equations (Set 2)': {
-    name: 'Quadratic Equations (Set 2)',
-    questions: QUESTIONS.map(q => q.id)
-  }
-};
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { QUESTIONS, TOPIC_MAP };
-}

@@ -16,7 +16,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "The mean is the sum of all values divided by the number of values: (2+3+3+5+7+7+7+9)/8 = 43/8 = 5.375. A) Incorrect; this would be the median, not the mean. C) Incorrect; rounds incorrectly. D) Incorrect; this is the mode, not the mean.",
+    "explanation": "The mean is the sum of all values divided by the number of values: \( \frac{2+3+3+5+7+7+7+9}{8} \) = \(\frac{43}{8}\) = 5.375. A) Incorrect; this would be the median, not the mean. C) Incorrect; rounds incorrectly. D) Incorrect; this is the mode, not the mean.",
     "topic": "Mean"
   },
   {
@@ -42,7 +42,7 @@ const QUESTIONS = [
       "15"
     ],
     "answer": 1,
-    "explanation": "Since there are 6 values (an even number), the median is the average of the two middle values (9 and 12): (9 + 12)/2 = 21/2 = 10.5. A) Incorrect; this is only one of the two middle values. C) Incorrect; this is the other middle value alone. D) Incorrect; arithmetic error in averaging the two middle values.",
+    "explanation": "Since there are 6 values (an even number), the median is the average of the two middle values (9 and 12): \( \frac{9 + 12}{2} \) = \(\frac{21}{2}\) = 10.5. A) Incorrect; this is only one of the two middle values. C) Incorrect; this is the other middle value alone. D) Incorrect; arithmetic error in averaging the two middle values.",
     "topic": "Median"
   },
   {
@@ -83,7 +83,7 @@ const QUESTIONS = [
       "45"
     ],
     "answer": 2,
-    "explanation": "The range is the difference between the maximum and minimum values in a data set: 45 − 8 = 37. A) Incorrect; this is the minimum value alone. B) Incorrect; this is a value within the data set, not a difference. D) Incorrect; this is the maximum value alone, not the range.",
+    "explanation": "The range is the difference between the maximum and minimum values in a data set: \( 45 - 8 = 37 \). A) Incorrect; this is the minimum value alone. B) Incorrect; this is a value within the data set, not a difference. D) Incorrect; this is the maximum value alone, not the range.",
     "topic": "Range"
   },
   {
@@ -96,7 +96,7 @@ const QUESTIONS = [
       "20"
     ],
     "answer": 1,
-    "explanation": "Let the third number be x. The average of the three numbers is (12 + 18 + x)/3 = 15. Multiplying both sides by 3 gives 30 + x = 45, so x = 15. A) Incorrect; results from misunderstanding the average calculation. C) Incorrect; this is one of the numbers given in the problem, not the unknown third number. D) Incorrect; arbitrary value not related to the calculation.",
+    "explanation": "Let the third number be x. The average of the three numbers is \( \frac{12 + 18 + x}{3} = 15 \). Multiplying both sides by 3 gives \( 30 + x = 45 \), so \( x = 15 \). A) Incorrect; results from misunderstanding the average calculation. C) Incorrect; this is one of the numbers given in the problem, not the unknown third number. D) Incorrect; arbitrary value not related to the calculation.",
     "topic": "Mean & Word Problems"
   },
   {
@@ -131,26 +131,26 @@ const QUESTIONS = [
     "id": 10,
     "text": "A standard six-sided die is rolled once. What is the probability of rolling a number greater than 4?",
     "options": [
-      "1/6",
-      "1/3",
-      "1/2",
-      "2/3"
+      "\(\frac{1}{6}\)",
+      "\(\frac{1}{3}\)",
+      "\(\frac{1}{2}\)",
+      "\(\frac{2}{3}\)"
     ],
     "answer": 1,
-    "explanation": "A standard die has the numbers 1 through 6. The numbers greater than 4 are 5 and 6, which is 2 out of 6 possible outcomes. The probability is 2/6 = 1/3. A) Incorrect; this would be the probability of rolling a single specific number. C), D) Incorrect; overcounts the favorable outcomes greater than 4.",
+    "explanation": "A standard die has the numbers 1 through 6. The numbers greater than 4 are 5 and 6, which is 2 out of 6 possible outcomes. The probability is \(\frac{2}{6}\) = \(\frac{1}{3}\). A) Incorrect; this would be the probability of rolling a single specific number. C), D) Incorrect; overcounts the favorable outcomes greater than 4.",
     "topic": "Basic Probability"
   },
   {
     "id": 11,
     "text": "A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles. If one marble is drawn at random, what is the probability that it is blue?",
     "options": [
-      "1/10",
-      "3/10",
-      "1/5",
-      "1/2"
+      "\(\frac{1}{10}\)",
+      "\(\frac{3}{10}\)",
+      "\(\frac{1}{5}\)",
+      "\(\frac{1}{2}\)"
     ],
     "answer": 1,
-    "explanation": "There are 5 + 3 + 2 = 10 marbles total, and 3 of them are blue. The probability of drawing a blue marble is 3/10. A) Incorrect; this would be the probability of drawing a green marble divided incorrectly. C) Incorrect; this equals 2/10, the probability of drawing green, not blue. D) Incorrect; overestimates the proportion of blue marbles.",
+    "explanation": "There are 5 + 3 + 2 = 10 marbles total, and 3 of them are blue. The probability of drawing a blue marble is \(\frac{3}{10}\). A) Incorrect; this would be the probability of drawing a green marble divided incorrectly. C) Incorrect; this equals \(\frac{2}{10}\), the probability of drawing green, not blue. D) Incorrect; overestimates the proportion of blue marbles.",
     "topic": "Basic Probability"
   },
   {
@@ -172,26 +172,26 @@ const QUESTIONS = [
     "id": 13,
     "text": "Two coins are flipped. What is the probability that both coins land on heads?",
     "options": [
-      "1/2",
-      "1/3",
-      "1/4",
-      "1/8"
+      "\(\frac{1}{2}\)",
+      "\(\frac{1}{3}\)",
+      "\(\frac{1}{4}\)",
+      "\(\frac{1}{8}\)"
     ],
     "answer": 2,
-    "explanation": "Each coin has 2 possible outcomes (heads or tails), so flipping two coins gives 2 × 2 = 4 total equally likely outcomes: HH, HT, TH, TT. Only one of these (HH) has both coins landing on heads, so the probability is 1/4. A) Incorrect; this is the probability of getting heads on a single coin flip. B) Incorrect; does not correspond to any standard outcome calculation here. D) Incorrect; this would be the probability for three independent events, not two.",
+    "explanation": "Each coin has 2 possible outcomes (heads or tails), so flipping two coins gives 2 × 2 = 4 total equally likely outcomes: HH, HT, TH, TT. Only one of these (HH) has both coins landing on heads, so the probability is \(\frac{1}{4}\). A) Incorrect; this is the probability of getting heads on a single coin flip. B) Incorrect; does not correspond to any standard outcome calculation here. D) Incorrect; this would be the probability for three independent events, not two.",
     "topic": "Compound Probability"
   },
   {
     "id": 14,
     "text": "A spinner is divided into 4 equal sections numbered 1 through 4. What is the probability of NOT spinning a 2?",
     "options": [
-      "1/4",
-      "1/3",
-      "1/2",
-      "3/4"
+      "\(\frac{1}{4}\)",
+      "\(\frac{1}{3}\)",
+      "\(\frac{1}{2}\)",
+      "\(\frac{3}{4}\)"
     ],
     "answer": 3,
-    "explanation": "The probability of spinning a 2 is 1/4 (one favorable outcome out of four equally likely sections). The probability of NOT spinning a 2 is the complement: 1 − 1/4 = 3/4. A) Incorrect; this is the probability of spinning a 2, not the complement. B), C) Incorrect; do not correctly apply the complement rule for this scenario.",
+    "explanation": "The probability of spinning a 2 is \(\frac{1}{4}\) (one favorable outcome out of four equally likely sections). The probability of NOT spinning a 2 is the complement: 1 − \(\frac{1}{4}\) = \(\frac{3}{4}\). A) Incorrect; this is the probability of spinning a 2, not the complement. B), C) Incorrect; do not correctly apply the complement rule for this scenario.",
     "topic": "Complementary Probability"
   },
   {
@@ -200,13 +200,13 @@ const QUESTIONS = [
     "imageKey": "q15_twowaytable",
     "text": "The two-way table shows the results of a survey about pizza preference among 50 students. Based on the table, what is the probability that a randomly selected student is a girl who likes pizza?",
     "options": [
-      "18/50",
-      "20/50",
-      "20/25",
-      "38/50"
+      "\(\frac{18}{50}\)",
+      "\(\frac{20}{50}\)",
+      "\(\frac{20}{25}\)",
+      "\(\frac{38}{50}\)"
     ],
     "answer": 1,
-    "explanation": "According to the table, 20 girls like pizza out of a total of 50 students surveyed. The probability is 20/50. A) Incorrect; this is the number of boys who like pizza, not girls. C) Incorrect; this gives the probability that a girl likes pizza given that the student is a girl (a conditional probability), not the overall probability among all 50 students. D) Incorrect; this is the total number of students (boys and girls) who like pizza, not just girls.",
+    "explanation": "According to the table, 20 girls like pizza out of a total of 50 students surveyed. The probability is \(\frac{20}{50}\). A) Incorrect; this is the number of boys who like pizza, not girls. C) Incorrect; this gives the probability that a girl likes pizza given that the student is a girl (a conditional probability), not the overall probability among all 50 students. D) Incorrect; this is the total number of students (boys and girls) who like pizza, not just girls.",
     "topic": "Two-Way Tables & Probability"
   },
   {
@@ -241,26 +241,26 @@ const QUESTIONS = [
     "imageKey": "q18_spinner",
     "text": "The spinner shown is divided into 4 equal sections labeled 1, 2, 3, and 4. If the spinner is spun once, what is the probability of landing on an even number?",
     "options": [
-      "1/4",
-      "1/2",
-      "3/4",
+      "\(\frac{1}{4}\)",
+      "\(\frac{1}{2}\)",
+      "\(\frac{3}{4}\)",
       "1"
     ],
     "answer": 1,
-    "explanation": "The even numbers on the spinner are 2 and 4, which is 2 out of 4 equally likely sections. The probability is 2/4 = 1/2. A) Incorrect; this would be the probability of landing on a single specific number. C), D) Incorrect; overestimates the proportion of even-numbered sections.",
+    "explanation": "The even numbers on the spinner are 2 and 4, which is 2 out of 4 equally likely sections. The probability is \(\frac{2}{4}\) = \(\frac{1}{2}\). A) Incorrect; this would be the probability of landing on a single specific number. C), D) Incorrect; overestimates the proportion of even-numbered sections.",
     "topic": "Basic Probability"
   },
   {
     "id": 19,
     "text": "A jar contains 4 red candies and 6 blue candies. If one candy is drawn and eaten (not replaced), and then a second candy is drawn, what is the probability that both candies are red?",
     "options": [
-      "4/10 × 4/10",
-      "4/10 × 3/9",
-      "4/10 × 4/9",
-      "6/10 × 5/9"
+      "\(\frac{4}{10}\) × \(\frac{4}{10}\)",
+      "\(\frac{4}{10}\) × \(\frac{3}{9}\)",
+      "\(\frac{4}{10}\) × \(\frac{4}{9}\)",
+      "\(\frac{6}{10}\) × \(\frac{5}{9}\)"
     ],
     "answer": 1,
-    "explanation": "Since the first candy is not replaced, the probability of drawing red the first time is 4/10, and after one red candy is removed, there are 3 red candies left out of 9 total. So the probability of both being red is 4/10 × 3/9. A) Incorrect; this assumes replacement, which is not the case here (\"without replacement\"). C) Incorrect; uses the wrong total for the second draw. D) Incorrect; this calculates the probability for blue candies, not red.",
+    "explanation": "Since the first candy is not replaced, the probability of drawing red the first time is \(\frac{4}{10}\), and after one red candy is removed, there are 3 red candies left out of 9 total. So the probability of both being red is \(\frac{4}{10}\) × \(\frac{3}{9}\). A) Incorrect; this assumes replacement, which is not the case here (\"without replacement\"). C) Incorrect; uses the wrong total for the second draw. D) Incorrect; this calculates the probability for blue candies, not red.",
     "topic": "Probability Without Replacement"
   },
   {
@@ -269,13 +269,13 @@ const QUESTIONS = [
     "imageKey": "q20_dice",
     "text": "Two six-sided dice are rolled, as shown. What is the probability that the sum of the two dice equals 8?",
     "options": [
-      "1/36",
-      "5/36",
-      "6/36",
-      "1/6"
+      "\(\frac{1}{36}\)",
+      "\(\frac{5}{36}\)",
+      "\(\frac{6}{36}\)",
+      "\(\frac{1}{6}\)"
     ],
     "answer": 1,
-    "explanation": "There are 6 × 6 = 36 total equally likely outcomes when rolling two dice. The combinations that sum to 8 are: (2,6), (3,5), (4,4), (5,3), (6,2) — a total of 5 outcomes. The probability is 5/36. A) Incorrect; this would be the probability of a single specific outcome (e.g., rolling exactly (4,4)). C) Incorrect; overcounts the number of combinations that sum to 8. D) Incorrect; this is approximately 6/36, but the actual count of favorable outcomes for a sum of 8 is 5, not 6.",
+    "explanation": "There are 6 × 6 = 36 total equally likely outcomes when rolling two dice. The combinations that sum to 8 are: (2,6), (3,5), (4,4), (5,3), (6,2) — a total of 5 outcomes. The probability is \(\frac{5}{36}\). A) Incorrect; this would be the probability of a single specific outcome (e.g., rolling exactly (4,4)). C) Incorrect; overcounts the number of combinations that sum to 8. D) Incorrect; this is approximately \(\frac{6}{36}\), but the actual count of favorable outcomes for a sum of 8 is 5, not 6.",
     "topic": "Compound Probability (Dice)"
   },
   {
@@ -310,13 +310,13 @@ const QUESTIONS = [
     "id": 23,
     "text": "A survey asked 200 people whether they prefer coffee or tea, and 120 people said they prefer coffee. If one person from this survey is selected at random, what is the probability that the person prefers tea?",
     "options": [
-      "2/5",
-      "3/5",
-      "3/10",
-      "6/10"
+      "\(\frac{2}{5}\)",
+      "\(\frac{3}{5}\)",
+      "\(\frac{3}{10}\)",
+      "\(\frac{6}{10}\)"
     ],
     "answer": 0,
-    "explanation": "Since 120 out of 200 people prefer coffee, the remaining 200 − 120 = 80 people prefer tea. The probability of selecting someone who prefers tea is 80/200 = 2/5. B) Incorrect; this is the probability of selecting someone who prefers coffee (120/200 = 3/5), not tea. C) Incorrect; does not correctly represent the proportion of tea drinkers. D) Incorrect; this equals 3/5, the same as the probability for coffee, not tea.",
+    "explanation": "Since 120 out of 200 people prefer coffee, the remaining 200 − 120 = 80 people prefer tea. The probability of selecting someone who prefers tea is \(\frac{80}{200}\) = \(\frac{2}{5}\). B) Incorrect; this is the probability of selecting someone who prefers coffee (\(\frac{120}{200}\) = \(\frac{3}{5}\)), not tea. C) Incorrect; does not correctly represent the proportion of tea drinkers. D) Incorrect; this equals \(\frac{3}{5}\), the same as the probability for coffee, not tea.",
     "topic": "Basic Probability & Complements"
   },
   {
@@ -344,7 +344,7 @@ const QUESTIONS = [
       "1.05"
     ],
     "answer": 2,
-    "explanation": "Using the addition rule for probability: P(car or bicycle) = P(car) + P(bicycle) − P(car and bicycle) = 60/100 + 45/100 − 25/100 = (60 + 45 − 25)/100 = 80/100 = 0.80. A) Incorrect; this is just P(car) alone. B) Incorrect; arithmetic error in applying the addition rule. D) Incorrect; this results from forgetting to subtract the overlap (the people who own both), leading to double-counting.",
+    "explanation": "Using the addition rule for probability: P(car or bicycle) = P(car) + P(bicycle) − P(car and bicycle) = \(\frac{60}{100}\) + \(\frac{45}{100}\) − \(\frac{25}{100}\) = (60 + 45 − 25)/100 = \(\frac{80}{100}\) = 0.80. A) Incorrect; this is just P(car) alone. B) Incorrect; arithmetic error in applying the addition rule. D) Incorrect; this results from forgetting to subtract the overlap (the people who own both), leading to double-counting.",
     "topic": "Addition Rule for Probability"
   }
 ];

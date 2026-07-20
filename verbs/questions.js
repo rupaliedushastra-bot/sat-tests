@@ -11,8 +11,8 @@ const QUESTIONS = [
 
 Which choice best corrects the underlined portion?`,
         options: ["you were (NO CHANGE)", "you are", "you were being", "you have been"],
-        answer: 0,
-        explanation: "'While you were' sets up a past time clause, and 'I will be' correctly describes a future action relative to that past moment. The past tense 'were' is correct in the subordinate clause. NO CHANGE. Answer: A.",
+        answer: 1,
+        explanation: "'While you were' clashes with the future tense 'I will be'. The subordinate clause describing an action happening simultaneously with a future action should use the present tense 'are'. Therefore, 'you are' is correct. Answer: B.",
         topic: "Verb Tense Consistency"
     },
     {
@@ -101,8 +101,8 @@ Which choice best corrects the underlined portion?`,
 
 Which choice best corrects the underlined portion?`,
         options: ["will have rose from (NO CHANGE)", "will be rising", "rose from", "will rise"],
-        answer: 3,
-        explanation: "'Will have rose' is grammatically incorrect — 'rose' is simple past, not a past participle. The future perfect should use 'risen': 'will have risen'. However, 'will rise' is the simplest and most natural correction for describing a future change. Answer: D.",
+        answer: 2,
+        explanation: "The sentence describes a completed change from 'ancient levels to their present-day levels'. Therefore, the simple past tense 'rose from' is the only logical and grammatically correct choice. Answer: C.",
         topic: "Irregular Verb Forms"
     },
     // ── Section 2: Verb Tense (5-option format, Set A) ──
@@ -323,9 +323,9 @@ Which choice best corrects the underlined portion?`,
         text: `If I would have known about the team tryouts, I would have signed up for them.
 
 Which choice best corrects the underlined portion?`,
-        options: ["had known (NO CHANGE)", "would have known", "could of known", "had been told", "could have been told"],
-        answer: 0,
-        explanation: "In a third conditional ('if' clause + 'would have'), the 'if' clause must use past perfect ('had known'), not 'would have known'. 'If I had known' is the grammatically correct form. Answer: A.",
+        options: ["would have known (NO CHANGE)", "had known", "could of known", "had been told", "could have been told"],
+        answer: 1,
+        explanation: "In a third conditional ('if' clause + 'would have'), the 'if' clause must use past perfect ('had known'), not 'would have known'. 'If I had known' is the grammatically correct form. Answer: B.",
         topic: "Conditional / Past Perfect"
     },
     {

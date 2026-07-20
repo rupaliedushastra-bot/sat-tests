@@ -1,343 +1,137 @@
 // =============================================
-// Digital SAT Topic Practice
-// 25 Questions
+// Digital SAT Practice - Regenerated
+// 10 Questions
 // =============================================
 
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "Question 1 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (2a^4b^2)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 4a^6b^4 \\)",
+      "\\( 4a^6b^4 \\)",
+      "\\( 4a^8b^4 \\)",
+      "\\( 4a^8b^4 \\)"
     ],
     "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 4a^8b^4 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 2,
-    "text": "Question 2 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (3a^4b^2)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 6a^6b^4 \\)",
+      "\\( 9a^6b^4 \\)",
+      "\\( 6a^8b^4 \\)",
+      "\\( 9a^8b^4 \\)"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 3,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 3^2 = 9 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 9a^8b^4 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 3,
-    "text": "Question 3 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (3a^2b^2)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 9a^4b^4 \\)",
+      "\\( 9a^4b^4 \\)",
+      "\\( 6a^4b^4 \\)",
+      "\\( 6a^4b^4 \\)"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 0,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 3^2 = 9 \\). Multiply the exponents for variables: \\( (a^2)^2 = a^4 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 9a^4b^4 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 4,
-    "text": "Question 4 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (3a^3b^2)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 9a^5b^4 \\)",
+      "\\( 6a^5b^4 \\)",
+      "\\( 9a^6b^4 \\)",
+      "\\( 6a^6b^4 \\)"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 2,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 3^2 = 9 \\). Multiply the exponents for variables: \\( (a^3)^2 = a^6 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 9a^6b^4 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 5,
-    "text": "Question 5 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (2a^3b^3)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 4a^6b^6 \\)",
+      "\\( 4a^6b^6 \\)",
+      "\\( 4a^5b^5 \\)",
+      "\\( 4a^5b^5 \\)"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 0,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^3)^2 = a^6 \\) and \\( (b^3)^2 = b^6 \\). Combining these gives \\( 4a^6b^6 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 6,
-    "text": "Question 6 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (2a^4b^3)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 4a^6b^5 \\)",
+      "\\( 4a^6b^5 \\)",
+      "\\( 4a^8b^6 \\)",
+      "\\( 4a^8b^6 \\)"
     ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 2,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^3)^2 = b^6 \\). Combining these gives \\( 4a^8b^6 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 7,
-    "text": "Question 7 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (2a^4b^2)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 4a^6b^4 \\)",
+      "\\( 4a^8b^4 \\)",
+      "\\( 4a^6b^4 \\)",
+      "\\( 4a^8b^4 \\)"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 4a^8b^4 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 8,
-    "text": "Question 8 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (4a^3b^4)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 8a^5b^6 \\)",
+      "\\( 16a^5b^6 \\)",
+      "\\( 16a^6b^8 \\)",
+      "\\( 8a^6b^8 \\)"
     ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 2,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 4^2 = 16 \\). Multiply the exponents for variables: \\( (a^3)^2 = a^6 \\) and \\( (b^4)^2 = b^8 \\). Combining these gives \\( 16a^6b^8 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 9,
-    "text": "Question 9 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (3a^4b^5)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 9a^6b^7 \\)",
+      "\\( 9a^8b^10 \\)",
+      "\\( 6a^8b^10 \\)",
+      "\\( 6a^6b^7 \\)"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "answer": 1,
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 3^2 = 9 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^5)^2 = b^10 \\). Combining these gives \\( 9a^8b^10 \\).",
+    "topic": "Exponents and Square Roots"
   },
   {
     "id": 10,
-    "text": "Question 10 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
+    "text": "Which of the following is equivalent to \\( (2a^5b^2)^2 \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 11,
-    "text": "Question 11 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 12,
-    "text": "Question 12 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 13,
-    "text": "Question 13 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "\\( 4a^7b^4 \\)",
+      "\\( 4a^10b^4 \\)",
+      "\\( 4a^7b^4 \\)",
+      "\\( 4a^10b^4 \\)"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 14,
-    "text": "Question 14 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 15,
-    "text": "Question 15 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 16,
-    "text": "Question 16 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 17,
-    "text": "Question 17 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 18,
-    "text": "Question 18 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 19,
-    "text": "Question 19 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 20,
-    "text": "Question 20 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 21,
-    "text": "Question 21 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 22,
-    "text": "Question 22 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 23,
-    "text": "Question 23 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 24,
-    "text": "Question 24 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
-  },
-  {
-    "id": 25,
-    "text": "Question 25 — Exponents & Square Roots\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Exponents & Square Roots"
+    "explanation": "When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^5)^2 = a^10 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 4a^10b^4 \\).",
+    "topic": "Exponents and Square Roots"
   }
 ];
-
-const TOPIC_MAP = {
-  'Exponents & Square Roots': {
-    name: 'Exponents & Square Roots',
-    questions: QUESTIONS.map(q => q.id)
-  }
-};
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { QUESTIONS, TOPIC_MAP };
-}

@@ -6,7 +6,7 @@
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "93 ================\nIhe following text is adapted from Jane Austin's\n1811 novel. Sense and Sensibility.\nMr. John Dashwood told his mother again\nand again how exceedingly sorry he was that\nshe had taken a house at such a distance from\nNorland as to prevent his being of any service\nto her in removing her furniture. He really\nfelt conscientiously vexed on the occasion; for\nthe very exertion to which he had limited the\nperformance of his promise to his father was\nby this arrangement rendered impractical.\nThe furniture was all sent around by water.\nIt chiefly consisted of household linen,\nplates, china, and books, with a handsome\npianoforte.\nBased on the text, what is most likely true about\nMr. John Dashwood?",
+    "text": "Ihe following text is adapted from Jane Austin's\n1811 novel. Sense and Sensibility.\nMr. John Dashwood told his mother again\nand again how exceedingly sorry he was that\nshe had taken a house at such a distance from\nNorland as to prevent his being of any service\nto her in removing her furniture. He really\nfelt conscientiously vexed on the occasion; for\nthe very exertion to which he had limited the\nperformance of his promise to his father was\nby this arrangement rendered impractical.\nThe furniture was all sent around by water.\nIt chiefly consisted of household linen,\nplates, china, and books, with a handsome\npianoforte.\nBased on the text, what is most likely true about\nMr. John Dashwood?",
     "options": [
       "He had given his father a pledge regarding his care.",
       "He is too busy to assist with the details of his move.",
@@ -32,7 +32,7 @@ const QUESTIONS = [
   },
   {
     "id": 3,
-    "text": "94 ================\nAstronomers from the University of California,\nBerkeley worked out there could be as many\nas 40 billion Earth-sized exoplanets in the\nso-called \"habitable zone\" around their star,\nwhere temperatures are mild enough for liquid\nwater to exist on the surface. There's even a\npotentially Earth-like world orbiting our nearest\nneighboring star, Proxima Centauri. At just\nfour light years away, that system might be close\nenough for us to reach using current technology.\nWith the Breakthrough Starshot project launched\nby Stephen Hawking in 2016, plans for this are\nalready afoot. It seems inevitable other life is out\nthere, especially considering that life appeared on\nEarth so soon after the planet was formed.\nWhat is implied in the passage about Stephen\nHawking's Breakthrough Starshot project?",
+    "text": "Astronomers from the University of California,\nBerkeley worked out there could be as many\nas 40 billion Earth-sized exoplanets in the\nso-called \"habitable zone\" around their star,\nwhere temperatures are mild enough for liquid\nwater to exist on the surface. There's even a\npotentially Earth-like world orbiting our nearest\nneighboring star, Proxima Centauri. At just\nfour light years away, that system might be close\nenough for us to reach using current technology.\nWith the Breakthrough Starshot project launched\nby Stephen Hawking in 2016, plans for this are\nalready afoot. It seems inevitable other life is out\nthere, especially considering that life appeared on\nEarth so soon after the planet was formed.\nWhat is implied in the passage about Stephen\nHawking's Breakthrough Starshot project?",
     "options": [
       "It was designed to search for Earth-sized planets in the \"habitable zone.\"",
       "It intends to send spacecraft to the Proxima Centauri system in the future.",
@@ -58,7 +58,7 @@ const QUESTIONS = [
   },
   {
     "id": 5,
-    "text": "95 ================\nAccording to Clark, a neutral model would\npredict that the variation among the sites\nwould increase over time, as random chance\ncaused different species to go extinct in some\nareas but not others. Some sites, just by chance,\nshould come to be dominated by one species,\nwhile others would come to be dominated by\nanother species. However, the researchers found\nthat variance among the sites did not increase\nover the millennia, leading them to conclude\nthat stabilizing forces were maintaining forest\ndiversity. Clark emphasized, however, that\neven though the role of stabilizing mechanisms\nremains unknown, the results from his and\nMcLachlan's studies offer cautionary lessons:\n\"Our findings suggest that forest biodiversity\nhas probably been stabilized in some important\nways, so extinction of species should cause\nus greater concern than if we believed that\nbiodiversity was maintained in the past by\ncontinual replenishment of random extinction by\ngeneration of new species.\"\nBased on the text, what is one implication of\nstudy?",
+    "text": "According to Clark, a neutral model would\npredict that the variation among the sites\nwould increase over time, as random chance\ncaused different species to go extinct in some\nareas but not others. Some sites, just by chance,\nshould come to be dominated by one species,\nwhile others would come to be dominated by\nanother species. However, the researchers found\nthat variance among the sites did not increase\nover the millennia, leading them to conclude\nthat stabilizing forces were maintaining forest\ndiversity. Clark emphasized, however, that\neven though the role of stabilizing mechanisms\nremains unknown, the results from his and\nMcLachlan's studies offer cautionary lessons:\n\"Our findings suggest that forest biodiversity\nhas probably been stabilized in some important\nways, so extinction of species should cause\nus greater concern than if we believed that\nbiodiversity was maintained in the past by\ncontinual replenishment of random extinction by\ngeneration of new species.\"\nBased on the text, what is one implication of\nstudy?",
     "options": [
       "Due to biodiversity stabilization, there is a smaller chance of ecosystems collapsing than previously theorized.",
       "Due to biodiversity stabilization, extinction is a random event that is compensated for by evolution of new species.",
@@ -84,7 +84,7 @@ const QUESTIONS = [
   },
   {
     "id": 7,
-    "text": "96 ================\nThe following text is adapted from Abraham\nLincolnfi last public address, given April 11, 1965.\nThe amount of constituency, so to speak,\non which the new Louisiana government\nrests, would be more satisfactory to all,\nif it contained fifty, thirty, or even twenty\nthousand, instead of only about twelve\nthousand, as it does. It is also unsatisfactory\nto some that the elective franchise is not given\nto the colored man. I would myself prefer that\nit were now conferred on the very intelligent,\nand on those who serve our cause as soldiers.\nStill the question is not whether the Louisiana\ngovernment, as it stands, is quite all that\ndesirable. Ihe question is. \"Will it be wiser\nto take it as it is, and help to improve it; or\nto reject, and disperse it? Can Louisiana be\nbrought into proper practical relation with the\nUnion sooner by sustaining, or by discarding\nher new State government?\"\nBased on the text, Lincoln would most likely\nagree with which statement regarding former\nslaves?",
+    "text": "The following text is adapted from Abraham\nLincolnfi last public address, given April 11, 1965.\nThe amount of constituency, so to speak,\non which the new Louisiana government\nrests, would be more satisfactory to all,\nif it contained fifty, thirty, or even twenty\nthousand, instead of only about twelve\nthousand, as it does. It is also unsatisfactory\nto some that the elective franchise is not given\nto the colored man. I would myself prefer that\nit were now conferred on the very intelligent,\nand on those who serve our cause as soldiers.\nStill the question is not whether the Louisiana\ngovernment, as it stands, is quite all that\ndesirable. Ihe question is. \"Will it be wiser\nto take it as it is, and help to improve it; or\nto reject, and disperse it? Can Louisiana be\nbrought into proper practical relation with the\nUnion sooner by sustaining, or by discarding\nher new State government?\"\nBased on the text, Lincoln would most likely\nagree with which statement regarding former\nslaves?",
     "options": [
       "Most of them are not qualified to vote.",
       "They have an inalienable right to vote.",
@@ -110,7 +110,7 @@ const QUESTIONS = [
   },
   {
     "id": 9,
-    "text": "97 ================\nDaisy Taugelchee is the most famous Navajo\nweaver of the 20th century and was noted for the\nextreme fineness of her tapestries. Typical weavers\nin her area used the fine gauge of 60 stitches to\nthe inch, but after a dare, she exceeded 80, and\nin her prime could make a record 115. Moreover,\nshe created unique variations on traditional\npatterns that made her artwork distinct and\npopular among collectors. For over 40 years, she\nwon first place in the local art show, the Gallup\nCeremonial.\nBased on the text, which choice is most likely true\nabout Daisy Taugelchee?",
+    "text": "Daisy Taugelchee is the most famous Navajo\nweaver of the 20th century and was noted for the\nextreme fineness of her tapestries. Typical weavers\nin her area used the fine gauge of 60 stitches to\nthe inch, but after a dare, she exceeded 80, and\nin her prime could make a record 115. Moreover,\nshe created unique variations on traditional\npatterns that made her artwork distinct and\npopular among collectors. For over 40 years, she\nwon first place in the local art show, the Gallup\nCeremonial.\nBased on the text, which choice is most likely true\nabout Daisy Taugelchee?",
     "options": [
       "She was greatly respected in the Navajo community for her originality.",
       "She was able to earn a good living from selling her weaving.",
@@ -136,7 +136,7 @@ const QUESTIONS = [
   },
   {
     "id": 11,
-    "text": "98 ================\nTapirs are ancient animals that date back about\n50 million years. and they are one of the few\nlarge mammals to survive the megafauna\nextinctions ofthe last ice age. Tapirs live in\nBrazilian lowlands and help regrow the degraded\nforests though seeds that are spread when they\ndefecate. Unfortunately, all tapir species are now\ncategorized as either vulnerable or endangered\ndue to hunting, vehicle strikes, and habitat loss.\nBased on the text, what is most likely true about\ntapirs?",
+    "text": "Tapirs are ancient animals that date back about\n50 million years. and they are one of the few\nlarge mammals to survive the megafauna\nextinctions ofthe last ice age. Tapirs live in\nBrazilian lowlands and help regrow the degraded\nforests though seeds that are spread when they\ndefecate. Unfortunately, all tapir species are now\ncategorized as either vulnerable or endangered\ndue to hunting, vehicle strikes, and habitat loss.\nBased on the text, what is most likely true about\ntapirs?",
     "options": [
       "They did not go extinct because they are intelligent.",
       "They used to have a much wider range than Brazil.",
@@ -162,7 +162,7 @@ const QUESTIONS = [
   },
   {
     "id": 13,
-    "text": "99 ================\nAfghanistan has one of the highest child mortality\nrates and levels of malnutrition in the world\nbecause large portions of the population live in\npoverty. That is sadly ironic because geologists\nestimate that there are trillions of dollars of\nuntapped mineral reserves within the country, but\nthere is a dearth of infrastructure to extract and\npurify them.\nBased on the text, what is most likely true about\nthe mineral reserves in Afghanistan?",
+    "text": "Afghanistan has one of the highest child mortality\nrates and levels of malnutrition in the world\nbecause large portions of the population live in\npoverty. That is sadly ironic because geologists\nestimate that there are trillions of dollars of\nuntapped mineral reserves within the country, but\nthere is a dearth of infrastructure to extract and\npurify them.\nBased on the text, what is most likely true about\nthe mineral reserves in Afghanistan?",
     "options": [
       "If the minerals were to be mined, there would be enough money to raise the standard of living.",
       "Ihe people in Afghanistan are currently mining the minerals using ineffective or dangerous tools.",
@@ -188,7 +188,7 @@ const QUESTIONS = [
   },
   {
     "id": 15,
-    "text": "100 ================\nThe Rosetta Stone, discovered in 1799, was\nthe key to understanding how to read ancient\nEgyptian hieroglyphic writing. The stone is a\nfragment of a larger stele carved in 196 B.C in\nMemphis, Egypt, under the reign of King Ptolemy\nV Epiphanes. Ihe first bilingual text known\nto contain hieroglyphics, scholars circulated\ncopies in the hopes of translating the language,\nwhich was written in ancient Greek, Egyptian\nhieroglyphics, and also a more casual form of\nEgyptian writing called Demotic. Jean-Francois\nChampollion found the key to solving the puzzle\nin 1822, when\nWhich choice most logically completes the text?",
+    "text": "The Rosetta Stone, discovered in 1799, was\nthe key to understanding how to read ancient\nEgyptian hieroglyphic writing. The stone is a\nfragment of a larger stele carved in 196 B.C in\nMemphis, Egypt, under the reign of King Ptolemy\nV Epiphanes. Ihe first bilingual text known\nto contain hieroglyphics, scholars circulated\ncopies in the hopes of translating the language,\nwhich was written in ancient Greek, Egyptian\nhieroglyphics, and also a more casual form of\nEgyptian writing called Demotic. Jean-Francois\nChampollion found the key to solving the puzzle\nin 1822, when\nWhich choice most logically completes the text?",
     "options": [
       "he realized that both the Demotic writing and hieroglyphs contained phonetic spellings.",
       "he gave a lecture about his findings at the Acad�mie des Inscriptions et Belles-Lettres.",
@@ -214,7 +214,7 @@ const QUESTIONS = [
   },
   {
     "id": 17,
-    "text": "101 ================\nso\nThe following text is adapted from Jane Austen's\nMansfield Park.\nSir Thomas was indeed the life of the party.\nwho at his suggestion, now seated themselves\nround the fire. He had the best right to be the\ntalker; and the delight of his sensations in\nbeing again in his own house, in the centre of\nhis family, after such a separation, made him\ncommunicative and chatty in a very unusual\ndegree: and he was ready to give every\ninformation as to his voyage, and answer\nevery question of his two sons almost bef)re it\nwas put. His business in Antigua had latterly\nbeen prosperously rapid, and he came directly\nfrom Liverpool, having had an opportunity\nof making his passage thither in a private\nvessel, instead of waiting for the packet; and\nall the little particulars of his proceedings and\nevents, his arrivals and departures, were most\npromptly delivered, as he sat by Lady Bertram\nand looked with heartfelt satisfaction on the\nfaces around him - interrupting himself\nmore than once, however, to remark on his\ngood fortune in finding them all at home -\ncoming unexpectedly as he did - all collected\ntogether exactly as he could have wished, but\ndared not depend on.\nBased on the text, what is most true about Sir\nThomas?",
+    "text": "The following text is adapted from Jane Austen's\nMansfield Park.\nSir Thomas was indeed the life of the party.\nwho at his suggestion, now seated themselves\nround the fire. He had the best right to be the\ntalker; and the delight of his sensations in\nbeing again in his own house, in the centre of\nhis family, after such a separation, made him\ncommunicative and chatty in a very unusual\ndegree: and he was ready to give every\ninformation as to his voyage, and answer\nevery question of his two sons almost bef)re it\nwas put. His business in Antigua had latterly\nbeen prosperously rapid, and he came directly\nfrom Liverpool, having had an opportunity\nof making his passage thither in a private\nvessel, instead of waiting for the packet; and\nall the little particulars of his proceedings and\nevents, his arrivals and departures, were most\npromptly delivered, as he sat by Lady Bertram\nand looked with heartfelt satisfaction on the\nfaces around him - interrupting himself\nmore than once, however, to remark on his\ngood fortune in finding them all at home -\ncoming unexpectedly as he did - all collected\ntogether exactly as he could have wished, but\ndared not depend on.\nBased on the text, what is most true about Sir\nThomas?",
     "options": [
       "He was a rich man.",
       "He was not usually a talkative man.",
@@ -240,7 +240,7 @@ const QUESTIONS = [
   },
   {
     "id": 19,
-    "text": "102 ================\nIn the fall of 1954, at the age of 18, I discovered\nthe other half of the world. I began that journey\nthrough the eyes of an encyclopedic professor\nwho guided me to China and the neighboring\nAltay Mountains, to Japan and their elaborate\nmethods of making swords. Then India, Tibet and\nthe Potala Palace, Burma and the Burma Road,\nand, of course. the Khmer Empire and Cambodia.\nThese places had all been hidden from my view by\nmy Philadelphia suburban education.\nBased on the text, what is most likely true about\nthe author?",
+    "text": "In the fall of 1954, at the age of 18, I discovered\nthe other half of the world. I began that journey\nthrough the eyes of an encyclopedic professor\nwho guided me to China and the neighboring\nAltay Mountains, to Japan and their elaborate\nmethods of making swords. Then India, Tibet and\nthe Potala Palace, Burma and the Burma Road,\nand, of course. the Khmer Empire and Cambodia.\nThese places had all been hidden from my view by\nmy Philadelphia suburban education.\nBased on the text, what is most likely true about\nthe author?",
     "options": [
       "The author was transfixed by the world because he had not traveled before",
       "The author grew up in a small town of Philadelphia",

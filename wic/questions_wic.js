@@ -269,9 +269,9 @@ const QUESTIONS = [
   {
     id: 33,
     text: `Even though the homework was difficult, Maria didn't mind working on it. She knew in the long run it would help her be more prepared for college.\n\nAs used in the text, what does the phrase "didn't mind" most nearly mean?`,
-    options: ['was willingly', 'took offense', 'couldn\'t heed', 'adhered'],
+    options: ['was willing', 'took offense', 'couldn\'t heed', 'adhered'],
     answer: 0,
-    explanation: '"Didn\'t mind" = was willing to do it without complaint. "Was willingly" captures that attitude best, though it is slightly awkward grammatically. Took offense = was offended; couldn\'t heed = couldn\'t pay attention; adhered = stuck to a rule.',
+    explanation: '"Didn\'t mind" = was willing to do it without complaint. "Was willing" captures that attitude best. Took offense = was offended; couldn\'t heed = couldn\'t pay attention; adhered = stuck to a rule.',
     topic: 'Vocabulary in Context'
   },
   {

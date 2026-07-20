@@ -3384,3 +3384,57 @@ return null;
 </body>
 
 </html>
+<!-- IELTS Tab Added by EduQuest IELTS Module -->
+<div id="ielts-tab-content" style="display:none;margin-top:20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem">IELTS Student Submissions & Band Reports</h3>
+    <button onclick="fetchIELTSAdminData()" style="background:#2563eb;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer">Refresh IELTS Data</button>
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden">
+    <thead>
+      <tr style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);text-transform:uppercase;font-size:0.75rem">
+        <th style="padding:12px">Student Name</th>
+        <th style="padding:12px">Email</th>
+        <th style="padding:12px">Module / Topic</th>
+        <th style="padding:12px">Score</th>
+        <th style="padding:12px">Band Score</th>
+        <th style="padding:12px">Submitted Time</th>
+      </tr>
+    </thead>
+    <tbody id="ieltsAdminTableBody">
+      <tr><td colspan="6" style="text-align:center;padding:16px;color:rgba(255,255,255,0.4)">Click refresh to load IELTS records.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+async function fetchIELTSAdminData() {
+  try {
+    const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/ielts_report?select=*&order=created_at.desc`, {
+      headers: {
+        'apikey': SUPABASE_CONFIG.anonKey,
+        'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`
+      }
+    });
+    if (res.ok) {
+      const reports = await res.json();
+      const tbody = document.getElementById('ieltsAdminTableBody');
+      tbody.innerHTML = '';
+      reports.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="padding:12px"><strong>${r.name || 'Student'}</strong></td>
+          <td style="padding:12px">${r.email}</td>
+          <td style="padding:12px">${r.topic || 'IELTS Test'}</td>
+          <td style="padding:12px">${r.correct} / ${r.total}</td>
+          <td style="padding:12px"><span style="background:rgba(96,165,250,0.2);color:#60a5fa;padding:3px 8px;border-radius:4px;font-weight:700">${r.scaled || (r.overall_band ? 'Band ' + r.overall_band : 'Band N/A')}</span></td>
+          <td style="padding:12px;color:rgba(255,255,255,0.6)">${r.submit_time || 'N/A'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+  } catch(e) {
+    console.error('IELTS data fetch error:', e);
+  }
+}
+</script>

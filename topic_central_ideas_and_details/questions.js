@@ -37,7 +37,7 @@ const QUESTIONS = [
       "They do not account for changes that take place over the course of centuries.",
       "Their results do not accurately reflect observations in the natural world.",
       "They do not include enough different species of plants from a specific area.",
-      "Their calculations are based on obsolete data that needs to be updated. Studies have shown that a single, subanesthetic- dose (a lower dose than would cause anesthesia) ketamine infusion can often rapidly relieve depressive symptoms within hours in people who have not responded to conventional antidepressants, which typically take weeks or months to work. However, widespread off-label use of intravenous subanesthetic-dose ketamine for treatment-resistant depression has raised concerns about side effects, especially given its history as a drug of abuse."
+      "Their calculations are based on obsolete data that needs to be updated."
     ],
     "answer": 1,
     "explanation": "Clark says that in mathematical models, \"slight advantages allow one species to \u0007out- compete' the other, leading to extinction, that is, loss of biodiversity,\" but that in real life, species coexist with each other \"routinely\" or \"very regularly.\" Therefore, the mathematical models do not accurately \"reflect\" or \"demonstrate\" what is observed in natural systems. Distractor Explanations: None of the other choices are supported by evidence from the passage. There is no indication that the problem with mathematical models is the time frame, the number of plants included, or the age of the data.",
@@ -89,7 +89,7 @@ const QUESTIONS = [
       "They were discouraged by all the obstacles.",
       "They looked for jobs despite their parents' reservations.",
       "They voluntarily accepted their new positions.",
-      "They lost their money trying to help a friend. Ihe first bottled carbonated mineral water was sold in Geneva in 1783 by Johann Jacob Schweppe, who relocated his business to London in 1792. Not long after, manufacturers started offering flavorings mixed with the mineral water and mostly advertised them as having medicinal purposes; one such drink, ginger beer, is first mentioned in a treatise on beverages written in 1809. However, the drinks were extremely popular, and over time, were consumed for pleasure as well as health purposes."
+      "They lost their money trying to help a friend."
     ],
     "answer": 2,
     "explanation": "The girls \"begged\" or \"asked strongly\" to be able to at least help support themselves, so they \"volunteered\" or \"offered\" to get \"new positions\" or \"jobs\" to earn money for themselves. Distractor Explanations: Choice A is incorrect because the girls were not \"discouraged\" or \"wanted to give up\" because of the obstacles; they maintained a \"hearty good will\" or \"good spirit\" even though there were obstacles. Choice B is incorrect because their parents did not have \"reservations\" or \"concerns\" about new jobs; the parents \"consented\" or \"agreed.\" Choice D is incorrect because their father, not the girls, lost his \"property\" or \"money.\"",
@@ -307,10 +307,10 @@ const QUESTIONS = [
     "id": 24,
     "text": "Narcissa Whitman (1808-1847) was one of the\nfirst female pioneers to travel along the Oregon\nTrail, and she gave birth to the first white child\nborn in the Oregon Territory. She lived at a\nmission near Walla Walla, Washington, which\nbecame an important stopping point for pioneers\nheading to the Willamette Valley in Oregon.\nUnfortunately, she never learned the native\nlanguage and refused to adopt any of the local\nculture, which ultimately led to discontent and\ndistrust among the local people.\nAccording to the texts, what was one drawback of\nNarcissa Whitman's attempts to set up a new life\nin the Oregon Territory?",
     "options": [
-      "She gave birth to a child that was not a Native",
-      "American.",
-      "She stopped in Washington rather than in",
-      "Oregon."
+      "She gave birth to a child that was not a Native American.",
+      "She stopped in Washington rather than in Oregon.",
+      "She failed to assimilate into the Native American society.",
+      "She did not believe the local people when they showed distrust."
     ],
     "answer": 2,
     "explanation": "The text says that Whitman \"never learned the native language and refused to adopt any of the local culture.\" In other words, she did not make efforts to \"assimilate\" or \"become part of\" the Native American society. Distractor Explanations: Choice A is incorrect because there is no indication that having a child was a \"drawback\" or \"problem\" with starting a new life. Choice B is incorrect because the mission where she lived was \"an important stopping point,\" so she was able to settle in enough to help others who were traveling. Choice D is not discussed in the text; the \"local people\" showed distrust, but there is no sign that she did not believe them. 25.",

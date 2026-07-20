@@ -7,48 +7,48 @@
 const QUESTIONS = [
   {
     id: 1,
-    text: `From a point in the interior of an equilateral triangle, the perpendicular distance of the sides are √3 cm, 2√3 cm and 5√3 cm. The perimeter (in cm) of the triangle is:`,
+    text: `From a point in the interior of an equilateral triangle, the perpendicular distance of the sides are \( \sqrt{3} \text{ cm} \), 2\( \sqrt{3} \text{ cm} \) and 5\( \sqrt{3} \text{ cm} \). The perimeter (in cm) of the triangle is:`,
     options: ["24", "32", "48", "64"],
     answer: 2,
     explanation: `According to Viviani's theorem, the sum of the perpendicular distances from any interior point to the sides of an equilateral triangle is equal to the altitude (height) of the triangle.
-Altitude h = √3 + 2√3 + 5√3 = 8√3 cm.
+Altitude h = √3 + 2√3 + 5√3 = 8\( \sqrt{3} \text{ cm} \).
 For an equilateral triangle, the altitude h is related to side length s by:
-h = (√3/2) * s
-8√3 = (√3/2) * s => s = 16 cm.
-The perimeter is 3s = 3 * 16 = 48 cm.`,
+\( h = \frac{\sqrt{3}}{2} \times s \)
+\( 8\sqrt{3} = \frac{\sqrt{3}}{2} \times s \) => \( s = 16 \text{ cm} \).
+The perimeter is \( 3s = 3 \times 16 = 48 \text{ cm} \).`,
     topic: "Geometry & Mensuration"
   },
   {
     id: 2,
     text: `ABC is a right-angled triangle with right angle at B. If the semi-circle on AB with AB as diameter encloses an area of 81 sq. cm and the semi-circle on BC with BC as diameter encloses an area of 36 sq. cm, then the area of the semi-circle on AC with AC as diameter will be:`,
-    options: ["117 cm²", "121 cm²", "217 cm²", "221 cm²"],
+    options: ["\( 117 \text{ cm}^2 \)", "\( 121 \text{ cm}^2 \)", "\( 217 \text{ cm}^2 \)", "\( 221 \text{ cm}^2 \)"],
     answer: 0,
-    explanation: `By the Pythagorean theorem for the right triangle ABC, AB² + BC² = AC².
-The area of a semi-circle with diameter d is given by A = (1/2) * π * (d/2)² = (π/8) * d².
+    explanation: `By the Pythagorean theorem for the right triangle ABC, \( AB^2 + BC^2 = AC^2 \).
+The area of a semi-circle with diameter d is given by \( A = \frac{1}{2} \pi \left(\frac{d}{2}\right)^2 = \frac{\pi}{8} d^2 \).
 Thus:
-- Area of semi-circle on AB: (π/8) * AB² = 81
-- Area of semi-circle on BC: (π/8) * BC² = 36
-- Area of semi-circle on AC: (π/8) * AC² = (π/8) * (AB² + BC²) = (π/8)*AB² + (π/8)*BC² = 81 + 36 = 117 cm².`,
+- Area of semi-circle on AB: \( \frac{\pi}{8} AB^2 = 81 \)
+- Area of semi-circle on BC: \( \frac{\pi}{8} BC^2 = 36 \)
+- Area of semi-circle on AC: \( \frac{\pi}{8} AC^2 = \frac{\pi}{8} (AB^2 + BC^2) = \frac{\pi}{8} AB^2 + \frac{\pi}{8} BC^2 = 81 + 36 = 117 \text{ cm}^2 \).`,
     topic: "Geometry & Mensuration"
   },
   {
     id: 3,
-    text: `A circular swimming pool is surrounded by a concrete wall 4 ft. wide. If the area of the concrete wall surrounding the pool is 11/25 that of the pool, then the radius of the pool is:`,
+    text: `A circular swimming pool is surrounded by a concrete wall 4 ft. wide. If the area of the concrete wall surrounding the pool is \( \frac{11}{25} \) that of the pool, then the radius of the pool is:`,
     options: ["8 ft", "16 ft", "20 ft", "30 ft"],
     answer: 2,
     explanation: `Let the radius of the pool be r. The outer radius including the wall is r + 4.
 The area of the concrete wall is:
-Area_wall = π(r + 4)² - πr² = π(r² + 8r + 16 - r²) = π(8r + 16).
+\( \text{Area}_{\text{wall}} = \pi(r + 4)^2 - \pi r^2 = \pi(r^2 + 8r + 16 - r^2) = \pi(8r + 16) \).
 The area of the pool is:
-Area_pool = πr².
-We are given that the wall's area is 11/25 of the pool's area:
-π(8r + 16) / (πr²) = 11/25
-(8r + 16) / r² = 11/25
-25(8r + 16) = 11r²
-200r + 400 = 11r²
-11r² - 200r - 400 = 0.
+\( \text{Area}_{\text{pool}} = \pi r^2 \).
+We are given that the wall's area is \( \frac{11}{25} \) of the pool's area:
+π(8r + 16) / (πr²) = \( \frac{11}{25} \)
+(8r + 16) / r² = \( \frac{11}{25} \)
+\( 25(8r + 16) = 11r^2 \)
+\( 200r + 400 = 11r^2 \)
+\( 11r^2 - 200r - 400 = 0 \).
 Solving this quadratic equation:
-(11r + 20)(r - 20) = 0.
+(\( (11r + 20)(r - 20) = 0 \).
 Since radius r must be positive, r = 20 ft.`,
     topic: "Geometry & Mensuration"
   },

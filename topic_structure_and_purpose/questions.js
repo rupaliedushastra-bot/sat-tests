@@ -47,10 +47,10 @@ const QUESTIONS = [
     "id": 4,
     "text": "By analyzing data on tree pollen extracted\nfrom ancient lake sediments, ecologists have\nsharpened the understanding of how forests can\nmaintain a diversity of species. Their findings\nindicate that stabilizing processes have been more\nimportant than previously thought, and that the\nhuman-caused loss of species could upset that\nstability in ways that remain poorly understood.\n\"Quantifying the link between stability and\ndiversity, and identifying the factors that promote\nspecies diversity, have challenged ecologists for\ndecades,\" said Saran Twombly, program director\nin the National Science Foundation (NSFYs\ndivision of environmental biology, which funded\nthe research. \"The contribution of this study\nis\nunique, as the scientists used a clever blend of\nlong-term data and statistical modeling to test the\nopposing hypotheses of neutrality and stability as\nkey factors promoting community assembly and\ndiversity.\nWhat is the main function of the quote by Saran\nTwombly in the overall structure of the text as a\nwhole?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "It clarifies a key term used throughout the passage.",
+      "It presents a counterargument that is refuted by the passage.",
+      "It offers an expert opinion about the study described in the passage.",
+      "It highlights one limitation of the methodology described in the passage."
     ],
     "answer": 2,
     "explanation": "Saran Twombly is described as being the program director in the National Science Foundation's division of environmental biology, which implies that she is an \"expert\" or \"authority\" on the subject. Twombly's opinion is that the contributions are \"unique\" or because they use a creative method of matching different types of data. Twombly indicates that the studyk methods have helped solve a problem that has \"challenged ecologists for decades.\" Distractor Explanations: Choice A is incorrect because Twombly's quote does not \"clarify\" or \"define\" any vocabulary. Choice B is incorrect because Twombly praises the study rather than giving a \"counterargument\" or \"point that goes against\" the premise of the study. Choice D is incorrect because, while Twombly talks about the \"methodology\" or \"techniques\" of the study, she does not mention \"limitations\" or \"restrictions\" that make the data less applicable.",
@@ -58,7 +58,7 @@ const QUESTIONS = [
   },
   {
     "id": 5,
-    "text": "It clarifies a key term used throughout the\npassage.\nIt presents a counterargument that is refuted\nby the passage.\nIt offers an expert opinion about the study\ndescribed in the passage.\nIt highlights one limitation of the\nmethodology described in the passage.\nSalt stress, too much salt in the soil for plants\nto thrive. is one of the major environmental\nconstraints limiting agricultural productivity\nand influencing the concentration of bioactive\ncompounds of vegetables. In this study,\nassessed the effect of NaCl salt stress on flowering,\nfructification, and fruit nutritional quality of\na local cultivar of chili pepper. In Benin, chili\nis the second cash gardening crop after the\ntomato. Pepper plants produce the compound\ncapsaicin, primarily in the fruits, possibly to deter\nmammalian herbivores. In Benin, chili pepper\nis grown in the cultivable lands of the coastal\nareas, where\na-I.gali.tb Salt stress is known to negatively affect\nplant growth at all developmental stages, but\nsensitivity varies greatly at different stages. Crop\nproduction in saline areas largely depends on\nsuccessful germination, seedling emergence, and\nestablishment of an efficient reproductive phase.\nWhat is the function of the underlined portion in\nthe overall structure of the text?",
+    "text": "Salt stress, too much salt in the soil for plants\nto thrive. is one of the major environmental\nconstraints limiting agricultural productivity\nand influencing the concentration of bioactive\ncompounds of vegetables. In this study,\nassessed the effect of NaCl salt stress on flowering,\nfructification, and fruit nutritional quality of\na local cultivar of chili pepper. In Benin, chili\nis the second cash gardening crop after the\ntomato. Pepper plants produce the compound\ncapsaicin, primarily in the fruits, possibly to deter\nmammalian herbivores. In Benin, chili pepper\nis grown in the cultivable lands of the coastal\nareas, where\na-I.gali.tb Salt stress is known to negatively affect\nplant growth at all developmental stages, but\nsensitivity varies greatly at different stages. Crop\nproduction in saline areas largely depends on\nsuccessful germination, seedling emergence, and\nestablishment of an efficient reproductive phase.\nWhat is the function of the underlined portion in\nthe overall structure of the text?",
     "options": [
       "It emphasizes the need for a different crop.",
       "It shows that the environment is suitable for\ncrops.",
@@ -73,10 +73,10 @@ const QUESTIONS = [
     "id": 6,
     "text": "A new range of technologies, devices, and sub-\nsystems regarding wave and tidal current energy\nproduction need in-depth analysis. Competing\npressures and uses such as climate change, fishing,\nand marine transport should be considered\nwhen looking at environmental impacts of such\nsystems. The literature research shows that\nonly a small number of LCA on wave and tidal\nenergy converters have been performed. The\nmain focus was on devices that are in advanced\nstages of development, so there is little data for\nprototype models. So far, most of the studies\nfocused only on the impact of energy and carbon.\nEsisu.ng..d.ata.ar.g-xgr.u.nush.d�ggrsgd.amgng\nseuntligs..l.gsgar.shus..a,nd-dg.yglqggrs, Since\nmost wave energy and tidal energy technologies\nare at an early development stage, no data exists\non environmental effects from large integrated\nsystems.\nWhat is the main function of the underlined\nsentence in the overall structure of the text?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "It shows the data set is very incomplete.",
+      "It shows the groups are sharing data.",
+      "It shows the data is comprehensive.",
+      "It shows the sources are incompatible."
     ],
     "answer": 0,
     "explanation": "The paragraph is discussing gaps in the current research. The claim that the data is \"dispersed\" or \"spread out\" shows that there are bits of data from sources that are far apart. The authors are trying to show that there needs to be a more comprehensive collection that \"fills in the blanks\" before conclusions can be drawn. Distractor Explanations: Choice B is incorrect because \"dispersed\" refers to \"spread out\" rather than \"announced to everyone.\" Choice C is incorrect because \"comprehensive\" refers to something that is complete, but the authors discuss many areas that are lacking information or \"not complete.\" Choice D is incorrect because \"incompatible\" means \"not able to get along with each other.\" There is no evidence that the groups are hostile to each other, only that there are many different groups that have pieces of data related to the field. [PAGE 148 LEFT] CRAFT AND STI",
@@ -84,7 +84,7 @@ const QUESTIONS = [
   },
   {
     "id": 7,
-    "text": "It shows the data set is very incomplete.\nIt shows the groups are sharing data.\nIt shows the data is comprehenswe\nIt shows the sources are incompatible.\nThe following text is adapted from Mother\nJones's 1912 speech to coal miners picketing in\nCharlestown, West Virginia.\nTo me, the proper thing to do is to read the\npurpose of our meeting here today. The\nguards of the mining companies beat. abuse,\nmaim, and hold up citizens without process\nof law; deny freedom of speech, a provision\nguaranteed by the Constitution. We hold that\nthe companies in maintaining such guards\ndetrimental to the best interests of society and\nan outrage against the honor and dignity of\nthe State. I hope, my friends, that you and the\nmine owners will put aside the breach and get\ntogether before I leave the State. But I want\nto say, make no settlement until they sign up\nthat every bloody murderer of a guard has got\nto go. Ihis is done, my friends, beneath the\nflag our fathers fought and bled for, and we\ndon't intend to surrender our liberty.\nWhat is the main purpose of the text?",
+    "text": "The following text is adapted from Mother\nJones's 1912 speech to coal miners picketing in\nCharlestown, West Virginia.\nTo me, the proper thing to do is to read the\npurpose of our meeting here today. The\nguards of the mining companies beat. abuse,\nmaim, and hold up citizens without process\nof law; deny freedom of speech, a provision\nguaranteed by the Constitution. We hold that\nthe companies in maintaining such guards\ndetrimental to the best interests of society and\nan outrage against the honor and dignity of\nthe State. I hope, my friends, that you and the\nmine owners will put aside the breach and get\ntogether before I leave the State. But I want\nto say, make no settlement until they sign up\nthat every bloody murderer of a guard has got\nto go. Ihis is done, my friends, beneath the\nflag our fathers fought and bled for, and we\ndon't intend to surrender our liberty.\nWhat is the main purpose of the text?",
     "options": [
       "To describe the working conditions suffered\nby nuners",
       "To encourage miners to avoid making\ncompromises",
@@ -99,10 +99,10 @@ const QUESTIONS = [
     "id": 8,
     "text": "How the gene HEPHL I mechanistically\nregulates hair growth and development will\nrequire further in-depth analysis. and the curly\nwhiskers from HEPHLI knockout mice could\nhelp these investigations. Our preliminary results\nshowed that HEPHLI regulates the activity of an\nenzyme, lysyl oxidase, which needs copper for\nits enzymatic activity. In conclusion, our study\nidentified HEPHL I as a gene responsible for\nhair abnormalities and highlights the importance\nof exploring the role of HEPHLl-and its\ninterconnections with other key regulators-in\ndeveloping new therapeutic strategies to treat\nhair disorders and even more insidious genetic\ndiseases.\nIn the text, what is the primary function of using\nthe word \"novel\"?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "To show HEPHL1 has never before been classified by researchers",
+      "To emphasize the relationship between HEPHL1 and hair anomalies has only just been identified",
+      "To illustrate HEPHL1 is the newest solution in the fight against genetic diseases",
+      "To point out no one had realized that HEPHL1 existed in mice as well as humans"
     ],
     "answer": 1,
     "explanation": "\"novel\" is used to describe the gene HEPHLI and how it is responsible for hair abnormalities. 'Ihe gene itself is a natural part of the human chromosome, so has presumably been around for a long time. Therefore, \"novel\" is referring to the newly-discovered relationship with hair abnormalities rather than to the existence of the gene itself. \"Novel\" can refer to something that is \"groundbreaking\" or \"innovative,\" so shows that the gene is an innovative answer for why hair abnormalities [PAGE 148 RIGHT] RUCTURE Distractor Explanations: Choice A is incorrect because there is no indication that HEPHLI has never been classified, only that it hasn't been associated as \"responsible for hair abnormalities.\" If the gene itself were newly found, \"novel\" would be better placed in the first line, \"how the novel gene... Choice C is incorrect because there is no indication that the gene is a \"solution,\" only that \"exploring the role\" or \"understanding how it works\" might help find solutions in the future. There is not enough evidence to support Choice D; it is possible that the gene was known before the study.",
@@ -110,7 +110,7 @@ const QUESTIONS = [
   },
   {
     "id": 9,
-    "text": "To show HEPHLI has never before been\nclassified by researchers\nTo emphasize the relationship between\nHEPHLI and hair anomalies has only just\nbeen identified\nTo illustrate HEPHLI is the newest solution\nin the fight against genetic diseases\nTo point out no one had realized that\nHEPHLI existed in mice as well as humans\nUnder the Business Opportunity Rule, as well as\nthe other documents, sellers have to give you a\none-page disclosure document that offers five key\npieces of information. Use the information in the\ndisclosure document to fact-check what the seller\ntells you about the opportunity and what you find\nout from your own research. The document has\nto identify the seller and tell you about certain\nlawsuits or other legal actions involving the seller\nor its key personnel. It must tell you if the seller\nhas a cancellation or refund policy and what the\nterms are. The seller must also give you a list of\nreferences.\nWhat is the main purpose of the text?",
+    "text": "Under the Business Opportunity Rule, as well as\nthe other documents, sellers have to give you a\none-page disclosure document that offers five key\npieces of information. Use the information in the\ndisclosure document to fact-check what the seller\ntells you about the opportunity and what you find\nout from your own research. The document has\nto identify the seller and tell you about certain\nlawsuits or other legal actions involving the seller\nor its key personnel. It must tell you if the seller\nhas a cancellation or refund policy and what the\nterms are. The seller must also give you a list of\nreferences.\nWhat is the main purpose of the text?",
     "options": [
       "It outlines the key documents required by the\nBusiness Opportunity Rule.",
       "It describes one of the essential documents\nthat sellers must provide in a sale.",
@@ -125,10 +125,10 @@ const QUESTIONS = [
     "id": 10,
     "text": "The following text is adapted from F. Scott\nFitzgerald's 1922 novel, The Beautiful and the\nDamned.\nAnthony's recollections of the gallant Ulysses\nwere much more vivid. After Henrietta\nLebrune Patch had \"joined another choir,\"\nas her widower huskily remarked from time\nto time, father and son lived up at grampa's\nin Tarrytown, and Ulysses came daily to\nAnthony's nursery and expelled pleasant,\nthick-smelling words for sometimes as much\nas an hour. He was continually promising\nAnthony hunting trips and fishing trips\nand excursions to Atlantic City, eoh, some\ntime soon now\"; but none of them ever\nmaterialized. One trip they did take; when\nAnthony was eleven they went abroad, to\nEngland and Switzerland, and there in the\nbest hotel in Lucerne his father died with\nmuch sweating and grunting and crying\naloud for air. In a panic of despair and terror\nAnthony was brought back to America,\nwedded to a vague melancholy that was to\nstay beside him through the rest of his life.\nWhat is the main purpose of including details\nabout the episode in the hotel in Lucerne?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "To show that Ulysses ultimately kept his promises",
+      "To highlight the pain during Ulysses' last moments",
+      "To explain why Anthony decided to live in America",
+      "To provide background for a feature in Anthony's personality"
     ],
     "answer": 3,
     "explanation": "The description of Ulysses' death in the hotel gives a valid reason for Anthony to have a \"panic of despair and terror.\" The scene implies that Anthony saw his father die in an unpleasant way, and provides a logical reason that he had a \"vague melancholy\" for the rest of his life. Without knowing about the traumatic event, the reader might wonder why Anthony took his father's death so hard. Distractor Explanations: Choice A is incorrect because Ulysses promised many trips, but only took one. Therefore, the death scene is a somewhat paradoxical image because it shows that Ulysses did not even keep the promise of completing one whole trip with his son; he died before it was over. Choice B is incorrect because, while the scene indicates that Ulysses had a painful death, that is not the reason that the author included the information. If there was no need to establish why Anthony had terror and panic that stayed with him for life, it would be sufficient to know only that his father died. Choice C is incorrect because the passage does not say that Anthony chooses to live in America. He was \"brought back,\" which implies that others made the decision for him when he was too panicked to think for himself.",
@@ -136,7 +136,7 @@ const QUESTIONS = [
   },
   {
     "id": 11,
-    "text": "To show that Ulysses ultimately kept his\npromises\nTo highlight the pain during Ulysses' last\nmoments\nTo explain why Anthony decided to live in\nAmerica\nTo provide background for a feature in\nAnthony's personality\nIhe following text is from Frances Hodgson\nBurnett's 1905 novel, A Little Princess.\nIf Sara had been older or less punctilious\nabout being quite polite to people, she could\nhave explained herself in a very few words.\nas it was. she felt a flush rising on her\ncheeks. Miss Minchin was a very severe\nand imposing person, and she seemed so\nabsolutely sure that Sara knew nothing\nwhatever of French that she felt as if it would\nbe almost rude to correct her. The truth was\nthat Sara could not remember the time when\nshe had not seemed to know French.\nWhich choice best states the function of the\nunderlined sentence in the text as a whole?",
+    "text": "The following text is from Frances Hodgson\nBurnett's 1905 novel, A Little Princess.\nIf Sara had been older or less punctilious\nabout being quite polite to people, she could\nhave explained herself in a very few words.\nas it was. she felt a flush rising on her\ncheeks. Miss Minchin was a very severe\nand imposing person, and she seemed so\nabsolutely sure that Sara knew nothing\nwhatever of French that she felt as if it would\nbe almost rude to correct her. The truth was\nthat Sara could not remember the time when\nshe had not seemed to know French.\nWhich choice best states the function of the\nunderlined sentence in the text as a whole?",
     "options": [
       "It gives a description of the physical\nappearance of one of the characters.",
       "It establishes why one of the characters was\nnot comfortable in the situation.",
@@ -151,10 +151,10 @@ const QUESTIONS = [
     "id": 12,
     "text": "Ihe following text is adapted from Mother Jone\"\n1912 speech in Charlestown, West Virginia, on\nAugust 15, 1912.\nThe proper thing to do is to read the purpose\nof our meeting here today - why these men\nhave laid down their tools and come to\nthe statehouse. The guards of the mining\ncompanies beat, abuse, maim, and hold\nup citizens without process of law; deny\nfreedom of speech; deny the citizens the right\nto assemble in a peaceable manner for the\npurpose of discussing questions in which they\nare concerned. I hope, my friends. that you\nand the mine owners will put aside the breach\nand get together before I leave the State. But\nI want to say, make no settlement until they\nsign up that every bloodx murder?E of a guard\nhas got to go.\nWhat is the main function of the phrase \"bloody\nmurderer\"?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "It describes the tactics used by certain guards.",
+      "It offers the reason that guards must be removed.",
+      "It suggests that guards overreached the orders of the mine owners.",
+      "It emphasizes the inhumanity exhibited by the guards."
     ],
     "answer": 3,
     "explanation": "\"inhumanity\" refers to actions that are extremely cruel or brutal. The passage says that the \"guards of the mining companies beat, abuse, maim, and hold up citizens without process of law,\" which are all cruel or bad acts. Ihe phrase \"bloody murderer\" shows that Mother Jones feels that the guards are not just \"bad,\" but have reached the worst possible level of crime and brutality. Distractor Explanations: Choice A is incorrect because the passage does not say that the guards actually murder anyone. only that they \"beat, abuse, maim, and hold up citizens without process of law.\" Therefore, -bloody murderer\" is not a literal description of the methods they use. Choice B is incorrect because, while murder would be a reason to remove the guards, there is no evidence that the guards murdered. The phrase only shows the extent of Mother Jones's contempt for the guards. Choice C is incorrect because the passage implies that the mine owners approve of the guards' tactics. There is no evidence to show that the mine owners think that the guards have gone too far in their actions. [PAGE 150 LEFT] CRAFT AND STI",
@@ -162,7 +162,7 @@ const QUESTIONS = [
   },
   {
     "id": 13,
-    "text": "It describes the tactics used by certain guards.\nIt offers the reason that guards must be\nremoved.\nIt suggests that guards overreached the orders\nof the mine owners.\nIt emphasizes the inhumanity exhibited by the\nguards.\nThe following text is adapted from E Scott\nFitzgerald's 1922 novel, The Beautiful and the\nDamned.\nEarly in his career Adam Patch had married\nan anemic lady of thirty, Alicia Withers, who\nbrought him one hundred thousand dollars\nand an impeccable entr� into the banking\ncircles of New York Immediately and rather\npunkily she had borne him a son and. as if\ns\ncompletely devitalized by the magnificence of\nthis performance, she had thenceforth effaced\nherself within the shadowy dimensions\nof the nursery. The boy, Adam Ulysses\nPatch, became an inveterate joiner of clubs,\nconnoisseur of good form. and driver of\ntandems-at the astonishing age of twenty-six\nhe began his memoirs under the title \"New\nYork Society as I Have Seen It.\" On the rumor\nof its conception this work was eagerly bid\nfor among publishers, but as it proved after\nhis death to be immoderately verbose and\noverpoweringly dull, it never obtained even a\nprivate printing.\nWhat is the main function of the word\n\"astonishing\" in the overall structure of the text?",
+    "text": "The following text is adapted from F Scott\nFitzgerald's 1922 novel, The Beautiful and the\nDamned.\nEarly in his career Adam Patch had married\nan anemic lady of thirty, Alicia Withers, who\nbrought him one hundred thousand dollars\nand an impeccable entr� into the banking\ncircles of New York Immediately and rather\npunkily she had borne him a son and. as if\ns\ncompletely devitalized by the magnificence of\nthis performance, she had thenceforth effaced\nherself within the shadowy dimensions\nof the nursery. The boy, Adam Ulysses\nPatch, became an inveterate joiner of clubs,\nconnoisseur of good form. and driver of\ntandems-at the astonishing age of twenty-six\nhe began his memoirs under the title \"New\nYork Society as I Have Seen It.\" On the rumor\nof its conception this work was eagerly bid\nfor among publishers, but as it proved after\nhis death to be immoderately verbose and\noverpoweringly dull, it never obtained even a\nprivate printing.\nWhat is the main function of the word\n\"astonishing\" in the overall structure of the text?",
     "options": [
       "It indicates irony.",
       "It expresses admiration.",
@@ -177,10 +177,10 @@ const QUESTIONS = [
     "id": 14,
     "text": "The following text is adapted from Chapter 1\nof Moby Dick; or The Whale. copyright 1851 by\nHerman Melville.\nI always go to sea as a sailor, because of\nthe wholesome exercise and pure air of the\nfore-castle deck. For as in this world, head\nwinds are far more prevalent than winds from\nastern, so for the most part the Commodore\non the quarter-deck gets his atmosphere\nat second hand from the sailors on the\nforecastle. He thinks he breathes it first; but\nnot so. But wherefore it was that after having\nrepeatedly smelt the sea as a merchant sailor,\nI should now take it into my head to go on\na whaling voyage; this the invisible police\nofficer of the Fates, who has the constant\nsurveillance of me, and secretly dogs me,\nand influences me in some unaccountable\nway-he can better answer than any one else.\nIt-gamg.�n.as-a..sqr.LQf brief-interlude-and.solsu\nWhat is the main function of the final sentence in\nthe context of the text?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "It indicates that whaling was not the narrator's usual occupation.",
+      "It foreshadows a tragedy that the narrator does not want to repeat.",
+      "It offers the narrator's rationale for embarking on a whaling voyage.",
+      "It explains that the narrator could not find longer employment at the time."
     ],
     "answer": 0,
     "explanation": "The narrator is using the analogy of the theater to show that the whaling voyage was \"brief\" or \"short\" compared to his \"extensive performances\" or \"longer jobs\" as a merchant [PAGE 150 RIGHT] RUCTURE sailor. The word \"solo\" hints that he only went on one whaling voyage, so it was not his \"usual\" or \"regular\" employment. Distractor Explanations: Choice B is incorrect because the final sentence does not give any clue that a \"tragedy\" or \"sad story\" will follow. It only indicates that the experiences on the whaling boat, whatever they were, were a short break in his regular work. Choice C is incorrect because the final sentence does not give a \"rationale\" or \"reason\" for going on the voyage. The narrator indicates in the previous sentence that he does not really know why he chose to go; the final sentence explains that he only went once. Choice D is incorrect because, although the final sentence says that the narrator had had longer positions, it does not say that the narrator had no other choices when he decided to go on a whaling",
@@ -188,7 +188,7 @@ const QUESTIONS = [
   },
   {
     "id": 15,
-    "text": "It indicates that whaling was not the narratoes\nusual occupation.\nIt foreshadows a tragedy that the narrator\ndoes not want to repeat.\nIt offers the narrator's rationale for embarking\non a whaling voyage.\nIt explains that the narrator could not find\nlonger employment at the time.\nIhe vegan diet has gained momentum in recent\nyears, with more people transitioning to the\ndiet, whether for health or more ethically-based\nreasons. The vegan diet, often characterized as\nvery restrictive, is associated with health benefits\nbut raises concerns. Controversy regarding the\ndiet exists within the public sphere, with those\nactively supporting and advocating for it, and\nothers questioning its purpose and proposed\nbenefits, even disparaging its existence, perhaps\nbecause of a lack of knowledge about the diet.\nTherefore, a study led by Sarah Mann aimed to\nprovide a fuller picture of the vegan diet in which\nno animal products are eaten, encompassing both\nthe nutrition and health of the vegan diet as well\nas related ethical beliefs by studying scientific and\npopular literature in tandem.\nWhat is the main function of the text?",
+    "text": "The vegan diet has gained momentum in recent\nyears, with more people transitioning to the\ndiet, whether for health or more ethically-based\nreasons. The vegan diet, often characterized as\nvery restrictive, is associated with health benefits\nbut raises concerns. Controversy regarding the\ndiet exists within the public sphere, with those\nactively supporting and advocating for it, and\nothers questioning its purpose and proposed\nbenefits, even disparaging its existence, perhaps\nbecause of a lack of knowledge about the diet.\nTherefore, a study led by Sarah Mann aimed to\nprovide a fuller picture of the vegan diet in which\nno animal products are eaten, encompassing both\nthe nutrition and health of the vegan diet as well\nas related ethical beliefs by studying scientific and\npopular literature in tandem.\nWhat is the main function of the text?",
     "options": [
       "To define key terms about veganism",
       "To provide background for a study",
@@ -307,10 +307,10 @@ const QUESTIONS = [
     "id": 24,
     "text": "The following text is adapted from Lewis Carroll's\n1869 poem, Poeta Fit. Non Nascitur.\n\"In verse, when you are describing\nA shape, or sound, or tint;\nDon't state the matter plainly,\nBut put it in a hint;\nAnd learn to look at all things\nWith a sort of mental squint.\"\n\"For instance, if I wished, Sir,\nOf mutton-pies to tell,\nShould I say 'dreams of fleecy flocks\nPent in a wheaten celli?\"\n\"Why, yes,\" the old man said: \"that phrase\nWould answer very well.\"\nWhat is the purpose of the reference to mutton\npies in the overall structure of the text?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "It is given as a method for producing verse.",
+      "It offers an example to confirm some advice.",
+      "It is a sarcastic allusion to a shared reference.",
+      "It indicates that the speaker wants to change the subject."
     ],
     "answer": 1,
     "explanation": "The first person gives instructions about not stating a matter plainly. The mutton pies are part of a question about wording, since they paraphrased as dreams of fleecy flocks / Pent in a wheaten cell'? The response is that the phrase \"would answer well\" or \"is good.\" Therefore, the mutton pies are an example that the old man \"confirms\" or \"agrees are acceptable.\" [PAGE 153 RIGHT] ld Purpose (Answers) Distractor Explanations: Choice A is incorrect because the method is given in the first verse: describe things vaguely with a \"mental squint.\" Choice C is incorrect because there is no indication that the question is \"sarcastic\" or spoken with irony; furthermore, there is no indication that there is a specific reference or backstory that both the speakers know about pies. Choice D is incorrect because the speaker is asking a question that is on the topic of writing verse, not changing the topic to something else.",
@@ -318,7 +318,7 @@ const QUESTIONS = [
   },
   {
     "id": 25,
-    "text": "It is given as a method for producing verse.\nIt offers an example to confirm some advice.\nIt is a sarcastic allusion to a shared reference.\nIt indicates that the speaker wants to change\nthe subject.\nEarth has over 200,000 glaciers, but global\nwarming has been greatly accelerating the\nmelting process so that they are now shrinking at\nunprecedented rates. One study hypothesizes that\nmanmade contributions to global warming are\naccountable for the loss of one hundred percent\nof the glacial ice since 1850. Actually,\nmay-he.-wo-eng-hundr.gd-pgr.sgnt, as without\nthose pressures placed on them, many glaciers\nmight have added ice and increased in size during\nthat time period.\nWhat is the function of the underlined portion in\nthe overall structure of the text?",
+    "text": "Earth has over 200,000 glaciers, but global\nwarming has been greatly accelerating the\nmelting process so that they are now shrinking at\nunprecedented rates. One study hypothesizes that\nmanmade contributions to global warming are\naccountable for the loss of one hundred percent\nof the glacial ice since 1850. Actually,\nmay-he.-wo-eng-hundr.gd-pgr.sgnt, as without\nthose pressures placed on them, many glaciers\nmight have added ice and increased in size during\nthat time period.\nWhat is the function of the underlined portion in\nthe overall structure of the text?",
     "options": [
       "It points out a discrepancy in calculations.",
       "It emphasizes the extent of a problem.",

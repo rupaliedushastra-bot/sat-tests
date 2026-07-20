@@ -1,345 +1,137 @@
 // =============================================
-// Digital SAT Practice - Topic: topic_nonlinear_functions
-// 25 Questions
+// Digital SAT Practice - Regenerated
+// 10 Questions
 // =============================================
 
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "Question 1 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 2^x + 1 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "7",
+      "5",
+      "3",
+      "5"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 1,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 2,
-    "text": "Question 2 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 4^x + 1 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "21",
+      "9",
+      "13",
+      "17"
     ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 3,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 1 = 16 + 1 = 17 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 3,
-    "text": "Question 3 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 2^x + 3 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "7",
+      "5",
+      "9",
+      "7"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 0,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 3 = 4 + 3 = 7 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 4,
-    "text": "Question 4 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 2^x + 1 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "5",
+      "3",
+      "5",
+      "7"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 5,
-    "text": "Question 5 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 2^x + 4 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "8",
+      "10",
+      "8",
+      "6"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 0,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 4 = 4 + 4 = 8 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 6,
-    "text": "Question 6 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 5^x + 3 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "23",
+      "13",
+      "33",
+      "28"
     ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 3,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 5^2 + 3 = 25 + 3 = 28 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 7,
-    "text": "Question 7 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 4^x + 5 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "13",
+      "25",
+      "21",
+      "17"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 2,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 5 = 16 + 5 = 21 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 8,
-    "text": "Question 8 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 5^x + 3 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "13",
+      "28",
+      "23",
+      "33"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 5^2 + 3 = 25 + 3 = 28 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 9,
-    "text": "Question 9 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 4^x + 5 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "21",
+      "13",
+      "17",
+      "25"
     ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "answer": 0,
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 5 = 16 + 5 = 21 \\).",
+    "topic": "Nonlinear Functions"
   },
   {
     "id": 10,
-    "text": "Question 10 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
+    "text": "A function is defined by \\( f(x) = 3^x + 1 \\). What is the value of \\( f(2) \\)?",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 11,
-    "text": "Question 11 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "7",
+      "7",
+      "13",
+      "10"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 12,
-    "text": "Question 12 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 13,
-    "text": "Question 13 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 14,
-    "text": "Question 14 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 15,
-    "text": "Question 15 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 16,
-    "text": "Question 16 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 17,
-    "text": "Question 17 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 18,
-    "text": "Question 18 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 19,
-    "text": "Question 19 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 20,
-    "text": "Question 20 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 21,
-    "text": "Question 21 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 22,
-    "text": "Question 22 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 23,
-    "text": "Question 23 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 24,
-    "text": "Question 24 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
-  },
-  {
-    "id": 25,
-    "text": "Question 25 — Functions & Parabola\n\nRefer to the question image below. Select the correct answer.",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
-    "topic": "Functions & Parabola"
+    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 3^2 + 1 = 9 + 1 = 10 \\).",
+    "topic": "Nonlinear Functions"
   }
 ];
-
-const TOPIC_MAP = {};
-QUESTIONS.forEach(q => {
-  const key = q.topic || 'General';
-  if (!TOPIC_MAP[key]) {
-    TOPIC_MAP[key] = { name: key, questions: [] };
-  }
-  TOPIC_MAP[key].questions.push(q.id);
-});
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { QUESTIONS, TOPIC_MAP };
-}

@@ -11,7 +11,7 @@ const QUESTIONS = [
       "It is incorrect, because systems change too many aspects of the region.",
       "It is overly optimistic, because there are no examples of improvement.",
       "It is justifiable, because systems may create new habitats for birds.",
-      "It is valid, because many systems have"
+      "It is valid, because many systems have demonstrated unexpected side benefits."
     ],
     "answer": 2,
     "explanation": "\"justifiable\" means that a claim is reasonable because it is possibly true. The passage says, \"Potential positive effects such as the creation of roosting sites and habitat enhancement for marine birds might occur as well.\" Therefore, according to the passage, the claim that despite some risks, the idea that there be potential positive effects is reasonable. Distractor Explanations: Choice A is incorrect because \"incorrect\" means that the claim is not true at all. Although tidal energy systems may change many aspects of the region, there may also be some positive changes. Choice B is incorrect because \"overly\" means \"too.\" Although the claim is optimistic, there is a potential that it is true, so it is not \"too optimistic.\" Choice D is incorrect because, while the claim is valid, side benefits have not been \"demonstrated\" or \"proven.\" The passage only offers \"potential\" or \"theoretical\" advantages. 34.",
@@ -19,7 +19,7 @@ const QUESTIONS = [
   },
   {
     "id": 2,
-    "text": "demonstrated unexpected side benefits.\nAn antibody-based drug is one candidate for a\nmore effective, longer-lasting overdose treatment\nthan the current method of using a drug called\nnaloxone. To explore this possibility, a team at\nScripps Research Institute led by Kim D. Janda\ndeveloped a potentially effective biological\ncompound based on antibodies from mice.\n\"Combining the new drug and naloxone could\noffer treatment that is both fast and long-acting,\"\nJanda says. Allegheny Health Network Research\nInstitute's Saadyah Averick, who has worked on\nextending naloxone's lifetime using nanoparticles\nsays the work offers a \"unique and orthogonal\napproach to sequester the potent synthetic\nopioids.\" He says the antibodies' specificity and\nlonger circulation is interesting but wonders\nabout the antibodies' practicality as a treatment:\nbiological therapies are much more expensive to\nmake because they require special manufacturing\nfacilities and storage, he says.\nAs described in the text, which choice best\ndescribes the relationship between Kim D. Janda\nand Saadyah Averick?",
+    "text": "An antibody-based drug is one candidate for a\nmore effective, longer-lasting overdose treatment\nthan the current method of using a drug called\nnaloxone. To explore this possibility, a team at\nScripps Research Institute led by Kim D. Janda\ndeveloped a potentially effective biological\ncompound based on antibodies from mice.\n\"Combining the new drug and naloxone could\noffer treatment that is both fast and long-acting,\"\nJanda says. Allegheny Health Network Research\nInstitute's Saadyah Averick, who has worked on\nextending naloxone's lifetime using nanoparticles\nsays the work offers a \"unique and orthogonal\napproach to sequester the potent synthetic\nopioids.\" He says the antibodies' specificity and\nlonger circulation is interesting but wonders\nabout the antibodies' practicality as a treatment:\nbiological therapies are much more expensive to\nmake because they require special manufacturing\nfacilities and storage, he says.\nAs described in the text, which choice best\ndescribes the relationship between Kim D. Janda\nand Saadyah Averick?",
     "options": [
       "Averick is a researcher in the same field who has reservations about Janda's work-",
       "Both researchers are working to create antibody treatments for opiate overdoses.",
@@ -37,7 +37,7 @@ const QUESTIONS = [
       "It is not clear whether the results are solely due to partaking in a vegan diet.",
       "The diet is sometimes adopted for ethical rather than health purposes.",
       "The study relied on a literature review opposed to obtaining firsthand data.",
-      "It is important to include additions which are"
+      "It is important to include additions which are not directly deprived from plants."
     ],
     "answer": 3,
     "explanation": "The text concludes that \"a well-rounded vegan diet is healthy and such is evidenced by the variety of whole foods and increased vegetable and fruit intake.\" However, she also admits that certain nutrients, such as \"calcium, vitamin D, iron, and particularly vitamin B- 12\" are insufficient from a plant-based diet, so that \"supplements\" or \"additions\" need to be taken. Since plants do not provide all the nutrients humans need, then the conclusion that veganism is sufficient to be healthy may be brought into doubt. Distractor Explanations: Choice A is incorrect because there is no reason to question that stated findings may be in error. Choice B is incorrect because even ifthe diet is \"adopted\" or \"started\" for ethical reasons, it still can have health benefits. Choice C is incorrect because it is unclear where the research findings were derived from. 36.",
@@ -45,7 +45,7 @@ const QUESTIONS = [
   },
   {
     "id": 4,
-    "text": "not directly deprived from plants.\nAsheville, North Carolina, has a population\nof about 95,000 people and around 100 bears.\nThe bears are bold enough to walk down streets\nduring the daylight and cavort around playground\nequipment. A recent study tagged and tracked\nfemale bears that were around one year old and\nfound that the average weight of the urban bears\nwas nearly double that of their rural counterparts,\nprobably due to the addition of human-generated\nfood sources. Another benefit of the close contact\nwas that the female bears were able to reproduce\nas early as 2 years. However, there are drawbacks\nto urban cohabitation for the bears:\nWhich choice most logically completes the text?",
+    "text": "Asheville, North Carolina, has a population\nof about 95,000 people and around 100 bears.\nThe bears are bold enough to walk down streets\nduring the daylight and cavort around playground\nequipment. A recent study tagged and tracked\nfemale bears that were around one year old and\nfound that the average weight of the urban bears\nwas nearly double that of their rural counterparts,\nprobably due to the addition of human-generated\nfood sources. Another benefit of the close contact\nwas that the female bears were able to reproduce\nas early as 2 years. However, there are drawbacks\nto urban cohabitation for the bears:\nWhich choice most logically completes the text?",
     "options": [
       "over 40 percent of the cubs died during the 4- year study, mostly due to vehicle strikes.",
       "sometimes the bears have attacked and injured people or pets such as small dogs.",
@@ -63,7 +63,7 @@ const QUESTIONS = [
       "The fruits selected for measurement may not have been representative of the other fruits in the group.",
       "The change in size may have been based on variations in temperature rather than amount of salt.",
       "Fluctuation in light as fruits develop can affect the nutritional value of the mature fruit.",
-      "The results of the experiment may not be"
+      "The results of the experiment may not be applicable to a wide variety of plant species."
     ],
     "answer": 0,
     "explanation": "The passage only says that some fruits from each plant were selected to determine the nutritional value. It does not give any information about how the fruits were chosen. For example, if only the largest ones were taken from one plant and the smallest from another, the results might be skewed based on that decision. Distractor Explanations: Choices B and C are incorrect because the passage directly states that the temperature and light were kept consistent throughout the experiment. Therefore, the variations resulted from another cause. Choice D is incorrect because while it is true that the results may not apply to other plants than apples, the study never claims that they do. 38.",
@@ -71,7 +71,7 @@ const QUESTIONS = [
   },
   {
     "id": 6,
-    "text": "applicable to a wide variety of plant species.\nEnid Marx was an industrial designer who was\nhired by the London Passenger Transport Board\nin 1937 to design textiles for use on the seats of\nbuses and trains. The project was challenging\nbecause the patterns needed to hide dirt and wear.\nyet at the same time, reduce the sense of nausea\nsometimes experienced when looking at patterns\nin motion. Marx successfully completed this task,\nbut it took experimentation. At first, she worked\nwith subtle earth colors, but eventually realized\nthat almost the opposite was most effective:\nWhich choice most logically completes the text?",
+    "text": "Enid Marx was an industrial designer who was\nhired by the London Passenger Transport Board\nin 1937 to design textiles for use on the seats of\nbuses and trains. The project was challenging\nbecause the patterns needed to hide dirt and wear.\nyet at the same time, reduce the sense of nausea\nsometimes experienced when looking at patterns\nin motion. Marx successfully completed this task,\nbut it took experimentation. At first, she worked\nwith subtle earth colors, but eventually realized\nthat almost the opposite was most effective:\nWhich choice most logically completes the text?",
     "options": [
       "her \"shield\" pattern was used for decades in the London Underground.",
       "she was also noted for engraving the designs for several postage stamps.",
@@ -115,7 +115,7 @@ const QUESTIONS = [
       "is employing various media to spread the use of the native language.",
       "has made efforts to block roads to prevent disrespectful behavior-",
       "has created a performance and healing song to honor the land-",
-      "is protesting the lack of affordable housing for"
+      "is protesting the lack of affordable housing for residents in the region."
     ],
     "answer": 0,
     "explanation": "\"so\" shows that the blank is finishing the idea of what Masso is doing because language is essential for regrowing a sense of community. Choice A gives a logical result of his conviction: he is spreading the use of the language in many Distractor Explanations: None of the other choices address the result of Masso's belief that language is important for a sense of community. They show different aspects of his activism to protect the land and honor it, but do not show how language is integrated into the efforts. 42.",
@@ -123,7 +123,7 @@ const QUESTIONS = [
   },
   {
     "id": 10,
-    "text": "residents in the region.\nBergmann's Rule is a biological observation made\nin 1847 which points out that within a species,\nbody mass increases as the climate gets colder, so\nanimals at higher latitudes have less surface area\ncompared to the mass. For example, Canadian\ndeer in regions with snow in the winter are\nbulkier than southern deer of the same species in\norder to conserve heat. By contrast, the southern\ndeer have lighter builds because\nWhich choice most logically completes the text?",
+    "text": "Bergmann's Rule is a biological observation made\nin 1847 which points out that within a species,\nbody mass increases as the climate gets colder, so\nanimals at higher latitudes have less surface area\ncompared to the mass. For example, Canadian\ndeer in regions with snow in the winter are\nbulkier than southern deer of the same species in\norder to conserve heat. By contrast, the southern\ndeer have lighter builds because\nWhich choice most logically completes the text?",
     "options": [
       "the extra surface area allows them to disperse heat in the warmer climate.",
       "they do not need to store as much fat to carry them through the winter months.",
@@ -141,7 +141,7 @@ const QUESTIONS = [
       "she died in 2000 without receiving a penny for her incredible invention.",
       "her invention became the basis of systems such as WiFi, Bluetooth, and GPS.",
       "in 2014, she was inducted into the National Inventors Hall of Fame.",
-      "she received a patent for the invention in"
+      "she received a patent for the invention in 1942, and in 1943 became a US. citizen."
     ],
     "answer": 1,
     "explanation": "The blank portion must complete the idea of how Lamarr \"changed the world of communication.\" Choice B offers a very important change: her invention was the \"basis\" or \"foundation\" for systems that are widely used today. Distractor Explanations: None of the other choices offers any way that Lamarr \"changed the world of communication.\" Choice A says she did not get money for her work, but does not say how the work was used. Choice C indicates that she was recognized as being important, but does not say why. Choice D says that she got a patent, but not that the patent was ever put to use; becoming a citizen is an unrelated detail. 44.",
@@ -149,7 +149,7 @@ const QUESTIONS = [
   },
   {
     "id": 12,
-    "text": "1942, and in 1943 became a US. citizen.\nRadiocarbon dating offers archaeologists and\nother scientists a range of dates rather than a\nprecise year in which an object was made. By\ncontrast, dendrochronology, or the science\nof tree-ring dating, can offer more specific\ninformation. Trees add growth every year in\npredictable patterns called rings, but the exact\nwidth of the ring varies depending on certain\nclimatic conditions such as abundance of\nrain. Comparing rings of different trees allows\nscientists to determine when the tree lived, and by\nextension,\nWhich choice most logically completes the text?",
+    "text": "Radiocarbon dating offers archaeologists and\nother scientists a range of dates rather than a\nprecise year in which an object was made. By\ncontrast, dendrochronology, or the science\nof tree-ring dating, can offer more specific\ninformation. Trees add growth every year in\npredictable patterns called rings, but the exact\nwidth of the ring varies depending on certain\nclimatic conditions such as abundance of\nrain. Comparing rings of different trees allows\nscientists to determine when the tree lived, and by\nextension,\nWhich choice most logically completes the text?",
     "options": [
       "it is also possible to determine the ages more generally using other techniques.",
       "European oak trees from Germany have extremely long lives if not cut down.",
@@ -167,7 +167,7 @@ const QUESTIONS = [
       "sometimes the caves are not found for thousands of years until part of the wall",
       "the caves rapidly fill with microbes that thrive in the extreme environment.",
       "volcanoes can produce other stone structures depending on the eruption patterns.",
-      "the largest tube cave in the world is Kazumura"
+      "the largest tube cave in the world is Kazumura Cave in Hawaii, at 40 miles long."
     ],
     "answer": 1,
     "explanation": "The blank portion is preceded by \"because,\" so it needs a reason that explains the previous claim that scientists might be able to understand life on other planets. Choice B says that the caves fill with microbes, a form of life, after being sterile, so studying how they appear and thrive in the \"extreme environment\" or \"harsh habitat\" may explain how similar microbes appear and survive elsewhere. Distractor Explanations: Choice A is incorrect because it does not clearly relate to learning about life on other planets. It is possible that the isolated environment can protect a species, but the reader is not given an explanation since the caves are apparently sterile. Choice C is incorrect because it discusses another thing that volcanoes do rather than offers a reason that scientists are excited about the possibility of learning about life on other planets. Choice D just gives an unrelated fact about a tube cave. 46. Level: Medium I Skill/Knowledge: Command of Evidence (Textual) [PAGE 87 RIGHT] Evidence (Answers)",
@@ -175,7 +175,7 @@ const QUESTIONS = [
   },
   {
     "id": 14,
-    "text": "Cave in Hawaii, at 40 miles long.\nStarting around 1200 B.C, the Phoenicians\ncreated a fabric dye that was reddish purple in\ncolor from snails from the Muricidae family.\nMaking the dye was extremely time-consuming\nbecause it required thousands of snails to produce\nsizeable amounts of pigment, and the process\nhad many complicated steps. The color was so\nhighly coveted that it was mainly used in the early\nRoman Empire for ceremonial purposes such as\nsenatorial robes, and by the fourth century, there\nwere laws stating that only the emperor could use\nit. As a result, the dye\nWhich choice most logically completes the text?",
+    "text": "Starting around 1200 B.C, the Phoenicians\ncreated a fabric dye that was reddish purple in\ncolor from snails from the Muricidae family.\nMaking the dye was extremely time-consuming\nbecause it required thousands of snails to produce\nsizeable amounts of pigment, and the process\nhad many complicated steps. The color was so\nhighly coveted that it was mainly used in the early\nRoman Empire for ceremonial purposes such as\nsenatorial robes, and by the fourth century, there\nwere laws stating that only the emperor could use\nit. As a result, the dye\nWhich choice most logically completes the text?",
     "options": [
       "is frequently referred to as imperial or royal",
       "changes color as it ages because it is not completely permanent.",
@@ -193,7 +193,7 @@ const QUESTIONS = [
       "the fact that scientists theorized that there were earlier supercontinents that formed billions of years prior to Pangaea.",
       "Alfred Wegener's theory of continental drift powered by centrifugal force from the Earth's rotation, which was later proved to be",
       "fossil evidence which reveals ancient life forms that are similar or identical in places that are completely isolated from each other today.",
-      "the hypothesis that the very active volcanism"
+      "the hypothesis that the very active volcanism caused by the breaking up of the continent\nled to global warming and the highest ocean\nlevels to date."
     ],
     "answer": 2,
     "explanation": "The unfinished sentence is stating what offers \"further confirmation\" or \"more that Pangaea existed. Choice C gives a reason to believe that the supercontinent existed: fossils from places that are \"isolated\" or \"apart\" show the same type of creatures from areas that remained connected. That discrepancy would be easy to explain if the places were once together; the animals lived together in the past, but their fossils were carried apart when the continent broke apart. Distractor Explanations: Choice A is incorrect because it only refers to another theory, so there is no proof that Pangaea existed- Choice B also does [PAGE 88 LEFT] INFORMATION not show that Pangaea existed because it offers a suggestion that was wrong. Choice D is incorrect because it refers to a \"hypothesis\" or \"educated guess\" about oceans rather than giving any facts to show that Pangaea existed. 48.",
@@ -201,7 +201,7 @@ const QUESTIONS = [
   },
   {
     "id": 16,
-    "text": "caused by the breaking up of the continent\nled to global warming and the highest ocean\nlevels to date.\nDespite the name, an electric eel is not actually\neel. but is part of a group of fish living in South\nAmerica that are more closely related to catfish.\nTheir preferred prey is smaller fish, and they have\nthe ability to generate an electric charge up to 860\nvolts, which is enough to stun or even kill prey\nor predators as large as a cow. They do not just\nuse their electric ability for hunting and defense,\nWhich choice most logically completes the text?",
+    "text": "Despite the name, an electric eel is not actually\neel. but is part of a group of fish living in South\nAmerica that are more closely related to catfish.\nTheir preferred prey is smaller fish, and they have\nthe ability to generate an electric charge up to 860\nvolts, which is enough to stun or even kill prey\nor predators as large as a cow. They do not just\nuse their electric ability for hunting and defense,\nWhich choice most logically completes the text?",
     "options": [
       "as they have three electricity-producing organs which generate different charges.",
       "and the electric battery was invented in 1800 based on studying electric eels.",
@@ -283,7 +283,7 @@ const QUESTIONS = [
     "options": [
       "The cost of opening a Beef o Brady's franchise is significantly higher than opening a Great Steak franchise.",
       "The cost of land for building a Wings, etc. franchise is more expensive than for many other franchises.",
-      "The start-up costs for one franchise, Wings, etc., range from well under S500,000 to about smooo,ooo.",
+      "The start-up costs for one franchise, Wings, etc., range from well under $500,000 to about $1,500,000.",
       "Investors with less than $500,000 can still have enough money to start a legitimate franchise."
     ],
     "answer": 2,

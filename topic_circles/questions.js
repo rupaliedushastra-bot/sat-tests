@@ -38,7 +38,7 @@ const QUESTIONS = [
     "id": 3,
     "useImage": true,
     "imageKey": "q3_circle_16pi",
-    "text": "If the area of a circle is 16π, what is the radius?",
+    "text": "If the area of a circle is \( 16\pi \), what is the radius?",
     "options": [
       "2",
       "3",
@@ -46,14 +46,14 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 2,
-    "explanation": "The area of a circle is given by A = πr². Setting πr² = 16π and dividing both sides by π gives r² = 16. Taking the square root gives r = 4. A) Incorrect; misunderstanding the area formula. B) Incorrect; wrong square root. D) Incorrect; overestimating the radius.",
+    "explanation": "The area of a circle is given by \( A = \pi r^2 \). Setting πr² = \( 16\pi \) and dividing both sides by π gives \( r^2 = 16 \). Taking the square root gives \( r = 4 \). A) Incorrect; misunderstanding the area formula. B) Incorrect; wrong square root. D) Incorrect; overestimating the radius.",
     "topic": "Circle Area & Radius"
   },
   {
     "id": 4,
     "useImage": true,
     "imageKey": "q4_circle_25pi",
-    "text": "If the area of a circle is 25π square units, what is the radius?",
+    "text": "If the area of a circle is \( 25\pi \) square units, what is the radius?",
     "options": [
       "5",
       "10",
@@ -61,7 +61,7 @@ const QUESTIONS = [
       "50"
     ],
     "answer": 0,
-    "explanation": "The area of a circle is given by A = πr². Setting πr² = 25π and dividing both sides by π gives r² = 25. Taking the square root gives r = 5. B), C), D) Incorrect; arithmetic errors in solving for r, such as forgetting to take the square root.",
+    "explanation": "The area of a circle is given by \( A = \pi r^2 \). Setting πr² = \( 25\pi \) and dividing both sides by π gives \( r^2 = 25 \). Taking the square root gives \( r = 5 \). B), C), D) Incorrect; arithmetic errors in solving for r, such as forgetting to take the square root.",
     "topic": "Circle Area & Radius"
   },
   {
@@ -76,7 +76,7 @@ const QUESTIONS = [
       "40 square units"
     ],
     "answer": 0,
-    "explanation": "The area of a triangle is given by A = (1/2) × base × height = (1/2) × 10 × 5 = 25 square units. B) Incorrect; misunderstanding the formula. C) Incorrect; incorrect multiplication. D) Incorrect; error in calculation (e.g., forgetting the 1/2 factor).",
+    "explanation": "The area of a triangle is given by \( A = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2} \times 10 \times 5 = 25 \) square units. B) Incorrect; misunderstanding the formula. C) Incorrect; incorrect multiplication. D) Incorrect; error in calculation (e.g., forgetting the 1/2 factor).",
     "topic": "Triangle Area"
   },
   {
@@ -91,7 +91,7 @@ const QUESTIONS = [
       "36 cubic units"
     ],
     "answer": 2,
-    "explanation": "The volume of a cube is given by V = s³. Substituting s = 3 gives V = 3³ = 27 cubic units. A) Incorrect; squares the side instead of cubing it. B) Incorrect; incorrect multiplication. D) Incorrect; misunderstanding the formula.",
+    "explanation": "The volume of a cube is given by \( V = s^3 \). Substituting s = 3 gives \( V = 3^3 = 27 \) cubic units. A) Incorrect; squares the side instead of cubing it. B) Incorrect; incorrect multiplication. D) Incorrect; misunderstanding the formula.",
     "topic": "Cube Volume"
   },
   {
@@ -104,7 +104,7 @@ const QUESTIONS = [
       "8 units"
     ],
     "answer": 1,
-    "explanation": "The perimeter of a rectangle is P = 2(l + w). Given P = 24 and l = 8: 24 = 2(8 + w), so 24 = 16 + 2w. Subtracting 16 from both sides gives 2w = 8, so w = 4 units. A) Incorrect; misunderstanding the perimeter formula. C) Incorrect; error in subtraction. D) Incorrect; confuses length with width.",
+    "explanation": "The perimeter of a rectangle is \( P = 2(l + w) \). Given P = 24 and l = 8: 24 = \( 2(8 + w) \), so 24 = \( 16 + 2w \). Subtracting 16 from both sides gives \( 2w = 8 \), so \( w = 4 \) units. A) Incorrect; misunderstanding the perimeter formula. C) Incorrect; error in subtraction. D) Incorrect; confuses length with width.",
     "topic": "Rectangle Perimeter"
   },
   {
@@ -117,7 +117,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "The perimeter of a square is given by 4 × side length. Setting 4 × side length = 20 and dividing by 4 gives side length = 5. A) Incorrect; misunderstanding the perimeter formula. C), D) Incorrect; results from incorrect division.",
+    "explanation": "The perimeter of a square is given by \( 4 \times \text{side length} \). Setting \( 4 \times \text{side length} \) = 20 and dividing by 4 gives side length = 5. A) Incorrect; misunderstanding the perimeter formula. C), D) Incorrect; results from incorrect division.",
     "topic": "Square Perimeter"
   },
   {
@@ -130,20 +130,20 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 1,
-    "explanation": "The area of a rectangle is given by Area = length × width. Setting 24 = 8 × width and dividing both sides by 8 gives width = 3. A) Incorrect; results from incorrect division. C), D) Incorrect; arithmetic errors when dividing 24 by 8.",
+    "explanation": "The area of a rectangle is given by Area = length × width. Setting \( 24 = 8 \times \text{width} \) and dividing both sides by 8 gives \( \text{width} = 3 \). A) Incorrect; results from incorrect division. C), D) Incorrect; arithmetic errors when dividing 24 by 8.",
     "topic": "Rectangle Area"
   },
   {
     "id": 10,
-    "text": "If the circumference of a circle is given by 2πr and the radius is 5, what is the circumference?",
+    "text": "If the circumference of a circle is given by \( 2\pi r \) and the radius is 5, what is the circumference?",
     "options": [
-      "5π",
-      "10π",
-      "15π",
-      "20π"
+      "\( 5\pi \)",
+      "\( 10\pi \)",
+      "1\( 5\pi \)",
+      "\( 20\pi \)"
     ],
     "answer": 1,
-    "explanation": "Substitute r = 5 into the formula: Circumference = 2π(5) = 10π. A) Incorrect; incorrect multiplication. C) Incorrect; misunderstanding the formula. D) Incorrect; arbitrary value not related to the calculation.",
+    "explanation": "Substitute \( r = 5 \) into the formula: Circumference = \( 2\pi(5) = 10\pi \). A) Incorrect; incorrect multiplication. C) Incorrect; misunderstanding the formula. D) Incorrect; arbitrary value not related to the calculation.",
     "topic": "Circle Circumference"
   },
   {
@@ -251,7 +251,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "The perimeter P of a square is given by P = 4 × side length. Therefore: 20 = 4 × side length. Dividing both sides by 4 gives side length = 5. A) Incorrect; miscalculation in dividing by 4. C), D) Incorrect; errors in understanding the perimeter formula.",
+    "explanation": "The perimeter P of a square is given by P = \( 4 \times \text{side length} \). Therefore: 20 = \( 4 \times \text{side length} \). Dividing both sides by 4 gives side length = 5. A) Incorrect; miscalculation in dividing by 4. C), D) Incorrect; errors in understanding the perimeter formula.",
     "topic": "Square Perimeter"
   },
   {
@@ -309,20 +309,20 @@ const QUESTIONS = [
       "49π"
     ],
     "answer": 0,
-    "explanation": "The circumference of a circle is given by C = 2πr. Substituting r = 7: C = 2π(7) = 14π. B) Incorrect; incorrect multiplication. C), D) Incorrect; confuse the circumference formula with the area formula or apply incorrect arithmetic.",
+    "explanation": "The circumference of a circle is given by C = \( 2\pi r \). Substituting r = 7: C = 2π(7) = 14π. B) Incorrect; incorrect multiplication. C), D) Incorrect; confuse the circumference formula with the area formula or apply incorrect arithmetic.",
     "topic": "Circle Circumference"
   },
   {
     "id": 23,
     "text": "A circle has a radius of 5 units. What is the circumference of the circle?",
     "options": [
-      "10π",
-      "15π",
-      "20π",
-      "25π"
+      "\( 10\pi \)",
+      "1\( 5\pi \)",
+      "\( 20\pi \)",
+      "\( 25\pi \)"
     ],
     "answer": 0,
-    "explanation": "The circumference of a circle is given by C = 2πr. Substituting r = 5: C = 2π(5) = 10π. B), C) Incorrect; arithmetic errors in multiplying 2 and 5. D) Incorrect; this would be the area formula result (πr²) rather than the circumference.",
+    "explanation": "The circumference of a circle is given by C = \( 2\pi r \). Substituting \( r = 5 \): C = \( 2\pi(5) = 10\pi \). B), C) Incorrect; arithmetic errors in multiplying 2 and 5. D) Incorrect; this would be the area formula result (πr²) rather than the circumference.",
     "topic": "Circle Circumference"
   },
   {

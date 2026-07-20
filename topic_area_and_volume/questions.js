@@ -6,15 +6,15 @@
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "If the circumference of a circle is 10π, what is its area?",
+    "text": "If the circumference of a circle is \( 10\pi \), what is its area?",
     "options": [
-      "25π",
-      "50π",
-      "100π",
-      "10π"
+      "\( 25\pi \)",
+      "\( 50\pi \)",
+      "\( 100\pi \)",
+      "\( 10\pi \)"
     ],
     "answer": 0,
-    "explanation": "Circumference = 2πr = 10π → r = 5. Area = πr² = π(5)² = 25π. Answer: A.",
+    "explanation": "Circumference = 2πr = \( 10\pi \) → \( r = 5 \). Area = πr² = π(5)² = \( 25\pi \). Answer: A.",
     "topic": "Circles – Area & Circumference"
   },
   {
@@ -27,20 +27,20 @@ const QUESTIONS = [
       "144"
     ],
     "answer": 0,
-    "explanation": "Diagonal = √(length² + width²) = √(12² + 5²) = √(144 + 25) = √169 = 13. Answer: A.",
+    "explanation": "\( \text{Diagonal} = \sqrt{\text{length}^2 + \text{width}^2} = \sqrt{12^2 + 5^2} = \sqrt{144 + 25} = \sqrt{169} = 13 \). Answer: A.",
     "topic": "Rectangles – Diagonal"
   },
   {
     "id": 3,
     "text": "A right circular cylinder has a base radius of 3 and a height of 8. What is its volume?",
     "options": [
-      "24π",
-      "48π",
-      "72π",
-      "144π"
+      "\( 24\pi \)",
+      "\( 48\pi \)",
+      "\( 72\pi \)",
+      "\( 144\pi \)"
     ],
     "answer": 2,
-    "explanation": "Volume of cylinder = πr²h = π(3²)(8) = π(9)(8) = 72π. Answer: C.",
+    "explanation": "Volume of cylinder = πr²h = π(3²)(8) = π(9)(8) = \( 72\pi \). Answer: C.",
     "topic": "3D Solids – Cylinder Volume"
   },
   {
@@ -48,12 +48,12 @@ const QUESTIONS = [
     "text": "What is the area of an equilateral triangle with a side length of 6?",
     "options": [
       "18",
-      "9√3",
-      "18√3",
+      "\( 9\sqrt{3} \)",
+      "\( 18\sqrt{3} \)",
       "36"
     ],
     "answer": 1,
-    "explanation": "Area of equilateral triangle = (√3/4)s² = (√3/4)(6²) = (√3/4)(36) = 9√3. Answer: B.",
+    "explanation": "Area of equilateral triangle = (√3/4)s² = (√3/4)(6²) = (√3/4)(36) = \( 9\sqrt{3} \). Answer: B.",
     "topic": "Triangles – Equilateral Triangle Area"
   },
   {
@@ -66,12 +66,12 @@ const QUESTIONS = [
       "256"
     ],
     "answer": 2,
-    "explanation": "Volume = s³ = 64 → s = 4. Total surface area = 6s² = 6(4²) = 6(16) = 96. Answer: C.",
+    "explanation": "\( \text{Volume} = s^3 = 64 \) → \( s = 4 \). \( \text{Total surface area} = 6s^2 = 6(4^2) = 6(16) = 96 \). Answer: C.",
     "topic": "3D Solids – Cube"
   },
   {
     "id": 6,
-    "text": "If the volume of a sphere is 36π, what is its radius?",
+    "text": "If the volume of a sphere is \( 36\pi \), what is its radius?",
     "options": [
       "3",
       "6",
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "27"
     ],
     "answer": 0,
-    "explanation": "Volume of sphere = (4/3)πr³ = 36π → r³ = 36 × (3/4) = 27 → r = 3. Answer: A.",
+    "explanation": "Volume of sphere = (4/3)πr³ = \( 36\pi \) → \( r^3 = 36 \times \frac{3}{4} = 27 \) → \( r = 3 \). Answer: A.",
     "topic": "3D Solids – Sphere Volume"
   },
   {
@@ -92,38 +92,38 @@ const QUESTIONS = [
       "40"
     ],
     "answer": 0,
-    "explanation": "Area of trapezoid = ½(b₁ + b₂) × h = ½(8 + 14) × 5 = ½(22)(5) = 55. Answer: A.",
+    "explanation": "\( \text{Area of trapezoid} = \frac{1}{2}(b_1 + b_2) \times h = \frac{1}{2}(8 + 14) \times 5 = \frac{1}{2}(22)(5) = 55 \). Answer: A.",
     "topic": "Quadrilaterals – Trapezoid Area"
   },
   {
     "id": 8,
     "text": "A right circular cone has a base radius of 4 and a slant height of 5. What is its volume?",
     "options": [
-      "12π",
-      "16π",
-      "20π",
-      "48π"
+      "\( 12\pi \)",
+      "\( 16\pi \)",
+      "\( 20\pi \)",
+      "\( 48\pi \)"
     ],
     "answer": 1,
-    "explanation": "First find height using Pythagoras: h = √(slant² − r²) = √(5² − 4²) = √(25 − 16) = √9 = 3. Volume of cone = (1/3)πr²h = (1/3)π(16)(3) = 16π. Answer: B.",
+    "explanation": "First find height using Pythagoras: \( h = \sqrt{\text{slant}^2 - r^2} = \sqrt{5^2 - 4^2} = \sqrt{25 - 16} = \sqrt{9} = 3 \). Volume of cone = (1/3)πr²h = (1/3)π(16)(3) = \( 16\pi \). Answer: B.",
     "topic": "3D Solids – Cone Volume"
   },
   {
     "id": 9,
-    "text": "A circle has a radius of 12. What is the area of a sector with a central angle of 60°?",
+    "text": "A circle has a radius of 12. What is the area of a sector with a central angle of \( 60^\circ \)?",
     "options": [
-      "12π",
-      "24π",
-      "48π",
-      "144π"
+      "\( 12\pi \)",
+      "\( 24\pi \)",
+      "\( 48\pi \)",
+      "\( 144\pi \)"
     ],
     "answer": 1,
-    "explanation": "Area of sector = (θ/360°) × πr² = (60/360) × π(12²) = (1/6) × 144π = 24π. Answer: B.",
+    "explanation": "Area of sector = (θ/3\( 60^\circ \)) × πr² = (60/360) × π(12²) = (1/6) × \( 144\pi \) = \( 24\pi \). Answer: B.",
     "topic": "Circles – Sector Area"
   },
   {
     "id": 10,
-    "text": "In a circle with a radius of 9, what is the length of an arc intercepted by a central angle of 40°?",
+    "text": "In a circle with a radius of 9, what is the length of an arc intercepted by a central angle of \( 40^\circ \)?",
     "options": [
       "π",
       "2π",
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "9π"
     ],
     "answer": 1,
-    "explanation": "Arc length = (θ/360°) × 2πr = (40/360) × 2π(9) = (1/9) × 18π = 2π. Answer: B.",
+    "explanation": "Arc length = (θ/3\( 60^\circ \)) × 2πr = (40/360) × 2π(9) = (1/9) × 18π = 2π. Answer: B.",
     "topic": "Circles – Arc Length"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "60"
     ],
     "answer": 2,
-    "explanation": "When the scale factor of similar figures is k, the ratio of their areas is k². Here scale factor = 2:3, so area ratio = 4:9. Larger area = 20 × (9/4) = 45. Answer: C.",
+    "explanation": "When the scale factor of similar figures is k, the ratio of their areas is k². Here scale factor = \( 2:3 \), so area ratio = \( 4:9 \). \( \text{Larger area} = 20 \times \left(\frac{9}{4}\right) = 45 \). Answer: C.",
     "topic": "Similar Figures – Area Ratio"
   },
   {
@@ -164,8 +164,8 @@ const QUESTIONS = [
     "id": 13,
     "text": "What is the sum of the interior angles of a regular hexagon?",
     "options": [
-      "360°",
-      "540°",
+      "3\( 60^\circ \)",
+      "5\( 40^\circ \)",
       "720°",
       "1080°"
     ],
@@ -230,12 +230,12 @@ const QUESTIONS = [
     "text": "A circle is inscribed in a square with a side length of 8. What is the area of the region inside the square but outside the circle?",
     "options": [
       "64 − 8π",
-      "64 − 16π",
+      "64 − \( 16\pi \)",
       "64 − 32π",
       "64 − 64π"
     ],
     "answer": 1,
-    "explanation": "Inscribed circle radius = half the side length = 4. Area of square = 8² = 64. Area of circle = π(4²) = 16π. Shaded area = 64 − 16π. Answer: B.",
+    "explanation": "Inscribed circle radius = half the side length = 4. Area of square = 8² = 64. Area of circle = π(4²) = \( 16\pi \). Shaded area = 64 − \( 16\pi \). Answer: B.",
     "topic": "Circles – Inscribed in Square"
   },
   {
@@ -244,11 +244,11 @@ const QUESTIONS = [
     "options": [
       "60π",
       "85π",
-      "120π",
+      "1\( 20\pi \)",
       "170π"
     ],
     "answer": 2,
-    "explanation": "Lateral surface area of cylinder = 2πrh = 2π(5)(12) = 120π. Answer: C.",
+    "explanation": "Lateral surface area of cylinder = 2πrh = 2π(5)(12) = 1\( 20\pi \). Answer: C.",
     "topic": "3D Solids – Cylinder Surface Area"
   },
   {

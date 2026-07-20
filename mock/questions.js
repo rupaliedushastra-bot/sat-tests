@@ -474,7 +474,7 @@ const RW_MODULE2 = [
 const MATH_MODULE1 = [
   {
     id: 55, section: 'math', module: 3,
-    text: 'In the xy-coordinate plane, what is the area of the rectangle with opposite vertices at (−3, −1) and (3, 1)?',
+    text: 'In the \\( xy \\)-coordinate plane, what is the area of the rectangle with opposite vertices at \\((-3, -1)\\) and \\((3, 1)\\)?',
     options: ['3', '6', '9', '12'],
     answer: 3, topic: 'Geometry'
   },
@@ -487,55 +487,55 @@ const MATH_MODULE1 = [
   },
   {
     id: 57, section: 'math', module: 3,
-    text: 'If 4/5 of a number is 24, what is 1/5 of the number?',
+    text: 'If \\(\\frac{4}{5}\\) of a number is 24, what is \\(\\frac{1}{5}\\) of the number?',
     options: ['5', '6', '8', '18'],
     answer: 1, topic: 'Algebra'
   },
   {
     id: 58, section: 'math', module: 3,
-    text: 'The formula below is used in finance to compute A, the payment Amount per period, where P is the initial Principal, or loan amount, r is the interest rate per period, and n is the total number of payments per period.\n\nA = P · r(1+r)ⁿ / [(1+r)ⁿ − 1]\n\nWhich of the following correctly gives P in terms of A, n, and r?',
+    text: 'The formula below is used in finance to compute \\( A \\), the payment Amount per period, where \\( P \\) is the initial Principal, or loan amount, \\( r \\) is the interest rate per period, and \\( n \\) is the total number of payments per period.\n\n$ A = P \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1} $\n\nWhich of the following correctly gives \\( P \\) in terms of \\( A \\), \\( n \\), and \\( r \\)?',
     options: [
-      'P = A · r(1+r)ⁿ / [(1+r)ⁿ − 1]',
-      'P = A · [(1+r)ⁿ − 1] / [r(1+r)ⁿ]',
-      'P = A · r(1+r)ⁿ−1 / [(1+r)ⁿ]',
-      'P = A · (1+r)ⁿ / [r(1+r)ⁿ − 1]'
+      '$ P = A \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1} $',
+      '$ P = A \\cdot \\frac{(1+r)^n - 1}{r(1+r)^n} $',
+      '$ P = A \\cdot \\frac{r(1+r)^{n-1}}{(1+r)^n} $',
+      '$ P = A \\cdot \\frac{(1+r)^n}{r(1+r)^n - 1} $'
     ],
     answer: 1, topic: 'Algebra'
   },
   {
     id: 59, section: 'math', module: 3,
-    text: 'A circle in the xy-coordinate plane has a center of (2, 5) and a radius of 3. Which of the following is an equation of the circle?',
+    text: 'A circle in the \\( xy \\)-coordinate plane has a center of \\((2, 5)\\) and a radius of \\( 3 \\). Which of the following is an equation of the circle?',
     options: [
-      '(x − 2)² + (y − 5)² = 9',
-      '(x − 2)² + (y − 5)² = 3',
-      '(x + 2)² − (y + 5)² = 9',
-      '(x + 2)² − (y + 5)² = 3'
+      '\\( (x - 2)^2 + (y - 5)^2 = 9 \\)',
+      '\\( (x - 2)^2 + (y - 5)^2 = 3 \\)',
+      '\\( (x + 2)^2 - (y + 5)^2 = 9 \\)',
+      '\\( (x + 2)^2 - (y + 5)^2 = 3 \\)'
     ],
     answer: 0, topic: 'Geometry'
   },
   {
     id: 60, section: 'math', module: 3,
     image: 'assets/images/math_m1_q6_abcd_graph.png',
-    text: 'In the figure above, ABCD is a square and points B, C, and O lie on the graph of y = x²/k, where k is a constant. If the area of the square is 36, what is the value of k?',
+    text: 'In the figure above, \\( ABCD \\) is a square and points \\( B \\), \\( C \\), and \\( O \\) lie on the graph of \\( y = \\frac{x^2}{k} \\), where \\( k \\) is a constant. If the area of the square is \\( 36 \\), what is the value of \\( k \\)?',
     options: ['1.5', '3', '4.5', '6'],
-    answer: 1, topic: 'Advanced Math'
+    answer: 0, topic: 'Advanced Math'
   },
   {
     id: 61, section: 'math', module: 3,
-    text: 'How much greater than t − 5 is t + 2?',
+    text: 'How much greater than \\( t - 5 \\) is \\( t + 2 \\)?',
     options: ['2', '4', '5', '7'],
     answer: 3, topic: 'Algebra'
   },
   {
     id: 62, section: 'math', module: 3,
-    text: 'f(x) = x³ − 4x\ng(x) = x² + x − 2\n\nWhich of the following expressions is equivalent to f(x)/g(x), for x > 2?',
-    options: ['(x − 2) / [x(x − 1)]', '(x − 1) / [x(x − 2)]', 'x(x − 1) / (x − 2)', 'x(x − 2) / (x − 1)'],
+    text: '$ f(x) = x^3 - 4x $ \n $ g(x) = x^2 + x - 2 $ \n\nWhich of the following expressions is equivalent to \\( \\frac{f(x)}{g(x)} \\), for \\( x > 2 \\)?',
+    options: ['\\( \\frac{x - 2}{x(x - 1)} \\)', '\\( \\frac{x - 1}{x(x - 2)} \\)', '\\( \\frac{x(x - 1)}{x - 2} \\)', '\\( \\frac{x(x - 2)}{x - 1} \\)'],
     answer: 3, topic: 'Advanced Math'
   },
   {
     id: 63, section: 'math', module: 3,
     image: 'assets/images/math_m1_q9_parabola.png',
-    text: 'In the parabola above, the vertex is at (3, −1). Which of the following are x-coordinates of two points on this parabola whose y-coordinates are equal?',
+    text: 'In the parabola above, the vertex is at \\((3, -1)\\). Which of the following are \\( x \\)-coordinates of two points on this parabola whose \\( y \\)-coordinates are equal?',
     options: ['1 and 5', '1 and 6', '2 and 5', '2 and 6'],
     answer: 0, topic: 'Advanced Math'
   },
@@ -547,32 +547,32 @@ const MATH_MODULE1 = [
   },
   {
     id: 65, section: 'math', module: 3,
-    text: 'In the xy-plane, the center of a circle has coordinates (−2, 4). If one endpoint of a diameter of the circle is (−2, 1), what are the coordinates of the other endpoint of this diameter?',
-    options: ['(−5, 4)', '(−2, 6)', '(−2, 7)', '(1, 4)'],
+    text: 'In the \\( xy \\)-plane, the center of a circle has coordinates \\((-2, 4)\\). If one endpoint of a diameter of the circle is \\((-2, 1)\\), what are the coordinates of the other endpoint of this diameter?',
+    options: ['\\((-5, 4)\\)', '\\((-2, 6)\\)', '\\((-2, 7)\\)', '\\((1, 4)\\)'],
     answer: 2, topic: 'Geometry'
   },
   {
     id: 66, section: 'math', module: 3,
-    text: 'If 3n/2p = 4/3, what is the value of n/p?',
-    options: ['2', '1', '9/8', '8/9'],
+    text: 'If \\( \\frac{3n}{2p} = \\frac{4}{3} \\), what is the value of \\( \\frac{n}{p} \\)?',
+    options: ['2', '1', '\\( \\frac{9}{8} \\)', '\\( \\frac{8}{9} \\)'],
     answer: 3, topic: 'Algebra'
   },
   {
     id: 67, section: 'math', module: 3,
     image: 'assets/images/math_m1_q13_squares_circles.png',
-    text: 'Square ABCD is divided into nine equal squares, five of which have circles inscribed in them. If AB = 6, what is the total shaded area?',
-    options: ['24 − 10π', '24 − 5π', '36 − 10π', '36 − 5π'],
+    text: 'Square \\( ABCD \\) is divided into nine equal squares, five of which have circles inscribed in them. If \\( AB = 6 \\), what is the total shaded area?',
+    options: ['\\( 24 - 10\\pi \\)', '\\( 24 - 5\\pi \\)', '\\( 36 - 10\\pi \\)', '\\( 36 - 5\\pi \\)'],
     answer: 3, topic: 'Geometry'
   },
   {
     id: 68, section: 'math', module: 3,
-    text: 'In the xy-plane, line l passes through (−1, 3) and is parallel to the line 4x + 2y = k. If line l passes through the point (p, −p), what is the value of p?',
+    text: 'In the \\( xy \\)-plane, line \\( l \\) passes through \\((-1, 3)\\) and is parallel to the line \\( 4x + 2y = k \\). If line l passes through the point \\((p, -p)\\), what is the value of \\( p \\)?',
     options: ['−2', '−1', '1', '2'],
-    answer: 0, topic: 'Algebra'
+    answer: 2, topic: 'Algebra'
   },
   {
     id: 69, section: 'math', module: 3,
-    text: 'y = x² − 2x + 3\ny = −3x + 5\n\nHow many solutions are there to the system of equations above?',
+    text: '$ y = x^2 - 2x + 3 $ \n $ y = -3x + 5 $ \n\nHow many solutions are there to the system of equations above?',
     options: [
       'The answer cannot be determined with the information given.',
       'There are no solutions.',
@@ -590,21 +590,21 @@ const MATH_MODULE1 = [
   },
   {
     id: 71, section: 'math', module: 3,
-    text: 'A certain fraction is equivalent to 2/3. If the fraction\'s denominator is 12 less than twice its numerator, find the denominator of the fraction.',
+    text: 'A certain fraction is equivalent to \\( \\frac{2}{3} \\). If the fraction\'s denominator is 12 less than twice its numerator, find the denominator of the fraction.',
     options: ['12', '24', '36', '48'],
-    answer: 1, topic: 'Algebra',
-    isFillIn: true, fillAnswer: '24'
+    answer: 2, topic: 'Algebra',
+    isFillIn: true, fillAnswer: '36'
   },
   {
     id: 72, section: 'math', module: 3,
-    text: 'If p > 0 and p² = 3p + 40, what is the value of p?',
+    text: 'If \\( p > 0 \\) and \\( p^2 = 3p + 40 \\), what is the value of p?',
     options: ['5', '8', '10', '12'],
     answer: 1, topic: 'Advanced Math',
     isFillIn: true, fillAnswer: '8'
   },
   {
     id: 73, section: 'math', module: 3,
-    text: 'If x² − 3x = 50 and x² + 5x = 12, what is the value of x² + x?',
+    text: 'If \\( x^2 - 3x = 50 \\) and \\( x^2 + 5x = 12 \\), what is the value of \\( x^2 + x \\)?',
     options: ['28', '31', '34', '38'],
     answer: 1, topic: 'Advanced Math',
     isFillIn: true, fillAnswer: '31'
@@ -612,20 +612,20 @@ const MATH_MODULE1 = [
   {
     id: 74, section: 'math', module: 3,
     image: 'assets/images/math_m1_q20_nested_squares.png',
-    text: 'In the preceding figure, each shape is a square. BC has length 4, and CD has length 7. Points A, K, and G all lie in the same line. Find the length of DE.',
+    text: 'In the preceding figure, each shape is a square. \\( BC \\) has length \\( 4 \\), and \\( CD \\) has length \\( 7 \\). Points \\( A \\), \\( K \\), and \\( G \\) all lie in the same line. Find the length of \\( DE \\).',
     options: ['10', '11', '11.5', '12.25'],
     answer: 1, topic: 'Geometry',
     isFillIn: false
   },
   {
     id: 75, section: 'math', module: 3,
-    text: 'Which values of x satisfy both functions f(x) = 3 and f(x) = x² + 2?',
-    options: ['−1 and 0', '−1 and 1', '0 and 1', 'There are no values of x which satisfy both functions.'],
+    text: 'Which values of \\( x \\) satisfy both functions \\( f(x) = 3 \\) and \\( f(x) = x^2 + 2 \\)?',
+    options: ['−1 and 0', '−1 and 1', '0 and 1', 'There are no values of \\( x \\) which satisfy both functions.'],
     answer: 1, topic: 'Advanced Math'
   },
   {
     id: 76, section: 'math', module: 3,
-    text: 'If xy = 120, and 1/x + 1/y = 1/4, find x + y.',
+    text: 'If \\( xy = 120 \\), and \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{4} \\), find \\( x + y \\).',
     options: ['20', '24', '30', '36'],
     answer: 2, topic: 'Algebra',
     isFillIn: true, fillAnswer: '30'
@@ -637,46 +637,46 @@ const MATH_MODULE2 = [
   {
     id: 77, section: 'math', module: 4,
     image: 'assets/images/math_m2_q1_graph.png',
-    text: 'The preceding figure shows the graph of y = f(x) from x = −3 to x = 4. For what value of x in this interval does the function f attain its minimum value?',
+    text: 'The preceding figure shows the graph of \\( \\( y = f(x) \\) \\) from \\( x = -3 \\) to \\( x = 4 \\). For what value of \\( x \\) in this interval does the function \\( f \\) attain its minimum value?',
     options: ['2', '1', '0', '−2'],
     answer: 0, topic: 'Advanced Math'
   },
   {
     id: 78, section: 'math', module: 4,
     image: 'assets/images/math_m2_q2_numberline.png',
-    text: 'Which point on the preceding number line best represents the product of x and y?',
+    text: 'Which point on the preceding number line best represents the product of \\( x \\) and \\( y \\)?',
     options: ['A', 'B', 'C', 'D'],
     answer: 0, topic: 'Algebra'
   },
   {
     id: 79, section: 'math', module: 4,
     image: 'assets/images/math_m2_q3_graph.png',
-    text: 'The graph of y = f(x) is shown above. If f(3) = k, which of the following is the value of f(k)?',
-    options: ['−1', '−1/2', '0', '1/2'],
+    text: 'The graph of y = f(x) is shown above. If \\( f(3) = k \\), which of the following is the value of \\( \\( f(k) \\) \\)?',
+    options: ['−1', '\\( -\\frac{1}{2} \\)', '0', '\\( \\frac{1}{2} \\)'],
     answer: 3, topic: 'Advanced Math'
   },
   {
     id: 80, section: 'math', module: 4,
-    text: 'If −1 < x < 0, which of the following statements must be true?\n\nI.  x > x/2\nII. x² > x\nIII. x³ > x²',
+    text: 'If \\( -1 < x < 0 \\), which of the following statements must be true?\n\nI.  \\( x > \\frac{x}{2} \\)\nII. \\( x^2 > x \\)\nIII. \\( x^3 > x^2 \\)',
     options: ['I only', 'II only', 'I and II only', 'II and III only'],
     answer: 1, topic: 'Algebra'
   },
   {
     id: 81, section: 'math', module: 4,
     image: 'assets/images/math_m2_q5_garden.png',
-    text: 'A gardener is building a fence to enclose their garden and divide it in half, as shown in the preceding figure. The fourth side of the garden is adjacent to their house, so it does not require fencing. The total area of the garden is 2,400 square feet. In terms of x, how many feet of fencing does the gardener require?',
-    options: ['2,400 − 3x', 'x + 2,400/x', '3x + 2,400/x', '3x + 1,200/x'],
+    text: 'A gardener is building a fence to enclose their garden and divide it in half, as shown in the preceding figure. The fourth side of the garden is adjacent to their house, so it does not require fencing. The total area of the garden is 2,400 square feet. In terms of \\( x \\), how many feet of fencing does the gardener require?',
+    options: ['\\( 2,400 - 3x \\)', '\\( x + \\frac{2,400}{x} \\)', '\\( 3x + \\frac{2,400}{x} \\)', '\\( 3x + \\frac{1,200}{x} \\)'],
     answer: 2, topic: 'Algebra'
   },
   {
     id: 82, section: 'math', module: 4,
-    text: 'An equilateral triangle has vertices at (−1, 1) and (5, 1). Which of the following could be the coordinates of the third vertex?',
-    options: ['(2, −5)', '(2, 1 − 3√3)', '(2, 3√3)', '(3√3, 1)'],
-    answer: 2, topic: 'Geometry'
+    text: 'An equilateral triangle has vertices at \\((-1, 1)\\) and \\((5, 1)\\). Which of the following could be the coordinates of the third vertex?',
+    options: ['\\((2, -5)\\)', '\\( (2, 1 - 3\\sqrt{3}) \\)', '\\( (2, 3\\sqrt{3}) \\)', '\\( (3\\sqrt{3}, 1) \\)'],
+    answer: 1, topic: 'Geometry'
   },
   {
     id: 83, section: 'math', module: 4,
-    text: 'x² + y² − 4x − 6y + 12 = 0\n\nIn the xy-plane, the graph of the preceding equation is a circle. Which of the following is the radius of the circle?',
+    text: '$ x^2 + y^2 - 4x - 6y + 12 = 0 $\n\nIn the \\( xy \\)-plane, the graph of the preceding equation is a circle. Which of the following is the radius of the circle?',
     options: ['4', '3', '2', '1'],
     answer: 3, topic: 'Geometry'
   },
@@ -688,51 +688,51 @@ const MATH_MODULE2 = [
   },
   {
     id: 85, section: 'math', module: 4,
-    text: 'The cell count of a certain lab culture increased from 19,000 in Week 3 to 41,000 in Week 6. Assuming that the cell count increased at a constant rate, which of the following linear functions f best models the cell count, in thousands of cells, t weeks after Week 3?',
+    text: 'The cell count of a certain lab culture increased from 19,000 in Week 3 to 41,000 in Week 6. Assuming that the cell count increased at a constant rate, which of the following linear functions f best models the cell count, in thousands of cells, \\( t \\) weeks after Week 3?',
     options: [
-      'f(t) = (3/22)t − 19',
-      'f(t) = (22/3)t − 19',
-      'f(t) = (3/22)t + 19',
-      'f(t) = (22/3)t + 19'
+      '\\( f(t) = \\frac{3}{22}t - 19 \\)',
+      '\\( f(t) = \\frac{22}{3}t - 19 \\)',
+      '\\( f(t) = \\frac{3}{22}t + 19 \\)',
+      '\\( f(t) = \\frac{22}{3}t + 19 \\)'
     ],
     answer: 3, topic: 'Algebra'
   },
   {
     id: 86, section: 'math', module: 4,
-    text: 'The preceding table defines a linear function.\n\n| k    | 1  | 2  | 3 | 4 | 5  | 6  |\n|------|----|----|---|---|----|----|----|\n| f(k) | 15 | 11 | 7 | n | −1 | −5 |\n\nWhat is the value of n?',
+    text: 'The preceding table defines a linear function.\n\n| k    | 1  | 2  | 3 | 4 | 5  | 6  |\n|------|----|----|---|---|----|----|----|\n| f(k) | 15 | 11 | 7 | n | −1 | −5 |\n\nWhat is the value of \\( n \\)?',
     options: ['1', '2', '3', '4'],
     answer: 2, topic: 'Algebra',
     isFillIn: true, fillAnswer: '3'
   },
   {
     id: 87, section: 'math', module: 4,
-    text: 'When the number m is multiplied by 5, the result is the same as when 6 is subtracted from m. What is the value of 8m?',
-    options: ['−12', '−6', '−3/2', '3'],
+    text: 'When the number \\( m \\) is multiplied by 5, the result is the same as when 6 is subtracted from m. What is the value of \\( 8m \\)?',
+    options: ['−12', '−6', '\\( -\\frac{3}{2} \\)', '3'],
     answer: 0, topic: 'Algebra'
   },
   {
     id: 88, section: 'math', module: 4,
     image: 'assets/images/math_m2_q12_line.png',
-    text: 'The coordinates of point P in the preceding figure are (a, b), where |b| > |a|. Which of the following could be the slope of PQ?',
-    options: ['−3', '−1/2', '1/2', '3/2'],
+    text: 'The coordinates of point \\( P \\) in the preceding figure are \\((a, b)\\), where \\( |b| > |a| \\). Which of the following could be the slope of \\( PQ \\)?',
+    options: ['−3', '\\( -\\frac{1}{2} \\)', '\\( \\frac{1}{2} \\)', '\\( \\frac{3}{2} \\)'],
     answer: 3, topic: 'Algebra'
   },
   {
     id: 89, section: 'math', module: 4,
     image: 'assets/images/math_m2_q13_graphs.png',
-    text: 'The graph of y = g(x) is shown above. Which of the following could be the graph of y = g(x − 1)?',
+    text: 'The graph of \\( y = g(x) \\) is shown above. Which of the following could be the graph of \\( y = g(x - 1) \\)?',
     options: ['Graph A', 'Graph B', 'Graph C', 'Graph D'],
     answer: 0, topic: 'Advanced Math'
   },
   {
     id: 90, section: 'math', module: 4,
-    text: 'In the xy-plane, lines p and q are perpendicular. If line p contains the points (−2, 2) and (2, 1), and line q contains the points (−2, 4) and (k, 0), what is the value of k?',
+    text: 'In the xy-plane, lines \\( p \\) and \\( q \\) are perpendicular. If line \\( p \\) contains the points \\((-2, 2)\\) and \\((2, 1)\\), and line \\( q \\) contains the points \\((-2, 4)\\) and \\((k, 0)\\), what is the value of \\( k \\)?',
     options: ['−3', '−2', '−1', '0'],
     answer: 0, topic: 'Algebra'
   },
   {
     id: 91, section: 'math', module: 4,
-    text: 'If x² − y² = 39 and x − y = 3, what is the value of y?',
+    text: 'If \\( x^2 - y^2 = 39 \\) and \\( x - y = 3 \\), what is the value of \\( y \\)?',
     options: ['4', '5', '6', '7'],
     answer: 1, topic: 'Advanced Math',
     isFillIn: true, fillAnswer: '5'
@@ -740,7 +740,7 @@ const MATH_MODULE2 = [
   {
     id: 92, section: 'math', module: 4,
     image: 'assets/images/math_m2_q16_angle.png',
-    text: 'What is the value of x in the preceding figure?',
+    text: 'What is the value of \\( x \\) in the preceding figure?',
     options: ['35', '40', '70', '105'],
     answer: 2, topic: 'Geometry',
     isFillIn: true, fillAnswer: '70'
@@ -755,14 +755,14 @@ const MATH_MODULE2 = [
   {
     id: 94, section: 'math', module: 4,
     image: 'assets/images/math_m2_q19_triangle.png',
-    text: 'In the right triangle shown above, if angle θ = 30°, what is sin θ?',
-    options: ['1/4', '1/2', '√3/2', '√3'],
+    text: 'In the right triangle shown above, if angle \\( \\theta = 30^\\circ \\), what is \\( \\sin \\theta \\)?',
+    options: ['\\( \\frac{1}{4} \\)', '\\( \\frac{1}{2} \\)', '\\( \\frac{\\sqrt{3}}{2} \\)', '\\( \\sqrt{3} \\)'],
     answer: 1, topic: 'Geometry',
     isFillIn: true, fillAnswer: '.5 or 1/2'
   },
   {
     id: 95, section: 'math', module: 4,
-    text: 'A circle lies in the xy-coordinate plane. If the circle is centered at (−3, 17) and touches the y-axis at one point only, what is the diameter of the circle?',
+    text: 'A circle lies in the xy-coordinate plane. If the circle is centered at \\((-3, 17)\\) and touches the \\( y \\)-axis at one point only, what is the diameter of the circle?',
     options: ['3', '6', '9', '17'],
     answer: 1, topic: 'Geometry',
     isFillIn: true, fillAnswer: '6'
@@ -770,20 +770,20 @@ const MATH_MODULE2 = [
   {
     id: 96, section: 'math', module: 4,
     image: 'assets/images/math_m2_q21_numberlines.png',
-    text: 'Which of the following represents all values of x that satisfy this inequality: 7 ≥ −2x + 3?',
+    text: 'Which of the following represents all values of x that satisfy this inequality: \\( 7 \\ge -2x + 3 \\)?',
     options: ['Number line A', 'Number line B', 'Number line C', 'Number line D'],
     answer: 0, topic: 'Algebra'
   },
   {
     id: 97, section: 'math', module: 4,
-    text: 'If $1,000 invested at i percent simple annual interest yields $200 over a 2-year period, how much interest would the $1,000 investment yield if the i percent interest were compounded annually over the 2-year period?',
+    text: 'If $1,000 invested at \\( i \\) percent simple annual interest yields $200 over a 2-year period, how much interest would the $1,000 investment yield if the i percent interest were compounded annually over the 2-year period?',
     options: ['$200', '$205', '$210', '$220'],
     answer: 2, topic: 'Problem Solving & Data',
     isFillIn: true, fillAnswer: '210'
   },
   {
     id: 98, section: 'math', module: 4,
-    text: 'If a − (1/2)b = −8 and a = 1/2, what is the value of b?',
+    text: 'If \\( a - \\frac{1}{2}b = -8 \\) and \\( a = \\frac{1}{2} \\), what is the value of \\( b \\)?',
     options: ['15', '17', '19', '21'],
     answer: 1, topic: 'Algebra',
     isFillIn: true, fillAnswer: '17'
