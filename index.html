@@ -36,7 +36,7 @@
     </div>
 
     <!-- READING & WRITING TAB -->
-    <div id="reading-section" class="tab-content active">
+    <div id="reading-section" class="tab-content">
       <div class="cards">
         <div class="exam-card">
           <div class="card-icon">📖</div>
@@ -826,7 +826,7 @@
     </div>
 
     <!-- DIAGNOSTIC TEST TAB -->
-    <div id="diagnostic-section" class="tab-content">
+    <div id="diagnostic-section" class="tab-content active">
       <div class="cards">
         <div class="exam-card">
           <div class="card-num">01</div>
@@ -844,22 +844,12 @@
     function showTab(tabName) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-      if (tabName === 'reading') {
-        document.querySelectorAll('.tab-btn')[0].classList.add('active');
-        document.getElementById('reading-section').classList.add('active');
-      } else if (tabName === 'math') {
-        document.querySelectorAll('.tab-btn')[1].classList.add('active');
-        document.getElementById('math-section').classList.add('active');
-      } else if (tabName === 'classtest') {
-        document.querySelectorAll('.tab-btn')[2].classList.add('active');
-        document.getElementById('classtest-section').classList.add('active');
-      } else if (tabName === 'mock') {
-        document.querySelectorAll('.tab-btn')[3].classList.add('active');
-        document.getElementById('mock-section').classList.add('active');
-      } else if (tabName === 'diagnostic') {
-        document.querySelectorAll('.tab-btn')[4].classList.add('active');
-        document.getElementById('diagnostic-section').classList.add('active');
-      }
+      
+      const targetBtn = document.querySelector(`.tab-btn[onclick*="'${tabName}'"]`);
+      const targetSection = document.getElementById(`${tabName}-section`);
+      
+      if (targetBtn) targetBtn.classList.add('active');
+      if (targetSection) targetSection.classList.add('active');
     }
   </script>
 
