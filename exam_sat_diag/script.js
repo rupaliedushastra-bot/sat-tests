@@ -19,7 +19,7 @@ async function saveUserToSupabase(student) {
                 name: student.name,
                 email: student.email,
                 phone: student.phone,
-                topic: 'SAT Diagnostic Test',
+                topic: 'SAT Full Mock Test',
                 created_at: new Date().toISOString()
             })
         });
@@ -42,7 +42,7 @@ async function saveToSupabase(result) {
                 name: result.student.name,
                 email: result.student.email,
                 phone: result.student.phone || '',
-                topic: 'SAT Diagnostic Test',
+                topic: 'SAT Full Mock Test',
                 topic_number: 23,
                 correct: result.correct,
                 wrong: result.wrong,
@@ -224,7 +224,7 @@ async function doSubmit() {
     closeModal();
 
     $('savingOverlay').classList.add('show');
-    $('savingMsg').textContent = 'Saving your diagnostic result...';
+    $('savingMsg').textContent = 'Saving your test result...';
 
     let correct = 0, wrong = 0, unattempted = 0;
     const details = QUESTIONS.map(q => {
@@ -284,7 +284,7 @@ function renderResults(result, saveRes) {
 
     wrap.innerHTML = `
     <div class="res-hero">
-      <div style="font-size:0.8rem;opacity:.55;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">SAT Diagnostic Test · Mixed Topics</div>
+      <div style="font-size:0.8rem;opacity:.55;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">SAT Full Mock Test · Mixed Topics</div>
       <div class="sat-score" style="color:${scoreColor}">${scaled}</div>
       <div class="score-line">Estimated Score · ${correct} / ${total} correct (${pct}%) · Grade: ${grade}</div>
       <div class="score-sub">${student.name} &nbsp;·&nbsp; ${new Date(result.submitTime).toLocaleString()}</div>
@@ -352,7 +352,7 @@ function downloadPDF() {
     if (actions) actions.style.display = 'none';
     html2pdf().set({
         margin: [10, 10, 10, 10],
-        filename: `EduQuest_Diagnostic_${student.name.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
+        filename: `EduQuest_Full_Mock_${student.name.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
         image: { type: 'jpeg', quality: 0.95 },
         html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
