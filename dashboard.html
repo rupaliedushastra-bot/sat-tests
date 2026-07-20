@@ -925,6 +925,402 @@
     let currentSession = null;
     let modalChart = null;
 
+    let allRawReports = {
+      mock: [],
+      topic: [],
+      tmua: [],
+      ucat: [],
+      act: [],
+      ap: []
+    };
+    let currentPortal = 'all';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const { data: { session } } = await supabaseClient.auth.getSession();
+      if (!session) {
+        window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.href);
+        return;
+      }
+      currentSession = session;
+      const email = session.user.email;
+      document.getElementById('userEmail').textContent = email;
+      document.getElementById('welcomeMsg').textContent = `Your test performance at a glance`;
+      document.getElementById('mainContent').style.display = 'block';
+
+      const logoutBtn = document.getElementById('logoutBtn');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+          await supabaseClient.auth.signOut();
+          window.location.href = 'login.html';
+        });
+      }
+
+      await fetchAllUserReports(email);
+    });
+
+    async function fetchAllUserReports(email) {
+      document.getElementById('historyContent').innerHTML = `<div class="loading-spinner">Loading your tests...</div>`;
+      const cleanEmail = (email || '').toLowerCase().trim();
+
+      try {
+        const [mockRes, topicRes, tmuaRes, ucatRes, actRes, apRes] = await Promise.all([
+          supabaseClient.from('sat_reports').select('*').ilike('email', cleanEmail),
+          supabaseClient.from('sat_topic_report').select('*').ilike('email', cleanEmail),
+          supabaseClient.from('tmua_report').select('*').ilike('email', cleanEmail),
+          supabaseClient.from('Ucat_diagnosis').select('*').ilike('email', cleanEmail),
+          supabaseClient.from('act_results').select('*').ilike('email', cleanEmail),
+          supabaseClient.from('ap_report').select('*').ilike('email', cleanEmail)
+        ]);
+
+        allRawReports.mock = (mockRes.data || []).map(r => ({ ...r, portal: 'mock', exam_type: 'SAT Mock' }));
+        allRawReports.topic = (topicRes.data || []).map(r => ({ ...r, portal: 'topic', exam_type: 'SAT Topic' }));
+        allRawReports.tmua = (tmuaRes.data || []).map(r => ({ ...r, portal: 'tmua', exam_type: 'TMUA' }));
+        allRawReports.ucat = (ucatRes.data || []).map(r => ({ ...r, portal: 'ucat', exam_type: 'UCAT' }));
+        allRawReports.act = (actRes.data || []).map(r => ({ ...r, portal: 'act', exam_type: 'ACT' }));
+        allRawReports.ap = (apRes.data || []).map(r => ({ ...r, portal: 'ap', exam_type: 'AP' }));
+      } catch (err) {
+        console.error("Error fetching student reports:", err);
+      }
+
+      renderPortalDashboard(currentPortal);
+    }
+
+    function switchStuPortal(portal) {
+      currentPortal = portal;
+      document.querySelectorAll('.portal-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtnId = 'btnStuPortal' + portal.charAt(0).toUpperCase() + portal.slice(1);
+      const activeBtn = document.getElementById(activeBtnId);
+      if (activeBtn) activeBtn.classList.add('active');
+      renderPortalDashboard(portal);
+    }
+
+    function renderPortalDashboard(portal) {
+      let tests = [];
+      if (portal === 'all') {
+        tests = [
+          ...allRawReports.mock,
+          ...allRawReports.topic,
+          ...allRawReports.tmua,
+          ...allRawReports.ucat,
+          ...allRawReports.act,
+          ...allRawReports.ap
+        ];
+      } else {
+        tests = allRawReports[portal] || [];
+      }
+
+      tests.sort((a, b) => new Date(b.submit_time || b.submitted_at || 0) - new Date(a.submit_time || a.submitted_at || 0));
+      allTests = tests;
+      selectedIds.clear();
+      updateCombineBar();
+
+      const totalTests = tests.length;
+      const totQs = tests.reduce((s, t) => s + (t.total || 0), 0);
+      const avgPct = totalTests > 0 ? Math.round(tests.reduce((s, t) => s + (t.percentage || t.pct || 0), 0) / totalTests) : 0;
+      const bestScore = totalTests > 0 ? Math.max(...tests.map(t => t.percentage || t.pct || 0)) : 0;
+
+      document.getElementById('statTests').textContent = totalTests;
+      document.getElementById('statAvg').textContent = `${avgPct}%`;
+      document.getElementById('statBest').textContent = `${bestScore}%`;
+      document.getElementById('statQs').textContent = totQs;
+
+      const container = document.getElementById('historyContent');
+      if (tests.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">📝</div>
+            <h3>No Tests Found</h3>
+            <p>You haven't completed any tests in this section yet.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = `
+        <table class="history-table" style="width:100%; border-collapse:collapse; font-size:0.9rem; text-align:left;">
+          <thead>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+              <th style="padding:12px; width:40px; text-align:center;">Select</th>
+              <th style="padding:12px;">Test Name</th>
+              <th style="padding:12px;">Category</th>
+              <th style="padding:12px;">Date</th>
+              <th style="padding:12px;">Score</th>
+              <th style="padding:12px;">Composite / Scaled</th>
+              <th style="padding:12px; text-align:right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${tests.map((t, idx) => {
+              const pct = t.percentage || t.pct || 0;
+              const dateStr = (t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' }) : '–';
+              const isChecked = selectedIds.has(idx);
+              
+              return `
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05); transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.02)'" onmouseleave="this.style.background='transparent'">
+                  <td style="padding:12px; text-align:center;" onclick="event.stopPropagation()">
+                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelectTest(${idx})" style="cursor:pointer; width:16px; height:16px;" />
+                  </td>
+                  <td style="padding:12px; font-weight:600; cursor:pointer;" onclick="openTestDetail(${idx})">
+                    ${t.exam_name || t.topic || 'Practice Test'}
+                  </td>
+                  <td style="padding:12px;" onclick="openTestDetail(${idx})">
+                    <span style="padding:3px 10px; border-radius:12px; font-size:0.78rem; font-weight:600; background:rgba(96,165,250,0.15); color:#60a5fa; border:1px solid rgba(96,165,250,0.3);">
+                      ${t.exam_type || t.portal?.toUpperCase() || 'SAT'}
+                    </span>
+                  </td>
+                  <td style="padding:12px; color:rgba(255,255,255,0.6);" onclick="openTestDetail(${idx})">${dateStr}</td>
+                  <td style="padding:12px;" onclick="openTestDetail(${idx})">
+                    <span class="score-pill ${pct >= 70 ? 'high' : pct >= 50 ? 'mid' : 'low'}">${pct}%</span>
+                    <span style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-left:6px;">(${t.correct || 0}/${t.total || 0})</span>
+                  </td>
+                  <td style="padding:12px; font-weight:700; color:#6ee7b7;" onclick="openTestDetail(${idx})">
+                    ${t.composite_score || t.scaled || '–'}
+                  </td>
+                  <td style="padding:12px; text-align:right;">
+                    <button class="btn btn-outline" style="padding:4px 10px; font-size:0.8rem; cursor:pointer;" onclick="openTestDetail(${idx})">👁 View Report</button>
+                  </td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function toggleSelectTest(idx) {
+      if (selectedIds.has(idx)) selectedIds.delete(idx);
+      else selectedIds.add(idx);
+      updateCombineBar();
+    }
+
+    function toggleSelectAll() {
+      if (selectedIds.size === allTests.length) {
+        selectedIds.clear();
+      } else {
+        allTests.forEach((_, i) => selectedIds.add(i));
+      }
+      renderPortalDashboard(currentPortal);
+    }
+
+    function updateCombineBar() {
+      const cnt = selectedIds.size;
+      const selLbl = document.getElementById('selCount');
+      if (selLbl) selLbl.textContent = `${cnt} selected`;
+      const combBtn = document.getElementById('combineBtn');
+      if (combBtn) combBtn.disabled = cnt === 0;
+      const allBtn = document.getElementById('selectAllBtn');
+      if (allBtn) allBtn.textContent = (allTests.length > 0 && selectedIds.size === allTests.length) ? 'Deselect All' : 'Select All';
+    }
+
+    async function openTestDetail(testIdx) {
+      if (!allTests || !allTests[testIdx]) return;
+      const t = allTests[testIdx];
+      const pct = t.percentage || t.pct || 0;
+      const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
+      
+      let details = [];
+      try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
+      if (details.length === 0 && t.student_answers) {
+        try { details = typeof t.student_answers === 'string' ? JSON.parse(t.student_answers) : t.student_answers; } catch(e) {}
+      }
+
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <div class="modal-hdr" style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="margin:0;">${t.exam_name || t.topic || 'Test Report'}</h3>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="modal-pdf-btn" style="background:#059669; color:#fff; border:none; padding:6px 14px; border-radius:6px; font-weight:600; cursor:pointer; font-size:0.85rem; font-family:'IBM Plex Sans',sans-serif;" onclick="downloadModalPDF('${t.exam_name || t.topic || 'Report'}')">📄 Download PDF</button>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+          </div>
+        </div>
+        <div class="loading-spinner">Loading question details...</div>
+      `;
+      document.getElementById('testModal').classList.add('open');
+
+      const topicName = t.topic || t.exam_name || 'Unknown Exam';
+      const topicMapping = getTopicMapping(topicName);
+      const matchedTopicKey = topicMapping ? topicMapping.key : topicName;
+      const dir = topicMapping ? topicMapping.dir : '.';
+      const qs = await loadQuestionsForTopic(matchedTopicKey);
+      const imgMapping = await loadImageMappingForTopic(matchedTopicKey, dir);
+
+      if (qs && details.length > 0) {
+        details = details.map((d, i) => {
+          const qId = d.id || (i + 1);
+          const matchedQ = qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || qs[i];
+          if (matchedQ) {
+            return {
+              ...d,
+              text: d.text || d.question || d.prompt || (matchedQ ? (matchedQ.text || matchedQ.question || matchedQ.prompt) : '') || '',
+              options: d.options || matchedQ.options || matchedQ.choices || [],
+              answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
+              chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
+              status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
+              explanation: d.explanation || matchedQ.explanation || matchedQ.solution || '',
+              useImage: d.useImage !== undefined ? d.useImage : matchedQ.useImage,
+              imageKey: d.imageKey || matchedQ.imageKey
+            };
+          }
+          return d;
+        });
+      } else if (details.length === 0 && qs && qs.length > 0) {
+        let parsedAnswers = [];
+        try { parsedAnswers = JSON.parse(t.answers_json || t.student_answers || '[]'); } catch(e) {}
+        details = qs.map((q, i) => {
+          const chosen = parsedAnswers[i] !== undefined ? parsedAnswers[i] : -1;
+          const answer = q.answer !== undefined ? q.answer : q.correctAnswer;
+          const status = chosen === answer ? 'correct' : (chosen !== undefined && chosen !== null && chosen !== -1 ? 'wrong' : 'unattempted');
+          return {
+            id: q.id || (i + 1),
+            text: q.text || q.question || '',
+            options: q.options || q.choices || [],
+            answer: answer,
+            chosen: chosen,
+            status: status,
+            explanation: q.explanation || q.solution || '',
+            useImage: q.useImage,
+            imageKey: q.imageKey
+          };
+        });
+      }
+
+      modal.innerHTML = `
+        <div class="modal-hdr" style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="margin:0;">${t.exam_name || t.topic || 'Test Report'}</h3>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="modal-pdf-btn" style="background:#059669; color:#fff; border:none; padding:6px 14px; border-radius:6px; font-weight:600; cursor:pointer; font-size:0.85rem; font-family:'IBM Plex Sans',sans-serif;" onclick="downloadModalPDF('${t.exam_name || t.topic || 'Report'}')">📄 Download PDF</button>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+          </div>
+        </div>
+        <div style="text-align:center;margin-bottom:8px">
+          <div style="font-family:'Syne';font-size:2.2rem;font-weight:800;color:${scoreColor}">${t.composite_score || t.scaled || '–'}</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Score · ${(t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleString() : '–'}</div>
+        </div>
+        <div class="modal-stats">
+          <div class="modal-stat"><div class="ms-num" style="color:#6ee7b7">${t.correct || 0}</div><div class="ms-lbl">Correct</div></div>
+          <div class="modal-stat"><div class="ms-num" style="color:#f87171">${t.wrong || 0}</div><div class="ms-lbl">Wrong</div></div>
+          <div class="modal-stat"><div class="ms-num" style="color:#fbbf24">${t.unattempted || 0}</div><div class="ms-lbl">Skipped</div></div>
+          <div class="modal-stat"><div class="ms-num" style="color:#93c5fd">${pct}%</div><div class="ms-lbl">Score</div></div>
+        </div>
+        <div class="modal-chart-wrap"><canvas id="modalPie" height="200"></canvas></div>
+        ${details.length > 0 ? `
+          <div class="q-review-hdr">📋 Question Review (${details.length} questions)</div>
+          <div class="q-review-list">
+          ${details.map((d, i) => {
+            const qText = d.text || d.question || d.prompt || '';
+            const hasText = !!qText;
+            const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
+            const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
+            
+            let imgSrc = '';
+            if (d.useImage && d.imageKey && imgMapping[d.imageKey]) {
+              const val = imgMapping[d.imageKey];
+              imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (dir + '/' + val);
+            }
+
+            return `
+              <div class="q-card">
+                <div class="q-card-header">
+                  <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
+                  <span class="q-status ${statusClass}">${statusText}</span>
+                </div>
+                
+                ${hasText ? `<div class="q-card-text">${qText}</div>` : `<div class="q-card-text" style="opacity:0.6;">Question text not available for this topic.</div>`}
+                
+                ${imgSrc ? `<div class="q-image-container"><img src="${imgSrc}" alt="Question Image" /></div>` : ''}
+
+                ${hasText && d.options ? `
+                  <div class="q-card-opts">
+                    ${d.options.map((optText, optIdx) => {
+                      let optClass = '';
+                      if (optIdx === d.answer) {
+                        optClass = 'correct';
+                      }
+                      if (d.status === 'wrong' && optIdx === d.chosen) {
+                        optClass = 'wrong-chosen';
+                      }
+                      
+                      let badgeIcon = '';
+                      if (optIdx === d.answer) {
+                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
+                      } else if (d.status === 'wrong' && optIdx === d.chosen) {
+                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
+                      } else if (d.status === 'correct' && optIdx === d.chosen) {
+                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
+                      }
+
+                      return `
+                        <div class="q-card-opt ${optClass}">
+                          <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
+                          <div class="q-card-opt-text">${optText}</div>
+                          ${badgeIcon}
+                        </div>
+                      `;
+                    }).join('')}
+                  </div>
+                ` : `
+                  <div class="q-detail" style="margin-top:8px;">
+                    ${d.status === 'wrong' ? `Your answer: <strong>${LETTERS[d.chosen] || '–'}</strong> · Correct: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                    ${d.status === 'unattempted' ? `Correct answer: <strong>${LETTERS[d.answer] || '–'}</strong>` : ''}
+                  </div>
+                `}
+
+                <div class="q-card-exp" style="margin-top:12px; padding:10px 14px; background:rgba(255,255,255,0.03); border-left:3px solid #60a5fa; border-radius:6px; font-size:0.85rem; line-height:1.4;">
+                  <strong style="color:#60a5fa; display:block; margin-bottom:4px;">💡 Explanation:</strong> 
+                  ${d.explanation ? d.explanation : 'No detailed explanation available for this question. Please review the relevant concept or consult the solution guide.'}
+                </div>
+              </div>
+            `;
+          }).join('')}
+          </div>
+        ` : '<p style="color:rgba(255,255,255,0.3);text-align:center;padding:20px">No question details available</p>'}
+      `;
+
+      if (modalChart) modalChart.destroy();
+      modalChart = new Chart(document.getElementById('modalPie'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Correct', 'Wrong', 'Skipped'],
+          datasets: [{
+            data: [t.correct || 0, t.wrong || 0, t.unattempted || 0],
+            backgroundColor: ['#059669', '#dc2626', '#d97706'],
+            borderWidth: 0,
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.6)', font: { family: 'IBM Plex Sans' } } } },
+          cutout: '65%'
+        }
+      });
+    }
+
+    function downloadModalPDF(topicName) {
+      const element = document.getElementById('modalContent');
+      if (!element) return;
+      const closeBtn = element.querySelector('.modal-close');
+      const pdfBtn = element.querySelector('.modal-pdf-btn');
+      if (closeBtn) closeBtn.style.display = 'none';
+      if (pdfBtn) pdfBtn.style.display = 'none';
+
+      const opt = {
+        margin: [10, 10, 10, 10],
+        filename: `EduQuest_Report_${(topicName || 'test').replace(/[^a-zA-Z0-9]/g, '_')}_${new Date().toISOString().slice(0, 10)}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0d0d14' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        if (closeBtn) closeBtn.style.display = '';
+        if (pdfBtn) pdfBtn.style.display = '';
+      }).catch(err => {
+        console.error('PDF generation failed', err);
+        if (closeBtn) closeBtn.style.display = '';
+        if (pdfBtn) pdfBtn.style.display = '';
+      });
+    }
+
     // ── Topic to Question file mapping ─────
     const TOPIC_QUESTIONS_MAP = {
       'Words In Context': { q: './topic_words_in_context/questions.js', dir: './topic_words_in_context' },

@@ -147,8 +147,15 @@ async function saveToSupabase(result) {
         submit_time:  result.submitTime,
         answers_json: JSON.stringify(result.answers),
         details_json: JSON.stringify((result.details || []).map(d => ({
-          id: d.id, status: d.status,
-          chosen: d.chosen, answer: d.answer
+          id: d.id,
+          status: d.status,
+          chosen: d.chosen,
+          answer: d.answer !== undefined ? d.answer : d.correctAnswer,
+          text: d.text || d.question || d.prompt || '',
+          options: d.options || d.choices || [],
+          explanation: d.explanation || d.solution || '',
+          useImage: d.useImage || false,
+          imageKey: d.imageKey || ''
         })))
     };
 

@@ -2778,9 +2778,12 @@ return null;
       
 
       modal.innerHTML = `
-        <div class="modal-hdr">
-          <h3>${t.exam_name || t.topic || 'Test Detail'}</h3>
-          <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-hdr" style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="margin:0;">${t.exam_name || t.topic || 'Test Detail'}</h3>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="modal-pdf-btn" style="background:#059669; color:#fff; border:none; padding:6px 14px; border-radius:6px; font-weight:600; cursor:pointer; font-size:0.85rem; font-family:'IBM Plex Sans',sans-serif;" onclick="downloadAdminModalPDF('${t.exam_name || t.topic || 'Report'}', '${email}')">📄 Download PDF</button>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+          </div>
         </div>
         <div style="text-align:center;margin-bottom:8px">
           <div style="font-size:0.95rem;font-weight:600;color:rgba(255,255,255,0.6);margin-bottom:4px">Student: ${email}</div>
@@ -2885,6 +2888,32 @@ return null;
           plugins: { legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.6)', font: { family: 'IBM Plex Sans' } } } },
           cutout: '65%'
         }
+      });
+    }
+
+    function downloadAdminModalPDF(topicName, email) {
+      const element = document.getElementById('modalContent');
+      if (!element) return;
+      const closeBtn = element.querySelector('.modal-close');
+      const pdfBtn = element.querySelector('.modal-pdf-btn');
+      if (closeBtn) closeBtn.style.display = 'none';
+      if (pdfBtn) pdfBtn.style.display = 'none';
+
+      const opt = {
+        margin: [10, 10, 10, 10],
+        filename: `EduQuest_Report_${(email||'student').split('@')[0]}_${(topicName||'test').replace(/[^a-zA-Z0-9]/g,'_')}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0d0d14' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        if (closeBtn) closeBtn.style.display = '';
+        if (pdfBtn) pdfBtn.style.display = '';
+      }).catch(err => {
+        console.error('PDF generation failed', err);
+        if (closeBtn) closeBtn.style.display = '';
+        if (pdfBtn) pdfBtn.style.display = '';
       });
     }
 

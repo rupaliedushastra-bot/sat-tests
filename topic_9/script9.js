@@ -55,8 +55,15 @@ async function saveToSupabase(result) {
         submit_time:  result.submitTime,
         answers_json: JSON.stringify(result.answers),
         details_json: JSON.stringify(result.details.map(d => ({
-          id: d.id, status: d.status,
-          chosen: d.chosen, answer: d.answer
+          id: d.id,
+          status: d.status,
+          chosen: d.chosen,
+          answer: d.answer !== undefined ? d.answer : d.correctAnswer,
+          text: d.text || d.question || d.prompt || '',
+          options: d.options || d.choices || [],
+          explanation: d.explanation || d.solution || '',
+          useImage: d.useImage || false,
+          imageKey: d.imageKey || ''
         })))
       })
     });
@@ -283,18 +290,71 @@ function renderResults(result, saveRes) {
       <div class="chart-card"><h3>📈 Sub-skill Performance</h3><canvas id="barChart" height="220"></canvas></div>
     </div>
 
-    ${wrong > 0 || unattempted > 0 ? `
-    <div class="inc-review">
-      <h3>⚠️ Review: ${wrong} Wrong &nbsp;+&nbsp; ${unattempted} Skipped</h3>
-      ${details.filter(d=>d.status!=='correct').map(q=>`
-        <div class="inc-q">
-          <div class="inc-q-text">Q${q.id}: ${q.text.substring(0,160)}${q.text.length>160?'…':''}</div>
-          ${q.status==='wrong'
-            ?`<div class="inc-row wrong"><span class="label">❌ Your answer:</span><span>(${LETTERS[q.chosen]}) ${q.options[q.chosen]}</span></div>`
-            :`<div class="inc-row" style="color:var(--amber)"><span class="label">⏭ Skipped</span></div>`}
-          <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[q.answer]}) ${q.options[q.answer]}</span></div>
-        </div>`).join('')}
-    </div>` : `<div class="inc-review" style="text-align:center;padding:32px"><div style="font-size:3rem;margin-bottom:8px">🎉</div><h3 style="color:var(--green);border:none;padding:0">Perfect Score!</h3></div>`}
+    <div class="q-review-section" style="margin-top:24px; text-align:left;">
+      <h3 style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:16px; color:var(--ink2);">📋 Detailed Question Review (${details.length} questions)</h3>
+      <div class="q-review-list">
+        ${details.map((q, i) => {
+          const qText = q.text || q.question || q.prompt || '';
+          const hasText = !!qText;
+          const statusClass = q.status === 'correct' ? 'correct' : q.status === 'wrong' ? 'wrong' : 'unattempted';
+          const statusText = q.status === 'correct' ? '✅ Correct' : q.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
+          
+          let imgSrc = '';
+          if (q.useImage && q.imageKey && typeof QUESTION_IMAGES !== 'undefined' && QUESTION_IMAGES[q.imageKey]) {
+            const val = QUESTION_IMAGES[q.imageKey];
+            imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : val;
+          }
+
+          return `
+            <div class="q-card" style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:16px; box-shadow:var(--shadow);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <span style="font-weight:700; font-size:0.95rem; font-family:'IBM Plex Mono',monospace;">Question ${q.id || (i+1)}</span>
+                <span style="font-size:0.8rem; font-weight:600; padding:4px 10px; border-radius:20px; ${q.status==='correct'?'background:rgba(5,150,105,0.1);color:#059669;':q.status==='wrong'?'background:rgba(220,38,38,0.1);color:#dc2626;':'background:rgba(217,119,6,0.1);color:#d97706;'}">${statusText}</span>
+              </div>
+              
+              ${hasText ? `<div style="font-size:0.92rem; line-height:1.6; color:var(--ink2); margin-bottom:14px; white-space:pre-wrap;">${qText}</div>` : ''}
+              ${imgSrc ? `<div style="text-align:center; margin-bottom:14px;"><img src="${imgSrc}" style="max-width:100%; border-radius:8px;" alt="Question Image" /></div>` : ''}
+
+              ${hasText && q.options ? `
+                <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
+                  ${q.options.map((optText, optIdx) => {
+                    let optStyle = 'background:var(--surface); border:1px solid var(--border); color:var(--ink2);';
+                    if (optIdx === q.answer) {
+                      optStyle = 'background:rgba(5,150,105,0.1); border:1px solid #059669; color:#059669; font-weight:600;';
+                    }
+                    if (q.status === 'wrong' && optIdx === q.chosen) {
+                      optStyle = 'background:rgba(220,38,38,0.1); border:1px solid #dc2626; color:#dc2626; font-weight:600;';
+                    }
+
+                    let badgeIcon = '';
+                    if (optIdx === q.answer) {
+                      badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#059669;">✓ Correct</span>';
+                    } else if (q.status === 'wrong' && optIdx === q.chosen) {
+                      badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#dc2626;">✗ Your Choice</span>';
+                    } else if (q.status === 'correct' && optIdx === q.chosen) {
+                      badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#059669;">✓ Your Choice</span>';
+                    }
+
+                    return `
+                      <div style="display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:8px; font-size:0.88rem; ${optStyle}">
+                        <div style="width:24px; height:24px; border-radius:50%; background:rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.78rem; flex-shrink:0;">${LETTERS[optIdx]}</div>
+                        <div>${optText}</div>
+                        ${badgeIcon}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              ` : ''}
+
+              <div style="margin-top:12px; padding:12px 14px; background:rgba(124,58,237,0.05); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; font-size:0.85rem; line-height:1.5; color:var(--ink2);">
+                <strong style="color:var(--accent); display:block; margin-bottom:4px;">💡 Explanation:</strong> 
+                ${q.explanation ? q.explanation : 'No detailed explanation available for this question.'}
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    </div>
 
     <div class="res-actions" id="resActions">
       <button class="btn btn-primary" style="width:auto" onclick="location.reload()">🔄 Retake This Test</button>
