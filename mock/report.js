@@ -1,443 +1,316 @@
 // =============================================
-// report.js – PDF Report Generation via jsPDF
-// Digital SAT Practice Exam 1
+// report.js – High-Quality HTML-to-PDF Report Generator
+// Digital SAT Practice Exams
 // =============================================
 
+function loadHtml2PdfLibrary(callback) {
+  if (typeof html2pdf !== 'undefined') {
+    callback();
+    return;
+  }
+  const script = document.createElement('script');
+  script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+  script.onload = callback;
+  document.head.appendChild(script);
+}
+
 function generatePDFReport(result, shouldSave = true) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-  const W = 210, M = 15;
-  let y = 0;
+  loadHtml2PdfLibrary(() => {
+    const email = result.student.email || '';
+    const name = result.student.name || 'Student';
+    const examName = result.examName || result.topic || 'Report';
 
-  const line = (x1,y1,x2,y2,r=200,g=200,b=200,lw=0.3) => {
-    doc.setDrawColor(r,g,b); doc.setLineWidth(lw); doc.line(x1,y1,x2,y2);
-  };
-  const rect = (x,yy,w,h,r,g,b,fill=true) => {
-    if (fill) { doc.setFillColor(r,g,b); doc.rect(x,yy,w,h,'F'); }
-    else      { doc.setDrawColor(r,g,b); doc.rect(x,yy,w,h,'S'); }
-  };
-  const txt = (s,x,yy,sz=10,bold=false,color=[30,30,30],align='left') => {
-    doc.setFontSize(sz);
-    doc.setFont('helvetica', bold ? 'bold' : 'normal');
-    doc.setTextColor(...color);
-    doc.text(String(s), x, yy, { align });
-  };
+    const tempParent = document.createElement('div');
+    tempParent.style.position = 'absolute';
+    tempParent.style.left = '-9999px';
+    tempParent.style.top = '0';
+    tempParent.style.width = '800px';
+    tempParent.style.overflow = 'hidden';
 
-  // ── PAGE 1 ────────────────────────────────
-  // Header bar
-  rect(0, 0, W, 28, 13, 13, 20);
-  rect(0, 0, 6, 28, 26, 86, 219);
-  txt(result.examName || 'Digital SAT — Practice Exam 1', W/2, 11, 15, true, [255,255,255], 'center');
-  txt('Student Performance Report', W/2, 19, 9, false, [160,180,255], 'center');
-  txt(`EduQuest · rupali.eduquest@gmail.com`, W/2, 25, 7, false, [120,140,220], 'center');
-  y = 34;
+    const tempChild = document.createElement('div');
+    tempChild.style.width = '800px';
+    tempChild.style.background = '#f8fafc';
+    tempChild.innerHTML = generateCleanReportHTML(result, result.details, email, name);
 
-  // Student info box
-  rect(M, y, W-2*M, 22, 240, 244, 255);
-  doc.setDrawColor(180, 190, 240); doc.setLineWidth(0.3);
-  doc.rect(M, y, W-2*M, 22, 'S');
-  txt('STUDENT INFO', M+4, y+6, 7.5, true, [26,86,219]);
-  txt(`Name:   ${result.student.name}`,  M+4,    y+13, 9);
-  txt(`Email:  ${result.student.email}`, M+4,    y+19, 8.5);
-  txt(`Phone:  ${result.student.phone}`, W/2+4,  y+13, 9);
-  txt(`Date:   ${new Date(result.submitTime).toLocaleString('en-IN', {timeZone:'Asia/Kolkata'})}`, W/2+4, y+19, 8.5);
-  y += 28;
+    tempParent.appendChild(tempChild);
+    document.body.appendChild(tempParent);
 
-  // SAT Score hero
-  const gc = result.pct >= 70 ? [5,150,105] : result.pct >= 50 ? [180,100,0] : [200,30,30];
-  rect(M, y, W-2*M, 26, ...gc);
-  let displayScore = '';
-  let scoreLabel = '';
-  if (result.scaled !== null && result.scaled !== undefined) {
-    displayScore = String(result.scaled);
-    scoreLabel = 'Estimated SAT Score';
-  } else if (result.rwScore !== null && result.rwScore !== undefined && result.mathScore !== null && result.mathScore !== undefined) {
-    displayScore = String(Math.round(400 + (result.correct / result.total) * 1200));
-    scoreLabel = 'Estimated SAT Score';
-  } else if (result.rwScore !== null && result.rwScore !== undefined) {
-    displayScore = String(result.rwScore);
-    scoreLabel = 'Reading & Writing Score';
-  } else if (result.mathScore !== null && result.mathScore !== undefined) {
-    displayScore = String(result.mathScore);
-    scoreLabel = 'Math Score';
-  } else {
-    displayScore = String(Math.round(400 + (result.correct / result.total) * 1200));
-    scoreLabel = 'Estimated SAT Score';
-  }
+    const opt = {
+      margin: [10, 10, 10, 10],
+      filename: `EduQuest_Report_${name.replace(/\s+/g, '_')}_${examName.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#f8fafc', scrollY: 0 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
 
-  txt(displayScore, M+14, y+18, 28, true, [255,255,255]);
-  txt(scoreLabel, M+14, y+24, 7, false, [200,255,220]);
-  txt(`R&W: ${result.rwScore || '—'}   Math: ${result.mathScore || '—'}`, W/2+8, y+12, 11, true, [255,255,255]);
-  txt(`${result.correct} Correct  ·  ${result.wrong} Wrong  ·  ${result.unattempted} Skipped`, W/2+8, y+19, 8.5, false, [210,240,210]);
-  txt(`Out of ${result.total} total questions`, W/2+8, y+24, 7.5, false, [190,230,200]);
-  y += 32;
-
-  // Stat row
-  const attempted = result.correct + result.wrong;
-  const STATS = [
-    ['Attempted', attempted,            [13,13,20]],
-    ['Correct',   result.correct,       [5,150,105]],
-    ['Wrong',     result.wrong,         [220,38,38]],
-    ['Skipped',   result.unattempted,   [180,100,0]],
-    ['Score',     result.pct + '%',     [26,86,219]],
-  ];
-  const bw = (W - 2*M - 12) / 5;
-  STATS.forEach(([label, val, [r,g,b]], i) => {
-    const bx = M + i*(bw+3);
-    doc.setDrawColor(r,g,b); doc.setLineWidth(0.5);
-    doc.rect(bx, y, bw, 16, 'S');
-    txt(String(val), bx+bw/2, y+9,  13, true,  [r,g,b], 'center');
-    txt(label,       bx+bw/2, y+14, 7,  false, [100,100,120], 'center');
-  });
-  y += 22;
-
-  // Section scores
-  txt('SECTION SCORES', M, y+5, 7.5, true, [26,86,219]);
-  y += 9;
-  const sections = [
-    ['Reading & Writing', result.rwScore || '—', '/800'],
-    ['Math',             result.mathScore || '—', '/800'],
-  ];
-  sections.forEach(([name, score, suffix], i) => {
-    const sx = M + i * ((W-2*M)/2 + 3);
-    const sw = (W-2*M)/2 - 3;
-    rect(sx, y, sw, 12, 245,247,252);
-    doc.setDrawColor(210,215,240); doc.setLineWidth(0.3); doc.rect(sx,y,sw,12,'S');
-    txt(name,            sx+4, y+5,  8,  true,  [60,60,100]);
-    txt(String(score),   sx+sw-20, y+9, 12, true, [26,86,219]);
-    txt(suffix,          sx+sw-6,  y+9, 8,  false, [120,130,160]);
-  });
-  y += 18;
-
-  // Topic table
-  txt('TOPIC-WISE PERFORMANCE', M, y+5, 7.5, true, [26,86,219]);
-  y += 9;
-  rect(M, y, W-2*M, 7, 230, 235, 255);
-  doc.setDrawColor(190,200,240); doc.setLineWidth(0.3); doc.rect(M,y,W-2*M,7,'S');
-  [['Topic', M+3], ['Total', M+110], ['✓', M+123], ['✗', M+133], ['Accuracy', M+143]].forEach(([h,x]) => {
-    txt(h, x, y+5, 7.5, true, [26,86,219]);
-  });
-  y += 7;
-
-  (result.topicAnalysis || []).forEach((t, idx) => {
-    if (y > 268) { doc.addPage(); y = 20; }
-    if (idx % 2 === 0) rect(M, y, W-2*M, 7, 249, 250, 255);
-    doc.setDrawColor(220,224,240); doc.setLineWidth(0.2); doc.rect(M,y,W-2*M,7,'S');
-    txt(t.name || t.key || '',    M+3,   y+5, 8);
-    txt(t.total,   M+113, y+5, 8, false, [80,80,100], 'center');
-    txt(t.correct, M+126, y+5, 8, false, [5,150,105], 'center');
-    txt(t.wrong,   M+136, y+5, 8, false, [220,38,38], 'center');
-    // accuracy bar
-    const bc = t.acc>=70?[5,150,105]:t.acc>=40?[180,100,0]:[220,38,38];
-    rect(M+143, y+2.5, 44, 2.5, 220,224,235);
-    if (t.acc > 0) rect(M+143, y+2.5, 44*(t.acc/100), 2.5, ...bc);
-    txt(`${t.acc}%`, M+188, y+5, 7, false, [80,80,100]);
-    y += 7;
-  });
-  y += 4;
-
-  // ── PAGE 2: All Questions & Answers Review ─────────────
-  const LETTERS = ['A','B','C','D'];
-  const reviewQs = result.details || [];
-
-  if (reviewQs.length > 0) {
-    doc.addPage(); y = 20;
-    rect(M, y, W-2*M, 9, 230, 242, 255); // light blue background
-    doc.setDrawColor(26, 86, 219); doc.setLineWidth(0.4); doc.rect(M,y,W-2*M,9,'S');
-    txt(`COMPLETE QUESTIONS & ANSWERS REVIEW  (${reviewQs.length} questions)`, M+4, y+6, 9, true, [26,86,219]);
-    y += 15;
-
-    const clean = str => (str || '').replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, m =>
-      ({'&nbsp;':' ','&deg;':'°','&rarr;':'→','&larr;':'←','&minus;':'−','&sup2;':'²','&sup3;':'³'}[m] || ' ')
-    );
-
-    reviewQs.forEach(qObj => {
-      const qText  = `Q${qObj.id} [${qObj.topic || ''}]: ${clean(qObj.text)}`;
-      const qLines = doc.splitTextToSize(qText, W-2*M-10);
-      
-      let yAnsText = '';
-      if (qObj.status === 'unattempted') {
-        yAnsText = `➖ Your Answer: (Skipped)`;
-      } else if (qObj.status === 'correct') {
-        yAnsText = `✓ Your Answer: ${qObj.isFillIn ? qObj.chosen : `(${LETTERS[qObj.chosen]}) ${clean(qObj.options[qObj.chosen])}`}`;
-      } else {
-        yAnsText = `✗ Your Answer: ${qObj.isFillIn ? (qObj.chosen || 'None') : `(${LETTERS[qObj.chosen]}) ${clean(qObj.options[qObj.chosen])}`}`;
-      }
-      
-      const yAns   = doc.splitTextToSize(yAnsText, W-2*M-14);
-      let cAns = [];
-      if (qObj.status !== 'correct') {
-        cAns = doc.splitTextToSize(`✓ Correct:     ${qObj.isFillIn ? qObj.fillAnswer : `(${LETTERS[qObj.answer]}) ${clean(qObj.options[qObj.answer])}`}`, W-2*M-14);
-      }
-      const need   = qLines.length*4.5 + yAns.length*4.2 + cAns.length*4.2 + 10;
-
-      if (y + need > 275) { doc.addPage(); y = 20; }
-
-      // left accent bar
-      if (qObj.status === 'unattempted') {
-        rect(M, y, 1.8, need-3, 217, 119, 6); // amber/orange
-      } else if (qObj.status === 'correct') {
-        rect(M, y, 1.8, need-3, 5, 130, 80); // green
-      } else {
-        rect(M, y, 1.8, need-3, 220, 38, 38); // red
-      }
-
-      let iy = y + 1;
-      // question text
-      doc.setFontSize(8.5); doc.setFont('helvetica','bold'); doc.setTextColor(30,30,30);
-      qLines.forEach(l => { doc.text(l, M+5, iy+3.5); iy += 4.5; });
-      // user answer
-      doc.setFontSize(8); doc.setFont('helvetica','normal'); 
-      if (qObj.status === 'unattempted') {
-        doc.setTextColor(217, 119, 6);
-      } else if (qObj.status === 'correct') {
-        doc.setTextColor(5, 130, 80);
-      } else {
-        doc.setTextColor(200, 30, 30);
-      }
-      yAns.forEach(l => { doc.text(l, M+8, iy+3.2); iy += 4.2; });
-      // correct answer
-      if (qObj.status !== 'correct') {
-        doc.setTextColor(5,130,80);
-        cAns.forEach(l => { doc.text(l, M+8, iy+3.2); iy += 4.2; });
-      }
-
-      y += need + 2;
+    html2pdf().set(opt).from(tempChild).save().then(() => {
+      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
+    }).catch(err => {
+      console.error('PDF generation failed', err);
+      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
     });
-  }
-
-  // Footer on every page
-  const totalPages = doc.getNumberOfPages();
-  for (let p = 1; p <= totalPages; p++) {
-    doc.setPage(p);
-    line(M, 285, W-M, 285, 180,190,220);
-    txt(`${result.examName || 'Digital SAT Practice Exam 1'} — EduQuest`, M, 290, 6.5, false, [140,150,180]);
-    txt(`Page ${p} of ${totalPages}`, W-M, 290, 6.5, false, [140,150,180], 'right');
-    txt('rupali.eduquest@gmail.com', W/2, 290, 6.5, false, [140,150,180], 'center');
-  }
-
-  const filename = `${result.student.name.replace(/\s+/g,'_')}_SAT_Report.pdf`;
-  if (shouldSave) doc.save(filename);
-  return doc;
+  });
 }
 
 function generateCombinedPDF(resultsList, studentInfo) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-  const W = 210, M = 15;
-  let y = 0;
+  loadHtml2PdfLibrary(() => {
+    const email = studentInfo.email || '';
+    const name = studentInfo.name || 'Student';
 
-  const txt = (s,x,yy,sz=10,bold=false,color=[30,30,30],align='left') => {
-    doc.setFontSize(sz);
-    doc.setFont('helvetica', bold ? 'bold' : 'normal');
-    doc.setTextColor(...color);
-    doc.text(String(s), x, yy, { align });
-  };
-  const rect = (x,yy,w,h,r,g,b,fill=true) => {
-    if (fill) { doc.setFillColor(r,g,b); doc.rect(x,yy,w,h,'F'); }
-    else      { doc.setDrawColor(r,g,b); doc.rect(x,yy,w,h,'S'); }
-  };
-  const line = (x1,y1,x2,y2,r=200,g=200,b=200,lw=0.3) => {
-    doc.setDrawColor(r,g,b); doc.setLineWidth(lw); doc.line(x1,y1,x2,y2);
-  };
+    const tempParent = document.createElement('div');
+    tempParent.style.position = 'absolute';
+    tempParent.style.left = '-9999px';
+    tempParent.style.top = '0';
+    tempParent.style.width = '800px';
+    tempParent.style.overflow = 'hidden';
 
-  // Header bar
-  rect(0, 0, W, 28, 13, 13, 20);
-  rect(0, 0, 6, 28, 16, 185, 129); // green accent bar for combined report
-  txt('Digital SAT — Combined Performance Report', W/2, 11, 14, true, [255,255,255], 'center');
-  txt(`EduQuest · rupali.eduquest@gmail.com`, W/2, 19, 9, false, [160,180,255], 'center');
-  txt(`Aggregated Results of ${resultsList.length} Practice Exams`, W/2, 25, 8, false, [120,220,180], 'center');
-  y = 34;
+    const tempChild = document.createElement('div');
+    tempChild.style.width = '800px';
+    tempChild.style.background = '#f8fafc';
+    tempChild.innerHTML = generateCleanCombinedReportHTML(resultsList, studentInfo);
 
-  // Student Info Box
-  rect(M, y, W-2*M, 20, 240, 248, 245);
-  doc.setDrawColor(180, 220, 200); doc.setLineWidth(0.3);
-  doc.rect(M, y, W-2*M, 20, 'S');
-  txt('STUDENT INFO', M+4, y+5, 7.5, true, [16, 185, 129]);
-  txt(`Name:   ${studentInfo.name}`,  M+4,    y+11, 9);
-  txt(`Email:  ${studentInfo.email}`, M+4,    y+16, 8.5);
-  txt(`Phone:  ${studentInfo.phone || 'N/A'}`, W/2+4,  y+11, 9);
-  txt(`Report Date: ${new Date().toLocaleDateString('en-IN')}`, W/2+4, y+16, 8.5);
-  y += 26;
+    tempParent.appendChild(tempChild);
+    document.body.appendChild(tempParent);
 
-  // Aggregate Stats
-  let totalCorrect = 0, totalWrong = 0, totalSkipped = 0, totalQ = 0;
-  let satScores = [], rwScores = [], mathScores = [];
-  
-  resultsList.forEach(r => {
-    totalCorrect += r.correct;
-    totalWrong += r.wrong;
-    totalSkipped += r.unattempted;
-    totalQ += r.total;
-    if (r.scaled) satScores.push(r.scaled);
-    if (r.rwScore) rwScores.push(r.rwScore);
-    if (r.mathScore) mathScores.push(r.mathScore);
-  });
+    const opt = {
+      margin: [10, 10, 10, 10],
+      filename: `EduQuest_Combined_Report_${name.replace(/\s+/g, '_')}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#f8fafc', scrollY: 0 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
 
-  const avgSat = satScores.length ? Math.round(satScores.reduce((a,b)=>a+b, 0) / satScores.length) : 'N/A';
-  const avgRw = rwScores.length ? Math.round(rwScores.reduce((a,b)=>a+b, 0) / rwScores.length) : 'N/A';
-  const avgMath = mathScores.length ? Math.round(mathScores.reduce((a,b)=>a+b, 0) / mathScores.length) : 'N/A';
-
-  // Render Stats box
-  rect(M, y, W-2*M, 26, 16, 185, 129); // green hero box
-  txt(String(avgSat), M+14, y+18, 28, true, [255,255,255]);
-  txt('Average SAT Score', M+14, y+24, 7, false, [200,255,220]);
-  txt(`Avg R&W: ${avgRw}   Avg Math: ${avgMath}`, W/2+8, y+12, 11, true, [255,255,255]);
-  txt(`${totalCorrect} Correct  ·  ${totalWrong} Wrong  ·  ${totalSkipped} Skipped`, W/2+8, y+19, 8.5, false, [210,240,210]);
-  txt(`Across ${resultsList.length} exams (${totalQ} total questions)`, W/2+8, y+24, 7.5, false, [190,230,200]);
-  y += 32;
-
-  // Individual test summaries list
-  txt('EXAMS TAKEN SUMMARY', M, y+4, 8, true, [16,185,129]);
-  y += 8;
-  
-  // Table header
-  rect(M, y, W-2*M, 7, 230, 245, 235);
-  doc.setDrawColor(190,215,200); doc.setLineWidth(0.3); doc.rect(M,y,W-2*M,7,'S');
-  [['Exam Name', M+3], ['Date', M+85], ['Score', M+125], ['Accuracy', M+155]].forEach(([h,x]) => {
-    txt(h, x, y+5, 7.5, true, [16,185,129]);
-  });
-  y += 7;
-
-  resultsList.forEach((r, idx) => {
-    if (idx % 2 === 0) rect(M, y, W-2*M, 7, 248, 252, 249);
-    doc.setDrawColor(220,230,225); doc.setLineWidth(0.2); doc.rect(M,y,W-2*M,7,'S');
-    txt(r.examName, M+3, y+5, 8);
-    txt(new Date(r.submitTime).toLocaleDateString('en-IN'), M+85, y+5, 8);
-    txt(r.scaled ? `${r.scaled} / 1600` : (r.rwScore ? `${r.rwScore} / 800 (R&W)` : 'N/A'), M+125, y+5, 8);
-    txt(`${r.pct}% (${r.correct}/${r.total})`, M+155, y+5, 8);
-    y += 7;
-  });
-  y += 10;
-
-  // Compiled Topic Performance
-  txt('AGGREGATED TOPIC-WISE PERFORMANCE', M, y+4, 8, true, [16,185,129]);
-  y += 8;
-
-  // Aggregate topics
-  const topicsData = {};
-  resultsList.forEach(r => {
-    (r.topicAnalysis || []).forEach(t => {
-      const tName = t.name || t.key || 'Unknown';
-      if (!topicsData[tName]) {
-        topicsData[tName] = { total: 0, correct: 0, wrong: 0 };
-      }
-      topicsData[tName].total += t.total;
-      topicsData[tName].correct += t.correct;
-      topicsData[tName].wrong += t.wrong;
+    html2pdf().set(opt).from(tempChild).save().then(() => {
+      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
+    }).catch(err => {
+      console.error('PDF generation failed', err);
+      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
     });
   });
+}
 
-  // Table header
-  rect(M, y, W-2*M, 7, 230, 245, 235);
-  doc.setDrawColor(190,200,210); doc.setLineWidth(0.3); doc.rect(M,y,W-2*M,7,'S');
-  [['Topic', M+3], ['Total Qs', M+110], ['✓', M+125], ['✗', M+135], ['Avg Accuracy', M+145]].forEach(([h,x]) => {
-    txt(h, x, y+5, 7.5, true, [16,185,129]);
-  });
-  y += 7;
+function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
+  const letters = ['A', 'B', 'C', 'D'];
+  const testTitle = t.examName || t.exam_name || t.topic || 'Practice Test Performance Report';
+  const name = studentNameStr || t.name || t.student_name || (emailStr || t.email || 'Student').split('@')[0];
+  const email = emailStr || t.email || '';
+  const dateStr = (t.submitTime || t.submit_time || t.submitted_at) 
+    ? new Date(t.submitTime || t.submit_time || t.submitted_at).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }) 
+    : new Date().toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
 
-  Object.entries(topicsData).forEach(([name, data], idx) => {
-    if (y > 268) { doc.addPage(); y = 20; }
-    const attempted = data.correct + data.wrong;
-    const acc = attempted ? Math.round((data.correct / attempted) * 100) : 0;
-    
-    if (idx % 2 === 0) rect(M, y, W-2*M, 7, 248, 252, 249);
-    doc.setDrawColor(220,230,225); doc.setLineWidth(0.2); doc.rect(M,y,W-2*M,7,'S');
-    txt(name, M+3, y+5, 8);
-    txt(data.total, M+113, y+5, 8, false, [80,80,100], 'center');
-    txt(data.correct, M+128, y+5, 8, false, [5,150,105], 'center');
-    txt(data.wrong, M+138, y+5, 8, false, [220,38,38], 'center');
-    
-    const bc = acc>=70?[5,150,105]:acc>=40?[180,100,0]:[220,38,38];
-    rect(M+145, y+2.5, 42, 2.5, 220,224,235);
-    if (acc > 0) rect(M+145, y+2.5, 42*(acc/100), 2.5, ...bc);
-    txt(`${acc}%`, M+188, y+5, 7, false, [80,80,100]);
-    y += 7;
-  });
+  const total = t.total || (details ? details.length : 0);
+  const correct = t.correct || 0;
+  const wrong = t.wrong || 0;
+  const unattempted = t.unattempted !== undefined ? t.unattempted : Math.max(0, total - correct - wrong);
+  const pct = t.percentage || t.pct || (total > 0 ? Math.round((correct / total) * 100) : 0);
+  const scoreDisplay = t.composite_score || t.scaled || `${pct}%`;
 
-  // ── PAGE 3+: All Questions & Answers Review for Each Exam ─────────────
-  const LETTERS = ['A','B','C','D'];
-  const clean = str => (str || '').replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, m =>
-    ({'&nbsp;':' ','&deg;':'°','&rarr;':'→','&larr;':'←','&minus;':'−','&sup2;':'²','&sup3;':'³'}[m] || ' ')
-  );
+  let qCards = '';
+  if (details && details.length > 0) {
+    qCards = details.map((d, i) => {
+      const qId = d.id || (i + 1);
+      const qText = d.text || d.question || d.prompt || '';
+      const hasText = !!qText;
+      const status = d.status || (d.chosen === d.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted'));
+      
+      const statusBadge = status === 'correct'
+        ? '<span style="background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">✅ Correct</span>'
+        : status === 'wrong'
+        ? '<span style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">❌ Wrong</span>'
+        : '<span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">⏭ Skipped</span>';
 
-  resultsList.forEach((result, idx) => {
-    const reviewQs = result.details || [];
-    if (reviewQs.length > 0) {
-      doc.addPage(); y = 20;
-      rect(M, y, W-2*M, 14, 230, 242, 255); // light blue background
-      doc.setDrawColor(26, 86, 219); doc.setLineWidth(0.4); doc.rect(M,y,W-2*M,14,'S');
-      txt(`COMPLETE REVIEW: ${result.examName || `Exam ${idx+1}`}`, M+4, y+6, 9, true, [26,86,219]);
-      txt(`(${reviewQs.length} questions · ${new Date(result.submitTime).toLocaleDateString('en-IN')})`, M+4, y+11, 7.5, false, [60,100,200]);
-      y += 20;
+      const clean = str => (str || '').replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, m =>
+        ({'&nbsp;':' ','&deg;':'°','&rarr;':'→','&larr;':'←','&minus;':'−','&sup2;':'²','&sup3;':'³'}[m] || ' ')
+      );
 
-      reviewQs.forEach(qObj => {
-        const qText  = `Q${qObj.id} [${qObj.topic || ''}]: ${clean(qObj.text)}`;
-        const qLines = doc.splitTextToSize(qText, W-2*M-10);
-        
-        let yAnsText = '';
-        if (qObj.status === 'unattempted') {
-          yAnsText = `➖ Your Answer: (Skipped)`;
-        } else if (qObj.status === 'correct') {
-          yAnsText = `✓ Your Answer: ${qObj.isFillIn ? qObj.chosen : `(${LETTERS[qObj.chosen]}) ${clean(qObj.options[qObj.chosen])}`}`;
-        } else {
-          yAnsText = `✗ Your Answer: ${qObj.isFillIn ? (qObj.chosen || 'None') : `(${LETTERS[qObj.chosen]}) ${clean(qObj.options[qObj.chosen])}`}`;
+      let optsHTML = '';
+      if (d.isFillIn) {
+        optsHTML = `
+          <div style="font-size:0.88rem; color:#475569; margin-bottom:8px;">
+            ${status === 'wrong' ? `Your answer: <strong style="color:#ef4444;">${d.chosen || 'None'}</strong> · Correct answer: <strong style="color:#16a34a;">${d.fillAnswer || d.answer || '–'}</strong>` : ''}
+            ${status === 'correct' ? `Your answer: <strong style="color:#16a34a;">${d.chosen || '–'}</strong> (Correct)` : ''}
+            ${status === 'unattempted' ? `Correct answer: <strong style="color:#16a34a;">${d.fillAnswer || d.answer || '–'}</strong>` : ''}
+          </div>
+        `;
+      } else if (hasText && d.options && d.options.length > 0) {
+        optsHTML = d.options.map((optText, optIdx) => {
+          let optStyle = "background:#f8fafc; border:1.5px solid #e2e8f0; color:#334155;";
+          let badgeIcon = "";
+
+          if (optIdx === d.answer) {
+            optStyle = "background:#f0fdf4; border:1.5px solid #22c55e; color:#15803d; font-weight:600;";
+            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#16a34a;">✓ Correct Answer</span>';
+          }
+
+          if (status === 'wrong' && optIdx === d.chosen) {
+            optStyle = "background:#fef2f2; border:1.5px solid #ef4444; color:#b91c1c; font-weight:600;";
+            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#dc2626;">✗ Your Choice</span>';
+          } else if (status === 'correct' && optIdx === d.chosen) {
+            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#16a34a;">✓ Your Choice</span>';
+          }
+
+          return `
+            <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:8px; font-size:0.9rem; margin-bottom:8px; ${optStyle}">
+              <div style="width:26px; height:26px; border-radius:50%; background:rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.8rem; flex-shrink:0;">${letters[optIdx] || optIdx + 1}</div>
+              <div style="flex:1;">${clean(optText)}</div>
+              ${badgeIcon}
+            </div>
+          `;
+        }).join('');
+      } else {
+        optsHTML = `
+          <div style="font-size:0.88rem; color:#475569; margin-bottom:8px;">
+            ${status === 'wrong' ? `Your answer: <strong style="color:#ef4444;">${letters[d.chosen] || '–'}</strong> · Correct answer: <strong style="color:#16a34a;">${letters[d.answer] || '–'}</strong>` : ''}
+            ${status === 'unattempted' ? `Correct answer: <strong style="color:#16a34a;">${letters[d.answer] || '–'}</strong>` : ''}
+            ${status === 'correct' ? `Your answer: <strong style="color:#16a34a;">${letters[d.chosen] || '–'}</strong> (Correct)` : ''}
+          </div>
+        `;
+      }
+
+      const expText = d.explanation || 'No detailed explanation available for this question. Please review the relevant concept or consult the solution guide.';
+
+      let imgHTML = '';
+      if (d.image || d.useImage) {
+        const imgSrc = d.image || d.imageKey || '';
+        if (imgSrc) {
+          imgHTML = `<div style="text-align:center; margin-bottom:16px;"><img src="${imgSrc}" style="max-width:100%; max-height:350px; border-radius:8px;" alt="Question Image" /></div>`;
         }
-        
-        const yAns   = doc.splitTextToSize(yAnsText, W-2*M-14);
-        let cAns = [];
-        if (qObj.status !== 'correct') {
-          cAns = doc.splitTextToSize(`✓ Correct:     ${qObj.isFillIn ? qObj.fillAnswer : `(${LETTERS[qObj.answer]}) ${clean(qObj.options[qObj.answer])}`}`, W-2*M-14);
-        }
-        const need   = qLines.length*4.5 + yAns.length*4.2 + cAns.length*4.2 + 10;
+      }
 
-        if (y + need > 275) { doc.addPage(); y = 20; }
+      return `
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.04); page-break-inside:avoid;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
+            <div>
+              <span style="font-weight:800; font-size:1rem; font-family:'Courier New', monospace; color:#0f172a;">Question ${qId}</span>
+            </div>
+            ${statusBadge}
+          </div>
+          
+          ${hasText ? `<div style="font-size:0.95rem; line-height:1.65; color:#1e293b; margin-bottom:16px; white-space:pre-wrap;">${clean(qText)}</div>` : ''}
+          ${imgHTML}
+          
+          <div style="margin-bottom:16px;">
+            ${optsHTML}
+          </div>
 
-        // left accent bar
-        if (qObj.status === 'unattempted') {
-          rect(M, y, 1.8, need-3, 217, 119, 6); // amber/orange
-        } else if (qObj.status === 'correct') {
-          rect(M, y, 1.8, need-3, 5, 130, 80); // green
-        } else {
-          rect(M, y, 1.8, need-3, 220, 38, 38); // red
-        }
-
-        let iy = y + 1;
-        // question text
-        doc.setFontSize(8.5); doc.setFont('helvetica','bold'); doc.setTextColor(30,30,30);
-        qLines.forEach(l => { doc.text(l, M+5, iy+3.5); iy += 4.5; });
-        // user answer
-        doc.setFontSize(8); doc.setFont('helvetica','normal'); 
-        if (qObj.status === 'unattempted') {
-          doc.setTextColor(217, 119, 6);
-        } else if (qObj.status === 'correct') {
-          doc.setTextColor(5, 130, 80);
-        } else {
-          doc.setTextColor(200, 30, 30);
-        }
-        yAns.forEach(l => { doc.text(l, M+8, iy+3.2); iy += 4.2; });
-        // correct answer
-        if (qObj.status !== 'correct') {
-          doc.setTextColor(5,130,80);
-          cAns.forEach(l => { doc.text(l, M+8, iy+3.2); iy += 4.2; });
-        }
-
-        y += need + 2;
-      });
-    }
-  });
-
-  // Footer on every page
-  const totalPages = doc.getNumberOfPages();
-  for (let p = 1; p <= totalPages; p++) {
-    doc.setPage(p);
-    line(M, 285, W-M, 285, 180,190,220);
-    txt(`Combined Performance Report — EduQuest`, M, 290, 6.5, false, [140,150,180]);
-    txt(`Page ${p} of ${totalPages}`, W-M, 290, 6.5, false, [140,150,180], 'right');
-    txt('rupali.eduquest@gmail.com', W/2, 290, 6.5, false, [140,150,180], 'center');
+          <div style="padding:12px 16px; background:#f0f9ff; border-left:4px solid #0284c7; border-radius:0 8px 8px 0; font-size:0.88rem; line-height:1.5; color:#0c4a6e;">
+            <strong style="color:#0369a1; display:block; margin-bottom:4px;">💡 Solution & Explanation:</strong>
+            ${clean(expText)}
+          </div>
+        </div>
+      `;
+    }).join('');
+  } else {
+    qCards = '<p style="color:#64748b; text-align:center; padding:20px;">No detailed questions available.</p>';
   }
 
-  const filename = `${studentInfo.name.replace(/\s+/g,'_')}_Combined_SAT_Report.pdf`;
-  doc.save(filename);
-  return doc;
+  return `
+    <div class="pdf-export-container" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:#f8fafc; color:#0f172a; padding:24px; max-width:900px; margin:0 auto;">
+      <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#ffffff; padding:28px 32px; border-radius:16px; margin-bottom:24px; text-align:center;">
+        <h1 style="margin:0 0 6px 0; font-size:1.8rem; letter-spacing:-0.02em; color:#ffffff;">EduQuest Performance Report</h1>
+        <p style="margin:4px 0; opacity:0.85; font-size:0.95rem; color:#e2e8f0;"><strong>${testTitle}</strong></p>
+        <div style="font-size:3.2rem; font-weight:900; color:#38bdf8; margin:12px 0 6px 0;">${scoreDisplay}</div>
+        <p style="margin:4px 0; font-size:0.9rem; color:#cbd5e1;">Student: <strong>${name}</strong> ${email ? `(${email})` : ''} &nbsp;•&nbsp; Date: ${dateStr}</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-bottom:24px;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#16a34a;">${correct}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Correct</div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#dc2626;">${wrong}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Wrong</div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#d97706;">${unattempted}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Skipped</div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#0284c7;">${pct}%</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Percentage</div>
+        </div>
+      </div>
+
+      <div style="font-size:1.3rem; font-weight:800; margin:28px 0 16px 0; color:#0f172a; border-bottom:2px solid #e2e8f0; padding-bottom:8px;">📋 Complete Question & Answer Review (${total} Questions)</div>
+
+      ${qCards}
+    </div>
+  `;
+}
+
+function generateCleanCombinedReportHTML(resultsList, studentInfo) {
+  const letters = ['A', 'B', 'C', 'D'];
+  const name = studentInfo.name || 'Student';
+  const email = studentInfo.email || '';
+  const dateStr = new Date().toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+
+  let totalCorrect = 0, totalWrong = 0, totalSkipped = 0, totalQ = 0;
+  resultsList.forEach(r => {
+    totalCorrect += r.correct || 0;
+    totalWrong += r.wrong || 0;
+    totalSkipped += r.unattempted || 0;
+    totalQ += r.total || 0;
+  });
+  const avgPct = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
+
+  let testCardsHTML = '';
+  resultsList.forEach((r, idx) => {
+    const rTotal = r.total || (r.details ? r.details.length : 0);
+    const rPct = r.pct || (rTotal > 0 ? Math.round((r.correct / rTotal) * 100) : 0);
+    
+    testCardsHTML += `
+      <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px; page-break-inside:avoid;">
+        <h3 style="margin:0 0 10px 0; font-size:1.1rem; color:#0f172a;">${r.examName || `Practice Exam ${idx + 1}`}</h3>
+        <p style="margin:4px 0; font-size:0.85rem; color:#64748b;">Date: ${new Date(r.submitTime).toLocaleDateString()}</p>
+        <div style="display:flex; gap:16px; margin-top:12px;">
+          <div style="flex:1; background:#f8fafc; padding:10px; border-radius:8px; text-align:center;">
+            <div style="font-size:1.1rem; font-weight:700; color:#0f172a;">${r.scaled || `${rPct}%`}</div>
+            <div style="font-size:0.7rem; text-transform:uppercase; color:#64748b; margin-top:2px;">Score</div>
+          </div>
+          <div style="flex:1; background:#f8fafc; padding:10px; border-radius:8px; text-align:center;">
+            <div style="font-size:1.1rem; font-weight:700; color:#16a34a;">${r.correct}</div>
+            <div style="font-size:0.7rem; text-transform:uppercase; color:#64748b; margin-top:2px;">Correct</div>
+          </div>
+          <div style="flex:1; background:#f8fafc; padding:10px; border-radius:8px; text-align:center;">
+            <div style="font-size:1.1rem; font-weight:700; color:#dc2626;">${r.wrong}</div>
+            <div style="font-size:0.7rem; text-transform:uppercase; color:#64748b; margin-top:2px;">Wrong</div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  return `
+    <div class="pdf-export-container" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:#f8fafc; color:#0f172a; padding:24px; max-width:900px; margin:0 auto;">
+      <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#ffffff; padding:28px 32px; border-radius:16px; margin-bottom:24px; text-align:center;">
+        <h1 style="margin:0 0 6px 0; font-size:1.8rem; letter-spacing:-0.02em; color:#ffffff;">EduQuest Combined Mock Report</h1>
+        <div style="font-size:3.2rem; font-weight:900; color:#38bdf8; margin:12px 0 6px 0;">${avgPct}%</div>
+        <p style="margin:4px 0; font-size:0.9rem; color:#cbd5e1;">Student: <strong>${name}</strong> ${email ? `(${email})` : ''} &nbsp;•&nbsp; Aggregated Date: ${dateStr}</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-bottom:24px;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#16a34a;">${totalCorrect}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Total Correct</div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#dc2626;">${totalWrong}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Total Wrong</div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#d97706;">${totalSkipped}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Total Skipped</div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:#0284c7;">${resultsList.length}</div>
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-top:4px;">Tests Taken</div>
+        </div>
+      </div>
+
+      <div style="font-size:1.3rem; font-weight:800; margin:28px 0 16px 0; color:#0f172a; border-bottom:2px solid #e2e8f0; padding-bottom:8px;">📊 Individual Exam Summaries</div>
+
+      ${testCardsHTML}
+    </div>
+  `;
 }

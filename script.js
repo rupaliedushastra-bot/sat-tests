@@ -195,7 +195,8 @@ async function saveToSupabase(result) {
           chosen: d.chosen,
           answer: d.answer !== undefined ? d.answer : d.correctAnswer,
           text: d.text || d.question || d.prompt || '',
-          options: d.options || d.choices || [],
+          question: d.question || d.text || d.prompt || '',
+          options: (d.options && d.options.length > 0) ? d.options : ((d.choices && d.choices.length > 0) ? d.choices : []),
           explanation: d.explanation || d.solution || '',
           useImage: d.useImage || false,
           imageKey: d.imageKey || ''
@@ -515,48 +516,139 @@ function renderResults(result, saveRes) {
 }
 
 function downloadPDF() {
-  if (!lastResultObj) {
-    const element = document.getElementById('resWrap');
-    const actions = document.getElementById('resActions');
-    if (actions) actions.style.display = 'none';
-    const opt = {
-      margin: [10, 10, 10, 10],
-      filename: `EduQuest_Report_${(typeof student !== 'undefined' && student.name ? student.name : 'Student').replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#f8fafc', scrollY: 0 },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(element).save().then(() => {
-      if (actions) actions.style.display = 'flex';
-    }).catch(err => {
-      if (actions) actions.style.display = 'flex';
-    });
-    return;
+  // Inject print stylesheet
+  const printId = 'eduquest-print-style';
+  if (!document.getElementById(printId)) {
+    const style = document.createElement('style');
+    style.id = printId;
+    style.media = 'print';
+    style.textContent = `
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body > *:not(#testModal):not(#resWrap):not(.pdf-export-container):not(#pageResult) {
+        display: none !important;
+      }
+
+      .page:not(#pageResult), #pageReg, #pageTest, #pageBreak, .reg-wrap, .reg-card, header, .hdr {
+        display: none !important;
+      }
+
+      #pageResult, #pageResult.active {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #testModal, #testModal.modal-overlay {
+        display: block !important;
+        position: static !important;
+        background: none !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      #modalContent, .modal-box, #resWrap, .pdf-export-container {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        overflow: visible !important;
+        height: auto !important;
+      }
+
+      #modalContent, #resWrap, .pdf-export-container {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+      }
+
+      button, .modal-close, .modal-pdf-btn, .res-actions, #downloadPdfBtn, a.btn, .modal-hdr button {
+        display: none !important;
+      }
+
+      .q-card, .modal-stat, .stats-row, .charts-row, .inc-q {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      h1, h2, h3, h4, h5, h6, .q-review-hdr, .section-header, [style*="border-bottom"] {
+        page-break-after: avoid !important;
+        break-after: avoid-page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      table {
+        page-break-inside: auto;
+        width: 100% !important;
+        border-collapse: collapse !important;
+      }
+      tr {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      thead {
+        display: table-header-group !important;
+      }
+      tfoot {
+        display: table-footer-group !important;
+      }
+
+      canvas, img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 15mm 10mm 15mm 10mm;
+      }
+    `;
+    document.head.appendChild(style);
   }
 
-  const sName = typeof student !== 'undefined' && student.name ? student.name : 'Student';
-  const sEmail = typeof student !== 'undefined' && student.email ? student.email : '';
+  const btn = document.getElementById('downloadPdfBtn') || document.querySelector('.res-actions button') || document.querySelector('.modal-pdf-btn');
+  const oldText = btn ? btn.innerHTML : '';
+  if (btn) {
+    btn.innerHTML = '⏳ Preparing PDF...';
+    btn.disabled = true;
+  }
 
-  const tempContainer = document.createElement('div');
-  tempContainer.style.position = 'fixed';
-  tempContainer.style.left = '-9999px';
-  tempContainer.style.top = '0';
-  tempContainer.style.width = '800px';
-  tempContainer.innerHTML = generateCleanReportHTML(lastResultObj, lastResultDetails, sEmail, sName);
-  document.body.appendChild(tempContainer);
-
-  const opt = {
-    margin: [10, 10, 10, 10],
-    filename: `EduQuest_Report_${sName.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true, backgroundColor: '#f8fafc', scrollY: 0 },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  };
-
-  html2pdf().set(opt).from(tempContainer).save().then(() => {
-    if (document.body.contains(tempContainer)) document.body.removeChild(tempContainer);
-  }).catch(err => {
-    console.error('PDF generation failed', err);
-    if (document.body.contains(tempContainer)) document.body.removeChild(tempContainer);
-  });
+  setTimeout(() => {
+    window.print();
+    if (btn) {
+      btn.innerHTML = oldText;
+      btn.disabled = false;
+    }
+  }, 500);
 }

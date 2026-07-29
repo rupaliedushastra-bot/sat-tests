@@ -125,7 +125,7 @@ async function saveToSupabase(result) {
     } else if (nameUpper.includes('AP') || pathUpper.includes('AP')) {
         table = 'ap_report';
         defaultTopic = 'AP Test';
-    } else if (nameUpper.includes('MOCK') || pathUpper.includes('MOCK') || pathUpper.includes('SAT.HTML')) {
+    } else if (nameUpper.includes('MOCK') || pathUpper.includes('MOCK') || nameUpper.includes('PRACTICE') || nameUpper.includes('DIGITAL SAT') || nameUpper.includes('DIAGNOSTIC') || pathUpper.includes('SAT.HTML') || pathUpper.includes('SAT2.HTML') || pathUpper.includes('/MOCK/')) {
         table = 'sat_reports';
         defaultTopic = 'SAT Mock Test';
     }
@@ -152,7 +152,8 @@ async function saveToSupabase(result) {
           chosen: d.chosen,
           answer: d.answer !== undefined ? d.answer : d.correctAnswer,
           text: d.text || d.question || d.prompt || '',
-          options: d.options || d.choices || [],
+          question: d.question || d.text || d.prompt || '',
+          options: (d.options && d.options.length > 0) ? d.options : ((d.choices && d.choices.length > 0) ? d.choices : []),
           explanation: d.explanation || d.solution || '',
           useImage: d.useImage || false,
           imageKey: d.imageKey || ''
@@ -491,3 +492,248 @@ if (document.readyState === 'loading') {
 } else {
   populateCountryDropdown();
 }
+
+// ── Global html2pdf Interceptor to prevent blank pages ─────────────────
+(function() {
+  let currentHtml2pdf = window.html2pdf;
+
+  const hookHtml2pdf = (originalHtml2pdf) => {
+    if (!originalHtml2pdf || originalHtml2pdf.__hooked) return originalHtml2pdf;
+
+    const wrapped = function(element, options) {
+      const worker = originalHtml2pdf.apply(this, arguments);
+      const originalFrom = worker.from;
+      worker.from = function(src) {
+        if (src && src.nodeType === 1) {
+          const leftStyle = src.style.left;
+          if (leftStyle === '-9999px') {
+            // Create a clean clone to keep original DOM node exactly where it is
+            const clone = src.cloneNode(true);
+            clone.style.position = 'static';
+            clone.style.left = '0';
+            clone.style.width = src.style.width || '800px';
+
+            const parent = document.createElement('div');
+            parent.style.position = 'absolute';
+            parent.style.left = '-9999px';
+            parent.style.top = '0';
+            parent.style.width = src.style.width || '800px';
+            parent.style.overflow = 'hidden';
+
+            parent.appendChild(clone);
+            document.body.appendChild(parent);
+
+            const originalSave = worker.save;
+            if (originalSave) {
+              worker.save = function() {
+                const saveResult = originalSave.apply(this, arguments);
+                if (saveResult && typeof saveResult.then === 'function') {
+                  saveResult.then(() => {
+                    if (parent.parentNode) parent.parentNode.removeChild(parent);
+                  });
+                } else {
+                  setTimeout(() => {
+                    if (parent.parentNode) parent.parentNode.removeChild(parent);
+                  }, 5000);
+                }
+                return saveResult;
+              };
+            }
+            return originalFrom.call(this, clone);
+          }
+        }
+        return originalFrom.apply(this, arguments);
+      };
+      return worker;
+    };
+
+    wrapped.__hooked = true;
+    for (let prop in originalHtml2pdf) {
+      if (originalHtml2pdf.hasOwnProperty(prop)) {
+        wrapped[prop] = originalHtml2pdf[prop];
+      }
+    }
+    return wrapped;
+  };
+
+  if (currentHtml2pdf) {
+    window.html2pdf = hookHtml2pdf(currentHtml2pdf);
+  }
+
+  Object.defineProperty(window, 'html2pdf', {
+    get() {
+      return currentHtml2pdf;
+    },
+    set(val) {
+      currentHtml2pdf = hookHtml2pdf(val);
+    },
+    configurable: true
+  });
+})();
+
+// ── Global Print Integration for Vector PDF generation ──
+(function() {
+  function injectPrintStyle() {
+    if (document.getElementById('eduquest-print-style')) return;
+    const style = document.createElement('style');
+    style.id = 'eduquest-print-style';
+    style.media = 'print';
+    style.textContent = `
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body > *:not(#testModal):not(#resWrap):not(.pdf-export-container):not(#pageResult) {
+        display: none !important;
+      }
+
+      .page:not(#pageResult), #pageReg, #pageTest, #pageBreak, .reg-wrap, .reg-card, header, .hdr {
+        display: none !important;
+      }
+
+      #pageResult, #pageResult.active {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #testModal, #testModal.modal-overlay {
+        display: block !important;
+        position: static !important;
+        background: none !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      #modalContent, .modal-box, #resWrap, .pdf-export-container {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        overflow: visible !important;
+        height: auto !important;
+      }
+
+      #modalContent, #resWrap, .pdf-export-container {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+      }
+
+      button, .modal-close, .modal-pdf-btn, .res-actions, #downloadPdfBtn, a.btn, .modal-hdr button {
+        display: none !important;
+      }
+
+      .q-card, .modal-stat, .stats-row, .charts-row, .inc-q {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      h1, h2, h3, h4, h5, h6, .q-review-hdr, .section-header, [style*="border-bottom"] {
+        page-break-after: avoid !important;
+        break-after: avoid-page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      table {
+        page-break-inside: auto;
+        width: 100% !important;
+        border-collapse: collapse !important;
+      }
+      tr {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      thead {
+        display: table-header-group !important;
+      }
+      tfoot {
+        display: table-footer-group !important;
+      }
+
+      canvas, img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 15mm 10mm 15mm 10mm;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function overrideDownloadPDF() {
+    const printBasedDownloadPDF = function() {
+      injectPrintStyle();
+      const btn = document.getElementById('downloadPdfBtn') || document.querySelector('.res-actions button') || document.querySelector('.modal-pdf-btn');
+      const oldText = btn ? btn.innerHTML : '';
+      if (btn) {
+        btn.innerHTML = '⏳ Preparing PDF...';
+        btn.disabled = true;
+      }
+      setTimeout(() => {
+        window.print();
+        if (btn) {
+          btn.innerHTML = oldText;
+          btn.disabled = false;
+        }
+      }, 500);
+    };
+
+    try {
+      Object.defineProperty(window, 'downloadPDF', {
+        get() {
+          return printBasedDownloadPDF;
+        },
+        set(val) {
+          // Lock down to prevent script hoisting overwrites
+        },
+        configurable: true
+      });
+    } catch (e) {
+      window.downloadPDF = printBasedDownloadPDF;
+    }
+  }
+
+  overrideDownloadPDF();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', overrideDownloadPDF);
+  } else {
+    overrideDownloadPDF();
+  }
+  setTimeout(overrideDownloadPDF, 100);
+  setTimeout(overrideDownloadPDF, 500);
+  setTimeout(overrideDownloadPDF, 1000);
+})();

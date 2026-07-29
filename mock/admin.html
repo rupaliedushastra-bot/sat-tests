@@ -2741,10 +2741,14 @@ return null;
           const qId = d.id || (i + 1);
           const matchedQ = qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || qs[i];
           if (matchedQ) {
+            const savedText = d.text || d.question || d.prompt || '';
+            const qFileText = matchedQ.text || matchedQ.question || matchedQ.prompt || '';
+            const savedOpts = (d.options && d.options.length > 0) ? d.options : null;
+            const qFileOpts = (matchedQ.options && matchedQ.options.length > 0) ? matchedQ.options : ((matchedQ.choices && matchedQ.choices.length > 0) ? matchedQ.choices : []);
             return {
               ...d,
-              text: d.text || d.question || d.prompt || (matchedQ ? (matchedQ.text || matchedQ.question || matchedQ.prompt) : '') || '',
-              options: d.options || matchedQ.options || matchedQ.choices || [],
+              text: savedText || qFileText,
+              options: savedOpts || qFileOpts,
               answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
               chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
               status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
@@ -3024,31 +3028,197 @@ return null;
       `;
     }
 
+
+
     function downloadAdminModalPDF(topicName, email) {
-      if (!currentActiveTestObj) return;
+      // Inject print stylesheet
+      const printId = 'eduquest-print-style';
+      if (!document.getElementById(printId)) {
+        const style = document.createElement('style');
+        style.id = printId;
+        style.media = 'print';
+        style.textContent = `
+          html, body {
+            background: #ffffff !important;
+            color: #0f172a !important;
+            font-size: 11pt !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+          }
 
-      const tempContainer = document.createElement('div');
-      tempContainer.style.position = 'fixed';
-      tempContainer.style.left = '-9999px';
-      tempContainer.style.top = '0';
-      tempContainer.style.width = '800px';
-      tempContainer.innerHTML = generateCleanReportHTML(currentActiveTestObj, currentActiveTestDetails, email, currentActiveTestObj.name);
-      document.body.appendChild(tempContainer);
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
 
-      const opt = {
-        margin: [10, 10, 10, 10],
-        filename: `EduQuest_Report_${(email || 'student').split('@')[0]}_${(topicName || 'test').replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#f8fafc', scrollY: 0 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
+          body > *:not(#testModal):not(#resWrap):not(.pdf-export-container):not(#pageResult) {
+            display: none !important;
+          }
 
-      html2pdf().set(opt).from(tempContainer).save().then(() => {
-        if (document.body.contains(tempContainer)) document.body.removeChild(tempContainer);
-      }).catch(err => {
-        console.error('PDF generation failed', err);
-        if (document.body.contains(tempContainer)) document.body.removeChild(tempContainer);
-      });
+          .page:not(#pageResult), #pageReg, #pageTest, #pageBreak, .reg-wrap, .reg-card, header, .hdr {
+            display: none !important;
+          }
+
+          #pageResult, #pageResult.active {
+            display: block !important;
+            position: static !important;
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+          #testModal, #testModal.modal-overlay {
+            display: block !important;
+            position: static !important;
+            background: none !important;
+            backdrop-filter: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+          }
+
+          #modalContent, .modal-box, #resWrap, .pdf-export-container {
+            display: block !important;
+            position: static !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            background: #ffffff !important;
+            color: #0f172a !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+            overflow: visible !important;
+            height: auto !important;
+          }
+
+          #modalContent *, #resWrap *, .pdf-export-container * {
+            color: #0f172a !important;
+            border-color: #cbd5e1 !important;
+          }
+
+          .q-card {
+            background: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+          }
+
+          .q-card-text {
+            color: #1e293b !important;
+            font-size: 0.92rem !important;
+          }
+
+          .q-card-opt {
+            background: #f8fafc !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #334155 !important;
+          }
+
+          .q-card-opt-letter {
+            background: #e2e8f0 !important;
+            color: #0f172a !important;
+          }
+
+          .q-card-opt.correct {
+            background: #ecfdf5 !important;
+            border-color: #10b981 !important;
+            color: #047857 !important;
+          }
+
+          .q-card-opt.correct .q-card-opt-letter {
+            background: #10b981 !important;
+            color: #ffffff !important;
+          }
+
+          .q-card-opt.wrong-chosen {
+            background: #fef2f2 !important;
+            border-color: #ef4444 !important;
+            color: #b91c1c !important;
+          }
+
+          .q-card-opt.wrong-chosen .q-card-opt-letter {
+            background: #ef4444 !important;
+            color: #ffffff !important;
+          }
+
+          .q-card-exp {
+            background: #f5f3ff !important;
+            border-left: 4px solid #7c3aed !important;
+            color: #4c1d95 !important;
+          }
+
+          button, .modal-close, .modal-pdf-btn, .res-actions, #downloadPdfBtn, a.btn, .modal-hdr button {
+            display: none !important;
+          }
+
+          .q-card, .modal-stat, .stats-row, .charts-row, .inc-q {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+          }
+
+          h1, h2, h3, h4, h5, h6, .q-review-hdr, .section-header, [style*="border-bottom"] {
+            page-break-after: avoid !important;
+            break-after: avoid-page !important;
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+          }
+
+          table {
+            page-break-inside: auto;
+            width: 100% !important;
+            border-collapse: collapse !important;
+          }
+          tr {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+          }
+          thead {
+            display: table-header-group !important;
+          }
+          tfoot {
+            display: table-footer-group !important;
+          }
+
+          canvas, img {
+            max-width: 100% !important;
+            height: auto !important;
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+          }
+
+          @page {
+            size: A4 portrait;
+            margin: 15mm 10mm 15mm 10mm;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      const modalContent = document.getElementById('modalContent');
+      if (!modalContent) return;
+
+      const btn = modalContent.querySelector('.modal-pdf-btn');
+      const oldText = btn ? btn.innerHTML : '';
+      if (btn) {
+        btn.innerHTML = '⏳ Preparing PDF...';
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        window.print();
+        if (btn) {
+          btn.innerHTML = oldText;
+          btn.disabled = false;
+        }
+      }, 500);
     }
 
     async function generateAdminCombined(safeEmail, email) {
@@ -3112,10 +3282,14 @@ return null;
                 const qId = d.id || (i + 1);
                 const matchedQ = topicData.qs.find(q => String(q.id) === String(qId) || String(q.questionNumber) === String(qId)) || topicData.qs[i];
                 if (matchedQ) {
+                  const savedText = d.text || d.question || d.prompt || '';
+                  const qFileText = matchedQ.text || matchedQ.question || matchedQ.prompt || '';
+                  const savedOpts = (d.options && d.options.length > 0) ? d.options : null;
+                  const qFileOpts = (matchedQ.options && matchedQ.options.length > 0) ? matchedQ.options : ((matchedQ.choices && matchedQ.choices.length > 0) ? matchedQ.choices : []);
                   return {
                     ...d,
-                    text: d.text || matchedQ.text || matchedQ.question || '',
-                    options: d.options || matchedQ.options || matchedQ.choices || [],
+                    text: savedText || qFileText,
+                    options: savedOpts || qFileOpts,
                     answer: d.answer !== undefined ? d.answer : (matchedQ.answer !== undefined ? matchedQ.answer : matchedQ.correctAnswer),
                     chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
                     status: d.status || (d.chosen === matchedQ.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
