@@ -137,69 +137,17 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
 // =============================================
 
 async function saveUserToSupabase(student) {
-    if (!window.SUPABASE_CONFIG || SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL') return;
-    try {
-        await fetch(`${SUPABASE_CONFIG.url}/rest/v1/sat_topic_user`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'apikey': SUPABASE_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({
-                name: student.name,
-                email: student.email,
-                phone: student.phone,
-                topic: 'Transitions',
-                created_at: new Date().toISOString()
-            })
-        });
-    } catch (e) { console.error('Failed to save user', e); }
+    if (typeof window !== 'undefined' && window._masterSaveRegistration) {
+        return await window._masterSaveRegistration(student, 'Transitions');
+    }
 }
 
 async function saveToSupabase(result) {
-    if (!window.SUPABASE_CONFIG || SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL')
-        return { ok: false, msg: 'Supabase not configured' };
-    try {
-        const resp = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/sat_topic_report`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'apikey': SUPABASE_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({
-                name: result.student.name,
-                email: result.student.email,
-                phone: result.student.phone || '',
-                topic: 'Transitions',
-                topic_number: 21,
-                correct: result.correct,
-                wrong: result.wrong,
-                unattempted: result.unattempted,
-                total: result.total,
-                pct: result.pct,
-                grade: result.grade,
-                scaled: result.scaled,
-                submit_time: result.submitTime,
-                answers_json: JSON.stringify(result.answers),
-                details_json: JSON.stringify(result.details.map(d => ({
-          id: d.id,
-          status: d.status,
-          chosen: d.chosen,
-          answer: d.answer !== undefined ? d.answer : d.correctAnswer,
-          text: d.text || d.question || d.prompt || '',
-          options: d.options || d.choices || [],
-          explanation: d.explanation || d.solution || '',
-          useImage: d.useImage || false,
-          imageKey: d.imageKey || ''
-        })))
-            })
-        });
-        return { ok: resp.ok, status: resp.status };
-    } catch (e) { return { ok: false, msg: e.message }; }
+    if (!result.examName) result.examName = 'Transitions';
+    if (!result.topicNumber) result.topicNumber = 21;
+    if (typeof window !== 'undefined' && window._masterSaveToSupabase) {
+        return await window._masterSaveToSupabase(result);
+    }
 }
 
 // ── App State ────────────────────────────────

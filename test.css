@@ -111,3 +111,48 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;letter-spacing:-0.02em}
 .inc-row.wrong{color:var(--red)}.inc-row.right{color:var(--green)}
 .res-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
 .saved-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(5,150,105,0.1);border:1px solid rgba(5,150,105,0.3);color:#059669;border-radius:100px;padding:5px 14px;font-size:0.78rem;font-weight:600;margin-top:10px}
+
+/* Responsive & Touch Enhancements (320px to 1440px) */
+.phone-row { display: flex; gap: 8px; flex-wrap: nowrap; align-items: center; width: 100%; }
+.phone-row select, #regCC, .country-select { min-width: 105px; max-width: 140px; flex-shrink: 0; font-size: 0.86rem; padding: 10px 6px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.phone-row input { flex: 1; min-width: 0; }
+
+@media (max-width: 768px) {
+  .hdr { padding: 0 14px; font-size: 0.9rem; }
+  .hdr-brand { font-size: 0.95rem; }
+  .reg-wrap { max-width: 100%; margin: 24px auto; padding: 16px; }
+  .reg-card { border-radius: 16px; }
+  .reg-top { padding: 24px 20px 18px; }
+  .reg-body { padding: 18px 20px; }
+  .q-card { padding: 20px 18px; }
+  .q-text { padding: 14px 16px; font-size: 0.92rem; }
+  .opt { padding: 12px 14px; min-height: 44px; }
+  .btn { min-height: 44px; }
+  .sat-score { font-size: 3.4rem; }
+  .res-hero { padding: 28px 20px; }
+}
+
+@media (max-width: 480px) {
+  .phone-row select, #regCC, .country-select { min-width: 95px; max-width: 115px; font-size: 0.8rem; padding: 10px 4px; }
+  .reg-wrap { margin: 12px auto; padding: 10px; }
+  .reg-body { padding: 14px 14px; }
+  .stat-strip .s { padding: 8px 4px; }
+  .stat-strip .s .val { font-size: 1rem; }
+  .stat-strip .s .lbl { font-size: 0.6rem; }
+  .q-card { padding: 16px 12px; }
+  .q-meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .q-nav { flex-direction: column-reverse; gap: 8px; width: 100%; }
+  .q-nav .btn { width: 100%; }
+  .sat-score { font-size: 2.8rem; }
+  .stats-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-card { padding: 14px 10px; }
+  .stat-card .num { font-size: 1.5rem; }
+}
+
+@media (max-width: 360px) {
+  .phone-row select, #regCC, .country-select { min-width: 85px; max-width: 100px; font-size: 0.75rem; padding: 8px 2px; }
+  .hdr { padding: 0 8px; }
+  .hdr-brand { font-size: 0.85rem; }
+  .hdr-pill { font-size: 0.65rem; padding: 2px 6px; }
+}
+

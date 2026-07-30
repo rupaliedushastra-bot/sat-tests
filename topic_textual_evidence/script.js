@@ -86,22 +86,55 @@ function updateGrid() {
 
 async function submitTest() {
   let score = 0;
-  userAnswers.forEach((ans, i) => { if (ans === QUESTIONS[i].answer) score++; });
+  let wrong = 0;
+  let unattempted = 0;
+  const details = QUESTIONS.map((q, i) => {
+    const chosen = userAnswers[i];
+    const isCorrect = chosen === q.answer;
+    if (isCorrect) score++;
+    else if (chosen !== null && chosen !== undefined && chosen !== -1) wrong++;
+    else unattempted++;
+    return {
+      id: q.id || (i + 1),
+      status: isCorrect ? 'correct' : (chosen !== null && chosen !== undefined && chosen !== -1 ? 'wrong' : 'unattempted'),
+      chosen: chosen !== null ? chosen : -1,
+      answer: q.answer,
+      text: q.question || q.text || '',
+      options: q.options || q.choices || [],
+      explanation: q.explanation || q.solution || ''
+    };
+  });
   const total = QUESTIONS.length;
-  
-  const savedUrl = localStorage.getItem('supabaseUrl') || '';
-  const savedKey = localStorage.getItem('supabaseKey') || '';
-  
-  if (savedUrl && savedKey) {
-    const client = supabase.createClient(savedUrl, savedKey);
-    try {
-      const { error } = await client.from('sat_topic_report').insert([{
-        user_id: 'test_user_01', topic: topicName, score: score, total_questions: total
-      }]);
-      if (error) console.error(error);
-    } catch (e) { console.error(e); }
-  } else { console.warn("Supabase not configured in localStorage. Result not saved."); }
-  
+  const pct = Math.round((score / total) * 100);
+
+  const resultPayload = {
+    examName: topicName,
+    correct: score,
+    wrong: wrong,
+    unattempted: unattempted,
+    total: total,
+    pct: pct,
+    scaled: pct + '%',
+    submitTime: new Date().toISOString(),
+    answers: userAnswers,
+    details: details
+  };
+
+  if (typeof window !== 'undefined' && window._masterSaveToSupabase) {
+    await window._masterSaveToSupabase(resultPayload);
+  } else {
+    const savedUrl = (window.SUPABASE_CONFIG && window.SUPABASE_CONFIG.url) || localStorage.getItem('supabaseUrl') || '';
+    const savedKey = (window.SUPABASE_CONFIG && window.SUPABASE_CONFIG.anonKey) || localStorage.getItem('supabaseKey') || '';
+    if (savedUrl && savedKey && window.supabase) {
+      const client = window.supabase.createClient(savedUrl, savedKey);
+      try {
+        await client.from('sat_topic_report').insert([{
+          topic: topicName, correct: score, wrong: wrong, unattempted: unattempted, total: total, pct: pct, submit_time: new Date().toISOString()
+        }]);
+      } catch (e) { console.error(e); }
+    }
+  }
+
   alert(`Test Submitted! You scored ${score} out of ${total}`);
   window.location.href = '../dashboard.html';
 }

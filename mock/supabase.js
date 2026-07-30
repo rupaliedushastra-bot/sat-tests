@@ -1,7 +1,11 @@
 const SUPABASE_CONFIG = {
-    url: 'https://dyvvhmuegtzooijrtwyd.supabase.co', // e.g. https://xyzabc.supabase.co
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5dnZobXVlZ3R6b29panJ0d3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwOTk5MTEsImV4cCI6MjA5NDY3NTkxMX0.pksVza66eu3WlM1_r_IGARkjd19BwUvbKntoUIwPhRY', // Settings > API > anon public key
+    url: 'https://dyvvhmuegtzooijrtwyd.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5dnZobXVlZ3R6b29panJ0d3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwOTk5MTEsImV4cCI6MjA5NDY3NTkxMX0.pksVza66eu3WlM1_r_IGARkjd19BwUvbKntoUIwPhRY',
 };
+
+if (typeof window !== 'undefined') {
+    window.SUPABASE_CONFIG = SUPABASE_CONFIG;
+}
 
 // =============================================
 // Supabase Client Wrapper (Session Interceptor)
@@ -40,9 +44,8 @@ if (typeof window !== 'undefined' && window.supabase && !window._origSupabaseCre
 }
 
 // ── Save registration to Supabase ─────────────
-// Jab student form fill kare aur test start kare
 async function saveRegistration(studentData, examName) {
-    if (SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL') {
+    if (!SUPABASE_CONFIG || !SUPABASE_CONFIG.url || SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL') {
         console.warn('⚠️ Supabase not configured yet.');
         return;
     }
@@ -50,31 +53,23 @@ async function saveRegistration(studentData, examName) {
     const nameUpper = (examName || '').toUpperCase();
     const pathUpper = (window.location && window.location.pathname ? window.location.pathname : '').toUpperCase();
     
-    let table = 'sat_topic_user';
-    let defaultTopic = 'SAT Topic Test';
+    let table = 'sat_registrations';
     if (nameUpper.includes('TMUA') || pathUpper.includes('TMUA')) {
         table = 'tmua_user';
-        defaultTopic = 'TMUA Topic Test';
     } else if (nameUpper.includes('UCAT') || pathUpper.includes('UCAT')) {
         table = 'ucat_user';
-        defaultTopic = 'UCAT Test';
     } else if (nameUpper.includes('ACT') || pathUpper.includes('ACT')) {
         table = 'act_user';
-        defaultTopic = 'ACT Test';
     } else if (nameUpper.includes('AP') || pathUpper.includes('AP')) {
         table = 'ap_user';
-        defaultTopic = 'AP Test';
-    } else if (nameUpper.includes('MOCK') || pathUpper.includes('MOCK') || pathUpper.includes('SAT.HTML')) {
-        table = 'sat_user';
-        defaultTopic = 'SAT Mock Test';
     }
 
-    const row = {
-        name: studentData.name,
-        email: studentData.email,
-        phone: studentData.phone,
-        topic: examName || defaultTopic,
-        created_at: new Date().toISOString()
+    const payload = {
+        student_name: studentData.name || studentData.student_name || 'Student',
+        student_email: (studentData.email || studentData.student_email || '').toLowerCase().trim(),
+        student_phone: studentData.phone || studentData.student_phone || '',
+        exam_name: examName || 'SAT Test',
+        registered_at: new Date().toISOString()
     };
 
     try {
@@ -86,14 +81,14 @@ async function saveRegistration(studentData, examName) {
                 'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
                 'Prefer': 'return=minimal'
             },
-            body: JSON.stringify(row)
+            body: JSON.stringify(payload)
         });
 
         if (res.ok || res.status === 201) {
             console.log(`✅ Registration saved to ${table} successfully`);
         } else {
             const errText = await res.text();
-            console.error(`❌ Supabase registration save to ${table} failed:`, res.status, errText);
+            console.warn(`⚠️ Registration save to ${table} returned ${res.status}: ${errText}`);
         }
     } catch (err) {
         console.error('❌ Supabase registration network error:', err);
@@ -103,65 +98,166 @@ async function saveRegistration(studentData, examName) {
 // ── Save result to Supabase ───────────────────
 // Jab student test submit kare aur report generate ho
 async function saveToSupabase(result) {
-    if (SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL') {
+    if (!SUPABASE_CONFIG || !SUPABASE_CONFIG.url || SUPABASE_CONFIG.url === 'YOUR_SUPABASE_URL') {
         console.warn('⚠️ Supabase not configured yet.');
         return { ok: false, msg: 'Supabase not configured' };
     }
 
-    const nameUpper = (result && result.examName ? result.examName : '').toUpperCase();
-    const pathUpper = (window.location && window.location.pathname ? window.location.pathname : '').toUpperCase();
-    
-    let table = 'sat_topic_report';
-    let defaultTopic = 'SAT Topic Test';
-    if (nameUpper.includes('TMUA') || pathUpper.includes('TMUA')) {
-        table = 'tmua_report';
-        defaultTopic = 'TMUA Topic Test';
-    } else if (nameUpper.includes('UCAT') || pathUpper.includes('UCAT')) {
-        table = 'Ucat_diagnosis';
-        defaultTopic = 'UCAT Test';
-    } else if (nameUpper.includes('ACT') || pathUpper.includes('ACT')) {
-        table = 'act_results';
-        defaultTopic = 'ACT Test';
-    } else if (nameUpper.includes('AP') || pathUpper.includes('AP')) {
-        table = 'ap_report';
-        defaultTopic = 'AP Test';
-    } else if (nameUpper.includes('MOCK') || pathUpper.includes('MOCK') || nameUpper.includes('PRACTICE') || nameUpper.includes('DIGITAL SAT') || nameUpper.includes('DIAGNOSTIC') || pathUpper.includes('SAT.HTML') || pathUpper.includes('SAT2.HTML') || pathUpper.includes('/MOCK/')) {
-        table = 'sat_reports';
-        defaultTopic = 'SAT Mock Test';
+    if (!result || typeof result !== 'object') {
+        console.error('❌ Invalid result object provided to saveToSupabase');
+        return { ok: false, msg: 'Invalid result object' };
     }
 
-    // Row to insert into report table
-    const row = {
-        name:         result.student.name,
-        email:        result.student.email,
-        phone:        result.student.phone || '',
-        topic:        result.examName || defaultTopic,
-        topic_number: result.topicNumber || 1,
-        correct:      result.correct,
-        wrong:        result.wrong,
-        unattempted:  result.unattempted,
-        total:        result.total,
-        pct:          result.pct,
-        grade:        result.grade,
-        scaled:       result.scaled,
-        submit_time:  result.submitTime,
-        answers_json: JSON.stringify(result.answers),
-        details_json: JSON.stringify((result.details || []).map(d => ({
-          id: d.id,
-          status: d.status,
-          chosen: d.chosen,
-          answer: d.answer !== undefined ? d.answer : d.correctAnswer,
-          text: d.text || d.question || d.prompt || '',
-          question: d.question || d.text || d.prompt || '',
-          options: (d.options && d.options.length > 0) ? d.options : ((d.choices && d.choices.length > 0) ? d.choices : []),
-          explanation: d.explanation || d.solution || '',
-          useImage: d.useImage || false,
-          imageKey: d.imageKey || ''
-        })))
-    };
+    let userId = null;
+    let userEmail = null;
+    let userName = null;
+    try {
+        if (window.supabase && typeof window.supabase.createClient === 'function') {
+            const client = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+            const { data } = await client.auth.getSession();
+            if (data && data.session && data.session.user) {
+                userId = data.session.user.id || null;
+                userEmail = data.session.user.email || null;
+                userName = data.session.user.user_metadata?.full_name || data.session.user.user_metadata?.name || null;
+            }
+        }
+    } catch (e) {
+        console.warn('Could not fetch current Supabase session:', e);
+    }
+
+    const studentObj = result.student || {};
+    const nameStr = studentObj.name || result.name || userName || (userEmail ? userEmail.split('@')[0] : 'Student');
+    const emailStr = (studentObj.email || result.email || userEmail || '').toLowerCase().trim();
+    const phoneStr = studentObj.phone || result.phone || '';
+
+    const nameUpper = (result.examName || result.topic || '').toUpperCase();
+    const pathUpper = (window.location && window.location.pathname ? window.location.pathname : '').toUpperCase();
+
+    // Use word boundaries so "PRACTICE" doesn't falsely match "ACT" (PR-ACT-ICE)
+    const isAct = /\bACT\b/.test(nameUpper) || /\bACT\b/.test(pathUpper);
+    const isTmua = /\bTMUA\b/.test(nameUpper) || pathUpper.includes('TMUA');
+    const isUcat = /\bUCAT\b/.test(nameUpper) || pathUpper.includes('UCAT');
+    const isAp = /\bAP\b/.test(nameUpper) || /\bAP\b/.test(pathUpper);
+
+    const isMock = nameUpper.includes('MOCK') || nameUpper.includes('DIAGNOSTIC') || nameUpper.includes('PRACTICE') || nameUpper.includes('PREP TEST') || pathUpper.includes('/MOCK/') || pathUpper.includes('SAT.HTML') || pathUpper.includes('SAT2.HTML');
+
+    const totalQs = Number(result.total || (result.details ? result.details.length : 0));
+    const correctCount = Number(result.correct || 0);
+    const wrongCount = Number(result.wrong !== undefined ? result.wrong : (result.incorrect || 0));
+    const skippedCount = Number(result.unattempted !== undefined ? result.unattempted : (result.skipped !== undefined ? result.skipped : Math.max(0, totalQs - correctCount - wrongCount)));
+    const percentage = Number(result.pct !== undefined ? result.pct : (result.percentage !== undefined ? result.percentage : (totalQs > 0 ? Math.round((correctCount / totalQs) * 100) : 0)));
+    const submitTimeIso = result.submitTime || result.submitted_at || new Date().toISOString();
+
+    const normalizedDetails = (result.details || []).map((d, idx) => ({
+        id: d.id || (idx + 1),
+        status: d.status || (d.chosen === d.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted')),
+        chosen: d.chosen !== undefined ? d.chosen : (d.selected !== undefined ? d.selected : d.studentAnswer),
+        answer: d.answer !== undefined ? d.answer : d.correctAnswer,
+        text: d.text || d.question || d.prompt || '',
+        options: (d.options && d.options.length > 0) ? d.options : ((d.choices && d.choices.length > 0) ? d.choices : []),
+        explanation: d.explanation || d.solution || ''
+    }));
+
+    const answersList = result.answers || normalizedDetails.map(d => d.chosen);
+
+    let targetTable = 'sat_topic_report';
+    let payload = {};
+
+    if (isTmua) {
+        targetTable = 'tmua_report';
+        payload = {
+            name: nameStr,
+            email: emailStr,
+            phone: phoneStr,
+            topic: result.examName || result.topic || 'TMUA Test',
+            correct: correctCount,
+            wrong: wrongCount,
+            unattempted: skippedCount,
+            total: totalQs,
+            pct: percentage,
+            submit_time: submitTimeIso,
+            answers_json: JSON.stringify(answersList),
+            details_json: JSON.stringify(normalizedDetails)
+        };
+    } else if (isUcat) {
+        targetTable = 'Ucat_diagnosis';
+        payload = {
+            name: nameStr,
+            email: emailStr,
+            phone: phoneStr,
+            topic: result.examName || result.topic || 'UCAT Test',
+            correct: correctCount,
+            wrong: wrongCount,
+            unattempted: skippedCount,
+            total: totalQs,
+            pct: percentage,
+            submit_time: submitTimeIso,
+            answers_json: JSON.stringify(answersList),
+            details_json: JSON.stringify(normalizedDetails)
+        };
+    } else if (isAct) {
+        targetTable = 'act_results';
+        payload = {
+            student_name: nameStr,
+            student_email: emailStr,
+            student_phone: phoneStr,
+            exam_name: result.examName || result.topic || 'ACT Test',
+            percentage: percentage,
+            correct: correctCount,
+            wrong: wrongCount,
+            unattempted: skippedCount,
+            total: totalQs,
+            submitted_at: submitTimeIso,
+            details_json: JSON.stringify(normalizedDetails),
+            student_answers: JSON.stringify(answersList)
+        };
+    } else if (isMock) {
+        targetTable = 'sat_results';
+        payload = {
+            student_name: nameStr,
+            student_email: emailStr,
+            student_phone: phoneStr,
+            exam_name: result.examName || result.topic || 'SAT Diagnostic / Mock Test',
+            sat_score: typeof result.scaled === 'number' ? result.scaled : (result.composite_score || (400 + Math.round(percentage * 12))),
+            percentage: percentage,
+            grade: result.grade || (percentage >= 80 ? 'A' : percentage >= 60 ? 'B' : 'C'),
+            correct: correctCount,
+            wrong: wrongCount,
+            skipped: skippedCount,
+            unattempted: skippedCount,
+            total: totalQs,
+            submitted_at: submitTimeIso,
+            details_json: JSON.stringify(normalizedDetails),
+            student_answers: JSON.stringify(answersList)
+        };
+    } else {
+        targetTable = 'sat_topic_report';
+        payload = {
+            name: nameStr,
+            email: emailStr,
+            phone: phoneStr,
+            student_name: nameStr,
+            student_email: emailStr,
+            topic: result.examName || result.topic || 'SAT Topic Test',
+            topic_number: result.topicNumber || 1,
+            correct: correctCount,
+            wrong: wrongCount,
+            unattempted: skippedCount,
+            total: totalQs,
+            pct: percentage,
+            percentage: percentage,
+            grade: result.grade || (percentage >= 80 ? 'A' : percentage >= 60 ? 'B' : 'C'),
+            scaled: String(result.scaled || percentage + '%'),
+            submit_time: submitTimeIso,
+            answers_json: JSON.stringify(answersList),
+            details_json: JSON.stringify(normalizedDetails)
+        };
+    }
+
+    if (userId) payload.user_id = userId;
 
     try {
-        const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${table}`, {
+        const res = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${targetTable}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -169,40 +265,67 @@ async function saveToSupabase(result) {
                 'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
                 'Prefer': 'return=minimal'
             },
-            body: JSON.stringify(row)
+            body: JSON.stringify(payload)
         });
 
         if (res.ok || res.status === 201) {
-            console.log('✅ Result saved to Supabase successfully');
-            return { ok: true, status: res.status };
+            console.log(`✅ Test result successfully saved to ${targetTable}`);
+            return { ok: true };
         } else {
             const errText = await res.text();
-            console.error('❌ Supabase save failed:', res.status, errText);
+            console.error(`❌ Save to ${targetTable} returned ${res.status}:`, errText);
             return { ok: false, msg: errText };
         }
     } catch (err) {
-        console.error('❌ Supabase network error:', err);
+        console.error(`❌ Network error saving result to ${targetTable}:`, err);
         return { ok: false, msg: err.message };
     }
 }
 
-// ── Auto-fill Email ───────────────────────────
-// Agar user logged in hai, toh email form me pre-fill kar do
-document.addEventListener('DOMContentLoaded', async () => {
-    if (window.supabase && typeof window.supabase.createClient === 'function') {
-        const client = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
-        const { data: { session } } = await client.auth.getSession();
-        if (session && session.user && session.user.email) {
-            const emailInput = document.getElementById('regEmail');
-            if (emailInput && !emailInput.value) {
-                emailInput.value = session.user.email;
-                emailInput.setAttribute('readonly', 'true');
-                emailInput.style.opacity = '0.7';
-                emailInput.style.cursor = 'not-allowed';
+if (typeof window !== 'undefined') {
+    window._masterSaveToSupabase = saveToSupabase;
+    window._masterSaveRegistration = saveRegistration;
+}
+
+// ── Auto-fill Name & Email ───────────────────────────
+async function autoFillUserForms() {
+    if (!SUPABASE_CONFIG || !SUPABASE_CONFIG.url) return;
+    try {
+        if (window.supabase && typeof window.supabase.createClient === 'function') {
+            const client = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+            const { data: { session } } = await client.auth.getSession();
+            if (session && session.user) {
+                const userEmail = session.user.email || '';
+                const userName = session.user.user_metadata?.full_name || session.user.user_metadata?.name || '';
+                
+                // Prefill email fields
+                const emailInputs = document.querySelectorAll('#regEmail, input[name="email"], #stuEmail, .user-email-input, #userEmailInput');
+                emailInputs.forEach(input => {
+                    if (userEmail && (!input.value || input.getAttribute('readonly') === 'true')) {
+                        input.value = userEmail;
+                        input.setAttribute('readonly', 'true');
+                        input.style.opacity = '0.8';
+                        input.style.cursor = 'not-allowed';
+                    }
+                });
+
+                // Prefill name fields
+                const nameInputs = document.querySelectorAll('#regName, input[name="name"], #stuName, .user-name-input, #userNameInput');
+                nameInputs.forEach(input => {
+                    if (userName && !input.value) {
+                        input.value = userName;
+                    }
+                });
             }
         }
+    } catch (e) {
+        console.warn('Auto pre-fill failed:', e);
     }
-});
+}
+
+document.addEventListener('DOMContentLoaded', autoFillUserForms);
+window.addEventListener('load', autoFillUserForms);
+
 
 
 // ================================================================

@@ -1649,13 +1649,52 @@ return null;
       allProfiles = profilesData || [];
 
       // 1. Mock SAT reports
-      const { data: mockRes } = await supabaseClient.from('sat_results').select('*').order('submitted_at', { ascending: false });
-      allMockReports = mockRes || [];
+      let mockRes1 = [], mockRes2 = [];
+      try {
+        const { data: d1 } = await supabaseClient.from('sat_results').select('*').order('submitted_at', { ascending: false });
+        if (d1) mockRes1 = d1;
+      } catch(e) {}
+      try {
+        const { data: d2 } = await supabaseClient.from('sat_reports').select('*').order('submit_time', { ascending: false });
+        if (d2) mockRes2 = d2;
+      } catch(e) {}
+
+      const raw1 = mockRes1.map(r => ({
+        ...r,
+        student_email: r.student_email || r.email,
+        student_name: r.student_name || r.name,
+        exam_name: r.exam_name || r.topic,
+        percentage: r.percentage !== undefined ? r.percentage : r.pct,
+        composite_score: r.composite_score || r.scaled,
+        submitted_at: r.submitted_at || r.submit_time
+      }));
+      const raw2 = mockRes2.map(r => ({
+        ...r,
+        student_email: r.email || r.student_email,
+        student_name: r.name || r.student_name,
+        exam_name: r.topic || r.exam_name,
+        percentage: r.pct !== undefined ? r.pct : r.percentage,
+        composite_score: r.scaled || r.composite_score,
+        submitted_at: r.submit_time || r.submitted_at
+      }));
+
+      const combinedMock = [...raw1];
+      raw2.forEach(m2 => {
+        const isDup = combinedMock.some(m1 =>
+          (m1.id && m2.id && String(m1.id) === String(m2.id)) ||
+          (m1.exam_name === m2.exam_name && (m1.student_email || '').toLowerCase() === (m2.student_email || '').toLowerCase() && Math.abs(new Date(m1.submitted_at || 0) - new Date(m2.submitted_at || 0)) < 10000)
+        );
+        if (!isDup) combinedMock.push(m2);
+      });
+
+      allMockReports = combinedMock;
       groupedMockReports = {};
       allMockReports.forEach(r => {
         const e = (r.student_email || r.email || '').toLowerCase().trim();
-        if (!groupedMockReports[e]) groupedMockReports[e] = [];
-        groupedMockReports[e].push(r);
+        if (e) {
+          if (!groupedMockReports[e]) groupedMockReports[e] = [];
+          groupedMockReports[e].push(r);
+        }
       });
 
       // 2. Topic SAT reports

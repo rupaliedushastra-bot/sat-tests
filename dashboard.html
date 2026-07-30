@@ -961,23 +961,119 @@
     async function fetchAllUserReports(email) {
       document.getElementById('historyContent').innerHTML = `<div class="loading-spinner">Loading your tests...</div>`;
       const cleanEmail = (email || '').toLowerCase().trim();
+      const userId = (currentSession && currentSession.user) ? currentSession.user.id : null;
+
+      // Safe fetch helper function that never throws on missing table or column error
+      async function safeFetch(tableName, candidateCols = ['email', 'student_email']) {
+        let results = [];
+        try {
+          if (cleanEmail) {
+            for (const col of candidateCols) {
+              const { data, error } = await supabaseClient
+                .from(tableName)
+                .select('*')
+                .ilike(col, cleanEmail);
+              if (!error && Array.isArray(data) && data.length > 0) {
+                results = results.concat(data);
+              }
+            }
+          }
+          if (userId && results.length === 0) {
+            const { data, error } = await supabaseClient
+              .from(tableName)
+              .select('*')
+              .eq('user_id', userId);
+            if (!error && Array.isArray(data) && data.length > 0) {
+              results = results.concat(data);
+            }
+          }
+        } catch (err) {
+          console.warn(`Safe fetch warning for ${tableName}:`, err);
+        }
+        // Deduplicate rows by ID
+        const unique = [];
+        const seen = new Set();
+        results.forEach(r => {
+          const key = r.id ? String(r.id) : JSON.stringify(r);
+          if (!seen.has(key)) {
+            seen.add(key);
+            unique.push(r);
+          }
+        });
+        return unique;
+      }
 
       try {
-        const [mockRes, topicRes, tmuaRes, ucatRes, actRes, apRes] = await Promise.all([
-          supabaseClient.from('sat_reports').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('sat_topic_report').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('tmua_report').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('Ucat_diagnosis').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('act_results').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('ap_report').select('*').ilike('email', cleanEmail)
+        const [satResultsData, topicReportData, tmuaData, ucatData, actData, apData, lsatData] = await Promise.all([
+          safeFetch('sat_results', ['student_email', 'email']),
+          safeFetch('sat_topic_report', ['email', 'student_email']),
+          safeFetch('tmua_report', ['email', 'student_email']),
+          safeFetch('Ucat_diagnosis', ['email', 'student_email']),
+          safeFetch('act_results', ['student_email', 'email']),
+          safeFetch('ap_report', ['email', 'student_email']),
+          safeFetch('lsat_report', ['email', 'student_email'])
         ]);
 
-        allRawReports.mock = (mockRes.data || []).map(r => ({ ...r, portal: 'mock', exam_type: 'SAT Mock' }));
-        allRawReports.topic = (topicRes.data || []).map(r => ({ ...r, portal: 'topic', exam_type: 'SAT Topic' }));
-        allRawReports.tmua = (tmuaRes.data || []).map(r => ({ ...r, portal: 'tmua', exam_type: 'TMUA' }));
-        allRawReports.ucat = (ucatRes.data || []).map(r => ({ ...r, portal: 'ucat', exam_type: 'UCAT' }));
-        allRawReports.act = (actRes.data || []).map(r => ({ ...r, portal: 'act', exam_type: 'ACT' }));
-        allRawReports.ap = (apRes.data || []).map(r => ({ ...r, portal: 'ap', exam_type: 'AP' }));
+        // Combine sat_results and sat_topic_report rows
+        const rawSatAll = [...satResultsData, ...topicReportData];
+        const deduppedSat = [];
+        rawSatAll.forEach(r => {
+          const isDup = deduppedSat.some(d =>
+            (d.id && r.id && String(d.id) === String(r.id)) ||
+            ((d.exam_name || d.topic) === (r.exam_name || r.topic) && Math.abs(new Date(d.submitted_at || d.submit_time || d.created_at || 0) - new Date(r.submitted_at || r.submit_time || r.created_at || 0)) < 10000)
+          );
+          if (!isDup) deduppedSat.push(r);
+        });
+
+        const mockList = [];
+        const topicList = [];
+
+        deduppedSat.forEach(r => {
+          const title = (r.exam_name || r.topic || r.exam_title || '').toLowerCase();
+          const testType = (r.test_type || r.exam_type || r.category || '').toLowerCase();
+
+          // Diagnostic Test, Full Mock Test, Practice Exam, Mock => SAT Mock Tab
+          const isMock = title.includes('mock') || title.includes('diagnostic') || title.includes('practice exam') || title.includes('prep test') || testType.includes('mock') || testType.includes('diagnostic');
+
+          if (isMock) {
+            mockList.push({
+              ...r,
+              portal: 'mock',
+              exam_type: title.includes('diagnostic') ? 'SAT Diagnostic' : 'SAT Mock',
+              topic: r.exam_name || r.topic || 'SAT Mock Test',
+              pct: r.percentage !== undefined ? r.percentage : (r.pct !== undefined ? r.pct : 0),
+              scaled: r.composite_score || r.sat_score || r.scaled || '–',
+              submit_time: r.submitted_at || r.submit_time || r.created_at
+            });
+          } else {
+            // Topic tests: Reading & Writing, Reading & Writing Class Mock, Math
+            let categoryLabel = 'SAT Topic';
+            if (title.includes('class') || title.includes('words in context') || title.includes('central ideas') || title.includes('inferences') || title.includes('transitions') || title.includes('verbs') || title.includes('modifiers') || title.includes('rhetor')) {
+              categoryLabel = 'R&W Class Mock';
+            } else if (title.includes('math') || title.includes('algebra') || title.includes('trigonometry') || title.includes('geometry') || title.includes('number') || title.includes('percentage') || title.includes('quadratic') || title.includes('ratio')) {
+              categoryLabel = 'Math Topic';
+            } else {
+              categoryLabel = 'R&W Topic';
+            }
+
+            topicList.push({
+              ...r,
+              portal: 'topic',
+              exam_type: categoryLabel,
+              topic: r.topic || r.exam_name || 'SAT Topic Test',
+              pct: r.pct !== undefined ? r.pct : (r.percentage !== undefined ? r.percentage : 0),
+              scaled: r.scaled || r.composite_score || r.sat_score || '–',
+              submit_time: r.submit_time || r.submitted_at || r.created_at
+            });
+          }
+        });
+
+        allRawReports.mock = mockList;
+        allRawReports.topic = topicList;
+        allRawReports.tmua = tmuaData.map(r => ({ ...r, portal: 'tmua', exam_type: 'TMUA', pct: r.pct !== undefined ? r.pct : (r.percentage || 0), submit_time: r.submit_time || r.created_at }));
+        allRawReports.ucat = ucatData.map(r => ({ ...r, portal: 'ucat', exam_type: 'UCAT', pct: r.pct !== undefined ? r.pct : (r.percentage || 0), submit_time: r.submit_time || r.created_at }));
+        allRawReports.act = actData.map(r => ({ ...r, portal: 'act', exam_type: 'ACT', pct: r.percentage !== undefined ? r.percentage : (r.pct || 0), submit_time: r.submitted_at || r.created_at }));
+        allRawReports.ap = apData.map(r => ({ ...r, portal: 'ap', exam_type: 'AP', pct: r.pct !== undefined ? r.pct : (r.percentage || 0), submit_time: r.submit_time || r.created_at }));
       } catch (err) {
         console.error("Error fetching student reports:", err);
       }
@@ -1037,53 +1133,55 @@
       }
 
       container.innerHTML = `
-        <table class="history-table" style="width:100%; border-collapse:collapse; font-size:0.9rem; text-align:left;">
-          <thead>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
-              <th style="padding:12px; width:40px; text-align:center;">Select</th>
-              <th style="padding:12px;">Test Name</th>
-              <th style="padding:12px;">Category</th>
-              <th style="padding:12px;">Date</th>
-              <th style="padding:12px;">Score</th>
-              <th style="padding:12px;">Composite / Scaled</th>
-              <th style="padding:12px; text-align:right;">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${tests.map((t, idx) => {
-              const pct = t.percentage || t.pct || 0;
-              const dateStr = (t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' }) : '–';
-              const isChecked = selectedIds.has(idx);
-              
-              return `
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05); transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.02)'" onmouseleave="this.style.background='transparent'">
-                  <td style="padding:12px; text-align:center;" onclick="event.stopPropagation()">
-                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelectTest(${idx})" style="cursor:pointer; width:16px; height:16px;" />
-                  </td>
-                  <td style="padding:12px; font-weight:600; cursor:pointer;" onclick="openTestDetail(${idx})">
-                    ${t.exam_name || t.topic || 'Practice Test'}
-                  </td>
-                  <td style="padding:12px;" onclick="openTestDetail(${idx})">
-                    <span style="padding:3px 10px; border-radius:12px; font-size:0.78rem; font-weight:600; background:rgba(96,165,250,0.15); color:#60a5fa; border:1px solid rgba(96,165,250,0.3);">
-                      ${t.exam_type || t.portal?.toUpperCase() || 'SAT'}
-                    </span>
-                  </td>
-                  <td style="padding:12px; color:rgba(255,255,255,0.6);" onclick="openTestDetail(${idx})">${dateStr}</td>
-                  <td style="padding:12px;" onclick="openTestDetail(${idx})">
-                    <span class="score-pill ${pct >= 70 ? 'high' : pct >= 50 ? 'mid' : 'low'}">${pct}%</span>
-                    <span style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-left:6px;">(${t.correct || 0}/${t.total || 0})</span>
-                  </td>
-                  <td style="padding:12px; font-weight:700; color:#6ee7b7;" onclick="openTestDetail(${idx})">
-                    ${t.composite_score || t.scaled || '–'}
-                  </td>
-                  <td style="padding:12px; text-align:right;">
-                    <button class="btn btn-outline" style="padding:4px 10px; font-size:0.8rem; cursor:pointer;" onclick="openTestDetail(${idx})">👁 View Report</button>
-                  </td>
-                </tr>
-              `;
-            }).join('')}
-          </tbody>
-        </table>
+        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+          <table class="history-table" style="width:100%; min-width:650px; border-collapse:collapse; font-size:0.9rem; text-align:left;">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5);">
+                <th style="padding:12px; width:40px; text-align:center;">Select</th>
+                <th style="padding:12px;">Test Name</th>
+                <th style="padding:12px;">Category</th>
+                <th style="padding:12px;">Date</th>
+                <th style="padding:12px;">Score</th>
+                <th style="padding:12px;">Composite / Scaled</th>
+                <th style="padding:12px; text-align:right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${tests.map((t, idx) => {
+                const pct = t.percentage || t.pct || 0;
+                const dateStr = (t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' }) : '–';
+                const isChecked = selectedIds.has(idx);
+                
+                return `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05); transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.02)'" onmouseleave="this.style.background='transparent'">
+                    <td style="padding:12px; text-align:center;" onclick="event.stopPropagation()">
+                      <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelectTest(${idx})" style="cursor:pointer; width:16px; height:16px;" />
+                    </td>
+                    <td style="padding:12px; font-weight:600; cursor:pointer;" onclick="openTestDetail(${idx})">
+                      ${t.exam_name || t.topic || 'Practice Test'}
+                    </td>
+                    <td style="padding:12px;" onclick="openTestDetail(${idx})">
+                      <span style="padding:3px 10px; border-radius:12px; font-size:0.78rem; font-weight:600; background:rgba(96,165,250,0.15); color:#60a5fa; border:1px solid rgba(96,165,250,0.3);">
+                        ${t.exam_type || t.portal?.toUpperCase() || 'SAT'}
+                      </span>
+                    </td>
+                    <td style="padding:12px; color:rgba(255,255,255,0.6);" onclick="openTestDetail(${idx})">${dateStr}</td>
+                    <td style="padding:12px;" onclick="openTestDetail(${idx})">
+                      <span class="score-pill ${pct >= 70 ? 'high' : pct >= 50 ? 'mid' : 'low'}">${pct}%</span>
+                      <span style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-left:6px;">(${t.correct || 0}/${t.total || 0})</span>
+                    </td>
+                    <td style="padding:12px; font-weight:700; color:#6ee7b7;" onclick="openTestDetail(${idx})">
+                      ${t.composite_score || t.scaled || '–'}
+                    </td>
+                    <td style="padding:12px; text-align:right;">
+                      <button class="btn btn-outline" style="padding:4px 10px; font-size:0.8rem; cursor:pointer;" onclick="openTestDetail(${idx})">👁 View Report</button>
+                    </td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
       `;
     }
 
