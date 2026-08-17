@@ -14,7 +14,7 @@ const QUESTIONS = [
       "61"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 4(5) + 41 = 20 + 41 = 61 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 4(5) + 41 = 20 + 41 = 61 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "71"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 6(5) + 41 = 30 + 41 = 71 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 6(5) + 41 = 30 + 41 = 71 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "46"
     ],
     "answer": 2,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 5(5) + 26 = 25 + 26 = 51 \\).",
+    "explanation": "Choice C is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 5(5) + 26 = 25 + 26 = 51 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "71"
     ],
     "answer": 2,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 7(5) + 43 = 35 + 43 = 78 \\).",
+    "explanation": "Choice C is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 7(5) + 43 = 35 + 43 = 78 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "64"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 3(5) + 49 = 15 + 49 = 64 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 3(5) + 49 = 15 + 49 = 64 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "67"
     ],
     "answer": 1,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 6(5) + 31 = 30 + 31 = 61 \\).",
+    "explanation": "Choice B is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 6(5) + 31 = 30 + 31 = 61 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "83"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 7(5) + 48 = 35 + 48 = 83 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 7(5) + 48 = 35 + 48 = 83 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "60"
     ],
     "answer": 2,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 2(5) + 40 = 10 + 40 = 50 \\).",
+    "explanation": "Choice C is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 2(5) + 40 = 10 + 40 = 50 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "88"
     ],
     "answer": 2,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 8(5) + 40 = 40 + 40 = 80 \\).",
+    "explanation": "Choice C is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 8(5) + 40 = 40 + 40 = 80 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "43"
     ],
     "answer": 1,
-    "explanation": "Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 3(5) + 25 = 15 + 25 = 40 \\).",
+    "explanation": "Choice B is correct. Substitute \\( x = 5 \\) into the equation of the line of best fit: \\( y = 3(5) + 25 = 15 + 25 = 40 \\).",
     "topic": "Two Variable Data Models and Scatter Plots"
   }
 ];

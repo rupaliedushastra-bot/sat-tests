@@ -9,12 +9,12 @@ const QUESTIONS = [
       "Cognitive performance improves with less than seven hours of sleep."
     ],
     "answer": 1,
-    "explanation": "The passage clearly states that individuals who sleep between\nseven to eight hours per night have the highest levels of cognitive\nfunctioning. This directly supports answer choice B. Choices A and D\ncontradict the passage, and choice C is incorrect as the passage indicates\nthat sleep duration does affect cognitive performance.",
+    "explanation": "Choice B is correct. The passage clearly states that individuals who sleep between\nseven to eight hours per night have the highest levels of cognitive\nfunctioning. This directly supports answer choice B. Choices A and D\ncontradict the passage, and choice C is incorrect as the passage indicates\nthat sleep duration does affect cognitive performance.",
     "topic": "Reading and Writing"
   },
   {
     "id": 2,
-    "text": "Passage:\nMarie Curie, known for her pioneering research on radioactivity, won two\nNobel Prizes: one in Physics and one in Chemistry. Her work laid the\nfoundation for modern physics and chemistry, and her discovery of radium\nand polonium significantly advanced medical research.\n\nQuestion:\nWhat did Marie Curie\u2019s discoveries contribute to?",
+    "text": "Passage:\nMarie Curie, known for her pioneering research on radioactivity, won two\nNobel Prizes: one in Physics and one in Chemistry. Her work laid the\nfoundation for modern physics and chemistry, and her discovery of radium\nand polonium significantly advanced medical research.\n\nQuestion:\nWhat did Marie Curie’s discoveries contribute to?",
     "options": [
       "The development of modern physics and chemistry.",
       "The study of astronomy.",
@@ -22,7 +22,7 @@ const QUESTIONS = [
       "The creation of the internet."
     ],
     "answer": 0,
-    "explanation": "The passage mentions that Marie Curie's work laid the\nfoundation for modern physics and chemistry, making choice A the correct\nanswer. Choices B, C, and D are not related to her contributions as stated in\nthe passage.",
+    "explanation": "Choice A is correct. The passage mentions that Marie Curie's work laid the\nfoundation for modern physics and chemistry, making choice A the correct\nanswer. Choices B, C, and D are not related to her contributions as stated in\nthe passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -35,7 +35,7 @@ const QUESTIONS = [
       "The reduction of renewable energy sources."
     ],
     "answer": 1,
-    "explanation": "The passage highlights that reliance on fossil fuels\ncontributes to environmental pollution and climate change, making choice\nB the correct answer. Choices A, C, and D are not mentioned as the main\nconcerns in the passage.",
+    "explanation": "Choice B is correct. The passage highlights that reliance on fossil fuels\ncontributes to environmental pollution and climate change, making choice\nB the correct answer. Choices A, C, and D are not mentioned as the main\nconcerns in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -48,7 +48,7 @@ const QUESTIONS = [
       "To protect against nomadic invaders."
     ],
     "answer": 3,
-    "explanation": "The passage states that the Great Wall of China was\nconstructed to protect Chinese states and empires from nomadic invaders,\nmaking choice D the correct answer. Choices A, B, and C do not accurately\nreflect the primary purpose mentioned in the passage.",
+    "explanation": "Choice D is correct. The passage states that the Great Wall of China was\nconstructed to protect Chinese states and empires from nomadic invaders,\nmaking choice D the correct answer. Choices A, B, and C do not accurately\nreflect the primary purpose mentioned in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -61,7 +61,7 @@ const QUESTIONS = [
       "Science, innovation, and progress."
     ],
     "answer": 1,
-    "explanation": "The passage identifies love, conflict, and fate as the central\nthemes of \"Romeo and Juliet,\" making choice B the correct answer. Choices\nA, C, and D do not reflect the themes mentioned in the passage.",
+    "explanation": "Choice B is correct. The passage identifies love, conflict, and fate as the central\nthemes of \"Romeo and Juliet,\" making choice B the correct answer. Choices\nA, C, and D do not reflect the themes mentioned in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -74,7 +74,7 @@ const QUESTIONS = [
       "Limited accessibility to communication tools."
     ],
     "answer": 2,
-    "explanation": "The passage mentions privacy issues and the spread of\nmisinformation as concerns associated with recent technological\nadvancements in communication, making choice C the correct answer.\nChoices A, B, and D are not mentioned as concerns in the passage.",
+    "explanation": "Choice C is correct. The passage mentions privacy issues and the spread of\nmisinformation as concerns associated with recent technological\nadvancements in communication, making choice C the correct answer.\nChoices A, B, and D are not mentioned as concerns in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -87,7 +87,7 @@ const QUESTIONS = [
       "The construction of magical schools."
     ],
     "answer": 1,
-    "explanation": "The passage states that the main focus of the \"Harry Potter\"\nseries is the journey and challenges of a young wizard, Harry Potter,\nmaking choice B the correct answer. Choices A, C, and D are not the main\nfocus as described in the passage.",
+    "explanation": "Choice B is correct. The passage states that the main focus of the \"Harry Potter\"\nseries is the journey and challenges of a young wizard, Harry Potter,\nmaking choice B the correct answer. Choices A, C, and D are not the main\nfocus as described in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -100,7 +100,7 @@ const QUESTIONS = [
       "More frequent and severe weather events."
     ],
     "answer": 3,
-    "explanation": "The passage mentions that climate change is causing more\nfrequent and severe weather events, making choice D the correct answer.\nChoices A, B, and C do not accurately reflect the effects mentioned in the\npassage.",
+    "explanation": "Choice D is correct. The passage mentions that climate change is causing more\nfrequent and severe weather events, making choice D the correct answer.\nChoices A, B, and C do not accurately reflect the effects mentioned in the\npassage.",
     "topic": "Reading and Writing"
   },
   {
@@ -113,7 +113,7 @@ const QUESTIONS = [
       "It revolutionized surgical procedures."
     ],
     "answer": 2,
-    "explanation": "The passage states that the discovery of penicillin paved the\nway for the development of other antibiotics, making choice C the correct\nanswer. Choices A and B are incorrect because penicillin treats bacterial,\nnot viral, infections. Choice D is not mentioned in the passage.",
+    "explanation": "Choice C is correct. The passage states that the discovery of penicillin paved the\nway for the development of other antibiotics, making choice C the correct\nanswer. Choices A and B are incorrect because penicillin treats bacterial,\nnot viral, infections. Choice D is not mentioned in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -126,7 +126,7 @@ const QUESTIONS = [
       "Decreased reliance on technology."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that IoT devices offer convenience and\nefficiency, making choice C the correct answer. Choices A, B, and D do not\naccurately reflect the benefits mentioned in the passage.\nThe next set of questions will continue in the same format, with detailed\nexplanations for both correct answers and distractors, ensuring\ncomprehensive preparation for the Digital SAT.",
+    "explanation": "Choice C is correct. The passage mentions that IoT devices offer convenience and\nefficiency, making choice C the correct answer. Choices A, B, and D do not\naccurately reflect the benefits mentioned in the passage.\nThe next set of questions will continue in the same format, with detailed\nexplanations for both correct answers and distractors, ensuring\ncomprehensive preparation for the Digital SAT.",
     "topic": "Reading and Writing"
   },
   {
@@ -139,7 +139,7 @@ const QUESTIONS = [
       "It can survive extreme cold temperatures."
     ],
     "answer": 1,
-    "explanation": "The passage specifically mentions that the new orchid\nspecies has petals that resemble the wings of a butterfly, making choice B\nthe correct answer. Choices A, C, and D are not supported by the\ninformation in the passage.",
+    "explanation": "Choice B is correct. The passage specifically mentions that the new orchid\nspecies has petals that resemble the wings of a butterfly, making choice B\nthe correct answer. Choices A, C, and D are not supported by the\ninformation in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -152,7 +152,7 @@ const QUESTIONS = [
       "The writings of Roman historians."
     ],
     "answer": 0,
-    "explanation": "The passage explains that the volcanic ash preserved the city,\nallowing historians and archaeologists to study it in detail. This makes\nchoice A the correct answer. Choices B, C, and D do not relate to the\npreservation of the city as described in the passage.",
+    "explanation": "Choice A is correct. The passage explains that the volcanic ash preserved the city,\nallowing historians and archaeologists to study it in detail. This makes\nchoice A the correct answer. Choices B, C, and D do not relate to the\npreservation of the city as described in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -165,7 +165,7 @@ const QUESTIONS = [
       "They require no maintenance."
     ],
     "answer": 1,
-    "explanation": "The passage highlights that electric cars reduce emissions\nand dependence on fossil fuels, making choice B the correct answer.\nChoices A, C, and D are not mentioned as benefits in the passage.",
+    "explanation": "Choice B is correct. The passage highlights that electric cars reduce emissions\nand dependence on fossil fuels, making choice B the correct answer.\nChoices A, C, and D are not mentioned as benefits in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -178,7 +178,7 @@ const QUESTIONS = [
       "By lowering the cost of raw materials."
     ],
     "answer": 1,
-    "explanation": "The passage states that AI benefits industries by automating\ntasks and improving decision-making processes, making choice B the\ncorrect answer. Choices A, C, and D do not reflect the benefits of AI as\nmentioned in the passage.",
+    "explanation": "Choice B is correct. The passage states that AI benefits industries by automating\ntasks and improving decision-making processes, making choice B the\ncorrect answer. Choices A, C, and D do not reflect the benefits of AI as\nmentioned in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -191,7 +191,7 @@ const QUESTIONS = [
       "Avoiding any use of technology."
     ],
     "answer": 1,
-    "explanation": "The passage mentions crop rotation as a practice integral to\nsustainable agriculture, making choice B the correct answer. Choices A, C,\nand D do not align with the principles of sustainable agriculture described\nin the passage.",
+    "explanation": "Choice B is correct. The passage mentions crop rotation as a practice integral to\nsustainable agriculture, making choice B the correct answer. Choices A, C,\nand D do not align with the principles of sustainable agriculture described\nin the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -204,7 +204,7 @@ const QUESTIONS = [
       "It helps reduce the urban heat island effect."
     ],
     "answer": 3,
-    "explanation": "The passage mentions that urban gardening helps reduce the\nurban heat island effect, making choice D the correct answer. Choices A, B,\nand C are not benefits of urban gardening mentioned in the passage.",
+    "explanation": "Choice D is correct. The passage mentions that urban gardening helps reduce the\nurban heat island effect, making choice D the correct answer. Choices A, B,\nand C are not benefits of urban gardening mentioned in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -217,7 +217,7 @@ const QUESTIONS = [
       "The fall of the Roman Empire."
     ],
     "answer": 1,
-    "explanation": "The passage states that the Renaissance was known for\nremarkable advancements in art, science, and literature, making choice B\nthe correct answer. Choices A, C, and D are not accurate descriptions of the\nRenaissance as described in the passage.",
+    "explanation": "Choice B is correct. The passage states that the Renaissance was known for\nremarkable advancements in art, science, and literature, making choice B\nthe correct answer. Choices A, C, and D are not accurate descriptions of the\nRenaissance as described in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -230,7 +230,7 @@ const QUESTIONS = [
       "To learn new programming languages."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that a digital detox allows people to\nreconnect with nature and engage in physical activities, making choice C\nthe correct answer. Choices A, B, and D do not reflect the purpose of a\ndigital detox as described in the passage.",
+    "explanation": "Choice C is correct. The passage mentions that a digital detox allows people to\nreconnect with nature and engage in physical activities, making choice C\nthe correct answer. Choices A, B, and D do not reflect the purpose of a\ndigital detox as described in the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -243,7 +243,7 @@ const QUESTIONS = [
       "It introduces a new topic."
     ],
     "answer": 1,
-    "explanation": "The phrase \"By analyzing the data thoroughly\" explains how the scientists\nwere able to draw accurate conclusions.\nA) Incorrect; no example is provided.\nC) Incorrect; there is no contrast indicated.\nD) Incorrect; it does not introduce a new topic but explains the current one.",
+    "explanation": "Choice B is correct. The phrase \"By analyzing the data thoroughly\" explains how the scientists\nwere able to draw accurate conclusions.\nA) Incorrect; no example is provided.\nC) Incorrect; there is no contrast indicated.\nD) Incorrect; it does not introduce a new topic but explains the current one.",
     "topic": "Reading and Writing"
   },
   {
@@ -256,7 +256,7 @@ const QUESTIONS = [
       "unavoidable"
     ],
     "answer": 3,
-    "explanation": "\"Inevitable\" \nmeans \ncertain \nto \nhappen; \nunavoidable, \nwhich \nfits\n\"unavoidable.\"\nA) Incorrect; \"uncertain\" is the opposite of \"inevitable.\"\nB) Incorrect; \"avoidable\" is the opposite of \"inevitable.\"\nC) Incorrect; \"predictable\" does not capture the certainty implied by\n\"inevitable.\"",
+    "explanation": "Choice D is correct. \"Inevitable\" \nmeans \ncertain \nto \nhappen; \nunavoidable, \nwhich \nfits\n\"unavoidable.\"\nA) Incorrect; \"uncertain\" is the opposite of \"inevitable.\"\nB) Incorrect; \"avoidable\" is the opposite of \"inevitable.\"\nC) Incorrect; \"predictable\" does not capture the certainty implied by\n\"inevitable.\"",
     "topic": "Reading and Writing"
   },
   {
@@ -269,7 +269,7 @@ const QUESTIONS = [
       "confident"
     ],
     "answer": 1,
-    "explanation": "\"Reluctant\" means unwilling or hesitant, which fits the context of the\nsentence.\nA) Incorrect; \"eager\" means enthusiastic, which is the opposite of\n\"reluctant.\"\nC) Incorrect; \"indifferent\" means having no particular interest, which does\nnot match the context.\nD) Incorrect; \"confident\" means sure of oneself, which is not implied by\n\"reluctant.\"",
+    "explanation": "Choice B is correct. \"Reluctant\" means unwilling or hesitant, which fits the context of the\nsentence.\nA) Incorrect; \"eager\" means enthusiastic, which is the opposite of\n\"reluctant.\"\nC) Incorrect; \"indifferent\" means having no particular interest, which does\nnot match the context.\nD) Incorrect; \"confident\" means sure of oneself, which is not implied by\n\"reluctant.\"",
     "topic": "Reading and Writing"
   },
   {
@@ -282,7 +282,7 @@ const QUESTIONS = [
       "clearly; students"
     ],
     "answer": 3,
-    "explanation": "A semicolon is used to link two related independent clauses.\nA) Incorrect; a comma cannot join two independent clauses without a\nconjunction.\nB) Incorrect; \"and\" incorrectly changes the sentence structure.\nC) Incorrect; a colon is not appropriate here.",
+    "explanation": "Choice D is correct. A semicolon is used to link two related independent clauses.\nA) Incorrect; a comma cannot join two independent clauses without a\nconjunction.\nB) Incorrect; \"and\" incorrectly changes the sentence structure.\nC) Incorrect; a colon is not appropriate here.",
     "topic": "Reading and Writing"
   },
   {
@@ -295,7 +295,7 @@ const QUESTIONS = [
       "It is important to reduce our carbon footprint."
     ],
     "answer": 1,
-    "explanation": "Option B directly introduces the topic of electric vehicles and their\nadvantages.\nA) Incorrect; focuses on gasoline-powered cars, not electric vehicles.\nC) Incorrect; discusses renewable energy, not specifically electric vehicles.\nD) Incorrect; is a general statement about carbon footprint, not specifically\nabout electric vehicles.",
+    "explanation": "Choice B is correct. Option B directly introduces the topic of electric vehicles and their\nadvantages.\nA) Incorrect; focuses on gasoline-powered cars, not electric vehicles.\nC) Incorrect; discusses renewable energy, not specifically electric vehicles.\nD) Incorrect; is a general statement about carbon footprint, not specifically\nabout electric vehicles.",
     "topic": "Reading and Writing"
   },
   {
@@ -308,7 +308,7 @@ const QUESTIONS = [
       "ignore"
     ],
     "answer": 2,
-    "explanation": "\"Alleviate\" means to make something less severe, which matches \"reduce.\"\nA) Incorrect; \"increase\" means to make something more, the opposite of\n\"alleviate.\"\nB) Incorrect; \"worsen\" means to make something worse, the opposite of\n\"alleviate.\"\nD) Incorrect; \"ignore\" means to not pay attention to, which does not fit the\ncontext.",
+    "explanation": "Choice C is correct. \"Alleviate\" means to make something less severe, which matches \"reduce.\"\nA) Incorrect; \"increase\" means to make something more, the opposite of\n\"alleviate.\"\nB) Incorrect; \"worsen\" means to make something worse, the opposite of\n\"alleviate.\"\nD) Incorrect; \"ignore\" means to not pay attention to, which does not fit the\ncontext.",
     "topic": "Reading and Writing"
   },
   {
@@ -321,7 +321,7 @@ const QUESTIONS = [
       "operations, and they opened"
     ],
     "answer": 1,
-    "explanation": "A semicolon is correctly used to link two closely related independent\nclauses.\nA) Incorrect; a comma cannot join two independent clauses without a\nconjunction.\nC) Incorrect; a colon is not appropriate here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe two clauses.",
+    "explanation": "Choice B is correct. A semicolon is correctly used to link two closely related independent\nclauses.\nA) Incorrect; a comma cannot join two independent clauses without a\nconjunction.\nC) Incorrect; a colon is not appropriate here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe two clauses.",
     "topic": "Reading and Writing"
   },
   {
@@ -334,7 +334,7 @@ const QUESTIONS = [
       "It adds additional information."
     ],
     "answer": 3,
-    "explanation": "The phrase \"In addition to her many talents\" adds more information about\nthe subject.\nA) Incorrect; no example is provided.\nB) Incorrect; it does not explain a reason.\nC) Incorrect; there is no contrast indicated.",
+    "explanation": "Choice D is correct. The phrase \"In addition to her many talents\" adds more information about\nthe subject.\nA) Incorrect; no example is provided.\nB) Incorrect; it does not explain a reason.\nC) Incorrect; there is no contrast indicated.",
     "topic": "Reading and Writing"
   },
   {
@@ -347,7 +347,7 @@ const QUESTIONS = [
       "accept"
     ],
     "answer": 1,
-    "explanation": "\"Mitigate\" means to make less severe or serious, which matches \"lessen.\"\nA) Incorrect; \"intensify\" means to make stronger, the opposite of \"mitigate.\"\nC) Incorrect; \"ignore\" means to not pay attention to, which does not fit the\ncontext.\nD) Incorrect; \"accept\" means to agree with, which is not implied by\n\"mitigate.\"",
+    "explanation": "Choice B is correct. \"Mitigate\" means to make less severe or serious, which matches \"lessen.\"\nA) Incorrect; \"intensify\" means to make stronger, the opposite of \"mitigate.\"\nC) Incorrect; \"ignore\" means to not pay attention to, which does not fit the\ncontext.\nD) Incorrect; \"accept\" means to agree with, which is not implied by\n\"mitigate.\"",
     "topic": "Reading and Writing"
   },
   {
@@ -360,7 +360,7 @@ const QUESTIONS = [
       "Many people prefer to exercise outdoors."
     ],
     "answer": 0,
-    "explanation": "Option A effectively summarizes the additional benefits of regular exercise,\nmaking it a strong concluding sentence.\nB) Incorrect; introduces a new topic rather than concluding.\nC) Incorrect; gives advice without summarizing the paragraph.\nD) Incorrect; does not conclude the paragraph about the benefits of regular\nexercise.",
+    "explanation": "Choice A is correct. Option A effectively summarizes the additional benefits of regular exercise,\nmaking it a strong concluding sentence.\nB) Incorrect; introduces a new topic rather than concluding.\nC) Incorrect; gives advice without summarizing the paragraph.\nD) Incorrect; does not conclude the paragraph about the benefits of regular\nexercise.",
     "topic": "Reading and Writing"
   },
   {
@@ -373,7 +373,7 @@ const QUESTIONS = [
       "break and she went"
     ],
     "answer": 1,
-    "explanation": "A semicolon is correctly used to link two closely related independent\nclauses.\nA) Incorrect; a comma cannot join two independent clauses without a\nconjunction.\nC) Incorrect; a colon is not appropriate here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe two clauses.",
+    "explanation": "Choice B is correct. A semicolon is correctly used to link two closely related independent\nclauses.\nA) Incorrect; a comma cannot join two independent clauses without a\nconjunction.\nC) Incorrect; a colon is not appropriate here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe two clauses.",
     "topic": "Reading and Writing"
   },
   {
@@ -386,12 +386,12 @@ const QUESTIONS = [
       "It introduces a new topic."
     ],
     "answer": 1,
-    "explanation": "The phrase \"Because of her dedication\" explains why the team was able to\nmeet its deadlines.\nA) Incorrect; no example is provided.\nC) Incorrect; there is no contrast indicated.\nD) Incorrect; it does not introduce a new topic but explains the current one.",
+    "explanation": "Choice B is correct. The phrase \"Because of her dedication\" explains why the team was able to\nmeet its deadlines.\nA) Incorrect; no example is provided.\nC) Incorrect; there is no contrast indicated.\nD) Incorrect; it does not introduce a new topic but explains the current one.",
     "topic": "Reading and Writing"
   },
   {
     "id": 31,
-    "text": "Which choice best completes the sentence with relevant and precise\ninformation?\nSentence: \"The museum\u2019s new exhibit showcases a collection of rare\nartifacts from ancient civilizations, ______________.\"",
+    "text": "Which choice best completes the sentence with relevant and precise\ninformation?\nSentence: \"The museum’s new exhibit showcases a collection of rare\nartifacts from ancient civilizations, ______________.\"",
     "options": [
       "which were dug up from various archaeological sites.",
       "that are found in many different locations.",
@@ -399,12 +399,12 @@ const QUESTIONS = [
       "but some people do not find it appealing."
     ],
     "answer": 0,
-    "explanation": "Option A provides specific information about the source of the artifacts,\nmaking it the most relevant and precise choice.\nB) Incorrect; \"found in many different locations\" is vague and less\ninformative.\nC) Incorrect; \"it is quite interesting\" is subjective and lacks precision.\nD) Incorrect; \"some people do not find it appealing\" introduces a negative\nperspective not fitting the context.",
+    "explanation": "Choice A is correct. Option A provides specific information about the source of the artifacts,\nmaking it the most relevant and precise choice.\nB) Incorrect; \"found in many different locations\" is vague and less\ninformative.\nC) Incorrect; \"it is quite interesting\" is subjective and lacks precision.\nD) Incorrect; \"some people do not find it appealing\" introduces a negative\nperspective not fitting the context.",
     "topic": "Reading and Writing"
   },
   {
     "id": 32,
-    "text": "In the context of the following sentence, what does the word \"profound\"\nmost nearly mean?\nSentence: \"The scientist\u2019s discovery had a profound impact on the field of\ngenetics.\"",
+    "text": "In the context of the following sentence, what does the word \"profound\"\nmost nearly mean?\nSentence: \"The scientist’s discovery had a profound impact on the field of\ngenetics.\"",
     "options": [
       "minor",
       "thorough",
@@ -412,7 +412,7 @@ const QUESTIONS = [
       "sudden"
     ],
     "answer": 2,
-    "explanation": "\"Profound\" means very great or intense, which matches \"deep.\"\nA) Incorrect; \"minor\" means small or insignificant, the opposite of\n\"profound.\"\nB) Incorrect; \"thorough\" means complete with regard to every detail, which\ndoes not fit here.\nD) Incorrect; \"sudden\" means happening quickly and unexpectedly, which\ndoes not convey the same depth.",
+    "explanation": "Choice C is correct. \"Profound\" means very great or intense, which matches \"deep.\"\nA) Incorrect; \"minor\" means small or insignificant, the opposite of\n\"profound.\"\nB) Incorrect; \"thorough\" means complete with regard to every detail, which\ndoes not fit here.\nD) Incorrect; \"sudden\" means happening quickly and unexpectedly, which\ndoes not convey the same depth.",
     "topic": "Reading and Writing"
   },
   {
@@ -425,7 +425,7 @@ const QUESTIONS = [
       "It is important to invest in clean energy technologies."
     ],
     "answer": 2,
-    "explanation": "Option C smoothly transitions by acknowledging the benefits of renewable\nenergy and then introducing the challenges.\nA) Incorrect; continues discussing benefits without addressing challenges.\nB) Incorrect; focuses on public support rather than transitioning to\nchallenges.\nD) Incorrect; emphasizes investment without addressing challenges.",
+    "explanation": "Choice C is correct. Option C smoothly transitions by acknowledging the benefits of renewable\nenergy and then introducing the challenges.\nA) Incorrect; continues discussing benefits without addressing challenges.\nB) Incorrect; focuses on public support rather than transitioning to\nchallenges.\nD) Incorrect; emphasizes investment without addressing challenges.",
     "topic": "Reading and Writing"
   },
   {
@@ -438,7 +438,7 @@ const QUESTIONS = [
       "study and provided"
     ],
     "answer": 1,
-    "explanation": "A semicolon correctly separates two independent but related clauses.\nA) Incorrect; a comma cannot join two independent clauses.\nC) Incorrect; a colon is not suitable here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe ideas.",
+    "explanation": "Choice B is correct. A semicolon correctly separates two independent but related clauses.\nA) Incorrect; a comma cannot join two independent clauses.\nC) Incorrect; a colon is not suitable here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe ideas.",
     "topic": "Reading and Writing"
   },
   {
@@ -451,7 +451,7 @@ const QUESTIONS = [
       "examine"
     ],
     "answer": 3,
-    "explanation": "\"Scrutinize\" means to examine or inspect closely and thoroughly.\nA) Incorrect; \"approve\" means to accept, which is not the meaning of\n\"scrutinize.\"\nB) Incorrect; \"implement\" means to put into effect, which does not match\n\"scrutinize.\"\nC) Incorrect; \"reject\" means to dismiss, which is not implied here.",
+    "explanation": "Choice D is correct. \"Scrutinize\" means to examine or inspect closely and thoroughly.\nA) Incorrect; \"approve\" means to accept, which is not the meaning of\n\"scrutinize.\"\nB) Incorrect; \"implement\" means to put into effect, which does not match\n\"scrutinize.\"\nC) Incorrect; \"reject\" means to dismiss, which is not implied here.",
     "topic": "Reading and Writing"
   },
   {
@@ -464,7 +464,7 @@ const QUESTIONS = [
       "Teenagers often have busy schedules with extracurricular activities."
     ],
     "answer": 1,
-    "explanation": "Option B provides specific evidence supporting the importance of sleep for\nteenagers.\nA) Incorrect; discusses an unrelated activity without supporting the\nparagraph\u2019s focus.\nC) Incorrect; mentions school start times but does not directly support the\nimportance of sleep.\nD) Incorrect; talks about busy schedules without emphasizing the\nimportance of sleep.",
+    "explanation": "Choice B is correct. Option B provides specific evidence supporting the importance of sleep for\nteenagers.\nA) Incorrect; discusses an unrelated activity without supporting the\nparagraph’s focus.\nC) Incorrect; mentions school start times but does not directly support the\nimportance of sleep.\nD) Incorrect; talks about busy schedules without emphasizing the\nimportance of sleep.",
     "topic": "Reading and Writing"
   },
   {
@@ -477,7 +477,7 @@ const QUESTIONS = [
       "It reduces the intake of fruits and vegetables."
     ],
     "answer": 1,
-    "explanation": "The passage mentions that the Mediterranean diet improves\nbrain function, making choice B the correct answer. Choices A, C, and D do\nnot reflect the health benefits of the Mediterranean diet as described.",
+    "explanation": "Choice B is correct. The passage mentions that the Mediterranean diet improves\nbrain function, making choice B the correct answer. Choices A, C, and D do\nnot reflect the health benefits of the Mediterranean diet as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -490,7 +490,7 @@ const QUESTIONS = [
       "Stable precipitation patterns."
     ],
     "answer": 0,
-    "explanation": "The passage states that rising temperatures are one of the\nfactors contributing to the decline of biodiversity, making choice A the\ncorrect answer. Choices B, C, and D do not align with the factors described\nin the passage.",
+    "explanation": "Choice A is correct. The passage states that rising temperatures are one of the\nfactors contributing to the decline of biodiversity, making choice A the\ncorrect answer. Choices B, C, and D do not align with the factors described\nin the passage.",
     "topic": "Reading and Writing"
   },
   {
@@ -503,7 +503,7 @@ const QUESTIONS = [
       "It eliminates the need for community services."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that volunteerism supports local\norganizations and builds stronger social ties, making choice C the correct\nanswer. Choices A, B, and D do not reflect the impacts of volunteerism as\ndescribed.",
+    "explanation": "Choice C is correct. The passage mentions that volunteerism supports local\norganizations and builds stronger social ties, making choice C the correct\nanswer. Choices A, B, and D do not reflect the impacts of volunteerism as\ndescribed.",
     "topic": "Reading and Writing"
   },
   {
@@ -516,7 +516,7 @@ const QUESTIONS = [
       "It improves communication, navigation, and weather forecasting."
     ],
     "answer": 3,
-    "explanation": "The passage states that space exploration has led to\ntechnological advancements that improve communication, navigation, and\nweather forecasting, making choice D the correct answer. Choices A, B, and\nC do not align with the benefits of space exploration as described.",
+    "explanation": "Choice D is correct. The passage states that space exploration has led to\ntechnological advancements that improve communication, navigation, and\nweather forecasting, making choice D the correct answer. Choices A, B, and\nC do not align with the benefits of space exploration as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -529,12 +529,12 @@ const QUESTIONS = [
       "It prevents vitamin C deficiency."
     ],
     "answer": 1,
-    "explanation": "The passage states that vitamin D helps the body absorb\ncalcium, which is necessary for strong bones and teeth, making choice B\nthe correct answer. Choices A, C, and D do not align with the information\ngiven.",
+    "explanation": "Choice B is correct. The passage states that vitamin D helps the body absorb\ncalcium, which is necessary for strong bones and teeth, making choice B\nthe correct answer. Choices A, C, and D do not align with the information\ngiven.",
     "topic": "Reading and Writing"
   },
   {
     "id": 42,
-    "text": "Passage:\nSocial media platforms have become a vital tool for businesses. They allow\ncompanies to reach a larger audience, engage with customers, and promote\ntheir products or services. Effective use of social media can significantly\nenhance a business\u2019s visibility and brand loyalty.\n\nQuestion:\nWhat is one benefit of social media for businesses mentioned in the\npassage?",
+    "text": "Passage:\nSocial media platforms have become a vital tool for businesses. They allow\ncompanies to reach a larger audience, engage with customers, and promote\ntheir products or services. Effective use of social media can significantly\nenhance a business’s visibility and brand loyalty.\n\nQuestion:\nWhat is one benefit of social media for businesses mentioned in the\npassage?",
     "options": [
       "It decreases brand loyalty.",
       "It limits audience reach.",
@@ -542,7 +542,7 @@ const QUESTIONS = [
       "It prevents customer engagement."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that social media can enhance a\nbusiness\u2019s visibility and brand loyalty, making choice C the correct answer.\nChoices A, B, and D do not reflect the benefits described.",
+    "explanation": "Choice C is correct. The passage mentions that social media can enhance a\nbusiness’s visibility and brand loyalty, making choice C the correct answer.\nChoices A, B, and D do not reflect the benefits described.",
     "topic": "Reading and Writing"
   },
   {
@@ -555,7 +555,7 @@ const QUESTIONS = [
       "They deplete natural resources."
     ],
     "answer": 0,
-    "explanation": "The passage states that renewable energy sources are an\nenvironmentally friendly alternative to fossil fuels, making choice A the\ncorrect answer. Choices B, C, and D do not align with the advantages\ndescribed.",
+    "explanation": "Choice A is correct. The passage states that renewable energy sources are an\nenvironmentally friendly alternative to fossil fuels, making choice A the\ncorrect answer. Choices B, C, and D do not align with the advantages\ndescribed.",
     "topic": "Reading and Writing"
   },
   {
@@ -568,7 +568,7 @@ const QUESTIONS = [
       "It decreases the attainability of education."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that online education offers flexibility\nand accessibility, making choice C the correct answer. Choices A, B, and D\ndo not reflect the benefits of online education as described.",
+    "explanation": "Choice C is correct. The passage mentions that online education offers flexibility\nand accessibility, making choice C the correct answer. Choices A, B, and D\ndo not reflect the benefits of online education as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -581,7 +581,7 @@ const QUESTIONS = [
       "They hinder sustainable city development."
     ],
     "answer": 2,
-    "explanation": "The passage states that public transportation provides an\naffordable mode of transportation, making choice C the correct answer.\nChoices A, B, and D do not align with the benefits described.",
+    "explanation": "Choice C is correct. The passage states that public transportation provides an\naffordable mode of transportation, making choice C the correct answer.\nChoices A, B, and D do not align with the benefits described.",
     "topic": "Reading and Writing"
   },
   {
@@ -594,7 +594,7 @@ const QUESTIONS = [
       "It improves empathy."
     ],
     "answer": 3,
-    "explanation": "The passage states that reading fiction can improve empathy,\nmaking choice D the correct answer. Choices A, B, and C do not reflect the\nmental benefits of reading fiction as described.",
+    "explanation": "Choice D is correct. The passage states that reading fiction can improve empathy,\nmaking choice D the correct answer. Choices A, B, and C do not reflect the\nmental benefits of reading fiction as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -607,12 +607,12 @@ const QUESTIONS = [
       "It eliminates the need for green spaces."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that urban gardening provides fresh\nproduce and enhances community bonds, making choice C the correct\nanswer. Choices A, B, and D do not align with the benefits described.",
+    "explanation": "Choice C is correct. The passage mentions that urban gardening provides fresh\nproduce and enhances community bonds, making choice C the correct\nanswer. Choices A, B, and D do not align with the benefits described.",
     "topic": "Reading and Writing"
   },
   {
     "id": 48,
-    "text": "Passage:\nDigital literacy is becoming increasingly important in today\u2019s world. The\nability to use digital tools effectively can open up numerous opportunities in\neducation, employment, and personal growth. Schools are now focusing on\nteaching digital literacy skills to prepare students for the future.\n\nQuestion:\nWhat is one reason digital literacy is important according to the passage?",
+    "text": "Passage:\nDigital literacy is becoming increasingly important in today’s world. The\nability to use digital tools effectively can open up numerous opportunities in\neducation, employment, and personal growth. Schools are now focusing on\nteaching digital literacy skills to prepare students for the future.\n\nQuestion:\nWhat is one reason digital literacy is important according to the passage?",
     "options": [
       "It opens up opportunities in education, employment, and personal\ngrowth.",
       "It reduces personal growth.",
@@ -620,7 +620,7 @@ const QUESTIONS = [
       "It makes digital tools obsolete."
     ],
     "answer": 0,
-    "explanation": "The passage states that digital literacy opens up opportunities\nin education, employment, and personal growth, making choice A the\ncorrect answer. Choices B, C, and D do not align with the importance of\ndigital literacy as described.",
+    "explanation": "Choice A is correct. The passage states that digital literacy opens up opportunities\nin education, employment, and personal growth, making choice A the\ncorrect answer. Choices B, C, and D do not align with the importance of\ndigital literacy as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -633,7 +633,7 @@ const QUESTIONS = [
       "It eliminates the need for mental health practices."
     ],
     "answer": 1,
-    "explanation": "The passage states that meditation can improve focus,\nmaking choice B the correct answer. Choices A, C, and D do not reflect the\nhealth benefits of meditation as described.",
+    "explanation": "Choice B is correct. The passage states that meditation can improve focus,\nmaking choice B the correct answer. Choices A, C, and D do not reflect the\nhealth benefits of meditation as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -646,7 +646,7 @@ const QUESTIONS = [
       "Crop rotation."
     ],
     "answer": 3,
-    "explanation": "The passage mentions crop rotation as a practice associated\nwith sustainable agriculture, making choice D the correct answer. Choices\nA, B, and C do not align with the practices of sustainable agriculture as\ndescribed.",
+    "explanation": "Choice D is correct. The passage mentions crop rotation as a practice associated\nwith sustainable agriculture, making choice D the correct answer. Choices\nA, B, and C do not align with the practices of sustainable agriculture as\ndescribed.",
     "topic": "Reading and Writing"
   },
   {
@@ -659,7 +659,7 @@ const QUESTIONS = [
       "It decreases privacy concerns."
     ],
     "answer": 2,
-    "explanation": "The passage states that AI can uncover new insights from\nanalyzing vast amounts of data, making choice C the correct answer.\nChoices A, B, and D do not align with the benefits of AI as described.",
+    "explanation": "Choice C is correct. The passage states that AI can uncover new insights from\nanalyzing vast amounts of data, making choice C the correct answer.\nChoices A, B, and D do not align with the benefits of AI as described.",
     "topic": "Reading and Writing"
   },
   {
@@ -672,7 +672,7 @@ const QUESTIONS = [
       "Maintain current energy practices."
     ],
     "answer": 0,
-    "explanation": "The passage recommends reducing greenhouse gas emissions\nto combat climate change, making choice A the correct answer. Choices B,\nC, and D do not align with the actions suggested to address climate change.",
+    "explanation": "Choice A is correct. The passage recommends reducing greenhouse gas emissions\nto combat climate change, making choice A the correct answer. Choices B,\nC, and D do not align with the actions suggested to address climate change.",
     "topic": "Reading and Writing"
   },
   {
@@ -685,7 +685,7 @@ const QUESTIONS = [
       "It reduces career prospects."
     ],
     "answer": 2,
-    "explanation": "The passage states that learning a second language can\nimprove memory, making choice C the correct answer. Choices A, B, and D\ndo not reflect the cognitive benefits of learning a second language as\ndescribed.",
+    "explanation": "Choice C is correct. The passage states that learning a second language can\nimprove memory, making choice C the correct answer. Choices A, B, and D\ndo not reflect the cognitive benefits of learning a second language as\ndescribed.",
     "topic": "Reading and Writing"
   },
   {
@@ -698,7 +698,7 @@ const QUESTIONS = [
       "They limit driving range."
     ],
     "answer": 0,
-    "explanation": "The passage states that electric vehicles produce zero\nemissions while driving, making choice A the correct answer. Choices B, C,\nand D do not align with the environmental benefits of electric vehicles as\ndescribed.",
+    "explanation": "Choice A is correct. The passage states that electric vehicles produce zero\nemissions while driving, making choice A the correct answer. Choices B, C,\nand D do not align with the environmental benefits of electric vehicles as\ndescribed.",
     "topic": "Reading and Writing"
   }
 ];

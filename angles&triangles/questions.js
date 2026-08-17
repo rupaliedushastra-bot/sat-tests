@@ -14,7 +14,7 @@ const QUESTIONS = [
       "90°"
     ],
     "answer": 0,
-    "explanation": "Let the three angles in AP be (a - d), a, (a + d). Their sum = 180°, so 3a = 180°, giving a = 60°. The difference between largest and smallest = 2d = 80°, so d = 40°. Largest angle = 60° + 40° = 100°. Answer: A.",
+    "explanation": "Choice A is correct. Let the three angles in AP be (a - d), a, (a + d). Their sum = 180°, so 3a = 180°, giving a = 60°. The difference between largest and smallest = 2d = 80°, so d = 40°. Largest angle = 60° + 40° = 100°.",
     "topic": "Triangles – Angle Sum"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "110°"
     ],
     "answer": 2,
-    "explanation": "Corresponding angles are equal: 20q + 90 = 10q + 60 → 10q = -30 → q = -3. Then y = 10(-3) + 60 = 30°. Since z is vertically opposite to y, z = y = 30°. Answer: C.",
+    "explanation": "Choice C is correct. Corresponding angles are equal: 20q + 90 = 10q + 60 → 10q = -30 → q = -3. Then y = 10(-3) + 60 = 30°. Since z is vertically opposite to y, z = y = 30°.",
     "topic": "Parallel Lines – Corresponding & Vertical Angles"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "76°"
     ],
     "answer": 1,
-    "explanation": "Interior angle = 180° − exterior angle. So two interior angles are 180° − 124° = 56° and 180° − 138° = 42°. Third interior angle = 180° − 56° − 42° = 82°. Answer: B.",
+    "explanation": "Choice B is correct. Interior angle = 180° − exterior angle. So two interior angles are 180° − 124° = 56° and 180° − 138° = 42°. Third interior angle = 180° − 56° − 42° = 82°.",
     "topic": "Triangles – Exterior Angles"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "146°"
     ],
     "answer": 2,
-    "explanation": "Consecutive interior angles (co-interior / same-side interior angles) are supplementary when lines are parallel. So r = 180° − 44° = 136°. Answer: C.",
+    "explanation": "Choice C is correct. Consecutive interior angles (co-interior / same-side interior angles) are supplementary when lines are parallel. So r = 180° − 44° = 136°.",
     "topic": "Parallel Lines – Consecutive Interior Angles"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "30"
     ],
     "answer": 2,
-    "explanation": "AB is a diameter, so arc ADB = half the circumference = 30. Let arc DB = x, then arc AD = 2x. So 2x + x = 30 → x = 10. Arc DB = 10, arc AD = 20. Since CD is also a diameter, arc BC = arc AD = 20 (opposite arcs). Answer: C.",
+    "explanation": "Choice C is correct. AB is a diameter, so arc ADB = half the circumference = 30. Let arc DB = x, then arc AD = 2x. So 2x + x = 30 → x = 10. Arc DB = 10, arc AD = 20. Since CD is also a diameter, arc BC = arc AD = 20 (opposite arcs).",
     "topic": "Circle – Arc Length"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "4/3"
     ],
     "answer": 1,
-    "explanation": "Hypotenuse AB = √(6² + 8²) = √(36 + 64) = √100 = 10. sin(A) = opposite/hypotenuse = BC/AB = 8/10 = 4/5. Answer: B.",
+    "explanation": "Choice B is correct. Hypotenuse AB = √(6² + 8²) = √(36 + 64) = √100 = 10. sin(A) = opposite/hypotenuse = BC/AB = 8/10 = 4/5.",
     "topic": "Trigonometry – sin, cos, tan"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "90°"
     ],
     "answer": 0,
-    "explanation": "The shortest side is 4 (the smaller leg). sin(θ) = 4/8 = 1/2, so θ = 30°. This is a 30-60-90 triangle (sides in ratio 1 : √3 : 2). Answer: A.",
+    "explanation": "Choice A is correct. The shortest side is 4 (the smaller leg). sin(θ) = 4/8 = 1/2, so θ = 30°. This is a 30-60-90 triangle (sides in ratio 1 : √3 : 2).",
     "topic": "Triangles – Special Right Triangles"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "311°"
     ],
     "answer": 2,
-    "explanation": "Alternate interior angles are equal, so the other alternate interior angle is also 49°. Consecutive interior angles on the same side are supplementary: 180° − 49° = 131°. Answer: C.",
+    "explanation": "Choice C is correct. Alternate interior angles are equal, so the other alternate interior angle is also 49°. Consecutive interior angles on the same side are supplementary: 180° − 49° = 131°.",
     "topic": "Parallel Lines – Alternate & Consecutive Interior Angles"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "150°"
     ],
     "answer": 2,
-    "explanation": "P, Q, R on a straight line → angles PQS + SQT + TQR = 180°. Let TQR = x. Then SQT = x and PQS = x + 90°. So (x + 90°) + x + x = 180° → 3x = 90° → x = 30°. PQS = 30° + 90° = 120°. Answer: C.",
+    "explanation": "Choice C is correct. P, Q, R on a straight line → angles PQS + SQT + TQR = 180°. Let TQR = x. Then SQT = x and PQS = x + 90°. So (x + 90°) + x + x = 180° → 3x = 90° → x = 30°. PQS = 30° + 90° = 120°.",
     "topic": "Lines & Angles – Linear Pair"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "80°"
     ],
     "answer": 1,
-    "explanation": "Let first angle = x. Second = 2x. Third = 2x − 20°. Sum = 180°: x + 2x + (2x − 20°) = 180° → 5x = 200° → x = 40°. Answer: B.",
+    "explanation": "Choice B is correct. Let first angle = x. Second = 2x. Third = 2x − 20°. Sum = 180°: x + 2x + (2x − 20°) = 180° → 5x = 200° → x = 40°.",
     "topic": "Triangles – Angle Sum"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "60"
     ],
     "answer": 1,
-    "explanation": "An acute and an obtuse angle formed by a transversal on parallel lines are supplementary (co-interior) or one is alternate. Since acute + obtuse on the same side are supplementary: (3x − 15) + (4x + 20) = 180° → 7x + 5 = 180° → 7x = 175° → x = 25. Answer: B.",
+    "explanation": "Choice B is correct. An acute and an obtuse angle formed by a transversal on parallel lines are supplementary (co-interior) or one is alternate. Since acute + obtuse on the same side are supplementary: (3x − 15) + (4x + 20) = 180° → 7x + 5 = 180° → 7x = 175° → x = 25.",
     "topic": "Parallel Lines – Angle Equations"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "130°"
     ],
     "answer": 1,
-    "explanation": "Sum of angles = 180°. The two base angles are equal. 50° + 2b = 180° → 2b = 130° → b = 65°. Answer: B.",
+    "explanation": "Choice B is correct. Sum of angles = 180°. The two base angles are equal. 50° + 2b = 180° → 2b = 130° → b = 65°.",
     "topic": "Triangles – Isosceles Triangle"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "18"
     ],
     "answer": 2,
-    "explanation": "Sum of exterior angles of any polygon = 360°. Number of sides = 360° ÷ 24° = 15. Answer: C.",
+    "explanation": "Choice C is correct. Sum of exterior angles of any polygon = 360°. Number of sides = 360° ÷ 24° = 15.",
     "topic": "Polygons – Exterior Angles"
   },
   {
@@ -183,7 +183,7 @@ const QUESTIONS = [
       "Scalene and acute"
     ],
     "answer": 3,
-    "explanation": "Third angle = 180° − 42° − 84° = 54°. All three angles (42°, 54°, 84°) are different → scalene. All angles < 90° → acute. Answer: D.",
+    "explanation": "Choice D is correct. Third angle = 180° − 42° − 84° = 54°. All three angles (42°, 54°, 84°) are different → scalene. All angles < 90° → acute.",
     "topic": "Triangles – Classification"
   },
   {
@@ -196,7 +196,7 @@ const QUESTIONS = [
       "80°"
     ],
     "answer": 1,
-    "explanation": "Two acute angles in a right triangle sum to 90°. Let smaller = x, larger = 4x. x + 4x = 90° → 5x = 90° → x = 18°. Larger = 4 × 18° = 72°. Answer: B.",
+    "explanation": "Choice B is correct. Two acute angles in a right triangle sum to 90°. Let smaller = x, larger = 4x. x + 4x = 90° → 5x = 90° → x = 18°. Larger = 4 × 18° = 72°.",
     "topic": "Triangles – Right Triangle Angles"
   },
   {
@@ -209,7 +209,7 @@ const QUESTIONS = [
       "124°"
     ],
     "answer": 1,
-    "explanation": "Complement of angle θ = 90° − θ. Given: θ = 2(90° − θ) + 12° → θ = 180° − 2θ + 12° → 3θ = 192° → θ = 64°. Answer: B.",
+    "explanation": "Choice B is correct. Complement of angle θ = 90° − θ. Given: θ = 2(90° − θ) + 12° → θ = 180° − 2θ + 12° → 3θ = 192° → θ = 64°.",
     "topic": "Angles – Complementary Angles"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "18"
     ],
     "answer": 1,
-    "explanation": "Triangle Inequality: the sum of any two sides must be greater than the third side. |12 − 5| < x < 12 + 5 → 7 < x < 17. Only x = 13 falls in this range. x = 7 is not strictly greater than 7; x = 17 and 18 exceed 17. Answer: B.",
+    "explanation": "Choice B is correct. Triangle Inequality: the sum of any two sides must be greater than the third side. |12 − 5| < x < 12 + 5 → 7 < x < 17. Only x = 13 falls in this range. x = 7 is not strictly greater than 7; x = 17 and 18 exceed 17.",
     "topic": "Triangles – Triangle Inequality"
   },
   {
@@ -235,7 +235,7 @@ const QUESTIONS = [
       "54"
     ],
     "answer": 2,
-    "explanation": "Hypotenuse = √(9² + 12²) = √(81 + 144) = √225 = 15. Perimeter = 9 + 12 + 15 = 36. Answer: C.",
+    "explanation": "Choice C is correct. Hypotenuse = √(9² + 12²) = √(81 + 144) = √225 = 15. Perimeter = 9 + 12 + 15 = 36.",
     "topic": "Triangles – Pythagorean Theorem"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "All sides are equal"
     ],
     "answer": 2,
-    "explanation": "∠C = 180° − 50° − 70° = 60°. The largest side is opposite the largest angle. The largest angle is ∠B = 70°, and the side opposite ∠B is AC. Answer: C.",
+    "explanation": "Choice C is correct. ∠C = 180° − 50° − 70° = 60°. The largest side is opposite the largest angle. The largest angle is ∠B = 70°, and the side opposite ∠B is AC.",
     "topic": "Triangles – Sides & Angles Relationship"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "Cannot be determined"
     ],
     "answer": 1,
-    "explanation": "Corresponding angles on parallel lines are equal. If both are equal and their sum is 150°, each angle = 150° ÷ 2 = 75°. Answer: B.",
+    "explanation": "Choice B is correct. Corresponding angles on parallel lines are equal. If both are equal and their sum is 150°, each angle = 150° ÷ 2 = 75°.",
     "topic": "Parallel Lines – Corresponding Angles"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "155°"
     ],
     "answer": 1,
-    "explanation": "Exterior Angle Theorem: an exterior angle of a triangle equals the sum of the two non-adjacent interior angles. 110° = 45° + other angle → other angle = 65°. Answer: B.",
+    "explanation": "Choice B is correct. Exterior Angle Theorem: an exterior angle of a triangle equals the sum of the two non-adjacent interior angles. 110° = 45° + other angle → other angle = 65°.",
     "topic": "Triangles – Exterior Angle Theorem"
   },
   {
@@ -287,7 +287,7 @@ const QUESTIONS = [
       "150°"
     ],
     "answer": 1,
-    "explanation": "Supplementary angles sum to 180°. Let angle = x. Then x = (1/5)(180° − x) → 5x = 180° − x → 6x = 180° → x = 30°. Answer: B.",
+    "explanation": "Choice B is correct. Supplementary angles sum to 180°. Let angle = x. Then x = (1/5)(180° − x) → 5x = 180° − x → 6x = 180° → x = 30°.",
     "topic": "Angles – Supplementary Angles"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "100°"
     ],
     "answer": 2,
-    "explanation": "Sum of ratio parts = 2 + 3 + 4 = 9. Each part = 180° ÷ 9 = 20°. Largest angle = 4 × 20° = 80°. Answer: C.",
+    "explanation": "Choice C is correct. Sum of ratio parts = 2 + 3 + 4 = 9. Each part = 180° ÷ 9 = 20°. Largest angle = 4 × 20° = 80°.",
     "topic": "Triangles – Angle Ratios"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "20"
     ],
     "answer": 2,
-    "explanation": "The two possible configurations: (a) equal sides are 6 and 6 → third side 14. Check triangle inequality: 6 + 6 = 12 < 14 → invalid. (b) Equal sides are 14 and 14 → third side 6. Check: 14 + 6 > 14 ✓, 6 + 14 > 14 ✓ → valid. So third side = 14. Answer: C.",
+    "explanation": "Choice C is correct. The two possible configurations: (a) equal sides are 6 and 6 → third side 14. Check triangle inequality: 6 + 6 = 12 < 14 → invalid. (b) Equal sides are 14 and 14 → third side 6. Check: 14 + 6 > 14 ✓, 6 + 14 > 14 ✓ → valid. So third side = 14.",
     "topic": "Triangles – Isosceles & Triangle Inequality"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "14"
     ],
     "answer": 2,
-    "explanation": "Let legs be x and y. Hypotenuse = 10. Perimeter: x + y + 10 = 24 → x + y = 14. Pythagorean theorem: x² + y² = 100. From x + y = 14: (x + y)² = x² + 2xy + y² = 196 → 100 + 2xy = 196 → xy = 48. So x and y are roots of t² − 14t + 48 = 0 → (t − 6)(t − 8) = 0 → t = 6 or t = 8. So x = 6 or x = 8. Answer: C.",
+    "explanation": "Choice C is correct. Let legs be x and y. Hypotenuse = 10. Perimeter: x + y + 10 = 24 → x + y = 14. Pythagorean theorem: x² + y² = 100. From x + y = 14: (x + y)² = x² + 2xy + y² = 196 → 100 + 2xy = 196 → xy = 48. So x and y are roots of t² − 14t + 48 = 0 → (t − 6)(t − 8) = 0 → t = 6 or t = 8. So x = 6 or x = 8.",
     "topic": "Triangles – Pythagorean Theorem"
   }
 ];

@@ -14,7 +14,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 1,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
+    "explanation": "Choice B is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
     "topic": "Polynomials"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "-4"
     ],
     "answer": 3,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -3x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -3 - 1 = -4 \\).",
+    "explanation": "Choice D is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -3x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -3 - 1 = -4 \\).",
     "topic": "Polynomials"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "1"
     ],
     "answer": 0,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -2x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -2 - 1 = -3 \\).",
+    "explanation": "Choice A is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -2x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -2 - 1 = -3 \\).",
     "topic": "Polynomials"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 0,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
+    "explanation": "Choice A is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
     "topic": "Polynomials"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -3x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -3 - 1 = -4 \\).",
+    "explanation": "Choice B is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -3x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -3 - 1 = -4 \\).",
     "topic": "Polynomials"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "-6"
     ],
     "answer": 3,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
+    "explanation": "Choice D is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
     "topic": "Polynomials"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 2,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -3x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -3 - 1 = -4 \\).",
+    "explanation": "Choice C is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -3x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -3 - 1 = -4 \\).",
     "topic": "Polynomials"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "3"
     ],
     "answer": 1,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -4x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -4 - 1 = -5 \\).",
+    "explanation": "Choice B is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -4x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -4 - 1 = -5 \\).",
     "topic": "Polynomials"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "1"
     ],
     "answer": 0,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -2x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -2 - 1 = -3 \\).",
+    "explanation": "Choice A is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -2x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -2 - 1 = -3 \\).",
     "topic": "Polynomials"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 0,
-    "explanation": "The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
+    "explanation": "Choice A is correct. The \\( x^2 \\) term in \\( P(x) \\) is \\( -5x^2 \\). The \\( x^2 \\) term in \\( Q(x) \\) is \\( 1x^2 \\). In \\( P(x) - Q(x) \\), the coefficient is \\( -5 - 1 = -6 \\).",
     "topic": "Polynomials"
   }
 ];

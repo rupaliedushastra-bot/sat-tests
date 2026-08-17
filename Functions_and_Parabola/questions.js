@@ -14,7 +14,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "explanation": "Choice C is correct. The correct answer is C. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "explanation": "Choice A is correct. The correct answer is A. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "explanation": "Choice A is correct. The correct answer is A. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "explanation": "Choice C is correct. The correct answer is C. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -183,7 +183,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "explanation": "Choice C is correct. The correct answer is C. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -196,7 +196,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -209,7 +209,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "explanation": "Choice A is correct. The correct answer is A. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -235,7 +235,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 2,
-    "explanation": "The correct answer is C. See the solution image for detailed working.",
+    "explanation": "Choice C is correct. The correct answer is C. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "explanation": "Choice A is correct. The correct answer is A. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -287,7 +287,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 0,
-    "explanation": "The correct answer is A. See the solution image for detailed working.",
+    "explanation": "Choice A is correct. The correct answer is A. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B. See the solution image for detailed working.",
+    "explanation": "Choice B is correct. The correct answer is B. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "D"
     ],
     "answer": 3,
-    "explanation": "The correct answer is D. See the solution image for detailed working.",
+    "explanation": "Choice D is correct. The correct answer is D. See the solution image for detailed working.",
     "topic": "Functions & Parabola"
   }
 ];

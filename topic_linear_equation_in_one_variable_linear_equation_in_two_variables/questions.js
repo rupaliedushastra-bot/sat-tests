@@ -14,7 +14,7 @@ const QUESTIONS = [
       "3"
     ],
     "answer": 1,
-    "explanation": "Subtract 8 from both sides to get \\( 6x = 12 \\). Divide by 6 to get \\( x = 2 \\).",
+    "explanation": "Choice B is correct. Subtract 8 from both sides to get \\( 6x = 12 \\). Divide by 6 to get \\( x = 2 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 2,
-    "explanation": "Subtract 20 from both sides to get \\( 4x = 24 \\). Divide by 4 to get \\( x = 6 \\).",
+    "explanation": "Choice C is correct. Subtract 20 from both sides to get \\( 4x = 24 \\). Divide by 4 to get \\( x = 6 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "12"
     ],
     "answer": 1,
-    "explanation": "Subtract 14 from both sides to get \\( 4x = 40 \\). Divide by 4 to get \\( x = 10 \\).",
+    "explanation": "Choice B is correct. Subtract 14 from both sides to get \\( 4x = 40 \\). Divide by 4 to get \\( x = 10 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "8"
     ],
     "answer": 3,
-    "explanation": "Subtract 6 from both sides to get \\( 4x = 32 \\). Divide by 4 to get \\( x = 8 \\).",
+    "explanation": "Choice D is correct. Subtract 6 from both sides to get \\( 4x = 32 \\). Divide by 4 to get \\( x = 8 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "1"
     ],
     "answer": 0,
-    "explanation": "Subtract 16 from both sides to get \\( 7x = 14 \\). Divide by 7 to get \\( x = 2 \\).",
+    "explanation": "Choice A is correct. Subtract 16 from both sides to get \\( 7x = 14 \\). Divide by 7 to get \\( x = 2 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 2,
-    "explanation": "Subtract 12 from both sides to get \\( 3x = 12 \\). Divide by 3 to get \\( x = 4 \\).",
+    "explanation": "Choice C is correct. Subtract 12 from both sides to get \\( 3x = 12 \\). Divide by 3 to get \\( x = 4 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "11"
     ],
     "answer": 0,
-    "explanation": "Subtract 9 from both sides to get \\( 7x = 70 \\). Divide by 7 to get \\( x = 10 \\).",
+    "explanation": "Choice A is correct. Subtract 9 from both sides to get \\( 7x = 70 \\). Divide by 7 to get \\( x = 10 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 3,
-    "explanation": "Subtract 2 from both sides to get \\( 2x = 10 \\). Divide by 2 to get \\( x = 5 \\).",
+    "explanation": "Choice D is correct. Subtract 2 from both sides to get \\( 2x = 10 \\). Divide by 2 to get \\( x = 5 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "Subtract 3 from both sides to get \\( 9x = 45 \\). Divide by 9 to get \\( x = 5 \\).",
+    "explanation": "Choice B is correct. Subtract 3 from both sides to get \\( 9x = 45 \\). Divide by 9 to get \\( x = 5 \\).",
     "topic": "Linear Equations"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 3,
-    "explanation": "Subtract 3 from both sides to get \\( 3x = 12 \\). Divide by 3 to get \\( x = 4 \\).",
+    "explanation": "Choice D is correct. Subtract 3 from both sides to get \\( 3x = 12 \\). Divide by 3 to get \\( x = 4 \\).",
     "topic": "Linear Equations"
   }
 ];

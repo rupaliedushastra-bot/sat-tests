@@ -14,7 +14,7 @@ const QUESTIONS = [
       "Rs. 20"
     ],
     "answer": 2,
-    "explanation": "Tax paid = 30 paise = Rs. 0.30. Tax rate = 6%, so taxable amount = 0.30 ÷ 0.06 = Rs. 5. Cost of taxable items incl. tax = 5 + 0.30 = Rs. 5.30. Cost of tax-free items = 25 − 5.30 = Rs. 19.70. Answer: C.",
+    "explanation": "Choice C is correct. Tax paid = 30 paise = Rs. 0.30. Tax rate = 6%, so taxable amount = 0.30 ÷ 0.06 = Rs. 5. Cost of taxable items incl. tax = 5 + 0.30 = Rs. 5.30. Cost of tax-free items = 25 − 5.30 = Rs. 19.70.",
     "topic": "Percentage – Tax"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "55%"
     ],
     "answer": 1,
-    "explanation": "Runs from boundaries = 3 × 4 = 12. Runs from sixes = 8 × 6 = 48. Total from hits = 60. Runs by running = 110 − 60 = 50. Percentage = (50/110) × 100 = 500/11 = 45 5/11%. Answer: B.",
+    "explanation": "Choice B is correct. Runs from boundaries = 3 × 4 = 12. Runs from sixes = 8 × 6 = 48. Total from hits = 60. Runs by running = 110 − 60 = 50. Percentage = (50/110) × 100 = 500/11 = 45 5/11%.",
     "topic": "Percentage – Basic"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "Rs. 10,500"
     ],
     "answer": 2,
-    "explanation": "Let marked price = M. After 5% deduction: M × 0.95 = 9595 → M = 9595 ÷ 0.95 = Rs. 10,100. Answer: C.",
+    "explanation": "Choice C is correct. Let marked price = M. After 5% deduction: M × 0.95 = 9595 → M = 9595 ÷ 0.95 = Rs. 10,100.",
     "topic": "Percentage – Commission & Discount"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "700 apples"
     ],
     "answer": 3,
-    "explanation": "After selling 40%, remaining = 60% = 420. Original = 420 ÷ 0.60 = 700 apples. Answer: D.",
+    "explanation": "Choice D is correct. After selling 40%, remaining = 60% = 420. Original = 420 ÷ 0.60 = 700 apples.",
     "topic": "Percentage – Basic"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "Rs. 3200"
     ],
     "answer": 1,
-    "explanation": "Savings = 100% − 66⅔% = 33⅓% = 1/3 of income. Income = 1200 × 3 = Rs. 3600. Expenses = 66⅔% of 3600 = (2/3) × 3600 = Rs. 2400. Answer: B.",
+    "explanation": "Choice B is correct. Savings = 100% − 66⅔% = 33⅓% = 1/3 of income. Income = 1200 × 3 = Rs. 3600. Expenses = 66⅔% of 3600 = (2/3) × 3600 = Rs. 2400.",
     "topic": "Percentage – Income & Savings"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "1300"
     ],
     "answer": 1,
-    "explanation": "Failed = 65% of total = 455. Total = 455 ÷ 0.65 = 700 students. Answer: B.",
+    "explanation": "Choice B is correct. Failed = 65% of total = 455. Total = 455 ÷ 0.65 = 700 students.",
     "topic": "Percentage – Examination"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "Data inadequate"
     ],
     "answer": 1,
-    "explanation": "Uncertain = 100% − 20% − 60% = 20%. Difference between B (60%) and uncertain (20%) = 40% of total = 720. Total = 720 ÷ 0.40 = 1800. Answer: B.",
+    "explanation": "Choice B is correct. Uncertain = 100% − 20% − 60% = 20%. Difference between B (60%) and uncertain (20%) = 40% of total = 720. Total = 720 ÷ 0.40 = 1800.",
     "topic": "Percentage – Survey"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "1000"
     ],
     "answer": 1,
-    "explanation": "Pass marks = 125 + 40 = 165. 33% of max = 165 → Max = 165 ÷ 0.33 = 500. Answer: B.",
+    "explanation": "Choice B is correct. Pass marks = 125 + 40 = 165. 33% of max = 165 → Max = 165 ÷ 0.33 = 500.",
     "topic": "Percentage – Examination"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "848"
     ],
     "answer": 1,
-    "explanation": "Winner = 84%, loser = 16%. Majority = 84% − 16% = 68% of total = 476. Total = 476 ÷ 0.68 = 700. Answer: B.",
+    "explanation": "Choice B is correct. Winner = 84%, loser = 16%. Majority = 84% − 16% = 68% of total = 476. Total = 476 ÷ 0.68 = 700.",
     "topic": "Percentage – Elections"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "3100"
     ],
     "answer": 0,
-    "explanation": "Valid votes = 80% of 7500 = 6000. One candidate got 55% of 6000 = 3300. Other candidate = 6000 − 3300 = 2700. Answer: A.",
+    "explanation": "Choice A is correct. Valid votes = 80% of 7500 = 6000. One candidate got 55% of 6000 = 3300. Other candidate = 6000 − 3300 = 2700.",
     "topic": "Percentage – Elections"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "None of these"
     ],
     "answer": 2,
-    "explanation": "Let valid votes = V. Winner = 52% of V, loser = 48% of V. Margin = 4% of V = 98 → V = 2450. Total polled = 2450 + 68 = 2518. Answer: C.",
+    "explanation": "Choice C is correct. Let valid votes = V. Winner = 52% of V, loser = 48% of V. Margin = 4% of V = 98 → V = 2450. Total polled = 2450 + 68 = 2518.",
     "topic": "Percentage – Elections"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "40000"
     ],
     "answer": 0,
-    "explanation": "Let enrolled = N. Votes polled = 90%N. Valid = 90% of 90%N = 81%N. Winner = 54% of 81%N, loser = 46% of 81%N. Margin = 8% of 81%N = 6.48%N = 1620. N = 1620 ÷ 0.0648 = 25,000. Answer: A.",
+    "explanation": "Choice A is correct. Let enrolled = N. Votes polled = 90%N. Valid = 90% of 90%N = 81%N. Winner = 54% of 81%N, loser = 46% of 81%N. Margin = 8% of 81%N = 6.48%N = 1620. N = 1620 ÷ 0.0648 = 25,000.",
     "topic": "Percentage – Elections"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "8"
     ],
     "answer": 2,
-    "explanation": "Persons aged 18–21 who voted = 85% of 8% = 0.85 × 8 = 6.8% of all eligible voters. Answer: C.",
+    "explanation": "Choice C is correct. Persons aged 18–21 who voted = 85% of 8% = 0.85 × 8 = 6.8% of all eligible voters.",
     "topic": "Percentage – Basic"
   },
   {
@@ -183,7 +183,7 @@ const QUESTIONS = [
       "5000"
     ],
     "answer": 2,
-    "explanation": "Voted for A = 30%. Remaining = 70%. Voted for B = 60% of 70% = 42%. Did not vote = 28%. Difference = 30% − 28% = 2% of total = 1200. Total = 1200 ÷ 0.02 = 60,000. For standard exam option, closest = 4000. Answer: C.",
+    "explanation": "Choice C is correct. Voted for A = 30%. Remaining = 70%. Voted for B = 60% of 70% = 42%. Did not vote = 28%. Difference = 30% − 28% = 2% of total = 1200. Total = 1200 ÷ 0.02 = 60,000. For standard exam option, closest = 4000.",
     "topic": "Percentage – Elections"
   },
   {
@@ -196,7 +196,7 @@ const QUESTIONS = [
       "58.8% pure"
     ],
     "answer": 2,
-    "explanation": "After each replacement of 20%, milk fraction = 80% of previous. After 3 operations: milk% = (0.80)³ × 100 = 0.512 × 100 = 51.2% pure. Answer: C.",
+    "explanation": "Choice C is correct. After each replacement of 20%, milk fraction = 80% of previous. After 3 operations: milk% = (0.80)³ × 100 = 0.512 × 100 = 51.2% pure.",
     "topic": "Percentage – Mixtures & Replacements"
   },
   {
@@ -209,7 +209,7 @@ const QUESTIONS = [
       "50%"
     ],
     "answer": 1,
-    "explanation": "Track A petrol (as fraction of full tank): After fill 1 (B): A = 1/2. After fill 2 (A): A = 1/4 + 1/2 = 3/4. After fill 3 (B): A = 3/8. So A = 3/8 = 37.5%. Answer: B.",
+    "explanation": "Choice B is correct. Track A petrol (as fraction of full tank): After fill 1 (B): A = 1/2. After fill 2 (A): A = 1/4 + 1/2 = 3/4. After fill 3 (B): A = 3/8. So A = 3/8 = 37.5%.",
     "topic": "Percentage – Mixtures & Replacements"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "30%"
     ],
     "answer": 2,
-    "explanation": "Total money = 600×0.25 + 1200×0.50 = 150 + 600 = Rs. 750. Removed = 12% of 150 + 24% of 600 = 18 + 144 = Rs. 162. Percentage removed = (162/750) × 100 = 21.6%. Answer: C.",
+    "explanation": "Choice C is correct. Total money = 600×0.25 + 1200×0.50 = 150 + 600 = Rs. 750. Removed = 12% of 150 + 24% of 600 = 18 + 144 = Rs. 162. Percentage removed = (162/750) × 100 = 21.6%.",
     "topic": "Percentage – Money"
   },
   {
@@ -235,7 +235,7 @@ const QUESTIONS = [
       "51 kg"
     ],
     "answer": 2,
-    "explanation": "Let original price = P per kg. Money = 49P. New price = 0.98P. New quantity = 49P ÷ 0.98P = 50 kg. Answer: C.",
+    "explanation": "Choice C is correct. Let original price = P per kg. Money = 49P. New price = 0.98P. New quantity = 49P ÷ 0.98P = 50 kg.",
     "topic": "Percentage – Price & Quantity"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "Rs. 2.50"
     ],
     "answer": 0,
-    "explanation": "Let original price = P. Reduction = 21%, so new price = 0.79P. Extra qty = 100/0.79P − 100/P = 10.5. Solving: 100 × 0.21 / (0.79P) = 10.5 → P ≈ Rs. 2.53. Reduced price = 0.79 × 2.53 ≈ Rs. 2. Answer: A.",
+    "explanation": "Choice A is correct. Let original price = P. Reduction = 21%, so new price = 0.79P. Extra qty = 100/0.79P − 100/P = 10.5. Solving: 100 × 0.21 / (0.79P) = 10.5 → P ≈ Rs. 2.53. Reduced price = 0.79 × 2.53 ≈ Rs. 2.",
     "topic": "Percentage – Price & Quantity"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "Rs. 10.40"
     ],
     "answer": 2,
-    "explanation": "Let original price = P per egg. 7.80/P − 7.80/1.3P = 3 → 7.80 × 0.3/(1.3P) = 3 → P = Rs. 0.60. New price per egg = 1.3 × 0.60 = Rs. 0.78. Per dozen = 0.78 × 12 = Rs. 9.36. Answer: C.",
+    "explanation": "Choice C is correct. Let original price = P per egg. 7.80/P − 7.80/1.3P = 3 → 7.80 × 0.3/(1.3P) = 3 → P = Rs. 0.60. New price per egg = 1.3 × 0.60 = Rs. 0.78. Per dozen = 0.78 × 12 = Rs. 9.36.",
     "topic": "Percentage – Price & Quantity"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "Rs. 4.50"
     ],
     "answer": 0,
-    "explanation": "Let original price = P per kg. New price = 0.9P. Extra = 279/0.9P − 279/P = 6.2 → 279 × 0.1/(0.9P) = 6.2 → 31/P = 6.2 → P = Rs. 5. Difference = 5 − 4.5 = Re. 0.50. Answer: A.",
+    "explanation": "Choice A is correct. Let original price = P per kg. New price = 0.9P. Extra = 279/0.9P − 279/P = 6.2 → 279 × 0.1/(0.9P) = 6.2 → 31/P = 6.2 → P = Rs. 5. Difference = 5 − 4.5 = Re. 0.50.",
     "topic": "Percentage – Price & Quantity"
   },
   {
@@ -287,7 +287,7 @@ const QUESTIONS = [
       "56"
     ],
     "answer": 0,
-    "explanation": "Failed in at least one = 34% + 42% − 20% = 56% (inclusion-exclusion). Passed in both = 100% − 56% = 44%. Answer: A.",
+    "explanation": "Choice A is correct. Failed in at least one = 34% + 42% − 20% = 56% (inclusion-exclusion). Passed in both = 100% − 56% = 44%.",
     "topic": "Percentage – Sets & Venn Diagrams"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "25%"
     ],
     "answer": 2,
-    "explanation": "Read at least one = 40% + 50% − 10% = 80%. Read neither = 100% − 80% = 20%. Answer: C.",
+    "explanation": "Choice C is correct. Read at least one = 40% + 50% − 10% = 80%. Read neither = 100% − 80% = 20%.",
     "topic": "Percentage – Sets & Venn Diagrams"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "225"
     ],
     "answer": 2,
-    "explanation": "Students who play at least one sport = 450 − 50 = 400. By inclusion-exclusion: 325 + 175 − Both = 400 → Both = 500 − 400 = 100. Answer: C.",
+    "explanation": "Choice C is correct. Students who play at least one sport = 450 − 50 = 400. By inclusion-exclusion: 325 + 175 − Both = 400 → Both = 500 − 400 = 100.",
     "topic": "Percentage – Sets & Venn Diagrams"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "28"
     ],
     "answer": 1,
-    "explanation": "Had at least one = 60% + 30% − 15% = 75%. Did not eat either = 25% of 96 = 24. Answer: B.",
+    "explanation": "Choice B is correct. Had at least one = 60% + 30% − 15% = 75%. Did not eat either = 25% of 96 = 24.",
     "topic": "Percentage – Sets & Venn Diagrams"
   }
 ];

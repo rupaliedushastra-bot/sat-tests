@@ -9,7 +9,7 @@ const QUESTIONS = [
       "Critical, dismissing the claims of climate change altogether"
     ],
     "answer": 0,
-    "explanation": "The passage presents both the view that climate change is causing more\nsevere weather and the counterargument that these events have always\noccurred. The author does not show a clear preference for either side.\nB) Incorrect; the author does not show strong agreement.\nC) Incorrect; there is no indication of doubt.\nD) Incorrect; the author does not dismiss climate change.",
+    "explanation": "Choice A is correct. The passage presents both the view that climate change is causing more\nsevere weather and the counterargument that these events have always\noccurred. The author does not show a clear preference for either side.\nB) Incorrect; the author does not show strong agreement.\nC) Incorrect; there is no indication of doubt.\nD) Incorrect; the author does not dismiss climate change.",
     "topic": "Reading and Writing"
   },
   {
@@ -22,7 +22,7 @@ const QUESTIONS = [
       "Complained"
     ],
     "answer": 0,
-    "explanation": "\"Declared\" is a synonym for \"announced\" and fits the context of a company\nmaking a public statement about its new program.\nB) Incorrect; \"whispered\" suggests speaking softly, which does not fit the\ncontext.\nC) Incorrect; \"questioned\" implies doubt, which does not fit the context.\nD) Incorrect; \"complained\" implies dissatisfaction, which does not fit the\ncontext.",
+    "explanation": "Choice A is correct. \"Declared\" is a synonym for \"announced\" and fits the context of a company\nmaking a public statement about its new program.\nB) Incorrect; \"whispered\" suggests speaking softly, which does not fit the\ncontext.\nC) Incorrect; \"questioned\" implies doubt, which does not fit the context.\nD) Incorrect; \"complained\" implies dissatisfaction, which does not fit the\ncontext.",
     "topic": "Reading and Writing"
   },
   {
@@ -35,7 +35,7 @@ const QUESTIONS = [
       "To find new sources of revenue"
     ],
     "answer": 2,
-    "explanation": "The passage states that the committee's goal is to find ways to cut costs\nwithout sacrificing quality, indicating that their meeting is focused on\ndiscussing ways to reduce expenses.\nA) Incorrect; the passage does not mention creating a new budget.\nB) Incorrect; the passage does not mention approving the proposal.\nD) Incorrect; the passage does not mention finding new sources of revenue.",
+    "explanation": "Choice C is correct. The passage states that the committee's goal is to find ways to cut costs\nwithout sacrificing quality, indicating that their meeting is focused on\ndiscussing ways to reduce expenses.\nA) Incorrect; the passage does not mention creating a new budget.\nB) Incorrect; the passage does not mention approving the proposal.\nD) Incorrect; the passage does not mention finding new sources of revenue.",
     "topic": "Reading and Writing"
   },
   {
@@ -48,7 +48,7 @@ const QUESTIONS = [
       "Carefree and reckless"
     ],
     "answer": 1,
-    "explanation": "The passage describes the protagonist as facing numerous challenges and\nremaining determined, indicating that she is both determined and resilient.\nA) Incorrect; the protagonist is described as strong and determined, not\npassive and fearful.\nC) Incorrect; the protagonist is described as determined, not indecisive and\nhesitant.\nD) Incorrect; the protagonist is described as determined, not carefree and\nreckless.",
+    "explanation": "Choice B is correct. The passage describes the protagonist as facing numerous challenges and\nremaining determined, indicating that she is both determined and resilient.\nA) Incorrect; the protagonist is described as strong and determined, not\npassive and fearful.\nC) Incorrect; the protagonist is described as determined, not indecisive and\nhesitant.\nD) Incorrect; the protagonist is described as determined, not carefree and\nreckless.",
     "topic": "Reading and Writing"
   },
   {
@@ -61,7 +61,7 @@ const QUESTIONS = [
       "Exercise only benefits physical health, not mental health."
     ],
     "answer": 2,
-    "explanation": "The passage states that participants who engaged in physical activities\nreported lower levels of anxiety and depression, suggesting that regular\nexercise may help reduce these conditions.\nA) Incorrect; the passage indicates exercise reduces anxiety and depression.\nB) Incorrect; the passage indicates a connection between exercise and\nmental health.\nD) Incorrect; the passage specifically mentions the mental health benefits of\nexercise.",
+    "explanation": "Choice C is correct. The passage states that participants who engaged in physical activities\nreported lower levels of anxiety and depression, suggesting that regular\nexercise may help reduce these conditions.\nA) Incorrect; the passage indicates exercise reduces anxiety and depression.\nB) Incorrect; the passage indicates a connection between exercise and\nmental health.\nD) Incorrect; the passage specifically mentions the mental health benefits of\nexercise.",
     "topic": "Reading and Writing"
   },
   {
@@ -74,7 +74,7 @@ const QUESTIONS = [
       "Students should take breaks to socialize with friends."
     ],
     "answer": 2,
-    "explanation": "The passage focuses on the benefits of taking short breaks during study\nsessions, specifically mentioning improved concentration and prevention of\nburnout.\nA) Incorrect; the passage does not focus on physical health.\nB) Incorrect; the passage does not suggest avoiding long study sessions\nentirely.\nD) Incorrect; the passage does not mention socializing with friends.",
+    "explanation": "Choice C is correct. The passage focuses on the benefits of taking short breaks during study\nsessions, specifically mentioning improved concentration and prevention of\nburnout.\nA) Incorrect; the passage does not focus on physical health.\nB) Incorrect; the passage does not suggest avoiding long study sessions\nentirely.\nD) Incorrect; the passage does not mention socializing with friends.",
     "topic": "Reading and Writing"
   },
   {
@@ -87,7 +87,7 @@ const QUESTIONS = [
       "Questioned"
     ],
     "answer": 2,
-    "explanation": "\"Authorized\" is a synonym for \"approved\" and fits the context of the city\ncouncil giving official permission for the new plan.\nA) Incorrect; \"rejected\" is the opposite of \"approved.\"\nB) Incorrect; \"disregarded\" means ignored, which does not fit the context.\nD) Incorrect; \"questioned\" implies doubt, which does not fit the context.",
+    "explanation": "Choice C is correct. \"Authorized\" is a synonym for \"approved\" and fits the context of the city\ncouncil giving official permission for the new plan.\nA) Incorrect; \"rejected\" is the opposite of \"approved.\"\nB) Incorrect; \"disregarded\" means ignored, which does not fit the context.\nD) Incorrect; \"questioned\" implies doubt, which does not fit the context.",
     "topic": "Reading and Writing"
   },
   {
@@ -100,7 +100,7 @@ const QUESTIONS = [
       "It has no practical applications."
     ],
     "answer": 2,
-    "explanation": "The passage describes the scientist's research as \"groundbreaking\" and a\n\"major advancement,\" indicating that it has led to significant progress in\nrenewable energy.\nA) Incorrect; the passage does not suggest the research has been ignored.\nB) Incorrect; the passage describes the research as major, not minor.\nD) Incorrect; the passage suggests the research has practical applications in\nrenewable energy.",
+    "explanation": "Choice C is correct. The passage describes the scientist's research as \"groundbreaking\" and a\n\"major advancement,\" indicating that it has led to significant progress in\nrenewable energy.\nA) Incorrect; the passage does not suggest the research has been ignored.\nB) Incorrect; the passage describes the research as major, not minor.\nD) Incorrect; the passage suggests the research has practical applications in\nrenewable energy.",
     "topic": "Reading and Writing"
   },
   {
@@ -113,7 +113,7 @@ const QUESTIONS = [
       "It was inedible."
     ],
     "answer": 2,
-    "explanation": "The passage mentions that the dessert was \"less sweet but still delicious,\"\nimplying that it was still somewhat sweet.\nA) Incorrect; the dessert was less sweet, not devoid of sweetness.\nB) Incorrect; using less sugar implies it was not overly sweet.\nD) Incorrect; the passage states it was still delicious, not inedible.",
+    "explanation": "Choice C is correct. The passage mentions that the dessert was \"less sweet but still delicious,\"\nimplying that it was still somewhat sweet.\nA) Incorrect; the dessert was less sweet, not devoid of sweetness.\nB) Incorrect; using less sugar implies it was not overly sweet.\nD) Incorrect; the passage states it was still delicious, not inedible.",
     "topic": "Reading and Writing"
   },
   {
@@ -126,7 +126,7 @@ const QUESTIONS = [
       "Pessimistic"
     ],
     "answer": 1,
-    "explanation": "The passage uses positive language like \"boasts\" and \"innovative features\"\nto describe the new smartphone model, indicating an enthusiastic tone.\nA) Incorrect; the passage does not criticize the smartphone.\nC) Incorrect; the passage is not indifferent.\nD) Incorrect; the passage does not express a negative outlook.",
+    "explanation": "Choice B is correct. The passage uses positive language like \"boasts\" and \"innovative features\"\nto describe the new smartphone model, indicating an enthusiastic tone.\nA) Incorrect; the passage does not criticize the smartphone.\nC) Incorrect; the passage is not indifferent.\nD) Incorrect; the passage does not express a negative outlook.",
     "topic": "Reading and Writing"
   },
   {
@@ -139,12 +139,12 @@ const QUESTIONS = [
       "Bees are not important for crop pollination."
     ],
     "answer": 2,
-    "explanation": "The passage states that the decline in bee populations could have serious\nconsequences for global food production, which is supported by the\ninformation given.\nA) Incorrect; the passage does not focus on honey production alone.\nB) Incorrect; the passage indicates that scientists are concerned.\nD) Incorrect; the passage specifically mentions the importance of bees in\npollinating crops.",
+    "explanation": "Choice C is correct. The passage states that the decline in bee populations could have serious\nconsequences for global food production, which is supported by the\ninformation given.\nA) Incorrect; the passage does not focus on honey production alone.\nB) Incorrect; the passage indicates that scientists are concerned.\nD) Incorrect; the passage specifically mentions the importance of bees in\npollinating crops.",
     "topic": "Reading and Writing"
   },
   {
     "id": 12,
-    "text": "Passage:\nThe artist\u2019s new exhibit features a series of paintings inspired by the natural\nlandscapes of her hometown. Her use of vibrant colors and bold\nbrushstrokes captures the essence of the changing seasons.\n\nQuestion:\nWhat is the main focus of the artist\u2019s new exhibit?",
+    "text": "Passage:\nThe artist’s new exhibit features a series of paintings inspired by the natural\nlandscapes of her hometown. Her use of vibrant colors and bold\nbrushstrokes captures the essence of the changing seasons.\n\nQuestion:\nWhat is the main focus of the artist’s new exhibit?",
     "options": [
       "Abstract depictions of urban life",
       "Natural landscapes from her hometown",
@@ -152,7 +152,7 @@ const QUESTIONS = [
       "Historical events"
     ],
     "answer": 1,
-    "explanation": "The passage clearly states that the artist\u2019s new exhibit features paintings\ninspired by the natural landscapes of her hometown.\nA) Incorrect; the exhibit focuses on natural landscapes, not urban life.\nC) Incorrect; the exhibit does not feature portraits.\nD) Incorrect; the exhibit does not depict historical events.",
+    "explanation": "Choice B is correct. The passage clearly states that the artist’s new exhibit features paintings\ninspired by the natural landscapes of her hometown.\nA) Incorrect; the exhibit focuses on natural landscapes, not urban life.\nC) Incorrect; the exhibit does not feature portraits.\nD) Incorrect; the exhibit does not depict historical events.",
     "topic": "Reading and Writing"
   },
   {
@@ -165,7 +165,7 @@ const QUESTIONS = [
       "Increased vacation days"
     ],
     "answer": 3,
-    "explanation": "The passage does not mention increased vacation days as part of the new\nwellness initiatives.\nA) Incorrect; flexible work hours are mentioned.\nB) Incorrect; access to fitness facilities is mentioned.\nC) Incorrect; mental health support is mentioned.",
+    "explanation": "Choice D is correct. The passage does not mention increased vacation days as part of the new\nwellness initiatives.\nA) Incorrect; flexible work hours are mentioned.\nB) Incorrect; access to fitness facilities is mentioned.\nC) Incorrect; mental health support is mentioned.",
     "topic": "Reading and Writing"
   },
   {
@@ -178,7 +178,7 @@ const QUESTIONS = [
       "They were uninterested in the discussions."
     ],
     "answer": 1,
-    "explanation": "The passage states that the attendees found the discussions highly\ninformative and didn\u2019t mind the extension, indicating they appreciated the\nextra time.\nA) Incorrect; the passage suggests the attendees did not mind the delay.\nC) Incorrect; there is no indication that attendees left early.\nD) Incorrect; the passage indicates that attendees were interested in the\ndiscussions.",
+    "explanation": "Choice B is correct. The passage states that the attendees found the discussions highly\ninformative and didn’t mind the extension, indicating they appreciated the\nextra time.\nA) Incorrect; the passage suggests the attendees did not mind the delay.\nC) Incorrect; there is no indication that attendees left early.\nD) Incorrect; the passage indicates that attendees were interested in the\ndiscussions.",
     "topic": "Reading and Writing"
   },
   {
@@ -191,12 +191,12 @@ const QUESTIONS = [
       "Extensive advertising campaign"
     ],
     "answer": 1,
-    "explanation": "The passage attributes the restaurant\u2019s popularity to its innovative menu and\nexcellent customer service.\nA) Incorrect; low prices and convenient location are not mentioned.\nC) Incorrect; the focus is on innovation, not traditional recipes.\nD) Incorrect; there is no mention of an advertising campaign.",
+    "explanation": "Choice B is correct. The passage attributes the restaurant’s popularity to its innovative menu and\nexcellent customer service.\nA) Incorrect; low prices and convenient location are not mentioned.\nC) Incorrect; the focus is on innovation, not traditional recipes.\nD) Incorrect; there is no mention of an advertising campaign.",
     "topic": "Reading and Writing"
   },
   {
     "id": 16,
-    "text": "Passage:\nThe author\u2019s latest novel explores the theme of identity through the\nexperiences of a young immigrant. The protagonist's journey of self-\ndiscovery is both compelling and relatable.\n\nQuestion:\nWhat is the primary theme of the author\u2019s latest novel?",
+    "text": "Passage:\nThe author’s latest novel explores the theme of identity through the\nexperiences of a young immigrant. The protagonist's journey of self-\ndiscovery is both compelling and relatable.\n\nQuestion:\nWhat is the primary theme of the author’s latest novel?",
     "options": [
       "Adventure and exploration",
       "Friendship and loyalty",
@@ -204,7 +204,7 @@ const QUESTIONS = [
       "Love and romance"
     ],
     "answer": 2,
-    "explanation": "The passage states that the novel explores the theme of identity through the\nprotagonist's journey of self-discovery.\nA) Incorrect; the novel focuses on identity, not adventure.\nB) Incorrect; friendship and loyalty are not mentioned.\nD) Incorrect; love and romance are not the primary themes.",
+    "explanation": "Choice C is correct. The passage states that the novel explores the theme of identity through the\nprotagonist's journey of self-discovery.\nA) Incorrect; the novel focuses on identity, not adventure.\nB) Incorrect; friendship and loyalty are not mentioned.\nD) Incorrect; love and romance are not the primary themes.",
     "topic": "Reading and Writing"
   },
   {
@@ -217,7 +217,7 @@ const QUESTIONS = [
       "The economic potential of the region"
     ],
     "answer": 2,
-    "explanation": "The passage emphasizes the biodiversity of the Amazon rainforest and the\nimportance of conservation efforts.\nA) Incorrect; the passage does not focus on research challenges.\nB) Incorrect; the passage does not mention dangers.\nD) Incorrect; economic potential is not discussed.",
+    "explanation": "Choice C is correct. The passage emphasizes the biodiversity of the Amazon rainforest and the\nimportance of conservation efforts.\nA) Incorrect; the passage does not focus on research challenges.\nB) Incorrect; the passage does not mention dangers.\nD) Incorrect; economic potential is not discussed.",
     "topic": "Reading and Writing"
   },
   {
@@ -230,7 +230,7 @@ const QUESTIONS = [
       "To extend the school day"
     ],
     "answer": 1,
-    "explanation": "The passage states that the new curriculum focuses on project-based\nlearning, encouraging students to apply their knowledge to real-world\nproblems.\nA) Incorrect; the passage does not mention test scores.\nC) Incorrect; the passage does not discuss homework assignments.\nD) Incorrect; the passage does not mention extending the school day.",
+    "explanation": "Choice B is correct. The passage states that the new curriculum focuses on project-based\nlearning, encouraging students to apply their knowledge to real-world\nproblems.\nA) Incorrect; the passage does not mention test scores.\nC) Incorrect; the passage does not discuss homework assignments.\nD) Incorrect; the passage does not mention extending the school day.",
     "topic": "Reading and Writing"
   },
   {
@@ -243,7 +243,7 @@ const QUESTIONS = [
       "Stricter littering laws"
     ],
     "answer": 3,
-    "explanation": "The passage does not mention stricter littering laws as part of the recycling\ncampaign.\nA) Incorrect; educational programs are mentioned.\nB) Incorrect; incentives for businesses are mentioned.\nC) Incorrect; improved recycling facilities are mentioned.",
+    "explanation": "Choice D is correct. The passage does not mention stricter littering laws as part of the recycling\ncampaign.\nA) Incorrect; educational programs are mentioned.\nB) Incorrect; incentives for businesses are mentioned.\nC) Incorrect; improved recycling facilities are mentioned.",
     "topic": "Reading and Writing"
   },
   {
@@ -256,7 +256,7 @@ const QUESTIONS = [
       "It requires further testing."
     ],
     "answer": 2,
-    "explanation": "The passage states that the scientists concluded the new treatment was both\nsafe and effective.\nA) Incorrect; the treatment is described as both safe and effective.\nB) Incorrect; the treatment is described as both safe and effective.\nD) Incorrect; there is no mention of the need for further testing.",
+    "explanation": "Choice C is correct. The passage states that the scientists concluded the new treatment was both\nsafe and effective.\nA) Incorrect; the treatment is described as both safe and effective.\nB) Incorrect; the treatment is described as both safe and effective.\nD) Incorrect; there is no mention of the need for further testing.",
     "topic": "Reading and Writing"
   },
   {
@@ -269,7 +269,7 @@ const QUESTIONS = [
       "It increases property values."
     ],
     "answer": 1,
-    "explanation": "The passage mentions that urban gardening provides residents with fresh\nproduce and a sense of community.\nA) Incorrect; the passage does not mention pollution reduction.\nC) Incorrect; the passage does not discuss city temperatures.\nD) Incorrect; the passage does not mention property values.",
+    "explanation": "Choice B is correct. The passage mentions that urban gardening provides residents with fresh\nproduce and a sense of community.\nA) Incorrect; the passage does not mention pollution reduction.\nC) Incorrect; the passage does not discuss city temperatures.\nD) Incorrect; the passage does not mention property values.",
     "topic": "Reading and Writing"
   },
   {
@@ -282,7 +282,7 @@ const QUESTIONS = [
       "Greenhouse gases are not a significant concern."
     ],
     "answer": 1,
-    "explanation": "The author argues that renewable energy sources are essential for\ncombating climate change, emphasizing their sustainability and low\ngreenhouse gas emissions.\nA) Incorrect; the passage does not discuss the cost of wind and solar power.\nC) Incorrect; the passage does not compare the reliability of fossil fuels to\nrenewable energy sources.\nD) Incorrect; the passage indicates that greenhouse gases are a concern.",
+    "explanation": "Choice B is correct. The author argues that renewable energy sources are essential for\ncombating climate change, emphasizing their sustainability and low\ngreenhouse gas emissions.\nA) Incorrect; the passage does not discuss the cost of wind and solar power.\nC) Incorrect; the passage does not compare the reliability of fossil fuels to\nrenewable energy sources.\nD) Incorrect; the passage indicates that greenhouse gases are a concern.",
     "topic": "Reading and Writing"
   },
   {
@@ -295,7 +295,7 @@ const QUESTIONS = [
       "Increased salaries"
     ],
     "answer": 3,
-    "explanation": "The passage does not mention increased salaries as part of the flexible work\npolicies.\nA) Incorrect; remote work options are mentioned.\nB) Incorrect; flexible hours are mentioned.\nC) Incorrect; compressed workweeks are mentioned.",
+    "explanation": "Choice D is correct. The passage does not mention increased salaries as part of the flexible work\npolicies.\nA) Incorrect; remote work options are mentioned.\nB) Incorrect; flexible hours are mentioned.\nC) Incorrect; compressed workweeks are mentioned.",
     "topic": "Reading and Writing"
   },
   {
@@ -308,7 +308,7 @@ const QUESTIONS = [
       "To increase city revenue"
     ],
     "answer": 2,
-    "explanation": "The passage states that the primary goal of the city council's initiative is to\nreduce traffic congestion by improving public transportation.\nA) Incorrect; expanding bus routes is part of the plan, but not the primary\ngoal.\nB) Incorrect; adding more bike lanes is part of the plan, but not the primary\ngoal.\nD) Incorrect; the initiative's goal is not to increase city revenue.",
+    "explanation": "Choice C is correct. The passage states that the primary goal of the city council's initiative is to\nreduce traffic congestion by improving public transportation.\nA) Incorrect; expanding bus routes is part of the plan, but not the primary\ngoal.\nB) Incorrect; adding more bike lanes is part of the plan, but not the primary\ngoal.\nD) Incorrect; the initiative's goal is not to increase city revenue.",
     "topic": "Reading and Writing"
   },
   {
@@ -321,7 +321,7 @@ const QUESTIONS = [
       "It reduced the popularity of literature."
     ],
     "answer": 2,
-    "explanation": "The passage states that the printing press enabled the mass production of\nbooks, making literature and knowledge accessible to a broader audience.\nA) Incorrect; the passage does not mention an increase in the cost of books.\nB) Incorrect; the passage indicates that access to literature and knowledge\nwas broadened, not limited.\nD) Incorrect; the passage does not suggest that the popularity of literature\nwas reduced.",
+    "explanation": "Choice C is correct. The passage states that the printing press enabled the mass production of\nbooks, making literature and knowledge accessible to a broader audience.\nA) Incorrect; the passage does not mention an increase in the cost of books.\nB) Incorrect; the passage indicates that access to literature and knowledge\nwas broadened, not limited.\nD) Incorrect; the passage does not suggest that the popularity of literature\nwas reduced.",
     "topic": "Reading and Writing"
   },
   {
@@ -334,7 +334,7 @@ const QUESTIONS = [
       "By causing fatigue"
     ],
     "answer": 1,
-    "explanation": "The passage states that regular physical activity can improve mental health\nby reducing anxiety and depression, due to the release of endorphins.\nA) Incorrect; physical activity is said to reduce stress, not increase it.\nC) Incorrect; exercise increases endorphin levels, which helps lift mood.\nD) Incorrect; the passage does not mention fatigue as a benefit.",
+    "explanation": "Choice B is correct. The passage states that regular physical activity can improve mental health\nby reducing anxiety and depression, due to the release of endorphins.\nA) Incorrect; physical activity is said to reduce stress, not increase it.\nC) Incorrect; exercise increases endorphin levels, which helps lift mood.\nD) Incorrect; the passage does not mention fatigue as a benefit.",
     "topic": "Reading and Writing"
   },
   {
@@ -347,7 +347,7 @@ const QUESTIONS = [
       "To mark territorial boundaries"
     ],
     "answer": 1,
-    "explanation": "The passage states that the primary purpose of building the Great Wall of\nChina was to protect Chinese states from invasions and raids.\nA) Incorrect; the passage does not mention promoting trade.\nC) Incorrect; the wall's purpose as a tourist attraction is not discussed.\nD) Incorrect; while the wall may have marked boundaries, the primary\npurpose mentioned is protection from invasions and raids.",
+    "explanation": "Choice B is correct. The passage states that the primary purpose of building the Great Wall of\nChina was to protect Chinese states from invasions and raids.\nA) Incorrect; the passage does not mention promoting trade.\nC) Incorrect; the wall's purpose as a tourist attraction is not discussed.\nD) Incorrect; while the wall may have marked boundaries, the primary\npurpose mentioned is protection from invasions and raids.",
     "topic": "Reading and Writing"
   },
   {
@@ -360,7 +360,7 @@ const QUESTIONS = [
       "They make the building more difficult to maintain."
     ],
     "answer": 2,
-    "explanation": "The passage states that the eco-friendly features reduce the building's\nenvironmental impact and lower operational costs.\nA) Incorrect; the eco-friendly features reduce, not increase, the\nenvironmental impact.\nB) Incorrect; the features lower, not raise, operational costs.\nD) Incorrect; the passage does not mention increased maintenance\ndifficulty.",
+    "explanation": "Choice C is correct. The passage states that the eco-friendly features reduce the building's\nenvironmental impact and lower operational costs.\nA) Incorrect; the eco-friendly features reduce, not increase, the\nenvironmental impact.\nB) Incorrect; the features lower, not raise, operational costs.\nD) Incorrect; the passage does not mention increased maintenance\ndifficulty.",
     "topic": "Reading and Writing"
   },
   {
@@ -373,7 +373,7 @@ const QUESTIONS = [
       "They have reduced the use of video calls."
     ],
     "answer": 2,
-    "explanation": "The passage states that smartphones have made staying connected with\nfriends and family easier through instant messaging, social media, and\nvideo calls.\nA) Incorrect; the passage states that communication has become easier, not\nmore difficult.\nB) Incorrect; the passage mentions increased access to instant messaging.\nD) Incorrect; the passage does not suggest a reduction in video call usage.",
+    "explanation": "Choice C is correct. The passage states that smartphones have made staying connected with\nfriends and family easier through instant messaging, social media, and\nvideo calls.\nA) Incorrect; the passage states that communication has become easier, not\nmore difficult.\nB) Incorrect; the passage mentions increased access to instant messaging.\nD) Incorrect; the passage does not suggest a reduction in video call usage.",
     "topic": "Reading and Writing"
   },
   {
@@ -386,7 +386,7 @@ const QUESTIONS = [
       "It was largely ignored by the scientific community."
     ],
     "answer": 1,
-    "explanation": "The passage states that the scientist's research earned her numerous\naccolades and paved the way for new advancements in sustainable\ntechnology.\nA) Incorrect; the passage does not mention a decrease in renewable energy\nsources.\nC) Incorrect; the research facilitated, not prevented, advancements in\nsustainable technology.\nD) Incorrect; the research was recognized, not ignored.",
+    "explanation": "Choice B is correct. The passage states that the scientist's research earned her numerous\naccolades and paved the way for new advancements in sustainable\ntechnology.\nA) Incorrect; the passage does not mention a decrease in renewable energy\nsources.\nC) Incorrect; the research facilitated, not prevented, advancements in\nsustainable technology.\nD) Incorrect; the research was recognized, not ignored.",
     "topic": "Reading and Writing"
   },
   {
@@ -399,7 +399,7 @@ const QUESTIONS = [
       "It improves cardiovascular health."
     ],
     "answer": 1,
-    "explanation": "The passage states that spending time in nature can significantly reduce\nstress levels by lowering cortisol.\nA) Incorrect; the passage states that cortisol levels are lowered, not\nincreased.\nC) Incorrect; the passage does not mention weight loss as a benefit.\nD) Incorrect; the passage does not mention improvements in cardiovascular\nhealth.",
+    "explanation": "Choice B is correct. The passage states that spending time in nature can significantly reduce\nstress levels by lowering cortisol.\nA) Incorrect; the passage states that cortisol levels are lowered, not\nincreased.\nC) Incorrect; the passage does not mention weight loss as a benefit.\nD) Incorrect; the passage does not mention improvements in cardiovascular\nhealth.",
     "topic": "Reading and Writing"
   },
   {
@@ -412,7 +412,7 @@ const QUESTIONS = [
       "A decline in the quality of office furniture"
     ],
     "answer": 1,
-    "explanation": "The passage states that there is an increased demand for home office\nequipment, particularly ergonomic chairs and desks, due to the rise of\nremote work.\nA) Incorrect; the passage mentions an increase, not a decrease, in sales.\nC) Incorrect; the passage does not mention commuting.\nD) Incorrect; the passage does not discuss the quality of office furniture.",
+    "explanation": "Choice B is correct. The passage states that there is an increased demand for home office\nequipment, particularly ergonomic chairs and desks, due to the rise of\nremote work.\nA) Incorrect; the passage mentions an increase, not a decrease, in sales.\nC) Incorrect; the passage does not mention commuting.\nD) Incorrect; the passage does not discuss the quality of office furniture.",
     "topic": "Reading and Writing"
   },
   {
@@ -425,7 +425,7 @@ const QUESTIONS = [
       "The protagonist's failure to succeed"
     ],
     "answer": 2,
-    "explanation": "The main theme of the novel is the protagonist's determination and passion,\nwhich drive her to succeed despite societal expectations and challenges.\nA) Incorrect; while societal expectations are mentioned, they are not the\nmain theme.\nB) Incorrect; the challenges are part of the journey, but not the main theme.\nD) Incorrect; the protagonist's success is highlighted, not her failure.",
+    "explanation": "Choice C is correct. The main theme of the novel is the protagonist's determination and passion,\nwhich drive her to succeed despite societal expectations and challenges.\nA) Incorrect; while societal expectations are mentioned, they are not the\nmain theme.\nB) Incorrect; the challenges are part of the journey, but not the main theme.\nD) Incorrect; the protagonist's success is highlighted, not her failure.",
     "topic": "Reading and Writing"
   },
   {
@@ -438,7 +438,7 @@ const QUESTIONS = [
       "To improve public transportation"
     ],
     "answer": 1,
-    "explanation": "The passage states that the purpose of the new recycling program is to\nreduce waste by encouraging residents to separate recyclables from their\ntrash.\nA) Incorrect; the passage does not mention increasing government revenue.\nC) Incorrect; the passage does not mention providing more jobs.\nD) Incorrect; the passage does not mention improving public transportation.",
+    "explanation": "Choice B is correct. The passage states that the purpose of the new recycling program is to\nreduce waste by encouraging residents to separate recyclables from their\ntrash.\nA) Incorrect; the passage does not mention increasing government revenue.\nC) Incorrect; the passage does not mention providing more jobs.\nD) Incorrect; the passage does not mention improving public transportation.",
     "topic": "Reading and Writing"
   },
   {
@@ -451,7 +451,7 @@ const QUESTIONS = [
       "Higher costs"
     ],
     "answer": 2,
-    "explanation": "The passage states that minimally invasive surgeries often result in shorter\nrecovery times and fewer complications for patients.\nA) Incorrect; the passage mentions shorter, not longer, recovery times.\nB) Incorrect; the passage mentions fewer, not more, complications.\nD) Incorrect; the passage does not discuss the costs of these surgeries.",
+    "explanation": "Choice C is correct. The passage states that minimally invasive surgeries often result in shorter\nrecovery times and fewer complications for patients.\nA) Incorrect; the passage mentions shorter, not longer, recovery times.\nB) Incorrect; the passage mentions fewer, not more, complications.\nD) Incorrect; the passage does not discuss the costs of these surgeries.",
     "topic": "Reading and Writing"
   },
   {
@@ -464,7 +464,7 @@ const QUESTIONS = [
       "Local businesses"
     ],
     "answer": 1,
-    "explanation": "The passage attributes the success of the community garden project to the\ndedication of the volunteers, highlighting their hard work and commitment.\nA) Incorrect; the passage does not mention government funding.\nC) Incorrect; the passage does not mention professional gardeners.\nD) Incorrect; the passage does not mention local businesses.",
+    "explanation": "Choice B is correct. The passage attributes the success of the community garden project to the\ndedication of the volunteers, highlighting their hard work and commitment.\nA) Incorrect; the passage does not mention government funding.\nC) Incorrect; the passage does not mention professional gardeners.\nD) Incorrect; the passage does not mention local businesses.",
     "topic": "Reading and Writing"
   },
   {
@@ -477,7 +477,7 @@ const QUESTIONS = [
       "informative and participants"
     ],
     "answer": 0,
-    "explanation": "A semicolon correctly separates two independent but related clauses.\nB) Incorrect; a comma cannot join two independent clauses.\nC) Incorrect; a colon is not suitable here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe ideas.",
+    "explanation": "Choice A is correct. A semicolon correctly separates two independent but related clauses.\nB) Incorrect; a comma cannot join two independent clauses.\nC) Incorrect; a colon is not suitable here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe ideas.",
     "topic": "Reading and Writing"
   },
   {
@@ -490,7 +490,7 @@ const QUESTIONS = [
       "It introduces a new topic."
     ],
     "answer": 1,
-    "explanation": "The phrase \"With her expertise in marketing\" explains why she was able to\nlead the team successfully.\nA) Incorrect; no example is provided.\nC) Incorrect; there is no contrast indicated.\nD) Incorrect; it does not introduce a new topic but explains the current one.",
+    "explanation": "Choice B is correct. The phrase \"With her expertise in marketing\" explains why she was able to\nlead the team successfully.\nA) Incorrect; no example is provided.\nC) Incorrect; there is no contrast indicated.\nD) Incorrect; it does not introduce a new topic but explains the current one.",
     "topic": "Reading and Writing"
   },
   {
@@ -503,7 +503,7 @@ const QUESTIONS = [
       "evasive"
     ],
     "answer": 3,
-    "explanation": "\"Elusive\" means difficult to find, catch, or achieve, which matches\n\"evasive.\"\nA) Incorrect; \"clear\" means easily perceived, the opposite of \"elusive.\"\nB) Incorrect; \"visible\" means able to be seen, which does not convey the\ndifficulty implied by \"elusive.\"\nC) Incorrect; \"known\" means recognized or understood, which does not fit\nhere.",
+    "explanation": "Choice D is correct. \"Elusive\" means difficult to find, catch, or achieve, which matches\n\"evasive.\"\nA) Incorrect; \"clear\" means easily perceived, the opposite of \"elusive.\"\nB) Incorrect; \"visible\" means able to be seen, which does not convey the\ndifficulty implied by \"elusive.\"\nC) Incorrect; \"known\" means recognized or understood, which does not fit\nhere.",
     "topic": "Reading and Writing"
   },
   {
@@ -516,7 +516,7 @@ const QUESTIONS = [
       "Schools should offer more language courses to students."
     ],
     "answer": 2,
-    "explanation": "Option C effectively summarizes the benefits of learning multiple\nlanguages, making it a strong concluding sentence.\nA) Incorrect; is a factual statement but does not summarize the importance.\nB) Incorrect; introduces a new topic about the challenge without concluding\nthe paragraph.\nD) Incorrect; suggests a course of action without summarizing the\nimportance.",
+    "explanation": "Choice C is correct. Option C effectively summarizes the benefits of learning multiple\nlanguages, making it a strong concluding sentence.\nA) Incorrect; is a factual statement but does not summarize the importance.\nB) Incorrect; introduces a new topic about the challenge without concluding\nthe paragraph.\nD) Incorrect; suggests a course of action without summarizing the\nimportance.",
     "topic": "Reading and Writing"
   },
   {
@@ -529,7 +529,7 @@ const QUESTIONS = [
       "irrelevant"
     ],
     "answer": 1,
-    "explanation": "Option B, \"positive,\" indicates that the results supported the hypothesis,\nmaking it the best choice.\nA) Incorrect; \"inconclusive\" means the results did not clearly support or\nrefute the hypothesis.\nC) Incorrect; \"quick\" refers to time, not the nature of the results.\nD) Incorrect; \"irrelevant\" means not related to the hypothesis, which does\nnot fit the context.",
+    "explanation": "Choice B is correct. Option B, \"positive,\" indicates that the results supported the hypothesis,\nmaking it the best choice.\nA) Incorrect; \"inconclusive\" means the results did not clearly support or\nrefute the hypothesis.\nC) Incorrect; \"quick\" refers to time, not the nature of the results.\nD) Incorrect; \"irrelevant\" means not related to the hypothesis, which does\nnot fit the context.",
     "topic": "Reading and Writing"
   },
   {
@@ -542,7 +542,7 @@ const QUESTIONS = [
       "It provides an example of the decision."
     ],
     "answer": 0,
-    "explanation": "The phrase \"By examining the evidence thoroughly\" explains why the\ncommittee could make a well-informed decision.\nB) Incorrect; there is no contrast indicated.\nC) Incorrect; it does not summarize the decision but explains the reasoning.\nD) Incorrect; no example is provided.",
+    "explanation": "Choice A is correct. The phrase \"By examining the evidence thoroughly\" explains why the\ncommittee could make a well-informed decision.\nB) Incorrect; there is no contrast indicated.\nC) Incorrect; it does not summarize the decision but explains the reasoning.\nD) Incorrect; no example is provided.",
     "topic": "Reading and Writing"
   },
   {
@@ -555,7 +555,7 @@ const QUESTIONS = [
       "It is important to wear proper footwear when exercising."
     ],
     "answer": 1,
-    "explanation": "Option B provides specific benefits of regular exercise, supporting the\nparagraph's main idea.\nA) Incorrect; it provides a general statement without specific benefits.\nC) Incorrect; it mentions a specific activity without highlighting benefits.\nD) Incorrect; it focuses on a practical aspect of exercising rather than its\nbenefits.",
+    "explanation": "Choice B is correct. Option B provides specific benefits of regular exercise, supporting the\nparagraph's main idea.\nA) Incorrect; it provides a general statement without specific benefits.\nC) Incorrect; it mentions a specific activity without highlighting benefits.\nD) Incorrect; it focuses on a practical aspect of exercising rather than its\nbenefits.",
     "topic": "Reading and Writing"
   },
   {
@@ -568,12 +568,12 @@ const QUESTIONS = [
       "simplify"
     ],
     "answer": 3,
-    "explanation": "\"Facilitate\" means to make an action or process easier, which matches\n\"simplify.\"\nA) Incorrect; \"hinder\" means to obstruct, the opposite of \"facilitate.\"\nB) Incorrect; \"complicate\" means to make more difficult, the opposite of\n\"facilitate.\"\nC) Incorrect; \"observe\" means to watch or monitor, which does not fit the\ncontext.",
+    "explanation": "Choice D is correct. \"Facilitate\" means to make an action or process easier, which matches\n\"simplify.\"\nA) Incorrect; \"hinder\" means to obstruct, the opposite of \"facilitate.\"\nB) Incorrect; \"complicate\" means to make more difficult, the opposite of\n\"facilitate.\"\nC) Incorrect; \"observe\" means to watch or monitor, which does not fit the\ncontext.",
     "topic": "Reading and Writing"
   },
   {
     "id": 45,
-    "text": "Which choice best completes the sentence with relevant and precise\ninformation?\nSentence: \"The new software update improved the system\u2019s security,\n______________.\"",
+    "text": "Which choice best completes the sentence with relevant and precise\ninformation?\nSentence: \"The new software update improved the system’s security,\n______________.\"",
     "options": [
       "which was very helpful.",
       "reducing the risk of data breaches.",
@@ -581,7 +581,7 @@ const QUESTIONS = [
       "although some features were not fixed."
     ],
     "answer": 1,
-    "explanation": "Option B specifies how the system's security was improved by reducing the\nrisk of data breaches.\nA) Incorrect; \"very helpful\" is vague and lacks precision.\nC) Incorrect; \"everyone liked it\" is subjective and not specific to security\nimprovements.\nD) Incorrect; \"some features were not fixed\" introduces a negative aspect\nirrelevant to the context.",
+    "explanation": "Choice B is correct. Option B specifies how the system's security was improved by reducing the\nrisk of data breaches.\nA) Incorrect; \"very helpful\" is vague and lacks precision.\nC) Incorrect; \"everyone liked it\" is subjective and not specific to security\nimprovements.\nD) Incorrect; \"some features were not fixed\" introduces a negative aspect\nirrelevant to the context.",
     "topic": "Reading and Writing"
   },
   {
@@ -594,7 +594,7 @@ const QUESTIONS = [
       "Some regions are more vulnerable to climate change impacts."
     ],
     "answer": 2,
-    "explanation": "Option C effectively transitions from the challenges to the solutions by\nmentioning the work of scientists.\nA) Incorrect; continues discussing the issue without transitioning to\nsolutions.\nB) Incorrect; focuses on understanding causes, not solutions.\nD) Incorrect; mentions impacts but does not introduce solutions.",
+    "explanation": "Choice C is correct. Option C effectively transitions from the challenges to the solutions by\nmentioning the work of scientists.\nA) Incorrect; continues discussing the issue without transitioning to\nsolutions.\nB) Incorrect; focuses on understanding causes, not solutions.\nD) Incorrect; mentions impacts but does not introduce solutions.",
     "topic": "Reading and Writing"
   },
   {
@@ -607,7 +607,7 @@ const QUESTIONS = [
       "It offers a solution."
     ],
     "answer": 0,
-    "explanation": "The phrase \"Despite the initial setbacks\" introduces a contrast with the\nproject being completed on time.\nB) Incorrect; no example is provided.\nC) Incorrect; it does not explain a cause but rather contrasts the situation.\nD) Incorrect; it does not offer a solution but highlights a contrast.",
+    "explanation": "Choice A is correct. The phrase \"Despite the initial setbacks\" introduces a contrast with the\nproject being completed on time.\nB) Incorrect; no example is provided.\nC) Incorrect; it does not explain a cause but rather contrasts the situation.\nD) Incorrect; it does not offer a solution but highlights a contrast.",
     "topic": "Reading and Writing"
   },
   {
@@ -620,7 +620,7 @@ const QUESTIONS = [
       "detailed"
     ],
     "answer": 1,
-    "explanation": "\"Ambiguous\" means open to more than one interpretation, which matches\n\"confusing.\"\nA) Incorrect; \"clear\" means easily understood, the opposite of \"ambiguous.\"\nC) Incorrect; \"lengthy\" means long, which does not fit here.\nD) Incorrect; \"detailed\" means including many details, which does not\nconvey the same idea.",
+    "explanation": "Choice B is correct. \"Ambiguous\" means open to more than one interpretation, which matches\n\"confusing.\"\nA) Incorrect; \"clear\" means easily understood, the opposite of \"ambiguous.\"\nC) Incorrect; \"lengthy\" means long, which does not fit here.\nD) Incorrect; \"detailed\" means including many details, which does not\nconvey the same idea.",
     "topic": "Reading and Writing"
   },
   {
@@ -633,12 +633,12 @@ const QUESTIONS = [
       "Social media has revolutionized the way people communicate, allowing\ninstant and widespread sharing of information."
     ],
     "answer": 3,
-    "explanation": "Option D provides a specific impact of social media on communication,\nsupporting the paragraph's main idea.\nA) Incorrect; general statement without specific impact.\nB) Incorrect; mentions a preference without supporting the paragraph's\nfocus.\nC) Incorrect; suggests a guideline without discussing impact.",
+    "explanation": "Choice D is correct. Option D provides a specific impact of social media on communication,\nsupporting the paragraph's main idea.\nA) Incorrect; general statement without specific impact.\nB) Incorrect; mentions a preference without supporting the paragraph's\nfocus.\nC) Incorrect; suggests a guideline without discussing impact.",
     "topic": "Reading and Writing"
   },
   {
     "id": 50,
-    "text": "Read the following sentence and choose the best version of the underlined\npart of the sentence.\nOriginal Sentence: \"The manager\u2019s feedback was valuable it helped the\nemployees improve their performance.\"",
+    "text": "Read the following sentence and choose the best version of the underlined\npart of the sentence.\nOriginal Sentence: \"The manager’s feedback was valuable it helped the\nemployees improve their performance.\"",
     "options": [
       "valuable it helped",
       "valuable; it helped",
@@ -646,7 +646,7 @@ const QUESTIONS = [
       "valuable and helped"
     ],
     "answer": 1,
-    "explanation": "A semicolon correctly separates two independent but related clauses.\nA) Incorrect; a comma cannot join two independent clauses.\nC) Incorrect; a colon is not suitable here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe ideas.",
+    "explanation": "Choice B is correct. A semicolon correctly separates two independent but related clauses.\nA) Incorrect; a comma cannot join two independent clauses.\nC) Incorrect; a colon is not suitable here.\nD) Incorrect; although grammatically correct, a semicolon better connects\nthe ideas.",
     "topic": "Reading and Writing"
   },
   {
@@ -659,7 +659,7 @@ const QUESTIONS = [
       "because many people are concerned."
     ],
     "answer": 0,
-    "explanation": "Option A provides a specific method by which the policy aims to achieve its\ngoal, making it the best choice.\nB) Incorrect; \"very difficult\" is vague and does not provide specific\ninformation.\nC) Incorrect; \"it will be implemented soon\" is unrelated to how emissions\nwill be reduced.\nD) Incorrect; \"because many people are concerned\" provides a reason for\nthe policy, not a method.",
+    "explanation": "Choice A is correct. Option A provides a specific method by which the policy aims to achieve its\ngoal, making it the best choice.\nB) Incorrect; \"very difficult\" is vague and does not provide specific\ninformation.\nC) Incorrect; \"it will be implemented soon\" is unrelated to how emissions\nwill be reduced.\nD) Incorrect; \"because many people are concerned\" provides a reason for\nthe policy, not a method.",
     "topic": "Reading and Writing"
   },
   {
@@ -672,7 +672,7 @@ const QUESTIONS = [
       "analyze"
     ],
     "answer": 2,
-    "explanation": "\"Alleviate\" means to make a problem less severe, which matches \"lessen.\"\nA) Incorrect; \"worsen\" means to make worse, the opposite of alleviate.\nB) Incorrect; \"ignore\" means to pay no attention to, which does not fit the\ncontext.\nD) Incorrect; \"analyze\" means to examine in detail, which does not fit the\ncontext.",
+    "explanation": "Choice C is correct. \"Alleviate\" means to make a problem less severe, which matches \"lessen.\"\nA) Incorrect; \"worsen\" means to make worse, the opposite of alleviate.\nB) Incorrect; \"ignore\" means to pay no attention to, which does not fit the\ncontext.\nD) Incorrect; \"analyze\" means to examine in detail, which does not fit the\ncontext.",
     "topic": "Reading and Writing"
   },
   {
@@ -685,7 +685,7 @@ const QUESTIONS = [
       "It summarizes the decision."
     ],
     "answer": 2,
-    "explanation": "The phrase \"Given the limited budget\" explains the reason why the team\ndecided to focus on the most critical issues first.\nA) Incorrect; it does not introduce a consequence but explains the reason.\nB) Incorrect; it does not provide a contrast.\nD) Incorrect; it does not summarize the decision but gives a reason for it.",
+    "explanation": "Choice C is correct. The phrase \"Given the limited budget\" explains the reason why the team\ndecided to focus on the most critical issues first.\nA) Incorrect; it does not introduce a consequence but explains the reason.\nB) Incorrect; it does not provide a contrast.\nD) Incorrect; it does not summarize the decision but gives a reason for it.",
     "topic": "Reading and Writing"
   },
   {
@@ -698,12 +698,12 @@ const QUESTIONS = [
       "It is recommended to establish a regular sleep schedule."
     ],
     "answer": 1,
-    "explanation": "Option B provides specific benefits of adequate sleep, supporting the\nparagraph's main idea about its importance for overall health.\nA) Incorrect; it states a general problem without highlighting importance.\nC) Incorrect; it mentions variability in sleep needs but does not emphasize\nimportance.\nD) Incorrect; it suggests a guideline without highlighting the importance of\nsleep for health.",
+    "explanation": "Choice B is correct. Option B provides specific benefits of adequate sleep, supporting the\nparagraph's main idea about its importance for overall health.\nA) Incorrect; it states a general problem without highlighting importance.\nC) Incorrect; it mentions variability in sleep needs but does not emphasize\nimportance.\nD) Incorrect; it suggests a guideline without highlighting the importance of\nsleep for health.",
     "topic": "Reading and Writing"
   },
   {
     "id": 55,
-    "text": "If 3\ud835\udc65 + 5 = 2\ud835\udc65 + 9, what is the value of \ud835\udc65?",
+    "text": "If 3𝑥 + 5 = 2𝑥 + 9, what is the value of 𝑥?",
     "options": [
       "4",
       "3",
@@ -711,12 +711,12 @@ const QUESTIONS = [
       "1"
     ],
     "answer": 0,
-    "explanation": "To solve for \ud835\udc65, subtract 2\ud835\udc65 from both sides of the equation:\n3\ud835\udc65 \u2212 2\ud835\udc65 + 5 = 9\n\ud835\udc65 + 5 = 9\nNext, subtract 5 from both sides:\n\ud835\udc65 = 4\nB) Incorrect; this is a possible error from incorrect subtraction.\nC) Incorrect; this could result from dividing both sides by 3 incorrectly.\nD) Incorrect; this may come from a misunderstanding of combining like\nterms.",
+    "explanation": "Choice A is correct. To solve for 𝑥, subtract 2𝑥 from both sides of the equation:\n3𝑥 − 2𝑥 + 5 = 9\n𝑥 + 5 = 9\nNext, subtract 5 from both sides:\n𝑥 = 4\nB) Incorrect; this is a possible error from incorrect subtraction.\nC) Incorrect; this could result from dividing both sides by 3 incorrectly.\nD) Incorrect; this may come from a misunderstanding of combining like\nterms.",
     "topic": "Reading and Writing"
   },
   {
     "id": 56,
-    "text": "What is the value of \ud835\udc66 if 5\ud835\udc66 \u2013 3 = 2\ud835\udc66 + 9?",
+    "text": "What is the value of 𝑦 if 5𝑦 – 3 = 2𝑦 + 9?",
     "options": [
       "2",
       "3",
@@ -724,7 +724,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 2,
-    "explanation": "First, subtract 2\ud835\udc66 from both sides:\n5\ud835\udc66 \u2212 2\ud835\udc66 \u2013 3 = 9\n3\ud835\udc66 \u2013 3 = 9\nNext, add 3 to both sides:\n3\ud835\udc66 = 12\nFinally, divide both sides by 3:\n\ud835\udc66 = 4\nA) Incorrect; a common mistake is dividing too early.\nB) Incorrect; this error might result from subtracting incorrectly.\nD) Incorrect; this may arise from wrong addition/subtraction steps.",
+    "explanation": "Choice C is correct. First, subtract 2𝑦 from both sides:\n5𝑦 − 2𝑦 – 3 = 9\n3𝑦 – 3 = 9\nNext, add 3 to both sides:\n3𝑦 = 12\nFinally, divide both sides by 3:\n𝑦 = 4\nA) Incorrect; a common mistake is dividing too early.\nB) Incorrect; this error might result from subtracting incorrectly.\nD) Incorrect; this may arise from wrong addition/subtraction steps.",
     "topic": "Reading and Writing"
   },
   {
@@ -737,12 +737,12 @@ const QUESTIONS = [
       "12"
     ],
     "answer": 0,
-    "explanation": "The area \ud835\udc34 of a rectangle is given by \ud835\udc34 = length \u00d7 width. Therefore:\n24 = length \u00d7 4\nDivide both sides by 4:\nLength = 6\nB) \nIncorrect; \nthis \nmay \ncome \nfrom \nmisinterpreting \nthe\nmultiplication/division steps.\nC) Incorrect; this could result from adding rather than dividing.\nD) Incorrect; a possible miscalculation or error in formula application.",
+    "explanation": "Choice A is correct. The area 𝐴 of a rectangle is given by 𝐴 = length × width. Therefore:\n24 = length × 4\nDivide both sides by 4:\nLength = 6\nB) \nIncorrect; \nthis \nmay \ncome \nfrom \nmisinterpreting \nthe\nmultiplication/division steps.\nC) Incorrect; this could result from adding rather than dividing.\nD) Incorrect; a possible miscalculation or error in formula application.",
     "topic": "Reading and Writing"
   },
   {
     "id": 58,
-    "text": "Solve for \ud835\udc67 in the equation \ud835\udc67/2 + 7 = 15.",
+    "text": "Solve for 𝑧 in the equation 𝑧/2 + 7 = 15.",
     "options": [
       "14",
       "16",
@@ -750,12 +750,12 @@ const QUESTIONS = [
       "20"
     ],
     "answer": 1,
-    "explanation": "First, subtract 7 from both sides:\n\ud835\udc67/2 = 8\nNext, multiply both sides by 2:\n\ud835\udc67 = 16\nA) Incorrect; error in solving the equation, possibly from improper\nsubtraction.\nC) Incorrect; dividing by the wrong number.\nD) Incorrect; likely comes from incorrect final multiplication step.",
+    "explanation": "Choice B is correct. First, subtract 7 from both sides:\n𝑧/2 = 8\nNext, multiply both sides by 2:\n𝑧 = 16\nA) Incorrect; error in solving the equation, possibly from improper\nsubtraction.\nC) Incorrect; dividing by the wrong number.\nD) Incorrect; likely comes from incorrect final multiplication step.",
     "topic": "Reading and Writing"
   },
   {
     "id": 59,
-    "text": "What is the solution to 4\ud835\udc5a \u2013 5 = 3\ud835\udc5a + 2?",
+    "text": "What is the solution to 4𝑚 – 5 = 3𝑚 + 2?",
     "options": [
       "-7",
       "-2",
@@ -763,12 +763,12 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 3,
-    "explanation": "Subtract 3\ud835\udc5a from both sides:\n4\ud835\udc5a \u2212 3\ud835\udc5a \u2013 5 = 2\n\ud835\udc5a \u2013 5 = 2\nAdd 5 to both sides:\n\ud835\udc5a = 7\nA) Incorrect; a possible miscalculation with signs.\nB) Incorrect; error in algebraic manipulation.\nC) Incorrect; this might come from reversing the sides incorrectly.",
+    "explanation": "Choice D is correct. Subtract 3𝑚 from both sides:\n4𝑚 − 3𝑚 – 5 = 2\n𝑚 – 5 = 2\nAdd 5 to both sides:\n𝑚 = 7\nA) Incorrect; a possible miscalculation with signs.\nB) Incorrect; error in algebraic manipulation.\nC) Incorrect; this might come from reversing the sides incorrectly.",
     "topic": "Reading and Writing"
   },
   {
     "id": 60,
-    "text": "If 5(\ud835\udc65 + 2) = 35, what is the value of \ud835\udc65?",
+    "text": "If 5(𝑥 + 2) = 35, what is the value of 𝑥?",
     "options": [
       "3",
       "4",
@@ -776,12 +776,12 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 2,
-    "explanation": "First, divide both sides by 5:\n\ud835\udc65 + 2 = 7\nThen, subtract 2 from both sides:\n\ud835\udc65 = 5\nA) Incorrect; error in arithmetic operations.\nB) Incorrect; could be from multiplying instead of dividing.\nD) Incorrect; possible misunderstanding of solving steps.",
+    "explanation": "Choice C is correct. First, divide both sides by 5:\n𝑥 + 2 = 7\nThen, subtract 2 from both sides:\n𝑥 = 5\nA) Incorrect; error in arithmetic operations.\nB) Incorrect; could be from multiplying instead of dividing.\nD) Incorrect; possible misunderstanding of solving steps.",
     "topic": "Reading and Writing"
   },
   {
     "id": 61,
-    "text": "Solve for \ud835\udc58 in \ud835\udc58/3 + 4 = 9.",
+    "text": "Solve for 𝑘 in 𝑘/3 + 4 = 9.",
     "options": [
       "12",
       "13",
@@ -789,7 +789,7 @@ const QUESTIONS = [
       "15"
     ],
     "answer": 3,
-    "explanation": "First, subtract 4 from both sides:\n\ud835\udc58/3 = 5\nThen, multiply both sides by 3:\n\ud835\udc58 = 15\nA) Incorrect; wrong addition or subtraction step.\nB) Incorrect; error in arithmetic or misunderstanding the equation.\nC) Incorrect; possibly multiplying the wrong numbers.",
+    "explanation": "Choice D is correct. First, subtract 4 from both sides:\n𝑘/3 = 5\nThen, multiply both sides by 3:\n𝑘 = 15\nA) Incorrect; wrong addition or subtraction step.\nB) Incorrect; error in arithmetic or misunderstanding the equation.\nC) Incorrect; possibly multiplying the wrong numbers.",
     "topic": "Reading and Writing"
   },
   {
@@ -802,7 +802,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 0,
-    "explanation": "The slope \ud835\udc5a is given by \n :\nB) Incorrect; could be a misunderstanding of the slope formula.\nC) Incorrect; using wrong points for calculations.\nD) Incorrect; possible error in basic arithmetic.",
+    "explanation": "Choice A is correct. The slope 𝑚 is given by \n:\nB) Incorrect; could be a misunderstanding of the slope formula.\nC) Incorrect; using wrong points for calculations.\nD) Incorrect; possible error in basic arithmetic.",
     "topic": "Reading and Writing"
   },
   {
@@ -815,12 +815,12 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "The perimeter \ud835\udc43 of a square is given by \ud835\udc43 = 4 \u00d7 side\u00a0length. Therefore:\n20 = 4 \u00d7 side\u00a0length\nDivide both sides by 4:\nside length = 5\nA) Incorrect; miscalculation in dividing by 4.\nC) Incorrect; error in understanding perimeter formula.\nD) Incorrect; incorrect arithmetic.",
+    "explanation": "Choice B is correct. The perimeter 𝑃 of a square is given by 𝑃 = 4 × side length. Therefore:\n20 = 4 × side length\nDivide both sides by 4:\nside length = 5\nA) Incorrect; miscalculation in dividing by 4.\nC) Incorrect; error in understanding perimeter formula.\nD) Incorrect; incorrect arithmetic.",
     "topic": "Reading and Writing"
   },
   {
     "id": 64,
-    "text": "If 7\ud835\udc5b + 2 = 23, what is the value of \ud835\udc5b?",
+    "text": "If 7𝑛 + 2 = 23, what is the value of 𝑛?",
     "options": [
       "1",
       "2",
@@ -828,25 +828,25 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 2,
-    "explanation": "Subtract 2 from both sides:\n7\ud835\udc5b = 21\nNext, divide both sides by 7:\n\ud835\udc5b = 3\nA) Incorrect; possibly from improper subtraction or division.\nB) Incorrect; misunderstanding the division step.\nD) Incorrect; wrong arithmetic operation.",
+    "explanation": "Choice C is correct. Subtract 2 from both sides:\n7𝑛 = 21\nNext, divide both sides by 7:\n𝑛 = 3\nA) Incorrect; possibly from improper subtraction or division.\nB) Incorrect; misunderstanding the division step.\nD) Incorrect; wrong arithmetic operation.",
     "topic": "Reading and Writing"
   },
   {
     "id": 65,
-    "text": "Solve for \ud835\udc65: 2(\ud835\udc65 \u2212 3) = 4\ud835\udc65 + 2.",
+    "text": "Solve for 𝑥: 2(𝑥 − 3) = 4𝑥 + 2.",
     "options": [
-      "\u22124",
-      "\u22122",
+      "−4",
+      "−2",
       "2",
       "4"
     ],
     "answer": 0,
-    "explanation": "First, distribute the 2 on the left side:\n2\ud835\udc65 \u2013 6 = 4\ud835\udc65 + 2\nNext, subtract 2x from both sides:\n\u22126 = 2\ud835\udc65 + 2\nSubtract 2 from both sides:\n\u22128 = 2\ud835\udc65\nFinally, divide both sides by 2:\n\ud835\udc65 = \u22124\nB) Incorrect; possible mistake in subtraction.\nC) Incorrect; error in solving for \ud835\udc65.\nD) Incorrect; likely a result of incorrect arithmetic steps.",
+    "explanation": "Choice A is correct. First, distribute the 2 on the left side:\n2𝑥 – 6 = 4𝑥 + 2\nNext, subtract 2x from both sides:\n−6 = 2𝑥 + 2\nSubtract 2 from both sides:\n−8 = 2𝑥\nFinally, divide both sides by 2:\n𝑥 = −4\nB) Incorrect; possible mistake in subtraction.\nC) Incorrect; error in solving for 𝑥.\nD) Incorrect; likely a result of incorrect arithmetic steps.",
     "topic": "Reading and Writing"
   },
   {
     "id": 66,
-    "text": "If \ud835\udc66 = 3\ud835\udc65 + 1 and \ud835\udc66 = 2\ud835\udc65 + 4, what is the value of \ud835\udc65?",
+    "text": "If 𝑦 = 3𝑥 + 1 and 𝑦 = 2𝑥 + 4, what is the value of 𝑥?",
     "options": [
       "1",
       "2",
@@ -854,59 +854,59 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 2,
-    "explanation": "Set the equations equal to each other:\n3\ud835\udc65 + 1 = 2\ud835\udc65 + 4\nSubtract 2x from both sides:\n\ud835\udc65 + 1 = 4\nSubtract 1 from both sides:\n\ud835\udc65 = 3\nA) Incorrect; misunderstanding the addition step.\nC) Incorrect; may result from miscalculation.\nD) Incorrect; error in subtracting.",
+    "explanation": "Choice C is correct. Set the equations equal to each other:\n3x + 1 = 2x + 4\nSubtract 2x from both sides:\nx + 1 = 4\nSubtract 1 from both sides:\nx = 3.\nChoices A, B, and D are incorrect subtraction or calculation steps.",
     "topic": "Reading and Writing"
   },
   {
     "id": 67,
     "text": "A circle has a radius of 5 units. What is the circumference of the circle?",
     "options": [
-      "10\u03c0",
-      "15\u03c0",
-      "20\u03c0",
-      "25\u03c0"
+      "10π",
+      "15π",
+      "20π",
+      "25π"
     ],
     "answer": 0,
-    "explanation": "The circumference \ud835\udc36 of a circle is given by \ud835\udc36 = 2\ud835\udf0b\ud835\udc5f, where \ud835\udc5f is the radius.\nTherefore:\n\ud835\udc36 = 2\ud835\udf0b \u00d7 5 = 10\ud835\udf0b\nB) Incorrect; possible misunderstanding of the formula.\nC) Incorrect; forgetting to multiply by 2.\nD) Incorrect; error in multiplication.",
+    "explanation": "Choice A is correct. The circumference 𝐶 of a circle is given by 𝐶 = 2𝜋𝑟, where 𝑟 is the radius.\nTherefore:\n𝐶 = 2𝜋 × 5 = 10𝜋\nB) Incorrect; possible misunderstanding of the formula.\nC) Incorrect; forgetting to multiply by 2.\nD) Incorrect; error in multiplication.",
     "topic": "Reading and Writing"
   },
   {
     "id": 68,
-    "text": "Solve for \ud835\udc65 in the equation \ud835\udc652 \u2013 4 = 0.",
+    "text": "Solve for 𝑥 in the equation 𝑥2 – 4 = 0.",
     "options": [
       "0",
       "2",
-      "\u00b12",
+      "±2",
       "4"
     ],
     "answer": 2,
-    "explanation": "Add 4 to both sides:\n\ud835\udc652 = 4\nTake the square root of both sides:\n\ud835\udc65 = \u00b12\nA) Incorrect; misunderstanding square root properties.\nB) Incorrect; missing the negative solution.\nD) Incorrect; confusing squaring with multiplication.",
+    "explanation": "Choice C is correct. Add 4 to both sides:\n𝑥2 = 4\nTake the square root of both sides:\n𝑥 = ±2\nA) Incorrect; misunderstanding square root properties.\nB) Incorrect; missing the negative solution.\nD) Incorrect; confusing squaring with multiplication.",
     "topic": "Reading and Writing"
   },
   {
     "id": 69,
-    "text": "If 3\ud835\udc4e \u2013 2 = 4\ud835\udc4e + 3, what is the value of \ud835\udc4e?",
+    "text": "If 3𝑎 – 2 = 4𝑎 + 3, what is the value of 𝑎?",
     "options": [
-      "\u22125",
-      "\u22121",
+      "−5",
+      "−1",
       "1",
       "5"
     ],
     "answer": 0,
-    "explanation": "Subtract 3a from both sides:\n\u22122 = \ud835\udc4e + 3\nSubtract 3 from both sides:\n\ud835\udc4e = \u22125\nB) Incorrect; wrong arithmetic steps.\nC) Incorrect; miscalculation in subtraction.\nD) Incorrect; confusion in isolating \ud835\udc4e.",
+    "explanation": "Choice A is correct. Subtract 3a from both sides:\n−2 = 𝑎 + 3\nSubtract 3 from both sides:\n𝑎 = −5\nB) Incorrect; wrong arithmetic steps.\nC) Incorrect; miscalculation in subtraction.\nD) Incorrect; confusion in isolating 𝑎.",
     "topic": "Reading and Writing"
   },
   {
     "id": 70,
-    "text": "What is the value of \ud835\udc58 in 5(\ud835\udc58 \u2212 1) = 3(\ud835\udc58 + 3)?",
+    "text": "What is the value of 𝑘 in 5(𝑘 − 1) = 3(𝑘 + 3)?",
     "options": [
-      "\u22126",
-      "\u22123",
+      "−6",
+      "−3",
       "2",
       "7"
     ],
     "answer": 3,
-    "explanation": "First, distribute the 5 and 3:\n5\ud835\udc58 \u2013 5 = 3\ud835\udc58 + 9\nSubtract 3k from both sides:\n2\ud835\udc58 \u2013 5 = 9\nAdd 5 to both sides:\n2\ud835\udc58 = 14\nDivide both sides by 2:\n\ud835\udc58 = 7\nA) Incorrect; error in solving steps.\nB) Incorrect; incorrect arithmetic.\nC) Incorrect; wrong isolation of variable.",
+    "explanation": "Choice D is correct. First, distribute the 5 and 3:\n5𝑘 – 5 = 3𝑘 + 9\nSubtract 3k from both sides:\n2𝑘 – 5 = 9\nAdd 5 to both sides:\n2𝑘 = 14\nDivide both sides by 2:\n𝑘 = 7\nA) Incorrect; error in solving steps.\nB) Incorrect; incorrect arithmetic.\nC) Incorrect; wrong isolation of variable.",
     "topic": "Reading and Writing"
   },
   {
@@ -919,25 +919,25 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 3,
-    "explanation": "The area \ud835\udc34 of a triangle is given by \n. Therefore:\nMultiply both sides by 2:\n48 = 8 \u00d7 height\nDivide both sides by 8:\nHeight = 6\nA) Incorrect; dividing by wrong number.\nB) Incorrect; misunderstanding formula.\nC) Incorrect; error in arithmetic.",
+    "explanation": "Choice D is correct. The area 𝐴 of a triangle is given by \n. Therefore:\nMultiply both sides by 2:\n48 = 8 × height\nDivide both sides by 8:\nHeight = 6\nA) Incorrect; dividing by wrong number.\nB) Incorrect; misunderstanding formula.\nC) Incorrect; error in arithmetic.",
     "topic": "Reading and Writing"
   },
   {
     "id": 72,
-    "text": "Solve for \ud835\udc65 in the inequality 3\ud835\udc65 + 4 > 10.",
+    "text": "Solve for 𝑥 in the inequality 3𝑥 + 4 > 10.",
     "options": [
-      "\ud835\udc65 > 2",
-      "\ud835\udc65 > 3",
-      "\ud835\udc65 > 4",
-      "\ud835\udc65 > 6"
+      "𝑥 > 2",
+      "𝑥 > 3",
+      "𝑥 > 4",
+      "𝑥 > 6"
     ],
     "answer": 0,
-    "explanation": "First, subtract 4 from both sides:\n3\ud835\udc65 > 6\nDivide both sides by 3:\n\ud835\udc65 > 2\nB) Incorrect; miscalculation.\nC) Incorrect; misunderstanding inequality properties.\nD) Incorrect; error in subtraction or division.",
+    "explanation": "Choice A is correct. First, subtract 4 from both sides:\n3𝑥 > 6\nDivide both sides by 3:\n𝑥 > 2\nB) Incorrect; miscalculation.\nC) Incorrect; misunderstanding inequality properties.\nD) Incorrect; error in subtraction or division.",
     "topic": "Reading and Writing"
   },
   {
     "id": 73,
-    "text": "If 4\ud835\udc66 + 2 = 2\ud835\udc66 + 10, what is the value of \ud835\udc66?",
+    "text": "If 4𝑦 + 2 = 2𝑦 + 10, what is the value of 𝑦?",
     "options": [
       "2",
       "3",
@@ -945,12 +945,12 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 2,
-    "explanation": "Subtract 2y from both sides:\n2\ud835\udc66 + 2 = 10\nSubtract 2 from both sides:\n2\ud835\udc66 = 8\nDivide both sides by 2:\n\ud835\udc66 = 4\nB) Incorrect; misunderstanding subtraction steps.\nC) Incorrect; error in solving for \ud835\udc66.\nD) Incorrect; arithmetic mistake.",
+    "explanation": "Choice C is correct. Subtract 2y from both sides:\n2y + 2 = 10\nSubtract 2 from both sides:\n2y = 8\nDivide both sides by 2:\ny = 4.\nChoices A, B, and D are incorrect algebraic manipulation errors.",
     "topic": "Reading and Writing"
   },
   {
     "id": 74,
-    "text": "If \n, what is the value of \ud835\udc65?",
+    "text": "If \n, what is the value of 𝑥?",
     "options": [
       "2.5",
       "3",
@@ -958,12 +958,12 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 0,
-    "explanation": "Multiply both sides by \ud835\udc65:\n5 = 2\ud835\udc65\nDivide both sides by 2:\n\ud835\udc65 = 2.5\nB) Incorrect; error in dividing by the correct number.\nC) Incorrect; misunderstanding the multiplication step.\nD) Incorrect; arithmetic mistake.",
+    "explanation": "Choice A is correct. Multiply both sides by 𝑥:\n5 = 2𝑥\nDivide both sides by 2:\n𝑥 = 2.5\nB) Incorrect; error in dividing by the correct number.\nC) Incorrect; misunderstanding the multiplication step.\nD) Incorrect; arithmetic mistake.",
     "topic": "Reading and Writing"
   },
   {
     "id": 75,
-    "text": "What is the value of \ud835\udc65 if 5\ud835\udc65 \u2013 3 = 2\ud835\udc65 + 9?",
+    "text": "What is the value of 𝑥 if 5𝑥 – 3 = 2𝑥 + 9?",
     "options": [
       "1",
       "2",
@@ -971,12 +971,12 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 3,
-    "explanation": "Subtract 2x from both sides:\n3\ud835\udc65 \u2013 3 = 9\nAdd 3 to both sides:\n3\ud835\udc65 = 12\nDivide both sides by 3:\n\ud835\udc65 = 4\nA) Incorrect; error in solving for \ud835\udc65.\nB) Incorrect; possible miscalculation.\nC) Incorrect; misunderstanding algebraic steps.",
+    "explanation": "Choice D is correct. Subtract 2x from both sides:\n3𝑥 – 3 = 9\nAdd 3 to both sides:\n3𝑥 = 12\nDivide both sides by 3:\n𝑥 = 4\nA) Incorrect; error in solving for 𝑥.\nB) Incorrect; possible miscalculation.\nC) Incorrect; misunderstanding algebraic steps.",
     "topic": "Reading and Writing"
   },
   {
     "id": 76,
-    "text": "If \ud835\udc66 = 2\ud835\udc65 + 1 and \ud835\udc66 = \u2212\ud835\udc65 + 4, what is the value of \ud835\udc65?",
+    "text": "If 𝑦 = 2𝑥 + 1 and 𝑦 = −𝑥 + 4, what is the value of 𝑥?",
     "options": [
       "1",
       "2",
@@ -984,7 +984,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 0,
-    "explanation": "Set the equations equal to each other:\n2\ud835\udc65 + 1 = \u2212 \ud835\udc65 + 4\nAdd \ud835\udc65 to both sides:\n3\ud835\udc65 + 1 = 4\nSubtract 1 from both sides:\n3\ud835\udc65 = 3\nDivide both sides by 3:\n\ud835\udc65 = 1\nB) Incorrect; wrong steps in isolating \ud835\udc65.\nC) Incorrect; misunderstanding addition or subtraction.\nD) Incorrect; error in calculation.",
+    "explanation": "Choice A is correct. Set the equations equal to each other:\n2𝑥 + 1 = − 𝑥 + 4\nAdd 𝑥 to both sides:\n3𝑥 + 1 = 4\nSubtract 1 from both sides:\n3𝑥 = 3\nDivide both sides by 3:\n𝑥 = 1\nB) Incorrect; wrong steps in isolating 𝑥.\nC) Incorrect; misunderstanding addition or subtraction.\nD) Incorrect; error in calculation.",
     "topic": "Reading and Writing"
   },
   {
@@ -997,20 +997,20 @@ const QUESTIONS = [
       "80 square units"
     ],
     "answer": 2,
-    "explanation": "The area \ud835\udc34 of a rectangle is given by \ud835\udc34 = length \u00d7 width. Therefore:\n\ud835\udc34 = 10 \u00d7 4 = 40 square\u00a0units\nA) Incorrect; summing length and width instead of multiplying.\nB) Incorrect; wrong calculation method.\nD) Incorrect; mistake in multiplying or arithmetic.",
+    "explanation": "Choice C is correct. The area 𝐴 of a rectangle is given by 𝐴 = length × width. Therefore:\n𝐴 = 10 × 4 = 40 square units\nA) Incorrect; summing length and width instead of multiplying.\nB) Incorrect; wrong calculation method.\nD) Incorrect; mistake in multiplying or arithmetic.",
     "topic": "Reading and Writing"
   },
   {
     "id": 78,
-    "text": "Solve for \ud835\udc65: \ud835\udc652 \u2013 9 = 0.",
+    "text": "Solve for 𝑥: 𝑥2 – 9 = 0.",
     "options": [
       "-3",
       "0",
       "3",
-      "\u00b13"
+      "±3"
     ],
     "answer": 3,
-    "explanation": "Add 9 to both sides:\n\ud835\udc652 = 9\nTake the square root of both sides:\n\ud835\udc65 = \u00b13\nA) Incorrect; missing the positive solution.\nB) Incorrect; misunderstanding square root properties.\nC) Incorrect; missing the negative solution.",
+    "explanation": "Choice D is correct. Add 9 to both sides:\n𝑥2 = 9\nTake the square root of both sides:\n𝑥 = ±3\nA) Incorrect; missing the positive solution.\nB) Incorrect; misunderstanding square root properties.\nC) Incorrect; missing the negative solution.",
     "topic": "Reading and Writing"
   },
   {
@@ -1023,12 +1023,12 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "The slope \ud835\udc5a is given by \n. Therefore:\nA) Incorrect; miscalculation in finding slope.\nC) Incorrect; incorrect subtraction or division.\nD) Incorrect; misunderstanding the slope formula.",
+    "explanation": "Choice B is correct. The slope 𝑚 is given by \n. Therefore:\nA) Incorrect; miscalculation in finding slope.\nC) Incorrect; incorrect subtraction or division.\nD) Incorrect; misunderstanding the slope formula.",
     "topic": "Reading and Writing"
   },
   {
     "id": 80,
-    "text": "If 7 \u2212 2\ud835\udc65 = 3\ud835\udc65 + 2, what is the value of \ud835\udc65?",
+    "text": "If 7 − 2𝑥 = 3𝑥 + 2, what is the value of 𝑥?",
     "options": [
       "1",
       "2",
@@ -1036,7 +1036,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 0,
-    "explanation": "Add 2x to both sides:\n7 = 5\ud835\udc65 + 2\nSubtract 2 from both sides:\n5 = 5\ud835\udc65\nDivide both sides by 5:\n\ud835\udc65 = 1\nB) Incorrect; misunderstanding addition and subtraction steps.\nC) Incorrect; error in solving for \ud835\udc65.\nD) Incorrect; arithmetic mistake.",
+    "explanation": "Choice A is correct. Add 2x to both sides:\n7 = 5𝑥 + 2\nSubtract 2 from both sides:\n5 = 5𝑥\nDivide both sides by 5:\n𝑥 = 1\nB) Incorrect; misunderstanding addition and subtraction steps.\nC) Incorrect; error in solving for 𝑥.\nD) Incorrect; arithmetic mistake.",
     "topic": "Reading and Writing"
   },
   {
@@ -1049,12 +1049,12 @@ const QUESTIONS = [
       "8"
     ],
     "answer": 2,
-    "explanation": "The area \ud835\udc34 of a square is given by \ud835\udc34 = side2. Therefore:\nSide = \nA) Incorrect; misunderstanding square root.\nB) Incorrect; arithmetic mistake.\nD) Incorrect; error in calculation.",
+    "explanation": "Choice C is correct. The area 𝐴 of a square is given by 𝐴 = side2. Therefore:\nSide = \nA) Incorrect; misunderstanding square root.\nB) Incorrect; arithmetic mistake.\nD) Incorrect; error in calculation.",
     "topic": "Reading and Writing"
   },
   {
     "id": 82,
-    "text": "Solve for \ud835\udc65: 4(\ud835\udc65 + 2) = 3\ud835\udc65 + 10.",
+    "text": "Solve for 𝑥: 4(𝑥 + 2) = 3𝑥 + 10.",
     "options": [
       "-2",
       "-1",
@@ -1062,12 +1062,12 @@ const QUESTIONS = [
       "2"
     ],
     "answer": 3,
-    "explanation": "First, distribute the 4:\n4\ud835\udc65 + 8 = 3\ud835\udc65 + 10\nSubtract 3x from both sides:\n\ud835\udc65 + 8 = 10\nSubtract 8 from both sides:\n\ud835\udc65 = 2\nA) Incorrect; misunderstanding distributive property.\nB) Incorrect; error in solving for \ud835\udc65.\nC) Incorrect; miscalculation.",
+    "explanation": "Choice D is correct. First, distribute the 4:\n4𝑥 + 8 = 3𝑥 + 10\nSubtract 3x from both sides:\n𝑥 + 8 = 10\nSubtract 8 from both sides:\n𝑥 = 2\nA) Incorrect; misunderstanding distributive property.\nB) Incorrect; error in solving for 𝑥.\nC) Incorrect; miscalculation.",
     "topic": "Reading and Writing"
   },
   {
     "id": 83,
-    "text": "If \ud835\udc66 = 3\ud835\udc65 + 5 and \ud835\udc66 = 2\ud835\udc65 + 8, what is the value of \ud835\udc66?",
+    "text": "If 𝑦 = 3𝑥 + 5 and 𝑦 = 2𝑥 + 8, what is the value of 𝑦?",
     "options": [
       "11",
       "12",
@@ -1075,25 +1075,25 @@ const QUESTIONS = [
       "14"
     ],
     "answer": 3,
-    "explanation": "Set the equations equal to each other:\n3\ud835\udc65 + 5 = 2\ud835\udc65 + 8\nSubtract 2x from both sides:\n\ud835\udc65 + 5 = 8\nSubtract 5 from both sides:\n\ud835\udc65 = 3\nPlug \ud835\udc65 = 3 back into either equation:\n\ud835\udc66 = 3(3) + 5 = 9 + 5 = 14\nA) Incorrect; wrong calculation.\nB) Incorrect; misunderstanding variable substitution.\nC) Incorrect; error in solving for \ud835\udc65.",
+    "explanation": "Choice D is correct. Set the equations equal to each other:\n3𝑥 + 5 = 2𝑥 + 8\nSubtract 2x from both sides:\n𝑥 + 5 = 8\nSubtract 5 from both sides:\n𝑥 = 3\nPlug 𝑥 = 3 back into either equation:\n𝑦 = 3(3) + 5 = 9 + 5 = 14\nA) Incorrect; wrong calculation.\nB) Incorrect; misunderstanding variable substitution.\nC) Incorrect; error in solving for 𝑥.",
     "topic": "Reading and Writing"
   },
   {
     "id": 84,
     "text": "A cylinder has a radius of 3 units and a height of 4 units. What is the\nvolume of the cylinder?",
     "options": [
-      "12\u03c0 cubic units",
-      "18\u03c0 cubic units",
-      "36\u03c0 cubic units",
-      "48\u03c0 cubic units"
+      "12π cubic units",
+      "18π cubic units",
+      "36π cubic units",
+      "48π cubic units"
     ],
     "answer": 2,
-    "explanation": "The volume \ud835\udc49 of a cylinder is given by \ud835\udc49 = \ud835\udf0b\ud835\udc5f2\u210e. Therefore:\n\ud835\udc49 = \ud835\udf0b \u00d7 32 \u00d7 4 = \ud835\udf0b \u00d7 9 \u00d7 4 = 36\ud835\udf0b cubic\u00a0units\nA) Incorrect; misunderstanding the formula.\nB) Incorrect; error in squaring the radius.\nD) Incorrect; incorrect multiplication or arithmetic.",
+    "explanation": "Choice C is correct. The volume 𝑉 of a cylinder is given by 𝑉 = 𝜋𝑟2ℎ. Therefore:\n𝑉 = 𝜋 × 32 × 4 = 𝜋 × 9 × 4 = 36𝜋 cubic units\nA) Incorrect; misunderstanding the formula.\nB) Incorrect; error in squaring the radius.\nD) Incorrect; incorrect multiplication or arithmetic.",
     "topic": "Reading and Writing"
   },
   {
     "id": 85,
-    "text": "What is the value of \ud835\udc65 if 3(\ud835\udc65 \u2212 2) = 4\ud835\udc65 + 6?",
+    "text": "What is the value of 𝑥 if 3(𝑥 − 2) = 4𝑥 + 6?",
     "options": [
       "-12",
       "-6",
@@ -1101,12 +1101,12 @@ const QUESTIONS = [
       "0"
     ],
     "answer": 0,
-    "explanation": "First, distribute the 3:\n3\ud835\udc65 \u2013 6 = 4\ud835\udc65 + 6\nSubtract 3x from both sides:\n\u22126 = \ud835\udc65 + 6\nSubtract 6 from both sides:\n\u221212 = \ud835\udc65\nB) Incorrect; mistake in algebraic manipulation.\nC) Incorrect; error in subtracting or isolating \ud835\udc65.\nD) Incorrect; incorrect subtraction of 6.",
+    "explanation": "Choice A is correct. First, distribute the 3:\n3𝑥 – 6 = 4𝑥 + 6\nSubtract 3x from both sides:\n−6 = 𝑥 + 6\nSubtract 6 from both sides:\n−12 = 𝑥\nB) Incorrect; mistake in algebraic manipulation.\nC) Incorrect; error in subtracting or isolating 𝑥.\nD) Incorrect; incorrect subtraction of 6.",
     "topic": "Reading and Writing"
   },
   {
     "id": 86,
-    "text": "If 2\ud835\udc65 + 3\ud835\udc66 = 12 and \ud835\udc65 = 3, what is the value of \ud835\udc66?",
+    "text": "If 2𝑥 + 3𝑦 = 12 and 𝑥 = 3, what is the value of 𝑦?",
     "options": [
       "1",
       "2",
@@ -1114,7 +1114,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "Substitute \ud835\udc65 = 3 into the equation:\n2(3) + 3\ud835\udc66 = 12\n6 + 3\ud835\udc66 = 12\nSubtract 6 from both sides:\n3\ud835\udc66 = 6\nDivide by 3:\n\ud835\udc66 = 2\nB) Incorrect; incorrect substitution or simplification.\nC) Incorrect; misunderstanding the variable substitution.\nD) Incorrect; arithmetic mistake.",
+    "explanation": "Choice B is correct. Substitute x = 3 into the equation:\n2(3) + 3y = 12\n6 + 3y = 12\nSubtract 6 from both sides:\n3y = 6\nDivide by 3:\ny = 2.\nChoices A, C, and D are incorrect substitution or simplification steps.",
     "topic": "Reading and Writing"
   },
   {
@@ -1127,12 +1127,12 @@ const QUESTIONS = [
       "12"
     ],
     "answer": 3,
-    "explanation": "The perimeter of a triangle is the sum of the lengths of its sides:\n3 + 4 + 5 = 12\nA) Incorrect; misunderstanding of perimeter calculation.\nB) Incorrect; adding two sides only.\nC) Incorrect; miscalculation of sum.",
+    "explanation": "Choice D is correct. The perimeter of a triangle is the sum of the lengths of its sides:\n3 + 4 + 5 = 12\nA) Incorrect; misunderstanding of perimeter calculation.\nB) Incorrect; adding two sides only.\nC) Incorrect; miscalculation of sum.",
     "topic": "Reading and Writing"
   },
   {
     "id": 88,
-    "text": "If 5\ud835\udc65 \u2013 2 = 3(\ud835\udc65 + 4), what is the value of \ud835\udc65?",
+    "text": "If 5𝑥 – 2 = 3(𝑥 + 4), what is the value of 𝑥?",
     "options": [
       "-1",
       "7",
@@ -1140,12 +1140,12 @@ const QUESTIONS = [
       "2"
     ],
     "answer": 1,
-    "explanation": "First, distribute the 3:\n5\ud835\udc65 \u2013 2 = 3\ud835\udc65 + 12\nSubtract 3x from both sides:\n2\ud835\udc65 \u2013 2 = 12\nAdd 2 to both sides:\n2\ud835\udc65 = 14\nDivide by 2:\n\ud835\udc65 = 7\nA) Incorrect; error in simplifying.\nB) Incorrect; miscalculation of algebraic steps.\nC) Incorrect; misunderstanding distribution or subtraction.",
+    "explanation": "Choice B is correct. First, distribute the 3:\n5x – 2 = 3x + 12\nSubtract 3x from both sides:\n2x – 2 = 12\nAdd 2 to both sides:\n2x = 14\nDivide by 2:\nx = 7.\nChoices A, C, and D are incorrect distribution or arithmetic errors.",
     "topic": "Reading and Writing"
   },
   {
     "id": 89,
-    "text": "What is the solution to the system of equations: \ud835\udc65 + \ud835\udc66 = 5 and \ud835\udc65 \u2013 \ud835\udc66 = 1?",
+    "text": "What is the solution to the system of equations: 𝑥 + 𝑦 = 5 and 𝑥 – 𝑦 = 1?",
     "options": [
       "(2,3)",
       "(3,2)",
@@ -1153,25 +1153,25 @@ const QUESTIONS = [
       "(5,0)"
     ],
     "answer": 1,
-    "explanation": "Add the equations:\n(\ud835\udc65 + \ud835\udc66) + (\ud835\udc65 \u2212\ud835\udc66) = 5 + 1\n2\ud835\udc65 = 6\n\ud835\udc65 = 3\nSubstitute \ud835\udc65 = 3 into \ud835\udc65 + \ud835\udc66 = 5:\n3 + \ud835\udc66 = 5\n\ud835\udc66 = 2\nThus, the solution is (3,2).\nA) Incorrect; incorrect addition or subtraction.\nC) Incorrect; misunderstanding the system of equations.\nD) Incorrect; incorrect algebraic manipulation.",
+    "explanation": "Choice B is correct. Add the equations:\n(𝑥 + 𝑦) + (𝑥 −𝑦) = 5 + 1\n2𝑥 = 6\n𝑥 = 3\nSubstitute 𝑥 = 3 into 𝑥 + 𝑦 = 5:\n3 + 𝑦 = 5\n𝑦 = 2\nThus, the solution is (3,2).\nA) Incorrect; incorrect addition or subtraction.\nC) Incorrect; misunderstanding the system of equations.\nD) Incorrect; incorrect algebraic manipulation.",
     "topic": "Reading and Writing"
   },
   {
     "id": 90,
     "text": "If the radius of a circle is 7 units, what is the circumference of the circle?",
     "options": [
-      "14\u03c0",
-      "21\u03c0",
-      "28\u03c0",
-      "49\u03c0"
+      "14π",
+      "21π",
+      "28π",
+      "49π"
     ],
     "answer": 0,
-    "explanation": "The circumference \ud835\udc36 of a circle is given by \ud835\udc36 = 2\ud835\udf0b\ud835\udc5f. Therefore:\n\ud835\udc36 = 2\ud835\udf0b \u00d7 7 = 14\ud835\udf0b\nB) Incorrect; error in multiplying.\nC) Incorrect; misunderstanding the circumference formula.\nD) Incorrect; miscalculation.",
+    "explanation": "Choice A is correct. The circumference 𝐶 of a circle is given by 𝐶 = 2𝜋𝑟. Therefore:\n𝐶 = 2𝜋 × 7 = 14𝜋\nB) Incorrect; error in multiplying.\nC) Incorrect; misunderstanding the circumference formula.\nD) Incorrect; miscalculation.",
     "topic": "Reading and Writing"
   },
   {
     "id": 91,
-    "text": "If \ud835\udc53(\ud835\udc65) = 2\ud835\udc652 \u2212 3\ud835\udc65 + 4, what is \ud835\udc53(2)?",
+    "text": "If 𝑓(𝑥) = 2𝑥2 − 3𝑥 + 4, what is 𝑓(2)?",
     "options": [
       "4",
       "6",
@@ -1179,12 +1179,12 @@ const QUESTIONS = [
       "10"
     ],
     "answer": 1,
-    "explanation": "Substitute \ud835\udc65 = 2 into the function:\n\ud835\udc53(2) = 2(2)2 \u2212 3(2) + 4\n\ud835\udc53(2) = 2(4) \u2013 6 + 4\n\ud835\udc53(2) = 8 \u2013 6 + 4\n\ud835\udc53(2) = 6\nA) Incorrect; error in substitution.\nC) Incorrect; miscalculation of terms.\nD) Incorrect; incorrect simplification.",
+    "explanation": "Choice B is correct. Substitute 𝑥 = 2 into the function:\n𝑓(2) = 2(2)2 − 3(2) + 4\n𝑓(2) = 2(4) – 6 + 4\n𝑓(2) = 8 – 6 + 4\n𝑓(2) = 6\nA) Incorrect; error in substitution.\nC) Incorrect; miscalculation of terms.\nD) Incorrect; incorrect simplification.",
     "topic": "Reading and Writing"
   },
   {
     "id": 92,
-    "text": "Solve for \ud835\udc65: 4(\ud835\udc65 + 1 ) = 2(\ud835\udc65 + 5).",
+    "text": "Solve for 𝑥: 4(𝑥 + 1 ) = 2(𝑥 + 5).",
     "options": [
       "0",
       "1",
@@ -1192,12 +1192,12 @@ const QUESTIONS = [
       "3"
     ],
     "answer": 3,
-    "explanation": "First, distribute the 4 and the 2:\n4\ud835\udc65 + 4 = 2\ud835\udc65 + 10\nSubtract 2x from both sides:\n2\ud835\udc65 + 4 = 10\nSubtract 4 from both sides:\n2\ud835\udc65 = 6\nDivide by 2:\n\ud835\udc65 = 3\nA) Incorrect; misunderstanding distribution.\nB) Incorrect; error in simplification.\nC) Incorrect; incorrect solving for \ud835\udc65.",
+    "explanation": "Choice D is correct. First, distribute the 4 and the 2:\n4𝑥 + 4 = 2𝑥 + 10\nSubtract 2x from both sides:\n2𝑥 + 4 = 10\nSubtract 4 from both sides:\n2𝑥 = 6\nDivide by 2:\n𝑥 = 3\nA) Incorrect; misunderstanding distribution.\nB) Incorrect; error in simplification.\nC) Incorrect; incorrect solving for 𝑥.",
     "topic": "Reading and Writing"
   },
   {
     "id": 93,
-    "text": "If \ud835\udc66 = 2\ud835\udc65 + 3 and \ud835\udc66 = 4\ud835\udc65 \u2212 1, what is the value of \ud835\udc65?",
+    "text": "If 𝑦 = 2𝑥 + 3 and 𝑦 = 4𝑥 − 1, what is the value of 𝑥?",
     "options": [
       "0",
       "1",
@@ -1205,12 +1205,12 @@ const QUESTIONS = [
       "3"
     ],
     "answer": 2,
-    "explanation": "Set the equations equal to each other:\n2\ud835\udc65 + 3 = 4\ud835\udc65 \u2212 1\nSubtract 2x from both sides:\n3 = 2\ud835\udc65 \u2212 1\nAdd 1 to both sides:\n4 = 2\ud835\udc65\nDivide by 2:\n\ud835\udc65 = 2\nA) Incorrect; error in solving for \ud835\udc65.\nB) Incorrect; misunderstanding algebraic steps.\nD) Incorrect; incorrect subtraction.",
+    "explanation": "Choice C is correct. Set the equations equal to each other:\n2𝑥 + 3 = 4𝑥 − 1\nSubtract 2x from both sides:\n3 = 2𝑥 − 1\nAdd 1 to both sides:\n4 = 2𝑥\nDivide by 2:\n𝑥 = 2\nA) Incorrect; error in solving for 𝑥.\nB) Incorrect; misunderstanding algebraic steps.\nD) Incorrect; incorrect subtraction.",
     "topic": "Reading and Writing"
   },
   {
     "id": 94,
-    "text": "What is the value of \ud835\udc66 if 3\ud835\udc66 \u2013 2 = 4\ud835\udc66 + 1?",
+    "text": "What is the value of 𝑦 if 3𝑦 – 2 = 4𝑦 + 1?",
     "options": [
       "-3",
       "-1",
@@ -1218,12 +1218,12 @@ const QUESTIONS = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Subtract 3y from both sides:\n\u22122 = \ud835\udc66 + 1\nSubtract 1 from both sides:\n\u22123 = \ud835\udc66\nB) Incorrect; misunderstanding subtraction.\nC) Incorrect; error in isolating \ud835\udc66.\nD) Incorrect; incorrect calculation.",
+    "explanation": "Choice A is correct. Subtract 3y from both sides:\n−2 = 𝑦 + 1\nSubtract 1 from both sides:\n−3 = 𝑦\nB) Incorrect; misunderstanding subtraction.\nC) Incorrect; error in isolating 𝑦.\nD) Incorrect; incorrect calculation.",
     "topic": "Reading and Writing"
   },
   {
     "id": 95,
-    "text": "If the function \ud835\udc53(\ud835\udc65) = \ud835\udc652 + 2\ud835\udc65 \u2212 3, what is \ud835\udc53(\u22121)?",
+    "text": "If the function 𝑓(𝑥) = 𝑥2 + 2𝑥 − 3, what is 𝑓(−1)?",
     "options": [
       "-4",
       "-2",
@@ -1231,12 +1231,12 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 0,
-    "explanation": "Substitute \ud835\udc65 = \u22121 into the function:\n\ud835\udc53(\u22121) = (\u22121)2 + 2(\u22121) \u2212 3\n\ud835\udc53(\u22121) = 1 \u2013 2 \u2212 3\n\ud835\udc53(\u22121) = \u22124\nB) Incorrect; arithmetic mistake.\nC) Incorrect; misunderstanding function substitution.\nD) Incorrect; misunderstanding sign changes.",
+    "explanation": "Choice A is correct. Substitute 𝑥 = −1 into the function:\n𝑓(−1) = (−1)2 + 2(−1) − 3\n𝑓(−1) = 1 – 2 − 3\n𝑓(−1) = −4\nB) Incorrect; arithmetic mistake.\nC) Incorrect; misunderstanding function substitution.\nD) Incorrect; misunderstanding sign changes.",
     "topic": "Reading and Writing"
   },
   {
     "id": 96,
-    "text": "What is the value of \ud835\udc65 if 5\ud835\udc65 \u2013 7 = 2\ud835\udc65 + 5?",
+    "text": "What is the value of 𝑥 if 5𝑥 – 7 = 2𝑥 + 5?",
     "options": [
       "2",
       "3",
@@ -1244,12 +1244,12 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 2,
-    "explanation": "Subtract 2x from both sides:\n3\ud835\udc65 \u2013 7 = 5\nAdd 7 to both sides:\n3\ud835\udc65 = 12\nDivide by 3:\n\ud835\udc65 = 4\nA) Incorrect; error in subtraction or division.\nB) Incorrect; mistake in algebraic manipulation.\nD) Incorrect; misunderstanding the equation-solving process.",
+    "explanation": "Choice C is correct. Subtract 2x from both sides:\n3𝑥 – 7 = 5\nAdd 7 to both sides:\n3𝑥 = 12\nDivide by 3:\n𝑥 = 4\nA) Incorrect; error in subtraction or division.\nB) Incorrect; mistake in algebraic manipulation.\nD) Incorrect; misunderstanding the equation-solving process.",
     "topic": "Reading and Writing"
   },
   {
     "id": 97,
-    "text": "If \ud835\udc652 = 49, what are the possible values of \ud835\udc65?",
+    "text": "If 𝑥2 = 49, what are the possible values of 𝑥?",
     "options": [
       "-7 and 7",
       "-7 and 0",
@@ -1257,12 +1257,12 @@ const QUESTIONS = [
       "7 and 14"
     ],
     "answer": 0,
-    "explanation": "To solve for \ud835\udc65, take the square root of both sides:\n\ud835\udc65 = \u00b1\n\ud835\udc65 = \u00b17\nThus, the possible values are -7 and 7.\nB) Incorrect; misunderstanding square roots and values.\nC) Incorrect; incorrect roots.\nD) Incorrect; mistake in basic arithmetic.",
+    "explanation": "Choice A is correct. To solve for 𝑥, take the square root of both sides:\n𝑥 = ±\n𝑥 = ±7\nThus, the possible values are -7 and 7.\nB) Incorrect; misunderstanding square roots and values.\nC) Incorrect; incorrect roots.\nD) Incorrect; mistake in basic arithmetic.",
     "topic": "Reading and Writing"
   },
   {
     "id": 98,
-    "text": "If 3(\ud835\udc65 \u2013 4) = 2(\ud835\udc65 + 6), what is the value of \ud835\udc65?",
+    "text": "If 3(𝑥 – 4) = 2(𝑥 + 6), what is the value of 𝑥?",
     "options": [
       "24",
       "12",
@@ -1270,7 +1270,7 @@ const QUESTIONS = [
       "16"
     ],
     "answer": 0,
-    "explanation": "First, distribute the numbers:\n3\ud835\udc65 \u2013 12 = 2\ud835\udc65 + 12\nSubtract 2x from both sides:\n\ud835\udc65 \u2013 12 = 12\nAdd 12 to both sides:\n\ud835\udc65 = 24\nA) Incorrect; misunderstanding the algebraic steps.\nB) Incorrect; mistake in basic operations.\nC) Incorrect; incorrect distribution or subtraction.",
+    "explanation": "Choice A is correct. First, distribute the numbers:\n3x – 12 = 2x + 12\nSubtract 2x from both sides:\nx – 12 = 12\nAdd 12 to both sides:\nx = 24.\nChoices B, C, and D are incorrect distribution or subtraction steps.",
     "topic": "Reading and Writing"
   }
 ];

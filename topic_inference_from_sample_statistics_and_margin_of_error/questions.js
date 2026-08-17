@@ -14,7 +14,7 @@ const QUESTIONS = [
       "The researcher is 94% confident that the park will be built."
     ],
     "answer": 1,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 70% (76 - 6) and 82% (76 + 6).",
+    "explanation": "Choice B is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 70% (76 - 6) and 82% (76 + 6).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "Exactly 75% of all residents support building a new park."
     ],
     "answer": 0,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 71% (75 - 4) and 79% (75 + 4).",
+    "explanation": "Choice A is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 71% (75 - 4) and 79% (75 + 4).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "Exactly 70% of all residents support building a new park."
     ],
     "answer": 0,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 68% (70 - 2) and 72% (70 + 2).",
+    "explanation": "Choice A is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 68% (70 - 2) and 72% (70 + 2).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "The researcher is 94% confident that the park will be built."
     ],
     "answer": 0,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 74% (80 - 6) and 86% (80 + 6).",
+    "explanation": "Choice A is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 74% (80 - 6) and 86% (80 + 6).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "Because the sample is only 500 people, no conclusion can be drawn about the town."
     ],
     "answer": 1,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 43% (47 - 4) and 51% (47 + 4).",
+    "explanation": "Choice B is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 43% (47 - 4) and 51% (47 + 4).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "The researcher is 97% confident that the park will be built."
     ],
     "answer": 0,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 77% (80 - 3) and 83% (80 + 3).",
+    "explanation": "Choice A is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 77% (80 - 3) and 83% (80 + 3).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "Between 72% and 82% of all residents in the town likely support building a new park."
     ],
     "answer": 3,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 72% (77 - 5) and 82% (77 + 5).",
+    "explanation": "Choice D is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 72% (77 - 5) and 82% (77 + 5).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "Exactly 66% of all residents support building a new park."
     ],
     "answer": 0,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 60% (66 - 6) and 72% (66 + 6).",
+    "explanation": "Choice A is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 60% (66 - 6) and 72% (66 + 6).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "Between 72% and 76% of all residents in the town likely support building a new park."
     ],
     "answer": 3,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 72% (74 - 2) and 76% (74 + 2).",
+    "explanation": "Choice D is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 72% (74 - 2) and 76% (74 + 2).",
     "topic": "Sample Statistics and Margin of Error"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "The researcher is 98% confident that the park will be built."
     ],
     "answer": 2,
-    "explanation": "The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 73% (75 - 2) and 77% (75 + 2).",
+    "explanation": "Choice C is correct. The margin of error indicates the expected range of the true population parameter. The true percentage of all residents who support the park is likely between 73% (75 - 2) and 77% (75 + 2).",
     "topic": "Sample Statistics and Margin of Error"
   }
 ];

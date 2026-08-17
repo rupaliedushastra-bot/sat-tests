@@ -14,7 +14,7 @@ const QUESTIONS = [
       "\\( x = 2, -3 \\)"
     ],
     "answer": 3,
-    "explanation": "Factor the quadratic equation: \\( (x + -2)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 2 \\) and \\( x = -3 \\).",
+    "explanation": "Choice D is correct. Factor the quadratic equation: \\( (x + -2)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 2 \\) and \\( x = -3 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "\\( x = -1, 4 \\)"
     ],
     "answer": 1,
-    "explanation": "Factor the quadratic equation: \\( (x + -1)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = 1 \\) and \\( x = -4 \\).",
+    "explanation": "Choice B is correct. Factor the quadratic equation: \\( (x + -1)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = 1 \\) and \\( x = -4 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "\\( x = -4, 1 \\)"
     ],
     "answer": 0,
-    "explanation": "Factor the quadratic equation: \\( (x + 4)(x + 1) = 0 \\). Setting each factor to zero gives \\( x = -4 \\) and \\( x = -1 \\).",
+    "explanation": "Choice A is correct. Factor the quadratic equation: \\( (x + 4)(x + 1) = 0 \\). Setting each factor to zero gives \\( x = -4 \\) and \\( x = -1 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "\\( x = 2, -4 \\)"
     ],
     "answer": 3,
-    "explanation": "Factor the quadratic equation: \\( (x + -2)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = 2 \\) and \\( x = -4 \\).",
+    "explanation": "Choice D is correct. Factor the quadratic equation: \\( (x + -2)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = 2 \\) and \\( x = -4 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "\\( x = -2, 3 \\)"
     ],
     "answer": 2,
-    "explanation": "Factor the quadratic equation: \\( (x + 2)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = -2 \\) and \\( x = -3 \\).",
+    "explanation": "Choice C is correct. Factor the quadratic equation: \\( (x + 2)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = -2 \\) and \\( x = -3 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "\\( x = -5, -3 \\)"
     ],
     "answer": 2,
-    "explanation": "Factor the quadratic equation: \\( (x + -5)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 5 \\) and \\( x = -3 \\).",
+    "explanation": "Choice C is correct. Factor the quadratic equation: \\( (x + -5)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 5 \\) and \\( x = -3 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "\\( x = 3, 1 \\)"
     ],
     "answer": 0,
-    "explanation": "Factor the quadratic equation: \\( (x + -3)(x + 1) = 0 \\). Setting each factor to zero gives \\( x = 3 \\) and \\( x = -1 \\).",
+    "explanation": "Choice A is correct. Factor the quadratic equation: \\( (x + -3)(x + 1) = 0 \\). Setting each factor to zero gives \\( x = 3 \\) and \\( x = -1 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "\\( x = 1, 5 \\)"
     ],
     "answer": 1,
-    "explanation": "Factor the quadratic equation: \\( (x + -1)(x + 5) = 0 \\). Setting each factor to zero gives \\( x = 1 \\) and \\( x = -5 \\).",
+    "explanation": "Choice B is correct. Factor the quadratic equation: \\( (x + -1)(x + 5) = 0 \\). Setting each factor to zero gives \\( x = 1 \\) and \\( x = -5 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "\\( x = -4, -4 \\)"
     ],
     "answer": 3,
-    "explanation": "Factor the quadratic equation: \\( (x + 4)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = -4 \\) and \\( x = -4 \\).",
+    "explanation": "Choice D is correct. Factor the quadratic equation: \\( (x + 4)(x + 4) = 0 \\). Setting each factor to zero gives \\( x = -4 \\) and \\( x = -4 \\).",
     "topic": "Quadratic Equations"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "\\( x = 4, -3 \\)"
     ],
     "answer": 3,
-    "explanation": "Factor the quadratic equation: \\( (x + -4)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 4 \\) and \\( x = -3 \\).",
+    "explanation": "Choice D is correct. Factor the quadratic equation: \\( (x + -4)(x + 3) = 0 \\). Setting each factor to zero gives \\( x = 4 \\) and \\( x = -3 \\).",
     "topic": "Quadratic Equations"
   }
 ];

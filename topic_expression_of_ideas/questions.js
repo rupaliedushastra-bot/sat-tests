@@ -14,7 +14,7 @@ const QUESTIONS = [
       "The committee decided debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "Many scientists believe debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "The new software update debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "The artist's latest exhibition debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "The ancient ruins debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "The economic report debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "The city council debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "The school board debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "The local library debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "The community garden debated the policy for over a year."
     ],
     "answer": 0,
-    "explanation": "The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
+    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
     "topic": "Expression of Ideas"
   }
 ];

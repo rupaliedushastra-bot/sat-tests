@@ -14,7 +14,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 1,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
+    "explanation": "Choice B is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "17"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 1 = 16 + 1 = 17 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 1 = 16 + 1 = 17 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 3 = 4 + 3 = 7 \\).",
+    "explanation": "Choice A is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 3 = 4 + 3 = 7 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
+    "explanation": "Choice A is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 0,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 4 = 4 + 4 = 8 \\).",
+    "explanation": "Choice A is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 4 = 4 + 4 = 8 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "28"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 5^2 + 3 = 25 + 3 = 28 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 5^2 + 3 = 25 + 3 = 28 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "17"
     ],
     "answer": 2,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 5 = 16 + 5 = 21 \\).",
+    "explanation": "Choice C is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 5 = 16 + 5 = 21 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "33"
     ],
     "answer": 1,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 5^2 + 3 = 25 + 3 = 28 \\).",
+    "explanation": "Choice B is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 5^2 + 3 = 25 + 3 = 28 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "25"
     ],
     "answer": 0,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 5 = 16 + 5 = 21 \\).",
+    "explanation": "Choice A is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 4^2 + 5 = 16 + 5 = 21 \\).",
     "topic": "Nonlinear Functions"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "10"
     ],
     "answer": 3,
-    "explanation": "Substitute \\( x = 2 \\) into the function: \\( f(2) = 3^2 + 1 = 9 + 1 = 10 \\).",
+    "explanation": "Choice D is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 3^2 + 1 = 9 + 1 = 10 \\).",
     "topic": "Nonlinear Functions"
   }
 ];

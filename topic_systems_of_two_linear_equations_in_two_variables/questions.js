@@ -14,7 +14,7 @@ const QUESTIONS = [
       "1"
     ],
     "answer": 2,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 2, y = 1 \\). Thus, the value of \\( x \\) is 2.",
+    "explanation": "Choice C is correct. You can solve the system using substitution or elimination. The solution is \\( x = 2, y = 1 \\). Thus, the value of \\( x \\) is 2.",
     "topic": "Systems of Equations"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 1,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 5, y = 1 \\). Thus, the value of \\( x \\) is 5.",
+    "explanation": "Choice B is correct. You can solve the system using substitution or elimination. The solution is \\( x = 5, y = 1 \\). Thus, the value of \\( x \\) is 5.",
     "topic": "Systems of Equations"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 2,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 3, y = 3 \\). Thus, the value of \\( x \\) is 3.",
+    "explanation": "Choice C is correct. You can solve the system using substitution or elimination. The solution is \\( x = 3, y = 3 \\). Thus, the value of \\( x \\) is 3.",
     "topic": "Systems of Equations"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 2,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 4, y = 1 \\). Thus, the value of \\( x \\) is 4.",
+    "explanation": "Choice C is correct. You can solve the system using substitution or elimination. The solution is \\( x = 4, y = 1 \\). Thus, the value of \\( x \\) is 4.",
     "topic": "Systems of Equations"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "3"
     ],
     "answer": 1,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 1, y = 5 \\). Thus, the value of \\( x \\) is 1.",
+    "explanation": "Choice B is correct. You can solve the system using substitution or elimination. The solution is \\( x = 1, y = 5 \\). Thus, the value of \\( x \\) is 1.",
     "topic": "Systems of Equations"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 0,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 4, y = 3 \\). Thus, the value of \\( x \\) is 4.",
+    "explanation": "Choice A is correct. You can solve the system using substitution or elimination. The solution is \\( x = 4, y = 3 \\). Thus, the value of \\( x \\) is 4.",
     "topic": "Systems of Equations"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 0,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 5, y = 2 \\). Thus, the value of \\( x \\) is 5.",
+    "explanation": "Choice A is correct. You can solve the system using substitution or elimination. The solution is \\( x = 5, y = 2 \\). Thus, the value of \\( x \\) is 5.",
     "topic": "Systems of Equations"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "5"
     ],
     "answer": 1,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 3, y = 1 \\). Thus, the value of \\( x \\) is 3.",
+    "explanation": "Choice B is correct. You can solve the system using substitution or elimination. The solution is \\( x = 3, y = 1 \\). Thus, the value of \\( x \\) is 3.",
     "topic": "Systems of Equations"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "1"
     ],
     "answer": 3,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 1, y = 5 \\). Thus, the value of \\( x \\) is 1.",
+    "explanation": "Choice D is correct. You can solve the system using substitution or elimination. The solution is \\( x = 1, y = 5 \\). Thus, the value of \\( x \\) is 1.",
     "topic": "Systems of Equations"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 2,
-    "explanation": "You can solve the system using substitution or elimination. The solution is \\( x = 5, y = 1 \\). Thus, the value of \\( x \\) is 5.",
+    "explanation": "Choice C is correct. You can solve the system using substitution or elimination. The solution is \\( x = 5, y = 1 \\). Thus, the value of \\( x \\) is 5.",
     "topic": "Systems of Equations"
   }
 ];

@@ -14,7 +14,7 @@ const QUESTIONS = [
       "Nonetheless,"
     ],
     "answer": 1,
-    "explanation": "It is used to emphasize a point by adding more details. In this context, the point that judo has spread around the world from Japan is emphasized by showing that a large number of people practice judo in a country other than Japan. Distractor Explanations: Choice A is incorrect because it is used to identify a similarity between two ideas rather than give an example. Choice C is incorrect because it is used to show that something happened despite something else, not because of something else. Choice D is incorrect because it is used to show that the following is fitting or appropriate in a given situation. However, it is not necessarily \"appropriate\" that France has more judo players than Japan does.",
+    "explanation": "Choice B is correct. It is used to emphasize a point by adding more details. In this context, the point that judo has spread around the world from Japan is emphasized by showing that a large number of people practice judo in a country other than Japan. Distractor Explanations: Choice A is incorrect because it is used to identify a similarity between two ideas rather than give an example. Choice C is incorrect because it is used to show that something happened despite something else, not because of something else. Choice D is incorrect because it is used to show that the following is fitting or appropriate in a given situation. However, it is not necessarily \"appropriate\" that France has more judo players than Japan does.",
     "topic": "Transitions"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "Likewise,"
     ],
     "answer": 0,
-    "explanation": "It establishes a time sequence; the following information comes chronologically after the previous claim. In this context, the rediscovery of Botticelli's paintings occurred before the work got its rightful position. That order is possible to confirm by the verbs: \"rediscovered\" is in the past tense, whereas \"has been given\" is a present passive form. Distractor Explanations: Choice B is incorrect because it is used to give an example, not a result. Choice C is used to indicate the last item in a list, not a result of an action that is still continuing. Choice D is used to show that the following idea occurs at the same time as the preceding idea, but the verb tenses are not the same, so the actions are sequential. [PAGE 211 RIGHT] ins (Answers)",
+    "explanation": "Choice A is correct. It establishes a time sequence; the following information comes chronologically after the previous claim. In this context, the rediscovery of Botticelli's paintings occurred before the work got its rightful position. That order is possible to confirm by the verbs: \"rediscovered\" is in the past tense, whereas \"has been given\" is a present passive form. Distractor Explanations: Choice B is incorrect because it is used to give an example, not a result. Choice C is used to indicate the last item in a list, not a result of an action that is still continuing. Choice D is used to show that the following idea occurs at the same time as the preceding idea, but the verb tenses are not the same, so the actions are sequential. ins (Answers)",
     "topic": "Transitions"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "For instance,"
     ],
     "answer": 3,
-    "explanation": "It is used to indicate that something is sad or causes regret. The text refers to beautiful ice formations that attract visitors of all types, but the following portion points out that the formations do not exist year-round; they are no longer \"perennial\" or \"permanent.\" That could be considered a sad circumstance, and Choice D highlights the loss. Distractor Explanations: Choices A and C are used to describe the logical result of an argument, but the fact that the ice is gone part of the year due to global warming is not necessarily a logical result of people coming to see the ice. Choice B is used to point out that the following claim is appropriate or fitting given the preceding discussion, but it is not \"fitting\" that the ice has melted due to a separate cause.",
+    "explanation": "Choice D is correct. It is used to indicate that something is sad or causes regret. The text refers to beautiful ice formations that attract visitors of all types, but the following portion points out that the formations do not exist year-round; they are no longer \"perennial\" or \"permanent.\" That could be considered a sad circumstance, and Choice D highlights the loss. Distractor Explanations: Choices A and C are used to describe the logical result of an argument, but the fact that the ice is gone part of the year due to global warming is not necessarily a logical result of people coming to see the ice. Choice B is used to point out that the following claim is appropriate or fitting given the preceding discussion, but it is not \"fitting\" that the ice has melted due to a separate cause.",
     "topic": "Transitions"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "Furthermore,"
     ],
     "answer": 0,
-    "explanation": "It is used to show what the actual situation is. It fits the context of pointing out that while some animals get a lot of attention about conservation, a much larger percentage of animals receive no attention but are in serious danger. Distractor Explanations: Choice B is incorrect because it is used to indicate there are additional points that support the previous idea, but the following idea changes the topic from charismatic species to parasites. Choice C is incorrect because it is used to highlight a similarity rather than a difference. Choice D is used to show a second choice or possible explanation for a finding after a first choice or possibility is discussed; it is not used to show two sides of a situation which exists. [PAGE 212 LEFT] EXPRESSION (",
+    "explanation": "Choice A is correct. It is used to show what the actual situation is. It fits the context of pointing out that while some animals get a lot of attention about conservation, a much larger percentage of animals receive no attention but are in serious danger. Distractor Explanations: Choice B is incorrect because it is used to indicate there are additional points that support the previous idea, but the following idea changes the topic from charismatic species to parasites. Choice C is incorrect because it is used to highlight a similarity rather than a difference. Choice D is used to show a second choice or possible explanation for a finding after a first choice or possibility is discussed; it is not used to show two sides of a situation which exists. EXPRESSION (",
     "topic": "Transitions"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "Alternatively,"
     ],
     "answer": 0,
-    "explanation": "It is used to add more information on the same topic. Choice A fits the context because the first sentence explains why the St. Joseph Atoll became a marine protected area, and the following sentence gives another reason why it is an important natural area. Distractor Explanations: All of the other choices can be eliminated because they are not used to add more specific detail about the same topic. Choice B is used to highlight a similar feature of two different cases, such as comparing why two areas were both named marine protected areas. Choice C is used to show the opposite of a previous claim. Choice D is used to show that something happens despite the first claim.",
+    "explanation": "Choice A is correct. It is used to add more information on the same topic. Choice A fits the context because the first sentence explains why the St. Joseph Atoll became a marine protected area, and the following sentence gives another reason why it is an important natural area. Distractor Explanations: All of the other choices can be eliminated because they are not used to add more specific detail about the same topic. Choice B is used to highlight a similar feature of two different cases, such as comparing why two areas were both named marine protected areas. Choice C is used to show the opposite of a previous claim. Choice D is used to show that something happens despite the first claim.",
     "topic": "Transitions"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "Although"
     ],
     "answer": 1,
-    "explanation": "It is used to show a contrast in ideas or introduce something that might be considered surprising. In the context, the first sentence points out the important role that Ahmes plays in understanding Egyptian mathematics: he wrote one of the most important documents. The following sentence is surprising or unexpected, though, because it says that although Ahmes wrote the document. he did not come up with the ideas in it. Distractor Explanations: Choice A is incorrect because it is used to show the result of an argument. However, the fact that Ahmes claims that he did not write the document is not a result of his document becoming famous. Choice C is incorrect because it establishes that the following idea comes later in time. Although \"claims\" is [PAGE 212 RIGHT] IDEAS in the present tense, the action of claiming was far in the past, as Ahmes died about 1620 B.C. Therefore, the act of his document becoming a main source of information happened after he wrote the preface in which he claimed he was not the author. Choice D is incorrect because it is used to show similarities between two ideas, but the second sentence emphasizes a difference or potential misunderstanding about the first sentence.",
+    "explanation": "Choice B is correct. It is used to show a contrast in ideas or introduce something that might be considered surprising. In the context, the first sentence points out the important role that Ahmes plays in understanding Egyptian mathematics: he wrote one of the most important documents. The following sentence is surprising or unexpected, though, because it says that although Ahmes wrote the document. he did not come up with the ideas in it. Distractor Explanations: Choice A is incorrect because it is used to show the result of an argument. However, the fact that Ahmes claims that he did not write the document is not a result of his document becoming famous. Choice C is incorrect because it establishes that the following idea comes later in time. Although \"claims\" is IDEAS in the present tense, the action of claiming was far in the past, as Ahmes died about 1620 B.C. Therefore, the act of his document becoming a main source of information happened after he wrote the preface in which he claimed he was not the author. Choice D is incorrect because it is used to show similarities between two ideas, but the second sentence emphasizes a difference or potential misunderstanding about the first sentence.",
     "topic": "Transitions"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "In any case,"
     ],
     "answer": 0,
-    "explanation": "It is used to introduce the end result or most basic principle of something. It therefore fits the context of introducing the primary goal of the JIT method. Distractor Explanations: Choice B is incorrect because it is used to show a contrast between opposite ideas, not show the goal of the previous idea- Choice C is incorrect because it is used to show that something happens despite something else, but in this case, the preceding sentence is the result of the goal in the second sentence. Choice D is used to give a specific example that illustrates an earlier claim, not the motivations behind the",
+    "explanation": "Choice A is correct. It is used to introduce the end result or most basic principle of something. It therefore fits the context of introducing the primary goal of the JIT method. Distractor Explanations: Choice B is incorrect because it is used to show a contrast between opposite ideas, not show the goal of the previous idea- Choice C is incorrect because it is used to show that something happens despite something else, but in this case, the preceding sentence is the result of the goal in the second sentence. Choice D is used to give a specific example that illustrates an earlier claim, not the motivations behind the",
     "topic": "Transitions"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "To be specific,"
     ],
     "answer": 1,
-    "explanation": "It refers to something that happened before something else. It introduces the first half of the sentence, which says that the game was \"suppressed\" or \"not allowed.\" By contrast, the second half of the sentence says that now Choctaws play the game to show cultural pride. Therefore, Choice B clearly establishes a time sequence in which the game was not allowed but which is now played again. [PAGE 213 LEFT] Transitic Distractor Explanations: Choice A is incorrect because it introduces something that happens at the same time as a previous action, but the previous discussion is not a specific action but rather a general discussion of rules. Choice C is incorrect because it is used to give a specific example of a previous claim, not change to another aspect of the discussion. Choice D is incorrect because it is used to elaborate on the same topic, in this case, rules of the game.",
+    "explanation": "Choice B is correct. It refers to something that happened before something else. It introduces the first half of the sentence, which says that the game was \"suppressed\" or \"not allowed.\" By contrast, the second half of the sentence says that now Choctaws play the game to show cultural pride. Therefore, Choice B clearly establishes a time sequence in which the game was not allowed but which is now played again. Transitic Distractor Explanations: Choice A is incorrect because it introduces something that happens at the same time as a previous action, but the previous discussion is not a specific action but rather a general discussion of rules. Choice C is incorrect because it is used to give a specific example of a previous claim, not change to another aspect of the discussion. Choice D is incorrect because it is used to elaborate on the same topic, in this case, rules of the game.",
     "topic": "Transitions"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "Furthermore,"
     ],
     "answer": 0,
-    "explanation": "It is used to introduce the result of an earlier claim or argument. In this text, the result that the poison dart frogs are active during the day is a result of bright coloration that needs to be visible. Distractor Explanations: Choice B is incorrect because it is used to summarize what has been discussed rather than present the results of a claim. Choices C and D are incorrect because they are used to show that the following idea is different from the preceding idea. The following idea has a contrast: regular frogs are nocturnal, but poison dart frogs are not. However, that contrast is consistent with the preceding idea about coloration, so those transitions do not signal the difference between sentences.",
+    "explanation": "Choice A is correct. It is used to introduce the result of an earlier claim or argument. In this text, the result that the poison dart frogs are active during the day is a result of bright coloration that needs to be visible. Distractor Explanations: Choice B is incorrect because it is used to summarize what has been discussed rather than present the results of a claim. Choices C and D are incorrect because they are used to show that the following idea is different from the preceding idea. The following idea has a contrast: regular frogs are nocturnal, but poison dart frogs are not. However, that contrast is consistent with the preceding idea about coloration, so those transitions do not signal the difference between sentences.",
     "topic": "Transitions"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "Inevitably"
     ],
     "answer": 3,
-    "explanation": "The sentence contrasts two ideas, the fact that some ideas are dated and that they are also relevant. Choice D has the meaning of \"in spite of the fact\" and is used to subordinate a clause, so it fits the context and the grammar. [PAGE 213 RIGHT] ins (Answers) Distractor explanations: Choice A is incorrect because it is used to show a contrast, so it fits the logic of the paragraph, but it is a transition word that does not subordinate a clause. Therefore, the resulting sentence is a comma splice. Choices B and C are both used to show a cause-and-effect relationship, so do not fit the context of showing that the book is both dated and relevant. In addition, Choice C does not subordinate a clause and therefore creates a comma splice.",
+    "explanation": "Choice D is correct. The sentence contrasts two ideas, the fact that some ideas are dated and that they are also relevant. Choice D has the meaning of \"in spite of the fact\" and is used to subordinate a clause, so it fits the context and the grammar. ins (Answers) Distractor explanations: Choice A is incorrect because it is used to show a contrast, so it fits the logic of the paragraph, but it is a transition word that does not subordinate a clause. Therefore, the resulting sentence is a comma splice. Choices B and C are both used to show a cause-and-effect relationship, so do not fit the context of showing that the book is both dated and relevant. In addition, Choice C does not subordinate a clause and therefore creates a comma splice.",
     "topic": "Transitions"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "Consequently,"
     ],
     "answer": 1,
-    "explanation": "It is used to show that something is the result of another claim. It fits the context of showing that teasing out details of the climate are a result of carbon dating twigs and pine needles. Distractor Explanations: None of the other choices adequately show how the idea of getting information from carbon dating relates to finding details about climate change. Choice A is used to show that the following claim is opposite or different from the previous claim. Choice C is used to show that the following claim happens despite the first claim. Choice D is used to show that something would happen in any possible event or situation, but finding details about climate change would not happen without the specific action described.",
+    "explanation": "Choice B is correct. It is used to show that something is the result of another claim. It fits the context of showing that teasing out details of the climate are a result of carbon dating twigs and pine needles. Distractor Explanations: None of the other choices adequately show how the idea of getting information from carbon dating relates to finding details about climate change. Choice A is used to show that the following claim is opposite or different from the previous claim. Choice C is used to show that the following claim happens despite the first claim. Choice D is used to show that something would happen in any possible event or situation, but finding details about climate change would not happen without the specific action described.",
     "topic": "Transitions"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "accordingly."
     ],
     "answer": 1,
-    "explanation": "203. Level: Easy I Skill/Knowledge: Transitions Key Explanation: Choice B is used to explain the actual situation. It fits the context of saying that there are 59 official moons, but that 23 other objects might be considered official moons as well because they are \"pending\" or \"awaiting\" the process of being \"formally\" or \"officially\" identified and named. Therefore, the number 59 is not as accurate as the real number of moons. [PAGE 214 LEFT] EXPRESSION ( Distractor Explanations: Choice A is incorrect because it introduces a result or summary of the previous discussion rather than brings up new facts. Choice C is incorrect because it is used to show the first of two opposing options, but only one example is given after that phrase. Choice D is incorrect because it is used to add more detail that clarifies the previous claim, such as stating that 23 of the 59 moons are pending identification. However, the following sentence adds new information about moons that are not in the original 59 in the discussion.",
+    "explanation": "Choice B is correct. 203. It fits the context of saying that there are 59 official moons, but that 23 other objects might be considered official moons as well because they are \"pending\" or \"awaiting\" the process of being \"formally\" or \"officially\" identified and named. Therefore, the number 59 is not as accurate as the real number of moons. EXPRESSION ( Distractor Explanations: Choice A is incorrect because it introduces a result or summary of the previous discussion rather than brings up new facts. Choice C is incorrect because it is used to show the first of two opposing options, but only one example is given after that phrase. Choice D is incorrect because it is used to add more detail that clarifies the previous claim, such as stating that 23 of the 59 moons are pending identification. However, the following sentence adds new information about moons that are not in the original 59 in the discussion.",
     "topic": "Transitions"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "To illustrate,"
     ],
     "answer": 0,
-    "explanation": "It is used to introduce something that is unexpected or contrasting. Choice A fits the context because the preceding sentence refers to the first time that credit cards were used, and the second brings up the unexpected or contrasting point that the idea had been around for a long time before they were actually invented. Distractor Explanations: Choice B is incorrect because it is used to clarify a preceding claim with more detail, not introduce an idea that is not included in the preceding portion. Choice C is incorrect because it is used to show the result of an action or argument, but the following portion refers to something that occurred at an earlier time. Choice D is incorrect because it is used to elaborate on the same topic, not change the idea with something unexpected.",
+    "explanation": "Choice A is correct. It is used to introduce something that is unexpected or contrasting. Choice A fits the context because the preceding sentence refers to the first time that credit cards were used, and the second brings up the unexpected or contrasting point that the idea had been around for a long time before they were actually invented. Distractor Explanations: Choice B is incorrect because it is used to clarify a preceding claim with more detail, not introduce an idea that is not included in the preceding portion. Choice C is incorrect because it is used to show the result of an action or argument, but the following portion refers to something that occurred at an earlier time. Choice D is incorrect because it is used to elaborate on the same topic, not change the idea with something unexpected.",
     "topic": "Transitions"
   },
   {
@@ -183,7 +183,7 @@ const QUESTIONS = [
       "Furthermore,\n211)"
     ],
     "answer": 1,
-    "explanation": "It is used to give a specific case that illustrates a general claim. In the text, the preceding sentence is the general claim that [PAGE 214 RIGHT] IDEAS Goldberg supported many causes, and the following sentence gives a specific cause that she supported. Distractor Explanations: Choice A is incorrect because it is used to paraphrase the previous idea for clarity, not give additional facts. Choice C is incorrect because it is used to show something that is opposite the previous claim, not a continuation of it. Choice D is used to show that something was destined to happen, but Goldberg did not have to moderate the summit; she could have been involved in other movements or even just busy that day.",
+    "explanation": "Choice B is correct. It is used to give a specific case that illustrates a general claim. In the text, the preceding sentence is the general claim that IDEAS Goldberg supported many causes, and the following sentence gives a specific cause that she supported. Distractor Explanations: Choice A is incorrect because it is used to paraphrase the previous idea for clarity, not give additional facts. Choice C is incorrect because it is used to show something that is opposite the previous claim, not a continuation of it. Choice D is used to show that something was destined to happen, but Goldberg did not have to moderate the summit; she could have been involved in other movements or even just busy that day.",
     "topic": "Transitions"
   },
   {
@@ -196,12 +196,12 @@ const QUESTIONS = [
       "Consequently,"
     ],
     "answer": 1,
-    "explanation": "It is used to show that something occurred later in a chronological order. Choice B effectively establishes that both paintings were stolen, but that later, both were found and returned to the museums. Distractor Explanations: Choices A and D can be eliminated because they are used to introduce the logical result of an argument. However, it is not necessarily a given that the paintings would be returned after being stolen, so it is not the only reasonable conclusion given the information to that point. Choice C is incorrect because it is used to clarify a previous general claim using details or examples.",
+    "explanation": "Choice B is correct. It is used to show that something occurred later in a chronological order. Choice B effectively establishes that both paintings were stolen, but that later, both were found and returned to the museums. Distractor Explanations: Choices A and D can be eliminated because they are used to introduce the logical result of an argument. However, it is not necessarily a given that the paintings would be returned after being stolen, so it is not the only reasonable conclusion given the information to that point. Choice C is incorrect because it is used to clarify a previous general claim using details or examples.",
     "topic": "Transitions"
   },
   {
     "id": 16,
-    "text": "Gauntlet buttons are the closures on the slit on a\ncasual shirt such as a button-down Oxford. They\nare found between the elbow and wrist, and are\ndesigned to keep the gap from opening too wide\nd showing the forearm.\nthe buttons are\nnot necessary, as a well-tailored shirt will remain\nshut without gapping.\nWhich choice completes the text with the most\nlogical transition ?",
+    "text": "Gauntvar buttons are the closures on the slit on a\ncasual shirt such as a button-down Oxford. They\nare found between the elbow and wrist, and are\ndesigned to keep the gap from opening too wide\nd showing the forearm.\nthe buttons are\nnot necessary, as a well-tailored shirt will remain\nshut without gapping.\nWhich choice completes the text with the most\nlogical transition ?",
     "options": [
       "In reality,",
       "Consequently,",
@@ -209,7 +209,7 @@ const QUESTIONS = [
       "In other words,"
     ],
     "answer": 0,
-    "explanation": "It is used to show that a statement may be unexpected or contrary to what has been said already. It fits the context of saying that there are genes related to obesity, but there is an unexpected [PAGE 215 LEFT] Transitic idea because the genes are not all related to fat storage. Distractor Explanations: Choices B and C can be eliminated because they introduce the logical conclusion to an argument, but the fact that the genes are not just ones that regulate fat storage is not the end of the discussion. Choice D is incorrect because it shows that something is fit or proper in a given context, but it is not necessarily appropriate that obesity is controlled by genes that perform different metabolic processes than storing 208. Level: Medium I Skill/Knowledge: Transition Distractor Explanations: Choice B is used to bring up something that is contradictory to the previous discussion. Though the fact that the flamingo eats with its head upside-down is odd, it is not contradictory to the idea that it has to hold the top of its mouth underwater. Choice C is incorrect because it is used to introduce the last item in a series of three or more items, but the previous and following information are two aspects of the same discussion. Choice D is incorrect because it is used to give a specific example of a general case, not summarize a discussion.",
+    "explanation": "Choice A is correct. It is used to show that a statement may be unexpected or contrary to what has been said already. It fits the context of saying that there are genes related to obesity, but there is an unexpected Transitic idea because the genes are not all related to fat storage. Distractor Explanations: Choices B and C can be eliminated because they introduce the logical conclusion to an argument, but the fact that the genes are not just ones that regulate fat storage is not the end of the discussion. Choice D is incorrect because it shows that something is fit or proper in a given context, but it is not necessarily appropriate that obesity is controlled by genes that perform different metabolic processes than storing 208. Though the fact that the flamingo eats with its head upside-down is odd, it is not contradictory to the idea that it has to hold the top of its mouth underwater. Choice C is incorrect because it is used to introduce the last item in a series of three or more items, but the previous and following information are two aspects of the same discussion. Choice D is incorrect because it is used to give a specific example of a general case, not summarize a discussion.",
     "topic": "Transitions"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "Likewise,"
     ],
     "answer": 1,
-    "explanation": "It is used to give a specific case that illustrates a general claim. It fits the context of adding the fact about four transgender athletes in the Olympics to the general idea that such athletes are \"gaining more public awareness and acceptance.\" [PAGE 215 RIGHT] ins (Answers) Distractor Explanations: Choice A is incorrect because it is used to highlight a similarity between two different things, not give a specific example of the same thing. Choices C and D are incorrect because they are used to add more detail on the same topic, such as another argument for the overall development of the thesis, not give a specific case.",
+    "explanation": "Choice B is correct. It is used to give a specific case that illustrates a general claim. It fits the context of adding the fact about four transgender athletes in the Olympics to the general idea that such athletes are \"gaining more public awareness and acceptance.\" ins (Answers) Distractor Explanations: Choice A is incorrect because it is used to highlight a similarity between two different things, not give a specific example of the same thing. Choices C and D are incorrect because they are used to add more detail on the same topic, such as another argument for the overall development of the thesis, not give a specific case.",
     "topic": "Transitions"
   },
   {
@@ -235,7 +235,7 @@ const QUESTIONS = [
       "Furthermore,"
     ],
     "answer": 3,
-    "explanation": "It is used to show that the following idea is the result of the previous idea. It clearly establishes the relationship in which the interest in \"mysticism and astrology\" led to Keats writing poems that were very symbolic. Distractor Explanations: Choices A and C are incorrect because they are used to show that the following is a contrast or different in some way from the previous claim, but the ideas of mysticism and symbolism are closely related. Choice B highlights a similarity between two things, but does not fit the context because is not used to show cause and effect.",
+    "explanation": "Choice D is correct. It is used to show that the following idea is the result of the previous idea. It clearly establishes the relationship in which the interest in \"mysticism and astrology\" led to Keats writing poems that were very symbolic. Distractor Explanations: Choices A and C are incorrect because they are used to show that the following is a contrast or different in some way from the previous claim, but the ideas of mysticism and symbolism are closely related. Choice B highlights a similarity between two things, but does not fit the context because is not used to show cause and effect.",
     "topic": "Transitions"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "Specifically,"
     ],
     "answer": 0,
-    "explanation": "211. Level: Easy I Skill/Knowledge: Transition Key Explanation: Choice A is used to highlight the difference between what is true and something that is previously stated. It fits the context of showing that the gauntlet buttons are claimed to be used for something, but the true situation is that they are not needed. Distractor Explanations: Choice B is used to show the logical result of an argument, not offer contrasting information. Choice C is used to continue the argument on the same topic, not reverse the idea. Choice D is used to paraphrase the same idea in a different form for clarity. [PAGE 216 LEFT] EXPRESSION (",
+    "explanation": "Choice A is correct. 211. It fits the context of showing that the gauntvar buttons are claimed to be used for something, but the true situation is that they are not needed. Distractor Explanations: Choice B is used to show the logical result of an argument, not offer contrasting information. Choice C is used to continue the argument on the same topic, not reverse the idea. Choice D is used to paraphrase the same idea in a different form for clarity. EXPRESSION (",
     "topic": "Transitions"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "Likewise,"
     ],
     "answer": 2,
-    "explanation": "The text starts with a statement that the wildebeests have no leader on their migration, then continues with the alternative that they use: they follow trails. Choice C fits the context because it is used to introduce an alternative that fills the place of something else. Distractor Explanations: None of the other choices clearly identifies the relationship between the preceding sentence that there is no wildebeest leader and the following sentence that the wildebeests follow trails. Choice A is used to give a specific example of the previous claim. Choice B is used to add more information on the same idea, not give an alternative. Choice D is used to highlight a similarity rather than a difference.",
+    "explanation": "Choice C is correct. The text starts with a statement that the wildebeests have no leader on their migration, then continues with the alternative that they use: they follow trails. Choice C fits the context because it is used to introduce an alternative that fills the place of something else. Distractor Explanations: None of the other choices clearly identifies the relationship between the preceding sentence that there is no wildebeest leader and the following sentence that the wildebeests follow trails. Choice A is used to give a specific example of the previous claim. Choice B is used to add more information on the same idea, not give an alternative. Choice D is used to highlight a similarity rather than a difference.",
     "topic": "Transitions"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "Thereafter,\n21,-"
     ],
     "answer": 2,
-    "explanation": "It indicates that the following information might be unexpected based on what has already been said. The preceding portion says that most people think Dobermans are black, but the following portion states that they actually come in four different colors. That information is probably a surprise based on the common expectation. Distractor Explanations: Choices A and B are incorrect because they are used to add an explanation that clarifies or gives an example of the previous claim. However, the following information contradicts the previous part by offering different colors rather than expanding on the common view. Choice D is incorrect because it is used to add more information that continues on the same topic in the same tone, so would typically introduce more information about peopl& expectations. [PAGE 216 RIGHT] IDEAS",
+    "explanation": "Choice C is correct. It indicates that the following information might be unexpected based on what has already been said. The preceding portion says that most people think Dobermans are black, but the following portion states that they actually come in four different colors. That information is probably a surprise based on the common expectation. Distractor Explanations: Choices A and B are incorrect because they are used to add an explanation that clarifies or gives an example of the previous claim. However, the following information contradicts the previous part by offering different colors rather than expanding on the common view. Choice D is incorrect because it is used to add more information that continues on the same topic in the same tone, so would typically introduce more information about peopl& expectations. IDEAS",
     "topic": "Transitions"
   },
   {
@@ -287,7 +287,7 @@ const QUESTIONS = [
       "Subsequently,"
     ],
     "answer": 0,
-    "explanation": "The previous idea is \"one contributing factor\" about why land in Demak Regency is lost to the ocean. The following idea is another reason. Choice A is a transition that is used to identify an item in position number two in a list, so fits the context well. Distractor Explanations: None of the other choices indicates that the following item is another idea in a list. Choices B and C are used to introduce the conclusion or result of an argument. Choice D is used to give a precise detail that expands on a previous, more general claim.",
+    "explanation": "Choice A is correct. The previous idea is \"one contributing factor\" about why land in Demak Regency is lost to the ocean. The following idea is another reason. Choice A is a transition that is used to identify an item in position number two in a list, so fits the context well. Distractor Explanations: None of the other choices indicates that the following item is another idea in a list. Choices B and C are used to introduce the conclusion or result of an argument. Choice D is used to give a precise detail that expands on a previous, more general claim.",
     "topic": "Transitions"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "By contrast,"
     ],
     "answer": 2,
-    "explanation": "The previous sentence says that the researchers want to \"pursue a new line of study\" or \"do research about something new.\" The following sentence shows what that \"something\" is: they want to find out if there are genetic \"alterations\" or \"changes.\" Therefore, the following sentence clarifies a detail of the previous sentence. Choice C fits the context because it is used to introduce a specific example or explanation. Distractor Explanations: None of the other choices effectively establishes the relationship between the previous sentence's general claim and the specific information in the following sentence. Choice A is used to introduce another, related point to expand on an argument. Choice B is used to show the result of a previous claim. Choice D is used to highlight a similarity between two things. [PAGE 217 LEFT] Transitic",
+    "explanation": "Choice C is correct. The previous sentence says that the researchers want to \"pursue a new line of study\" or \"do research about something new.\" The following sentence shows what that \"something\" is: they want to find out if there are genetic \"alterations\" or \"changes.\" Therefore, the following sentence clarifies a detail of the previous sentence. Choice C fits the context because it is used to introduce a specific example or explanation. Distractor Explanations: None of the other choices effectively establishes the relationship between the previous sentence's general claim and the specific information in the following sentence. Choice A is used to introduce another, related point to expand on an argument. Choice B is used to show the result of a previous claim. Choice D is used to highlight a similarity between two things. Transitic",
     "topic": "Transitions"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "Furthermore,"
     ],
     "answer": 2,
-    "explanation": "The first two sentences give unusual facts about the planet Venus. The final sentence is a claim that could be responsible for those facts. Choice C is used to introduce the logical conclusion of an argument, so fits well in the context. Distractor Explanations: Choice A is used to show something which is opposite or different from something else, so does not fit the context of giving a reason for some facts. Choice B is used to show that something happens at the same time as something else. Though the facts are indeed both occurring now, they are not simultaneous in that the planefi orbit has been around for millions of years more than scientists believed. Choice D is incorrect because it is used to show things which happen one after another, but Venus's orbit and rotational period have not ended.",
+    "explanation": "Choice C is correct. The first two sentences give unusual facts about the planet Venus. The final sentence is a claim that could be responsible for those facts. Choice C is used to introduce the logical conclusion of an argument, so fits well in the context. Distractor Explanations: Choice A is used to show something which is opposite or different from something else, so does not fit the context of giving a reason for some facts. Choice B is used to show that something happens at the same time as something else. Though the facts are indeed both occurring now, they are not simultaneous in that the planefi orbit has been around for millions of years more than scientists believed. Choice D is incorrect because it is used to show things which happen one after another, but Venus's orbit and rotational period have not ended.",
     "topic": "Transitions"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "for"
     ],
     "answer": 0,
-    "explanation": "It is used to show that something is rather paradoxical. In this case, it fits the context of showing the rather odd fact that the potato was transported from South America to Europe and back to North America rather than just moving the comparatively short distance through the Americas. Distractor Explanations: None of the other choices establishes the correct relationship between the ideas. Choice B is used to show the logical conclusion of the previous argument, not an unexpected fact. Choice C is used to add a new point to building an argument rather than give more specific detail on the same point. Choice [PAGE 217 RIGHT] ins (Answers) D is used to show that the following idea comes after the previous idea in time. It breaks up the order because the previous sentence mentions that potatoes were brought to North America, but the following sentence shows an event-the transport to Europe-that happened before the action in the previous sentence.",
+    "explanation": "Choice A is correct. It is used to show that something is rather paradoxical. In this case, it fits the context of showing the rather odd fact that the potato was transported from South America to Europe and back to North America rather than just moving the comparatively short distance through the Americas. Distractor Explanations: None of the other choices establishes the correct relationship between the ideas. Choice B is used to show the logical conclusion of the previous argument, not an unexpected fact. Choice C is used to add a new point to building an argument rather than give more specific detail on the same point. Choice ins (Answers) D is used to show that the following idea comes after the previous idea in time. It breaks up the order because the previous sentence mentions that potatoes were brought to North America, but the following sentence shows an event-the transport to Europe-that happened before the action in the previous sentence.",
     "topic": "Transitions"
   }
 ];

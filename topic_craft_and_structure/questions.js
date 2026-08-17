@@ -14,7 +14,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of Marie Curie."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of Marie Curie and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of Marie Curie and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of Albert Einstein."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of Albert Einstein and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of Albert Einstein and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of a newly discovered exoplanet."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of a newly discovered exoplanet and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of a newly discovered exoplanet and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the migration of Monarch butterflies."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the migration of Monarch butterflies and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the migration of Monarch butterflies and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the architecture of ancient Rome."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the architecture of ancient Rome and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the architecture of ancient Rome and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the history of jazz music."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the history of jazz music and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the history of jazz music and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the development of the internet."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the development of the internet and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the development of the internet and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the poetry of Emily Dickinson."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the poetry of Emily Dickinson and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the poetry of Emily Dickinson and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the life cycle of a star."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the life cycle of a star and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the life cycle of a star and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "To provide a detailed historical timeline of the impact of artificial intelligence."
     ],
     "answer": 0,
-    "explanation": "The text explicitly states that it highlights the significance of the impact of artificial intelligence and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
+    "explanation": "Choice A is correct. The text explicitly states that it highlights the significance of the impact of artificial intelligence and notes that there is still 'unexplored territory,' which aligns perfectly with summarizing known facts and noting the need for further exploration.",
     "topic": "Craft and Structure"
   }
 ];

@@ -14,7 +14,7 @@ const QUESTIONS = [
       "He wishes that his mother would remain at Norland."
     ],
     "answer": 0,
-    "explanation": "The text says, \"the very exertion to which he had limited the performance of his promise to his father was by this arrangement rendered impracticable.\" Therefore, it can be determined that Mr. Dashwood had made a \"promise\" or \"pledge\" to take care of his mother, but could not because she was moving too far away. Distractor Explanations: Choice B is incorrect because Mr. Dashwood is \"vexed\" that he cannot help due to the distance, not due to a lack of time. Choice C is incorrect because, while Mrs. Dashwood is taking many things, there is no indication that her son feels that the number is too large. Choice D is incorrect because there is no discussion that Mr. John Dashwood wishes that his mother would stay, only that she would not travel so far away. 65.",
+    "explanation": "Choice A is correct. The text says, \"the very exertion to which he had limited the performance of his promise to his father was by this arrangement rendered impracticable.\" Therefore, it can be determined that Mr. Dashwood had made a \"promise\" or \"pledge\" to take care of his mother, but could not because she was moving too far away. Distractor Explanations: Choice B is incorrect because Mr. Dashwood is \"vexed\" that he cannot help due to the distance, not due to a lack of time. Choice C is incorrect because, while Mrs. Dashwood is taking many things, there is no indication that her son feels that the number is too large. Choice D is incorrect because there is no discussion that Mr. John Dashwood wishes that his mother would stay, only that she would not travel so far away. 65.",
     "topic": "Inferences"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "The combined population of all the quilombo is about 5 million."
     ],
     "answer": 0,
-    "explanation": ". The passage points out that the quilombo were tight-knit communities of escaped slaves, and after slavery ended, the residents \"suffered prejudice and persecution for their race.\" This sentence implies that most of the residents had a race that was different from local people in Brazil. In other words, the communities are probably still close-knit groups of people whose ancestors were slaves. Distractor Explanations: Choice B is incorrect because there is no discussion in the passage about the situation of quilombo today. It is possible that most have electricity and running water, though being \"remote,\" they might not have extremely advanced technology. Choice C is impossible to [PAGE 103 RIGHT] (Answers) 66. determine from the passage because there is no discussion of how often quilombo residents travel or meet. Even if the quilombo are remote, the residents might interact with each other and not outside groups. Choice D is also impossible to tell from the passage. Just because there were about 5 million slaves does not mean that all of them escaped, nor that all of them averaged one child each.",
+    "explanation": "Choice A is correct. . The passage points out that the quilombo were tight-knit communities of escaped slaves, and after slavery ended, the residents \"suffered prejudice and persecution for their race.\" This sentence implies that most of the residents had a race that was different from local people in Brazil. In other words, the communities are probably still close-knit groups of people whose ancestors were slaves. Distractor Explanations: Choice B is incorrect because there is no discussion in the passage about the situation of quilombo today. It is possible that most have electricity and running water, though being \"remote,\" they might not have extremely advanced technology. Choice C is impossible to (Answers) 66. determine from the passage because there is no discussion of how often quilombo residents travel or meet. Even if the quilombo are remote, the residents might interact with each other and not outside groups. Choice D is also impossible to tell from the passage. Just because there were about 5 million slaves does not mean that all of them escaped, nor that all of them averaged one child each.",
     "topic": "Inferences"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "It is trying to show that humans can survive on a planet circling Proxima Centauri."
     ],
     "answer": 1,
-    "explanation": "The Breakthrough Starshot project is introduced in a sentence with \"with\" showing that it is the method of achieving the main part of the sentence. The main clause is \"plans for this are already afoot,\" and \"this\" refers to the previous sentence, \"that system might be close enough for us to reach using current technology.\" Therefore, the Breakthrough Starshot project is the method that may be possible for reaching the star system of Proxima Centauri, presumably via a spacecraft of some sort. Distractor Explanations: Choice A is incorrect because there is no indication of how the researchers worked out or searched for Earth- sized planets in the \"habitable zone.\" Choice C is incorrect because, while the project is designed to look for life, it is not trying to prove that life appeared at a certain time period. Ihe project would presumably be a success if it proved that life appeared at any time, even very recently. Choice D is incorrect because there is no evidence to support the claim that the project wants to send humans to a different planet, only that it wants to look for life. [PAGE 104 LEFT] INFORMATION 67.",
+    "explanation": "Choice B is correct. The Breakthrough Starshot project is introduced in a sentence with \"with\" showing that it is the method of achieving the main part of the sentence. The main clause is \"plans for this are already afoot,\" and \"this\" refers to the previous sentence, \"that system might be close enough for us to reach using current technology.\" Therefore, the Breakthrough Starshot project is the method that may be possible for reaching the star system of Proxima Centauri, presumably via a spacecraft of some sort. Distractor Explanations: Choice A is incorrect because there is no indication of how the researchers worked out or searched for Earth- sized planets in the \"habitable zone.\" Choice C is incorrect because, while the project is designed to look for life, it is not trying to prove that life appeared at a certain time period. Ihe project would presumably be a success if it proved that life appeared at any time, even very recently. Choice D is incorrect because there is no evidence to support the claim that the project wants to send humans to a different planet, only that it wants to look for life. INFORMATION 67.",
     "topic": "Inferences"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "He is trying to forget a sad event."
     ],
     "answer": 1,
-    "explanation": "The narrator says he felt \"lighthearted\" when he saw the city gates and felt \"as though a burden were falling off my soul\" when he left the city. Later, he refers to the walk as making him feel better because he had been \"half-sick\" and \"stifling between city walls.\" Therefore, it can be presumed that he was \"displeased\" or \"not happy\" with being in town all the time, which would have been his \"daily\" or \"regular\" life since he was a \"townsman.\" He felt discontent with his conditions, feeling trapped within a city, rather than with a specific event. Distractor Explanations: Choice A is incorrect because, while the narrator greets people on his walk, there is no indication that meeting them was the purpose of his going for the walk. Choice C is incorrect because there is no indication that the narrator was trying to find adventure, only that he was trying to relax- Choice D is incorrect because there is no reference to the narrator having a \"sad event.\" He does not refer to a specific occurrence that bothered him, only the stifling nature of in the city. 68.",
+    "explanation": "Choice B is correct. The narrator says he felt \"lighthearted\" when he saw the city gates and felt \"as though a burden were falling off my soul\" when he left the city. Later, he refers to the walk as making him feel better because he had been \"half-sick\" and \"stifling between city walls.\" Therefore, it can be presumed that he was \"displeased\" or \"not happy\" with being in town all the time, which would have been his \"daily\" or \"regular\" life since he was a \"townsman.\" He felt discontent with his conditions, feeling trapped within a city, rather than with a specific event. Distractor Explanations: Choice A is incorrect because, while the narrator greets people on his walk, there is no indication that meeting them was the purpose of his going for the walk. Choice C is incorrect because there is no indication that the narrator was trying to find adventure, only that he was trying to relax- Choice D is incorrect because there is no reference to the narrator having a \"sad event.\" He does not refer to a specific occurrence that bothered him, only the stifling nature of in the city. 68.",
     "topic": "Inferences"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "Due to biodiversity stabilization, an extinction could indicate a larger-scale collapse of the region's equilibrium."
     ],
     "answer": 3,
-    "explanation": "Clark claims, \"extinction of species should cause us greater concern than if we believed that biodiversity was maintained in the past by continual replenishment of random extinction by generation of new species.\" In other words, he feels that if one species goes extinct. it would show that the biodiversity is not being maintained as it should be; the stabilizing forces would not be functioning properly. That could indicate a \"collapse\" or \"failure\" of the entire system. Distractor Explanations: Choice A is incorrect because Clark implies that because of stabilization, [PAGE 104 RIGHT] 'ND IDEAS ecosystems remain in balance, but if one part of the balance is disrupted, the entire system may collapse. Therefore, a total collapse is more likely than if the system is random. Choice B is incorrect because it refers to the situation in the neutral theory, not the biodiversity stabilization theory. Choice C is incorrect because the stabilization theory proposes that the number of species remains about the same. It is implied that the rate of addition and extinction would therefore be about the same. 69.",
+    "explanation": "Choice D is correct. Clark claims, \"extinction of species should cause us greater concern than if we believed that biodiversity was maintained in the past by continual replenishment of random extinction by generation of new species.\" In other words, he feels that if one species goes extinct. it would show that the biodiversity is not being maintained as it should be; the stabilizing forces would not be functioning properly. That could indicate a \"collapse\" or \"failure\" of the entire system. Distractor Explanations: Choice A is incorrect because Clark implies that because of stabilization, 'ND IDEAS ecosystems remain in balance, but if one part of the balance is disrupted, the entire system may collapse. Therefore, a total collapse is more likely than if the system is random. Choice B is incorrect because it refers to the situation in the neutral theory, not the biodiversity stabilization theory. Choice C is incorrect because the stabilization theory proposes that the number of species remains about the same. It is implied that the rate of addition and extinction would therefore be about the same. 69.",
     "topic": "Inferences"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "Most plants produce no fruits because of salt."
     ],
     "answer": 1,
-    "explanation": "The passage states that \"in Benin, chili is the second cash gardening crop besides tomato.\" This statement shows that chili is the second largest crop grown to be sold rather than used by the farmer. Without chili, one of the major crops that provides income would be missing, so it is important to many farmers. Distractor Explanations: Choice A is incorrect because the passage states that \"This stress is known to negatively affect plant growth at all developmental stages,\" which indicates that the farmers also know about the negative effect. Choice C is incorrect because there is no discussion of other sources of income in Benin. In reality, textiles and cotton are more important than the cash crops sold for food. Choice D is impossible to determine from the text because, while the passage hints that many plants are raised in areas with salt, it does not say that the plants are very unproductive. Since it is an important cash crop, the implication is that the plants grow and make fruit. [PAGE 105 LEFT] Inferenc 70.",
+    "explanation": "Choice B is correct. The passage states that \"in Benin, chili is the second cash gardening crop besides tomato.\" This statement shows that chili is the second largest crop grown to be sold rather than used by the farmer. Without chili, one of the major crops that provides income would be missing, so it is important to many farmers. Distractor Explanations: Choice A is incorrect because the passage states that \"This stress is known to negatively affect plant growth at all developmental stages,\" which indicates that the farmers also know about the negative effect. Choice C is incorrect because there is no discussion of other sources of income in Benin. In reality, textiles and cotton are more important than the cash crops sold for food. Choice D is impossible to determine from the text because, while the passage hints that many plants are raised in areas with salt, it does not say that the plants are very unproductive. Since it is an important cash crop, the implication is that the plants grow and make fruit. Inferenc 70.",
     "topic": "Inferences"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "They are not capable of voting effectively."
     ],
     "answer": 2,
-    "explanation": "Lincoln expresses his personal opinion, \"I would myself prefer that it were now conferred on the very intelligent, and on those who serve our cause as soldiers.\" This quote indicates that he feels that some former slaves, such as intelligent men and soldiers, should be \"granted\" or \"given\" the right to vote. Distractor Explanations: Choice A is incorrect because \"most\" implies over half. Lincoln expresses his view that some former slaves should be able to vote, suggesting that others are not capable of doing so. However. there is no indication that the \"incapable\" or \"not qualified\" group is over half of the former slave population. Choice B is incorrect because \"inalienable\" means \"absolute\" or \"inherent.\" Lincoln, though, does not say that there is an obligation to give all former slaves the right to vote. He limits his suggestion to giving voting rights to intelligent men and soldiers. Choice D is incorrect because Lincoln indicates that some freed slaves would be capable of voting effectively; otherwise, he would not suggest allowing intelligent men and soldiers to vote. 71.",
+    "explanation": "Choice C is correct. Lincoln expresses his personal opinion, \"I would myself prefer that it were now conferred on the very intelligent, and on those who serve our cause as soldiers.\" This quote indicates that he feels that some former slaves, such as intelligent men and soldiers, should be \"granted\" or \"given\" the right to vote. Distractor Explanations: Choice A is incorrect because \"most\" implies over half. Lincoln expresses his view that some former slaves should be able to vote, suggesting that others are not capable of doing so. However. there is no indication that the \"incapable\" or \"not qualified\" group is over half of the former slave population. Choice B is incorrect because \"inalienable\" means \"absolute\" or \"inherent.\" Lincoln, though, does not say that there is an obligation to give all former slaves the right to vote. He limits his suggestion to giving voting rights to intelligent men and soldiers. Choice D is incorrect because Lincoln indicates that some freed slaves would be capable of voting effectively; otherwise, he would not suggest allowing intelligent men and soldiers to vote. 71.",
     "topic": "Inferences"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "It isolated an effect but not the cause of that effect."
     ],
     "answer": 3,
-    "explanation": "\"definitive\" means \"conclusive\" or \"final.\" The data was complete enough to determine that \"the Southern Ocean has absorbed nearly 40 percent of all anthropogenic C02 taken up by the global oceans up to the present.\" so the \"effect\" of removing C02 was \"isolated\" or \"identified.\" However, the cause of the removal of CO is still unknown: \"the researchers aren't sure of the exact [PAGE 105 RIGHT] (Answers) 72. mechanism driving these changes.\" Therefore, the study does not conclusively answer all questions. Distractor Explanation: Choice A is incorrect because the researchers were able to collect \"sufficient\" or \"enough\" data to come to the \"solid\" or \"well-supported\" conclusion that the Southern Ocean has recently been removing more C02 from the atmosphere. Choice B is incorrect because the passage says that the research took place over 13 years, and there is no indication that \"critical\" or \"important\" time periods were missed during the study. Choice C is incorrect because there is no indication that the results are missing important information because they focused on one region- the Southern Ocean-rather than a wider area. Ihe conclusion drawn from that data about C02 absorption is valid.",
+    "explanation": "Choice D is correct. \"definitive\" means \"conclusive\" or \"final.\" The data was complete enough to determine that \"the Southern Ocean has absorbed nearly 40 percent of all anthropogenic C02 taken up by the global oceans up to the present.\" so the \"effect\" of removing C02 was \"isolated\" or \"identified.\" However, the cause of the removal of CO is still unknown: \"the researchers aren't sure of the exact (Answers) 72. mechanism driving these changes.\" Therefore, the study does not conclusively answer all questions. Distractor Explanation: Choice A is incorrect because the researchers were able to collect \"sufficient\" or \"enough\" data to come to the \"solid\" or \"well-supported\" conclusion that the Southern Ocean has recently been removing more C02 from the atmosphere. Choice B is incorrect because the passage says that the research took place over 13 years, and there is no indication that \"critical\" or \"important\" time periods were missed during the study. Choice C is incorrect because there is no indication that the results are missing important information because they focused on one region- the Southern Ocean-rather than a wider area. Ihe conclusion drawn from that data about C02 absorption is valid.",
     "topic": "Inferences"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "No other weaver in her area could make as many stitches per inch."
     ],
     "answer": 3,
-    "explanation": "The text says that she could weave \"a record 115,\" which implies that no one else was able to reach her record. Distractor Explanations: Choice A is incorrect because there is no indication about how other Navajos viewed Taugelchee's work; since she used non-traditional designs and was popular among collectors, it is possible that the local community thought she was too different. Choice B is incorrect because there is no indication about how much Taugelchee earned from selling to collectors; they could have purchased her work for very little. Choice C is incorrect because the text only refers to designs; it is possible she used traditional colors. [PAGE 106 LEFT] INFORMATION 73.",
+    "explanation": "Choice D is correct. The text says that she could weave \"a record 115,\" which implies that no one else was able to reach her record. Distractor Explanations: Choice A is incorrect because there is no indication about how other Navajos viewed Taugelchee's work; since she used non-traditional designs and was popular among collectors, it is possible that the local community thought she was too different. Choice B is incorrect because there is no indication about how much Taugelchee earned from selling to collectors; they could have purchased her work for very little. Choice C is incorrect because the text only refers to designs; it is possible she used traditional colors. INFORMATION 73.",
     "topic": "Inferences"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "It can provide sustenance for a person's soul."
     ],
     "answer": 3,
-    "explanation": "\"sustenance\" refers to \"support\" or \"food and drink\" In the text, the person \"ate and drank\" the words, showing that he received support as if he were eating. His \"soul\" or \"spirit\" grew \"robust\" Distractor Explanations: Choice A is incorrect because \"tangible\" refers to real wealth. Though the person \"knew no more\" or \"forgot\" that he was poor. he remained poor financially. Choice B is incorrect because there is no indication that the person felt or became young, only less tired. Choice C is incorrect because \"true bondage\" means \"real imprisonment.\" Though the person mentally escaped the imprisonment of his poor situation, he did not actually leave the living conditions. 74.",
+    "explanation": "Choice D is correct. \"sustenance\" refers to \"support\" or \"food and drink\" In the text, the person \"ate and drank\" the words, showing that he received support as if he were eating. His \"soul\" or \"spirit\" grew \"robust\" Distractor Explanations: Choice A is incorrect because \"tangible\" refers to real wealth. Though the person \"knew no more\" or \"forgot\" that he was poor. he remained poor financially. Choice B is incorrect because there is no indication that the person felt or became young, only less tired. Choice C is incorrect because \"true bondage\" means \"real imprisonment.\" Though the person mentally escaped the imprisonment of his poor situation, he did not actually leave the living conditions. 74.",
     "topic": "Inferences"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "They are not purely carnivorous animals."
     ],
     "answer": 3,
-    "explanation": "The text states that tapirs \"help regrow the degraded forests though seeds that are spread when they defecate.\" In other words. they must eat something that has seeds in order to defecate them, so they must be eating some kind of plant. Therefore, they are not purely \"carnivorous\" or \"meat-eating\" animals. Distractor Explanations: Choice A cannot be determined based on the text because there is no discussion about why tapirs survived the Ice Age extinction; they could just be well-adapted to cold. Choice B is also not supported by any evidence from the text. Choice C is one possible explanation for the vehicle strikes, but there could be other reasons such as having poor [PAGE 106 RIGHT] 'ND IDEAS eyesight so they do not see the cars, or being well- camouflaged when cars travel at night. 75.",
+    "explanation": "Choice D is correct. The text states that tapirs \"help regrow the degraded forests though seeds that are spread when they defecate.\" In other words. they must eat something that has seeds in order to defecate them, so they must be eating some kind of plant. Therefore, they are not purely \"carnivorous\" or \"meat-eating\" animals. Distractor Explanations: Choice A cannot be determined based on the text because there is no discussion about why tapirs survived the Ice Age extinction; they could just be well-adapted to cold. Choice B is also not supported by any evidence from the text. Choice C is one possible explanation for the vehicle strikes, but there could be other reasons such as having poor 'ND IDEAS eyesight so they do not see the cars, or being well- camouflaged when cars travel at night. 75.",
     "topic": "Inferences"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "They only feel the need to help if there is a proven danger to the other."
     ],
     "answer": 1,
-    "explanation": ". The passage says that the rats helped if \"they had been raised together,\" meaning that the rats had a connection of some kind to the other when releasing it. However, the fact that they \"would often ignore the plight\" of strange rats indicates that they did not feel \"compelled\" or \"forced\" to help strangers in any way. Distractor Explanations: Choice A is incorrect because there is no indication of liking or disliking, only assisting or not. The choice could be based on survival benefits and not emotions. Choice C is incorrect because, if they were \"inclined\" or \"had a tendency\" to help others in the species, they would help the strange rats, as all rats are the same species. Choice D is incorrect because there is no discussion of \"danger\" to the rat in the tube, only the inability to free itself. It is referred to as \"trapped\" but not as being at risk of injury or death. 76.",
+    "explanation": "Choice B is correct. . The passage says that the rats helped if \"they had been raised together,\" meaning that the rats had a connection of some kind to the other when releasing it. However, the fact that they \"would often ignore the plight\" of strange rats indicates that they did not feel \"compelled\" or \"forced\" to help strangers in any way. Distractor Explanations: Choice A is incorrect because there is no indication of liking or disliking, only assisting or not. The choice could be based on survival benefits and not emotions. Choice C is incorrect because, if they were \"inclined\" or \"had a tendency\" to help others in the species, they would help the strange rats, as all rats are the same species. Choice D is incorrect because there is no discussion of \"danger\" to the rat in the tube, only the inability to free itself. It is referred to as \"trapped\" but not as being at risk of injury or death. 76.",
     "topic": "Inferences"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "The leaders in Afghanistan do not want any foreign companies to invest in infrastructure."
     ],
     "answer": 0,
-    "explanation": "The paragraph says it is \"sadly ironic\" that the people live in poverty with health issues while there is a wealth of mineral resources. Ihat comparison implies that the resources would provide enough money to solve some of the problems, raising the overall standard of living, if the resources were mined and sold. Distractor Explanations: Choice B is incorrect because the minerals are referred to as \"untapped,\" meaning they are not yet being removed. [PAGE 107 LEFT] Inferenc Therefore, no equipment has been used to take the minerals out yet. Choices C and D are not addressed by the passage; there is no indication of where the country's money is being spent, or whether the leaders want other countries to participate. It is possible that Afghanistan could set up the infrastructure without foreign assistance. 77.",
+    "explanation": "Choice A is correct. The paragraph says it is \"sadly ironic\" that the people live in poverty with health issues while there is a wealth of mineral resources. Ihat comparison implies that the resources would provide enough money to solve some of the problems, raising the overall standard of living, if the resources were mined and sold. Distractor Explanations: Choice B is incorrect because the minerals are referred to as \"untapped,\" meaning they are not yet being removed. Inferenc Therefore, no equipment has been used to take the minerals out yet. Choices C and D are not addressed by the passage; there is no indication of where the country's money is being spent, or whether the leaders want other countries to participate. It is possible that Afghanistan could set up the infrastructure without foreign assistance. 77.",
     "topic": "Inferences"
   },
   {
@@ -183,7 +183,7 @@ const QUESTIONS = [
       "The elephants are no longer dispersing the seeds very far from the original trees."
     ],
     "answer": 1,
-    "explanation": "The passage refers to the \"vicious cycle,\" which refers to one thing causing something else to happen. and that result causes the first thing to happen again. The text describes a decrease in fruit trees and the \"pressure from starvation\" on the elephants that eat the fruit. In other words, there are not enough fruits for the elephants, who spread the seeds. As a result, elephants starve and there are fewer elephants to eat and \"disperse\" or \"spread\" the seeds. Fewer trees then grow in different places around the forest, creating even less food for the elephants. Distractor Explanations: Choice A is incorrect because there is no indication that the elephants eat anything other than their \"staple\" or mam diet of fruit; otherwise, they might not be facing starvation. Choice C is incorrect because there is no discussion of conservation in the text. Choice D is incorrect because the text refers to a \"wide range\" for the elephants. There is no indication that the range has changed, only the number of elephants. 78.",
+    "explanation": "Choice B is correct. The passage refers to the \"vicious cycle,\" which refers to one thing causing something else to happen. and that result causes the first thing to happen again. The text describes a decrease in fruit trees and the \"pressure from starvation\" on the elephants that eat the fruit. In other words, there are not enough fruits for the elephants, who spread the seeds. As a result, elephants starve and there are fewer elephants to eat and \"disperse\" or \"spread\" the seeds. Fewer trees then grow in different places around the forest, creating even less food for the elephants. Distractor Explanations: Choice A is incorrect because there is no indication that the elephants eat anything other than their \"staple\" or mam diet of fruit; otherwise, they might not be facing starvation. Choice C is incorrect because there is no discussion of conservation in the text. Choice D is incorrect because the text refers to a \"wide range\" for the elephants. There is no indication that the range has changed, only the number of elephants. 78.",
     "topic": "Inferences"
   },
   {
@@ -196,7 +196,7 @@ const QUESTIONS = [
       "his announcement led to a new wave of learning about the Egyptian language."
     ],
     "answer": 0,
-    "explanation": "It gives a reason that Champollion was able to \"find the key\" or \"decipher\" the writing: [PAGE 107 RIGHT] (Answers) 79. 80. he noticed a similarity between the texts that had \"phonetic\" or \"sound-based\" letters. Distractor Explanations: Choice B is a true event about Champollion's presentation of solving the meaning of the writing, but it does not complete the sentence saying \"when\" he \"found the key\" or \"solved\" the problem of how to read the texts. Choice C is weak because it is too vague for the reader to know how Champollion solved the problem; it only suggests that he was \"curious\" or \"interested\" in it. Choice D is incorrect because it shows what happened after he \"found the key\" and announced what he had found.",
+    "explanation": "Choice A is correct. It gives a reason that Champollion was able to \"find the key\" or \"decipher\" the writing: (Answers) 79. 80. he noticed a similarity between the texts that had \"phonetic\" or \"sound-based\" letters. Distractor Explanations: Choice B is a true event about Champollion's presentation of solving the meaning of the writing, but it does not complete the sentence saying \"when\" he \"found the key\" or \"solved\" the problem of how to read the texts. Choice C is weak because it is too vague for the reader to know how Champollion solved the problem; it only suggests that he was \"curious\" or \"interested\" in it. Choice D is incorrect because it shows what happened after he \"found the key\" and announced what he had found.",
     "topic": "Inferences"
   },
   {
@@ -209,7 +209,7 @@ const QUESTIONS = [
       "Culture"
     ],
     "answer": 0,
-    "explanation": "The sentence is talking about how the Amish are able to be productive without the use of modern farming equipment and fertilizers. Therefore, logically, choice A is the most fitting in this context. Distractor Explanations: Choice B is incorrect because their lifestyle has already been mentioned in the first sentence of the second paragraph as not being the most extraordinary. Choice C is incorrect because the sentence will be grammatically incorrect if one inserts the option in the blank space (\"their methods is\" isn't grammatically correct). Option D is incorrect because the sentence is talking about their farming methods and not about the culture or lifestyle of the Amish.",
+    "explanation": "Choice A is correct. The sentence is talking about how the Amish are able to be productive without the use of modern farming equipment and fertilizers. Therefore, logically, choice A is the most fitting in this context. Distractor Explanations: Choice B is incorrect because their lifestyle has already been mentioned in the first sentence of the second paragraph as not being the most extraordinary. Choice C is incorrect because the sentence will be grammatically incorrect if one inserts the option in the blank space (\"their methods is\" isn't grammatically correct). Option D is incorrect because the sentence is talking about their farming methods and not about the culture or lifestyle of the Amish.",
     "topic": "Inferences"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "He had many sad tales about his voyage."
     ],
     "answer": 1,
-    "explanation": "The text mentions that Sir Thomas was happy to be back home, and this made him [PAGE 108 LEFT] INFORMATION \"communicative and chatty to a very unusual degree.\" This implies that he wasnt usually this Distractor Explanations: Choice A is incorrect because the text does not mention that he is rich, and his business has only \"latterly been prosperously rapid.\" Choice C is incorrect because the text doesn't say he is fortunate, but that Sir Thomas considers himself fortunate. Choice D is incorrect because the text does not mention that his stories are sad. 81.",
+    "explanation": "Choice B is correct. The text mentions that Sir Thomas was happy to be back home, and this made him INFORMATION \"communicative and chatty to a very unusual degree.\" This implies that he wasnt usually this Distractor Explanations: Choice A is incorrect because the text does not mention that he is rich, and his business has only \"latterly been prosperously rapid.\" Choice C is incorrect because the text doesn't say he is fortunate, but that Sir Thomas considers himself fortunate. Choice D is incorrect because the text does not mention that his stories are sad. 81.",
     "topic": "Inferences"
   },
   {
@@ -235,7 +235,7 @@ const QUESTIONS = [
       "The pharaoh did not participate in social conventions and were religious leaders only."
     ],
     "answer": 0,
-    "explanation": "Since the text mentions that all the land in Egypt was owned by the pharaoh. Distractor Explanations: Choice B is incorrect because the text mentions that the pharaoh was the \"divine intermediary between the gods and Egyptians.\" Choice C is incorrect because the text mentions that the pharaoh was the divine intermediary between the gods and the Egyptians, implying that there were several Gods. Choice D is incorrect because the text mentions the responsibilities included \"participating in ceremonies.\" 82.",
+    "explanation": "Choice A is correct. Since the text mentions that all the land in Egypt was owned by the pharaoh. Distractor Explanations: Choice B is incorrect because the text mentions that the pharaoh was the \"divine intermediary between the gods and Egyptians.\" Choice C is incorrect because the text mentions that the pharaoh was the divine intermediary between the gods and the Egyptians, implying that there were several Gods. Choice D is incorrect because the text mentions the responsibilities included \"participating in ceremonies.\" 82.",
     "topic": "Inferences"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "The author had already traveled extensively"
     ],
     "answer": 2,
-    "explanation": "According to the text, the author \"began that journey through the eyes of an encyclopedic professor who guided me to China,\" Distractor Explanations: Choice A is incorrect because there is no evidence to support the claim that the author had not traveled before. He only mentions he \"discovered the other half of the world,\" meaning he was familiar with one [PAGE 108 RIGHT] 'ND IDEAS half. Choice B is incorrect because the text only mentions a \"Philadelphia suburban education.\" Choice D is incorrect because the text offers no evidence that the author had already traveled 83.",
+    "explanation": "Choice C is correct. According to the text, the author \"began that journey through the eyes of an encyclopedic professor who guided me to China,\" Distractor Explanations: Choice A is incorrect because there is no evidence to support the claim that the author had not traveled before. He only mentions he \"discovered the other half of the world,\" meaning he was familiar with one 'ND IDEAS half. Choice B is incorrect because the text only mentions a \"Philadelphia suburban education.\" Choice D is incorrect because the text offers no evidence that the author had already traveled 83.",
     "topic": "Inferences"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "Overlooks"
     ],
     "answer": 0,
-    "explanation": "To commemorate something means to remember the event and by doing so. to honor it. Here, the memorial commemorates the employees of LMWR killed in the First World War. Distractor Explanations: Choice B is incorrect because to idolize is to respect or admire someone extensively. Here the memorial has been built to remember martyrs and not only show respect. Choice C is incorrect because \"celebrate\" is not a word used to describe the purpose of a memorial. Choice D is incorrect because the memorial has been built for the fallen LNWR employees and hence, cannot overlook or ignore therm 84.",
+    "explanation": "Choice A is correct. To commemorate something means to remember the event and by doing so. to honor it. Here, the memorial commemorates the employees of LMWR killed in the First World War. Distractor Explanations: Choice B is incorrect because to idolize is to respect or admire someone extensively. Here the memorial has been built to remember martyrs and not only show respect. Choice C is incorrect because \"celebrate\" is not a word used to describe the purpose of a memorial. Choice D is incorrect because the memorial has been built for the fallen LNWR employees and hence, cannot overlook or ignore therm 84.",
     "topic": "Inferences"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "Glitter"
     ],
     "answer": 2,
-    "explanation": ". According to the text, an onomatopoeia is a word that sounds exactly like the sound that it describes. The word \"miaow\" sounds exactly like the sound of a cat, which is what the word is describing. Distractor Explanation: All the other choices are incorrect because they are not words that sound like what they are describing. For example, \"glitter\" does not make a sound, and neither does \"Twinkle.\" [PAGE 109 LEFT] Cha Crai Stru This chapter includes questions on ttu \u0007 Words in Context \u0007 Text Structure and Purpose \u0007 Cross-Text Connection [PAGE 109 RIGHT] pter 4 ft and Icture following topics:",
+    "explanation": "Choice C is correct. . According to the text, an onomatopoeia is a word that sounds exactly like the sound that it describes. The word \"miaow\" sounds exactly like the sound of a cat, which is what the word is describing. Distractor Explanation: All the other choices are incorrect because they are not words that sound like what they are describing. For example, \"glitter\" does not make a sound, and neither does \"Twinkle.\" Cha Crai Stru This chapter includes questions on ttu Words in Context Text Structure and Purpose Cross-Text Connection pter 4 ft and Icture following topics:",
     "topic": "Inferences"
   },
   {
@@ -287,7 +287,7 @@ const QUESTIONS = [
       "there is no consensus on how many grey wolf subspecies exist"
     ],
     "answer": 3,
-    "explanation": "The text states that the actual number of grey wolf subspecies is 'still open to discussion', indicating there is no consensus. Choice (D) is correct. Choice (A) is contradicted. Choices (B) and (C) are not discussed.",
+    "explanation": "Choice D is correct. The text states that the actual number of grey wolf subspecies is 'still open to discussion', indicating there is no consensus. Choice (D) is correct. Choice (A) is contradicted. Choices (B) and (C) are not discussed.",
     "topic": "Grey Wolf Subspecies"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "grey wolves live in very large packs"
     ],
     "answer": 0,
-    "explanation": "The text states that genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and 'might be its ancestor', meaning the dog could have descended from the grey wolf. Choice (A) is correct. Choices (B), (C), and (D) are not supported.",
+    "explanation": "Choice A is correct. The text states that genetic studies indicate the grey wolf shares a common ancestry with the domestic dog and 'might be its ancestor', meaning the dog could have descended from the grey wolf. Choice (A) is correct. Choices (B), (C), and (D) are not supported.",
     "topic": "Grey Wolf and Dog Ancestry"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "for which there has been a successful cure in recent years"
     ],
     "answer": 0,
-    "explanation": "The text states that all signs start before a child is three, and parents usually notice signs in the first two years of life, which means it shows early signs in childhood. Choice (A) is correct. Choice (B) is described as controversial and lacking evidence. Choice (C) and (D) are contradicted.",
+    "explanation": "Choice A is correct. The text states that all signs start before a child is three, and parents usually notice signs in the first two years of life, which means it shows early signs in childhood. Choice (A) is correct. Choice (B) is described as controversial and lacking evidence. Choice (C) and (D) are contradicted.",
     "topic": "Autism Early Signs"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "is characterized by abnormalities of behavior patterns"
     ],
     "answer": 3,
-    "explanation": "The text states that autism causes impaired social interaction and communication, as well as restricted and repetitive behavior. These constitute abnormalities of behavior patterns. Choice (D) is correct. Choices (A) and (C) are incorrect or not in text. Choice (B) is incorrect because only 'some' believe it is a condition rather than disorder.",
+    "explanation": "Choice D is correct. The text states that autism causes impaired social interaction and communication, as well as restricted and repetitive behavior. These constitute abnormalities of behavior patterns. Choice (D) is correct. Choices (A) and (C) are incorrect or not in text. Choice (B) is incorrect because only 'some' believe it is a condition rather than disorder.",
     "topic": "Autism Behavior Patterns"
   }
 ];

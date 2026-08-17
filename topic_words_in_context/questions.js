@@ -14,7 +14,7 @@ const QUESTIONS = [
       "design"
     ],
     "answer": 1,
-    "explanation": "The blank portion shows what part of \"complex chemistry\" \"life\" is. Choice B refers to a class or category, so fits the context of saying that life is a category of chemistry that uses simple elements. Distractor Explanations: Choice A is incorrect because it refers to a replica, an original that replicas are made from, or an ideal. None of these fit the context because there are no copies of the general concept of life. Choice C is incorrect because it refers to one part of a larger set of identical things. However, \"life\" is different from the other parts of complex chemistry. Choice D refers to a pattern for something. However, life is a changing process that does not follow a specific set of guidelines or blueprint.",
+    "explanation": "Choice B is correct. The blank portion shows what part of \"complex chemistry\" \"life\" is. Choice B refers to a class or category, so fits the context of saying that life is a category of chemistry that uses simple elements. Distractor Explanations: Choice A is incorrect because it refers to a replica, an original that replicas are made from, or an ideal. None of these fit the context because there are no copies of the general concept of life. Choice C is incorrect because it refers to one part of a larger set of identical things. However, \"life\" is different from the other parts of complex chemistry. Choice D refers to a pattern for something. However, life is a changing process that does not follow a specific set of guidelines or blueprint.",
     "topic": "Words in Context"
   },
   {
@@ -27,7 +27,7 @@ const QUESTIONS = [
       "diploma"
     ],
     "answer": 1,
-    "explanation": "The blank should infer that most men cherish towards the ocean. Choice B means \"quantity,\" so it accurately shows that all men have some quantity of desire to go to the sea. Distractor Explanations: All of the other choices can be eliminated because they do not describe what most men feel about the ocean. Choice A refers to status. Choice C refers to a measurement or level of attainment. Choice D refers to an official document showing that a course of study was completed.",
+    "explanation": "Choice B is correct. The blank should infer that most men cherish towards the ocean. Choice B means \"quantity,\" so it accurately shows that all men have some quantity of desire to go to the sea. Distractor Explanations: All of the other choices can be eliminated because they do not describe what most men feel about the ocean. Choice A refers to status. Choice C refers to a measurement or level of attainment. Choice D refers to an official document showing that a course of study was completed.",
     "topic": "Words in Context"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "attachment"
     ],
     "answer": 2,
-    "explanation": "The blank portion is something that is noticed which helps \"teens get unstuck from [PAGE 121 RIGHT] ontext (Answers) 88.",
+    "explanation": "Choice C is correct. The blank portion is something that is noticed which helps \"teens get unstuck from ontext (Answers) 88.",
     "topic": "Words in Context"
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "administer"
     ],
     "answer": 2,
-    "explanation": "The blank portion is what the factors do to the populations so that the populations are \"at relative abundances that are consistent from one place to another.\" Choice C refers to making something stable. so it fits the context of saying that the populations are relatively the same. Distractor Explanations: None of the other choices fits the context of describing what the factors do to the populations. The other choices all refer to a deliberate action of overseeing the actions of someone or something else. but \"factors\" are inanimate and cannot decide to direct anything else.",
+    "explanation": "Choice C is correct. The blank portion is what the factors do to the populations so that the populations are \"at relative abundances that are consistent from one place to another.\" Choice C refers to making something stable. so it fits the context of saying that the populations are relatively the same. Distractor Explanations: None of the other choices fits the context of describing what the factors do to the populations. The other choices all refer to a deliberate action of overseeing the actions of someone or something else. but \"factors\" are inanimate and cannot decide to direct anything else.",
     "topic": "Words in Context"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "amalgam"
     ],
     "answer": 2,
-    "explanation": "The blank portion refers to an aspect of the diet that Mann questioned twenty vegans about. Choice C refers to the makeup or structure of something, so fits the context of explaining that Mann asked about the makeup or balance of parts in the diet. [PAGE 122 LEFT] CRAFT AND STI Distractor Explanations: None of the other choices adequately show what part of the diet Mann discussed with the twenty vegans. Choice A refers to how things are spaced and organized rather than the balance of things. Choice B refers to the inherent personality of someone. Choice D refers to a mixture.",
+    "explanation": "Choice C is correct. The blank portion refers to an aspect of the diet that Mann questioned twenty vegans about. Choice C refers to the makeup or structure of something, so fits the context of explaining that Mann asked about the makeup or balance of parts in the diet. CRAFT AND STI Distractor Explanations: None of the other choices adequately show what part of the diet Mann discussed with the twenty vegans. Choice A refers to how things are spaced and organized rather than the balance of things. Choice B refers to the inherent personality of someone. Choice D refers to a mixture.",
     "topic": "Words in Context"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "appreciate"
     ],
     "answer": 1,
-    "explanation": "\"recognize\" is what \"we,\" the Union, could do to the new government of Louisiana that would make the \"converse\" or \"opposite\" of the previous discussion true. The previous discussion is about what happens if the Union does not support Louisiana. Choice B refers to welcoming or integrating something, in this case, Louisiana, so it fits the context of showing the opposite of rejecting Louisiana. Distractor Explanations: None of the other choices show the opposite of rejection. Choice A refers to indicating what something is or naming it. Choice C refers to either fully understanding something or achieving a goal Choice D refers to knowing the value of something.",
+    "explanation": "Choice B is correct. \"recognize\" is what \"we,\" the Union, could do to the new government of Louisiana that would make the \"converse\" or \"opposite\" of the previous discussion true. The previous discussion is about what happens if the Union does not support Louisiana. Choice B refers to welcoming or integrating something, in this case, Louisiana, so it fits the context of showing the opposite of rejecting Louisiana. Distractor Explanations: None of the other choices show the opposite of rejection. Choice A refers to indicating what something is or naming it. Choice C refers to either fully understanding something or achieving a goal Choice D refers to knowing the value of something.",
     "topic": "Words in Context"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "shelter"
     ],
     "answer": 0,
-    "explanation": "It means \"hold\" or \"provide sufficient space for.\" It fits the context of saying that MCOs have three copper-binding sites that can provide space for or hold six copper atoms. Distractor Explanation: None of the other choices sufficiently fits the context of explaining what the three copper-binding sites do to the six [PAGE 122 RIGHT] RUCTURE copper atoms. Choice B refers to providing space for a person or people to stay; it does not apply to inanimate objects such as atoms. Choice C refers to providing a person a room to stay in for a rental fee. Choice D refers to protecting something from something harmful, but there is no evidence that the copper-binding sites are trying to help the copper atoms remain safe.",
+    "explanation": "Choice A is correct. It means \"hold\" or \"provide sufficient space for.\" It fits the context of saying that MCOs have three copper-binding sites that can provide space for or hold six copper atoms. Distractor Explanation: None of the other choices sufficiently fits the context of explaining what the three copper-binding sites do to the six RUCTURE copper atoms. Choice B refers to providing space for a person or people to stay; it does not apply to inanimate objects such as atoms. Choice C refers to providing a person a room to stay in for a rental fee. Choice D refers to protecting something from something harmful, but there is no evidence that the copper-binding sites are trying to help the copper atoms remain safe.",
     "topic": "Words in Context"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "worth"
     ],
     "answer": 0,
-    "explanation": ", in the context, \"standard\" refers to what the laws of the several slave-holding states are in relation to the government's action. Choice A refers to a general rule or requirement. lherefore, it accurately shows that the laws of the states are the rules that the government follows. Distractor Explanations: None of the other choices adequately establishes the relationship between the laws and the government's action. Choice B refers to the general excellence of something, so does not act as a measure. Choice C refers to the most perfect example, but the laws ily perfect. Choice D refers to how are not necessar valuable something is rather than how it is used.",
+    "explanation": "Choice A is correct. , in the context, \"standard\" refers to what the laws of the several slave-holding states are in relation to the government's action. Choice A refers to a general rule or requirement. lherefore, it accurately shows that the laws of the states are the rules that the government follows. Distractor Explanations: None of the other choices adequately establishes the relationship between the laws and the government's action. Choice B refers to the general excellence of something, so does not act as a measure. Choice C refers to the most perfect example, but the laws ily perfect. Choice D refers to how are not necessar valuable something is rather than how it is used.",
     "topic": "Words in Context"
   },
   {
@@ -118,7 +118,7 @@ const QUESTIONS = [
       "confllctmg"
     ],
     "answer": 2,
-    "explanation": "It is used to describe a place that is harsh and severe. It fits the context of saying that the Southern Ocean contains some of the most harsh and severe water conditions on the planet. Distractor Explanation: None of the other choices fits the context of describing a harsh environment. Choice A refers to something that IS ready to attack or confront something else. [PAGE 123 LEFT] Words in C It is not used to describe something that is not deliberately trying to inflict harm. Choice B refers to an emotional state in which someone feels hostility towards something; it is not used to describe an inanimate object. Choice D refers to things which are at variance with each other. However, \"hostile\" is only referring to the \"seas,\" not to more than one thing that could be incompatible with each other.",
+    "explanation": "Choice C is correct. It is used to describe a place that is harsh and severe. It fits the context of saying that the Southern Ocean contains some of the most harsh and severe water conditions on the planet. Distractor Explanation: None of the other choices fits the context of describing a harsh environment. Choice A refers to something that IS ready to attack or confront something else. Words in C It is not used to describe something that is not deliberately trying to inflict harm. Choice B refers to an emotional state in which someone feels hostility towards something; it is not used to describe an inanimate object. Choice D refers to things which are at variance with each other. However, \"hostile\" is only referring to the \"seas,\" not to more than one thing that could be incompatible with each other.",
     "topic": "Words in Context"
   },
   {
@@ -131,7 +131,7 @@ const QUESTIONS = [
       "approach"
     ],
     "answer": 1,
-    "explanation": "The blank is used to show what urban planners will be needed to do with different types of issues. Choice B refers to \"dealing with\" or \"solving\" a problem or difficulty. Therefore, it fits the context of saying that in cities, urban planners will have to deal with problems such as population Distractor Explanations: None of the other choices effectively explains what the planners do with issues. Choice A refers to canceling sending something rather than solving something. Choice C refers to sharing information. However, the planners do not just need to talk about issues; they need to solve issues. Choice D is incorrect because it refers to starting or beginning something, but it does not include the idea of following through until the problem is solved.",
+    "explanation": "Choice B is correct. The blank is used to show what urban planners will be needed to do with different types of issues. Choice B refers to \"dealing with\" or \"solving\" a problem or difficulty. Therefore, it fits the context of saying that in cities, urban planners will have to deal with problems such as population Distractor Explanations: None of the other choices effectively explains what the planners do with issues. Choice A refers to canceling sending something rather than solving something. Choice C refers to sharing information. However, the planners do not just need to talk about issues; they need to solve issues. Choice D is incorrect because it refers to starting or beginning something, but it does not include the idea of following through until the problem is solved.",
     "topic": "Words in Context"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "attachment"
     ],
     "answer": 2,
-    "explanation": "The word in the blank describes the correlation between what teens do and what teens feel. - something that has been noticed to help break negative mood spirals. Choice C refers to [PAGE 123 RIGHT] ontext (Answers) 96.",
+    "explanation": "Choice C is correct. The word in the blank describes the correlation between what teens do and what teens feel. - something that has been noticed to help break negative mood spirals. Choice C refers to ontext (Answers) 96.",
     "topic": "Words in Context"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "endure"
     ],
     "answer": 0,
-    "explanation": "The blank portion is used to describe what the -habitable conditions\" do in the \"subsurface of Mars or inside the icy moons of the outer solar system.\" Choice A means \"occur\" or \"be found,\" so shows that the habitable conditions may occur in places like under the surface of Mars or inside icy Distractor Explanations: Choices B and C are incorrect because they refer to having a victory or success over something else. However, the habitable conditions do not win in a contest against places like inside Mars or icy moons. Choice D refers to lasting or continuing, often despite hardship. However, the habitable conditions do not continue on despite problems; the habitable conditions just occur.",
+    "explanation": "Choice A is correct. The blank portion is used to describe what the -habitable conditions\" do in the \"subsurface of Mars or inside the icy moons of the outer solar system.\" Choice A means \"occur\" or \"be found,\" so shows that the habitable conditions may occur in places like under the surface of Mars or inside icy Distractor Explanations: Choices B and C are incorrect because they refer to having a victory or success over something else. However, the habitable conditions do not win in a contest against places like inside Mars or icy moons. Choice D refers to lasting or continuing, often despite hardship. However, the habitable conditions do not continue on despite problems; the habitable conditions just occur.",
     "topic": "Words in Context"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "administer"
     ],
     "answer": 2,
-    "explanation": "Choice C refers to making something stable. The word in the blank is what the factors [PAGE 124 LEFT] CRAFT AND STI do to the populations so that the populations are \"at relative abundances that are consistent from one place to another,\" in other words, they remain stable or the same. Choice C, therefore, fits the context of saying that the populations are relatively the same. Distractor Explanations: None of the other choices fits the context of describing what impact the factors have on the populations. The other choices all refer to a deliberate action of directing the actions of someone or so mething else, but \"factors\" are inanimate and cannot decide to direct anything else.",
+    "explanation": "Choice C is correct. Choice C refers to making something stable. The word in the blank is what the factors CRAFT AND STI do to the populations so that the populations are \"at relative abundances that are consistent from one place to another,\" in other words, they remain stable or the same. Choice C, therefore, fits the context of saying that the populations are relatively the same. Distractor Explanations: None of the other choices fits the context of describing what impact the factors have on the populations. The other choices all refer to a deliberate action of directing the actions of someone or so mething else, but \"factors\" are inanimate and cannot decide to direct anything else.",
     "topic": "Words in Context"
   },
   {
@@ -183,7 +183,7 @@ const QUESTIONS = [
       "counter"
     ],
     "answer": 3,
-    "explanation": "The underline should describe what the antibodies' ability does to the synthetic opioids' effects. Choice D refers to opposing or making something ineffective, so accurately shows that the researchers are trying to determine how effective the antibodies are at making the opioids ineffective. Distractor Explanation: Choice A refers to refusing something in a way that is not gracious. It describes a deliberate action in response to an offer or request. Choice B refers to being upset, so does not apply to an inanimate object- Choice C refers to claiming that something is incorrect. However, the antibodies do not disagree or say that the opioids are wrong.",
+    "explanation": "Choice D is correct. The underline should describe what the antibodies' ability does to the synthetic opioids' effects. Choice D refers to opposing or making something ineffective, so accurately shows that the researchers are trying to determine how effective the antibodies are at making the opioids ineffective. Distractor Explanation: Choice A refers to refusing something in a way that is not gracious. It describes a deliberate action in response to an offer or request. Choice B refers to being upset, so does not apply to an inanimate object- Choice C refers to claiming that something is incorrect. However, the antibodies do not disagree or say that the opioids are wrong.",
     "topic": "Words in Context"
   },
   {
@@ -196,7 +196,7 @@ const QUESTIONS = [
       "circulated"
     ],
     "answer": 0,
-    "explanation": "The blank portion is what happened to the \"commonalities\" or \"similarities.\" Choice A refers [PAGE 124 RIGHT] RUCTURE to detecting or discovering something, which fits the context of explaining that the study discovered some similar points. Distractor Explanations: Choices B and C are incorrect because they refer to telling a secret, but the study did not decide to share information that it was supposed to keep hidden. Choice D refers to flowing continuously through a closed system, which would imply that the commonalities moved around between members of a certain group of people.",
+    "explanation": "Choice A is correct. The blank portion is what happened to the \"commonalities\" or \"similarities.\" Choice A refers RUCTURE to detecting or discovering something, which fits the context of explaining that the study discovered some similar points. Distractor Explanations: Choices B and C are incorrect because they refer to telling a secret, but the study did not decide to share information that it was supposed to keep hidden. Choice D refers to flowing continuously through a closed system, which would imply that the commonalities moved around between members of a certain group of people.",
     "topic": "Words in Context"
   },
   {
@@ -209,7 +209,7 @@ const QUESTIONS = [
       "endorse"
     ],
     "answer": 2,
-    "explanation": "The blank portion is a verb that shows what the laws have done regarding feeding bears. The text says that the residents place food outside, but the \"resulting conflicts\" or \"problems that have occurred as a consequence\" have caused the laws. Therefore, the laws probably stop the people from feeding the animals. Choice C means \"stop,\" so fits the context well. Distractor Explanations: None of the other choices accurately describe what the laws do about feeding bears. Choice A refers to criticizing something severely, but a law does not criticize, it prevents an action. Choice B refers to a law banning trade or another official action between countries; the word is not applicable to stopping a private citizen from doing something. Choice D means \"encourages.\" Though it grammatically fits the context, it does not logically describe what the law does to prevent conflicts between people and bears due to the people feeding bears.",
+    "explanation": "Choice C is correct. The blank portion is a verb that shows what the laws have done regarding feeding bears. The text says that the residents place food outside, but the \"resulting conflicts\" or \"problems that have occurred as a consequence\" have caused the laws. Therefore, the laws probably stop the people from feeding the animals. Choice C means \"stop,\" so fits the context well. Distractor Explanations: None of the other choices accurately describe what the laws do about feeding bears. Choice A refers to criticizing something severely, but a law does not criticize, it prevents an action. Choice B refers to a law banning trade or another official action between countries; the word is not applicable to stopping a private citizen from doing something. Choice D means \"encourages.\" Though it grammatically fits the context, it does not logically describe what the law does to prevent conflicts between people and bears due to the people feeding bears.",
     "topic": "Words in Context"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "subjugate"
     ],
     "answer": 0,
-    "explanation": "It refers to invading or moving gradually beyond accepted limits. It is acceptable to use with inanimate objects, so fits the context of explaining that the ocean moves forward into areas that the residents of Timbulsloko do not want it to enter. Distractor Explanations: None of the other choices fits the context of explaining what the ocean does. All of the choices refer to dominating or taking over something, but they include the idea of an active desire to have the area. The ocean is inanimate, so it does not actively want to take over the land.",
+    "explanation": "Choice A is correct. It refers to invading or moving gradually beyond accepted limits. It is acceptable to use with inanimate objects, so fits the context of explaining that the ocean moves forward into areas that the residents of Timbulsloko do not want it to enter. Distractor Explanations: None of the other choices fits the context of explaining what the ocean does. All of the choices refer to dominating or taking over something, but they include the idea of an active desire to have the area. The ocean is inanimate, so it does not actively want to take over the land.",
     "topic": "Words in Context"
   },
   {
@@ -235,7 +235,7 @@ const QUESTIONS = [
       "hoping for"
     ],
     "answer": 1,
-    "explanation": "It means \"missing.\" In the text, \"wanting\" refers to two fingers on the hand of a person who appears to be a sailor. Choice B clearly shows that two fingers are not there. Distractor Explanations: Choices A and D can be eliminated because they refer to the desire for something, but there is no indication in the text that the sailor desires new fingers, at least in the described scene. The narrator is just describing the appearance of the man. Choice C refers to needing something, but the sailor is not fumbling or having difficulties without the fingers, so he can get by without them.",
+    "explanation": "Choice B is correct. It means \"missing.\" In the text, \"wanting\" refers to two fingers on the hand of a person who appears to be a sailor. Choice B clearly shows that two fingers are not there. Distractor Explanations: Choices A and D can be eliminated because they refer to the desire for something, but there is no indication in the text that the sailor desires new fingers, at least in the described scene. The narrator is just describing the appearance of the man. Choice C refers to needing something, but the sailor is not fumbling or having difficulties without the fingers, so he can get by without them.",
     "topic": "Words in Context"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "assembled"
     ],
     "answer": 2,
-    "explanation": "It means \"created\" or \"produced,\" so fits the context of saying that sparks are produced when the knife touches the wheel. [PAGE 125 RIGHT] ontext (Answers) Distractor Explanations: Choice A is incorrect because it refers to slow changes over time rather than an instantaneous action. Choices B and D are incorrect because they refer to producing something on purpose, such as a product to sell. They are not used to describe the by-product of a process. Sparks are not made on purpose; they are a by-product of \"honing\" or \"sharpening\" a knife.",
+    "explanation": "Choice C is correct. It means \"created\" or \"produced,\" so fits the context of saying that sparks are produced when the knife touches the wheel. ontext (Answers) Distractor Explanations: Choice A is incorrect because it refers to slow changes over time rather than an instantaneous action. Choices B and D are incorrect because they refer to producing something on purpose, such as a product to sell. They are not used to describe the by-product of a process. Sparks are not made on purpose; they are a by-product of \"honing\" or \"sharpening\" a knife.",
     "topic": "Words in Context"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "unrestricted"
     ],
     "answer": 2,
-    "explanation": "It refers to something which is not to be relied on. It fits the context of saying that people have questionable evidence like blurry videos to try to prove that they have seen the Yeti. Distractor Explanations: None of the other choices aptly describes the evidence that people use to support their claims about the Yeti. The word \"other\" shows that the word needs to be similar to blurry photographs and damaged photographs. Choice A means \"very logical,\" so is not consistent with things that are not very convincing. Choice B refers to being slow to make a decision, but the evidence is not an animate, thinking thing. Choice D refers to having no limits.",
+    "explanation": "Choice C is correct. It refers to something which is not to be relied on. It fits the context of saying that people have questionable evidence like blurry videos to try to prove that they have seen the Yeti. Distractor Explanations: None of the other choices aptly describes the evidence that people use to support their claims about the Yeti. The word \"other\" shows that the word needs to be similar to blurry photographs and damaged photographs. Choice A means \"very logical,\" so is not consistent with things that are not very convincing. Choice B refers to being slow to make a decision, but the evidence is not an animate, thinking thing. Choice D refers to having no limits.",
     "topic": "Words in Context"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "potential"
     ],
     "answer": 3,
-    "explanation": "The blank portion needs to describe the \"predators\" or \"things which might eat the snake.\" The snake \"attempts\" or \"tries\" to scare it off, so the predator is not yet successful. Choice D refers to something that is possible, so indicates that it is possible for the creature to eat the snake. [PAGE 126 LEFT] CRAFT AND STI Distractor Explanations: None of the other choices aptly describe the \"predators\" in this context. Choice A refers to something that stops another thing from happening. Ihough the action of manipulating sound is preventative for the snake, it does not describe the predators. Choice B refers to something that is trying to impress. Choice C refers to something that is wealthy.",
+    "explanation": "Choice D is correct. The blank portion needs to describe the \"predators\" or \"things which might eat the snake.\" The snake \"attempts\" or \"tries\" to scare it off, so the predator is not yet successful. Choice D refers to something that is possible, so indicates that it is possible for the creature to eat the snake. CRAFT AND STI Distractor Explanations: None of the other choices aptly describe the \"predators\" in this context. Choice A refers to something that stops another thing from happening. Ihough the action of manipulating sound is preventative for the snake, it does not describe the predators. Choice B refers to something that is trying to impress. Choice C refers to something that is wealthy.",
     "topic": "Words in Context"
   },
   {
@@ -287,7 +287,7 @@ const QUESTIONS = [
       "specialties"
     ],
     "answer": 2,
-    "explanation": "It refers to the object of a study experiment. In the context. in the blank portion, researchers are accused of \"anthropomorphizing\" or \"giving human qualities to\" their subjects. Ihe passage says that they are studying emotions in animals and insects, Choice C correctly shows that some people say the researchers give human emotional qualities to the things they study Distractor Explanations: None of the other choices adequately show that the researchers are accused of \"anthropomorphizing\" or \"giving human qualities to\" their subjects. Choice A refers to doubts or inquiries, but those do not have human qualities . Choice B refers to someone who offers to be in an experiment, but animals do not offer to join, they are selected to participate. Choice D refers to the field of study, not to the things being studied.",
+    "explanation": "Choice C is correct. It refers to the object of a study experiment. In the context. in the blank portion, researchers are accused of \"anthropomorphizing\" or \"giving human qualities to\" their subjects. Ihe passage says that they are studying emotions in animals and insects, Choice C correctly shows that some people say the researchers give human emotional qualities to the things they study Distractor Explanations: None of the other choices adequately show that the researchers are accused of \"anthropomorphizing\" or \"giving human qualities to\" their subjects. Choice A refers to doubts or inquiries, but those do not have human qualities . Choice B refers to someone who offers to be in an experiment, but animals do not offer to join, they are selected to participate. Choice D refers to the field of study, not to the things being studied.",
     "topic": "Words in Context"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "termed"
     ],
     "answer": 2,
-    "explanation": "The blank portion shows how \"mannequin\" and \"Campos\" are related. Choice C means \"named\" or \"called,\" so it fits the context of saying the name of the mannequin is Campos. [PAGE 126 RIGHT] RUCTURE Distractor Explanations: Choices A and B are incorrect because they refer to giving an honor or rights to something, but \"Campos\" is a name. Choice D is incorrect because it is used to show that the following word is an established definition or expression for something.",
+    "explanation": "Choice C is correct. The blank portion shows how \"mannequin\" and \"Campos\" are related. Choice C means \"named\" or \"called,\" so it fits the context of saying the name of the mannequin is Campos. RUCTURE Distractor Explanations: Choices A and B are incorrect because they refer to giving an honor or rights to something, but \"Campos\" is a name. Choice D is incorrect because it is used to show that the following word is an established definition or expression for something.",
     "topic": "Words in Context"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "manifest"
     ],
     "answer": 3,
-    "explanation": "The blank portion needs to show what the 4-degree tilt started to do during construction. Choice D means \"display\" or \"demonstrate,\" so shows that the tower started to show its tilt. Distractor Explanations: None of the other choices adequately explains what the 4-degree tilt started to do during construction. Choice A refers to causing something to begin, but the soft ground caused the tilt rather than the other way around. Choice B is incorrect because it refers to establishing that something is true rather than appearing. Choice C is incorrect because it refers to revealing an emotion.",
+    "explanation": "Choice D is correct. The blank portion needs to show what the 4-degree tilt started to do during construction. Choice D means \"display\" or \"demonstrate,\" so shows that the tower started to show its tilt. Distractor Explanations: None of the other choices adequately explains what the 4-degree tilt started to do during construction. Choice A refers to causing something to begin, but the soft ground caused the tilt rather than the other way around. Choice B is incorrect because it refers to establishing that something is true rather than appearing. Choice C is incorrect because it refers to revealing an emotion.",
     "topic": "Words in Context"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "feasibility"
     ],
     "answer": 1,
-    "explanation": "It refers to \"chance\" or \"accident,\" so it shows that the moving parts add a certain amount of unpredictability to the arrangement of the parts of the sculptures. Distractor Explanations: None of the other choices show what the motors and wind currents do to the arrangement of parts. Choice A refers to wealth and good fortune. Choice C refers to responsibility. Choice D refers to the degree of something being able to be done. [PAGE 127 LEFT] Words in C",
+    "explanation": "Choice B is correct. It refers to \"chance\" or \"accident,\" so it shows that the moving parts add a certain amount of unpredictability to the arrangement of the parts of the sculptures. Distractor Explanations: None of the other choices show what the motors and wind currents do to the arrangement of parts. Choice A refers to wealth and good fortune. Choice C refers to responsibility. Choice D refers to the degree of something being able to be done. Words in C",
     "topic": "Words in Context"
   }
 ];
