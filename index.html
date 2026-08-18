@@ -589,6 +589,46 @@
           <span class="tag">Available</span>
           <a href="./new_test_3/test_math.html" class="card-btn">Start Test →</a>
         </div>
+        <div class="exam-card math">
+          <div class="card-icon">📐</div>
+          <div class="card-num">Math</div>
+          <div class="card-title">Digital SAT Math Practice Test 1</div>
+          <div class="card-sub">54 Qs · 70 min · 2 Modules (Authentic SAT)</div>
+          <span class="tag">Available</span>
+          <a href="./sat_math_mt_1/test_math.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">🔢</div>
+          <div class="card-num">Math</div>
+          <div class="card-title">Binomial Theorem & Sequences</div>
+          <div class="card-sub">30 Qs · 45 min · AP, GP & Binomial Theorem</div>
+          <span class="tag">Available</span>
+          <a href="./topic_binomial_and_sequences/test.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">📈</div>
+          <div class="card-num">Math</div>
+          <div class="card-title">Straight Lines (Coordinate Geometry)</div>
+          <div class="card-sub">18 Qs · 30 min · Slopes, Angles & Polygons</div>
+          <span class="tag">Available</span>
+          <a href="./topic_straight_lines/test.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">🌱</div>
+          <div class="card-num">Math</div>
+          <div class="card-title">Exponential Growth & Decay</div>
+          <div class="card-sub">20 Qs · 30 min · Growth Factors & Multi-period Models</div>
+          <span class="tag">Available</span>
+          <a href="./topic_exponential_growth/test.html" class="card-btn">Start Test →</a>
+        </div>
+        <div class="exam-card math">
+          <div class="card-icon">🎯</div>
+          <div class="card-num">Math</div>
+          <div class="card-title">Digital SAT Mock Test 2</div>
+          <div class="card-sub">54 Qs · 70 min · 2 Modules (Full Math Mock)</div>
+          <span class="tag">Available</span>
+          <a href="./sat_mock_test_2/test.html" class="card-btn">Start Test →</a>
+        </div>
       </div>
     </div>
 
@@ -822,6 +862,13 @@
           <span class="tag">Available</span>
           <a href="./mock/test_13/sat13.html" class="card-btn">Start Full Mock Test 13 →</a>
         </div>
+        <div class="exam-card">
+          <div class="card-num">14</div>
+          <div class="card-title">Digital SAT Mock Test 2 (Math)</div>
+          <div class="card-sub">2 modules · 54 Questions · 70 min<br>Authentic Digital SAT Math Assessment</div>
+          <span class="tag">Available</span>
+          <a href="./sat_mock_test_2/test.html" class="card-btn">Start Mock Test 2 →</a>
+        </div>
       </div>
     </div>
 
@@ -844,10 +891,10 @@
     function showTab(tabName) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-      
+
       const targetBtn = document.querySelector(`.tab-btn[onclick*="'${tabName}'"]`);
       const targetSection = document.getElementById(`${tabName}-section`);
-      
+
       if (targetBtn) targetBtn.classList.add('active');
       if (targetSection) targetSection.classList.add('active');
     }

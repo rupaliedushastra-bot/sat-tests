@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital SAT - Exponential Growth & Decay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script src="../country-codes.js"></script>
+<script src="questions.js"></script>
+<link rel="stylesheet" href="../test.css">
+<style>
+  .difficulty-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 8px;
+  }
+  .diff-easy { background: rgba(5, 150, 105, 0.12); color: #059669; }
+  .diff-moderate { background: rgba(2, 132, 199, 0.12); color: #0284c7; }
+  .diff-super { background: rgba(220, 38, 38, 0.12); color: #dc2626; }
+</style>
+</head>
+<body>
+
+<!-- SAVING OVERLAY -->
+<div class="saving-overlay" id="savingOverlay">
+  <div class="spin"></div>
+  <p id="savingMsg">Saving your result...</p>
+</div>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-brand">
+    <span>🌱</span>
+    <span>Digital SAT</span>
+    <span class="hdr-pill">Topic Test</span>
+    <span class="hdr-module">Exponential Growth & Decay</span>
+  </div>
+  <div class="timer" id="timerBox">
+    <span>⏱</span>
+    <span id="timerDisplay">30:00</span>
+  </div>
+</header>
+
+<!-- PAGE 1: REGISTRATION -->
+<div class="page active" id="pageReg">
+  <div class="reg-wrap">
+    <div class="reg-card">
+      <div class="reg-top">
+        <span class="icon">🌱</span>
+        <h2>Exponential Growth & Decay</h2>
+        <p>SAT Advanced Math &nbsp;·&nbsp; 20 Questions</p>
+      </div>
+      <div class="stat-strip">
+        <div class="s"><div class="val">20</div><div class="lbl">Questions</div></div>
+        <div class="s"><div class="val">30m</div><div class="lbl">Total Time</div></div>
+        <div class="s"><div class="val">800</div><div class="lbl">Max Score</div></div>
+      </div>
+      <div class="reg-body">
+        <div class="field">
+          <label>Full Name *</label>
+          <input type="text" id="regName" placeholder="Enter your full name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label>Email Address *</label>
+          <input type="email" id="regEmail" placeholder="Enter your email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label>Phone Number</label>
+          <div class="phone-row">
+            <select id="regCC"></select>
+            <input type="tel" id="regPhone" placeholder="Phone number">
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="startTest()">▶ &nbsp;Start Topic Test</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: TEST -->
+<div class="page" id="pageTest">
+  <div class="test-wrap">
+    <main>
+      <div class="mod-banner">
+        <div>
+          <div class="mod-name">🌱 Exponential Growth & Decay</div>
+          <div class="mod-info">SAT Math Practice · Growth Factors, Half-Life & Multi-period Models</div>
+        </div>
+        <div style="font-size:0.8rem;color:var(--muted)" id="modProgress">Q 1 of 20</div>
+      </div>
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-badge" id="qBadge">Q 1</span>
+          <span class="difficulty-tag diff-easy" id="qDiffTag">EASY</span>
+          <span class="q-topic-tag" id="qTopicTag">Exponential Initial Value</span>
+        </div>
+        <div class="q-text" id="qText" style="white-space: pre-wrap; line-height: 1.65; margin-top: 14px;">Loading question...</div>
+
+        <div class="opts" id="qOpts" style="margin-top: 18px;"></div>
+        
+        <div class="q-nav">
+          <button class="btn btn-outline" id="btnPrev" onclick="prevQ()" style="visibility:hidden">← Previous</button>
+          <button class="btn btn-primary" id="btnNext" onclick="nextQ()">Next →</button>
+        </div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="palette-card">
+        <h3>Question Navigator</h3>
+        <div class="pal-grid" id="palette"></div>
+        <div class="legend">
+          <div class="leg"><div class="leg-dot" style="background:var(--accent)"></div>Answered</div>
+          <div class="leg"><div class="leg-dot" style="background:var(--surface);border:1px solid var(--border)"></div>Not answered</div>
+        </div>
+        <div class="prog-wrap">
+          <div class="prog-bg"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+          <div class="prog-lbl" id="progLbl">0 / 20 answered</div>
+        </div>
+      </div>
+      <button class="btn btn-danger" onclick="confirmSubmit()">🏁 Submit Test</button>
+    </aside>
+  </div>
+</div>
+
+<!-- PAGE 3: RESULTS -->
+<div class="page" id="pageResult">
+  <div class="res-wrap" id="resWrap"></div>
+</div>
+
+<!-- SUBMIT MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <h3>Submit Test?</h3>
+    <p id="modalMsg">Are you sure you want to submit?</p>
+    <div class="modal-btns">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-danger" style="width:auto" onclick="doSubmit()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!-- ALERT MODAL -->
+<div class="modal-bg" id="alertBg">
+  <div class="modal">
+    <h3>Digital SAT Test</h3>
+    <p id="alertMsg"></p>
+    <div class="modal-btns">
+      <button class="btn btn-primary" style="width:auto" onclick="document.getElementById('alertBg').classList.remove('open')">OK</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase.js"></script>
+</body>
+</html>
