@@ -16,7 +16,7 @@ const QUESTIONS = [
       "$10$"
     ],
     "answer": 3,
-    "explanation": "Choice D is correct.\n\n1. Pehle dono brackets expand karo:\n$$4(2x - 5) = 8x - 20$$\n$$3(x + 10) = 3x + 30$$\n\n2. Equation ko solve karo ($x$ wale terms ek side, constants doosri side):\n$$8x - 20 = 3x + 30$$\n$$8x - 3x = 30 + 20$$\n$$5x = 50 \\implies x = 10$$",
+    "explanation": "Choice D is correct.\n\n1. Expand both sides of the equation by distributing the coefficients:\n$$4(2x - 5) = 8x - 20$$\n$$3(x + 10) = 3x + 30$$\n\n2. Set the expressions equal and solve for $x$:\n$$8x - 20 = 3x + 30$$\n$$8x - 3x = 30 + 20$$\n$$5x = 50 \\implies x = 10$$",
     "topic": "Linear Equations in One Variable"
   },
   {
@@ -30,7 +30,7 @@ const QUESTIONS = [
       "$5$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n$y$ ki value ($y = 2x - 5$) pehle equation mein substitute kar do:\n$$3x + 2(2x - 5) = 18$$\n$$3x + 4x - 10 = 18$$\n$$7x - 10 = 18 \\implies 7x = 28 \\implies x = 4$$",
+    "explanation": "Choice C is correct.\n\nSubstitute the expression for $y$ ($y = 2x - 5$) into the first equation:\n$$3x + 2(2x - 5) = 18$$\n$$3x + 4x - 10 = 18$$\n$$7x - 10 = 18 \\implies 7x = 28 \\implies x = 4$$",
     "topic": "Systems of Linear Equations"
   },
   {
@@ -44,7 +44,7 @@ const QUESTIONS = [
       "$18$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n1. Do points $(1, 4)$ aur $(3, 10)$ se slope ($m$) nikalo:\n$$m = \\frac{10 - 4}{3 - 1} = \\frac{6}{2} = 3$$\n\n2. Point $(1, 4)$ use karke $y$-intercept ($b$) nikalo:\n$$4 = 3(1) + b \\implies b = 1$$\nEquation: $g(x) = 3x + 1$\n\n3. Ab $x = 5$ evaluate karo:\n$$g(5) = 3(5) + 1 = 15 + 1 = 16$$",
+    "explanation": "Choice C is correct.\n\n1. Find the slope ($m$) using the points $(1, 4)$ and $(3, 10)$:\n$$m = \\frac{10 - 4}{3 - 1} = \\frac{6}{2} = 3$$\n\n2. Use $(1, 4)$ to find the $y$-intercept ($b$):\n$$4 = 3(1) + b \\implies b = 1$$\nEquation: $g(x) = 3x + 1$\n\n3. Evaluate $g(5)$:\n$$g(5) = 3(5) + 1 = 15 + 1 = 16$$",
     "topic": "Linear Functions"
   },
   {
@@ -58,7 +58,7 @@ const QUESTIONS = [
       "$(3, 4)$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nDono equations ko add kar do ($y$ cancel ho jayega):\n$$(2x + y) + (x - y) = 10 + 2 \\implies 3x = 12 \\implies x = 4$$\n\nAb $x = 4$ ko $x - y = 2$ mein daalo:\n$$4 - y = 2 \\implies y = 2$$\n\nSolution is $(4, 2)$.",
+    "explanation": "Choice B is correct.\n\nAdd the two equations to eliminate $y$:\n$$(2x + y) + (x - y) = 10 + 2 \\implies 3x = 12 \\implies x = 4$$\n\nSubstitute $x = 4$ into $x - y = 2$:\n$$4 - y = 2 \\implies y = 2$$\n\nTherefore, the solution is $(4, 2)$.",
     "topic": "Systems of Linear Equations"
   },
   {
@@ -72,7 +72,7 @@ const QUESTIONS = [
       "A solid line with shading below"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct.\n\n- '$y > 2x - 3$' mein strict inequality ($>$) hai ($\\ge$ nahi), isliye boundary line dashed hogi.\n- '$y >$' ka matlab hai boundary line ke upar wala region (greater $y$-values) shade hoga.\nIsliye: 'A dashed line with shading above'.",
+    "explanation": "Choice A is correct.\n\n- The inequality $y > 2x - 3$ contains a strict inequality ($>$ rather than $\\ge$), so the boundary line is dashed.\n- The $>$ symbol indicates that the region above the line (greater $y$-values) is shaded.\nTherefore: 'A dashed line with shading above'.",
     "topic": "Linear Inequalities in Two Variables"
   },
   {
@@ -86,7 +86,7 @@ const QUESTIONS = [
       "$10$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n1. Pehle dono brackets ko expand karo:\n- $(x + 3)(2x - 1) = 2x^2 - x + 6x - 3 = 2x^2 + 5x - 3$\n- $(x - 2)(x + 4) = x^2 + 4x - 2x - 8 = x^2 + 2x - 8$\n\n2. Subtract karo:\n$$(2x^2 + 5x - 3) - (x^2 + 2x - 8) = x^2 + 3x + 5$$\n\n3. Yahan $a = 1, b = 3, c = 5$:\n$$a + b + c = 1 + 3 + 5 = 9$$",
+    "explanation": "Choice C is correct.\n\n1. Expand both expressions:\n- $(x + 3)(2x - 1) = 2x^2 - x + 6x - 3 = 2x^2 + 5x - 3$\n- $(x - 2)(x + 4) = x^2 + 4x - 2x - 8 = x^2 + 2x - 8$\n\n2. Subtract the second expression from the first:\n$$(2x^2 + 5x - 3) - (x^2 + 2x - 8) = x^2 + 3x + 5$$\n\n3. Comparing with $ax^2 + bx + c$, we get $a = 1, b = 3, c = 5$:\n$$a + b + c = 1 + 3 + 5 = 9$$",
     "topic": "Polynomial Operations"
   },
   {
@@ -100,7 +100,7 @@ const QUESTIONS = [
       "$x = 2$ and $x = -3$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nQuadratic equation ko factor karo (product $= 6$, sum $= -5$, jo $-2$ aur $-3$ hain):\n$$x^2 - 5x + 6 = (x - 2)(x - 3) = 0$$\n$$x - 2 = 0 \\implies x = 2$$\n$$x - 3 = 0 \\implies x = 3$$",
+    "explanation": "Choice B is correct.\n\nFactor the quadratic equation (find two numbers whose product is $6$ and sum is $-5$, which are $-2$ and $-3$):\n$$x^2 - 5x + 6 = (x - 2)(x - 3) = 0$$\n$$x - 2 = 0 \\implies x = 2$$\n$$x - 3 = 0 \\implies x = 3$$",
     "topic": "Quadratic Equations"
   },
   {
@@ -114,7 +114,7 @@ const QUESTIONS = [
       "$10$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nFunction vertex form mein hai: $f(x) = a(x - h)^2 + k$, jahan vertex $(h, k) = (3, 8)$ hai.\nCoefficient $a = -2$ negative hai, matlab parabola neeche ki taraf khulta hai (opens downward). Isliye vertex hi maximum point hai $\\implies$ maximum value $= 8$.",
+    "explanation": "Choice B is correct.\n\nThe function is in vertex form: $f(x) = a(x - h)^2 + k$, where the vertex is $(h, k) = (3, 8)$.\nBecause the leading coefficient $a = -2$ is negative, the parabola opens downward. This means the vertex is the maximum point $\\implies$ maximum value $= 8$.",
     "topic": "Quadratic Functions & Vertex"
   },
   {
@@ -128,7 +128,7 @@ const QUESTIONS = [
       "$350$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. Speed (rate) nikalo:\n$$\\text{Speed} = \\frac{210\\text{ miles}}{3.5\\text{ hours}} = 60\\text{ miles/hour}$$\n\n2. Ab $5\\text{ hours}$ mein:\n$$\\text{Distance} = 60 \\times 5 = 300\\text{ miles}$$",
+    "explanation": "Choice B is correct.\n\n1. Calculate the speed (rate):\n$$\\text{Speed} = \\frac{210\\text{ miles}}{3.5\\text{ hours}} = 60\\text{ miles/hour}$$\n\n2. Find the distance traveled in $5\\text{ hours}$:\n$$\\text{Distance} = 60 \\times 5 = 300\\text{ miles}$$",
     "topic": "Rates & Proportions"
   },
   {
@@ -142,7 +142,7 @@ const QUESTIONS = [
       "$\\$700$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n- **Step 1 (Discount):** $\\$800$ pe $25\\%$ off matlab $75\\%$ price rahega:\n$$800 \\times 0.75 = \\$600$$\n\n- **Step 2 (Sales Tax):** $\\$600$ pe $8\\%$ tax add hoga:\n$$600 \\times 1.08 = \\$648$$",
+    "explanation": "Choice B is correct.\n\n- **Step 1 (Discount):** A $25\\%$ discount on $\\$800$ means the price is $75\\%$ of original:\n$$800 \\times 0.75 = \\$600$$\n\n- **Step 2 (Sales Tax):** Adding $8\\%$ sales tax to $\\$600$:\n$$600 \\times 1.08 = \\$648$$",
     "topic": "Percentages & Discounts"
   },
   {
@@ -156,7 +156,7 @@ const QUESTIONS = [
       "$88$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n8 numbers hain (even count) jo already sorted hain. Median beech ke 2 numbers (4th aur 5th) ka average hoga:\n$$\\text{Median} = \\frac{85 + 88}{2} = 86.5$$",
+    "explanation": "Choice C is correct.\n\nThere are 8 scores (an even count) already arranged in ascending order. The median is the average of the two middle scores (4th and 5th):\n$$\\text{Median} = \\frac{85 + 88}{2} = 86.5$$",
     "topic": "Statistics & Measures of Center"
   },
   {
@@ -170,7 +170,7 @@ const QUESTIONS = [
       "$20$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n1. Slope nikalo:\n$$m = \\frac{28 - 10}{8 - 2} = \\frac{18}{6} = 3$$\n\n2. Point $(2, 10)$ use karke $y$-intercept ($b$) nikalo:\n$$10 = 3(2) + b \\implies b = 4$$\nLine equation: $y = 3x + 4$\n\n3. Ab $x = 5$ substitute karo:\n$$y = 3(5) + 4 = 15 + 4 = 19$$",
+    "explanation": "Choice C is correct.\n\n1. Find the slope:\n$$m = \\frac{28 - 10}{8 - 2} = \\frac{18}{6} = 3$$\n\n2. Use $(2, 10)$ to find the $y$-intercept ($b$):\n$$10 = 3(2) + b \\implies b = 4$$\nLine equation: $y = 3x + 4$\n\n3. Substitute $x = 5$:\n$$y = 3(5) + 4 = 15 + 4 = 19$$",
     "topic": "Scatterplots & Linear Modeling"
   },
   {
@@ -184,7 +184,7 @@ const QUESTIONS = [
       "$\\frac{3}{5}$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nTotal marbles $= 5 + 3 + 2 = 10$.\n'Not blue' wale marbles $= 5\\text{ (red)} + 2\\text{ (green)} = 7$.\n$$\\text{Probability} = \\frac{7}{10}$$",
+    "explanation": "Choice C is correct.\n\nTotal marbles $= 5 + 3 + 2 = 10$.\nNumber of marbles that are 'not blue' $= 5\\text{ (red)} + 2\\text{ (green)} = 7$.\n$$\\text{Probability} = \\frac{7}{10}$$",
     "topic": "Probability"
   },
   {
@@ -198,7 +198,7 @@ const QUESTIONS = [
       "$60\\%$ to $64\\%$"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct.\n\nSample proportion $= 60\\%$, Margin of error $= \\pm 4\\%$.\nConfidence interval $= 60\\% - 4\\%$ se $60\\% + 4\\%$ tak $= 56\\% \\text{ to } 64\\%$.",
+    "explanation": "Choice A is correct.\n\nSample proportion $= 60\\%$, Margin of error $= \\pm 4\\%$.\nConfidence interval $= 60\\% - 4\\%$ to $60\\% + 4\\% = 56\\% \\text{ to } 64\\%$.",
     "topic": "Margin of Error & Confidence Intervals"
   },
   {
@@ -212,7 +212,7 @@ const QUESTIONS = [
       "Placebo effect"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct.\n\nCoffee peene wale log healthy lifestyle (exercise, healthier diets) bhi follow karte the. Yeh extra factor coffee aur heart disease dono ke sath linked hai, isliye clear nahi hai ki fayda coffee se hua ya healthy habits se. Yeh classic **Confounding Variable** hai.",
+    "explanation": "Choice A is correct.\n\nCoffee drinkers in the study also tended to follow a healthier lifestyle (more exercise, healthier diet). This extraneous factor is linked to both coffee consumption and heart disease, making it unclear whether the benefit came from coffee or healthy habits. This is a classic **Confounding Variable**.",
     "topic": "Statistical Study Design & Bias"
   },
   {
@@ -226,7 +226,7 @@ const QUESTIONS = [
       "$156\\text{ cm}^2$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nPythagoras Theorem: $\\text{length}^2 + \\text{width}^2 = \\text{diagonal}^2$\n$$12^2 + w^2 = 13^2 \\implies 144 + w^2 = 169 \\implies w^2 = 25 \\implies w = 5\\text{ cm}$$\n$$\\text{Area} = \\text{length} \\times \\text{width} = 12 \\times 5 = 60\\text{ cm}^2$$",
+    "explanation": "Choice B is correct.\n\nPythagorean Theorem: $\\text{length}^2 + \\text{width}^2 = \\text{diagonal}^2$\n$$12^2 + w^2 = 13^2 \\implies 144 + w^2 = 169 \\implies w^2 = 25 \\implies w = 5\\text{ cm}$$\n$$\\text{Area} = \\text{length} \\times \\text{width} = 12 \\times 5 = 60\\text{ cm}^2$$",
     "topic": "Geometry & Area"
   },
   {
@@ -240,7 +240,7 @@ const QUESTIONS = [
       "$180^\\circ$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nJab do parallel lines ek transversal se cut hoti hain, to alternate interior angles hamesha equal hote hain.\nAngle 1 $= 115^\\circ$, isliye Angle 2 bhi $= 115^\\circ$.",
+    "explanation": "Choice C is correct.\n\nWhen two parallel lines are cut by a transversal, alternate interior angles are congruent (equal).\nSince Angle 1 $= 115^\\circ$, Angle 2 is also $= 115^\\circ$.",
     "topic": "Lines & Angles"
   },
   {
@@ -254,7 +254,7 @@ const QUESTIONS = [
       "$\\frac{3}{5}$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n$$\\tan(Z) = \\frac{\\text{Opposite Side}}{\\text{Adjacent Side}}$$\nAngle $Z$ ke opposite side $XY = 8$ hai, aur adjacent side $YZ = 6$ hai.\n$$\\tan(Z) = \\frac{8}{6} = \\frac{4}{3}$$",
+    "explanation": "Choice B is correct.\n\n$$\\tan(Z) = \\frac{\\text{Opposite Side}}{\\text{Adjacent Side}}$$\nFor angle $Z$, the opposite side is $XY = 8$, and the adjacent side is $YZ = 6$.\n$$\\tan(Z) = \\frac{8}{6} = \\frac{4}{3}$$",
     "topic": "Right Triangle Trigonometry"
   },
   {
@@ -268,7 +268,7 @@ const QUESTIONS = [
       "$37.68$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n1. Pure circle ka area $= \\pi r^2 = 3.14 \\times 6^2 = 3.14 \\times 36 = 113.04$.\n2. $60^\\circ$ pure circle ($360^\\circ$) ka fraction: $\\frac{60^\\circ}{360^\\circ} = \\frac{1}{6}$.\n3. Sector area $= 113.04 \\times \\frac{1}{6} = 18.84$.",
+    "explanation": "Choice C is correct.\n\n1. Area of the entire circle $= \\pi r^2 = 3.14 \\times 6^2 = 3.14 \\times 36 = 113.04$.\n2. Fraction of the circle corresponding to $60^\\circ$: $\\frac{60^\\circ}{360^\\circ} = \\frac{1}{6}$.\n3. Sector area $= 113.04 \\times \\frac{1}{6} = 18.84$.",
     "topic": "Circles & Sector Area"
   },
   {
@@ -296,7 +296,7 @@ const QUESTIONS = [
       "$28$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nFractions hatane ke liye poori equation ko $6$ se multiply karo (LCM of 3 and 2):\n$$6\\left(\\frac{2x}{3} + 5\\right) = 6\\left(\\frac{x}{2} + 9\\right)$$\n$$4x + 30 = 3x + 54$$\n$$4x - 3x = 54 - 30 \\implies x = 24$$",
+    "explanation": "Choice C is correct.\n\nMultiply the entire equation by $6$ (LCM of 3 and 2) to eliminate the fractions:\n$$6\\left(\\frac{2x}{3} + 5\\right) = 6\\left(\\frac{x}{2} + 9\\right)$$\n$$4x + 30 = 3x + 54$$\n$$4x - 3x = 54 - 30 \\implies x = 24$$",
     "topic": "Linear Equations in One Variable"
   },
   {
@@ -310,7 +310,7 @@ const QUESTIONS = [
       "$x < 3$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n$$-2x + 5 > 11 \\implies -2x > 6$$\nAb dono taraf $-2$ se divide karo — negative number se divide karne par inequality ka sign ulta ho jaata hai:\n$$x < \\frac{6}{-2} \\implies x < -3$$",
+    "explanation": "Choice B is correct.\n\n$$-2x + 5 > 11 \\implies -2x > 6$$\nDivide both sides by $-2$ — dividing by a negative number reverses the inequality sign:\n$$x < \\frac{6}{-2} \\implies x < -3$$",
     "topic": "Linear Inequalities"
   },
   {
@@ -324,7 +324,7 @@ const QUESTIONS = [
       "$(-2, -3)$"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct.\n\nVertex form hoti hai: $y = (x - h)^2 + k$, jahan $(h, k)$ vertex hai.\nComparing $y = (x - 2)^2 + 3$, we have $h = 2$ aur $k = 3 \\implies \\text{Vertex} = (2, 3)$.",
+    "explanation": "Choice A is correct.\n\nThe vertex form is $y = a(x - h)^2 + k$, where $(h, k)$ is the vertex.\nComparing with $y = (x - 2)^2 + 3$, we have $h = 2$ and $k = 3 \\implies \\text{Vertex} = (2, 3)$.",
     "topic": "Quadratic Vertex Form"
   },
   {
@@ -338,7 +338,7 @@ const QUESTIONS = [
       "$3$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. Slope nikalo: $m = \\frac{11 - 5}{4 - 2} = \\frac{6}{2} = 3$.\n2. Point $(2, 5)$ use karke $y$-intercept ($b$) nikalo:\n$$5 = 3(2) + b \\implies 5 = 6 + b \\implies b = -1$$\n$y$-intercept $= -1$.",
+    "explanation": "Choice B is correct.\n\n1. Find the slope: $m = \\frac{11 - 5}{4 - 2} = \\frac{6}{2} = 3$.\n2. Use the point $(2, 5)$ to find the $y$-intercept ($b$):\n$$5 = 3(2) + b \\implies 5 = 6 + b \\implies b = -1$$\n$y$-intercept $= -1$.",
     "topic": "Linear Equations & Intercepts"
   },
   {
@@ -352,7 +352,7 @@ const QUESTIONS = [
       "$360\\text{ miles}$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nSpeed $= \\frac{180}{3} = 60\\text{ mph}$.\n$5\\text{ hours}$ mein: $60 \\times 5 = 300\\text{ miles}$.",
+    "explanation": "Choice C is correct.\n\n$$\\text{Speed} = \\frac{180}{3} = 60\\text{ mph}$$\nIn $5\\text{ hours}$: $60 \\times 5 = 300\\text{ miles}$.",
     "topic": "Rates & Proportions"
   },
   {
@@ -366,7 +366,7 @@ const QUESTIONS = [
       "$85$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n5 numbers already sorted hain. Odd count hone ki wajah se median seedha beech ka 3rd number hoga $\\implies 80$.",
+    "explanation": "Choice B is correct.\n\nThe 5 numbers are already arranged in ascending order. Since the count is odd, the median is the middle (3rd) value $\\implies 80$.",
     "topic": "Statistics"
   },
   {
@@ -394,7 +394,7 @@ const QUESTIONS = [
       "$24$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nChord ka midpoint se perpendicular line center $O$ tak right triangle banata hai:\n- Half chord $= \\frac{12}{2} = 6$\n- Distance from center $= 8$\n- Radius (hypotenuse) $r = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$\n$$\\text{Diameter} = 2r = 2 \\times 10 = 20$$",
+    "explanation": "Choice C is correct.\n\nThe perpendicular line from the center $O$ to the midpoint of chord $AB$ forms a right triangle:\n- Half chord length $= \\frac{12}{2} = 6$\n- Distance from center $= 8$\n- Radius (hypotenuse) $r = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$\n$$\\text{Diameter} = 2r = 2 \\times 10 = 20$$",
     "topic": "Circles & Chords"
   },
   {
@@ -408,7 +408,7 @@ const QUESTIONS = [
       "$3.0$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n$\\sin(\\theta) = \\frac{3}{5}$ se yeh 3-4-5 right triangle hai $\\implies \\cos(\\theta) = \\frac{4}{5} = 0.8$ aur $\\tan(\\theta) = \\frac{3}{4} = 0.75$.\n$$\\frac{\\tan(\\theta)}{\\sin(\\theta)} = \\frac{3/4}{3/5} = \\frac{5}{4} = 1.25$$\n$$\\cos(\\theta) + \\frac{\\tan(\\theta)}{\\sin(\\theta)} = 0.8 + 1.25 = 2.05 \\approx 2.1$$",
+    "explanation": "Choice B is correct.\n\nSince $\\sin(\\theta) = \\frac{3}{5}$, this is a 3-4-5 right triangle $\\implies \\cos(\\theta) = \\frac{4}{5} = 0.8$ and $\\tan(\\theta) = \\frac{3}{4} = 0.75$.\n$$\\frac{\\tan(\\theta)}{\\sin(\\theta)} = \\frac{3/4}{3/5} = \\frac{5}{4} = 1.25$$\n$$\\cos(\\theta) + \\frac{\\tan(\\theta)}{\\sin(\\theta)} = 0.8 + 1.25 = 2.05 \\approx 2.1$$",
     "topic": "Trigonometric Identities"
   },
   {
@@ -422,7 +422,7 @@ const QUESTIONS = [
       "$85^\\circ$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nLet $\\angle B = x$. To $\\angle A = 2x$ aur $\\angle C = x + 30^\\circ$.\nTriangle ke angles ka sum $= 180^\\circ$:\n$$x + 2x + (x + 30^\\circ) = 180^\\circ \\implies 4x + 30^\\circ = 180^\\circ \\implies 4x = 150^\\circ \\implies x = 37.5^\\circ$$\n$$\\angle A = 2(37.5^\\circ) = 75^\\circ$$",
+    "explanation": "Choice C is correct.\n\nLet $\\angle B = x$. Then $\\angle A = 2x$ and $\\angle C = x + 30^\\circ$.\nThe sum of angles in a triangle is $180^\\circ$:\n$$x + 2x + (x + 30^\\circ) = 180^\\circ \\implies 4x + 30^\\circ = 180^\\circ \\implies 4x = 150^\\circ \\implies x = 37.5^\\circ$$\n$$\\angle A = 2(37.5^\\circ) = 75^\\circ$$",
     "topic": "Triangle Angle Theorems"
   },
   {
@@ -436,7 +436,7 @@ const QUESTIONS = [
       "$6$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n- Cone volume: $V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi r^2(12) = 4\\pi r^2$\n- Sphere volume: $V = \\frac{4}{3}\\pi r^3$\n\nDono ko equal karo:\n$$4\\pi r^2 = \\frac{4}{3}\\pi r^3 \\implies 1 = \\frac{1}{3}r \\implies r = 3$$",
+    "explanation": "Choice B is correct.\n\n- Volume of the cone: $V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi r^2(12) = 4\\pi r^2$\n- Volume of the sphere: $V = \\frac{4}{3}\\pi r^3$\n\nSet the two volumes equal:\n$$4\\pi r^2 = \\frac{4}{3}\\pi r^3 \\implies 1 = \\frac{1}{3}r \\implies r = 3$$",
     "topic": "3D Geometry & Volumes"
   },
   {
@@ -450,7 +450,7 @@ const QUESTIONS = [
       "$3$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct (Sirf 1 valid criticism hai).\n\n1. 'Random assignment nahi tha' — Galat (question clearly says randomly assigned).\n2. 'Baseline difference se confound ho sakta hai' — Sahi criticism hai (valid) ✓\n3. 'p=0.03 ka matlab 3% chance drug fail hai' — Galat interpretation hai.\n4. 'Placebo group nahi hona chahiye tha' — Galat, placebo control zaroori hota hai.\nIsliye sirf 1 valid criticism hai.",
+    "explanation": "Choice B is correct (There is only 1 valid criticism).\n\n1. 'The study lacks random assignment' — False (the prompt clearly states participants were randomly assigned).\n2. 'The results may be confounded by baseline differences' — True (valid criticism) ✓\n3. 'The p-value of 0.03 means there is a 3% chance the drug is ineffective' — False interpretation of p-value.\n4. 'The placebo group should not have been included' — False (placebo control is necessary in clinical trials).\nTherefore, there is only 1 valid criticism.",
     "topic": "Statistical Inference & Critiques"
   },
   {
@@ -480,7 +480,7 @@ const QUESTIONS = [
     "answer": 2,
     "useImage": true,
     "imageKey": "m2_q7_table",
-    "explanation": "Choice C is correct.\n\nTable se Seniors row dekho:\n- Total seniors $= 30$\n- Seniors jo sport khelte hain $= 20$\n$$\\text{Probability} = \\frac{20}{30} = \\frac{2}{3} \\approx 0.67$$",
+    "explanation": "Choice C is correct.\n\nFrom the 'Seniors' row in the table:\n- Total seniors $= 30$\n- Seniors who play a sport $= 20$\n$$\\text{Probability} = \\frac{20}{30} = \\frac{2}{3} \\approx 0.67$$",
     "topic": "Conditional Probability & Tables"
   },
   {
@@ -494,7 +494,7 @@ const QUESTIONS = [
       "$2.0$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. Predicted value nikalo at $x = 10$:\n$$\\hat{y} = 0.8(10) + 3.2 = 8 + 3.2 = 11.2$$\n\n2. $\\text{Residual} = \\text{Actual} - \\text{Predicted} = 12 - 11.2 = 0.8$.",
+    "explanation": "Choice B is correct.\n\n1. Calculate the predicted value at $x = 10$:\n$$\\hat{y} = 0.8(10) + 3.2 = 8 + 3.2 = 11.2$$\n\n2. $\\text{Residual} = \\text{Actual} - \\text{Predicted} = 12 - 11.2 = 0.8$.",
     "topic": "Residuals & Linear Regression"
   },
   {
@@ -508,7 +508,7 @@ const QUESTIONS = [
       "$48$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n7 numbers ka mean $= 12$, to total sum $= 12 \\times 7 = 84$.\nDiye gaye numbers ka sum: $4 + 6 + 10 + 20 = 40$.\nBaaki sum $(a + b + c) = 84 - 40 = 44$.",
+    "explanation": "Choice C is correct.\n\nThe mean of 7 numbers is $12$, so the total sum is $12 \\times 7 = 84$.\nSum of the given numbers: $4 + 6 + 10 + 20 = 40$.\nSum of the remaining numbers: $a + b + c = 84 - 40 = 44$.",
     "topic": "Statistics & Mean"
   },
   {
@@ -522,7 +522,7 @@ const QUESTIONS = [
       "$\\$110$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nReverse mein solve karo:\n$$\\text{Cost} \\times 1.40\\text{ (markup)} \\times 0.70\\text{ (discount)} = 98$$\n$$\\text{Cost} \\times 0.98 = 98 \\implies \\text{Cost} = \\frac{98}{0.98} = \\$100$$",
+    "explanation": "Choice C is correct.\n\nSolve backwards from the final price:\n$$\\text{Cost} \\times 1.40\\text{ (markup)} \\times 0.70\\text{ (discount)} = 98$$\n$$\\text{Cost} \\times 0.98 = 98 \\implies \\text{Cost} = \\frac{98}{0.98} = \\$100$$",
     "topic": "Percentages & Multi-step Markup"
   },
   {
@@ -536,7 +536,7 @@ const QUESTIONS = [
       "$\\$96$"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct.\n\nWall area $= 14 \\times 10 = 140\\text{ sq ft}$.\n2 coats chahiye $\\implies 140 \\times 2 = 280\\text{ sq ft}$.\nEk gallon $350\\text{ sq ft}$ cover karta hai ($280 \\le 350$), isliye sirf $1\\text{ full gallon}$ zaroori hai.\n$$\\text{Cost} = 1 \\times \\$24 = \\$24$$",
+    "explanation": "Choice A is correct.\n\nWall area $= 14 \\times 10 = 140\\text{ sq ft}$.\nFor 2 coats: $140 \\times 2 = 280\\text{ sq ft}$.\nOne gallon covers $350\\text{ sq ft}$ ($280 \\le 350$), so only $1\\text{ full gallon}$ is needed.\n$$\\text{Cost} = 1 \\times \\$24 = \\$24$$",
     "topic": "Unit Rates & Area Applications"
   },
   {
@@ -550,7 +550,7 @@ const QUESTIONS = [
       "$16$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. Vertex $x$-coordinate formula: $-\\frac{b}{2a} = 4$, yahan $a = 2$:\n$$-\\frac{b}{4} = 4 \\implies b = -16$$\n\n2. Vertex $y$-coordinate $h(4) = -10$ se $c$ nikalo:\n$$2(4^2) + (-16)(4) + c = -10$$\n$$32 - 64 + c = -10 \\implies c = 22$$\n\n$$b + c = -16 + 22 = 6$$",
+    "explanation": "Choice B is correct.\n\n1. Vertex $x$-coordinate formula: $-\\frac{b}{2a} = 4$, with $a = 2$:\n$$-\\frac{b}{4} = 4 \\implies b = -16$$\n\n2. Using the vertex $y$-coordinate $h(4) = -10$, solve for $c$:\n$$2(4^2) + (-16)(4) + c = -10$$\n$$32 - 64 + c = -10 \\implies c = 22$$\n\n$$b + c = -16 + 22 = 6$$",
     "topic": "Quadratic Vertex Form"
   },
   {
@@ -564,7 +564,7 @@ const QUESTIONS = [
       "$8$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nDono equations barabar karo:\n$$x^2 + 4x + 7 = 2x + a \\implies x^2 + 2x + (7 - a) = 0$$\n\n'Exactly one solution' ka matlab discriminant $\\Delta = b^2 - 4ac = 0$:\n$$2^2 - 4(1)(7 - a) = 0$$\n$$4 - 28 + 4a = 0 \\implies 4a = 24 \\implies a = 6$$",
+    "explanation": "Choice B is correct.\n\nSet the two equations equal:\n$$x^2 + 4x + 7 = 2x + a \\implies x^2 + 2x + (7 - a) = 0$$\n\n'Exactly one solution' means the discriminant $\\Delta = b^2 - 4ac = 0$:\n$$2^2 - 4(1)(7 - a) = 0$$\n$$4 - 28 + 4a = 0 \\implies 4a = 24 \\implies a = 6$$",
     "topic": "Nonlinear Systems & Discriminant"
   },
   {
@@ -578,7 +578,7 @@ const QUESTIONS = [
       "$6$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. Pehla fraction simplify karo:\n$$\\frac{2x^2 + 7x - 15}{x + 5} = \\frac{(2x - 3)(x + 5)}{x + 5} = 2x - 3$$\n\n2. Doosra fraction simplify karo:\n$$\\frac{x^2 - 4}{x - 2} = \\frac{(x - 2)(x + 2)}{x - 2} = x + 2$$\n\n3. Subtract karo:\n$$(2x - 3) - (x + 2) = x - 5$$\n$a = 1, b = -5 \\implies a + b = 1 + (-5) = -4$.",
+    "explanation": "Choice B is correct.\n\n1. Simplify the first fraction:\n$$\\frac{2x^2 + 7x - 15}{x + 5} = \\frac{(2x - 3)(x + 5)}{x + 5} = 2x - 3$$\n\n2. Simplify the second fraction:\n$$\\frac{x^2 - 4}{x - 2} = \\frac{(x - 2)(x + 2)}{x - 2} = x + 2$$\n\n3. Subtract:\n$$(2x - 3) - (x + 2) = x - 5$$\n$a = 1, b = -5 \\implies a + b = 1 + (-5) = -4$.",
     "topic": "Rational Expressions & Factoring"
   },
   {
@@ -592,7 +592,7 @@ const QUESTIONS = [
       "$7$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nDono inequalities satisfy karne wale integer points try karo:\nJaise $x = 2, y = 3$:\n- $3 \\le 2(2) + 1 = 5$ ✓ (True)\n- $3 > -(2) + 4 = 2$ ✓ (True)\n\n$x + y = 2 + 3 = 5$ hi minimum possible value milta hai.",
+    "explanation": "Choice B is correct.\n\nWe need integer coordinates $(x, y)$ that satisfy both inequalities:\n- $y \\le 2x + 1$\n- $y > -x + 4 \\implies x + y > 4$\nSince $x + y$ must be an integer strictly greater than $4$, the smallest possible value is $5$.\nTesting $(x, y) = (2, 3)$:\n- $3 \\le 2(2) + 1 = 5$ ✓ (True)\n- $3 > -(2) + 4 = 2$ ✓ (True)\nThus, the minimum value of $x + y$ is $2 + 3 = 5$.",
     "topic": "Systems of Linear Inequalities"
   },
   {
@@ -606,7 +606,7 @@ const QUESTIONS = [
       "$12$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n'Infinitely many solutions' ke liye dono equations proportional (coincident lines) honi chahiye.\n$5x + 2y = 8$ ko $2$ se multiply karo:\n$$10x + 4y = 16$$\nAb $ax + 4y = 16$ se compare karne par: $a = 10$.",
+    "explanation": "Choice C is correct.\n\nFor a system to have 'infinitely many solutions', the two equations must be proportional (representing the same line).\nMultiply $5x + 2y = 8$ by $2$:\n$$10x + 4y = 16$$\nComparing with $ax + 4y = 16$, we find $a = 10$.",
     "topic": "Systems of Linear Equations"
   },
   {
@@ -620,7 +620,7 @@ const QUESTIONS = [
       "$15$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. $x$-intercept $= 4$ matlab point $(4, 0)$, $y$-intercept $= -6$ matlab point $(0, -6)$:\n$$\\text{Slope } m = \\frac{0 - (-6)}{4 - 0} = \\frac{6}{4} = \\frac{3}{2}$$\nEquation: $h(x) = \\frac{3}{2}x - 6$\n\n2. $h(k) = 9$ solve karo:\n$$9 = \\frac{3}{2}k - 6 \\implies 15 = \\frac{3}{2}k \\implies k = 10$$",
+    "explanation": "Choice B is correct.\n\n1. The $x$-intercept is $(4, 0)$ and the $y$-intercept is $(0, -6)$:\n$$\\text{Slope } m = \\frac{0 - (-6)}{4 - 0} = \\frac{6}{4} = \\frac{3}{2}$$\nEquation: $h(x) = \\frac{3}{2}x - 6$\n\n2. Solve $h(k) = 9$:\n$$9 = \\frac{3}{2}k - 6 \\implies 15 = \\frac{3}{2}k \\implies k = 10$$",
     "topic": "Linear Functions & Intercepts"
   },
   {
@@ -634,7 +634,7 @@ const QUESTIONS = [
       "$8$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nInfinitely many solutions ke liye dono equations proportional honi chahiye:\n$2x - 3y = 7$ ko $2$ se multiply karo:\n$$4x - 6y = 14$$\nCompare karo $ax - 6y = 14$ se $\\implies a = 4$.",
+    "explanation": "Choice B is correct.\n\nFor infinitely many solutions, the two equations must be proportional:\nMultiply $2x - 3y = 7$ by $2$:\n$$4x - 6y = 14$$\nComparing with $ax - 6y = 14$, we get $a = 4$.",
     "topic": "Systems of Linear Equations"
   },
   {
@@ -648,7 +648,7 @@ const QUESTIONS = [
       "$\\frac{1}{2}$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nEquation ko simplify karo:\n$$5x - 5a = 5x + 7a - 2$$\n$5x$ dono sides se subtract ho jaata hai:\n$$-5a = 7a - 2 \\implies -12a = -2 \\implies a = \\frac{2}{12} = \\frac{1}{6}$$\n\nJab $a = \\frac{1}{6}$ hota hai, tab dono sides exactly identical banti hain ($-5(1/6) = 7(1/6)-2 = -5/6$), jisse infinite solutions hote hain.",
+    "explanation": "Choice B is correct.\n\nSimplify the equation:\n$$5x - 5a = 5x + 7a - 2$$\nSubtract $5x$ from both sides:\n$$-5a = 7a - 2 \\implies -12a = -2 \\implies a = \\frac{2}{12} = \\frac{1}{6}$$\n\nWhen $a = \\frac{1}{6}$, both sides are identical ($-5/6 = -5/6$), resulting in infinitely many solutions.",
     "topic": "Linear Equations & Identities"
   },
   {
@@ -662,7 +662,7 @@ const QUESTIONS = [
       "Correlation can never be used to make any claim."
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nIce cream aur shark attacks dono garmi (hot summer weather) ke season mein badhte hain jab zyada log beach par swimming karte hain. Garmi hi asli confounding variable hai, causation nahi.",
+    "explanation": "Choice B is correct.\n\nBoth ice cream sales and shark attacks increase during hot summer weather when more people are outdoors and swimming at the beach. Hot weather is the confounding variable; eating ice cream does not cause shark attacks.",
     "topic": "Correlation vs Causation"
   },
   {
@@ -676,7 +676,7 @@ const QUESTIONS = [
       "The sample proportion is definitely 0.50."
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n$95\\%$ confidence interval ka sahi interpretation: agar bohot saare random samples lekar intervals banaye jaayein, to unme se $95\\%$ intervals true population proportion ko cover karenge.",
+    "explanation": "Choice C is correct.\n\nThe correct interpretation of a $95\\%$ confidence interval: if repeated random samples were taken and intervals constructed, $95\\%$ of those intervals would contain the true population proportion.",
     "topic": "Confidence Interval Interpretation"
   },
   {
@@ -690,7 +690,7 @@ const QUESTIONS = [
       "$0.5263$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n1. Total chess players nikalo:\n- Girls: $0.60 \\times 0.30 = 0.18$\n- Boys: $0.40 \\times 0.50 = 0.20$\n- Total $= 0.18 + 0.20 = 0.38$\n\n2. Girl hone ki probability (given chess plays):\n$$P(\\text{Girl} \\mid \\text{Chess}) = \\frac{0.18}{0.38} = \\frac{18}{38} = \\frac{9}{19} \\approx 0.4737$$",
+    "explanation": "Choice C is correct.\n\n1. Calculate total proportion of chess players:\n- Girls: $0.60 \\times 0.30 = 0.18$\n- Boys: $0.40 \\times 0.50 = 0.20$\n- Total $= 0.18 + 0.20 = 0.38$\n\n2. Probability of being a girl given the student plays chess:\n$$P(\\text{Girl} \\mid \\text{Chess}) = \\frac{0.18}{0.38} = \\frac{18}{38} = \\frac{9}{19} \\approx 0.4737$$",
     "topic": "Conditional Probability & Bayes Theorem"
   },
   {
@@ -704,7 +704,7 @@ const QUESTIONS = [
       "$-0.75$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\n'Strong negative correlation' ka matlab $r$ value negative aur $-1$ ke kareeb honi chahiye. $r = 0.00$ ka matlab koi linear correlation nahi hai, isliye yeh strong negative correlation nahi ho sakta.",
+    "explanation": "Choice C is correct.\n\nA 'strong negative correlation' requires $r$ to be negative and close to $-1$. A value of $r = 0.00$ indicates no linear correlation at all, so it cannot represent a strong negative correlation.",
     "topic": "Correlation Coefficients"
   },
   {
@@ -718,7 +718,7 @@ const QUESTIONS = [
       "Both mean and standard deviation are the same."
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\nData set B ke saare numbers Data set A se $+40$ zyada hain (shift hua hai). Spacing/gap dono mein bilkul same hai.\nIsliye: Mean B mein zyada hoga, lekin Standard Deviation (spread) same rahega.",
+    "explanation": "Choice B is correct.\n\nEvery number in Data set B is exactly $40$ greater than the corresponding number in Data set A (a constant shift). The spacing/spread between numbers is identical.\nTherefore, the mean is larger in B, but the standard deviation remains the same.",
     "topic": "Statistics & Transformations"
   },
   {
@@ -732,7 +732,7 @@ const QUESTIONS = [
       "$4\\%\\text{ increase}$"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct.\n\nShuru mein price $\\$100$ maan lo:\n- Monday: $+20\\% \\implies 100 \\times 1.20 = \\$120$.\n- Tuesday: $-20\\% \\implies 120 \\times 0.80 = \\$96$.\n\nNet change: $100$ se $96 \\implies 4\\%\\text{ decrease}$.",
+    "explanation": "Choice C is correct.\n\nAssume the initial price is $\\$100$:\n- Monday: $+20\\% \\implies 100 \\times 1.20 = \\$120$.\n- Tuesday: $-20\\% \\implies 120 \\times 0.80 = \\$96$.\n\nNet change: From $100$ to $96 \\implies 4\\%\\text{ decrease}$.",
     "topic": "Successive Percent Changes"
   },
   {
@@ -746,7 +746,7 @@ const QUESTIONS = [
       "$24$"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct.\n\n1. Origin $(0, 0)$ se pass karta hai $\\implies f(0) = c = 0$.\n2. Maximum $x = 3$ par hai: $-\\frac{b}{2a} = 3 \\implies -\\frac{b}{2(-2)} = 3 \\implies \\frac{b}{4} = 3 \\implies b = 12$.\n\n$$b + c = 12 + 0 = 12$$",
+    "explanation": "Choice B is correct.\n\n1. Passes through the origin $(0, 0) \\implies f(0) = c = 0$.\n2. Maximum occurs at $x = 3$: $-\\frac{b}{2a} = 3 \\implies -\\frac{b}{2(-2)} = 3 \\implies \\frac{b}{4} = 3 \\implies b = 12$.\n\n$$b + c = 12 + 0 = 12$$",
     "topic": "Quadratic Vertex Form"
   },
   {
@@ -760,7 +760,7 @@ const QUESTIONS = [
       "$x + y \\ge 30,\\quad 2x + y \\ge 50$"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct.\n\n- 'At most 30 items' matlab total items 30 se kam ya barabar: $x + y \\le 30$.\n- 'Earn at least $50' matlab earning $50 ya usse zyada: $2x + y \\ge 50$.\nIsliye: $x + y \\le 30,\\quad 2x + y \\ge 50$.",
+    "explanation": "Choice A is correct.\n\n- 'At most 30 items' means the total count is less than or equal to 30: $x + y \\le 30$.\n- 'Earn at least $50' means the revenue is greater than or equal to 50: $2x + y \\ge 50$.\nTherefore: $x + y \\le 30,\\quad 2x + y \\ge 50$.",
     "topic": "Systems of Linear Inequalities"
   }
 ];

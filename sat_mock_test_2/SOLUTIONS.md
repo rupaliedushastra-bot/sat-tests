@@ -23,11 +23,11 @@
 **Step-by-Step Explanation:**
 Choice D is correct.
 
-1. Pehle dono brackets expand karo:
+1. Expand both sides of the equation by distributing the coefficients:
 $$4(2x - 5) = 8x - 20$$
 $$3(x + 10) = 3x + 30$$
 
-2. Equation ko solve karo ($x$ wale terms ek side, constants doosri side):
+2. Set the expressions equal and solve for $x$:
 $$8x - 20 = 3x + 30$$
 $$8x - 3x = 30 + 20$$
 $$5x = 50 \implies x = 10$$
@@ -51,7 +51,7 @@ $$5x = 50 \implies x = 10$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-$y$ ki value ($y = 2x - 5$) pehle equation mein substitute kar do:
+Substitute the expression for $y$ ($y = 2x - 5$) into the first equation:
 $$3x + 2(2x - 5) = 18$$
 $$3x + 4x - 10 = 18$$
 $$7x - 10 = 18 \implies 7x = 28 \implies x = 4$$
@@ -75,14 +75,14 @@ $$7x - 10 = 18 \implies 7x = 28 \implies x = 4$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-1. Do points $(1, 4)$ aur $(3, 10)$ se slope ($m$) nikalo:
+1. Find the slope ($m$) using the points $(1, 4)$ and $(3, 10)$:
 $$m = \frac{10 - 4}{3 - 1} = \frac{6}{2} = 3$$
 
-2. Point $(1, 4)$ use karke $y$-intercept ($b$) nikalo:
+2. Use $(1, 4)$ to find the $y$-intercept ($b$):
 $$4 = 3(1) + b \implies b = 1$$
 Equation: $g(x) = 3x + 1$
 
-3. Ab $x = 5$ evaluate karo:
+3. Evaluate $g(5)$:
 $$g(5) = 3(5) + 1 = 15 + 1 = 16$$
 
 ---
@@ -106,13 +106,13 @@ $$g(5) = 3(5) + 1 = 15 + 1 = 16$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Dono equations ko add kar do ($y$ cancel ho jayega):
+Add the two equations to eliminate $y$:
 $$(2x + y) + (x - y) = 10 + 2 \implies 3x = 12 \implies x = 4$$
 
-Ab $x = 4$ ko $x - y = 2$ mein daalo:
+Substitute $x = 4$ into $x - y = 2$:
 $$4 - y = 2 \implies y = 2$$
 
-Solution is $(4, 2)$.
+Therefore, the solution is $(4, 2)$.
 
 ---
 
@@ -133,9 +133,9 @@ Solution is $(4, 2)$.
 **Step-by-Step Explanation:**
 Choice A is correct.
 
-- '$y > 2x - 3$' mein strict inequality ($>$) hai ($\ge$ nahi), isliye boundary line dashed hogi.
-- '$y >$' ka matlab hai boundary line ke upar wala region (greater $y$-values) shade hoga.
-Isliye: 'A dashed line with shading above'.
+- The inequality $y > 2x - 3$ contains a strict inequality ($>$ rather than $\ge$), so the boundary line is dashed.
+- The $>$ symbol indicates that the region above the line (greater $y$-values) is shaded.
+Therefore: 'A dashed line with shading above'.
 
 ---
 
@@ -156,14 +156,14 @@ Isliye: 'A dashed line with shading above'.
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-1. Pehle dono brackets ko expand karo:
+1. Expand both expressions:
 - $(x + 3)(2x - 1) = 2x^2 - x + 6x - 3 = 2x^2 + 5x - 3$
 - $(x - 2)(x + 4) = x^2 + 4x - 2x - 8 = x^2 + 2x - 8$
 
-2. Subtract karo:
+2. Subtract the second expression from the first:
 $$(2x^2 + 5x - 3) - (x^2 + 2x - 8) = x^2 + 3x + 5$$
 
-3. Yahan $a = 1, b = 3, c = 5$:
+3. Comparing with $ax^2 + bx + c$, we get $a = 1, b = 3, c = 5$:
 $$a + b + c = 1 + 3 + 5 = 9$$
 
 ---
@@ -185,7 +185,7 @@ $$a + b + c = 1 + 3 + 5 = 9$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Quadratic equation ko factor karo (product $= 6$, sum $= -5$, jo $-2$ aur $-3$ hain):
+Factor the quadratic equation (find two numbers whose product is $6$ and sum is $-5$, which are $-2$ and $-3$):
 $$x^2 - 5x + 6 = (x - 2)(x - 3) = 0$$
 $$x - 2 = 0 \implies x = 2$$
 $$x - 3 = 0 \implies x = 3$$
@@ -209,8 +209,8 @@ $$x - 3 = 0 \implies x = 3$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Function vertex form mein hai: $f(x) = a(x - h)^2 + k$, jahan vertex $(h, k) = (3, 8)$ hai.
-Coefficient $a = -2$ negative hai, matlab parabola neeche ki taraf khulta hai (opens downward). Isliye vertex hi maximum point hai $\implies$ maximum value $= 8$.
+The function is in vertex form: $f(x) = a(x - h)^2 + k$, where the vertex is $(h, k) = (3, 8)$.
+Because the leading coefficient $a = -2$ is negative, the parabola opens downward. This means the vertex is the maximum point $\implies$ maximum value $= 8$.
 
 ---
 
@@ -231,10 +231,10 @@ Coefficient $a = -2$ negative hai, matlab parabola neeche ki taraf khulta hai (o
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. Speed (rate) nikalo:
+1. Calculate the speed (rate):
 $$\text{Speed} = \frac{210\text{ miles}}{3.5\text{ hours}} = 60\text{ miles/hour}$$
 
-2. Ab $5\text{ hours}$ mein:
+2. Find the distance traveled in $5\text{ hours}$:
 $$\text{Distance} = 60 \times 5 = 300\text{ miles}$$
 
 ---
@@ -256,10 +256,10 @@ $$\text{Distance} = 60 \times 5 = 300\text{ miles}$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-- **Step 1 (Discount):** $\$800$ pe $25\%$ off matlab $75\%$ price rahega:
+- **Step 1 (Discount):** A $25\%$ discount on $\$800$ means the price is $75\%$ of original:
 $$800 \times 0.75 = \$600$$
 
-- **Step 2 (Sales Tax):** $\$600$ pe $8\%$ tax add hoga:
+- **Step 2 (Sales Tax):** Adding $8\%$ sales tax to $\$600$:
 $$600 \times 1.08 = \$648$$
 
 ---
@@ -281,7 +281,7 @@ $$600 \times 1.08 = \$648$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-8 numbers hain (even count) jo already sorted hain. Median beech ke 2 numbers (4th aur 5th) ka average hoga:
+There are 8 scores (an even count) already arranged in ascending order. The median is the average of the two middle scores (4th and 5th):
 $$\text{Median} = \frac{85 + 88}{2} = 86.5$$
 
 ---
@@ -303,14 +303,14 @@ $$\text{Median} = \frac{85 + 88}{2} = 86.5$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-1. Slope nikalo:
+1. Find the slope:
 $$m = \frac{28 - 10}{8 - 2} = \frac{18}{6} = 3$$
 
-2. Point $(2, 10)$ use karke $y$-intercept ($b$) nikalo:
+2. Use $(2, 10)$ to find the $y$-intercept ($b$):
 $$10 = 3(2) + b \implies b = 4$$
 Line equation: $y = 3x + 4$
 
-3. Ab $x = 5$ substitute karo:
+3. Substitute $x = 5$:
 $$y = 3(5) + 4 = 15 + 4 = 19$$
 
 ---
@@ -333,7 +333,7 @@ $$y = 3(5) + 4 = 15 + 4 = 19$$
 Choice C is correct.
 
 Total marbles $= 5 + 3 + 2 = 10$.
-'Not blue' wale marbles $= 5\text{ (red)} + 2\text{ (green)} = 7$.
+Number of marbles that are 'not blue' $= 5\text{ (red)} + 2\text{ (green)} = 7$.
 $$\text{Probability} = \frac{7}{10}$$
 
 ---
@@ -356,7 +356,7 @@ $$\text{Probability} = \frac{7}{10}$$
 Choice A is correct.
 
 Sample proportion $= 60\%$, Margin of error $= \pm 4\%$.
-Confidence interval $= 60\% - 4\%$ se $60\% + 4\%$ tak $= 56\% \text{ to } 64\%$.
+Confidence interval $= 60\% - 4\%$ to $60\% + 4\% = 56\% \text{ to } 64\%$.
 
 ---
 
@@ -377,7 +377,7 @@ Confidence interval $= 60\% - 4\%$ se $60\% + 4\%$ tak $= 56\% \text{ to } 64\%$
 **Step-by-Step Explanation:**
 Choice A is correct.
 
-Coffee peene wale log healthy lifestyle (exercise, healthier diets) bhi follow karte the. Yeh extra factor coffee aur heart disease dono ke sath linked hai, isliye clear nahi hai ki fayda coffee se hua ya healthy habits se. Yeh classic **Confounding Variable** hai.
+Coffee drinkers in the study also tended to follow a healthier lifestyle (more exercise, healthier diet). This extraneous factor is linked to both coffee consumption and heart disease, making it unclear whether the benefit came from coffee or healthy habits. This is a classic **Confounding Variable**.
 
 ---
 
@@ -398,7 +398,7 @@ Coffee peene wale log healthy lifestyle (exercise, healthier diets) bhi follow k
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Pythagoras Theorem: $\text{length}^2 + \text{width}^2 = \text{diagonal}^2$
+Pythagorean Theorem: $\text{length}^2 + \text{width}^2 = \text{diagonal}^2$
 $$12^2 + w^2 = 13^2 \implies 144 + w^2 = 169 \implies w^2 = 25 \implies w = 5\text{ cm}$$
 $$\text{Area} = \text{length} \times \text{width} = 12 \times 5 = 60\text{ cm}^2$$
 
@@ -421,8 +421,8 @@ $$\text{Area} = \text{length} \times \text{width} = 12 \times 5 = 60\text{ cm}^2
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Jab do parallel lines ek transversal se cut hoti hain, to alternate interior angles hamesha equal hote hain.
-Angle 1 $= 115^\circ$, isliye Angle 2 bhi $= 115^\circ$.
+When two parallel lines are cut by a transversal, alternate interior angles are congruent (equal).
+Since Angle 1 $= 115^\circ$, Angle 2 is also $= 115^\circ$.
 
 ---
 
@@ -444,7 +444,7 @@ Angle 1 $= 115^\circ$, isliye Angle 2 bhi $= 115^\circ$.
 Choice B is correct.
 
 $$\tan(Z) = \frac{\text{Opposite Side}}{\text{Adjacent Side}}$$
-Angle $Z$ ke opposite side $XY = 8$ hai, aur adjacent side $YZ = 6$ hai.
+For angle $Z$, the opposite side is $XY = 8$, and the adjacent side is $YZ = 6$.
 $$\tan(Z) = \frac{8}{6} = \frac{4}{3}$$
 
 ---
@@ -466,8 +466,8 @@ $$\tan(Z) = \frac{8}{6} = \frac{4}{3}$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-1. Pure circle ka area $= \pi r^2 = 3.14 \times 6^2 = 3.14 \times 36 = 113.04$.
-2. $60^\circ$ pure circle ($360^\circ$) ka fraction: $\frac{60^\circ}{360^\circ} = \frac{1}{6}$.
+1. Area of the entire circle $= \pi r^2 = 3.14 \times 6^2 = 3.14 \times 36 = 113.04$.
+2. Fraction of the circle corresponding to $60^\circ$: $\frac{60^\circ}{360^\circ} = \frac{1}{6}$.
 3. Sector area $= 113.04 \times \frac{1}{6} = 18.84$.
 
 ---
@@ -510,7 +510,7 @@ $$\text{Slope } m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{9 - 3}{5 - 2} = \frac{6}
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Fractions hatane ke liye poori equation ko $6$ se multiply karo (LCM of 3 and 2):
+Multiply the entire equation by $6$ (LCM of 3 and 2) to eliminate the fractions:
 $$6\left(\frac{2x}{3} + 5\right) = 6\left(\frac{x}{2} + 9\right)$$
 $$4x + 30 = 3x + 54$$
 $$4x - 3x = 54 - 30 \implies x = 24$$
@@ -535,7 +535,7 @@ $$4x - 3x = 54 - 30 \implies x = 24$$
 Choice B is correct.
 
 $$-2x + 5 > 11 \implies -2x > 6$$
-Ab dono taraf $-2$ se divide karo — negative number se divide karne par inequality ka sign ulta ho jaata hai:
+Divide both sides by $-2$ — dividing by a negative number reverses the inequality sign:
 $$x < \frac{6}{-2} \implies x < -3$$
 
 ---
@@ -557,8 +557,8 @@ $$x < \frac{6}{-2} \implies x < -3$$
 **Step-by-Step Explanation:**
 Choice A is correct.
 
-Vertex form hoti hai: $y = (x - h)^2 + k$, jahan $(h, k)$ vertex hai.
-Comparing $y = (x - 2)^2 + 3$, we have $h = 2$ aur $k = 3 \implies \text{Vertex} = (2, 3)$.
+The vertex form is $y = a(x - h)^2 + k$, where $(h, k)$ is the vertex.
+Comparing with $y = (x - 2)^2 + 3$, we have $h = 2$ and $k = 3 \implies \text{Vertex} = (2, 3)$.
 
 ---
 
@@ -579,8 +579,8 @@ Comparing $y = (x - 2)^2 + 3$, we have $h = 2$ aur $k = 3 \implies \text{Vertex}
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. Slope nikalo: $m = \frac{11 - 5}{4 - 2} = \frac{6}{2} = 3$.
-2. Point $(2, 5)$ use karke $y$-intercept ($b$) nikalo:
+1. Find the slope: $m = \frac{11 - 5}{4 - 2} = \frac{6}{2} = 3$.
+2. Use the point $(2, 5)$ to find the $y$-intercept ($b$):
 $$5 = 3(2) + b \implies 5 = 6 + b \implies b = -1$$
 $y$-intercept $= -1$.
 
@@ -603,8 +603,8 @@ $y$-intercept $= -1$.
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Speed $= \frac{180}{3} = 60\text{ mph}$.
-$5\text{ hours}$ mein: $60 \times 5 = 300\text{ miles}$.
+$$\text{Speed} = \frac{180}{3} = 60\text{ mph}$$
+In $5\text{ hours}$: $60 \times 5 = 300\text{ miles}$.
 
 ---
 
@@ -625,7 +625,7 @@ $5\text{ hours}$ mein: $60 \times 5 = 300\text{ miles}$.
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-5 numbers already sorted hain. Odd count hone ki wajah se median seedha beech ka 3rd number hoga $\implies 80$.
+The 5 numbers are already arranged in ascending order. Since the count is odd, the median is the middle (3rd) value $\implies 80$.
 
 ---
 
@@ -651,10 +651,7 @@ $$g(5) = 3(5) + 1 = 15 + 1 = 16$$
 
 ---
 
-
----
-
-## 📗 MODULE 2: Math (Questions 28 – 54 / M2 Q1 – Q27)
+## 📘 MODULE 2: Math (Questions 28 – 54)
 
 ### Question 28 (Module 2 · Q1)
 **Topic:** `Circles & Chords`  
@@ -673,8 +670,8 @@ $$g(5) = 3(5) + 1 = 15 + 1 = 16$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Chord ka midpoint se perpendicular line center $O$ tak right triangle banata hai:
-- Half chord $= \frac{12}{2} = 6$
+The perpendicular line from the center $O$ to the midpoint of chord $AB$ forms a right triangle:
+- Half chord length $= \frac{12}{2} = 6$
 - Distance from center $= 8$
 - Radius (hypotenuse) $r = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10$
 $$\text{Diameter} = 2r = 2 \times 10 = 20$$
@@ -698,7 +695,7 @@ $$\text{Diameter} = 2r = 2 \times 10 = 20$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-$\sin(\theta) = \frac{3}{5}$ se yeh 3-4-5 right triangle hai $\implies \cos(\theta) = \frac{4}{5} = 0.8$ aur $\tan(\theta) = \frac{3}{4} = 0.75$.
+Since $\sin(\theta) = \frac{3}{5}$, this is a 3-4-5 right triangle $\implies \cos(\theta) = \frac{4}{5} = 0.8$ and $\tan(\theta) = \frac{3}{4} = 0.75$.
 $$\frac{\tan(\theta)}{\sin(\theta)} = \frac{3/4}{3/5} = \frac{5}{4} = 1.25$$
 $$\cos(\theta) + \frac{\tan(\theta)}{\sin(\theta)} = 0.8 + 1.25 = 2.05 \approx 2.1$$
 
@@ -721,8 +718,8 @@ $$\cos(\theta) + \frac{\tan(\theta)}{\sin(\theta)} = 0.8 + 1.25 = 2.05 \approx 2
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Let $\angle B = x$. To $\angle A = 2x$ aur $\angle C = x + 30^\circ$.
-Triangle ke angles ka sum $= 180^\circ$:
+Let $\angle B = x$. Then $\angle A = 2x$ and $\angle C = x + 30^\circ$.
+The sum of angles in a triangle is $180^\circ$:
 $$x + 2x + (x + 30^\circ) = 180^\circ \implies 4x + 30^\circ = 180^\circ \implies 4x = 150^\circ \implies x = 37.5^\circ$$
 $$\angle A = 2(37.5^\circ) = 75^\circ$$
 
@@ -745,10 +742,10 @@ $$\angle A = 2(37.5^\circ) = 75^\circ$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-- Cone volume: $V = \frac{1}{3}\pi r^2 h = \frac{1}{3}\pi r^2(12) = 4\pi r^2$
-- Sphere volume: $V = \frac{4}{3}\pi r^3$
+- Volume of the cone: $V = \frac{1}{3}\pi r^2 h = \frac{1}{3}\pi r^2(12) = 4\pi r^2$
+- Volume of the sphere: $V = \frac{4}{3}\pi r^3$
 
-Dono ko equal karo:
+Set the two volumes equal:
 $$4\pi r^2 = \frac{4}{3}\pi r^3 \implies 1 = \frac{1}{3}r \implies r = 3$$
 
 ---
@@ -772,13 +769,13 @@ $$4\pi r^2 = \frac{4}{3}\pi r^3 \implies 1 = \frac{1}{3}r \implies r = 3$$
 **Correct Answer:** **B) $1$**
 
 **Step-by-Step Explanation:**
-Choice B is correct (Sirf 1 valid criticism hai).
+Choice B is correct (There is only 1 valid criticism).
 
-1. 'Random assignment nahi tha' — Galat (question clearly says randomly assigned).
-2. 'Baseline difference se confound ho sakta hai' — Sahi criticism hai (valid) ✓
-3. 'p=0.03 ka matlab 3% chance drug fail hai' — Galat interpretation hai.
-4. 'Placebo group nahi hona chahiye tha' — Galat, placebo control zaroori hota hai.
-Isliye sirf 1 valid criticism hai.
+1. 'The study lacks random assignment' — False (the prompt clearly states participants were randomly assigned).
+2. 'The results may be confounded by baseline differences' — True (valid criticism) ✓
+3. 'The p-value of 0.03 means there is a 3% chance the drug is ineffective' — False interpretation of p-value.
+4. 'The placebo group should not have been included' — False (placebo control is necessary in clinical trials).
+Therefore, there is only 1 valid criticism.
 
 ---
 
@@ -806,7 +803,6 @@ $$ME = 1.96 \times \sqrt{\frac{0.60 \times 0.40}{400}} = 1.96 \times \sqrt{\frac
 
 ### Question 34 (Module 2 · Q7)
 **Topic:** `Conditional Probability & Tables`  
-**Visual Diagram/Table Included:** Yes (`m2_q7_table.png`)  
 
 **Question:**
 > The table shows the distribution of 200 students by grade level and whether they play a sport.
@@ -824,9 +820,9 @@ $$ME = 1.96 \times \sqrt{\frac{0.60 \times 0.40}{400}} = 1.96 \times \sqrt{\frac
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Table se Seniors row dekho:
+From the 'Seniors' row in the table:
 - Total seniors $= 30$
-- Seniors jo sport khelte hain $= 20$
+- Seniors who play a sport $= 20$
 $$\text{Probability} = \frac{20}{30} = \frac{2}{3} \approx 0.67$$
 
 ---
@@ -848,7 +844,7 @@ $$\text{Probability} = \frac{20}{30} = \frac{2}{3} \approx 0.67$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. Predicted value nikalo at $x = 10$:
+1. Calculate the predicted value at $x = 10$:
 $$\hat{y} = 0.8(10) + 3.2 = 8 + 3.2 = 11.2$$
 
 2. $\text{Residual} = \text{Actual} - \text{Predicted} = 12 - 11.2 = 0.8$.
@@ -872,9 +868,9 @@ $$\hat{y} = 0.8(10) + 3.2 = 8 + 3.2 = 11.2$$
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-7 numbers ka mean $= 12$, to total sum $= 12 \times 7 = 84$.
-Diye gaye numbers ka sum: $4 + 6 + 10 + 20 = 40$.
-Baaki sum $(a + b + c) = 84 - 40 = 44$.
+The mean of 7 numbers is $12$, so the total sum is $12 \times 7 = 84$.
+Sum of the given numbers: $4 + 6 + 10 + 20 = 40$.
+Sum of the remaining numbers: $a + b + c = 84 - 40 = 44$.
 
 ---
 
@@ -895,7 +891,7 @@ Baaki sum $(a + b + c) = 84 - 40 = 44$.
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Reverse mein solve karo:
+Solve backwards from the final price:
 $$\text{Cost} \times 1.40\text{ (markup)} \times 0.70\text{ (discount)} = 98$$
 $$\text{Cost} \times 0.98 = 98 \implies \text{Cost} = \frac{98}{0.98} = \$100$$
 
@@ -919,8 +915,8 @@ $$\text{Cost} \times 0.98 = 98 \implies \text{Cost} = \frac{98}{0.98} = \$100$$
 Choice A is correct.
 
 Wall area $= 14 \times 10 = 140\text{ sq ft}$.
-2 coats chahiye $\implies 140 \times 2 = 280\text{ sq ft}$.
-Ek gallon $350\text{ sq ft}$ cover karta hai ($280 \le 350$), isliye sirf $1\text{ full gallon}$ zaroori hai.
+For 2 coats: $140 \times 2 = 280\text{ sq ft}$.
+One gallon covers $350\text{ sq ft}$ ($280 \le 350$), so only $1\text{ full gallon}$ is needed.
 $$\text{Cost} = 1 \times \$24 = \$24$$
 
 ---
@@ -942,10 +938,10 @@ $$\text{Cost} = 1 \times \$24 = \$24$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. Vertex $x$-coordinate formula: $-\frac{b}{2a} = 4$, yahan $a = 2$:
+1. Vertex $x$-coordinate formula: $-\frac{b}{2a} = 4$, with $a = 2$:
 $$-\frac{b}{4} = 4 \implies b = -16$$
 
-2. Vertex $y$-coordinate $h(4) = -10$ se $c$ nikalo:
+2. Using the vertex $y$-coordinate $h(4) = -10$, solve for $c$:
 $$2(4^2) + (-16)(4) + c = -10$$
 $$32 - 64 + c = -10 \implies c = 22$$
 
@@ -972,10 +968,10 @@ $$b + c = -16 + 22 = 6$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Dono equations barabar karo:
+Set the two equations equal:
 $$x^2 + 4x + 7 = 2x + a \implies x^2 + 2x + (7 - a) = 0$$
 
-'Exactly one solution' ka matlab discriminant $\Delta = b^2 - 4ac = 0$:
+'Exactly one solution' means the discriminant $\Delta = b^2 - 4ac = 0$:
 $$2^2 - 4(1)(7 - a) = 0$$
 $$4 - 28 + 4a = 0 \implies 4a = 24 \implies a = 6$$
 
@@ -998,13 +994,13 @@ $$4 - 28 + 4a = 0 \implies 4a = 24 \implies a = 6$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. Pehla fraction simplify karo:
+1. Simplify the first fraction:
 $$\frac{2x^2 + 7x - 15}{x + 5} = \frac{(2x - 3)(x + 5)}{x + 5} = 2x - 3$$
 
-2. Doosra fraction simplify karo:
+2. Simplify the second fraction:
 $$\frac{x^2 - 4}{x - 2} = \frac{(x - 2)(x + 2)}{x - 2} = x + 2$$
 
-3. Subtract karo:
+3. Subtract:
 $$(2x - 3) - (x + 2) = x - 5$$
 $a = 1, b = -5 \implies a + b = 1 + (-5) = -4$.
 
@@ -1030,12 +1026,14 @@ $a = 1, b = -5 \implies a + b = 1 + (-5) = -4$.
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Dono inequalities satisfy karne wale integer points try karo:
-Jaise $x = 2, y = 3$:
+We need integer coordinates $(x, y)$ that satisfy both inequalities:
+- $y \le 2x + 1$
+- $y > -x + 4 \implies x + y > 4$
+Since $x + y$ must be an integer strictly greater than $4$, the smallest possible value is $5$.
+Testing $(x, y) = (2, 3)$:
 - $3 \le 2(2) + 1 = 5$ ✓ (True)
 - $3 > -(2) + 4 = 2$ ✓ (True)
-
-$x + y = 2 + 3 = 5$ hi minimum possible value milta hai.
+Thus, the minimum value of $x + y$ is $2 + 3 = 5$.
 
 ---
 
@@ -1058,10 +1056,10 @@ $x + y = 2 + 3 = 5$ hi minimum possible value milta hai.
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-'Infinitely many solutions' ke liye dono equations proportional (coincident lines) honi chahiye.
-$5x + 2y = 8$ ko $2$ se multiply karo:
+For a system to have 'infinitely many solutions', the two equations must be proportional (representing the same line).
+Multiply $5x + 2y = 8$ by $2$:
 $$10x + 4y = 16$$
-Ab $ax + 4y = 16$ se compare karne par: $a = 10$.
+Comparing with $ax + 4y = 16$, we find $a = 10$.
 
 ---
 
@@ -1082,11 +1080,11 @@ Ab $ax + 4y = 16$ se compare karne par: $a = 10$.
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. $x$-intercept $= 4$ matlab point $(4, 0)$, $y$-intercept $= -6$ matlab point $(0, -6)$:
+1. The $x$-intercept is $(4, 0)$ and the $y$-intercept is $(0, -6)$:
 $$\text{Slope } m = \frac{0 - (-6)}{4 - 0} = \frac{6}{4} = \frac{3}{2}$$
 Equation: $h(x) = \frac{3}{2}x - 6$
 
-2. $h(k) = 9$ solve karo:
+2. Solve $h(k) = 9$:
 $$9 = \frac{3}{2}k - 6 \implies 15 = \frac{3}{2}k \implies k = 10$$
 
 ---
@@ -1111,10 +1109,10 @@ $$9 = \frac{3}{2}k - 6 \implies 15 = \frac{3}{2}k \implies k = 10$$
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Infinitely many solutions ke liye dono equations proportional honi chahiye:
-$2x - 3y = 7$ ko $2$ se multiply karo:
+For infinitely many solutions, the two equations must be proportional:
+Multiply $2x - 3y = 7$ by $2$:
 $$4x - 6y = 14$$
-Compare karo $ax - 6y = 14$ se $\implies a = 4$.
+Comparing with $ax - 6y = 14$, we get $a = 4$.
 
 ---
 
@@ -1135,12 +1133,12 @@ Compare karo $ax - 6y = 14$ se $\implies a = 4$.
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Equation ko simplify karo:
+Simplify the equation:
 $$5x - 5a = 5x + 7a - 2$$
-$5x$ dono sides se subtract ho jaata hai:
+Subtract $5x$ from both sides:
 $$-5a = 7a - 2 \implies -12a = -2 \implies a = \frac{2}{12} = \frac{1}{6}$$
 
-Jab $a = \frac{1}{6}$ hota hai, tab dono sides exactly identical banti hain ($-5(1/6) = 7(1/6)-2 = -5/6$), jisse infinite solutions hote hain.
+When $a = \frac{1}{6}$, both sides are identical ($-5/6 = -5/6$), resulting in infinitely many solutions.
 
 ---
 
@@ -1161,7 +1159,7 @@ Jab $a = \frac{1}{6}$ hota hai, tab dono sides exactly identical banti hain ($-5
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Ice cream aur shark attacks dono garmi (hot summer weather) ke season mein badhte hain jab zyada log beach par swimming karte hain. Garmi hi asli confounding variable hai, causation nahi.
+Both ice cream sales and shark attacks increase during hot summer weather when more people are outdoors and swimming at the beach. Hot weather is the confounding variable; eating ice cream does not cause shark attacks.
 
 ---
 
@@ -1182,7 +1180,7 @@ Ice cream aur shark attacks dono garmi (hot summer weather) ke season mein badht
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-$95\%$ confidence interval ka sahi interpretation: agar bohot saare random samples lekar intervals banaye jaayein, to unme se $95\%$ intervals true population proportion ko cover karenge.
+The correct interpretation of a $95\%$ confidence interval: if repeated random samples were taken and intervals constructed, $95\%$ of those intervals would contain the true population proportion.
 
 ---
 
@@ -1203,12 +1201,12 @@ $95\%$ confidence interval ka sahi interpretation: agar bohot saare random sampl
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-1. Total chess players nikalo:
+1. Calculate total proportion of chess players:
 - Girls: $0.60 \times 0.30 = 0.18$
 - Boys: $0.40 \times 0.50 = 0.20$
 - Total $= 0.18 + 0.20 = 0.38$
 
-2. Girl hone ki probability (given chess plays):
+2. Probability of being a girl given the student plays chess:
 $$P(\text{Girl} \mid \text{Chess}) = \frac{0.18}{0.38} = \frac{18}{38} = \frac{9}{19} \approx 0.4737$$
 
 ---
@@ -1230,7 +1228,7 @@ $$P(\text{Girl} \mid \text{Chess}) = \frac{0.18}{0.38} = \frac{18}{38} = \frac{9
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-'Strong negative correlation' ka matlab $r$ value negative aur $-1$ ke kareeb honi chahiye. $r = 0.00$ ka matlab koi linear correlation nahi hai, isliye yeh strong negative correlation nahi ho sakta.
+A 'strong negative correlation' requires $r$ to be negative and close to $-1$. A value of $r = 0.00$ indicates no linear correlation at all, so it cannot represent a strong negative correlation.
 
 ---
 
@@ -1253,8 +1251,8 @@ Choice C is correct.
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-Data set B ke saare numbers Data set A se $+40$ zyada hain (shift hua hai). Spacing/gap dono mein bilkul same hai.
-Isliye: Mean B mein zyada hoga, lekin Standard Deviation (spread) same rahega.
+Every number in Data set B is exactly $40$ greater than the corresponding number in Data set A (a constant shift). The spacing/spread between numbers is identical.
+Therefore, the mean is larger in B, but the standard deviation remains the same.
 
 ---
 
@@ -1275,11 +1273,11 @@ Isliye: Mean B mein zyada hoga, lekin Standard Deviation (spread) same rahega.
 **Step-by-Step Explanation:**
 Choice C is correct.
 
-Shuru mein price $\$100$ maan lo:
+Assume the initial price is $\$100$:
 - Monday: $+20\% \implies 100 \times 1.20 = \$120$.
 - Tuesday: $-20\% \implies 120 \times 0.80 = \$96$.
 
-Net change: $100$ se $96 \implies 4\%\text{ decrease}$.
+Net change: From $100$ to $96 \implies 4\%\text{ decrease}$.
 
 ---
 
@@ -1300,8 +1298,8 @@ Net change: $100$ se $96 \implies 4\%\text{ decrease}$.
 **Step-by-Step Explanation:**
 Choice B is correct.
 
-1. Origin $(0, 0)$ se pass karta hai $\implies f(0) = c = 0$.
-2. Maximum $x = 3$ par hai: $-\frac{b}{2a} = 3 \implies -\frac{b}{2(-2)} = 3 \implies \frac{b}{4} = 3 \implies b = 12$.
+1. Passes through the origin $(0, 0) \implies f(0) = c = 0$.
+2. Maximum occurs at $x = 3$: $-\frac{b}{2a} = 3 \implies -\frac{b}{2(-2)} = 3 \implies \frac{b}{4} = 3 \implies b = 12$.
 
 $$b + c = 12 + 0 = 12$$
 
@@ -1324,8 +1322,8 @@ $$b + c = 12 + 0 = 12$$
 **Step-by-Step Explanation:**
 Choice A is correct.
 
-- 'At most 30 items' matlab total items 30 se kam ya barabar: $x + y \le 30$.
-- 'Earn at least $50' matlab earning $50 ya usse zyada: $2x + y \ge 50$.
-Isliye: $x + y \le 30,\quad 2x + y \ge 50$.
+- 'At most 30 items' means the total count is less than or equal to 30: $x + y \le 30$.
+- 'Earn at least $50' means the revenue is greater than or equal to 50: $2x + y \ge 50$.
+Therefore: $x + y \le 30,\quad 2x + y \ge 50$.
 
 ---
