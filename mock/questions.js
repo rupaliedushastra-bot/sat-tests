@@ -1532,3 +1532,17 @@ const MATH_MODULE2 = [
 ];
 
 const QUESTIONS = [...RW_MODULE1, ...RW_MODULE2, ...MATH_MODULE1, ...MATH_MODULE2];
+
+// ── Topic Map ─────────────────────────────────
+const TOPIC_MAP = {};
+QUESTIONS.forEach(q => {
+  const t = q.topic || 'General';
+  if (!TOPIC_MAP[t]) {
+    TOPIC_MAP[t] = { name: t, questions: [] };
+  }
+  TOPIC_MAP[t].questions.push(q.id);
+});
+
+if (typeof module !== 'undefined') {
+  module.exports = { QUESTIONS, TOPIC_MAP };
+}

@@ -11,7 +11,6 @@
     rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="questions2.js"></script>
   <style>
@@ -1108,14 +1107,13 @@
     <div class="reg-wrap">
       <div class="reg-card">
         <div class="reg-top">
-          <span class="icon">📝</span>
-          <h2>Full Mock Test 1</h2>
-          <h2>Digital SAT</h2>
-          <p>Full Mock Test 1 · Full Length · 1 Modules</p>
+          <span class="icon">🎯</span>
+          <h2>Diagnostic Test 1</h2>
+          <p>Digital SAT &nbsp;·&nbsp; 98 Questions &nbsp;·&nbsp; 134 Minutes</p>
         </div>
         <div class="stat-strip">
           <div class="s">
-            <div class="val">99</div>
+            <div class="val">98</div>
             <div class="lbl">Questions</div>
           </div>
           <div class="s">
@@ -1133,15 +1131,15 @@
         </div>
         <div class="reg-body">
           <div class="field">
-            <label>Full Name</label>
+            <label>Full Name *</label>
             <input type="text" id="regName" placeholder="Enter your full name" autocomplete="name">
           </div>
           <div class="field">
-            <label>Email Address</label>
+            <label>Email Address *</label>
             <input type="email" id="regEmail" placeholder="Enter your email" autocomplete="email">
           </div>
           <div class="field">
-            <label>Phone Number</label>
+            <label>Phone Number (Optional)</label>
             <div class="phone-row">
               <div class="phone-code-wrap">
                 <select id="regCountryCode">
@@ -1151,7 +1149,7 @@
               <input type="tel" id="regPhone" placeholder="Phone number" autocomplete="tel">
             </div>
           </div>
-          <button class="btn btn-primary" onclick="startTest()">Begin Full Mock Test →</button>
+          <button class="btn btn-primary" onclick="startTest()">▶ &nbsp;Start Diagnostic Test</button>
         </div>
       </div>
     </div>
@@ -1243,6 +1241,7 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase.js"></script>
   <script src="countries.js"></script>
   <script src="email.js"></script>
@@ -1250,8 +1249,7 @@
   <script>
     // =============================================
     // Digital SAT – script.js (inline)
-    // 4 modules: RW-M1 (27Q, 32min), RW-M2 (27Q, 32min),
-    //            Math-M1 (22Q, 35min), Math-M2 (22Q, 35min)
+    // 2 modules: Module 1 (49Q, 67min), Module 2 (49Q, 67min)
     // =============================================
 
     const LETTERS = ['A', 'B', 'C', 'D'];
@@ -1264,8 +1262,8 @@
     ];
 
     // Use Exam 2 questions & topic map
-    const QUESTIONS = QUESTIONS2;
-    const TOPIC_MAP = TOPIC_MAP2;
+    const QUESTIONS = typeof QUESTIONS2 !== 'undefined' ? QUESTIONS2 : [];
+    const TOPIC_MAP = typeof TOPIC_MAP2 !== 'undefined' ? TOPIC_MAP2 : {};
 
     let student = {};
     let answers = {};        // { questionId: answerIndex }
@@ -1281,23 +1279,41 @@
     // ── Page switch ──────────────────────────────
     function showPage(id) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      $(id).classList.add('active');
+      const el = $(id);
+      if (el) el.classList.add('active');
     }
 
     // ── Registration ──────────────────────────────
     function startTest() {
-      const name = $('regName').value.trim();
-      const email = $('regEmail').value.trim();
-      const phoneRaw = $('regPhone').value.trim();
-      const countryCode = $('regCountryCode').value;
+      const name = ($('regName') ? $('regName').value : '').trim();
+      const email = ($('regEmail') ? $('regEmail').value : '').trim();
+      const phoneRaw = ($('regPhone') ? $('regPhone').value : '').trim();
+      const countryCodeEl = $('regCountryCode');
+      const countryCode = countryCodeEl ? countryCodeEl.value : '+91';
       const phone = phoneRaw ? countryCode + ' ' + phoneRaw : '';
-      if (!name || !email || !phoneRaw) { alert('Please fill in all fields.'); return; }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email.'); return; }
+
+      if (!name || name.length < 2) {
+        alert('Please enter your full name (at least 2 characters).');
+        if ($('regName')) $('regName').focus();
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        if ($('regEmail')) $('regEmail').focus();
+        return;
+      }
+
       student = { name, email, phone, startTime: new Date().toISOString() };
       sessionStorage.setItem('student', JSON.stringify(student));
 
       // Save registration data to Supabase
-      if (typeof saveRegistration === 'function') saveRegistration(student, 'SAT Full Mock Test 1');
+      if (typeof saveRegistration === 'function') {
+        try {
+          saveRegistration(student, 'SAT Diagnostic Test 1');
+        } catch(e) {
+          console.warn('saveRegistration error:', e);
+        }
+      }
 
       startModule(0);
       window.addEventListener('beforeunload', e => { e.preventDefault(); e.returnValue = ''; });
@@ -1311,9 +1327,9 @@
       secsLeft = m.timeMin * 60;
 
       showPage('pageTest');
-      $('hdrModule').textContent = `· ${m.label}`;
-      $('modBannerName').textContent = m.label;
-      $('modBannerInfo').textContent = `${m.count} Questions · ${m.timeMin} Minutes`;
+      if ($('hdrModule')) $('hdrModule').textContent = `· ${m.label}`;
+      if ($('modBannerName')) $('modBannerName').textContent = m.label;
+      if ($('modBannerInfo')) $('modBannerInfo').textContent = `${m.count} Questions · ${m.timeMin} Minutes`;
       buildPalette();
       renderQ();
       clearInterval(timerInt);
