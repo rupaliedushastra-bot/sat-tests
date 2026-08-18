@@ -1,137 +1,138 @@
 // =============================================
-// Digital SAT Practice - Regenerated
-// 10 Questions
+// Digital SAT Practice – Expression of Ideas
+// 10 Questions | Topic Test
+// answers: 0=A, 1=B, 2=C, 3=D
 // =============================================
 
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "While researching for an essay, a student found the following information:\n- The committee decided to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "While researching a topic, a student has taken the following notes:\n• The Svalbard Global Seed Vault is located inside a mountain on the Norwegian island of Spitsbergen.\n• It acts as a secure backup storage facility for crop diversity from gene banks worldwide.\n• The vault is designed to withstand natural and human-made disasters, including climate change and nuclear fallout.\n• It currently houses over 1.1 million distinct seed samples representing more than 5,000 plant species.\n• Permafrost and thick rock ensure that the seed samples remain frozen even without electrical power.\n\nThe student wants to emphasize the resilience of the seed vault's facility. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The committee decided to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The committee decided debated the policy for over a year."
+      "Located in Norway, the Svalbard Global Seed Vault stores over 1.1 million seed samples for gene banks around the world.",
+      "Built within a permafrost mountain, the Svalbard facility is engineered to keep seeds frozen and protect crop diversity against catastrophic disasters without electrical power.",
+      "More than 5,000 species of agricultural crops are preserved in global gene banks for future generations.",
+      "The Norwegian island of Spitsbergen was chosen as the location for the Global Seed Vault due to its northern latitude."
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "answer": 1,
+    "topic": "Expression of Ideas",
+    "explanation": "Choice B is correct. The goal is to emphasize the resilience and durability of the vault's structure. Choice B directly highlights that the facility is built into a mountain, survives without electricity due to permafrost, and can endure catastrophic natural or human-made disasters.\n\n• Choice A is incorrect because it emphasizes the location and volume of seeds, not the physical resilience of the vault.\n• Choice C is incorrect because it discusses global gene banks in general rather than the durability of the Svalbard facility.\n• Choice D is incorrect because it mentions the location without detailing the architectural or environmental resilience features."
   },
   {
     "id": 2,
-    "text": "While researching for an essay, a student found the following information:\n- Many scientists believe to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "In 1820, Danish physicist Hans Christian Ørsted noticed that an electric current passing through a wire deflected a nearby magnetic compass needle, demonstrating that electricity and magnetism are linked. ___________ Scottish physicist James Clerk Maxwell formulated a unified mathematical framework consisting of four differential equations that fully described classical electromagnetism.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "Many scientists believe to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "Many scientists believe debated the policy for over a year."
+      "Decades later,",
+      "For example,",
+      "In contrast,",
+      "Conversely,"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "topic": "Expression of Ideas",
+    "explanation": "Choice A is correct. The first sentence describes Ørsted's initial experimental observation in 1820. The second sentence describes Maxwell's theoretical unification in the 1860s. \"Decades later,\" establishes the correct chronological progression connecting early discovery to later mathematical formalization.\n\n• Choice B is incorrect because Maxwell's work is a later developmental culmination, not an illustrative example of Ørsted's specific compass experiment.\n• Choice C is incorrect because Maxwell's work expanded upon and unified Ørsted's discovery rather than contradicting it.\n• Choice D is incorrect because \"conversely\" signifies an opposite relationship, which is inappropriate here."
   },
   {
     "id": 3,
-    "text": "While researching for an essay, a student found the following information:\n- The new software update to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "While researching a topic, a student has taken the following notes:\n• Bioluminescence is the biochemical emission of light by living organisms.\n• It is generated by a reaction between the light-emitting pigment luciferin and the enzyme luciferase.\n• Deep-sea anglerfish use a bioluminescent lure called an esca to attract prey in the bathypelagic zone.\n• Fireflies use intermittent bioluminescent flashing patterns to identify and attract potential mates.\n• Some species of dinoflagellates emit flashes of light when disturbed by water movement to startle predators.\n\nThe student wants to provide an example of bioluminescence being used for reproductive purposes. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The new software update to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The new software update debated the policy for over a year."
+      "Bioluminescence occurs when the pigment luciferin reacts with the enzyme luciferase in living organisms.",
+      "Deep-sea anglerfish utilize a glowing lure, or esca, to attract prey in dark ocean depths.",
+      "Fireflies utilize rhythmic patterns of bioluminescent flashes to signal and attract potential mates.",
+      "Dinoflagellates generate defensive flashes of light when disturbed by motion to deter predators."
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "answer": 2,
+    "topic": "Expression of Ideas",
+    "explanation": "Choice C is correct. The specific goal is to show bioluminescence being used for reproductive purposes (mating). Choice C directly explains how fireflies use flashing light signals to attract potential mates.\n\n• Choice A is incorrect because it explains the biochemical mechanism rather than a reproductive application.\n• Choice B is incorrect because anglerfish use light for predation/feeding, not reproduction.\n• Choice D is incorrect because dinoflagellates use light for anti-predator defense, not mating."
   },
   {
     "id": 4,
-    "text": "While researching for an essay, a student found the following information:\n- The artist's latest exhibition to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "Proponents of vertical farming point out that indoor hydroponic facilities consume up to 95 percent less water than conventional outdoor farms and eliminate agricultural runoff. ___________ critics caution that the high energy demands of continuous LED lighting and climate control systems can result in a substantial carbon footprint if powered by fossil fuels.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The artist's latest exhibition to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The artist's latest exhibition debated the policy for over a year."
+      "Consequently,",
+      "Furthermore,",
+      "Nevertheless,",
+      "Specifically,"
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "answer": 2,
+    "topic": "Expression of Ideas",
+    "explanation": "Choice C is correct. The first sentence highlights major environmental benefits of vertical farming (massive water savings, no runoff). The second sentence introduces a counterpoint regarding environmental drawbacks (high energy consumption and carbon emissions). \"Nevertheless,\" accurately signals this concession and contrast.\n\n• Choice A is incorrect because the energy drawback is not a consequence of water savings.\n• Choice B is incorrect because \"furthermore\" signals an additional supporting point rather than a contrasting counterargument.\n• Choice D is incorrect because the second sentence presents a distinct counter-issue rather than a specific illustration of the first sentence."
   },
   {
     "id": 5,
-    "text": "While researching for an essay, a student found the following information:\n- The ancient ruins to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "While researching a topic, a student has taken the following notes:\n• The James Webb Space Telescope (JWST) was launched in December 2021 as a successor to Hubble.\n• It operates primarily in the infrared spectrum, enabling it to observe through cosmic dust clouds.\n• In 2023, JWST captured detailed spectral signatures of atmospheric water vapor and carbon dioxide on exoplanet WASP-96b.\n• The Hubble Space Telescope operates predominantly in optical and ultraviolet wavelengths.\n• High-resolution infrared instruments allow astronomers to study the earliest galaxies formed after the Big Bang.\n\nThe student wants to contrast the primary observational capabilities of the JWST with those of the Hubble Space Telescope. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The ancient ruins to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The ancient ruins debated the policy for over a year."
+      "Launched in 2021, the JWST is equipped with infrared instruments capable of analyzing exoplanet atmospheres such as that of WASP-96b.",
+      "While the Hubble Space Telescope observed the universe predominantly in optical and ultraviolet light, the JWST operates primarily in the infrared spectrum to peer through cosmic dust.",
+      "Astronomers utilize the JWST to study exoplanets and view the earliest galaxies formed after the Big Bang.",
+      "Operating in the infrared spectrum, the JWST serves as the technological successor to earlier space telescopes."
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "answer": 1,
+    "topic": "Expression of Ideas",
+    "explanation": "Choice B is correct. The goal is to contrast the observational capabilities of both telescopes. Choice B explicitly contrasts Hubble's optical/UV focus with JWST's primary infrared capability and its ability to peer through cosmic dust.\n\n• Choice A is incorrect because it focuses solely on the JWST without mentioning or contrasting Hubble.\n• Choice C is incorrect because it lists research topics for JWST without contrasting with Hubble.\n• Choice D is incorrect because it does not mention Hubble's specific wavelength capabilities."
   },
   {
     "id": 6,
-    "text": "While researching for an essay, a student found the following information:\n- The economic report to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "Ancient Roman roads were built with multiple stratified layers, including crushed stone, gravel, and volcanic pozzolana mortar, designed to provide drainage and resist freeze-thaw cracking. ___________ many sections of the Via Appia, originally constructed in 312 BCE, remain structurally intact and usable after more than two millennia.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The economic report to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The economic report debated the policy for over a year."
+      "As a result,",
+      "In contrast,",
+      "Similarly,",
+      "Nevertheless,"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "topic": "Expression of Ideas",
+    "explanation": "Choice A is correct. The first sentence describes the durable engineering design of Roman roads. The second sentence describes the direct outcome of that superior engineering: sections of the Via Appia surviving and remaining usable for over 2,000 years. \"As a result,\" correctly indicates this cause-and-effect relationship.\n\n• Choice B is incorrect because survival is the intended outcome of durable engineering, not a contrasting contradiction.\n• Choice C is incorrect because the second sentence is an outcome of the first, not an analogy between two separate entities.\n• Choice D is incorrect because \"nevertheless\" indicates an unexpected result contrary to expectations."
   },
   {
     "id": 7,
-    "text": "While researching for an essay, a student found the following information:\n- The city council to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "While researching a topic, a student has taken the following notes:\n• Mary Shelley published *Frankenstein; or, The Modern Prometheus* anonymously in 1818 at the age of twenty.\n• The novel was conceived during the \"Year Without a Summer\" (1816) at Villa Diodati near Lake Geneva, Switzerland.\n• Mary was accompanied by her future husband Percy Bysshe Shelley, Lord Byron, and John Polidori.\n• The group engaged in a ghost story competition sparked by unceasing cold rain caused by the eruption of Mount Tambora.\n• *Frankenstein* is widely recognized as one of the earliest examples of science fiction literature.\n\nThe student wants to explain the environmental context in which *Frankenstein* was conceived. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The city council to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The city council debated the policy for over a year."
+      "Published anonymously when Mary Shelley was only twenty, *Frankenstein* became a pioneering work of science fiction.",
+      "*Frankenstein* was conceived during the stormy 1816 \"Year Without a Summer,\" when volcanic ash from Mount Tambora trapped Mary Shelley and her companions indoors at Lake Geneva.",
+      "Mary Shelley composed her famous 1818 novel while competing against Lord Byron and Percy Bysshe Shelley in Switzerland.",
+      "Widely regarded as an early masterwork of science fiction, *Frankenstein* emerged from a friendly ghost story competition."
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "answer": 1,
+    "topic": "Expression of Ideas",
+    "explanation": "Choice B is correct. The student's specific goal is to explain the environmental context (weather, climate anomaly caused by Mount Tambora's volcanic eruption) that led to the book's conception. Choice B directly identifies the \"Year Without a Summer,\" the volcanic ash, and being trapped indoors by storms.\n\n• Choice A is incorrect because it emphasizes publication details and genre status, omitting environmental factors.\n• Choice C is incorrect because it focuses on literary competitors rather than climatic conditions.\n• Choice D is incorrect because it focuses on the competition and genre impact rather than the environmental context."
   },
   {
     "id": 8,
-    "text": "While researching for an essay, a student found the following information:\n- The school board to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "Unlike standard chemical batteries that store energy internally and degrade over charging cycles, redox flow batteries store energy in external liquid electrolyte tanks. ___________ their energy capacity can be expanded simply by increasing the size of the storage tanks, making them exceptionally well-suited for grid-scale renewable energy storage.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The school board to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The school board debated the policy for over a year."
+      "Thus,",
+      "Meanwhile,",
+      "On the other hand,",
+      "Instead,"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "topic": "Expression of Ideas",
+    "explanation": "Choice A is correct. The first sentence explains that redox flow batteries store liquid electrolytes in external tanks. The second sentence states the logical consequence of this design: scaling capacity requires only building larger tanks. \"Thus,\" correctly signals this logical deduction.\n\n• Choice B is incorrect because \"meanwhile\" indicates simultaneous concurrent action, not a cause-and-effect relationship.\n• Choice C is incorrect because the second sentence describes an advantage of the external tanks, not a contrasting condition.\n• Choice D is incorrect because \"instead\" indicates an alternative replacement, which is inappropriate here."
   },
   {
     "id": 9,
-    "text": "While researching for an essay, a student found the following information:\n- The local library to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "While researching a topic, a student has taken the following notes:\n• The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis, Egypt, in 196 BCE.\n• The decree appears in three distinct scripts: Ancient Egyptian hieroglyphs, Egyptian Demotic script, and Ancient Greek.\n• Because the Greek text could be read by nineteenth-century scholars, it provided the key to deciphering Egyptian hieroglyphs.\n• French scholar Jean-François Champollion announced the full decipherment of the hieroglyphic writing system in 1822.\n• The stone was discovered in 1799 by French soldiers near the town of Rashid (Rosetta).\n\nThe student wants to explain how the Rosetta Stone enabled the decipherment of hieroglyphs. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The local library to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The local library debated the policy for over a year."
+      "Discovered in 1799 by French soldiers, the Rosetta Stone is a granodiorite stele that contains a royal decree issued in 196 BCE.",
+      "In 1822, French linguist Jean-François Champollion successfully cracked the code of ancient Egyptian writing systems.",
+      "Because the Rosetta Stone presented the same decree in readable Ancient Greek alongside Egyptian scripts, scholars were able to cross-reference the texts and decipher the hieroglyphs.",
+      "The Rosetta Stone contains text written in three scripts, including Demotic and Ancient Egyptian hieroglyphs."
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "answer": 2,
+    "topic": "Expression of Ideas",
+    "explanation": "Choice C is correct. The goal is to explain *how* the artifact facilitated decipherment. Choice C explains the multilingual mechanism: because scholars knew Greek, having identical decree text in Greek and hieroglyphs allowed them to translate and decode the unknown script.\n\n• Choice A is incorrect because it details the stone's discovery date and physical composition rather than how it enabled translation.\n• Choice B is incorrect because it names Champollion without explaining the multilingual mechanism of the stone.\n• Choice D is incorrect because it simply lists the scripts without explaining how they enabled translation."
   },
   {
     "id": 10,
-    "text": "While researching for an essay, a student found the following information:\n- The community garden to implement the new policy next month.\n- The policy has been debated for over a year.\n- It is expected to improve efficiency by 20%.\n\nThe student wants to emphasize the expected result of the policy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "text": "Modern architectural engineers increasingly utilize computational fluid dynamics to simulate airflow around high-rise structures before construction begins. ___________ engineers can identify zones of turbulent aerodynamic stress and optimize building geometry to mitigate wind-induced sway without adding expensive structural mass.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
-      "Expected to improve efficiency by 20%, the new policy will be implemented next month.",
-      "The community garden to implement the new policy next month after a year of debate.",
-      "The policy, which has been debated for a year, is finally being implemented.",
-      "The community garden debated the policy for over a year."
+      "In doing so,",
+      "In contrast,",
+      "Nevertheless,",
+      "Prior to that,"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The student wants to emphasize the expected result. The first option places the expected result ('improve efficiency by 20%') at the beginning of the sentence, effectively accomplishing the goal.",
-    "topic": "Expression of Ideas"
+    "topic": "Expression of Ideas",
+    "explanation": "Choice A is correct. The first sentence describes the practice of simulating airflow using computational fluid dynamics. The second sentence describes what engineers achieve by conducting those simulations (identifying aerodynamic stress and optimizing geometry). \"In doing so,\" correctly connects the method with its immediate operational payoff.\n\n• Choice B is incorrect because the second sentence describes the benefit of the practice, not an opposing idea.\n• Choice C is incorrect because \"nevertheless\" indicates a concession or obstacle, whereas the second sentence is a positive accomplishment.\n• Choice D is incorrect because the benefits occur during and through the simulation, not prior to it."
   }
 ];

@@ -14,7 +14,7 @@ const QUESTIONS = [
       "(\text{Rs. } 20)"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. Tax paid = 30 paise = ( ext{Rs. } 0.30). Tax rate = (6%), so taxable amount = 0.30 ÷ 0.06 = ( ext{Rs. } 5). Cost of taxable items incl. tax = 5 + 0.30 = ( ext{Rs. } 5.30). Cost of tax-free items = 25 − 5.30 = ( ext{Rs. } 19.70).",
+    "explanation": "Choice C is correct. Tax paid = 30 paise = ( \text{Rs. } 0.30). Tax rate = (6%), so taxable amount = 0.30 ÷ 0.06 = ( \text{Rs. } 5). Cost of taxable items incl. tax = 5 + 0.30 = ( \text{Rs. } 5.30). Cost of tax-free items = 25 − 5.30 = ( \text{Rs. } 19.70).",
     "topic": "Percentage – Tax"
   },
   {
@@ -40,7 +40,7 @@ const QUESTIONS = [
       "(\text{Rs. } 10,500)"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. Let marked price = M. After (5%) deduction: M × 0.95 = 9595 → M = 9595 ÷ 0.95 = ( ext{Rs. } 10,100).",
+    "explanation": "Choice C is correct. Let marked price = M. After (5%) deduction: M × 0.95 = 9595 → M = 9595 ÷ 0.95 = ( \text{Rs. } 10,100).",
     "topic": "Percentage – Commission & Discount"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "(\text{Rs. } 3200)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. Savings = (100%) − (66\\frac{2}{3}%) = (33\\frac{1}{3}%) = 1/3 of income. Income = 1200 × 3 = ( ext{Rs. } 3600). Expenses = (66\\frac{2}{3}%) of 3600 = (2/3) × 3600 = ( ext{Rs. } 2400).",
+    "explanation": "Choice B is correct. Savings = (100%) − (66\\frac{2}{3}%) = (33\\frac{1}{3}%) = 1/3 of income. Income = 1200 × 3 = ( \text{Rs. } 3600). Expenses = (66\\frac{2}{3}%) of 3600 = (2/3) × 3600 = ( \text{Rs. } 2400).",
     "topic": "Percentage – Income & Savings"
   },
   {
@@ -222,7 +222,7 @@ const QUESTIONS = [
       "(30%)"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. Total money = 600×0.25 + 1200×0.50 = 150 + 600 = ( ext{Rs. } 750). Removed = (12%) of 150 + (24%) of 600 = 18 + 144 = ( ext{Rs. } 162). Percentage removed = (162/750) × 100 = (21.6%).",
+    "explanation": "Choice C is correct. Total money = 600×0.25 + 1200×0.50 = 150 + 600 = ( \text{Rs. } 750). Removed = (12%) of 150 + (24%) of 600 = 18 + 144 = ( \text{Rs. } 162). Percentage removed = (162/750) × 100 = (21.6%).",
     "topic": "Percentage – Money"
   },
   {
@@ -248,7 +248,7 @@ const QUESTIONS = [
       "(\text{Rs. } 2.50)"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Let original price = P. Reduction = (21%), so new price = 0.79P. Extra qty = 100/0.79P − 100/P = 10.5. Solving: 100 × 0.21 / (0.79P) = 10.5 → P ≈ ( ext{Rs. } 2.53). Reduced price = 0.79 × 2.53 ≈ ( ext{Rs. } 2).",
+    "explanation": "Choice A is correct. Let original price = P. Reduction = (21%), so new price = 0.79P. Extra qty = 100/0.79P − 100/P = 10.5. Solving: 100 × 0.21 / (0.79P) = 10.5 → P ≈ ( \text{Rs. } 2.53). Reduced price = 0.79 × 2.53 ≈ ( \text{Rs. } 2).",
     "topic": "Percentage – Price & Quantity"
   },
   {
@@ -261,7 +261,7 @@ const QUESTIONS = [
       "(\text{Rs. } 10.40)"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. Let original price = P per egg. 7.80/P − 7.80/1.3P = 3 → 7.80 × 0.3/(1.3P) = 3 → P = ( ext{Rs. } 0.60). New price per egg = 1.3 × 0.60 = ( ext{Rs. } 0.78). Per dozen = 0.78 × 12 = ( ext{Rs. } 9.36).",
+    "explanation": "Choice C is correct. Let original price = P per egg. 7.80/P − 7.80/1.3P = 3 → 7.80 × 0.3/(1.3P) = 3 → P = ( \text{Rs. } 0.60). New price per egg = 1.3 × 0.60 = ( \text{Rs. } 0.78). Per dozen = 0.78 × 12 = ( \text{Rs. } 9.36).",
     "topic": "Percentage – Price & Quantity"
   },
   {
@@ -274,7 +274,7 @@ const QUESTIONS = [
       "(\text{Rs. } 4.50)"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Let original price = P per kg. New price = 0.9P. Extra = 279/0.9P − 279/P = 6.2 → 279 × 0.1/(0.9P) = 6.2 → 31/P = 6.2 → P = ( ext{Rs. } 5). Difference = 5 − 4.5 = Re. 0.50.",
+    "explanation": "Choice A is correct. Let original price = P per kg. New price = 0.9P. Extra = 279/0.9P − 279/P = 6.2 → 279 × 0.1/(0.9P) = 6.2 → 31/P = 6.2 → P = ( \text{Rs. } 5). Difference = 5 − 4.5 = Re. 0.50.",
     "topic": "Percentage – Price & Quantity"
   },
   {

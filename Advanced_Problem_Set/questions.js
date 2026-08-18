@@ -15,7 +15,7 @@ const QUESTIONS = [
       "64"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. According to Viviani's theorem, the sum of the perpendicular distances from any interior point to the sides of an equilateral triangle is equal to the altitude (height) of the triangle.\nAltitude h = √3 + 2√3 + 5√3 = 8( sqrt{3} ext{ cm} ).\nFor an equilateral triangle, the altitude h is related to side length s by:\n( h = \\frac{sqrt{3}}{2} imes s )\n( 8sqrt{3} = \\frac{sqrt{3}}{2} imes s ) => ( s = 16 ext{ cm} ).\nThe perimeter is ( 3s = 3 imes 16 = 48 ext{ cm} ).",
+    "explanation": "Choice C is correct. According to Viviani's theorem, the sum of the perpendicular distances from any interior point to the sides of an equilateral triangle is equal to the altitude (height) of the triangle.\nAltitude h = √3 + 2√3 + 5√3 = 8( sqrt{3} \text{ cm} ).\nFor an equilateral triangle, the altitude h is related to side length s by:\n( h = \\frac{sqrt{3}}{2} \times s )\n( 8sqrt{3} = \\frac{sqrt{3}}{2} \times s ) => ( s = 16 \text{ cm} ).\nThe perimeter is ( 3s = 3 \times 16 = 48 \text{ cm} ).",
     "topic": "Geometry & Mensuration"
   },
   {
@@ -28,7 +28,7 @@ const QUESTIONS = [
       "( 221 \text{ cm}^2 )"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. By the Pythagorean theorem for the right triangle ABC, ( AB^2 + BC^2 = AC^2 ).\nThe area of a semi-circle with diameter d is given by ( A = \\frac{1}{2} pi left(\\frac{d}{2}\right)^2 = \\frac{pi}{8} d^2 ).\nThus:\n- Area of semi-circle on AB: ( \\frac{pi}{8} AB^2 = 81 )\n- Area of semi-circle on BC: ( \\frac{pi}{8} BC^2 = 36 )\n- Area of semi-circle on AC: ( \\frac{pi}{8} AC^2 = \\frac{pi}{8} (AB^2 + BC^2) = \\frac{pi}{8} AB^2 + \\frac{pi}{8} BC^2 = 81 + 36 = 117 ext{ cm}^2 ).",
+    "explanation": "Choice A is correct. By the Pythagorean theorem for the right triangle ABC, ( AB^2 + BC^2 = AC^2 ).\nThe area of a semi-circle with diameter d is given by ( A = \\frac{1}{2} pi left(\\frac{d}{2}\right)^2 = \\frac{pi}{8} d^2 ).\nThus:\n- Area of semi-circle on AB: ( \\frac{pi}{8} AB^2 = 81 )\n- Area of semi-circle on BC: ( \\frac{pi}{8} BC^2 = 36 )\n- Area of semi-circle on AC: ( \\frac{pi}{8} AC^2 = \\frac{pi}{8} (AB^2 + BC^2) = \\frac{pi}{8} AB^2 + \\frac{pi}{8} BC^2 = 81 + 36 = 117 \text{ cm}^2 ).",
     "topic": "Geometry & Mensuration"
   },
   {
@@ -41,7 +41,7 @@ const QUESTIONS = [
       "30 ft"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. Let the radius of the pool be r. The outer radius including the wall is r + 4.\nThe area of the concrete wall is:\n( ext{Area}_{ ext{wall}} = pi(r + 4)^2 - pi r^2 = pi(r^2 + 8r + 16 - r^2) = pi(8r + 16) ).\nThe area of the pool is:\n( ext{Area}_{ ext{pool}} = pi r^2 ).\nWe are given that the wall's area is ( \\frac{11}{25} ) of the pool's area:\nπ(8r + 16) / (πr²) = ( \\frac{11}{25} )\n(8r + 16) / r² = ( \\frac{11}{25} )\n( 25(8r + 16) = 11r^2 )\n( 200r + 400 = 11r^2 )\n( 11r^2 - 200r - 400 = 0 ).\nSolving this quadratic equation:\n(( (11r + 20)(r - 20) = 0 ).\nSince radius r must be positive, r = 20 ft.",
+    "explanation": "Choice C is correct. Let the radius of the pool be r. The outer radius including the wall is r + 4.\nThe area of the concrete wall is:\n( \text{Area}_{ \text{wall}} = pi(r + 4)^2 - pi r^2 = pi(r^2 + 8r + 16 - r^2) = pi(8r + 16) ).\nThe area of the pool is:\n( \text{Area}_{ \text{pool}} = pi r^2 ).\nWe are given that the wall's area is ( \\frac{11}{25} ) of the pool's area:\nπ(8r + 16) / (πr²) = ( \\frac{11}{25} )\n(8r + 16) / r² = ( \\frac{11}{25} )\n( 25(8r + 16) = 11r^2 )\n( 200r + 400 = 11r^2 )\n( 11r^2 - 200r - 400 = 0 ).\nSolving this quadratic equation:\n(( (11r + 20)(r - 20) = 0 ).\nSince radius r must be positive, r = 20 ft.",
     "topic": "Geometry & Mensuration"
   },
   {
@@ -171,7 +171,7 @@ const QUESTIONS = [
       "(x+y)/(x-y)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. In right triangle ABC, var the side opposite to angle A be (x² - y²) and the side adjacent to angle A be 2xy.\nBy Pythagorean theorem, the hypotenuse is:\nHypotenuse = √((x² - y²)² + (2xy)²) = √(x⁴ - 2x²y² + y⁴ + 4x²y²) = √(x⁴ + 2x²y² + y⁴) = √(x² + y²)² = x² + y².\nNow, sec(A) = Hypotenuse / Adjacent = (x² + y²) / 2xy.\nsec(A) - tan(A) = (x² + y²) / 2xy - (x² - y²) / 2xy = (x² + y² - x² + y²) / 2xy = 2y² / 2xy = y/x.",
+    "explanation": "Choice B is correct. In right triangle ABC, let the side opposite to angle A be (x² - y²) and the side adjacent to angle A be 2xy.\nBy Pythagorean theorem, the hypotenuse is:\nHypotenuse = √((x² - y²)² + (2xy)²) = √(x⁴ - 2x²y² + y⁴ + 4x²y²) = √(x⁴ + 2x²y² + y⁴) = √(x² + y²)² = x² + y².\nNow, sec(A) = Hypotenuse / Adjacent = (x² + y²) / 2xy.\nsec(A) - tan(A) = (x² + y²) / 2xy - (x² - y²) / 2xy = (x² + y² - x² + y²) / 2xy = 2y² / 2xy = y/x.",
     "topic": "Trigonometry"
   },
   {

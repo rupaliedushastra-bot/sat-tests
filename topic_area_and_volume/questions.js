@@ -27,7 +27,7 @@ const QUESTIONS = [
       "144"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. ( ext{Diagonal} = sqrt{ ext{length}^2 + ext{width}^2} = sqrt{12^2 + 5^2} = sqrt{144 + 25} = sqrt{169} = 13 ).",
+    "explanation": "Choice A is correct. ( \text{Diagonal} = sqrt{ \text{length}^2 + \text{width}^2} = sqrt{12^2 + 5^2} = sqrt{144 + 25} = sqrt{169} = 13 ).",
     "topic": "Rectangles – Diagonal"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "256"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. ( ext{Volume} = s^3 = 64 ) → ( s = 4 ). ( ext{Total surface area} = 6s^2 = 6(4^2) = 6(16) = 96 ).",
+    "explanation": "Choice C is correct. ( \text{Volume} = s^3 = 64 ) → ( s = 4 ). ( \text{Total surface area} = 6s^2 = 6(4^2) = 6(16) = 96 ).",
     "topic": "3D Solids – Cube"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "27"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Volume of sphere = (4/3)πr³ = ( 36pi ) → ( r^3 = 36 imes \\frac{3}{4} = 27 ) → ( r = 3 ).",
+    "explanation": "Choice A is correct. Volume of sphere = (4/3)πr³ = ( 36pi ) → ( r^3 = 36 \times \\frac{3}{4} = 27 ) → ( r = 3 ).",
     "topic": "3D Solids – Sphere Volume"
   },
   {
@@ -92,7 +92,7 @@ const QUESTIONS = [
       "40"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. ( ext{Area of trapezoid} = \\frac{1}{2}(b_1 + b_2) imes h = \\frac{1}{2}(8 + 14) imes 5 = \\frac{1}{2}(22)(5) = 55 ).",
+    "explanation": "Choice A is correct. ( \text{Area of trapezoid} = \\frac{1}{2}(b_1 + b_2) \times h = \\frac{1}{2}(8 + 14) \times 5 = \\frac{1}{2}(22)(5) = 55 ).",
     "topic": "Quadrilaterals – Trapezoid Area"
   },
   {
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "( 48pi )"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. First find height using Pythagoras: ( h = sqrt{ ext{slant}^2 - r^2} = sqrt{5^2 - 4^2} = sqrt{25 - 16} = sqrt{9} = 3 ). Volume of cone = (1/3)πr²h = (1/3)π(16)(3) = ( 16pi ).",
+    "explanation": "Choice B is correct. First find height using Pythagoras: ( h = sqrt{ \text{slant}^2 - r^2} = sqrt{5^2 - 4^2} = sqrt{25 - 16} = sqrt{9} = 3 ). Volume of cone = (1/3)πr²h = (1/3)π(16)(3) = ( 16pi ).",
     "topic": "3D Solids – Cone Volume"
   },
   {
@@ -144,7 +144,7 @@ const QUESTIONS = [
       "60"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. When the scale factor of similar figures is k, the ratio of their areas is k². Here scale factor = ( 2:3 ), so area ratio = ( 4:9 ). ( ext{Larger area} = 20 imes left(\\frac{9}{4}\right) = 45 ).",
+    "explanation": "Choice C is correct. When the scale factor of similar figures is k, the ratio of their areas is k². Here scale factor = ( 2:3 ), so area ratio = ( 4:9 ). ( \text{Larger area} = 20 \times left(\\frac{9}{4}\right) = 45 ).",
     "topic": "Similar Figures – Area Ratio"
   },
   {

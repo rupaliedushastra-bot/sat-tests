@@ -53,7 +53,7 @@ const QUESTIONS = [
       "(\text{Rs. } 183)"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. A = ((\\frac{1}{2}))(B+C) → A : (B+C) = (1 : 2) → A = (\\frac{366}{3}) = ( ext{Rs. } 122).",
+    "explanation": "Choice A is correct. A = ((\\frac{1}{2}))(B+C) → A : (B+C) = (1 : 2) → A = (\\frac{366}{3}) = ( \text{Rs. } 122).",
     "topic": "Division of Amount"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
       "(\text{Rs. } 320)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. P:Q:R:S = 8:12:18:27. Sum = 65. P = ((\\frac{8}{65})) × 1300 = ( ext{Rs. } 160).",
+    "explanation": "Choice B is correct. P:Q:R:S = 8:12:18:27. Sum = 65. P = ((\\frac{8}{65})) × 1300 = ( \text{Rs. } 160).",
     "topic": "Four Quantities"
   },
   {
@@ -79,7 +79,7 @@ const QUESTIONS = [
       "(\text{Rs. } 664)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. ((\\frac{4}{15}))A = ((\\frac{2}{5}))B → A:B = 3:2. B = ((\\frac{2}{5})) × 1210 = ( ext{Rs. } 484).",
+    "explanation": "Choice B is correct. ((\\frac{4}{15}))A = ((\\frac{2}{5}))B → A:B = 3:2. B = ((\\frac{2}{5})) × 1210 = ( \text{Rs. } 484).",
     "topic": "Two Quantities"
   },
   {
@@ -157,7 +157,7 @@ const QUESTIONS = [
       "None of these"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. C−D = 4−3 = 1 part = ( ext{Rs. } 1000). Total = 14 parts = ( ext{Rs. } 14),000. B = 2 × 1000 = ( ext{Rs. } 2000).",
+    "explanation": "Choice C is correct. C−D = 4−3 = 1 part = ( \text{Rs. } 1000). Total = 14 parts = ( \text{Rs. } 14),000. B = 2 × 1000 = ( \text{Rs. } 2000).",
     "topic": "Division with Condition"
   },
   {
@@ -300,7 +300,7 @@ const QUESTIONS = [
       "(\text{Rs. } 32),000"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Difference = 2 parts = ( ext{Rs. } 8000) → 1 part = ( ext{Rs. } 4000). T.V. = 5×4000 = ( ext{Rs. } 20),000.",
+    "explanation": "Choice A is correct. Difference = 2 parts = ( \text{Rs. } 8000) → 1 part = ( \text{Rs. } 4000). T.V. = 5×4000 = ( \text{Rs. } 20),000.",
     "topic": "Price Problems"
   },
   {
@@ -313,7 +313,7 @@ const QUESTIONS = [
       "(\text{Rs. } 245)"
     ],
     "answer": 3,
-    "explanation": "Choice D is correct. Reduced total = 735−75 = 660. C's reduced share = ((\\frac{2}{6}))×660 = 220. C's actual = 220+25 = ( ext{Rs. } 245).",
+    "explanation": "Choice D is correct. Reduced total = 735−75 = 660. C's reduced share = ((\\frac{2}{6}))×660 = 220. C's actual = 220+25 = ( \text{Rs. } 245).",
     "topic": "Division with Reduction"
   },
   {
@@ -326,7 +326,7 @@ const QUESTIONS = [
       "(\text{Rs. } 810)"
     ],
     "answer": 3,
-    "explanation": "Choice D is correct. Reduced total = 2430−30 = 2400. B's reduced = ((\\frac{4}{12}))×2400 = 800. B's actual = 800+10 = ( ext{Rs. } 810).",
+    "explanation": "Choice D is correct. Reduced total = 2430−30 = 2400. B's reduced = ((\\frac{4}{12}))×2400 = 800. B's actual = 800+10 = ( \text{Rs. } 810).",
     "topic": "Division with Reduction"
   }
 ];

@@ -76,7 +76,7 @@ const QUESTIONS = [
       "40 square units"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The area of a triangle is given by ( A = \\frac{1}{2} imes ext{base} imes ext{height} = \\frac{1}{2} imes 10 imes 5 = 25 ) square units. B) Incorrect; misunderstanding the formula. C) Incorrect; incorrect multiplication. D) Incorrect; error in calculation (e.g., forgetting the 1/2 factor).",
+    "explanation": "Choice A is correct. The area of a triangle is given by ( A = \\frac{1}{2} \times \text{base} \times \text{height} = \\frac{1}{2} \times 10 \times 5 = 25 ) square units. B) Incorrect; misunderstanding the formula. C) Incorrect; incorrect multiplication. D) Incorrect; error in calculation (e.g., forgetting the 1/2 factor).",
     "topic": "Triangle Area"
   },
   {
@@ -117,7 +117,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The perimeter of a square is given by ( 4 imes ext{side length} ). Setting ( 4 imes ext{side length} ) = 20 and dividing by 4 gives side length = 5. A) Incorrect; misunderstanding the perimeter formula. C), D) Incorrect; results from incorrect division.",
+    "explanation": "Choice B is correct. The perimeter of a square is given by ( 4 \times \text{side length} ). Setting ( 4 \times \text{side length} ) = 20 and dividing by 4 gives side length = 5. A) Incorrect; misunderstanding the perimeter formula. C), D) Incorrect; results from incorrect division.",
     "topic": "Square Perimeter"
   },
   {
@@ -130,7 +130,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The area of a rectangle is given by Area = length × width. Setting ( 24 = 8 imes ext{width} ) and dividing both sides by 8 gives ( ext{width} = 3 ). A) Incorrect; results from incorrect division. C), D) Incorrect; arithmetic errors when dividing 24 by 8.",
+    "explanation": "Choice B is correct. The area of a rectangle is given by Area = length × width. Setting ( 24 = 8 \times \text{width} ) and dividing both sides by 8 gives ( \text{width} = 3 ). A) Incorrect; results from incorrect division. C), D) Incorrect; arithmetic errors when dividing 24 by 8.",
     "topic": "Rectangle Area"
   },
   {
@@ -251,7 +251,7 @@ const QUESTIONS = [
       "7"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The perimeter P of a square is given by P = ( 4 imes ext{side length} ). Therefore: 20 = ( 4 imes ext{side length} ). Dividing both sides by 4 gives side length = 5. A) Incorrect; miscalculation in dividing by 4. C), D) Incorrect; errors in understanding the perimeter formula.",
+    "explanation": "Choice B is correct. The perimeter P of a square is given by P = ( 4 \times \text{side length} ). Therefore: 20 = ( 4 \times \text{side length} ). Dividing both sides by 4 gives side length = 5. A) Incorrect; miscalculation in dividing by 4. C), D) Incorrect; errors in understanding the perimeter formula.",
     "topic": "Square Perimeter"
   },
   {
