@@ -1,9 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const transport = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "smtp.gmail.com",
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: false,
+  service: "gmail",
   auth: {
     user: process.env.SMTP_USER || "rupali.eduquest@gmail.com",
     pass: process.env.SMTP_PASS || "utfucjqehmaygikw",
@@ -29,7 +27,13 @@ module.exports = async (req, res) => {
   const fromEmail = process.env.SMTP_USER || "rupali.eduquest@gmail.com";
 
   try {
-    const body = req.body;
+    let body = req.body;
+    if (typeof body === "string") {
+      try {
+        body = JSON.parse(body);
+      } catch (e) {}
+    }
+    body = body || {};
 
     // ── TYPE: signup ─────────────────────────────────────────
     if (body.type === "signup") {
