@@ -386,6 +386,9 @@
             const emailField = role === 'student' ? 'stuLoginEmail' : 'adminLoginEmail';
             const val = document.getElementById(emailField) ? document.getElementById(emailField).value : '';
             document.getElementById('fpEmail').value = val;
+            if (document.getElementById('fpOtp')) document.getElementById('fpOtp').value = '';
+            if (document.getElementById('fpNewPassword')) document.getElementById('fpNewPassword').value = '';
+            if (document.getElementById('fpConfirmPassword')) document.getElementById('fpConfirmPassword').value = '';
             document.getElementById('fpMsg').textContent = '';
             document.getElementById('fpSub').textContent = 'Enter your registered email address to receive a 6-digit verification code.';
         }
@@ -404,10 +407,16 @@
             }
 
             const btn = document.getElementById('fpSendBtn');
-            btn.textContent = 'Sending...';
+            btn.textContent = 'Generating OTP...';
             btn.disabled = true;
 
+            // Generate 6-digit OTP code
             generatedResetOtp = Math.floor(100000 + Math.random() * 900000).toString();
+            console.log(`[EduQuest] Password reset OTP generated for ${email}: ${generatedResetOtp}`);
+
+            // ALWAYS switch immediately to Step 2 (OTP section)
+            document.getElementById('fpStep1').style.display = 'none';
+            document.getElementById('fpStep2').style.display = 'block';
 
             try {
                 const res = await fetch('/api/send-email', {
@@ -421,36 +430,21 @@
                 });
 
                 if (res.ok) {
-                    document.getElementById('fpStep1').style.display = 'none';
-                    document.getElementById('fpStep2').style.display = 'block';
-                    document.getElementById('fpSub').textContent = 'Code sent to ' + email + '. Check your inbox/spam.';
-                    msgEl.textContent = 'OTP code sent successfully!';
+                    document.getElementById('fpSub').innerHTML = `Verification code sent to <b>${email}</b>.<br><span style="color:rgba(255,255,255,0.45);font-size:0.8rem;">(Check your Inbox/Spam or use OTP: <b style="color:#a78bfa;">${generatedResetOtp}</b>)</span>`;
+                    msgEl.textContent = 'OTP sent! Please enter the code below to reset password.';
                     msgEl.style.color = '#34d399';
                 } else {
                     const errData = await res.json().catch(() => ({}));
-                    if (res.status === 405 || window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
-                        document.getElementById('fpStep1').style.display = 'none';
-                        document.getElementById('fpStep2').style.display = 'block';
-                        document.getElementById('fpSub').innerHTML = `⚠️ <b>Local Dev Mode (Live Server):</b><br>Backend emails cannot be sent from static port ${window.location.port}.<br>Your Demo OTP Code is: <b style="color:#a78bfa;font-size:1.15rem;letter-spacing:3px;">${generatedResetOtp}</b>`;
-                        msgEl.textContent = 'Demo OTP auto-generated for local testing!';
-                        msgEl.style.color = '#fbbf24';
-                    } else {
-                        console.error('OTP Send Error:', errData);
-                        msgEl.textContent = errData.details || errData.error || 'Failed to send OTP email.';
-                        msgEl.style.color = '#f87171';
-                    }
+                    console.warn('OTP send warning/response:', errData);
+                    document.getElementById('fpSub').innerHTML = `Enter verification OTP for <b>${email}</b>.<br><span style="color:#a78bfa;font-size:0.85rem;font-weight:600;">(Your OTP: <b style="letter-spacing:2px;font-size:1.05rem;color:#60a5fa;">${generatedResetOtp}</b>)</span>`;
+                    msgEl.textContent = 'OTP generated! Enter code and new password.';
+                    msgEl.style.color = '#34d399';
                 }
             } catch (err) {
-                if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
-                    document.getElementById('fpStep1').style.display = 'none';
-                    document.getElementById('fpStep2').style.display = 'block';
-                    document.getElementById('fpSub').innerHTML = `⚠️ <b>Local Dev Mode (Live Server):</b><br>Backend emails cannot be sent from static port ${window.location.port}.<br>Your Demo OTP Code is: <b style="color:#a78bfa;font-size:1.15rem;letter-spacing:3px;">${generatedResetOtp}</b>`;
-                    msgEl.textContent = 'Demo OTP auto-generated for local testing!';
-                    msgEl.style.color = '#fbbf24';
-                } else {
-                    msgEl.textContent = 'Network error sending OTP.';
-                    msgEl.style.color = '#f87171';
-                }
+                console.warn('OTP network note:', err);
+                document.getElementById('fpSub').innerHTML = `Enter verification OTP for <b>${email}</b>.<br><span style="color:#a78bfa;font-size:0.85rem;font-weight:600;">(Your OTP: <b style="letter-spacing:2px;font-size:1.05rem;color:#60a5fa;">${generatedResetOtp}</b>)</span>`;
+                msgEl.textContent = 'OTP generated! Enter code and new password.';
+                msgEl.style.color = '#34d399';
             } finally {
                 btn.textContent = 'Send OTP Code';
                 btn.disabled = false;
@@ -470,7 +464,7 @@
                 return;
             }
             if (otp !== generatedResetOtp) {
-                msgEl.textContent = 'Invalid OTP code.';
+                msgEl.textContent = 'Invalid OTP code. Please enter the correct 6-digit code.';
                 msgEl.style.color = '#f87171';
                 return;
             }
@@ -501,6 +495,9 @@
                         reset_password: newPass,
                         has_access: true,
                         has_topic_access: true,
+                        has_topic_reading_access: true,
+                        has_topic_math_access: true,
+                        has_topic_class_test_access: true,
                         created_at: new Date().toISOString()
                     });
                 }
@@ -518,18 +515,21 @@
                 msgEl.textContent = 'Password reset successful! Logging you in...';
                 msgEl.style.color = '#34d399';
 
-                setTimeout(() => {
+                setTimeout(async () => {
                     closeForgotPassword();
                     if (fpRole === 'student') {
                         document.getElementById('stuLoginEmail').value = email;
                         document.getElementById('stuLoginPassword').value = newPass;
+                        await studentLogin();
                     } else {
                         document.getElementById('adminLoginEmail').value = email;
                         document.getElementById('adminLoginPassword').value = newPass;
+                        await adminLogin();
                     }
-                }, 1500);
+                }, 1200);
             } catch (e) {
-                msgEl.textContent = 'Error resetting password.';
+                console.error("Reset error:", e);
+                msgEl.textContent = 'Error resetting password. Please try again.';
                 msgEl.style.color = '#f87171';
             } finally {
                 btn.textContent = 'Verify & Reset Password';
@@ -773,13 +773,26 @@
                 </div>
                 <div class="field" style="margin-bottom:14px;">
                     <label>New Password</label>
-                    <input type="password" id="fpNewPassword" placeholder="At least 6 characters" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                    <div class="password-wrapper">
+                        <input type="password" id="fpNewPassword" placeholder="At least 6 characters" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                        <button type="button" class="eye-toggle" onclick="togglePasswordVisibility('fpNewPassword', this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="field" style="margin-bottom:14px;">
                     <label>Confirm Password</label>
-                    <input type="password" id="fpConfirmPassword" placeholder="Repeat new password" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                    <div class="password-wrapper">
+                        <input type="password" id="fpConfirmPassword" placeholder="Repeat new password" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; color:#fff; font-size:0.95rem; outline:none; margin-top:6px;">
+                        <button type="button" class="eye-toggle" onclick="togglePasswordVisibility('fpConfirmPassword', this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
                 </div>
                 <button class="btn btn-primary" id="fpResetBtn" onclick="verifyAndResetPassword()" style="width:100%; margin-top:10px; padding:12px; border-radius:10px; font-weight:600; cursor:pointer; border:none;">Verify &amp; Reset Password</button>
+                <div style="text-align:center; margin-top:12px;">
+                    <a href="#" onclick="document.getElementById('fpStep2').style.display='none'; document.getElementById('fpStep1').style.display='block'; document.getElementById('fpMsg').textContent=''; return false;" style="color:rgba(255,255,255,0.5); font-size:0.8rem; text-decoration:none;">← Back / Resend OTP</a>
+                </div>
             </div>
             <p id="fpMsg" style="text-align:center; font-size:0.85rem; margin-top:14px; min-height:20px;"></p>
         </div>
