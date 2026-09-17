@@ -1819,6 +1819,20 @@ return null;
     // ═════════════════════════════════════════════════
     function setMockFilter(filter) { setPortalFilter('mock', filter, renderMockUsers, renderMockReports, renderMockForms); }
 
+    // Helper to delete user from sat_signup table when admin approves/grants access
+    async function removeFromSatSignup(userId, email) {
+      try {
+        if (userId) {
+          await supabaseClient.from('sat_signup').delete().eq('user_id', userId);
+        }
+        if (email) {
+          await supabaseClient.from('sat_signup').delete().eq('email', email.toLowerCase().trim());
+        }
+      } catch (err) {
+        console.warn('Could not remove from sat_signup:', err);
+      }
+    }
+
     async function grantAllMockAccess() {
       if (!confirm('Are you sure you want to grant Mock SAT access to ALL pending users?')) return;
       const pending = allProfiles.filter(p => !p.has_access);
@@ -1826,6 +1840,7 @@ return null;
       for (const p of pending) {
         await supabaseClient.from('profiles').update({ has_access: true }).eq('id', p.id);
         p.has_access = true;
+        removeFromSatSignup(p.id, p.email);
       }
       updateMockStats();
       renderMockUsers();
@@ -1878,7 +1893,12 @@ return null;
       const { error } = await supabaseClient.from('profiles').update({ has_access: value }).eq('id', userId);
       if (error) { alert('Update failed: ' + error.message); return; }
       const p = allProfiles.find(x => x.id === userId);
-      if (p) p.has_access = value;
+      if (p) {
+        p.has_access = value;
+        if (value === true) {
+          removeFromSatSignup(userId, p.email);
+        }
+      }
       updateMockStats();
       renderMockUsers();
     }
