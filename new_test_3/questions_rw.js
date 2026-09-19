@@ -802,7 +802,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The slope 𝑚 is given by \n:\nB) Incorrect; could be a misunderstanding of the slope formula.\nC) Incorrect; using wrong points for calculations.\nD) Incorrect; possible error in basic arithmetic.",
+    "explanation": "Choice A is correct. The slope m is given by m = (y₂ - y₁) / (x₂ - x₁) = (8 - 2) / (4 - 1) = 6 / 3 = 2.\nB) Incorrect; could be a misunderstanding of the slope formula.\nC) Incorrect; using wrong points for calculations.\nD) Incorrect; possible error in basic arithmetic.",
     "topic": "Reading and Writing"
   },
   {
@@ -919,7 +919,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 3,
-    "explanation": "Choice D is correct. The area 𝐴 of a triangle is given by \n. Therefore:\nMultiply both sides by 2:\n48 = 8 × height\nDivide both sides by 8:\nHeight = 6\nA) Incorrect; dividing by wrong number.\nB) Incorrect; misunderstanding formula.\nC) Incorrect; error in arithmetic.",
+    "explanation": "Choice D is correct. The area 𝐴 of a triangle is given by A = (1/2) × base × height. Therefore:\n24 = (1/2) × 8 × height\nMultiply both sides by 2:\n48 = 8 × height\nDivide both sides by 8:\nHeight = 6\nA) Incorrect; dividing by wrong number.\nB) Incorrect; misunderstanding formula.\nC) Incorrect; error in arithmetic.",
     "topic": "Reading and Writing"
   },
   {
@@ -950,15 +950,15 @@ const QUESTIONS = [
   },
   {
     "id": 74,
-    "text": "If \n, what is the value of 𝑥?",
+    "text": "If 5/x = 2, what is the value of x?",
     "options": [
       "2.5",
       "3",
-      "2.5",
+      "4",
       "5"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Multiply both sides by 𝑥:\n5 = 2𝑥\nDivide both sides by 2:\n𝑥 = 2.5\nB) Incorrect; error in dividing by the correct number.\nC) Incorrect; misunderstanding the multiplication step.\nD) Incorrect; arithmetic mistake.",
+    "explanation": "Choice A is correct. Multiply both sides by x:\n5 = 2x\nDivide both sides by 2:\nx = 2.5\nB) Incorrect; error in dividing by the correct number.\nC) Incorrect; misunderstanding the multiplication step.\nD) Incorrect; arithmetic mistake.",
     "topic": "Reading and Writing"
   },
   {
@@ -1023,7 +1023,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The slope 𝑚 is given by \n. Therefore:\nA) Incorrect; miscalculation in finding slope.\nC) Incorrect; incorrect subtraction or division.\nD) Incorrect; misunderstanding the slope formula.",
+    "explanation": "Choice B is correct. The slope m is given by m = (y₂ - y₁) / (x₂ - x₁) = (6 - 2) / (3 - 1) = 4 / 2 = 2.\nA) Incorrect; miscalculation in finding slope.\nC) Incorrect; incorrect subtraction or division.\nD) Incorrect; misunderstanding the slope formula.",
     "topic": "Reading and Writing"
   },
   {
@@ -1257,7 +1257,7 @@ const QUESTIONS = [
       "7 and 14"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. To solve for 𝑥, take the square root of both sides:\n𝑥 = ±\n𝑥 = ±7\nThus, the possible values are -7 and 7.\nB) Incorrect; misunderstanding square roots and values.\nC) Incorrect; incorrect roots.\nD) Incorrect; mistake in basic arithmetic.",
+    "explanation": "Choice A is correct. To solve for 𝑥, take the square root of both sides:\n𝑥 = ±√49\n𝑥 = ±7\nThus, the possible values are -7 and 7.\nB) Incorrect; misunderstanding square roots and values.\nC) Incorrect; incorrect roots.\nD) Incorrect; mistake in basic arithmetic.",
     "topic": "Reading and Writing"
   },
   {

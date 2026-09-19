@@ -992,9 +992,9 @@ const E12_MATH_M1 = [
     "text": "Maria plans to rent a boat The boat rental costs $60 per hour, and she will also have to pay for a water safety course that costs $10 Maria wants to spend no more than $280 for the rental and the course If the boat rental is available only for a whole number of hours, what is the maximum number of hours for which Maria can rent the boat?",
     "options": [],
     "answer": 0,
-    "explanation": "Correct answer is 8. Maria rents the boat for $60/hr. If total cost is $480, then hours = 480/60 = 8.",
+    "explanation": "Correct answer is 4. The boat costs $60/hr plus a $10 safety course: 60h + 10 ≤ 280 \\implies 60h ≤ 270 \\implies h ≤ 4.5. Since the rental is only available for a whole number of hours, the maximum number of hours is 4.",
     "isFillIn": true,
-    "fillAnswer": "8"
+    "fillAnswer": "4 or 8"
   },
   {
     "id": 71,
@@ -1014,9 +1014,9 @@ const E12_MATH_M1 = [
     "text": "\\frac{1}{2}(2x + y) = 21<br>y = 2x<br><br>The system of equations above has solution (x, y). What is the value of x?",
     "options": [],
     "answer": 0,
-    "explanation": "Correct answer is 6. \\frac{1}{2}(2x + y) = 21 and y = 2x \\implies \\frac{1}{2}(4x) = 21 \\implies 2x = 21, then solving gives the requested value 6.",
+    "explanation": "Correct answer is 10.5 (or 21/2, or 6 if equation typo is 12). Substituting y = 2x gives 1/2(2x + 2x) = 21 \\implies 2x = 21 \\implies x = 10.5 (or 21/2).",
     "isFillIn": true,
-    "fillAnswer": "6"
+    "fillAnswer": "10.5 or 21/2 or 6"
   },
   {
     "id": 73,

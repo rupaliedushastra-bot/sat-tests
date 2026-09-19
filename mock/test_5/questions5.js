@@ -905,15 +905,15 @@ const E5_MATH_M1 = [
     "id": 65,
     "section": "math",
     "module": 1,
-    "text": "What is the value of",
+    "text": "What is the value of 1/3 + 1/6?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "1/3",
+      "1/2",
+      "2/3",
+      "5/6"
     ],
     "answer": 1,
-    "explanation": "To add these fractions, find a common denominator: A) Incorrect; results from incorrect addition. C) Incorrect; results from incorrect numerator calculation. D) Incorrect; results from misunderstanding the fraction addition process."
+    "explanation": "To add these fractions, find a common denominator of 6: 1/3 = 2/6. Then 2/6 + 1/6 = 3/6 = 1/2. Choices A, C, and D are incorrect addition errors."
   },
   {
     "id": 66,
@@ -989,15 +989,15 @@ const E5_MATH_M1 = [
     "id": 71,
     "section": "math",
     "module": 1,
-    "text": "What is the value of   ?",
+    "text": "What is the value of (2/3) × (3/4)?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "1/2",
+      "2/3",
+      "3/4",
+      "5/7"
     ],
     "answer": 0,
-    "explanation": "Multiply the fractions: B) Incorrect; results from incorrect multiplication. C) Incorrect; misunderstanding the fraction multiplication process. D) Incorrect; arbitrary value not related to the solution."
+    "explanation": "Multiply the numerators and denominators: (2/3) × (3/4) = 6/12 = 1/2. Choices B, C, and D are incorrect multiplication errors."
   },
   {
     "id": 72,
@@ -1118,15 +1118,15 @@ const E5_MATH_M2 = [
     "id": 80,
     "section": "math",
     "module": 2,
-    "text": "What is the value of   ?",
+    "text": "What is the value of (3/4) ÷ (1/2)?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "1",
+      "3/2",
+      "2",
+      "3/8"
     ],
     "answer": 1,
-    "explanation": "To divide fractions, multiply by the reciprocal: A) Incorrect; incorrect multiplication. C) Incorrect; arbitrary values not related to the division process. D) Incorrect; misunderstanding the reciprocal process."
+    "explanation": "To divide fractions, multiply by the reciprocal: (3/4) ÷ (1/2) = (3/4) × (2/1) = 6/4 = 3/2. Choices A, C, and D are incorrect division calculations."
   },
   {
     "id": 81,
@@ -1272,7 +1272,7 @@ const E5_MATH_M2 = [
     "id": 91,
     "section": "math",
     "module": 2,
-    "text": "Solve for   .",
+    "text": "Solve for x in the equation (3/4)x = 6.",
     "options": [
       "4",
       "6",
@@ -1280,21 +1280,21 @@ const E5_MATH_M2 = [
       "9"
     ],
     "answer": 2,
-    "explanation": "Multiply both sides by   : A) Incorrect; incorrect multiplication. B) Incorrect; misunderstanding the fraction multiplication. D) Incorrect; arbitrary value not related to the calculation."
+    "explanation": "Multiply both sides by 4/3: x = 6 × (4/3) = 24/3 = 8. Choices A, B, and D are incorrect."
   },
   {
     "id": 92,
     "section": "math",
     "module": 2,
-    "text": "What is     in simplest form?",
+    "text": "What is 12/16 in simplest form?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "1/2",
+      "3/4",
+      "2/3",
+      "4/5"
     ],
     "answer": 1,
-    "explanation": "Divide the numerator and the denominator by their greatest common divisor , which is 4: A) Incorrect; incorrect simplification. C) Incorrect; misunderstanding the GCD. D) Incorrect; arbitrary value not related to the simplification process."
+    "explanation": "Divide the numerator and denominator by their greatest common divisor (4): 12/16 = (12÷4)/(16÷4) = 3/4. Choices A, C, and D are incorrect simplifications."
   },
   {
     "id": 93,

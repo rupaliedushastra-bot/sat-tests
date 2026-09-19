@@ -177,7 +177,7 @@ const QUESTIONS = [
     "id": 14,
     "text": "A vicious cycle is occurring in Lope National Park\nin Gabon. Low rainfall and higher temperatures\nled to a decline in tree fruits, which are the staple\nfood of African forest elephants. The seeds are\nusually dispersed in the dung over the wide\nrange of each elephant. The elephant population\nnow faces pressures from starvation, as well as\nthe ongoing problem of poaching. In fact, the\npopulation has decreased by over eighty percent\nin the past thirty years.\nBased on the text, what is most likely true about\nthe fruit trees in Lope National park?",
     "options": [
-      "Elephants are changing to different f�od sources because there are fewer trees.",
+      "Elephants are changing to different food sources because there are fewer trees.",
       "The seeds are not being dispersed as effectively because there are fewer elephants.",
       "Conservationists are starting to plant more fruit trees to provide food for the elephants.",
       "The elephants are no longer dispersing the seeds very far from the original trees."
@@ -191,7 +191,7 @@ const QUESTIONS = [
     "text": "100 ================\nThe Rosetta Stone, discovered in 1799, was\nthe key to understanding how to read ancient\nEgyptian hieroglyphic writing. The stone is a\nfragment of a larger stele carved in 196 B.C in\nMemphis, Egypt, under the reign of King Ptolemy\nV Epiphanes. Ihe first bilingual text known\nto contain hieroglyphics, scholars circulated\ncopies in the hopes of translating the language,\nwhich was written in ancient Greek, Egyptian\nhieroglyphics, and also a more casual form of\nEgyptian writing called Demotic. Jean-Francois\nChampollion found the key to solving the puzzle\nin 1822, when\nWhich choice most logically completes the text?",
     "options": [
       "he realized that both the Demotic writing and hieroglyphs contained phonetic spellings.",
-      "he gave a lecture about his findings at the Acad�mie des Inscriptions et Belles-Lettres.",
+      "he gave a lecture about his findings at the Académie des Inscriptions et Belles-Lettres.",
       "others assumed the writing was pictographic but he was curious about the meaning.",
       "his announcement led to a new wave of learning about the Egyptian language."
     ],

@@ -197,6 +197,8 @@ function startTest() {
   }
 
   student = { name, email, phone };
+  sessionStorage.setItem('eduquest_student', JSON.stringify(student));
+  sessionStorage.setItem('eduquest_exam_active', 'true');
   saveUserToSupabase(student); // Save to Supabase when user starts
   showPage('pageTest');
   buildPalette();
@@ -208,7 +210,10 @@ function startTest() {
 // ── Timer ───────────────────────────────────
 function startTimer(s) {
   secsLeft = s;
+  const now = Date.now();
+  sessionStorage.setItem('eduquest_timer_end', (now + secsLeft * 1000).toString());
   paintTimer();
+  if (timerInt) clearInterval(timerInt);
   timerInt = setInterval(() => {
     secsLeft--;
     paintTimer();
@@ -236,7 +241,11 @@ function renderQ() {
   q.options.forEach((txt, i) => {
     const d = document.createElement('div');
     d.className = 'opt' + (answers[q.id] === i ? ' selected' : '');
-    d.onclick   = () => { answers[q.id] = i; renderQ(); };
+    d.onclick   = () => { 
+      answers[q.id] = i; 
+      sessionStorage.setItem('eduquest_answers', JSON.stringify(answers));
+      renderQ(); 
+    };
     d.innerHTML = `<div class="opt-letter">${LETTERS[i]}</div><div class="opt-text">${txt}</div>`;
     opts.appendChild(d);
   });
@@ -291,6 +300,11 @@ function closeModal() { $('modalBg').classList.remove('open'); }
 async function doSubmit() {
   clearInterval(timerInt);
   closeModal();
+
+  sessionStorage.removeItem('eduquest_exam_active');
+  sessionStorage.removeItem('eduquest_student');
+  sessionStorage.removeItem('eduquest_answers');
+  sessionStorage.removeItem('eduquest_timer_end');
 
   // Show saving overlay
   $('savingOverlay').classList.add('show');
@@ -596,3 +610,26 @@ function downloadPDF() {
     }
   }, 500);
 }
+
+// ── Auto Restore On Refresh ──────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  if (sessionStorage.getItem('eduquest_exam_active') === 'true') {
+    try {
+      const savedStudent = sessionStorage.getItem('eduquest_student');
+      const savedAnswers = sessionStorage.getItem('eduquest_answers');
+      const savedTimerEnd = sessionStorage.getItem('eduquest_timer_end');
+      if (savedStudent) student = JSON.parse(savedStudent);
+      if (savedAnswers) answers = JSON.parse(savedAnswers);
+      const remainingSecs = savedTimerEnd ? Math.max(10, Math.floor((parseInt(savedTimerEnd, 10) - Date.now()) / 1000)) : 32 * 60;
+      
+      showPage('pageTest');
+      buildPalette();
+      renderQ();
+      startTimer(remainingSecs);
+      const tb = $('timerBox');
+      if (tb) tb.style.display = 'flex';
+    } catch(e) {
+      console.warn("Could not restore session:", e);
+    }
+  }
+});

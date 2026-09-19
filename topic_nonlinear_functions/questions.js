@@ -11,7 +11,7 @@ const QUESTIONS = [
       "7",
       "5",
       "3",
-      "5"
+      "9"
     ],
     "answer": 1,
     "explanation": "Choice B is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 1 = 4 + 1 = 5 \\).",
@@ -37,7 +37,7 @@ const QUESTIONS = [
       "7",
       "5",
       "9",
-      "7"
+      "11"
     ],
     "answer": 0,
     "explanation": "Choice A is correct. Substitute \\( x = 2 \\) into the function: \\( f(2) = 2^2 + 3 = 4 + 3 = 7 \\).",
@@ -49,7 +49,7 @@ const QUESTIONS = [
     "options": [
       "5",
       "3",
-      "5",
+      "1",
       "7"
     ],
     "answer": 0,
@@ -62,7 +62,7 @@ const QUESTIONS = [
     "options": [
       "8",
       "10",
-      "8",
+      "12",
       "6"
     ],
     "answer": 0,
@@ -126,7 +126,7 @@ const QUESTIONS = [
     "text": "A function is defined by \\( f(x) = 3^x + 1 \\). What is the value of \\( f(2) \\)?",
     "options": [
       "7",
-      "7",
+      "4",
       "13",
       "10"
     ],

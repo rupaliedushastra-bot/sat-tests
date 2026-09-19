@@ -1095,10 +1095,10 @@ const E11_MATH_M2 = [
     "module": 2,
     "text": "Which of the following graphs best shows a strong negative association between d and t ? t",
     "options": [
-      "d t",
-      "d t",
-      "d t",
-      "d"
+      "Graph A",
+      "Graph B",
+      "Graph C",
+      "Graph D"
     ],
     "answer": 3,
     "explanation": "Choice D is correct. Graph D displays points closely clustered along a line sloping downward from left to right, representing a strong negative association."
@@ -1280,10 +1280,10 @@ const E11_MATH_M2 = [
     "module": 2,
     "text": "y x a y x b < −+ > + In the xy-plane, if (0, 0) is a solution to the system of inequalities above, which of the following relationships between a and b must be true?",
     "options": [
-      "a b >",
-      "b a >",
-      "a b >",
-      "a b = −"
+      "a > b",
+      "b > a",
+      "|a| > |b|",
+      "a = -b"
     ],
     "answer": 0,
     "explanation": "Choice A is correct. Substituting (0, 0): 0 < 0 - a \\implies a < 0, and 0 > 0 + b \\implies b < 0. With slope constraints, a < b must be true."
@@ -1308,10 +1308,10 @@ const E11_MATH_M2 = [
     "module": 2,
     "text": "Alma bought a laptop computer at a store that gave a 20 percent discount off its original price The total amount she paid to the cashier was p dollars, including an 8 percent sales tax on the discounted price Which of the following represents the original price of the computer in terms of p ?",
     "options": [
-      "p 088",
-      "p 088",
-      "p (08)(108)",
-      "p (08)(108)"
+      "0.88p",
+      "p / 0.88",
+      "(0.80)(1.08)p",
+      "p / ((0.80)(1.08))"
     ],
     "answer": 3,
     "explanation": "Choice D is correct. Discounted price = 0.80x. With 8% tax, total paid p = (1.08)(0.80)x. Solving for original price x gives x = \\frac{p}{(0.80)(1.08)}."

@@ -1264,6 +1264,9 @@
       { id: 4, label: 'Math – Module 2', timeMin: 35, startIdx: 76, count: 22 },
     ];
 
+    const TEST_ID = 'sat_mock_1';
+    const sKey = k => 'eduquest_' + TEST_ID + '_' + k;
+
     let student = {};
     let answers = {};        // { questionId: answerIndex }
     let currentMod = 0;         // 0-based index into MODULES
@@ -1291,21 +1294,29 @@
       if (!name || !email || !phoneRaw) { alert('Please fill in all fields.'); return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email.'); return; }
       student = { name, email, phone, startTime: new Date().toISOString() };
+      sessionStorage.setItem(sKey('student'), JSON.stringify(student));
       sessionStorage.setItem('student', JSON.stringify(student));
 
       // Save registration data to Supabase
-      if (typeof saveRegistration === 'function') saveRegistration(student, 'SAT Full Mock Test 2');
+      if (typeof saveRegistration === 'function') saveRegistration(student, 'SAT Full Mock Test 1');
 
       startModule(0);
       window.addEventListener('beforeunload', e => { e.preventDefault(); e.returnValue = ''; });
     }
 
     // ── Start a module ────────────────────────────
-    function startModule(modIdx) {
+    function startModule(modIdx, restoreSecs = null) {
       currentMod = modIdx;
       currentInMod = 0;
+      sessionStorage.setItem(sKey('currentMod'), modIdx.toString());
+      sessionStorage.setItem('currentMod', modIdx.toString());
+      sessionStorage.setItem(sKey('currentInMod'), '0');
+      sessionStorage.setItem('currentInMod', '0');
       const m = currentModDef();
-      secsLeft = m.timeMin * 60;
+      secsLeft = restoreSecs !== null ? restoreSecs : m.timeMin * 60;
+      const tEnd = (Date.now() + secsLeft * 1000).toString();
+      sessionStorage.setItem(sKey('timerEnd'), tEnd);
+      sessionStorage.setItem('timerEnd', tEnd);
 
       showPage('pageTest');
       $('hdrModule').textContent = `· ${m.label}`;
@@ -1411,6 +1422,7 @@
 
     function selectAns(idx) {
       answers[q().id] = idx;
+      sessionStorage.setItem(sKey('answers'), JSON.stringify(answers));
       sessionStorage.setItem('answers', JSON.stringify(answers));
       renderQ();
     }
@@ -1418,10 +1430,17 @@
     function navigate(dir) {
       const qs = modQuestions();
       currentInMod = Math.max(0, Math.min(qs.length - 1, currentInMod + dir));
+      sessionStorage.setItem(sKey('currentInMod'), currentInMod.toString());
+      sessionStorage.setItem('currentInMod', currentInMod.toString());
       renderQ();
     }
 
-    function jumpTo(i) { currentInMod = i; renderQ(); }
+    function jumpTo(i) { 
+      currentInMod = i; 
+      sessionStorage.setItem(sKey('currentInMod'), currentInMod.toString());
+      sessionStorage.setItem('currentInMod', currentInMod.toString());
+      renderQ(); 
+    }
 
     // ── Module submit / end ───────────────────────
     function confirmSubmit() {
@@ -1500,25 +1519,31 @@
 
       const total = QUESTIONS.length;
       const pct = Math.round((correct / total) * 100);
-      // SAT-style scaled score approximation (400–1600)
-      const scaled = Math.round(400 + (correct / total) * 1200);
-      const grade = pct >= 90 ? 'A+' : pct >= 80 ? 'A' : pct >= 70 ? 'B' : pct >= 60 ? 'C' : 'D';
-
-      // Section scores (200-800 each)
+      // Section scores (200-800 each), rounded to nearest 10
       const rwCorrect = details.slice(0, 54).filter(d => d.status === 'correct').length;
       const mathCorrect = details.slice(54).filter(d => d.status === 'correct').length;
-      const rwScore = Math.round(200 + (rwCorrect / 54) * 600);
-      const mathScore = Math.round(200 + (mathCorrect / 44) * 600);
+      const rwScore = Math.min(800, Math.max(200, Math.round((200 + (rwCorrect / 54) * 600) / 10) * 10));
+      const mathScore = Math.min(800, Math.max(200, Math.round((200 + (mathCorrect / 44) * 600) / 10) * 10));
+      // SAT-style composite scaled score (400–1600) = RW + Math
+      const scaled = rwScore + mathScore;
+      const grade = pct >= 90 ? 'A+' : pct >= 80 ? 'A' : pct >= 70 ? 'B' : pct >= 60 ? 'C' : 'D';
 
       const result = {
         student, correct, wrong, unattempted,
         total, pct, grade, scaled, rwScore, mathScore, details,
         submitTime: new Date().toISOString(),
-        examName: 'Digital SAT – Full Mock Test 2'
+        examName: 'Digital SAT – Full Mock Test 1'
       };
       result.topicAnalysis = buildTopics(details);
 
+      sessionStorage.setItem(sKey('result'), JSON.stringify(result));
       sessionStorage.setItem('result', JSON.stringify(result));
+      sessionStorage.removeItem(sKey('currentMod'));
+      sessionStorage.removeItem('currentMod');
+      sessionStorage.removeItem(sKey('currentInMod'));
+      sessionStorage.removeItem('currentInMod');
+      sessionStorage.removeItem(sKey('timerEnd'));
+      sessionStorage.removeItem('timerEnd');
       showPage('pageResult');
       $('timerBox').style.display = 'none';
       renderResults(result);
@@ -1675,6 +1700,28 @@
     document.addEventListener('click', function (e) {
       if (e.target && (e.target.id === 'qImg' || e.target.classList.contains('review-img'))) {
         openLightbox(e.target.src);
+      }
+    });
+
+    // ── Resume on reload ─────────────────────────
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedStudent = sessionStorage.getItem(sKey('student')) || sessionStorage.getItem('student');
+      const savedMod = sessionStorage.getItem(sKey('currentMod')) !== null ? sessionStorage.getItem(sKey('currentMod')) : sessionStorage.getItem('currentMod');
+      const hasResult = sessionStorage.getItem(sKey('result')) || sessionStorage.getItem('result');
+      if (savedStudent && savedMod !== null && !hasResult) {
+        try {
+          student = JSON.parse(savedStudent);
+          answers = JSON.parse(sessionStorage.getItem(sKey('answers')) || sessionStorage.getItem('answers') || '{}');
+          const modIdx = parseInt(savedMod, 10);
+          const inModIdx = parseInt(sessionStorage.getItem(sKey('currentInMod')) || sessionStorage.getItem('currentInMod') || '0', 10);
+          const timerEnd = parseInt(sessionStorage.getItem(sKey('timerEnd')) || sessionStorage.getItem('timerEnd') || '0', 10);
+          const remaining = timerEnd ? Math.max(10, Math.floor((timerEnd - Date.now()) / 1000)) : null;
+          startModule(modIdx, remaining);
+          currentInMod = inModIdx;
+          renderQ();
+        } catch (e) {
+          console.warn("Could not restore exam session:", e);
+        }
       }
     });
   </script>

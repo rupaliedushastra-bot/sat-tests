@@ -294,26 +294,26 @@ const QUESTIONS = [
     "id": 23,
     "text": "In 2011, treasure hunters Peter Lindberg and\nDenis Aberg disclosed astounding sonar footage\nof an unusual object that they had found about 90\nmeters deep under the Baltic Sea. Further studies\nrevealed a stone structure about 13 meters tall and\n60 meters wide, with a similar object about 200\nmeters away. There also appears to be pavement-\nlike platforms leading to the object. Many people\nclaimed it was a UFO; some geologists theorized\nit was volcanic material deposited by a melting\nglacier, and others suspect it is a German military\nrelic from WWII. Since all electronic equipment,\neven that from reputable scientific institutions,\nmalfunctions when close to the object, the true\nnature and origin may never be known.\nWhat is the main idea of the text?",
     "options": [
-      "Treasure hunters have found a stone structure under the Baltic Sea which may be a UFO",
+      "Treasure hunters have found a stone structure under the Baltic Sea which may be a UFO.",
       "A large stone object was found in the Baltic Sea in 2011, but its purpose is a mystery.",
-      "In 2011, treasure hunters showed sonar images of an undersea object that is likely a",
-      "Under the Baltic Sea, there is a stone structure that is 60 meters wide with platforms. Narcissa Whitman (1808-1847) was one of the first female pioneers to travel along the Oregon"
+      "In 2011, treasure hunters showed sonar images of an undersea object that is likely a hoax.",
+      "Under the Baltic Sea, there is a stone structure that is 60 meters wide with platforms."
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. It contains the key ideas of the text. The first three sentences describe the stone object that is very large and was found in the ocean. The final portion delves into possible purposes or origins, but ends by saying that \"the true nature and origin may never be known,\" meaning it is a \"mystery.\" INFORMATION Distractor Explanations: Choice A is incorrect because the idea of a UFO is a minor detail of the text; the main conclusion is that there are different possibilities about what the structure is, but it is not known. Choice C is incorrect because there is no discussion about the object being a \"hoax\" or \"not real.\" In fact, the text refers to electronic equipment \"from reputable scientific institutions,\" so likely respected places also have verified that the object exists. Choice D is incorrect because it does not discuss the speculation about what the object might be caused by or came from, which are essential parts of the text. 24.",
+    "explanation": "Choice B is correct. It contains the key ideas of the text. The first three sentences describe the stone object that is very large and was found in the ocean. The final portion delves into possible purposes or origins, but ends by saying that \"the true nature and origin may never be known,\" meaning it is a \"mystery.\" Distractor Explanations: Choice A is incorrect because the idea of a UFO is a minor detail of the text; the main conclusion is that there are different possibilities about what the structure is, but it is not known. Choice C is incorrect because there is no discussion about the object being a \"hoax\" or \"not real.\" In fact, the text refers to electronic equipment \"from reputable scientific institutions,\" so likely respected places also have verified that the object exists. Choice D is incorrect because it does not discuss the speculation about what the object might be caused by or came from, which are essential parts of the text.",
     "topic": "Central Ideas and Details"
   },
   {
     "id": 24,
     "text": "Narcissa Whitman (1808-1847) was one of the\nfirst female pioneers to travel along the Oregon\nTrail, and she gave birth to the first white child\nborn in the Oregon Territory. She lived at a\nmission near Walla Walla, Washington, which\nbecame an important stopping point for pioneers\nheading to the Willamette Valley in Oregon.\nUnfortunately, she never learned the native\nlanguage and refused to adopt any of the local\nculture, which ultimately led to discontent and\ndistrust among the local people.\nAccording to the texts, what was one drawback of\nNarcissa Whitman's attempts to set up a new life\nin the Oregon Territory?",
     "options": [
-      "She gave birth to a child that was not a Native",
-      "American.",
-      "She stopped in Washington rather than in",
-      "Oregon."
+      "She gave birth to a child that was not a Native American.",
+      "She stopped in Washington rather than in Oregon.",
+      "She failed to assimilate into the Native American society.",
+      "She distrusted the local people and did not believe them."
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. The text says that Whitman \"never learned the native language and refused to adopt any of the local culture.\" In other words, she did not make efforts to \"assimilate\" or \"become part of\" the Native American society. Distractor Explanations: Choice A is incorrect because there is no indication that having a child was a \"drawback\" or \"problem\" with starting a new life. Choice B is incorrect because the mission where she lived was \"an important stopping point,\" so she was able to settle in enough to help others who were traveling. Choice D is not discussed in the text; the \"local people\" showed distrust, but there is no sign that she did not believe them. 25.",
+    "explanation": "Choice C is correct. The text says that Whitman \"never learned the native language and refused to adopt any of the local culture.\" In other words, she did not make efforts to \"assimilate\" or \"become part of\" the Native American society. Distractor Explanations: Choice A is incorrect because there is no indication that having a child was a \"drawback\" or \"problem\" with starting a new life. Choice B is incorrect because the mission where she lived was \"an important stopping point,\" so she was able to settle in enough to help others who were traveling. Choice D is not discussed in the text; the \"local people\" showed distrust, but there is no sign that she did not believe them.",
     "topic": "Central Ideas and Details"
   },
   {

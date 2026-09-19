@@ -950,7 +950,7 @@ const QUESTIONS = [
   },
   {
     "id": 74,
-    "text": "If \n, what is the value of 𝑦 when 𝑥 = 4?",
+    "text": "If y = (x + 2) / 3, what is the value of y when x = 4?",
     "options": [
       "2",
       "3",
@@ -958,7 +958,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Substitute 𝑥 = 4 into the equation:\nB) Incorrect; results from incorrect substitution or division.\nC) Incorrect; results from misunderstanding the equation.\nD) Incorrect; arbitrary value not related to the solution.",
+    "explanation": "Choice A is correct. Substitute x = 4 into the equation: y = (4 + 2) / 3 = 6 / 3 = 2.\nB) Incorrect; results from incorrect substitution or division.\nC) Incorrect; results from misunderstanding the equation.\nD) Incorrect; arbitrary value not related to the solution.",
     "topic": "Reading and Writing"
   },
   {
@@ -1002,7 +1002,7 @@ const QUESTIONS = [
   },
   {
     "id": 78,
-    "text": "What is the value of \n?",
+    "text": "What is the value of √81?",
     "options": [
       "7",
       "8",
@@ -1054,7 +1054,7 @@ const QUESTIONS = [
   },
   {
     "id": 82,
-    "text": "What is the value of \n?",
+    "text": "What is the value of (7 + 5) / 3?",
     "options": [
       "3",
       "4",
@@ -1062,7 +1062,7 @@ const QUESTIONS = [
       "6"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. Simplify the expression:\nA) Incorrect; incorrect addition or division.\nC) Incorrect; misunderstanding the calculation.\nD) Incorrect; arbitrary value not related to the division process.",
+    "explanation": "Choice B is correct. Simplify the expression: (7 + 5) / 3 = 12 / 3 = 4.\nA) Incorrect; incorrect addition or division.\nC) Incorrect; misunderstanding the calculation.\nD) Incorrect; arbitrary value not related to the division process.",
     "topic": "Reading and Writing"
   },
   {
@@ -1140,7 +1140,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. Use the slope formula \nA) Incorrect; misunderstanding the formula.\nC) Incorrect; incorrect subtraction.\nD) Incorrect; arbitrary value not related to the calculation.",
+    "explanation": "Choice B is correct. Use the slope formula m = (y₂ - y₁) / (x₂ - x₁) = (6 - 2) / (3 - 1) = 4 / 2 = 2.\nA) Incorrect; misunderstanding the formula.\nC) Incorrect; incorrect subtraction.\nD) Incorrect; arbitrary value not related to the calculation.",
     "topic": "Reading and Writing"
   },
   {

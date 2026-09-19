@@ -786,7 +786,7 @@ const E10_MATH_M1 = [
     "text": "What is the positive solution to the equation <i>x</i><sup>2</sup> + 10 = 110?",
     "options": [
       "10",
-      "10",
+      "9",
       "41",
       "51"
     ],
@@ -943,7 +943,7 @@ const E10_MATH_M1 = [
       "3",
       "7",
       "10",
-      "10"
+      "14"
     ],
     "answer": 1,
     "explanation": "The samples with pH 7.4 or greater fall in the ranges 7.4 to 7.6 (4 samples) and 7.7 to 7.9 (3 samples). Total samples = 4 + 3 = 7. Therefore, B is correct."
@@ -1270,7 +1270,7 @@ const E10_MATH_M2 = [
     "options": [
       "1",
       "3",
-      "10",
+      "9",
       "10"
     ],
     "answer": 3,

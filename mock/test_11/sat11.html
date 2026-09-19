@@ -1264,13 +1264,44 @@
 
     const QUESTIONS = QUESTIONS11;
     const TOPIC_MAP = TOPIC_MAP11;
+    const TEST_ID = 'sat_mock_11';
+    const sKey = k => 'eduquest_' + TEST_ID + '_' + k;
 
-    let student = {};
-    let answers = {};        // { questionId: answerIndex }
+    let student = JSON.parse(sessionStorage.getItem(sKey('student')) || sessionStorage.getItem('student') || '{}');
+    let answers = JSON.parse(sessionStorage.getItem(sKey('answers')) || sessionStorage.getItem('answers') || '{}');
     let currentMod = 0;         // 0-based index into MODULES
     let currentInMod = 0;         // 0-based index within current module
     let timerInt;
     let secsLeft = 0;
+
+    function checkFillAnswer(userVal, correctVal) {
+      if (userVal === undefined || userVal === null || String(userVal).trim() === '') return false;
+      const u = String(userVal).trim().toLowerCase();
+      const c = String(correctVal).trim().toLowerCase();
+      const accepted = c.split(/\s+or\s+|\s*,\s*/i).map(s => s.trim());
+      if (accepted.includes(u)) return true;
+
+      function parseVal(str) {
+        if (!str) return NaN;
+        if (str.includes('/')) {
+          const parts = str.split('/');
+          if (parts.length === 2) {
+            const num = parseFloat(parts[0]);
+            const den = parseFloat(parts[1]);
+            if (!isNaN(num) && !isNaN(den) && den !== 0) return num / den;
+          }
+        }
+        return parseFloat(str);
+      }
+
+      const uNum = parseVal(u);
+      if (isNaN(uNum)) return false;
+      for (const acc of accepted) {
+        const cNum = parseVal(acc);
+        if (!isNaN(cNum) && Math.abs(uNum - cNum) < 0.001) return true;
+      }
+      return false;
+    }
 
     function currentModDef() { return MODULES[currentMod]; }
     function modQuestions() { const m = currentModDef(); return QUESTIONS.slice(m.startIdx, m.startIdx + m.count); }
@@ -1292,6 +1323,7 @@
       if (!name || !email || !phoneRaw) { alert('Please fill in all fields.'); return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email.'); return; }
       student = { name, email, phone, startTime: new Date().toISOString() };
+      sessionStorage.setItem(sKey('student'), JSON.stringify(student));
       sessionStorage.setItem('student', JSON.stringify(student));
 
       // Save registration data to Supabase
@@ -1361,12 +1393,13 @@
       qs.forEach((qObj, i) => {
         const b = $(`pb-${i}`);
         if (!b) return;
+        const isDone = answers[qObj.id] !== undefined && answers[qObj.id] !== '';
         b.className = 'pb' +
-          (answers[qObj.id] !== undefined ? ' done' : '') +
+          (isDone ? ' done' : '') +
           (i === currentInMod ? ' cur' : '');
       });
       const qs2 = modQuestions();
-      const done = qs2.filter(qObj => answers[qObj.id] !== undefined).length;
+      const done = qs2.filter(qObj => answers[qObj.id] !== undefined && answers[qObj.id] !== '').length;
       const total = qs2.length;
       $('progFill').style.width = `${(done / total) * 100}%`;
       $('progLbl').textContent = `${done} / ${total}`;
@@ -1390,16 +1423,50 @@
         imgWrap.style.display = 'none';
       }
 
-      // Options
+      // Options or Fill-in (SPR)
       const opts = $('qOpts');
       opts.innerHTML = '';
-      qObj.options.forEach((opt, i) => {
-        const div = document.createElement('div');
-        div.className = 'opt' + (answers[qObj.id] === i ? ' selected' : '');
-        div.innerHTML = `<div class="opt-letter">${LETTERS[i]}</div><div class="opt-text">${opt}</div>`;
-        div.onclick = () => selectAns(i);
-        opts.appendChild(div);
-      });
+      if (qObj.isFillIn || (!qObj.options || qObj.options.length === 0)) {
+        const sprWrap = document.createElement('div');
+        sprWrap.className = 'spr-wrap';
+        sprWrap.innerHTML = `
+          <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:20px;margin-top:8px">
+            <label style="display:block;font-size:0.9rem;font-weight:700;color:var(--ink2);margin-bottom:8px">
+              Student-Produced Response (Enter your answer):
+            </label>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+              <input type="text" id="sprInput" placeholder="Enter answer..."
+                style="font-family:'IBM Plex Mono',monospace;font-size:1.15rem;font-weight:600;padding:10px 14px;border:2px solid var(--border);border-radius:8px;outline:none;width:220px;background:var(--white);color:var(--ink)"
+                value="${answers[qObj.id] !== undefined ? answers[qObj.id] : ''}"
+              />
+              <span style="font-size:0.82rem;color:var(--muted)">Accepts integers, decimals, or fractions (e.g. 1.2, 4/5).</span>
+            </div>
+          </div>
+        `;
+        opts.appendChild(sprWrap);
+        const inputEl = sprWrap.querySelector('#sprInput');
+        inputEl.oninput = (e) => {
+          const val = e.target.value.trim();
+          if (val === '') {
+            delete answers[qObj.id];
+          } else {
+            answers[qObj.id] = val;
+          }
+          sessionStorage.setItem(sKey('answers'), JSON.stringify(answers));
+          sessionStorage.setItem('answers', JSON.stringify(answers));
+          syncPalette();
+        };
+        inputEl.onfocus = () => inputEl.style.borderColor = 'var(--accent)';
+        inputEl.onblur = () => inputEl.style.borderColor = 'var(--border)';
+      } else {
+        qObj.options.forEach((opt, i) => {
+          const div = document.createElement('div');
+          div.className = 'opt' + (answers[qObj.id] === i ? ' selected' : '');
+          div.innerHTML = `<div class="opt-letter">${LETTERS[i]}</div><div class="opt-text">${opt}</div>`;
+          div.onclick = () => selectAns(i);
+          opts.appendChild(div);
+        });
+      }
 
       const isLast = currentInMod === qs.length - 1;
       $('btnPrev').style.display = currentInMod === 0 ? 'none' : 'inline-flex';
@@ -1412,6 +1479,7 @@
 
     function selectAns(idx) {
       answers[q().id] = idx;
+      sessionStorage.setItem(sKey('answers'), JSON.stringify(answers));
       sessionStorage.setItem('answers', JSON.stringify(answers));
       renderQ();
     }
@@ -1427,7 +1495,7 @@
     // ── Module submit / end ───────────────────────
     function confirmSubmit() {
       const qs = modQuestions();
-      const left = qs.filter(qObj => answers[qObj.id] === undefined).length;
+      const left = qs.filter(qObj => answers[qObj.id] === undefined || answers[qObj.id] === '').length;
       const isLast = currentMod === MODULES.length - 1;
       $('modalTitle').textContent = isLast ? 'Submit Test?' : 'End Module?';
       $('modalMsg').textContent = left > 0
@@ -1493,9 +1561,24 @@
       const details = QUESTIONS.map(qObj => {
         const chosen = answers[qObj.id];
         let status;
-        if (chosen === undefined) { unattempted++; status = 'unattempted'; }
-        else if (chosen === qObj.answer) { correct++; status = 'correct'; }
-        else { wrong++; status = 'wrong'; }
+        if (chosen === undefined || chosen === null || String(chosen).trim() === '') {
+          unattempted++;
+          status = 'unattempted';
+        } else if (qObj.isFillIn) {
+          if (checkFillAnswer(chosen, qObj.fillAnswer)) {
+            correct++;
+            status = 'correct';
+          } else {
+            wrong++;
+            status = 'wrong';
+          }
+        } else if (chosen === qObj.answer) {
+          correct++;
+          status = 'correct';
+        } else {
+          wrong++;
+          status = 'wrong';
+        }
         return { ...qObj, chosen, status };
       });
 
@@ -1519,6 +1602,7 @@
       };
       result.topicAnalysis = buildTopics(details);
 
+      sessionStorage.setItem(sKey('result'), JSON.stringify(result));
       sessionStorage.setItem('result', JSON.stringify(result));
       showPage('pageResult');
       $('timerBox').style.display = 'none';
@@ -1608,14 +1692,24 @@
             ${qObj.image ? `<div style="margin-bottom:10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px;text-align:center">
               <img src="${qObj.image}" class="review-img" style="max-width:100%;max-height:350px;width:auto;object-fit:contain;border-radius:4px;display:block;margin:0 auto;cursor:zoom-in;transition:max-height .3s ease" alt="diagram">
             </div>` : ''}
-            ${qObj.status === 'unattempted'
-          ? `<div class="inc-row" style="color:var(--amber)"><span class="label">➖ Your answer:</span><span>Skipped</span></div>
-                 <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[qObj.answer]}) ${qObj.options[qObj.answer]}</span></div>`
-          : qObj.status === 'correct'
-            ? `<div class="inc-row right"><span class="label">✅ Your answer:</span><span>(${LETTERS[qObj.chosen]}) ${qObj.options[qObj.chosen]} (Correct)</span></div>`
-            : `<div class="inc-row wrong"><span class="label">❌ Your answer:</span><span>(${LETTERS[qObj.chosen]}) ${qObj.options[qObj.chosen]}</span></div>
-                   <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[qObj.answer]}) ${qObj.options[qObj.answer]}</span></div>`
-        }
+            ${qObj.isFillIn ? (
+              qObj.status === 'unattempted'
+                ? `<div class="inc-row" style="color:var(--amber)"><span class="label">➖ Your answer:</span><span>Skipped</span></div>
+                   <div class="inc-row right"><span class="label">✅ Correct:</span><span>${qObj.fillAnswer}</span></div>`
+                : qObj.status === 'correct'
+                  ? `<div class="inc-row right"><span class="label">✅ Your answer:</span><span>${qObj.chosen} (Correct)</span></div>
+                     <div class="inc-row right"><span class="label">✅ Correct:</span><span>${qObj.fillAnswer}</span></div>`
+                  : `<div class="inc-row wrong"><span class="label">❌ Your answer:</span><span>${qObj.chosen}</span></div>
+                     <div class="inc-row right"><span class="label">✅ Correct:</span><span>${qObj.fillAnswer}</span></div>`
+            ) : (
+              qObj.status === 'unattempted'
+                ? `<div class="inc-row" style="color:var(--amber)"><span class="label">➖ Your answer:</span><span>Skipped</span></div>
+                   <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[qObj.answer]}) ${qObj.options ? qObj.options[qObj.answer] : ''}</span></div>`
+                : qObj.status === 'correct'
+                  ? `<div class="inc-row right"><span class="label">✅ Your answer:</span><span>(${LETTERS[qObj.chosen]}) ${qObj.options ? qObj.options[qObj.chosen] : ''} (Correct)</span></div>`
+                  : `<div class="inc-row wrong"><span class="label">❌ Your answer:</span><span>(${LETTERS[qObj.chosen]}) ${qObj.options ? qObj.options[qObj.chosen] : ''}</span></div>
+                     <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[qObj.answer]}) ${qObj.options ? qObj.options[qObj.answer] : ''}</span></div>`
+            )}
           </div>`).join('')}
       </div>
     </div>

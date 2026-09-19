@@ -997,7 +997,7 @@ const E6_MATH_M1 = [
       "6"
     ],
     "answer": 3,
-    "explanation": "The area \ud835\udc34  of a triangle is given by   . Therefore: Multiply both sides by 2: 48 = 8 \u00d7 height Divide both sides by 8: Height = 6 A) Incorrect; dividing by wrong number . B) Incorrect; misunderstanding formula. C) Incorrect; error in arithmetic."
+    "explanation": "The area 𝐴 of a triangle is given by (1/2) × base × height. Therefore: Multiply both sides by 2: 48 = 8 × height Divide both sides by 8: Height = 6 A) Incorrect; dividing by wrong number . B) Incorrect; misunderstanding formula. C) Incorrect; error in arithmetic."
   },
   {
     "id": 72,
@@ -1031,11 +1031,11 @@ const E6_MATH_M1 = [
     "id": 74,
     "section": "math",
     "module": 1,
-    "text": "If   , what is the value of \ud835\udc65 ?",
+    "text": "If 5/𝑥 = 2, what is the value of 𝑥?",
     "options": [
       "2.5",
       "3",
-      "2.5",
+      "4",
       "5"
     ],
     "answer": 0,

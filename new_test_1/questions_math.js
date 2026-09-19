@@ -48,7 +48,7 @@ const QUESTIONS = [
       "4"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. Use the slope formula \nA) Incorrect; calculation error in the slope formula.\nC) Incorrect; possible misunderstanding of the points.\nD) Incorrect; miscalculated slope.",
+    "explanation": "Choice B is correct. Use the slope formula m = (y₂ - y₁) / (x₂ - x₁) = (7 - 3) / (4 - 2) = 4 / 2 = 2.\nA) Incorrect; calculation error in the slope formula.\nC) Incorrect; possible misunderstanding of the points.\nD) Incorrect; miscalculated slope.",
     "topic": "Math"
   },
   {
@@ -66,7 +66,7 @@ const QUESTIONS = [
   },
   {
     "id": 6,
-    "text": "If \n, what is 𝑓(3)?",
+    "text": "If f(x) = x² + 1, what is f(3)?",
     "options": [
       "7",
       "8",
@@ -92,7 +92,7 @@ const QUESTIONS = [
   },
   {
     "id": 8,
-    "text": "What is the value of \n?",
+    "text": "What is the value of √49?",
     "options": [
       "5",
       "6",
@@ -110,7 +110,7 @@ const QUESTIONS = [
       "4",
       "6",
       "8",
-      "of 24 and 36?\nA) 4\nB) 6\nC) 8\nD) 12"
+      "12"
     ],
     "answer": 3,
     "explanation": "Choice D is correct. The GCD of 24 and 36 is the largest number that divides both without\nleaving a remainder. The divisors of 24 (1, 2, 3, 4, 6, 8, 12, 24) and 36 (1, 2,\n3, 4, 6, 9, 12, 18, 36) have 12 as the greatest common divisor.\nA) Incorrect; lower common divisor.\nB) Incorrect; common divisor but not greatest.\nC) Incorrect; divides 24 but not 36.",
@@ -274,7 +274,7 @@ const QUESTIONS = [
   },
   {
     "id": 22,
-    "text": "What is the value of \n?",
+    "text": "What is the value of √49 + √25?",
     "options": [
       "12",
       "13",

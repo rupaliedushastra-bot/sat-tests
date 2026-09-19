@@ -265,7 +265,7 @@ const E3_RW_M1 = [
     "id": 18,
     "section": "rw",
     "module": 1,
-    "image": "https://test.eduquest.org.in/wp-content/uploads/2026/04/Screenshot-2026-04-07-173020-300x293.png",
+    "image": "../assets/images/exam3/q18_coral.png",
     "text": "The population of the coral Lophelia pertusa declined significantly around 9,000 years ago in the Alboran Sea and around 11,000 years ago near the Mauritanian coast. Using the ratio of manganese to calcium, which inversely correlates with ocean oxygenation levels, marine scientist Rodrigo da Costa Portilho-Ramos and colleagues evaluated whether oxygenation played a role in the declines of L. pertusa. The researchers concluded that oxygenation may have been important in the Alboran Sea but not near the Mauritanian coast, since _______\n\nWhich choice most effectively uses data from the graph to complete the statement?",
     "options": [
       "a substantial increase in oxygenation in the Alboran Sea corresponded with the local decline in L. pertusa, but the opposite relationship between oxygenation and L. pertusa was found near the Mauritanian coast.",
@@ -296,7 +296,7 @@ const E3_RW_M1 = [
     "id": 20,
     "section": "rw",
     "module": 1,
-    "image": "https://test.eduquest.org.in/wp-content/uploads/2026/04/Screenshot-2026-04-07-171759.png",
+    "image": "../assets/images/exam3/q20_deextinction.png",
     "text": "The passage of time is among the many obstacles faced by scientists who are pursuing de-extinction efforts—that is, efforts to use breeding or a mixture of cloning and genetic engineering to bring back extinct species. Specifically, researchers are concerned that the longer a species has been extinct, the less likely it is that a suitable habitat still exists for that species. Among candidate species for de-extinction, this problem would be especially concerning for the _______\n\nWhich choice most effectively uses data from the table to complete the statement?",
     "options": [
       "passenger pigeon (Ectopistes migratorius), which became extinct only a few years after the huia (Heteralocha acutirostris).",
@@ -768,7 +768,7 @@ const QUESTIONS3 = [
     "id": 18,
     "section": "rw",
     "module": 1,
-    "image": "https://test.eduquest.org.in/wp-content/uploads/2026/04/Screenshot-2026-04-07-173020-300x293.png",
+    "image": "../assets/images/exam3/q18_coral.png",
     "text": "The population of the coral Lophelia pertusa declined significantly around 9,000 years ago in the Alboran Sea and around 11,000 years ago near the Mauritanian coast. Using the ratio of manganese to calcium, which inversely correlates with ocean oxygenation levels, marine scientist Rodrigo da Costa Portilho-Ramos and colleagues evaluated whether oxygenation played a role in the declines of L. pertusa. The researchers concluded that oxygenation may have been important in the Alboran Sea but not near the Mauritanian coast, since _______\n\nWhich choice most effectively uses data from the graph to complete the statement?",
     "options": [
       "a substantial increase in oxygenation in the Alboran Sea corresponded with the local decline in L. pertusa, but the opposite relationship between oxygenation and L. pertusa was found near the Mauritanian coast.",
@@ -799,7 +799,7 @@ const QUESTIONS3 = [
     "id": 20,
     "section": "rw",
     "module": 1,
-    "image": "https://test.eduquest.org.in/wp-content/uploads/2026/04/Screenshot-2026-04-07-171759.png",
+    "image": "../assets/images/exam3/q20_deextinction.png",
     "text": "The passage of time is among the many obstacles faced by scientists who are pursuing de-extinction efforts—that is, efforts to use breeding or a mixture of cloning and genetic engineering to bring back extinct species. Specifically, researchers are concerned that the longer a species has been extinct, the less likely it is that a suitable habitat still exists for that species. Among candidate species for de-extinction, this problem would be especially concerning for the _______\n\nWhich choice most effectively uses data from the table to complete the statement?",
     "options": [
       "passenger pigeon (Ectopistes migratorius), which became extinct only a few years after the huia (Heteralocha acutirostris).",
