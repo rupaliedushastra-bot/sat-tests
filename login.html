@@ -276,14 +276,18 @@
         <!-- STUDENT SIGNUP -->
         <div class="form-section" id="studentSignup">
             <div class="field">
+                <label>Full Name <span style="color:#f87171">*</span></label>
+                <input type="text" id="stuSignupName" placeholder="e.g. John Doe" required>
+            </div>
+            <div class="field">
                 <label>Email <span style="color:#f87171">*</span></label>
                 <input type="email" id="stuSignupEmail" placeholder="you@example.com" required>
             </div>
             <div class="field">
                 <label>Phone Number <span style="color:#f87171">*</span></label>
                 <div style="display: flex; gap: 8px;">
-                    <select id="stuSignupCC" style="width: 140px; flex-shrink: 0; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 8px; color: #fff; padding: 11px 12px; font-size: 0.95rem; outline: none;"></select>
-                    <input type="tel" id="stuSignupPhone" placeholder="Phone number (7-15 digits)" style="flex-grow: 1; width: auto;" required>
+                    <select id="stuSignupCC" class="country-select" style="width: 140px; flex-shrink: 0; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 8px; color: #fff; padding: 11px 12px; font-size: 0.95rem; outline: none;"></select>
+                    <input type="tel" id="stuSignupPhone" placeholder="Phone number (6-15 digits)" style="flex-grow: 1; width: auto;" required>
                 </div>
             </div>
             <div class="field">
@@ -302,11 +306,11 @@
         <!-- ADMIN LOGIN -->
         <div class="form-section" id="adminLogin">
             <div class="field">
-                <label>Admin Email</label>
+                <label>Admin Email <span style="color:#f87171">*</span></label>
                 <input type="email" id="adminLoginEmail" placeholder="admin@email.com">
             </div>
             <div class="field">
-                <label>Password</label>
+                <label>Password <span style="color:#f87171">*</span></label>
                 <div class="password-wrapper">
                     <input type="password" id="adminLoginPassword" placeholder="••••••••">
                     <button type="button" class="eye-toggle" onclick="togglePasswordVisibility('adminLoginPassword', this)">
@@ -323,11 +327,11 @@
         <!-- ADMIN SIGNUP -->
         <div class="form-section" id="adminSignup">
             <div class="field">
-                <label>Admin Email</label>
+                <label>Admin Email <span style="color:#f87171">*</span></label>
                 <input type="email" id="adminSignupEmail" placeholder="admin@email.com">
             </div>
             <div class="field">
-                <label>Password</label>
+                <label>Password <span style="color:#f87171">*</span></label>
                 <div class="password-wrapper">
                     <input type="password" id="adminSignupPassword" placeholder="At least 6 characters">
                     <button type="button" class="eye-toggle" onclick="togglePasswordVisibility('adminSignupPassword', this)">
@@ -336,7 +340,7 @@
                 </div>
             </div>
             <div class="field">
-                <label>Admin Access Code</label>
+                <label>Admin Access Code <span style="color:#f87171">*</span></label>
                 <div class="password-wrapper">
                     <input type="password" id="adminAccessCode" placeholder="Secret access code">
                     <button type="button" class="eye-toggle" onclick="togglePasswordVisibility('adminAccessCode', this)">
@@ -353,6 +357,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase.js"></script>
+    <script src="country-codes.js"></script>
     <script src="email.js"></script>
     <script>
         const supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
@@ -623,17 +628,41 @@
 
         // ── Student Signup ──────────────────────────────
         async function studentSignup() {
+            const name = (document.getElementById('stuSignupName') ? document.getElementById('stuSignupName').value : '').trim();
             const email = document.getElementById('stuSignupEmail').value.trim();
             const password = document.getElementById('stuSignupPassword').value;
             const ccEl = document.getElementById('stuSignupCC');
             const cc = ccEl ? (ccEl.value || '+91') : '+91';
             const phoneVal = (document.getElementById('stuSignupPhone').value || '').trim();
 
-            if (!email || !password || !phoneVal) { showMsg('Please fill all required fields including Phone Number.', 'error'); return; }
-            if (password.length < 6) { showMsg('Password must be at least 6 characters.', 'error'); return; }
-            if (!/^\d{7,15}$/.test(phoneVal.replace(/[- ]/g, ''))) {
-                showMsg('Please enter a valid phone number (7-15 digits).', 'error');
+            if (!name) {
+                showMsg('Please enter your full name.', 'error');
+                if (document.getElementById('stuSignupName')) document.getElementById('stuSignupName').focus();
+                return;
+            }
+            if (!email) {
+                showMsg('Please enter your email address.', 'error');
+                document.getElementById('stuSignupEmail').focus();
+                return;
+            }
+            if (typeof validateEmail === 'function' && !validateEmail(email)) {
+                showMsg('Please enter a valid email address.', 'error');
+                document.getElementById('stuSignupEmail').focus();
+                return;
+            }
+            if (!phoneVal) {
+                showMsg('Please enter your phone number.', 'error');
                 document.getElementById('stuSignupPhone').focus();
+                return;
+            }
+            if (!/^\d{6,15}$/.test(phoneVal.replace(/[- \(\)\+]/g, ''))) {
+                showMsg('Please enter a valid phone number (6-15 digits).', 'error');
+                document.getElementById('stuSignupPhone').focus();
+                return;
+            }
+            if (!password || password.length < 6) {
+                showMsg('Password must be at least 6 characters.', 'error');
+                document.getElementById('stuSignupPassword').focus();
                 return;
             }
 
@@ -644,18 +673,22 @@
                 password,
                 options: {
                     data: {
+                        full_name: name,
+                        name: name,
                         phone: fullPhone
                     }
                 }
             });
             if (error) { showMsg(error.message, 'error'); return; }
 
-            // Create client-side profile entry in profiles
+            // Create/Upsert client-side profile entry in profiles
             if (data && data.user) {
                 try {
-                    await supabaseClient.from('profiles').insert({
+                    await supabaseClient.from('profiles').upsert({
                         id: data.user.id,
                         email: email.toLowerCase(),
+                        full_name: name,
+                        name: name,
                         phone: fullPhone,
                         has_access: false,
                         has_topic_access: false,
@@ -670,6 +703,8 @@
             try {
                 await supabaseClient.from('sat_signup').insert({
                     user_id: data && data.user ? data.user.id : null,
+                    name: name,
+                    full_name: name,
                     email: email.toLowerCase(),
                     phone: fullPhone,
                     created_at: new Date().toISOString()
@@ -678,10 +713,15 @@
                 console.error("Failed to insert into sat_signup:", e);
             }
 
-            showMsg('Account created! You can now login. Note: access must be approved by admin.', 'success');
+            // Also save registration entry if helper available
+            if (typeof saveRegistration === 'function') {
+                saveRegistration({ name: name, email: email, phone: fullPhone }, 'SAT Portal Signup');
+            }
+
+            showMsg('Account created successfully! You can now login. Note: access must be approved by admin.', 'success');
             
             if (typeof sendSignupNotification === 'function') {
-                sendSignupNotification(email, fullPhone);
+                sendSignupNotification(email, fullPhone, name);
             }
         }
 

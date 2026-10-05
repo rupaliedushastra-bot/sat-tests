@@ -4,7 +4,7 @@ const transport = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.SMTP_USER || "rupali.eduquest@gmail.com",
-    pass: process.env.SMTP_PASS || "utfucjqehmaygikw",
+    pass: process.env.SMTP_PASS || "jhszranvxidkjubc",
   },
 });
 
@@ -37,36 +37,43 @@ module.exports = async (req, res) => {
 
     // ── TYPE: signup ─────────────────────────────────────────
     if (body.type === "signup") {
-      const { userEmail, userPhone } = body;
+      const userEmail = body.userEmail || body.email || "";
+      const userPhone = body.userPhone || body.phone || "";
+      const userName = body.userName || body.name || body.studentName || body.fullName || "";
 
       await transport.sendMail({
         from: `"${fromName}" <${fromEmail}>`,
         to: adminEmail,
-        subject: `🔔 New User Signup: ${userEmail}`,
+        subject: `Sat mock signups lead - ${userName ? userName + " (" + userEmail + ")" : userEmail}`,
         html: `
           <div style="font-family:sans-serif;max-width:620px;margin:0 auto;padding:28px;background:#0B1C3D;color:#f1f5ff;border-radius:16px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-              <h2 style="color:#7c3aed;margin:0;">🔔 New User Registration</h2>
-              <span style="background:#7c3aed22;border:1px solid #7c3aed55;color:#a78bfa;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700;">NEW SIGNUP</span>
+              <h2 style="color:#7c3aed;margin:0;font-size:22px;">Sat mock signups lead</h2>
+              <span style="background:#7c3aed22;border:1px solid #7c3aed55;color:#a78bfa;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700;">NEW LEAD</span>
             </div>
             <hr style="border-color:rgba(255,255,255,.1);margin-bottom:20px"/>
             <table style="width:100%;border-collapse:collapse;">
+              ${userName ? `
               <tr>
-                <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;width:180px;">Username / Email</td>
-                <td style="padding:8px 0;font-weight:600;font-size:13px;">${userEmail}</td>
+                <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;width:180px;">Student Name</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;color:#fff;">${userName}</td>
+              </tr>` : ''}
+              <tr>
+                <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;width:180px;">Email Address</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;color:#fff;">${userEmail}</td>
               </tr>
               ${userPhone ? `
               <tr>
                 <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;">Phone Number</td>
-                <td style="padding:8px 0;font-weight:600;font-size:13px;">${userPhone}</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;color:#fff;">${userPhone}</td>
               </tr>` : ''}
               <tr>
                 <td style="padding:8px 0;color:rgba(241,245,255,.5);font-size:13px;">Signup Time</td>
-                <td style="padding:8px 0;font-weight:600;font-size:13px;">${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST</td>
+                <td style="padding:8px 0;font-weight:600;font-size:13px;color:#fff;">${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST</td>
               </tr>
             </table>
-            <div style="margin-top:24px;padding:16px;background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.2);border-radius:10px;font-size:12px;color:rgba(241,245,255,.5);">
-              You can approve their exam access from the Admin Dashboard.
+            <div style="margin-top:24px;padding:16px;background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.2);border-radius:10px;font-size:12px;color:rgba(241,245,255,.7);">
+              You can approve exam access for this student directly from the Admin Dashboard.
             </div>
             <hr style="border-color:rgba(255,255,255,.08);margin:20px 0 12px"/>
             <p style="color:rgba(241,245,255,.25);font-size:11px;text-align:center;margin:0;">EduQuest SAT Practice Portal · rupali.eduquest@gmail.com</p>
