@@ -126,37 +126,52 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
       let optsHTML = '';
       if (d.isFillIn) {
         optsHTML = `
-          <div style="font-size:0.88rem; color:#475569; margin-bottom:8px;">
-            ${status === 'wrong' ? `Your answer: <strong style="color:#ef4444;">${d.chosen || 'None'}</strong> · Correct answer: <strong style="color:#16a34a;">${d.fillAnswer || d.answer || '–'}</strong>` : ''}
-            ${status === 'correct' ? `Your answer: <strong style="color:#16a34a;">${d.chosen || '–'}</strong> (Correct)` : ''}
-            ${status === 'unattempted' ? `Correct answer: <strong style="color:#16a34a;">${d.fillAnswer || d.answer || '–'}</strong>` : ''}
+          <div style="background:#f8fafc; border:1.5px solid ${status === 'correct' ? '#22c55e' : status === 'wrong' ? '#ef4444' : '#f59e0b'}; border-radius:8px; padding:12px 16px; margin:12px 0; font-size:0.9rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+              <div><span style="color:#64748b; font-weight:600;">Your Selected Answer:</span> <strong style="color:${status === 'correct' ? '#16a34a' : '#dc2626'}; font-family:monospace; font-size:1.05rem;">${status === 'unattempted' ? 'Skipped / None' : (d.chosen || 'None')}</strong></div>
+              <div><span style="color:#64748b; font-weight:600;">Official Correct Answer:</span> <strong style="color:#16a34a; font-family:monospace; font-size:1.05rem;">${d.fillAnswer || d.answer || '–'}</strong> ${d.acceptedAnswers && d.acceptedAnswers.length > 1 ? `<span style="color:#64748b; font-size:0.8rem;">(Accepted: ${d.acceptedAnswers.join(', ')})</span>` : ''}</div>
+            </div>
           </div>
         `;
       } else if (hasText && d.options && d.options.length > 0) {
-        optsHTML = d.options.map((optText, optIdx) => {
-          let optStyle = "background:#f8fafc; border:1.5px solid #e2e8f0; color:#334155;";
+        const chosenLetter = d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? letters[d.chosen] : 'None';
+        const correctLetter = letters[d.answer] || '–';
+
+        const summaryBar = `
+          <div style="display:flex; justify-content:space-between; align-items:center; background:#f1f5f9; padding:8px 14px; border-radius:6px; font-size:0.85rem; margin-bottom:10px;">
+            <div><strong>Your Selected Option:</strong> ${status === 'unattempted' ? '<span style="color:#d97706; font-weight:600;">Skipped (None)</span>' : status === 'correct' ? `<span style="color:#16a34a; font-weight:700;">Choice ${chosenLetter} ✓ (Correct)</span>` : `<span style="color:#dc2626; font-weight:700;">Choice ${chosenLetter} ✗ (Incorrect)</span>`}</div>
+            <div><strong>Official Correct Answer:</strong> <span style="color:#16a34a; font-weight:700;">Choice ${correctLetter} ✓</span></div>
+          </div>
+        `;
+
+        const optCards = d.options.map((optText, optIdx) => {
+          const isCorrect = optIdx === d.answer;
+          const isSelected = optIdx === d.chosen;
+
+          let optStyle = "background:#ffffff; border:1.5px solid #e2e8f0; color:#1e293b;";
           let badgeIcon = "";
 
-          if (optIdx === d.answer) {
+          if (isCorrect && isSelected) {
             optStyle = "background:#f0fdf4; border:1.5px solid #22c55e; color:#15803d; font-weight:600;";
-            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#16a34a;">✓ Correct Answer</span>';
-          }
-
-          if (status === 'wrong' && optIdx === d.chosen) {
+            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#16a34a; background:#dcfce7; padding:2px 8px; border-radius:4px; font-size:0.75rem;">✓ Correct &amp; Your Choice</span>';
+          } else if (isCorrect) {
+            optStyle = "background:#f0fdf4; border:1.5px solid #22c55e; color:#15803d; font-weight:600;";
+            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#16a34a; background:#dcfce7; padding:2px 8px; border-radius:4px; font-size:0.75rem;">✓ Correct Answer</span>';
+          } else if (isSelected) {
             optStyle = "background:#fef2f2; border:1.5px solid #ef4444; color:#b91c1c; font-weight:600;";
-            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#dc2626;">✗ Your Choice</span>';
-          } else if (status === 'correct' && optIdx === d.chosen) {
-            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#16a34a;">✓ Your Choice</span>';
+            badgeIcon = '<span style="margin-left:auto; font-weight:bold; color:#dc2626; background:#fee2e2; padding:2px 8px; border-radius:4px; font-size:0.75rem;">✗ Your Selected Option</span>';
           }
 
           return `
             <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:8px; font-size:0.9rem; margin-bottom:8px; ${optStyle}">
-              <div style="width:26px; height:26px; border-radius:50%; background:rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.8rem; flex-shrink:0;">${letters[optIdx] || optIdx + 1}</div>
-              <div style="flex:1;">${clean(optText)}</div>
+              <div style="width:26px; height:26px; border-radius:50%; background:${isCorrect ? '#16a34a' : isSelected ? '#dc2626' : '#e2e8f0'}; color:${isCorrect || isSelected ? '#fff' : '#475569'}; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.8rem; flex-shrink:0;">${letters[optIdx] || optIdx + 1}</div>
+              <div style="flex:1;">${optText}</div>
               ${badgeIcon}
             </div>
           `;
         }).join('');
+
+        optsHTML = summaryBar + optCards;
       } else {
         optsHTML = `
           <div style="font-size:0.88rem; color:#475569; margin-bottom:8px;">
@@ -166,13 +181,12 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
           </div>
         `;
       }
-
       const expText = d.explanation || 'No detailed explanation available for this question. Please review the relevant concept or consult the solution guide.';
 
       let imgHTML = '';
       if (d.image || d.useImage) {
-        const imgSrc = d.image || d.imageKey || '';
-        if (imgSrc) {
+        const imgSrc = typeof d.image === 'string' ? d.image : (d.image && d.image.file ? d.image.file : (d.imageKey || ''));
+        if (imgSrc && (!qText || !qText.includes(imgSrc))) {
           imgHTML = `<div style="text-align:center; margin-bottom:16px;"><img src="${imgSrc}" style="max-width:100%; max-height:350px; border-radius:8px;" alt="Question Image" /></div>`;
         }
       }
@@ -186,7 +200,7 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
             ${statusBadge}
           </div>
           
-          ${hasText ? `<div style="font-size:0.95rem; line-height:1.65; color:#1e293b; margin-bottom:16px; white-space:pre-wrap;">${clean(qText)}</div>` : ''}
+          ${hasText ? `<div style="font-size:0.95rem; line-height:1.65; color:#1e293b; margin-bottom:16px;">${qText}</div>` : ''}
           ${imgHTML}
           
           <div style="margin-bottom:16px;">

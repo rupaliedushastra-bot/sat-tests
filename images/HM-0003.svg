@@ -1,0 +1,8 @@
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+ <polygon points="40,220 340,220 340,40" fill="none" stroke="#222" stroke-width="2"/>
+ <rect x="320" y="200" width="20" height="20" fill="none" stroke="#222"/>
+ <text x="22" y="238" font-size="18">A</text>
+ <text x="345" y="238" font-size="18">B</text>
+ <text x="345" y="40" font-size="18">C</text>
+ <text x="170" y="120" font-size="16">39</text>
+</svg>
