@@ -1862,7 +1862,7 @@
           ${ansHtml}
           <div class="ri-exp" style="margin-top:10px;">
             <strong style="display:block; margin-bottom:4px;">💡 Detailed Solution &amp; Explanation:</strong> 
-            ${escapeHtml(d.explanation)}
+            ${escapeHtml(sanitizeExplanation(d.explanation))}
           </div>
         </div>
       `;

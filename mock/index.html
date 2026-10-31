@@ -158,6 +158,20 @@
       transition: border-color .2s, transform .2s, box-shadow .2s
     }
 
+    
+    .exam-card.featured-hard {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(96, 165, 250, 0.28);
+    }
+    .exam-card.featured-hard:hover {
+      border-color: rgba(96, 165, 250, 0.6);
+      box-shadow: 0 20px 50px rgba(26, 86, 219, 0.25);
+    }
+    .exam-card.featured-hard::before {
+      background: linear-gradient(90deg, #1a56db, #38bdf8);
+      height: 4px;
+    }
+
     .exam-card:hover {
       border-color: rgba(26, 86, 219, 0.5);
       transform: translateY(-3px);
@@ -398,12 +412,12 @@
     <div class="cards">
 
       <!-- Hard Mock 1 -->
-      <div class="exam-card featured-hard" style="border: 2px solid #ef4444; background: linear-gradient(180deg, #fff5f5 0%, #ffffff 100%);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <span style="background:linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color:#fff; font-size:0.7rem; font-weight:800; padding:2px 8px; border-radius:4px; letter-spacing:0.5px; text-transform:uppercase;">HARD + SUPER HARD</span>
-          <span style="font-size:0.75rem; color:#dc2626; font-weight:700;">OFFICIAL LEVEL</span>
+      <div class="exam-card featured-hard">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="background:rgba(26, 86, 219, 0.2); color:#60a5fa; border:1px solid rgba(96, 165, 250, 0.35); font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:100px; letter-spacing:0.5px; text-transform:uppercase;">HARD + SUPER HARD</span>
+          <span style="font-size:0.75rem; color:#60a5fa; font-weight:700;">OFFICIAL LEVEL</span>
         </div>
-        <div class="card-num" style="color:#dc2626;">HM-01</div>
+        <div class="card-num">HM-01</div>
         <div class="card-title">SAT Hard Full Mock 1</div>
         <div class="card-sub">4 modules · 98 Qs · 134 min<br>Mod 1 Hard · Mod 2 Super Hard</div>
         <div class="card-meta">
@@ -425,18 +439,18 @@
           </div>
         </div>
 
-        <a href="sat_hard_mock_1.html" class="card-btn" id="btn-hardmock1" style="background:linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color:#fff;">Start Hard Mock 1 →</a>
+        <a href="sat_hard_mock_1.html" class="card-btn" id="btn-hardmock1">Start Hard Mock 1 &rarr;</a>
       </div>
 
       <!-- Hard Mock 2 -->
-      <div class="exam-card featured-hard" style="border: 2px solid #8b5cf6; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <span style="background:linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color:#fff; font-size:0.7rem; font-weight:800; padding:2px 8px; border-radius:4px; letter-spacing:0.5px; text-transform:uppercase;">SUPER HARD MOCK</span>
-          <span style="font-size:0.75rem; color:#7c3aed; font-weight:700;">SET 2 WITH DIAGRAMS</span>
+      <div class="exam-card featured-hard">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="background:rgba(26, 86, 219, 0.2); color:#60a5fa; border:1px solid rgba(96, 165, 250, 0.35); font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:100px; letter-spacing:0.5px; text-transform:uppercase;">SUPER HARD MOCK</span>
+          <span style="font-size:0.75rem; color:#60a5fa; font-weight:700;">DIAGRAMS &amp; GRAPHS</span>
         </div>
-        <div class="card-num" style="color:#7c3aed;">HM-02</div>
+        <div class="card-num">HM-02</div>
         <div class="card-title">SAT Hard Full Mock 2</div>
-        <div class="card-sub">2 modules · 17 Qs · 35 min<br>Reading & Writing + Math (Diagrams & Graphs)</div>
+        <div class="card-sub">2 modules · 17 Qs · 35 min<br>Reading &amp; Writing + Math (Diagrams &amp; Graphs)</div>
         <div class="card-meta">
           <div class="cm">
             <div class="val">17</div>
@@ -456,11 +470,103 @@
           </div>
         </div>
 
-        <a href="sat_hard_mock_2.html" class="card-btn" id="btn-hardmock2" style="background:linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color:#fff;">Start Hard Mock 2 →</a>
+        <a href="sat_hard_mock_2.html" class="card-btn" id="btn-hardmock2">Start Hard Mock 2 &rarr;</a>
       </div>
 
+      <!-- Hard Mock 3 -->
+      <div class="exam-card featured-hard">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="background:rgba(26, 86, 219, 0.2); color:#60a5fa; border:1px solid rgba(96, 165, 250, 0.35); font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:100px; letter-spacing:0.5px; text-transform:uppercase;">MAXIMUM RIGOR (780–800)</span>
+          <span style="font-size:0.75rem; color:#60a5fa; font-weight:700;">ELITE DIGITAL SAT</span>
+        </div>
+        <div class="card-num">HM-03</div>
+        <div class="card-title">SAT Hard Full Mock 3</div>
+        <div class="card-sub">4 modules · 98 Qs · 134 min<br>Mod 1 Hard · Mod 2 Super Hard (Max Rigor)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">4</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
 
-      <!-- Exam 2 -->
+        <a href="sat_hard_mock_3.html" class="card-btn" id="btn-hardmock3">Start Hard Mock 3 &rarr;</a>
+      </div>
+
+            <!-- Hard Mock 4 -->
+      <div class="exam-card featured-hard">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="background:rgba(26, 86, 219, 0.2); color:#60a5fa; border:1px solid rgba(96, 165, 250, 0.35); font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:100px; letter-spacing:0.5px; text-transform:uppercase;">TOOLKIT MASTERY (780–800)</span>
+          <span style="font-size:0.75rem; color:#60a5fa; font-weight:700;">ELITE DIGITAL SAT</span>
+        </div>
+        <div class="card-num">HM-04</div>
+        <div class="card-title">SAT Hard Full Mock 4</div>
+        <div class="card-sub">4 modules · 98 Qs · 134 min<br>Mod 1 Hard · Mod 2 Super Hard (R&amp;W Toolkit Focus)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">4</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+
+        <a href="sat_hard_mock_4.html" class="card-btn" id="btn-hardmock4">Start Hard Mock 4 &rarr;</a>
+      </div>
+
+      <!-- Hard Mock 5 -->
+      <div class="exam-card featured-hard">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="background:rgba(26, 86, 219, 0.2); color:#60a5fa; border:1px solid rgba(96, 165, 250, 0.35); font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:100px; letter-spacing:0.5px; text-transform:uppercase;">TOOLKIT MASTERY SET 2 (780–800)</span>
+          <span style="font-size:0.75rem; color:#60a5fa; font-weight:700;">ELITE DIGITAL SAT</span>
+        </div>
+        <div class="card-num">HM-05</div>
+        <div class="card-title">SAT Hard Full Mock 5</div>
+        <div class="card-sub">4 modules • 98 Qs • 134 min<br>Mod 1 Hard • Mod 2 Super Hard (Toolkit Set 2 Focus)</div>
+        <div class="card-meta">
+          <div class="cm">
+            <div class="val">98</div>
+            <div class="lbl">Questions</div>
+          </div>
+          <div class="cm">
+            <div class="val">134</div>
+            <div class="lbl">Minutes</div>
+          </div>
+          <div class="cm">
+            <div class="val">4</div>
+            <div class="lbl">Modules</div>
+          </div>
+          <div class="cm">
+            <div class="val">400–1600</div>
+            <div class="lbl">Score Range</div>
+          </div>
+        </div>
+
+        <a href="sat_hard_mock_5.html" class="card-btn" id="btn-hardmock5">Start Hard Mock 5 &rarr;</a>
+      </div>
+
+<!-- Exam 2 -->
       <div class="exam-card ">
         <div class="card-num">01</div>
         <div class="card-title">Full Mock Test 1</div>

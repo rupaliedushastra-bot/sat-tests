@@ -119,9 +119,15 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
         ? '<span style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">❌ Wrong</span>'
         : '<span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">⏭ Skipped</span>';
 
-      const clean = str => (str || '').replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, m =>
+      const clean = str => {
+        let s = (str || '').replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, m =>
         ({'&nbsp;':' ','&deg;':'°','&rarr;':'→','&larr;':'←','&minus;':'−','&sup2;':'²','&sup3;':'³'}[m] || ' ')
-      );
+        );
+        s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
+        s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
+        s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
+        return s;
+      };
 
       let optsHTML = '';
       if (d.isFillIn) {

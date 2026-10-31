@@ -201,15 +201,15 @@ const QUESTIONS = [
   },
   {
     "id": 16,
-    "text": "States, there are many regional variations on what\nsuch drinks are called, including soda, pop,\nWhich choice completes the text so that it\nconforms to the conventions of Standard English?",
+    "text": "In the United States, there are many regional variations on what such drinks are called, including soda, pop, ______ and tonic.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "coke and,",
-      "coke, and",
-      "coke and,",
-      "coke, and,\nIhe painter and teacher Robert\ngreatly\ninspired by Impressionist paintings when he was\nin Paris and determined to create a movement\nthat was even more modern upon his return to\nNew York"
+      "coke,",
+      "coke, and,",
+      "coke and"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The standard punctuation for a list that is joined by \"and\" is to place a comma after each item in the list, but no comma after \"and.\" Distractor Explanations: All of the other choices can be eliminated because there should not be any comma after \"and\" when writing a list.",
+    "explanation": "Choice B is correct. In a series of three or more items joined by a coordinating conjunction (the Oxford comma rule), each preceding item in the list must be followed by a comma ('soda, pop, coke, and tonic'). Placing a comma after 'and' (Choices A and C) is incorrect, and omitting punctuation (Choice D) fails to separate the list items properly.",
     "topic": "Boundaries"
   },
   {
