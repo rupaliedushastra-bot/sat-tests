@@ -1,12 +1,10 @@
 // =============================================
-// SAT Hard Full Mock 2 (Super Hard Set 2)
-// Module 1 = Reading & Writing (8 Qs) · 16 min
-// Module 2 = Math (9 Qs, SPR & MCQ with Diagrams) · 19 min (Desmos allowed)
-// Total: 17 Questions (13 MCQ + 4 SPR)
-// answers: 0=A, 1=B, 2=C, 3=D for MCQ; string for SPR
+// SAT Hard Full Mock 2
+// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
+// With LaTeX Equations, Full Options, Solutions, and Diagrams
 // =============================================
 
-const RW_MODULE1 = [
+const QUESTIONS = [
   {
     "code": "SH2-RW01",
     "prefix": "SH2",
@@ -193,32 +191,26 @@ const RW_MODULE1 = [
     "id": 8,
     "module": 1,
     "qnum": 8
-  }
-];
-
-const MATH_MODULE1 = [
+  },
   {
     "code": "SH2-M01",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Geometry and Trigonometry · Circles (tangents)",
+    "topic": "Geometry · Frustum Volume",
     "difficulty": "Super Hard",
-    "isFillIn": true,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N1_tangents.svg\" alt=\"Circle with center O radius 5, external point P with OP = 13, two tangents PT and PT′, and chord TT′.\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">In the figure, circle O has radius 5, and OP = 13. Segments PT and PT′ are tangent to the circle at T and T′. What is the length of chord TT′? (Express as a decimal rounded to the nearest hundredth or as a fraction.)</p>",
-    "options": [],
-    "answer": "120/13",
-    "fillAnswer": "120/13",
-    "acceptedAnswers": [
-      "120/13",
-      "9.23",
-      "9.231",
-      "9.2308"
+    "isFillIn": false,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q03_bucket.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A bucket is shaped like a frustum of a right circular cone. The top opening has radius $9\\text{ inches}$, the bottom base has radius $6\\text{ inches}$, and the vertical height is $8\\text{ inches}$. What is the volume of the bucket, in cubic inches?</p>",
+    "options": [
+      "216\\pi",
+      "450\\pi",
+      "456\\pi",
+      "1{,}368\\pi"
     ],
-    "explanation": "The correct answer is 120/13. Triangle OTP is right-angled at T, so PT = √(13² − 5²) = 12. The altitude from T to OP has length (5 × 12)/13 = 60/13, and chord TT′ is twice that: 120/13 ≈ 9.23.",
-    "image": {
-      "file": "images/N1_tangents.svg",
-      "alt": "Circle with center O radius 5, external point P with OP = 13, two tangents PT and PT′, and chord TT′."
-    },
+    "answer": 2,
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "explanation": "Choice C is correct. The volume of a frustum of a cone with top radius $R = 9$, bottom radius $r = 6$, and vertical height $h = 8$ is: $$V = \\frac{\\pi h}{3}(R^2 + Rr + r^2) = \\frac{8\\pi}{3}(9^2 + 9 \\cdot 6 + 6^2) = \\frac{8\\pi}{3}(81 + 54 + 36) = \\frac{8\\pi}{3}(171) = 456\\pi\\text{ in}^3$$ Choice A represents a cylinder of radius 6; Choice B uses the average radius; Choice D forgets the factor of $\\frac{1}{3}$.",
+    "image": "images/q03_bucket.png",
     "id": 9,
     "module": 2,
     "qnum": 1
@@ -227,21 +219,19 @@ const MATH_MODULE1 = [
     "code": "SH2-M02",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Advanced Math · Quadratic functions (graph analysis)",
+    "topic": "Geometry · Frustum Volume (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N2_parabola.svg\" alt=\"Downward-opening parabola with x-intercepts at (−2, 0) and (6, 0), vertex (2, 16), and y-intercept (0, 12).\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The graph of y = f(x) is shown. For how many integer values of c does the equation f(x) = c have two distinct positive solutions?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q04_cone_ratio.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A right circular cone has height $15$ and base radius $9$. A plane parallel to the base cuts off a small cone at the top with height $6$, leaving a frustum. What is the ratio of the volume of the frustum to the volume of the small cone? (Enter a fraction or a decimal.)</p>",
     "options": [],
-    "answer": "3",
-    "fillAnswer": "3",
+    "answer": "117/8",
+    "fillAnswer": "117/8",
     "acceptedAnswers": [
-      "3"
+      "117/8",
+      "14.625"
     ],
-    "explanation": "The correct answer is 3. From the graph, f(x) = −(x + 2)(x − 6) = −x² + 4x + 12. Setting f(x) = c gives x² − 4x + (c − 12) = 0. The sum of roots is 4 (positive), so both are positive when the product c − 12 > 0, and they are distinct when the discriminant 16 − 4(c − 12) > 0, i.e., c < 16. So 12 < c < 16, giving c = 13, 14, 15.",
-    "image": {
-      "file": "images/N2_parabola.svg",
-      "alt": "Downward-opening parabola with x-intercepts at (−2, 0) and (6, 0), vertex (2, 16), and y-intercept (0, 12)."
-    },
+    "explanation": "The correct answer is $117/8$ (or $14.625$). The original cone has height $15$, and the small cone removed from the top has height $6$. The ratio of heights is $\\frac{6}{15} = \\frac{2}{5}$. Therefore, the ratio of volumes is: $$\\frac{V_{\\text{small}}}{V_{\\text{original}}} = \\left(\\frac{2}{5}\\right)^3 = \\frac{8}{125}$$ The frustum volume is $125 - 8 = 117$ parts out of $125$. The ratio of the volume of the frustum to the small cone is: $$\\frac{V_{\\text{frustum}}}{V_{\\text{small}}} = \\frac{117}{8} = 14.625$$",
+    "image": "images/q04_cone_ratio.png",
     "id": 10,
     "module": 2,
     "qnum": 2
@@ -250,24 +240,21 @@ const MATH_MODULE1 = [
     "code": "SH2-M03",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Geometry and Trigonometry · Area and volume (similar solids)",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N3_cone.svg\" alt=\"Inverted cone of height 12 and radius 6 with water filled to a depth of 8 from the vertex.\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">An inverted right circular cone has height 12 and base radius 6. It is filled with water to a depth of 8, measured from the vertex. What is the volume of the water?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q12_screening_table.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A screening test was given to $10{,}000$ people, with the results shown in the diagram. A person is chosen at random from those who tested positive. Which value is closest to the probability that this person actually has the condition?</p>",
     "options": [
-      "64π",
-      "96π",
-      "128π/3",
-      "36π"
+      "1\\%",
+      "10\\%",
+      "50\\%",
+      "90\\%"
     ],
-    "answer": 2,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. The water forms a similar cone with ratio 8/12 = 2/3, so its volume is (2/3)³ times the full volume (1/3)π(6²)(12) = 144π. That gives (8/27)(144π) = 128π/3. Choice A is incorrect: Used the square of the ratio. Choice B is incorrect: Used the ratio itself. Choice D is incorrect: Not derived from the geometry.",
-    "image": {
-      "file": "images/N3_cone.svg",
-      "alt": "Inverted cone of height 12 and radius 6 with water filled to a depth of 8 from the vertex."
-    },
+    "explanation": "Choice B is correct. From the $10{,}000$ people, those who test positive comprise true positives ($90$) and false positives ($792$), giving a total of $90 + 792 = 882$ positive tests. The probability that a person who tested positive actually has the condition is: $$P(\\text{Condition} \\mid \\text{Positive}) = \\frac{90}{882} \\approx 0.102 \\approx 10\\%$$ Even though the test has high sensitivity, most positive tests are false positives because the baseline prevalence of the condition is low ($1\\%$).",
+    "image": "images/q12_screening_table.png",
     "id": 11,
     "module": 2,
     "qnum": 3
@@ -276,24 +263,19 @@ const MATH_MODULE1 = [
     "code": "SH2-M04",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Problem-Solving and Data Analysis · Two-variable data (regression)",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem (SPR)",
     "difficulty": "Super Hard",
-    "isFillIn": false,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N4_scatter.svg\" alt=\"Scatterplot of eight points with a rising line of best fit; the point (7, 38) is circled above the line.\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The scatterplot shows eight data points and the least-squares line ŷ ≈ 2.95x + 11.71 (r ≈ 0.93). The circled point (7, 38) is removed, and the least-squares line is recalculated. Which statement is true of the new line?</p>",
-    "options": [
-      "Its slope is less than the original slope, and the correlation coefficient is greater.",
-      "Its slope is greater than the original slope, and the correlation coefficient is greater.",
-      "Its slope is less than the original slope, and the correlation coefficient is smaller.",
-      "Its slope is unchanged, and the correlation coefficient is greater."
+    "isFillIn": true,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q15_two_tests_table.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A condition affects $2\\%$ of a population. A test is positive for $98\\%$ of people who have the condition and for $5\\%$ of people who do not. Every person takes the test twice, independently, with the results for $1{,}000{,}000$ people shown. Given that a person tested positive on both tests, what is the probability, to the nearest hundredth, that the person has the condition? (Enter a decimal.)</p>",
+    "options": [],
+    "answer": "0.89",
+    "fillAnswer": "0.89",
+    "acceptedAnswers": [
+      "0.89",
+      "0.8869"
     ],
-    "answer": 0,
-    "fillAnswer": null,
-    "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The removed point lies well above the line toward the right, so it pulls the line up and steepens it. Without it the slope falls from 2.95 to 2.49. The remaining points fit a line more closely, so r rises from 0.93 to 0.98. Choice B is incorrect: Wrong direction for the slope. Choice C is incorrect: The fit improves, so r increases. Choice D is incorrect: Removing an influential point changes the slope.",
-    "image": {
-      "file": "images/N4_scatter.svg",
-      "alt": "Scatterplot of eight points with a rising line of best fit; the point (7, 38) is circled above the line."
-    },
+    "explanation": "The correct answer is $0.89$. Out of $1{,}000{,}000$ people, $2\\%$ ($20{,}000$) have the condition. Testing positive twice: $20{,}000 \\times 0.98^2 = 20{,}000 \\times 0.9604 = 19{,}208$. The remaining $980{,}000$ do not have the condition. Testing positive twice (two false positives): $980{,}000 \\times 0.05^2 = 980{,}000 \\times 0.0025 = 2{,}450$. Total people testing positive twice: $19{,}208 + 2{,}450 = 21{,}658$. Probability of having the condition given two positive tests: $$P(\\text{Condition} \\mid + +) = \\frac{19{,}208}{21{,}658} \\approx 0.8869 \\approx 0.89$$",
+    "image": "images/q15_two_tests_table.png",
     "id": 12,
     "module": 2,
     "qnum": 4
@@ -302,24 +284,21 @@ const MATH_MODULE1 = [
     "code": "SH2-M05",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Geometry and Trigonometry · Right triangle trigonometry and unit circle",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N5_angle.svg\" alt=\"Coordinate plane with an angle θ whose terminal side passes through (−5, 12), forming a right triangle with legs 5 and 12.\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">In the xy-plane, the terminal side of angle θ in standard position passes through the point (−5, 12). What is the value of cos 2θ?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q23_quadratic_root.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The equation $x^2 + px + q = 0$, where $p$ and $q$ are real numbers, has $\\frac{5}{2 - i}$ as one of its roots. What is the value of $p + q$?</p>",
     "options": [
-      "−119/169",
-      "119/169",
-      "−120/169",
-      "−10/13"
+      "-1",
+      "1",
+      "9",
+      "20"
     ],
-    "answer": 0,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The distance from the origin is 13, so cos θ = −5/13 and sin θ = 12/13. Then cos 2θ = cos²θ − sin²θ = 25/169 − 144/169 = −119/169. Choice B is incorrect: Sign error. Choice C is incorrect: This is sin 2θ = 2 sin θ cos θ. Choice D is incorrect: 2 cos θ, not cos 2θ.",
-    "image": {
-      "file": "images/N5_angle.svg",
-      "alt": "Coordinate plane with an angle θ whose terminal side passes through (−5, 12), forming a right triangle with legs 5 and 12."
-    },
+    "explanation": "Choice B is correct. First simplify the given root by multiplying numerator and denominator by the conjugate $2 + i$: $$\\frac{5}{2 - i} = \\frac{5(2 + i)}{(2 - i)(2 + i)} = \\frac{5(2 + i)}{4 - i^2} = \\frac{5(2 + i)}{5} = 2 + i$$ Since $p$ and $q$ are real, the other root must be the complex conjugate $2 - i$. By Vieta's formulas: $$p = -(\\text{sum of roots}) = -((2 + i) + (2 - i)) = -4$$ $$q = \\text{product of roots} = (2 + i)(2 - i) = 4 - i^2 = 5$$ Thus: $$p + q = -4 + 5 = 1$$",
+    "image": "images/q23_quadratic_root.png",
     "id": 13,
     "module": 2,
     "qnum": 5
@@ -328,21 +307,21 @@ const MATH_MODULE1 = [
     "code": "SH2-M06",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Geometry and Trigonometry · Lines, angles and triangles (similarity, area)",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
     "difficulty": "Super Hard",
-    "isFillIn": true,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N6_similar.svg\" alt=\"Triangle ABC with segment DE parallel to BC; AD = 6, DB = 4, triangle ADE has area 18.\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">In triangle ABC, point D is on AB and point E is on AC such that DE is parallel to BC. AD = 6, DB = 4, and the area of triangle ADE is 18. What is the area of quadrilateral DBCE?</p>",
-    "options": [],
-    "answer": "32",
-    "fillAnswer": "32",
-    "acceptedAnswers": [
-      "32"
+    "isFillIn": false,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q24_cubic_real_zero.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $p(x) = x^3 - 5x^2 + 17x - 13$ has real coefficients, and $2 + 3i$ is a zero of $p$. What is the real zero of $p$?</p>",
+    "options": [
+      "1",
+      "5",
+      "13",
+      "17"
     ],
-    "explanation": "The correct answer is 32. AB = 10, so the similarity ratio of ADE to ABC is 6/10 = 3/5. The area ratio is 9/25, so area(ABC) = 18 × 25/9 = 50. Then area(DBCE) = 50 − 18 = 32.",
-    "image": {
-      "file": "images/N6_similar.svg",
-      "alt": "Triangle ABC with segment DE parallel to BC; AD = 6, DB = 4, triangle ADE has area 18."
-    },
+    "answer": 0,
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "explanation": "Choice A is correct. Since $p(x)$ has real coefficients, the conjugate $2 - 3i$ must also be a zero of $p(x)$. Let $r$ be the third (real) zero. By Vieta's formulas, the sum of all three zeros is equal to the negative of the coefficient of $x^2$: $$\\text{Sum} = (2 + 3i) + (2 - 3i) + r = -(-5) = 5$$ $$4 + r = 5 \\implies r = 1$$ Check using the product of the zeros: $(2 + 3i)(2 - 3i)(1) = (4 + 9)(1) = 13$, which matches $-(-13) = 13$.",
+    "image": "images/q24_cubic_real_zero.png",
     "id": 14,
     "module": 2,
     "qnum": 6
@@ -420,8 +399,6 @@ const MATH_MODULE1 = [
   }
 ];
 
-const QUESTIONS = [...RW_MODULE1, ...MATH_MODULE1];
-
 // Topic Map
 const TOPIC_MAP = {};
 QUESTIONS.forEach(q => {
@@ -433,5 +410,5 @@ QUESTIONS.forEach(q => {
 });
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, RW_MODULE1, MATH_MODULE1, TOPIC_MAP };
+  module.exports = { QUESTIONS, TOPIC_MAP };
 }

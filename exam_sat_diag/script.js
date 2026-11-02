@@ -1,4 +1,23 @@
 
+function renderMath(elements) {
+  if (typeof window !== 'undefined' && window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    const targets = Array.isArray(elements) ? elements.filter(Boolean) : (elements ? [elements] : [document.body]);
+    if (targets.length > 0) {
+      MathJax.typesetPromise(targets).catch(err => console.warn('MathJax warning:', err));
+    }
+  }
+}
+
+function sanitizeExplanation(str) {
+  if (!str) return 'No detailed explanation provided.';
+  let s = String(str);
+  s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
+  return s;
+}
+
+
 let lastResultObj = null;
 let lastResultDetails = [];
 
@@ -261,6 +280,7 @@ function renderQ() {
 
     updatePalette();
     updateProg();
+    renderMath([$('qText'), $('qOpts')]);
 }
 
 function prevQ() { if (currentQ > 0) { currentQ--; renderQ(); } }
@@ -369,7 +389,7 @@ function renderResults(result, saveRes) {
         <br><br>Focus your revision on these topics to improve your SAT Writing score.
       </div>`
         : `<div class="explanation-box" style="margin:0 0 20px;border-color:rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);">
-        <strong>✅ Strong Performance Across All Topics!</strong> Keep practising to maintain this level.
+        <strong>✅ Strong Performance Across Back to Home!</strong> Keep practising to maintain this level.
       </div>`;
 
     wrap.innerHTML = `
@@ -398,7 +418,7 @@ function renderResults(result, saveRes) {
           const qText = q.text || q.question || q.prompt || '';
           const hasText = !!qText;
           const statusClass = q.status === 'correct' ? 'correct' : q.status === 'wrong' ? 'wrong' : 'unattempted';
-          const statusText = q.status === 'correct' ? '✅ Correct' : q.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
+          const statusText = q.status === 'correct' ? '✅ Correct (+1 Mark)' : q.status === 'wrong' ? '❌ Wrong (0 Marks)' : '⏭ Skipped (0 Marks)';
           
           let imgSrc = '';
           if (q.useImage && q.imageKey && typeof QUESTION_IMAGES !== 'undefined' && QUESTION_IMAGES[q.imageKey]) {
@@ -458,7 +478,7 @@ function renderResults(result, saveRes) {
     </div>
     <div class="res-actions" id="resActions">
       <button class="btn btn-primary" style="width:auto" onclick="location.reload()">🔄 Retake Test</button>
-      <a href="../index.html" class="btn btn-outline" style="text-decoration:none">🏠 All Topics</a>
+      <a href="../index.html" class="btn btn-outline" style="text-decoration:none">🏠 Back to Home</a>
       <button class="btn btn-primary" style="width:auto" onclick="downloadPDF()">📄 Download PDF</button>
     </div>`;
 
@@ -517,6 +537,9 @@ function downloadPDF() {
   tempContainer.style.width = '800px';
   tempContainer.innerHTML = generateCleanReportHTML(lastResultObj, lastResultDetails, sEmail, sName);
   document.body.appendChild(tempContainer);
+  if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    MathJax.typesetPromise([tempContainer]).catch(() => {});
+  }
 
   const opt = {
     margin: [10, 10, 10, 10],

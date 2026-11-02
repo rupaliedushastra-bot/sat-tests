@@ -1,3 +1,22 @@
+
+function renderMath(elements) {
+  if (typeof window !== 'undefined' && window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    const targets = Array.isArray(elements) ? elements.filter(Boolean) : (elements ? [elements] : [document.body]);
+    if (targets.length > 0) {
+      MathJax.typesetPromise(targets).catch(err => console.warn('MathJax warning:', err));
+    }
+  }
+}
+
+function sanitizeExplanation(str) {
+  if (!str) return 'No detailed explanation provided.';
+  let s = String(str);
+  s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
+  return s;
+}
+
 // =========================================================
 // SAT Topic Test Runner Logic
 // Digital SAT Format | EduQuest Practice Platform
@@ -184,6 +203,7 @@ function loadQuestion(index) {
       optContainer.appendChild(btn);
     });
   }
+  renderMath([qText, optContainer]);
 
   prevBtn.disabled = (index === 0);
 
@@ -324,10 +344,10 @@ function renderReportView(res) {
 
   let qCards = res.details.map((d, i) => {
     const statusBadge = d.status === 'correct'
-      ? '<span class="badge-status badge-correct">✓ Correct</span>'
+      ? '<span class="badge-status badge-correct">✓ Correct (+1 Mark)</span>'
       : d.status === 'wrong'
-      ? '<span class="badge-status badge-wrong">✗ Incorrect</span>'
-      : '<span class="badge-status badge-skipped">⏭ Skipped</span>';
+      ? '<span class="badge-status badge-wrong">✗ Incorrect (0 Marks)</span>'
+      : '<span class="badge-status badge-skipped">⏭ Skipped (0 Marks)</span>';
 
     const optsHtml = d.options.map((opt, optIdx) => {
       let optStyle = "padding:10px 14px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:8px; display:flex; align-items:center; gap:10px; font-size:0.92rem;";
@@ -410,6 +430,7 @@ function renderReportView(res) {
       </div>
     </div>
   `;
+  renderMath(container);
 }
 
 document.addEventListener('DOMContentLoaded', initTest);

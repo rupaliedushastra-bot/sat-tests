@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAT Topic Test - Textual Evidence</title>
   <link rel="stylesheet" href="../styles.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      startup: {
+        ready: () => {
+          if (window.MathJax && MathJax.startup) {
+            MathJax.startup.defaultReady();
+            const rw = document.getElementById('resWrap') || document.querySelector('.res-wrap') || document.querySelector('.test-container');
+            if (rw && rw.children.length > 0 && MathJax.typesetPromise) {
+              MathJax.typesetPromise([rw]).catch(() => {});
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../report.js"></script>
 </head>
 <body>
   <div class="test-container">

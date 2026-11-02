@@ -1,18 +1,16 @@
 // =============================================
 // SAT Hard Full Mock 4
-// Module 1 = Hard (49 Qs) • Module 2 = Super Hard (49 Qs)
-// Section 1: Reading & Writing (Mod 1: 27 Qs, Mod 2: 27 Qs) - 32 min each
-// Section 2: Math (Mod 3: 22 Qs, Mod 4: 22 Qs) - 35 min each
-// Total: 98 Questions • 134 Minutes • Scaled Score 400–1600
+// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
+// With LaTeX Equations, Full Options, Solutions, and Diagrams
 // =============================================
 
-const RW_MODULE1 = [
+const QUESTIONS = [
   {
     "id": 1,
     "code": "H4-RW01",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Hard",
     "text": "<p>Although early nineteenth-century historians often characterized the transition to industrial textile manufacturing as abrupt, recent economic archival research indicates that the shift was far more ______: traditional cottage handloom weaving persisted alongside automated steam-driven mills for decades before mechanized production finally achieved market dominance.</p>",
     "options": [
@@ -29,9 +27,9 @@ const RW_MODULE1 = [
     "code": "H4-RW02",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Hard",
-    "text": "<p>In her critical analysis of seventeenth-century Dutch genre painting, art historian Mari\u00ebt Westermann notes that Johannes Vermeer's domestic interiors were rarely mere photographic records; rather, they were ______ compositions in which every mundane household object was meticulously staged to convey allegorical moral commentary.</p>",
+    "text": "<p>In her critical analysis of seventeenth-century Dutch genre painting, art historian Mariët Westermann notes that Johannes Vermeer's domestic interiors were rarely mere photographic records; rather, they were ______ compositions in which every mundane household object was meticulously staged to convey allegorical moral commentary.</p>",
     "options": [
       "spontaneous",
       "calculated",
@@ -46,7 +44,7 @@ const RW_MODULE1 = [
     "code": "H4-RW03",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Hard",
     "text": "<p>Biochemists investigating bioluminescence in deep-sea cephalopods were surprised to discover that the symbiotic bacteria responsible for light emission are not obligate partners; free-living strains in open seawater remain physiologically ______ and capable of sustained cellular respiration even in the complete absence of a host organism.</p>",
     "options": [
@@ -63,7 +61,7 @@ const RW_MODULE1 = [
     "code": "H4-RW04",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Hard",
     "text": "<p>While some urban planners argue that widening expressways relieves traffic congestion, empirical studies of urban transit networks repeatedly demonstrate that adding highway capacity tends to ______ the very problem it seeks to address by inducing additional vehicular demand.</p>",
     "options": [
@@ -80,9 +78,9 @@ const RW_MODULE1 = [
     "code": "H4-RW05",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Hard",
-    "text": "<p>The archaeological team\u2019s claim that a subterranean grain silo represented an organized municipal storage network remained entirely ______ until subsequent radiometric dating of adjacent ceramic shards confirmed that the structure was built and maintained contemporaneously with the citadel's central administrative complex.</p>",
+    "text": "<p>The archaeological team’s claim that a subterranean grain silo represented an organized municipal storage network remained entirely ______ until subsequent radiometric dating of adjacent ceramic shards confirmed that the structure was built and maintained contemporaneously with the citadel's central administrative complex.</p>",
     "options": [
       "conjectural",
       "definitive",
@@ -97,9 +95,9 @@ const RW_MODULE1 = [
     "code": "H4-RW06",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Hard",
-    "text": "<p>Far from adhering rigidly to classical sonata structure, the composer\u2019s late piano trios actively ______ formal conventions, interweaving cadenzas into transitional passages and replacing customary recapitulations with chromatic improvisatory episodes.</p>",
+    "text": "<p>Far from adhering rigidly to classical sonata structure, the composer’s late piano trios actively ______ formal conventions, interweaving cadenzas into transitional passages and replacing customary recapitulations with chromatic improvisatory episodes.</p>",
     "options": [
       "codify",
       "subvert",
@@ -114,13 +112,13 @@ const RW_MODULE1 = [
     "code": "H4-RW07",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Text Structure and Purpose",
+    "topic": "Craft & Structure — Text Structure and Purpose",
     "difficulty": "Hard",
     "text": "<p>In 1912, Alfred Wegener proposed the continental drift hypothesis, citing complementary continental coastlines and matching fossil distributions across ocean basins. __Geologists of his era, however, overwhelmingly rejected continental drift because Wegener could not identify a physically plausible mechanism powerful enough to drive continental landmasses through solid oceanic basalt.__ It was not until the mid-twentieth-century discovery of seafloor spreading and paleomagnetic striping along mid-ocean ridges that plate tectonics finally gained scientific consensus.</p>",
     "options": [
-      "It establishes a definitive refutation of Wegener\u2019s original continental drift hypothesis that remains valid in contemporary geology.",
+      "It establishes a definitive refutation of Wegener’s original continental drift hypothesis that remains valid in contemporary geology.",
       "It introduces new paleomagnetic evidence that was unavailable to early twentieth-century geophysicists.",
-      "It explains the primary theoretical deficiency that prevented contemporary scientists from endorsing Wegener\u2019s hypothesis.",
+      "It explains the primary theoretical deficiency that prevented contemporary scientists from endorsing Wegener’s hypothesis.",
       "It summarizes the consensus view regarding how continents plow through the oceanic floor."
     ],
     "answer": 2,
@@ -131,7 +129,7 @@ const RW_MODULE1 = [
     "code": "H4-RW08",
     "section": "rw",
     "module": 1,
-    "topic": "Craft & Structure \u2014 Cross-Text Connections",
+    "topic": "Craft & Structure — Cross-Text Connections",
     "difficulty": "Hard",
     "text": "<p><strong>Text 1</strong><br>For decades, evolutionary biologists asserted that tool use was an exclusively hominin cognitive hallmark. However, field observations of wild New Caledonian crows (<em>Corvus moneduloides</em>) constructing hooked twigs to extract wood-boring beetle larvae demonstrate that complex technological manufacture can evolve independently in avian lineages with radically different neuroanatomy.</p><p><strong>Text 2</strong><br>While avian tool shaping is undeniably sophisticated, comparative neurobiologists caution against conflating convergent behavioral outcomes with equivalent cognitive architecture. Crows possess high neuronal density in the avian nidopallium, but their reliance on rigid stereotypic motor routines suggests that their manufacturing reflects domain-specific adaptations rather than the open-ended, domain-general generative cognition characteristic of primates.</p>",
     "options": [
@@ -148,9 +146,9 @@ const RW_MODULE1 = [
     "code": "H4-RW09",
     "section": "rw",
     "module": 1,
-    "topic": "Information & Ideas \u2014 Central Ideas and Details",
+    "topic": "Information & Ideas — Central Ideas and Details",
     "difficulty": "Hard",
-    "text": "<p>Historian Linda Colley argues that eighteenth-century British national identity was forged primarily in opposition to an external \"Other\"\u2014namely, Catholic France. Rather than emerging organically from shared domestic traditions among Scots, Welsh, and English populations, Britishness functioned as a composite patriotic umbrella constructed during protracted geopolitical conflicts, where common Protestantism and commercial rivalry superseded enduring internal ethnic tensions.</p>",
+    "text": "<p>Historian Linda Colley argues that eighteenth-century British national identity was forged primarily in opposition to an external \"Other\"—namely, Catholic France. Rather than emerging organically from shared domestic traditions among Scots, Welsh, and English populations, Britishness functioned as a composite patriotic umbrella constructed during protracted geopolitical conflicts, where common Protestantism and commercial rivalry superseded enduring internal ethnic tensions.</p>",
     "options": [
       "Eighteenth-century British identity was defined externally through religious and geopolitical opposition to France rather than uniform domestic cohesion.",
       "British identity in the eighteenth century developed primarily as an organic synthesis of ancient Scottish, English, and Welsh linguistic traditions.",
@@ -158,14 +156,14 @@ const RW_MODULE1 = [
       "France and Great Britain maintained a cooperative geopolitical alliance throughout the eighteenth century to preserve European commercial balance."
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The passage states that British identity was forged 'in opposition to an external \"Other\"\u2014namely, Catholic France' and that 'common Protestantism and commercial rivalry superseded enduring internal ethnic tensions' rather than emerging organically from domestic traditions. Choice A contradicts 'Rather than emerging organically.' Choice C is refuted by the text, which says Protestantism superseded internal tensions. Choice D directly contradicts 'protracted geopolitical conflicts.'"
+    "explanation": "Choice A is correct. The passage states that British identity was forged 'in opposition to an external \"Other\"—namely, Catholic France' and that 'common Protestantism and commercial rivalry superseded enduring internal ethnic tensions' rather than emerging organically from domestic traditions. Choice A contradicts 'Rather than emerging organically.' Choice C is refuted by the text, which says Protestantism superseded internal tensions. Choice D directly contradicts 'protracted geopolitical conflicts.'"
   },
   {
     "id": 10,
     "code": "H4-RW10",
     "section": "rw",
     "module": 1,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Hard",
     "text": "<p>Ecosystem ecologists studying nitrogen cycling in boreal forests have observed that moss carpets harboring nitrogen-fixing cyanobacteria provide substantial nutrient inputs to subarctic soils. However, when experimental warming plots simulated projected arctic climate conditions, feather moss coverage declined by over 40%, yet overall bioavailable nitrogen in the soil did not decrease proportionally. This resilience was attributed to increased microbial decomposition rates in thawed permafrost layers, which released previously immobilized organic nitrogen. This finding suggests that ______</p>",
     "options": [
@@ -182,9 +180,9 @@ const RW_MODULE1 = [
     "code": "H4-RW11",
     "section": "rw",
     "module": 1,
-    "topic": "Information & Ideas \u2014 Command of Evidence (Textual)",
+    "topic": "Information & Ideas — Command of Evidence (Textual)",
     "difficulty": "Hard",
-    "text": "<p>In Edith Wharton\u2019s 1905 novel <em>The House of Mirth</em>, protagonist Lily Bart struggles to maintain her elevated social standing in Gilded Age New York while resisting the transactional marriages expected of women in her circle. Wharton emphasizes Lily's precarious socioeconomic status by contrasting her refined aesthetic sensibilities with her lack of capital autonomy.</p><p>Which quotation from <em>The House of Mirth</em> most effectively illustrates this contrast?</p>",
+    "text": "<p>In Edith Wharton’s 1905 novel <em>The House of Mirth</em>, protagonist Lily Bart struggles to maintain her elevated social standing in Gilded Age New York while resisting the transactional marriages expected of women in her circle. Wharton emphasizes Lily's precarious socioeconomic status by contrasting her refined aesthetic sensibilities with her lack of capital autonomy.</p><p>Which quotation from <em>The House of Mirth</em> most effectively illustrates this contrast?</p>",
     "options": [
       "\"She was so evidently the victim of the civilization which had produced her, that the links of her break-down were clearly visible.\"",
       "\"She had been taught to believe that to be brilliantly dressed was an imperative duty, and that all other virtues could be compromised for social grace.\"",
@@ -199,9 +197,9 @@ const RW_MODULE1 = [
     "code": "H4-RW12",
     "section": "rw",
     "module": 1,
-    "topic": "Information & Ideas \u2014 Command of Evidence (Quantitative)",
+    "topic": "Information & Ideas — Command of Evidence (Quantitative)",
     "difficulty": "Hard",
-    "text": "<p>Agronomists evaluated the drought resistance of four hybrid sorghum cultivars by measuring leaf water potential (in megapascals, MPa; where less negative numbers indicate greater hydration) and total grain yield (in kilograms per hectare, kg/ha) under severe deficit irrigation:</p><p><strong>Cultivar Yield and Water Potential Under Deficit Irrigation</strong><br>\u2022 Cultivar A: Leaf Water Potential = -2.4 MPa; Grain Yield = 3,150 kg/ha<br>\u2022 Cultivar B: Leaf Water Potential = -1.8 MPa; Grain Yield = 4,200 kg/ha<br>\u2022 Cultivar C: Leaf Water Potential = -2.9 MPa; Grain Yield = 2,400 kg/ha<br>\u2022 Cultivar D: Leaf Water Potential = -2.1 MPa; Grain Yield = 3,600 kg/ha</p><p>A researcher claims that cultivars capable of maintaining higher tissue hydration (less negative leaf water potential) consistently produce superior grain yields under water-limited conditions.</p>",
+    "text": "<p>Agronomists evaluated the drought resistance of four hybrid sorghum cultivars by measuring leaf water potential (in megapascals, MPa; where less negative numbers indicate greater hydration) and total grain yield (in kilograms per hectare, kg/ha) under severe deficit irrigation:</p><p><strong>Cultivar Yield and Water Potential Under Deficit Irrigation</strong><br>• Cultivar A: Leaf Water Potential = -2.4 MPa; Grain Yield = 3,150 kg/ha<br>• Cultivar B: Leaf Water Potential = -1.8 MPa; Grain Yield = 4,200 kg/ha<br>• Cultivar C: Leaf Water Potential = -2.9 MPa; Grain Yield = 2,400 kg/ha<br>• Cultivar D: Leaf Water Potential = -2.1 MPa; Grain Yield = 3,600 kg/ha</p><p>A researcher claims that cultivars capable of maintaining higher tissue hydration (less negative leaf water potential) consistently produce superior grain yields under water-limited conditions.</p>",
     "options": [
       "Cultivar B and Cultivar D had identical leaf water potential measurements but differed in grain yields by over 600 kg/ha.",
       "Cultivar A produced more grain than Cultivar C despite having a more negative leaf water potential.",
@@ -216,7 +214,7 @@ const RW_MODULE1 = [
     "code": "H4-RW13",
     "section": "rw",
     "module": 1,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Hard",
     "text": "<p>In high-latitude marine ecosystems, phytoplankton blooms occur each spring when daylight increases and upper-layer ocean stratification prevents microscopic algae from being mixed into dark, deep waters. Oceanographers historically assumed that bloom onset coincided strictly with the Vernal Equinox. However, autonomous profiling bio-argo floats deployed in the North Atlantic recorded significant phytoplankton biomass accumulation weeks before seasonal thermal stratification developed, occurring during periods when storm activity briefly subsided and calm surface waters allowed light exposure. This observation indicates that ______</p>",
     "options": [
@@ -233,9 +231,9 @@ const RW_MODULE1 = [
     "code": "H4-RW14",
     "section": "rw",
     "module": 1,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Hard",
-    "text": "<p>Economists studying wage gaps between urban metropolises and rural municipalities note that urban workers earn an average nominal wage premium of 25%. However, when regional price parities\u2014particularly housing costs and local consumer services\u2014are factored into calculations, the real purchasing power of middle-income urban workers is statistically indistinguishable from that of their rural counterparts. Consequently, individuals who migrate from rural regions to major metropolitan centers primarily for financial advancement ______</p>",
+    "text": "<p>Economists studying wage gaps between urban metropolises and rural municipalities note that urban workers earn an average nominal wage premium of 25%. However, when regional price parities—particularly housing costs and local consumer services—are factored into calculations, the real purchasing power of middle-income urban workers is statistically indistinguishable from that of their rural counterparts. Consequently, individuals who migrate from rural regions to major metropolitan centers primarily for financial advancement ______</p>",
     "options": [
       "invariably experience an immediate decrease in their gross nominal earnings upon relocation.",
       "may find that higher nominal salaries are largely offset by commensurate increases in non-tradable living expenses.",
@@ -250,7 +248,7 @@ const RW_MODULE1 = [
     "code": "H4-RW15",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Hard",
     "text": "<p>In 1938, physics theorist Hans Bethe formulated the catalytic carbon-nitrogen-oxygen cycle that powers massive main-sequence ______ his quantitative model established for the first time how stellar cores generate the immense temperatures and pressures necessary to sustain nuclear fusion.</p>",
     "options": [
@@ -267,7 +265,7 @@ const RW_MODULE1 = [
     "code": "H4-RW16",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Hard",
     "text": "<p>The archaeological survey cataloged three distinct subterranean structures across the valley: an elliptical cistern dating to the early Bronze ______ an octagonal vaulted granary from the Hellenistic period; and a terraced burial hypogeum constructed during Roman administration.</p>",
     "options": [
@@ -284,7 +282,7 @@ const RW_MODULE1 = [
     "code": "H4-RW17",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Hard",
     "text": "<p>Although the manuscript had been preserved in the cathedral archives for centuries, its significance remained ______ paleographers discovered that the faint undertext beneath the Latin hymns contained a previously unknown treatise by the Greek mathematician Archimedes.</p>",
     "options": [
@@ -301,7 +299,7 @@ const RW_MODULE1 = [
     "code": "H4-RW18",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Hard",
     "text": "<p>Neither the initial geochemical assays of the lunar basalt samples nor the subsequent isotopic spectroscopy of the core ______ conclusive evidence of subterranean water deposits.</p>",
     "options": [
@@ -318,9 +316,9 @@ const RW_MODULE1 = [
     "code": "H4-RW19",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Hard",
-    "text": "<p>A hallmark of baroque counterpoint, Johann Sebastian Bach\u2019s <em>The Art of Fugue</em> consists of fourteen complex fugues and four canons, each of which ______ a single musical motif through intricate inversions, augmentations, and retrogrades.</p>",
+    "text": "<p>A hallmark of baroque counterpoint, Johann Sebastian Bach’s <em>The Art of Fugue</em> consists of fourteen complex fugues and four canons, each of which ______ a single musical motif through intricate inversions, augmentations, and retrogrades.</p>",
     "options": [
       "develop",
       "are developing",
@@ -335,12 +333,12 @@ const RW_MODULE1 = [
     "code": "H4-RW20",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Hard",
     "text": "<p>Originally trained as an engineer, ______ allowing him to execute large-scale kinetic sculptures whose mechanical equilibrium resisted severe outdoor weather conditions.</p>",
     "options": [
       "the structural principles of balance and tension were thoroughly understood by Alexander Calder,",
-      "Alexander Calder\u2019s thorough grasp of structural principles of balance and tension,",
+      "Alexander Calder’s thorough grasp of structural principles of balance and tension,",
       "understanding structural principles of balance and tension was Calder's greatest strength,",
       "Alexander Calder thoroughly understood structural principles of balance and tension,"
     ],
@@ -352,7 +350,7 @@ const RW_MODULE1 = [
     "code": "H4-RW21",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Hard",
     "text": "<p>During the Apollo 15 mission, astronaut David Scott dropped a geologic hammer and a falcon feather simultaneously from shoulder ______ demonstrated that in a vacuum, objects of differing masses accelerate at identical rates under gravitational attraction.</p>",
     "options": [
@@ -369,7 +367,7 @@ const RW_MODULE1 = [
     "code": "H4-RW22",
     "section": "rw",
     "module": 1,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Hard",
     "text": "<p>The discovery of fossilized melanosomes in dinosaur feather impressions has revolutionized paleontology by allowing scientists to reconstruct prehistoric coloration; previously, researchers had no empirical method to determine ______.</p>",
     "options": [
@@ -386,7 +384,7 @@ const RW_MODULE1 = [
     "code": "H4-RW23",
     "section": "rw",
     "module": 1,
-    "topic": "Expression of Ideas \u2014 Transitions",
+    "topic": "Expression of Ideas — Transitions",
     "difficulty": "Hard",
     "text": "<p>In standard economic theory, monopolistic firms maximize profits by restricting production to drive up market prices. In heavily regulated public utility sectors, ______, state oversight commissions frequently mandate maximum consumer rates while imposing minimum capacity targets to ensure uninterrupted civic services.</p>",
     "options": [
@@ -403,7 +401,7 @@ const RW_MODULE1 = [
     "code": "H4-RW24",
     "section": "rw",
     "module": 1,
-    "topic": "Expression of Ideas \u2014 Transitions",
+    "topic": "Expression of Ideas — Transitions",
     "difficulty": "Hard",
     "text": "<p>When carbon nanotubes are synthesized via chemical vapor deposition, microscopic variations in catalyst nanoparticle size alter the roll-up angle of graphene sheets. ______, batches of synthesized nanotubes often exhibit heterogeneous electronic properties, containing an unpredictable mixture of metallic and semiconducting fibers.</p>",
     "options": [
@@ -420,7 +418,7 @@ const RW_MODULE1 = [
     "code": "H4-RW25",
     "section": "rw",
     "module": 1,
-    "topic": "Expression of Ideas \u2014 Transitions",
+    "topic": "Expression of Ideas — Transitions",
     "difficulty": "Hard",
     "text": "<p>During the early Cretaceous period, angiosperms (flowering plants) expanded rapidly across terrestrial landscapes, outcompeting dominant gymnosperms in many ecological niches. Paleobotanists note, ______, that gymnosperm clades such as conifers maintained ecological dominance in colder, nutrient-poor alpine and boreal zones where short growing seasons favored evergreen needles.</p>",
     "options": [
@@ -437,9 +435,9 @@ const RW_MODULE1 = [
     "code": "H4-RW26",
     "section": "rw",
     "module": 1,
-    "topic": "Expression of Ideas \u2014 Rhetorical Synthesis",
+    "topic": "Expression of Ideas — Rhetorical Synthesis",
     "difficulty": "Hard",
-    "text": "<p>While researching a topic, a student has taken the following notes:<br>\u2022 The James Webb Space Telescope (JWST) carries a 6.5-meter primary beryllium mirror coated in microscopic gold.<br>\u2022 Gold provides optimal reflectivity for infrared wavelengths between 0.6 and 28.5 micrometers.<br>\u2022 The Hubble Space Telescope carries a 2.4-meter primary mirror coated in aluminum.<br>\u2022 Aluminum provides high reflectivity primarily for ultraviolet and visible wavelengths.<br>\u2022 Infrared observation allows astronomers to peer through obscuring cosmic dust clouds into early stellar nurseries.</p><p>The student wants to contrast the optical design of the two space telescopes. Which choice most effectively uses the relevant information from the notes to accomplish this goal?</p>",
+    "text": "<p>While researching a topic, a student has taken the following notes:<br>• The James Webb Space Telescope (JWST) carries a 6.5-meter primary beryllium mirror coated in microscopic gold.<br>• Gold provides optimal reflectivity for infrared wavelengths between 0.6 and 28.5 micrometers.<br>• The Hubble Space Telescope carries a 2.4-meter primary mirror coated in aluminum.<br>• Aluminum provides high reflectivity primarily for ultraviolet and visible wavelengths.<br>• Infrared observation allows astronomers to peer through obscuring cosmic dust clouds into early stellar nurseries.</p><p>The student wants to contrast the optical design of the two space telescopes. Which choice most effectively uses the relevant information from the notes to accomplish this goal?</p>",
     "options": [
       "Equipped with a 6.5-meter mirror, the James Webb Space Telescope allows astronomers to observe early stellar nurseries through cosmic dust clouds.",
       "Whereas the Hubble Space Telescope uses an aluminum-coated 2.4-meter mirror optimized for ultraviolet and visible light, the James Webb Space Telescope features a 6.5-meter gold-coated mirror designed for infrared observation.",
@@ -454,27 +452,24 @@ const RW_MODULE1 = [
     "code": "H4-RW27",
     "section": "rw",
     "module": 1,
-    "topic": "Expression of Ideas \u2014 Rhetorical Synthesis",
+    "topic": "Expression of Ideas — Rhetorical Synthesis",
     "difficulty": "Hard",
-    "text": "<p>While researching a topic, a student has taken the following notes:<br>\u2022 In 1856, American scientist Eunice Newton Foote presented an experimental study titled \"Circumstances Affecting the Heat of the Sun's Rays.\"<br>\u2022 Foote placed glass cylinders filled with different gases in direct sunlight to measure thermal absorption.<br>\u2022 She discovered that a cylinder filled with carbon dioxide retained more heat and took much longer to cool than one filled with common air.<br>\u2022 Foote concluded that an atmosphere containing elevated carbon dioxide would produce a warmer global climate.<br>\u2022 Her work predated Irish physicist John Tyndall\u2019s landmark publications on the greenhouse effect by three years.</p><p>The student wants to emphasize the historical priority of Foote\u2019s discovery to an audience familiar with the history of climate science. Which choice most effectively accomplishes this goal?</p>",
+    "text": "<p>While researching a topic, a student has taken the following notes:<br>• In 1856, American scientist Eunice Newton Foote presented an experimental study titled \"Circumstances Affecting the Heat of the Sun's Rays.\"<br>• Foote placed glass cylinders filled with different gases in direct sunlight to measure thermal absorption.<br>• She discovered that a cylinder filled with carbon dioxide retained more heat and took much longer to cool than one filled with common air.<br>• Foote concluded that an atmosphere containing elevated carbon dioxide would produce a warmer global climate.<br>• Her work predated Irish physicist John Tyndall’s landmark publications on the greenhouse effect by three years.</p><p>The student wants to emphasize the historical priority of Foote’s discovery to an audience familiar with the history of climate science. Which choice most effectively accomplishes this goal?</p>",
     "options": [
       "In 1856, Eunice Newton Foote placed glass cylinders filled with various atmospheric gases in sunlight to measure their thermal absorption properties.",
       "Eunice Newton Foote deduced that an atmosphere with elevated carbon dioxide would cause a warmer global climate after conducting experiments with glass cylinders.",
-      "Three years before John Tyndall\u2019s renowned publications on the greenhouse effect, Eunice Newton Foote demonstrated in 1856 that carbon dioxide traps solar heat and hypothesized its warming impact on Earth's climate.",
+      "Three years before John Tyndall’s renowned publications on the greenhouse effect, Eunice Newton Foote demonstrated in 1856 that carbon dioxide traps solar heat and hypothesized its warming impact on Earth's climate.",
       "John Tyndall is widely recognized in climate science for his laboratory experiments examining atmospheric heat absorption."
     ],
     "answer": 2,
     "explanation": "Choice C is correct. The prompt states the goal is to *emphasize the historical priority of Foote's discovery to an audience familiar with climate science*. Choice C highlights that Foote demonstrated carbon dioxide's heat-trapping ability in 1856, 'three years before John Tyndall's renowned publications.' Choices A and B do not mention her historical priority over Tyndall. Choice D focuses on Tyndall rather than Foote."
-  }
-];
-
-const RW_MODULE2 = [
+  },
   {
     "id": 28,
     "code": "SH4-RW01",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Super Hard",
     "text": "<p>Although the initial feasibility study praised the proposed hydroelectric dam as an unalloyed public good, environmental hydrologists warned that the reservoir's extensive sediment trapping would ______ downstream delta ecosystems by depriving coastal wetlands of the nutrient-rich silt necessary to counteract rising sea levels.</p>",
     "options": [
@@ -491,9 +486,9 @@ const RW_MODULE2 = [
     "code": "SH4-RW02",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Super Hard",
-    "text": "<p>In her reexamination of late Victorian detective fiction, literary scholar Audrey Jaffe contends that Sherlock Holmes\u2019s celebrated deductions were rarely as purely inductive as Arthur Conan Doyle claimed; rather, Holmes\u2019s forensic infallibility was largely a narrative ______ designed to reassure readers of an orderly, knowable social universe during an era of destabilizing urbanization.</p>",
+    "text": "<p>In her reexamination of late Victorian detective fiction, literary scholar Audrey Jaffe contends that Sherlock Holmes’s celebrated deductions were rarely as purely inductive as Arthur Conan Doyle claimed; rather, Holmes’s forensic infallibility was largely a narrative ______ designed to reassure readers of an orderly, knowable social universe during an era of destabilizing urbanization.</p>",
     "options": [
       "contrivance",
       "anachronism",
@@ -508,7 +503,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW03",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Super Hard",
     "text": "<p>Many behavioral economists assumed that introducing modest cash bonuses for blood donations would incentivize civic participation; instead, the policy proved distinctly ______, as the financial compensation led potential donors to view an intrinsically altruistic moral civic duty as a crass commercial transaction.</p>",
     "options": [
@@ -525,7 +520,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW04",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Super Hard",
     "text": "<p>Given that medieval manuscript illuminators were bound by strict theological iconography, modern art critics often assume their workshop output was uniform and derivative. Yet close spectroscopic analysis of the pigment palettes reveals surprising aesthetic ______: individual master artists routinely modified mineral binding agents to achieve idiosyncratic tonal gradations.</p>",
     "options": [
@@ -542,7 +537,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW05",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Super Hard",
     "text": "<p>The chief executive's public statements regarding the proposed corporate acquisition were deliberately ______: while she praised the target firm's proprietary battery patents, she pointedly refused to commit to maintaining its current workforce or retaining its domestic assembly plants.</p>",
     "options": [
@@ -559,7 +554,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW06",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Words in Context",
+    "topic": "Craft & Structure — Words in Context",
     "difficulty": "Super Hard",
     "text": "<p>Theoretical physicists studying string theory dualities argue that the apparent mathematical incompatibility between general relativity and quantum mechanics does not ______ the validity of either framework within its respective macroscopic or subatomic observational domain.</p>",
     "options": [
@@ -576,9 +571,9 @@ const RW_MODULE2 = [
     "code": "SH4-RW07",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Text Structure and Purpose",
+    "topic": "Craft & Structure — Text Structure and Purpose",
     "difficulty": "Super Hard",
-    "text": "<p>In nineteenth-century historiography, the collapse of the Western Roman Empire was commonly attributed to internal moral degeneration and decadent administrative bloat. __Recent environmental archaeology and paleoclimate reconstructions, however, have fundamentally challenged this teleological moral narrative by uncovering evidence of severe megadroughts and the Antonine Plague, which decimated agrarian revenue and labor reserves.__ Consequently, contemporary historians increasingly view Rome\u2019s fragmentation as an ecological crisis accelerated by systemic external shocks rather than purely domestic institutional decay.</p>",
+    "text": "<p>In nineteenth-century historiography, the collapse of the Western Roman Empire was commonly attributed to internal moral degeneration and decadent administrative bloat. __Recent environmental archaeology and paleoclimate reconstructions, however, have fundamentally challenged this teleological moral narrative by uncovering evidence of severe megadroughts and the Antonine Plague, which decimated agrarian revenue and labor reserves.__ Consequently, contemporary historians increasingly view Rome’s fragmentation as an ecological crisis accelerated by systemic external shocks rather than purely domestic institutional decay.</p>",
     "options": [
       "It endorses the nineteenth-century moral decline thesis by linking domestic decay directly to agricultural mismanagement.",
       "It introduces new scientific and paleoclimatic findings that undermine a long-standing historical explanation of Rome's collapse.",
@@ -593,12 +588,12 @@ const RW_MODULE2 = [
     "code": "SH4-RW08",
     "section": "rw",
     "module": 2,
-    "topic": "Craft & Structure \u2014 Cross-Text Connections",
+    "topic": "Craft & Structure — Cross-Text Connections",
     "difficulty": "Super Hard",
-    "text": "<p><strong>Text 1</strong><br>According to the Sapir-Whorf linguistic relativity hypothesis in its strong formulation, the structural syntax and vocabulary of a speaker\u2019s native language strictly circumscribe their cognitive capacities. Cross-cultural psychological studies have demonstrated that speakers of languages lacking specific grammatical tense markers, such as Hopi, exhibit fundamentally different temporal perceptions than speakers of Indo-European languages.</p><p><strong>Text 2</strong><br>While cross-linguistic variations can subtly influence the speed of perceptual categorization in laboratory tasks, asserting that language sets impenetrable boundaries on thought is deeply flawed. Experimental subjects routinely conceptualize distinctions\u2014such as non-verbal color hues or novel spatial configurations\u2014for which their native lexicon possesses no dedicated nomenclature. Human cognition relies on an underlying non-verbal mental representation (\"mentalese\") that transcends language-specific constraints.</p>",
+    "text": "<p><strong>Text 1</strong><br>According to the Sapir-Whorf linguistic relativity hypothesis in its strong formulation, the structural syntax and vocabulary of a speaker’s native language strictly circumscribe their cognitive capacities. Cross-cultural psychological studies have demonstrated that speakers of languages lacking specific grammatical tense markers, such as Hopi, exhibit fundamentally different temporal perceptions than speakers of Indo-European languages.</p><p><strong>Text 2</strong><br>While cross-linguistic variations can subtly influence the speed of perceptual categorization in laboratory tasks, asserting that language sets impenetrable boundaries on thought is deeply flawed. Experimental subjects routinely conceptualize distinctions—such as non-verbal color hues or novel spatial configurations—for which their native lexicon possesses no dedicated nomenclature. Human cognition relies on an underlying non-verbal mental representation (\"mentalese\") that transcends language-specific constraints.</p>",
     "options": [
       "It disputes the existence of any cross-linguistic differences in vocabulary or grammatical structure between language families.",
-      "It corroborates Text 1\u2019s claims regarding Hopi temporal perception by citing recent neuroimaging experiments.",
+      "It corroborates Text 1’s claims regarding Hopi temporal perception by citing recent neuroimaging experiments.",
       "It rejects the strong linguistic determinism supported in Text 1 by pointing to empirical evidence of non-verbal conceptual thought independent of language.",
       "It contends that language acquisition occurs much later in human developmental psychology than Text 1 assumes."
     ],
@@ -610,7 +605,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW09",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Super Hard",
     "text": "<p>Cognitive neuroscientists studying memory consolidation during non-rapid eye movement (NREM) sleep have recorded synchronized high-frequency electrical bursts known as sharp-wave ripples (SWRs) in the mammalian hippocampus. When optogenetic lasers were programmed to specifically suppress SWRs in mice during post-learning rest intervals, the mice showed severe deficits in recalling spatial labyrinth navigation routes the following morning. Crucially, when identical laser interruptions were delivered during wakeful immobility periods with equivalent frequency, no navigational memory deficits were observed. This divergence suggests that ______</p>",
     "options": [
@@ -627,7 +622,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW10",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Super Hard",
     "text": "<p>In deep-sea hydrothermal vent ecosystems where sunlight cannot penetrate, chemoautotrophic bacteria synthesize organic carbohydrates by oxidizing hydrogen sulfide emitted from volcanic fissures. Marine biologists observed that when vent discharge fluctuated and sulfide levels fell below detectable limits, benthic tube worm (<em>Riftia pachyptila</em>) colonies did not immediately perish; instead, they sustained cellular metabolism for several weeks by consuming elemental sulfur stored in specialized internal organ tissues called trophosomes. This finding suggests that ______</p>",
     "options": [
@@ -644,24 +639,24 @@ const RW_MODULE2 = [
     "code": "SH4-RW11",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Command of Evidence (Quantitative)",
+    "topic": "Information & Ideas — Command of Evidence (Quantitative)",
     "difficulty": "Super Hard",
-    "text": "<p>Marine biogeochemists monitored ocean acidification across four coral reef habitats by tracking seawater aragonite saturation state ($\\Omega_{\\text{arag}}$, where $\\Omega > 3.0$ promotes healthy calcification and $\\Omega < 2.0$ induces skeletal dissolution) and net community calcification rates ($G_{\\text{net}}$, in grams of $\\text{CaCO}_3$ per square meter per day):</p><p><strong>Reef Chemistry and Calcification Rates</strong><br>\u2022 Outer Barrier Reef: $\\Omega_{\\text{arag}} = 3.6$; $G_{\\text{net}} = +8.4\\text{ g/m}^2\\text{/day}$<br>\u2022 Mid-Shelf Lagoon: $\\Omega_{\\text{arag}} = 2.9$; $G_{\\text{net}} = +4.1\\text{ g/m}^2\\text{/day}$<br>\u2022 Coastal Inshore Flat: $\\Omega_{\\text{arag}} = 2.2$; $G_{\\text{net}} = +0.8\\text{ g/m}^2\\text{/day}$<br>\u2022 Volcanic CO\u2082 Seep Site: $\\Omega_{\\text{arag}} = 1.4$; $G_{\\text{net}} = -3.2\\text{ g/m}^2\\text{/day}$</p><p>A researcher asserts that when seawater aragonite saturation drops below critical equilibrium ($\\Omega < 2.0$), net coral accretion ceases entirely and skeletal dissolution becomes dominant.</p>",
+    "text": "<p>Marine biogeochemists monitored ocean acidification across four coral reef habitats by tracking seawater aragonite saturation state ($\\Omega_{\\text{arag}}$, where $\\Omega > 3.0$ promotes healthy calcification and $\\Omega < 2.0$ induces skeletal dissolution) and net community calcification rates ($G_{\\text{net}}$, in grams of $\\text{CaCO}_3$ per square meter per day):</p><p><strong>Reef Chemistry and Calcification Rates</strong><br>• Outer Barrier Reef: $\\Omega_{\\text{arag}} = 3.6$; $G_{\\text{net}} = +8.4\\text{ g/m}^2\\text{/day}$<br>• Mid-Shelf Lagoon: $\\Omega_{\\text{arag}} = 2.9$; $G_{\\text{net}} = +4.1\\text{ g/m}^2\\text{/day}$<br>• Coastal Inshore Flat: $\\Omega_{\\text{arag}} = 2.2$; $G_{\\text{net}} = +0.8\\text{ g/m}^2\\text{/day}$<br>• Volcanic CO₂ Seep Site: $\\Omega_{\\text{arag}} = 1.4$; $G_{\\text{net}} = -3.2\\text{ g/m}^2\\text{/day}$</p><p>A researcher asserts that when seawater aragonite saturation drops below critical equilibrium ($\\Omega < 2.0$), net coral accretion ceases entirely and skeletal dissolution becomes dominant.</p>",
     "options": [
       "The Outer Barrier Reef displayed the highest saturation state ($\\Omega = 3.6$) and supported the largest positive calcification rate ($+8.4\\text{ g/m}^2\\text{/day}$).",
-      "At the Volcanic CO\u2082 Seep Site, where $\\Omega_{\\text{arag}}$ fell to 1.4 (below the 2.0 threshold), the net community calcification rate shifted to a negative value ($-3.2\\text{ g/m}^2\\text{/day}$), confirming active skeletal dissolution.",
+      "At the Volcanic CO₂ Seep Site, where $\\Omega_{\\text{arag}}$ fell to 1.4 (below the 2.0 threshold), the net community calcification rate shifted to a negative value ($-3.2\\text{ g/m}^2\\text{/day}$), confirming active skeletal dissolution.",
       "The Mid-Shelf Lagoon experienced net dissolution because its saturation state was below 3.0.",
       "All four reef habitats exhibited positive net calcification rates regardless of aragonite saturation levels."
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The researcher's specific claim is that when $\\Omega < 2.0$, accretion ceases and dissolution dominates ($G_{\\text{net}} < 0$). The data at the Volcanic CO\u2082 Seep site ($\\Omega = 1.4$, $G_{\text{net}} = -3.2$) directly verifies this threshold transition from net positive growth to net dissolution. Choice A illustrates high saturation growth, but does not test the critical $\\Omega < 2.0$ dissolution threshold. Choice C is factually false (Lagoon had $+4.1$, which is positive accretion). Choice D contradicts the negative value at the seep site."
+    "explanation": "Choice B is correct. The researcher's specific claim is that when $\\Omega < 2.0$, accretion ceases and dissolution dominates ($G_{\\text{net}} < 0$). The data at the Volcanic CO₂ Seep site ($\\Omega = 1.4$, $G_{\text{net}} = -3.2$) directly verifies this threshold transition from net positive growth to net dissolution. Choice A illustrates high saturation growth, but does not test the critical $\\Omega < 2.0$ dissolution threshold. Choice C is factually false (Lagoon had $+4.1$, which is positive accretion). Choice D contradicts the negative value at the seep site."
   },
   {
     "id": 39,
     "code": "SH4-RW12",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Central Ideas and Details",
+    "topic": "Information & Ideas — Central Ideas and Details",
     "difficulty": "Super Hard",
     "text": "<p>In his treatise on the political philosophy of the Enlightenment, Jonathan Israel argues that the historical movement comprised two distinct currents: a Moderate Enlightenment, championed by John Locke and Voltaire, which sought a compromise between traditional religious monarchy and gradual legislative reform; and a Radical Enlightenment, inspired by Baruch Spinoza, which advocated universal egalitarian democracy, the absolute eradication of ecclesiastical privilege, and complete freedom of thought. Israel asserts that modern secular democratic values stem almost exclusively from the Radical tradition.</p>",
     "options": [
@@ -678,9 +673,9 @@ const RW_MODULE2 = [
     "code": "SH4-RW13",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Super Hard",
-    "text": "<p>Biomaterials scientists evaluating self-healing polymers have developed microcapsules containing dicyclopentadiene (DCPD) embedded within an epoxy resin matrix alongside a ruthenium Grubbs catalyst. When mechanical stress produces microcracks, the microcapsules rupture, releasing liquid DCPD monomer into the fissure, where contact with the catalyst triggers ring-opening metathesis polymerization (ROMP), restoring up to 90% of the material's original tensile strength within forty-eight hours. However, in low-temperature environments below -20\u00b0C, the healing efficiency dropped to under 15%. Because the Grubbs catalyst remains chemically active at sub-zero temperatures, the performance decline at extreme cold is best explained if ______</p>",
+    "text": "<p>Biomaterials scientists evaluating self-healing polymers have developed microcapsules containing dicyclopentadiene (DCPD) embedded within an epoxy resin matrix alongside a ruthenium Grubbs catalyst. When mechanical stress produces microcracks, the microcapsules rupture, releasing liquid DCPD monomer into the fissure, where contact with the catalyst triggers ring-opening metathesis polymerization (ROMP), restoring up to 90% of the material's original tensile strength within forty-eight hours. However, in low-temperature environments below -20°C, the healing efficiency dropped to under 15%. Because the Grubbs catalyst remains chemically active at sub-zero temperatures, the performance decline at extreme cold is best explained if ______</p>",
     "options": [
       "the epoxy resin matrix undergoes spontaneous thermal degradation when chilled below freezing.",
       "ring-opening metathesis polymerization produces irreversible embrittlement of the polymer at ambient room temperatures.",
@@ -688,16 +683,16 @@ const RW_MODULE2 = [
       "the DCPD liquid monomer experiences increased viscosity or freezes, preventing capillary migration into the fractured microcracks."
     ],
     "answer": 3,
-    "explanation": "Choice D is correct. The text notes that the chemical catalyst remains fully active at -20\u00b0C, yet healing drops from 90% to under 15%. For healing to occur, the liquid DCPD monomer must flow from the ruptured capsule into the crack to meet the catalyst. If the liquid monomer freezes or becomes too viscous to flow into the crack, polymerization cannot bridge the fissure. Choice A is unsupported (matrix doesn't degrade). Choice C is contradicted (catalyst is active and doesn't evaporate). Choice D discusses room temperatures, whereas the issue is specifically sub-zero cold."
+    "explanation": "Choice D is correct. The text notes that the chemical catalyst remains fully active at -20°C, yet healing drops from 90% to under 15%. For healing to occur, the liquid DCPD monomer must flow from the ruptured capsule into the crack to meet the catalyst. If the liquid monomer freezes or becomes too viscous to flow into the crack, polymerization cannot bridge the fissure. Choice A is unsupported (matrix doesn't degrade). Choice C is contradicted (catalyst is active and doesn't evaporate). Choice D discusses room temperatures, whereas the issue is specifically sub-zero cold."
   },
   {
     "id": 41,
     "code": "SH4-RW14",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Command of Evidence (Textual)",
+    "topic": "Information & Ideas — Command of Evidence (Textual)",
     "difficulty": "Super Hard",
-    "text": "<p>In Virginia Woolf\u2019s 1925 novel <em>Mrs. Dalloway</em>, the traumatic psychological aftermath of World War I is embodied in the character of Septimus Warren Smith, a decorated veteran suffering from shell shock. Woolf portrays Septimus\u2019s mental anguish not as an isolated pathology, but as an indictment of a rigid British medical and social establishment that insists on stoic conformity and dismisses profound existential suffering.</p><p>Which quotation from <em>Mrs. Dalloway</em> most effectively illustrates this critique of the establishment?</p>",
+    "text": "<p>In Virginia Woolf’s 1925 novel <em>Mrs. Dalloway</em>, the traumatic psychological aftermath of World War I is embodied in the character of Septimus Warren Smith, a decorated veteran suffering from shell shock. Woolf portrays Septimus’s mental anguish not as an isolated pathology, but as an indictment of a rigid British medical and social establishment that insists on stoic conformity and dismisses profound existential suffering.</p><p>Which quotation from <em>Mrs. Dalloway</em> most effectively illustrates this critique of the establishment?</p>",
     "options": [
       "\"Dr. Holmes examined him; there was nothing the matter with him, said Dr. Holmes; he was only a little out of sorts; take a dose of bromide, have a game of cricket.\"",
       "\"London had swallowed up many millions of young men called Smith; thought nothing of it.\"",
@@ -705,20 +700,20 @@ const RW_MODULE2 = [
       "\"He had not grown; he had not changed; only his hair was white, like snow in moonlight.\""
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Dr. Holmes epitomizes the British medical establishment. His dismissive prescription\u2014treating severe shell shock as being 'a little out of sorts' and prescribing 'a game of cricket'\u2014powerfully illustrates Woolf's critique of an establishment that trivializes profound war trauma through superficial stoic conformity. Choice A comments on London's anonymity. Choice C reflects poetic observations of beauty. Choice D describes physical aging."
+    "explanation": "Choice A is correct. Dr. Holmes epitomizes the British medical establishment. His dismissive prescription—treating severe shell shock as being 'a little out of sorts' and prescribing 'a game of cricket'—powerfully illustrates Woolf's critique of an establishment that trivializes profound war trauma through superficial stoic conformity. Choice A comments on London's anonymity. Choice C reflects poetic observations of beauty. Choice D describes physical aging."
   },
   {
     "id": 42,
     "code": "SH4-RW15",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Super Hard",
-    "text": "<p>Astrophysicists analyzing spectroscopic transmissions from the exoplanet WASP-39b detected unambiguous absorption lines for sulfur dioxide ($\\text{SO}_2$). In stellar atmospheres, sulfur dioxide is typically produced when intense ultraviolet radiation from the host star breaks apart water molecules ($\\text{H}_2\\text{O}$), freeing hydroxyl radicals ($\\text{OH}$) that subsequently react with hydrogen sulfide ($\\text{H}_2\\text{S}$). On planets without sufficient atmospheric water vapor or with thick cloud decks that shield the lower atmosphere from stellar ultraviolet photons, this photochemical chain cannot proceed. Therefore, the detection of sulfur dioxide in WASP-39b\u2019s upper atmosphere provides direct evidence that ______</p>",
+    "text": "<p>Astrophysicists analyzing spectroscopic transmissions from the exoplanet WASP-39b detected unambiguous absorption lines for sulfur dioxide ($\\text{SO}_2$). In stellar atmospheres, sulfur dioxide is typically produced when intense ultraviolet radiation from the host star breaks apart water molecules ($\\text{H}_2\\text{O}$), freeing hydroxyl radicals ($\\text{OH}$) that subsequently react with hydrogen sulfide ($\\text{H}_2\\text{S}$). On planets without sufficient atmospheric water vapor or with thick cloud decks that shield the lower atmosphere from stellar ultraviolet photons, this photochemical chain cannot proceed. Therefore, the detection of sulfur dioxide in WASP-39b’s upper atmosphere provides direct evidence that ______</p>",
     "options": [
       "the exoplanet has an atmosphere completely devoid of hydrogen sulfide and water molecules.",
       "photochemical reactions driven by stellar ultraviolet irradiation actively alter atmospheric chemistry on the exoplanet.",
-      "thick clouds permanently insulate WASP-39b\u2019s upper atmosphere from any high-energy stellar photons.",
+      "thick clouds permanently insulate WASP-39b’s upper atmosphere from any high-energy stellar photons.",
       "sulfur dioxide must have originated from catastrophic surface volcanic eruptions rather than atmospheric chemical processes."
     ],
     "answer": 1,
@@ -729,7 +724,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW16",
     "section": "rw",
     "module": 2,
-    "topic": "Information & Ideas \u2014 Inferences",
+    "topic": "Information & Ideas — Inferences",
     "difficulty": "Super Hard",
     "text": "<p>In evolutionary biology, the \"expensive tissue hypothesis\" posits that because metabolic basal energy budgets in primates are constrained, the evolutionary enlargement of the brain could only occur if accompanied by a corresponding reduction in the mass of another metabolically demanding organ, such as the gastrointestinal tract. Comparative anatomists testing this hypothesis noted that modern humans possess a brain roughly three times larger than expected for an anthropoid primate of equivalent body mass, alongside a gastrointestinal tract that is nearly 40% smaller. This anatomical configuration was made viable primarily because early hominins ______</p>",
     "options": [
@@ -746,7 +741,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW17",
     "section": "rw",
     "module": 2,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Super Hard",
     "text": "<p>During the Renaissance, Venetian glassmakers who divulged the secretive chemical recipes for Cristallo glass faced severe ______ the Council of Ten dispatched assassins across Europe to silence fugitive artisans who established competitive furnaces abroad.</p>",
     "options": [
@@ -763,7 +758,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW18",
     "section": "rw",
     "module": 2,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Super Hard",
     "text": "<p>The computational linguist evaluated three acoustic parameters across dialect ______ vowel formant dispersal, which correlates with regional tongue placement; fundamental pitch frequency; and syllable duration variability.</p>",
     "options": [
@@ -780,9 +775,9 @@ const RW_MODULE2 = [
     "code": "SH4-RW19",
     "section": "rw",
     "module": 2,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Super Hard",
-    "text": "<p>Located within the deep permafrost of Spitsbergen, Norway, the Svalbard Global Seed Vault stores backup duplicates of hundreds of thousands of crop ______ that the world\u2019s agricultural biodiversity can be regenerated in the event of catastrophic global crises.</p>",
+    "text": "<p>Located within the deep permafrost of Spitsbergen, Norway, the Svalbard Global Seed Vault stores backup duplicates of hundreds of thousands of crop ______ that the world’s agricultural biodiversity can be regenerated in the event of catastrophic global crises.</p>",
     "options": [
       "varieties; ensuring",
       "varieties, ensuring",
@@ -790,14 +785,14 @@ const RW_MODULE2 = [
       "varieties ensuring,"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. The present participial phrase 'ensuring that the world\u2019s agricultural biodiversity can be regenerated...' functions as a non-finite adverbial clause modifying the main action. It is properly set off with a comma. Choice B incorrectly uses a semicolon before a participial phrase (creating a fragment). Choice C creates a comma splice between two independent clauses ('stores backup duplicates...' and 'it ensures...'). Choice D places an ungrammatical comma after 'ensuring'."
+    "explanation": "Choice B is correct. The present participial phrase 'ensuring that the world’s agricultural biodiversity can be regenerated...' functions as a non-finite adverbial clause modifying the main action. It is properly set off with a comma. Choice B incorrectly uses a semicolon before a participial phrase (creating a fragment). Choice C creates a comma splice between two independent clauses ('stores backup duplicates...' and 'it ensures...'). Choice D places an ungrammatical comma after 'ensuring'."
   },
   {
     "id": 47,
     "code": "SH4-RW20",
     "section": "rw",
     "module": 2,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Super Hard",
     "text": "<p>Surrounding the microscopic lipid droplet in adipocyte cells ______ a structural meshwork of perilipin proteins, which regulate the enzymatic breakdown of stored triglycerides during prolonged physical fasting.</p>",
     "options": [
@@ -814,12 +809,12 @@ const RW_MODULE2 = [
     "code": "SH4-RW21",
     "section": "rw",
     "module": 2,
-    "topic": "Standard English Conventions \u2014 Form, Structure, and Sense",
+    "topic": "Standard English Conventions — Form, Structure, and Sense",
     "difficulty": "Super Hard",
     "text": "<p>Having spent two decades analyzing the linguistic syntax of Mayan hieroglyphic inscriptions, ______ finally deciphered the phonetic syllabary of the Palenque tablets in the early 1950s.</p>",
     "options": [
       "the phonetic syllabary of the Palenque tablets was deciphered by Yuri Knorozov,",
-      "Yuri Knorozov\u2019s groundbreaking research on the Palenque tablets,",
+      "Yuri Knorozov’s groundbreaking research on the Palenque tablets,",
       "the decipherment of the phonetic syllabary was accomplished by Yuri Knorozov,",
       "Russian linguist Yuri Knorozov,"
     ],
@@ -831,24 +826,24 @@ const RW_MODULE2 = [
     "code": "SH4-RW22",
     "section": "rw",
     "module": 2,
-    "topic": "Standard English Conventions \u2014 Boundaries",
+    "topic": "Standard English Conventions — Boundaries",
     "difficulty": "Super Hard",
-    "text": "<p>Architect Zaha Hadid\u2019s designs\u2014characterized by sweeping parametric curves and unconventional structural ______ fundamentally transformed contemporary urban skylines from Baku to London.</p>",
+    "text": "<p>Architect Zaha Hadid’s designs—characterized by sweeping parametric curves and unconventional structural ______ fundamentally transformed contemporary urban skylines from Baku to London.</p>",
     "options": [
-      "geometries\u2014",
+      "geometries—",
       "geometries,",
       "geometries;",
       "geometries:"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. The parenthetical modifier begins with an em-dash ('designs\u2014characterized by sweeping parametric curves and unconventional structural geometries'). To maintain balanced punctuation, an em-dash opened parenthetical must close with a matching em-dash ('geometries\u2014') before the main verb 'fundamentally transformed.' Choices B, C, and D mismatch punctuation marks."
+    "explanation": "Choice A is correct. The parenthetical modifier begins with an em-dash ('designs—characterized by sweeping parametric curves and unconventional structural geometries'). To maintain balanced punctuation, an em-dash opened parenthetical must close with a matching em-dash ('geometries—') before the main verb 'fundamentally transformed.' Choices B, C, and D mismatch punctuation marks."
   },
   {
     "id": 50,
     "code": "SH4-RW23",
     "section": "rw",
     "module": 2,
-    "topic": "Expression of Ideas \u2014 Transitions",
+    "topic": "Expression of Ideas — Transitions",
     "difficulty": "Super Hard",
     "text": "<p>During severe financial panics, individual depositors rush to withdraw cash from commercial banks to preserve their liquidity. ______, this collective behavior precipitates the systemic insolvency of otherwise solvent institutions by forcing the premature liquidation of long-term illiquid assets.</p>",
     "options": [
@@ -865,7 +860,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW24",
     "section": "rw",
     "module": 2,
-    "topic": "Expression of Ideas \u2014 Transitions",
+    "topic": "Expression of Ideas — Transitions",
     "difficulty": "Super Hard",
     "text": "<p>Proponents of algorithmic governance assert that automated machine-learning models eliminate subjective human bias from judicial sentencing decisions. Empirical audits of risk-assessment software reveal, ______, that algorithms trained on historical arrest data systematically perpetuate racial disparities by encoding legacy policing patterns as predictive indicators.</p>",
     "options": [
@@ -882,7 +877,7 @@ const RW_MODULE2 = [
     "code": "SH4-RW25",
     "section": "rw",
     "module": 2,
-    "topic": "Expression of Ideas \u2014 Transitions",
+    "topic": "Expression of Ideas — Transitions",
     "difficulty": "Super Hard",
     "text": "<p>In terrestrial ecosystems, apex predators regulate herbivore populations through direct predation, preventing overgrazing of riparian vegetation. Marine biologists have discovered that large oceanic sharks exert a ______ trophic influence in coral reef environments, where their presence deters mesopredator teleost fish and preserves critical herbivorous parrotfish populations.</p>",
     "options": [
@@ -899,11 +894,11 @@ const RW_MODULE2 = [
     "code": "SH4-RW26",
     "section": "rw",
     "module": 2,
-    "topic": "Expression of Ideas \u2014 Rhetorical Synthesis",
+    "topic": "Expression of Ideas — Rhetorical Synthesis",
     "difficulty": "Super Hard",
-    "text": "<p>While researching a topic, a student has taken the following notes:<br>\u2022 The Fermi paradox highlights the apparent contradiction between high estimates of extraterrestrial civilizations and the lack of observed evidence.<br>\u2022 In 1998, economist Robin Hanson proposed the \"Great Filter\" hypothesis to resolve the paradox.<br>\u2022 The hypothesis posits that an evolutionary barrier prevents prebiotic chemistry from developing into an interstellar civilization.<br>\u2022 If the Great Filter lies *behind* humanity (e.g., the rare abiogenesis of eukaryotic cells), intelligent life in the universe is extraordinarily rare.<br>\u2022 If the Great Filter lies *ahead* of humanity (e.g., inevitable technological self-destruction), our species faces a high probability of extinction before achieving interstellar travel.</p><p>The student wants to explain the dual implications of the Great Filter hypothesis regarding humanity's cosmic future. Which choice most effectively accomplishes this goal?</p>",
+    "text": "<p>While researching a topic, a student has taken the following notes:<br>• The Fermi paradox highlights the apparent contradiction between high estimates of extraterrestrial civilizations and the lack of observed evidence.<br>• In 1998, economist Robin Hanson proposed the \"Great Filter\" hypothesis to resolve the paradox.<br>• The hypothesis posits that an evolutionary barrier prevents prebiotic chemistry from developing into an interstellar civilization.<br>• If the Great Filter lies *behind* humanity (e.g., the rare abiogenesis of eukaryotic cells), intelligent life in the universe is extraordinarily rare.<br>• If the Great Filter lies *ahead* of humanity (e.g., inevitable technological self-destruction), our species faces a high probability of extinction before achieving interstellar travel.</p><p>The student wants to explain the dual implications of the Great Filter hypothesis regarding humanity's cosmic future. Which choice most effectively accomplishes this goal?</p>",
     "options": [
-      "According to the Great Filter hypothesis, humanity\u2019s future depends on the barrier\u2019s location: if behind us, intelligent life is exceedingly rare and our prospects are bright; if ahead, humanity likely faces impending technological extinction.",
+      "According to the Great Filter hypothesis, humanity’s future depends on the barrier’s location: if behind us, intelligent life is exceedingly rare and our prospects are bright; if ahead, humanity likely faces impending technological extinction.",
       "Robin Hanson proposed the Great Filter in 1998 to resolve the Fermi paradox, which notes the contradiction between abundant stars and zero detected alien civilizations.",
       "Scientists investigating the Fermi paradox continue to debate whether the abiogenesis of eukaryotic cells represents an insurmountable biological hurdle.",
       "The Great Filter hypothesis asserts that prebiotic chemistry inevitably collapses before developing technological capabilities."
@@ -916,9 +911,9 @@ const RW_MODULE2 = [
     "code": "SH4-RW27",
     "section": "rw",
     "module": 2,
-    "topic": "Expression of Ideas \u2014 Rhetorical Synthesis",
+    "topic": "Expression of Ideas — Rhetorical Synthesis",
     "difficulty": "Super Hard",
-    "text": "<p>While researching a topic, a student has taken the following notes:<br>\u2022 Banded iron formations (BIFs) are distinctive geochemical sedimentary rock units consisting of alternating iron-rich and silica-rich layers.<br>\u2022 Most BIFs were deposited between 2.4 and 1.8 billion years ago.<br>\u2022 Prior to this epoch, Earth's oceans contained vast reservoirs of dissolved ferrous iron ($\\text{Fe}^{2+}$) in an anoxic environment.<br>\u2022 The evolution of oxygenic photosynthesis by marine cyanobacteria released free molecular oxygen ($\\text{O}_2$) into shallow seas.<br>\u2022 Dissolved oxygen reacted precipitously with ferrous iron, precipitating insoluble ferric oxides ($\\text{Fe}_2\\text{O}_3$) onto the ocean floor.<br>\u2022 Geologists regard BIFs as definitive physical markers of the Great Oxidation Event.</p><p>The student wants to explain how cyanobacteria caused the deposition of banded iron formations. Which choice most effectively accomplishes this goal?</p>",
+    "text": "<p>While researching a topic, a student has taken the following notes:<br>• Banded iron formations (BIFs) are distinctive geochemical sedimentary rock units consisting of alternating iron-rich and silica-rich layers.<br>• Most BIFs were deposited between 2.4 and 1.8 billion years ago.<br>• Prior to this epoch, Earth's oceans contained vast reservoirs of dissolved ferrous iron ($\\text{Fe}^{2+}$) in an anoxic environment.<br>• The evolution of oxygenic photosynthesis by marine cyanobacteria released free molecular oxygen ($\\text{O}_2$) into shallow seas.<br>• Dissolved oxygen reacted precipitously with ferrous iron, precipitating insoluble ferric oxides ($\\text{Fe}_2\\text{O}_3$) onto the ocean floor.<br>• Geologists regard BIFs as definitive physical markers of the Great Oxidation Event.</p><p>The student wants to explain how cyanobacteria caused the deposition of banded iron formations. Which choice most effectively accomplishes this goal?</p>",
     "options": [
       "Banded iron formations are ancient sedimentary rock units deposited in Earth's oceans between 2.4 and 1.8 billion years ago.",
       "By producing molecular oxygen through photosynthesis, ancient marine cyanobacteria caused dissolved oceanic ferrous iron to oxidize and precipitate onto the sea floor as insoluble ferric oxide layers.",
@@ -927,16 +922,13 @@ const RW_MODULE2 = [
     ],
     "answer": 1,
     "explanation": "Choice B is correct. The prompt asks specifically to *explain how cyanobacteria caused the deposition of banded iron formations*. Choice B explicitly connects the biological cause (cyanobacterial photosynthesis producing oxygen) with the geochemical mechanism (oxidizing dissolved ferrous iron into insoluble ferric oxide layers on the sea floor). Choices A, C, and D state background facts without explaining the causal link."
-  }
-];
-
-const MATH_MODULE1 = [
+  },
   {
     "id": 55,
     "code": "H4-M1",
     "section": "math",
     "module": 3,
-    "topic": "Algebra \u2014 Linear equations & inequalities",
+    "topic": "Algebra — Linear equations & inequalities",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>What is the set of all real values of $x$ that satisfy the inequality $$|3x - 11| \\le 2x + 4?$$</p>",
@@ -954,7 +946,7 @@ const MATH_MODULE1 = [
     "code": "H4-M2",
     "section": "math",
     "module": 3,
-    "topic": "Algebra \u2014 Systems of two linear equations",
+    "topic": "Algebra — Systems of two linear equations",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the system of equations below, $k$ is a constant:\n$$\\begin{cases} 4x - 10y = 18 \\\\ 6x + ky = 27 \\end{cases}$$\nIf the system has infinitely many solutions, what is the value of $k$?</p>",
@@ -972,7 +964,7 @@ const MATH_MODULE1 = [
     "code": "H4-M3",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Quadratics and Parabolas",
+    "topic": "Advanced Math — Quadratics and Parabolas",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>The quadratic function $f(x) = -3(x - 4)^2 + 27$ intersects the $x$-axis at points $(p, 0)$ and $(q, 0)$. What is the distance between these two $x$-intercepts?</p>",
@@ -990,25 +982,28 @@ const MATH_MODULE1 = [
     "code": "H4-M4",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Polynomial remainder theorem",
-    "difficulty": "Hard",
+    "topic": "Geometry · Frustum Volume",
+    "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>When the polynomial $P(x) = 3x^3 - kx^2 + 5x - 8$ is divided by $(x - 2)$, the remainder is $14$. What is the value of the constant $k$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q07_pyramid_frustum.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A solid square pyramid has a base side length of $12$ and a height of $18$. A plane parallel to the base, $6$ units above the base, cuts off a smaller pyramid at the top, leaving a frustum. What is the volume of the frustum? (Pyramid volume: $V = \\frac{1}{3}Bh$)</p>",
     "options": [
-      "$2$",
-      "$3$",
-      "$5$",
-      "$6$"
+      "480",
+      "576",
+      "608",
+      "864"
     ],
-    "answer": 1,
-    "explanation": "Choice B is correct. According to the Polynomial Remainder Theorem, dividing a polynomial $P(x)$ by $(x - 2)$ results in a remainder equal to $P(2)$. We evaluate $P(2)$:\n$$P(2) = 3(2)^3 - k(2)^2 + 5(2) - 8 = 24 - 4k + 10 - 8 = 26 - 4k.$$\nSetting this equal to the given remainder of $14$:\n$$26 - 4k = 14 \\implies -4k = -12 \\implies k = 3.$$\nChoice A ($2$), Choice C ($5$), and Choice D ($6$) produce remainders of $18$, $6$, and $2$, respectively."
+    "answer": 2,
+    "explanation": "Choice C is correct. The volume of the entire pyramid is $V_{\\text{whole}} = \\frac{1}{3}Bh = \\frac{1}{3}(12^2)(18) = \\frac{1}{3}(144)(18) = 864$. The cut plane is $6$ units above the base, so the smaller top pyramid has height $h_{\\text{small}} = 18 - 6 = 12$. The ratio of heights is $\\frac{12}{18} = \\frac{2}{3}$. Therefore, the base side length of the small pyramid is $12 \\times \\frac{2}{3} = 8$, and its volume is $V_{\\text{small}} = \\frac{1}{3}(8^2)(12) = \\frac{1}{3}(64)(12) = 256$. The volume of the frustum is: $$V_{\\text{frustum}} = V_{\\text{whole}} - V_{\\text{small}} = 864 - 256 = 608$$",
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "image": "images/q07_pyramid_frustum.png"
   },
   {
     "id": 59,
     "code": "H4-M5",
     "section": "math",
     "module": 3,
-    "topic": "Geometry & Trigonometry \u2014 Circle equations",
+    "topic": "Geometry & Trigonometry — Circle equations",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, the equation of a circle is $x^2 + y^2 - 10x + 8y - 8 = 0$. What is the radius of this circle?</p>",
@@ -1026,7 +1021,7 @@ const MATH_MODULE1 = [
     "code": "H4-M6",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Rational expressions",
+    "topic": "Advanced Math — Rational expressions",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>Which of the following expressions is equivalent to $$\\frac{x^2 - 16}{x^2 - 2x - 8} \\cdot \\frac{x^2 - 4}{x^2 + 6x + 8},$$ for all $x > 4$?</p>",
@@ -1044,7 +1039,7 @@ const MATH_MODULE1 = [
     "code": "H4-M7",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Exponential decay",
+    "topic": "Advanced Math — Exponential decay",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>A radioactive isotope decays according to the model $A(t) = A_0 \\cdot 2^{-t/24}$, where $t$ is the elapsed time in hours and $A_0$ is the initial mass in grams. After how many hours will the remaining mass of the isotope be equal to $\\frac{1}{16}$ of its initial mass $A_0$?</p>",
@@ -1062,7 +1057,7 @@ const MATH_MODULE1 = [
     "code": "H4-M8",
     "section": "math",
     "module": 3,
-    "topic": "Geometry & Trigonometry \u2014 Trigonometric cofunctions",
+    "topic": "Geometry & Trigonometry — Trigonometric cofunctions",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In right triangle $ABC$ with right angle at $C$, it is given that $\\sin(A) = \\frac{7}{25}$. What is the value of $\\cos(B)$?</p>",
@@ -1080,7 +1075,7 @@ const MATH_MODULE1 = [
     "code": "H4-M9",
     "section": "math",
     "module": 3,
-    "topic": "Problem-Solving & Data Analysis \u2014 Linear models",
+    "topic": "Problem-Solving & Data Analysis — Linear models",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>A marine biologist models the pressure $P$, in atmospheres (atm), at an ocean depth of $d$ meters using the linear equation $$P = 0.098d + 1.01.$$ Which of the following is the most accurate interpretation of the value $0.098$ in this model?</p>",
@@ -1098,7 +1093,7 @@ const MATH_MODULE1 = [
     "code": "H4-M10",
     "section": "math",
     "module": 3,
-    "topic": "Problem-Solving & Data Analysis \u2014 Conditional probability",
+    "topic": "Problem-Solving & Data Analysis — Conditional probability",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>A quality control inspector evaluated $500$ precision ball bearings manufactured by two automated production lines, Line $1$ and Line $2$:\n<table style=\"margin:12px auto; border-collapse:collapse; text-align:center;\">\n<tr style=\"background:#f1f5f9;\"><th style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Production Line</th><th style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Within Tolerance</th><th style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Defective</th><th style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Total</th></tr>\n<tr><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Line 1</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">285</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">15</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">300</td></tr>\n<tr><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Line 2</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">190</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">10</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">200</td></tr>\n<tr style=\"background:#f8fafc; font-weight:700;\"><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">Total</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">475</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">25</td><td style=\"padding:6px 14px; border:1px solid #cbd5e1;\">500</td></tr>\n</table>\nIf a randomly selected bearing is defective, what is the probability that it was produced by Line $1$?</p>",
@@ -1116,25 +1111,25 @@ const MATH_MODULE1 = [
     "code": "H4-M11",
     "section": "math",
     "module": 3,
-    "topic": "Geometry & Trigonometry \u2014 Arc length and sectors",
-    "difficulty": "Hard",
-    "isFillIn": false,
-    "text": "<p>A circle with radius $15$ has a sector with central angle $\\theta = \\frac{2\\pi}{3}$ radians. What is the area of this sector?</p>",
-    "options": [
-      "$75\\pi$",
-      "$50\\pi$",
-      "$25\\pi$",
-      "$100\\pi$"
+    "topic": "Geometry · Frustum Volume (SPR)",
+    "difficulty": "Super Hard",
+    "isFillIn": true,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q08_funnel_flow.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A funnel is shaped like a frustum of a cone with bottom radius $3\\text{ cm}$, top radius $6\\text{ cm}$, and height $9\\text{ cm}$. With the bottom closed, liquid is poured in at a constant rate of $21\\pi\\text{ cm}^3/\\text{s}$. How many seconds does it take to fill the funnel completely?</p>",
+    "options": [],
+    "answer": "9",
+    "explanation": "The correct answer is $9$. The total volume of the funnel is: $$V = \\frac{\\pi \\cdot 9}{3}(6^2 + 6 \\cdot 3 + 3^2) = 3\\pi(36 + 18 + 9) = 3\\pi(63) = 189\\pi\\text{ cm}^3$$ At a flow rate of $21\\pi\\text{ cm}^3/\\text{s}$, the time required to fill is: $$t = \\frac{189\\pi}{21\\pi} = 9\\text{ seconds}$$",
+    "fillAnswer": "9",
+    "acceptedAnswers": [
+      "9"
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The area $A$ of a circle sector with central angle $\\theta$ in radians is given by $A = \\frac{1}{2} r^2 \\theta$. Substituting $r = 15$ and $\\theta = \\frac{2\\pi}{3}$: $A = \\frac{1}{2} (15^2) \\left(\\frac{2\\pi}{3}\\right) = \\frac{1}{2} (225) \\left(\\frac{2\\pi}{3}\\right) = \\frac{225\\pi}{3} = 75\\pi$."
+    "image": "images/q08_funnel_flow.png"
   },
   {
     "id": 66,
     "code": "H4-M12",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Function transformations",
+    "topic": "Advanced Math — Function transformations",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>The graph of $y = f(x)$ has a maximum point at $(3, 14)$. If $g(x) = -2 f(x - 5) + 6$, what is the corresponding extremum point on the graph of $y = g(x)$?</p>",
@@ -1152,7 +1147,7 @@ const MATH_MODULE1 = [
     "code": "H4-M13",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Radical equations and extraneous roots",
+    "topic": "Advanced Math — Radical equations and extraneous roots",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>What is the set of all real solutions to the equation $$\\sqrt{5x + 39} = x + 3?$$</p>",
@@ -1170,7 +1165,7 @@ const MATH_MODULE1 = [
     "code": "H4-M14",
     "section": "math",
     "module": 3,
-    "topic": "Problem-Solving & Data Analysis \u2014 Sampling margin of error",
+    "topic": "Problem-Solving & Data Analysis — Sampling margin of error",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>A nationwide public opinion poll surveyed $400$ randomly selected registered voters and reported an estimated approval rating of $54\\%$ with a margin of error of $\\pm 4.9\\%$. If a follow-up survey uses the same sampling methodology and confidence level but quadruples the sample size to $1,600$ voters, what will be the estimated margin of error for the new survey?</p>",
@@ -1188,7 +1183,7 @@ const MATH_MODULE1 = [
     "code": "H4-M15",
     "section": "math",
     "module": 3,
-    "topic": "Geometry & Trigonometry \u2014 Similar solids",
+    "topic": "Geometry & Trigonometry — Similar solids",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>Two mathematically similar geometric pyramids have total surface areas of $36\\text{ cm}^2$ and $81\\text{ cm}^2$, respectively. If the volume of the smaller pyramid is $48\\text{ cm}^3$, what is the volume, in cubic centimeters, of the larger pyramid?</p>",
@@ -1206,25 +1201,28 @@ const MATH_MODULE1 = [
     "code": "H4-M16",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Systems of nonlinear equations",
-    "difficulty": "Hard",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
+    "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>In the $xy$-plane, what is the $y$-coordinate of the point of intersection between the line $y = 3x - 3$ and the parabola $y = 2x^2 - 5x + 3$ that has the larger $x$-coordinate?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q16_coin_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A bag has two coins: one fair coin and one two-headed coin. A coin is chosen at random and flipped twice, and both flips land heads. What is the probability that the chosen coin is the two-headed coin?</p>",
     "options": [
-      "$4$",
-      "$6$",
-      "$3$",
-      "$7$"
+      "0.50",
+      "0.67",
+      "0.80",
+      "0.90"
     ],
-    "answer": 1,
-    "explanation": "Choice B is correct. Set the two equations equal to find the $x$-coordinates of the intersection points:\n$$2x^2 - 5x + 3 = 3x - 3 \\implies 2x^2 - 8x + 6 = 0.$$\nDivide the entire equation by $2$:\n$$x^2 - 4x + 3 = 0 \\implies (x - 3)(x - 1) = 0.$$\nThis yields $x = 3$ and $x = 1$. The intersection with the larger $x$-coordinate occurs at $x = 3$. Substitute $x = 3$ into the linear equation to determine the corresponding $y$-coordinate:\n$$y = 3(3) - 3 = 9 - 3 = 6.$$\nChoice A ($4$), Choice C ($3$), and Choice D ($7$) correspond to evaluating at the incorrect $x$-value or making algebraic errors."
+    "answer": 2,
+    "explanation": "Choice C is correct. Let $F$ be the fair coin and $T$ be the two-headed coin. $P(F) = P(T) = 0.5$. $P(\\text{2 Heads} \\mid T) = 1^2 = 1$. $P(\\text{2 Heads} \\mid F) = (1/2)^2 = 0.25$. Total probability of two heads: $$P(\\text{2 Heads}) = (0.5)(1) + (0.5)(0.25) = 0.5 + 0.125 = 0.625$$ Applying Bayes' Theorem: $$P(T \\mid \\text{2 Heads}) = \\frac{0.5}{0.625} = \\frac{500}{625} = 0.80$$",
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "image": "images/q16_coin_tree.png"
   },
   {
     "id": 71,
     "code": "H4-M17",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Radicals and rational exponents",
+    "topic": "Advanced Math — Radicals and rational exponents",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>For all positive real values of $x$, the expression $\\frac{\\sqrt[4]{x^7}}{\\sqrt[3]{x^2}}$ can be written in the form $x^{a/b}$, where $a$ and $b$ are positive coprime integers. What is the value of $a + b$?</p>",
@@ -1242,7 +1240,7 @@ const MATH_MODULE1 = [
     "code": "H4-M18",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Quartic equations (SPR)",
+    "topic": "Advanced Math — Quartic equations (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>What is the sum of all positive real solutions to the equation $x^4 - 26x^2 + 25 = 0$?</p>",
@@ -1259,7 +1257,7 @@ const MATH_MODULE1 = [
     "code": "H4-M19",
     "section": "math",
     "module": 3,
-    "topic": "Advanced Math \u2014 Rational equations with extraneous solutions (SPR)",
+    "topic": "Advanced Math — Rational equations with extraneous solutions (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>What is the real solution to the equation $$\\frac{x^2 - 5x}{x - 6} = \\frac{6}{x - 6} + 9?$$</p>",
@@ -1276,7 +1274,7 @@ const MATH_MODULE1 = [
     "code": "H4-M20",
     "section": "math",
     "module": 3,
-    "topic": "Algebra \u2014 Linear system constants (SPR)",
+    "topic": "Algebra — Linear system constants (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>In the system of linear equations below, $k$ is a constant:\n$$\\begin{cases} kx - 8y = 20 \\\\ 3x - 6y = 15 \\end{cases}$$\nIf the system has infinitely many solutions, what is the value of $k$?</p>",
@@ -1293,7 +1291,7 @@ const MATH_MODULE1 = [
     "code": "H4-M21",
     "section": "math",
     "module": 3,
-    "topic": "Geometry & Trigonometry \u2014 Rhombus area (SPR)",
+    "topic": "Geometry & Trigonometry — Rhombus area (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>A rhombus has side length $10$. If the length of one of its diagonals is $16$, what is the area of the rhombus?</p>",
@@ -1310,7 +1308,7 @@ const MATH_MODULE1 = [
     "code": "H4-M22",
     "section": "math",
     "module": 3,
-    "topic": "Algebra \u2014 Rates of work (SPR)",
+    "topic": "Algebra — Rates of work (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>Machine $A$ can complete a manufacturing batch in $12$ hours. When Machine $A$ and Machine $B$ operate simultaneously at their respective constant rates, they complete the same batch in $4$ hours. How many hours would it take Machine $B$ working alone to complete the batch?</p>",
@@ -1321,16 +1319,13 @@ const MATH_MODULE1 = [
       "6"
     ],
     "explanation": "The correct answer is 6. Let $B$ be the time in hours for Machine $B$ alone. Machine $A$'s rate is $\\frac{1}{12}$ batch/hr, and their combined rate is $\\frac{1}{4}$ batch/hr. Set up the rate equation: $\\frac{1}{12} + \\frac{1}{B} = \\frac{1}{4} \\implies \\frac{1}{B} = \\frac{1}{4} - \\frac{1}{12} = \\frac{3 - 1}{12} = \\frac{2}{12} = \\frac{1}{6}$. Therefore, $B = 6\\text{ hours}$."
-  }
-];
-
-const MATH_MODULE2 = [
+  },
   {
     "id": 77,
     "code": "SH4-M1",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Tangents to circles from external points",
+    "topic": "Geometry & Trigonometry — Tangents to circles from external points",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, a circle is centered at the origin with radius $6$. A tangent line to this circle passes through the external point $P(0, 10)$ and intersects the circle at point $T$ in the first quadrant. What is the slope of this tangent line?</p>",
@@ -1348,7 +1343,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M2",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Composite functions",
+    "topic": "Advanced Math — Composite functions",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>Given the functions $f(x) = 2x - 3$ and $g(x) = x^2 + 4x - 5$, what is the sum of all real values of $x$ for which $(g \\circ f)(x) = 0$?</p>",
@@ -1366,7 +1361,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M3",
     "section": "math",
     "module": 4,
-    "topic": "Algebra \u2014 Algebraic identities",
+    "topic": "Algebra — Algebraic identities",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>If $x$ and $y$ are positive real numbers such that $x + y = 8$ and $x^2 + y^2 = 40$, what is the value of $x^3 + y^3$?</p>",
@@ -1384,25 +1379,28 @@ const MATH_MODULE2 = [
     "code": "SH4-M4",
     "section": "math",
     "module": 4,
-    "topic": "Problem-Solving & Data Analysis \u2014 Bayesian probability",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>A rare medical condition occurs in $1\\%$ of a population. A diagnostic blood test has a true positive rate (sensitivity) of $95\\%$ and a false positive rate of $5\\%$. If a randomly selected individual from this population tests positive, what is the probability that this individual actually has the condition?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q17_commute_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>At a school, $40\\%$ of students ride the bus, $25\\%$ bike, and $35\\%$ walk. The probability of being late is $0.10$ for bus riders, $0.04$ for bikers, and $0.02$ for walkers. A student is chosen at random and is late. To the nearest hundredth, what is the probability that the student rides the bus?</p>",
     "options": [
-      "$\\frac{19}{20} = 95.0\\%$",
-      "$\\frac{95}{1000} = 9.5\\%$",
-      "$\\frac{19}{118} \\approx 16.1\\%$",
-      "$\\frac{95}{590} \\approx 16.1\\%$"
+      "0.10",
+      "0.40",
+      "0.70",
+      "0.90"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. Assume a sample of 10,000 individuals: $1\\%$ (100 people) have the condition, and $99\\%$ (9,900 people) do not. Of the 100 with the condition, $95\\%$ test positive: $0.95 \\times 100 = 95$ true positives. Of the 9,900 without the condition, $5\\%$ test positive: $0.05 \\times 9,900 = 495$ false positives. Total positive tests: $95 + 495 = 590$. The probability that a person who tests positive actually has the condition is $P = \\frac{95}{590} = \\frac{19}{118} \\approx 16.1\\%$."
+    "explanation": "Choice C is correct. The total probability of being late is: $$P(\\text{Late}) = (0.40)(0.10) + (0.25)(0.04) + (0.35)(0.02) = 0.040 + 0.010 + 0.007 = 0.057$$ The probability that a late student is a bus rider is: $$P(\\text{Bus} \\mid \\text{Late}) = \\frac{(0.40)(0.10)}{0.057} = \\frac{0.040}{0.057} = \\frac{40}{57} \\approx 0.7018 \\approx 0.70$$",
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "image": "images/q17_commute_tree.png"
   },
   {
     "id": 81,
     "code": "SH4-M5",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Conical frustum volume",
+    "topic": "Geometry & Trigonometry — Conical frustum volume",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>A water reservoir in the shape of an inverted conical frustum has height $h = 9\\text{ m}$, lower base radius $r = 4\\text{ m}$, and upper opening radius $R = 8\\text{ m}$. What is the total volume of this reservoir, in cubic meters?</p>",
@@ -1420,7 +1418,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M6",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Double angle formulas",
+    "topic": "Geometry & Trigonometry — Double angle formulas",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>If $\\theta$ is an acute angle such that $\\sin(\\theta) = \\frac{5}{13}$, what is the value of $\\cos(2\\theta)$?</p>",
@@ -1438,7 +1436,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M7",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Rational functions and removable discontinuities",
+    "topic": "Advanced Math — Rational functions and removable discontinuities",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>The rational function $f(x) = \\frac{x^3 - 4x^2 - 11x + 30}{x - 5}$ has a removable discontinuity (a \"hole\") at $x = 5$. What are the coordinates of this hole in the $xy$-plane?</p>",
@@ -1456,7 +1454,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M8",
     "section": "math",
     "module": 4,
-    "topic": "Algebra \u2014 Linear programming optimization",
+    "topic": "Algebra — Linear programming optimization",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>A manufacturing plant produces two items, $x$ and $y$. The feasible region defined by machine and labor constraints has vertices at $(0, 0)$, $(0, 7)$, $(4, 6)$, $(8, 2)$, and $(9, 0)$. What is the maximum value of the profit objective function $P(x, y) = 6x + 5y$ across this feasible region?</p>",
@@ -1474,7 +1472,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M9",
     "section": "math",
     "module": 4,
-    "topic": "Algebra \u2014 System of equations with no solution",
+    "topic": "Algebra — System of equations with no solution",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>The system of equations below has no solution, where $a$ and $b$ are positive constants:\n$$\\begin{cases} ax - 12y = 15 \\\\ 3x - 4y = b \\end{cases}$$\nWhich of the following conditions must be true?</p>",
@@ -1492,7 +1490,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M10",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Geometric mean in right triangles",
+    "topic": "Geometry & Trigonometry — Geometric mean in right triangles",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>In right triangle $ABC$ with right angle at $B$, altitude $BD$ is drawn to hypotenuse $AC$. If $AD = 9$ and $DC = 16$, what is the length of leg $AB$?</p>",
@@ -1510,7 +1508,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M11",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Annualized rate conversion",
+    "topic": "Advanced Math — Annualized rate conversion",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>An endowment fund models its asset growth using the equation $V(t) = 50,000(1.15)^{t/4}$, where $t$ is the elapsed time in years. Which of the following expressions represents the equivalent annual growth multiplier?</p>",
@@ -1528,25 +1526,28 @@ const MATH_MODULE2 = [
     "code": "SH4-M12",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Complex conjugate root theorem",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>A polynomial $P(x)$ with real coefficients has degree $3$. If $x = 5$ and $x = 2 - 3i$ are roots of $P(x) = 0$, what is the coefficient of $x$ in the expanded form of $P(x)$ given that its leading coefficient is $1$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q27_degree5.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $g(x)$ has degree $5$ and real coefficients. Two of its zeros are $2i$ and $1 + i$. Which of the following must be true?</p>",
     "options": [
-      "$13$",
-      "$-33$",
-      "$33$",
-      "$-65$"
+      "g has exactly one real zero (counting multiplicity).",
+      "g has no real zeros.",
+      "g has exactly three real zeros (counting multiplicity).",
+      "g has at least two real zeros."
     ],
-    "answer": 2,
-    "explanation": "Choice C is correct. By the Complex Conjugate Root Theorem, since $P(x)$ has real coefficients, the conjugate $x = 2 + 3i$ must also be a root. The quadratic factor formed by the complex conjugate pair is $(x - (2 - 3i))(x - (2 + 3i)) = (x - 2)^2 - (3i)^2 = x^2 - 4x + 4 - (-9) = x^2 - 4x + 13$. The full cubic polynomial is $P(x) = (x - 5)(x^2 - 4x + 13) = x^3 - 4x^2 + 13x - 5x^2 + 20x - 65 = x^3 - 9x^2 + 33x - 65$. The coefficient of $x$ is $13 + 20 = 33$."
+    "answer": 0,
+    "explanation": "Choice A is correct. By the Complex Conjugate Root Theorem, because $g(x)$ has real coefficients, nonreal complex roots must occur in conjugate pairs. Since $2i$ is a zero, $-2i$ is also a zero. Since $1 + i$ is a zero, $1 - i$ is also a zero. This accounts for $4$ nonreal zeros. The polynomial has degree $5$, so it has exactly $5$ zeros in total (by the Fundamental Theorem of Algebra). The remaining fifth zero cannot be nonreal, because if it were, its conjugate would force a sixth zero, exceeding degree $5$. Therefore, $g(x)$ must have exactly $1$ real zero.",
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "image": "images/q27_degree5.png"
   },
   {
     "id": 89,
     "code": "SH4-M13",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Absolute value piecewise minimization",
+    "topic": "Advanced Math — Absolute value piecewise minimization",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>What is the minimum value of the real-valued function $$f(x) = |x - 3| + |x - 7| + |x - 11| + |x - 15|?$$</p>",
@@ -1564,7 +1565,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M14",
     "section": "math",
     "module": 4,
-    "topic": "Problem-Solving & Data Analysis \u2014 Residual analysis",
+    "topic": "Problem-Solving & Data Analysis — Residual analysis",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>A data analyst constructs a linear regression model to predict chemical yield from reaction temperature. A plot of the residuals versus temperature displays a distinct U-shaped curve, where residuals are positive for low and high temperatures but systematically negative for intermediate temperatures. What does this pattern indicate about the model?</p>",
@@ -1582,7 +1583,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M15",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Power of a Point theorem",
+    "topic": "Geometry & Trigonometry — Power of a Point theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>From an external point $P$, two secant lines are drawn to a circle. The first secant intersects the circle at points $A$ and $B$ such that $PA = 4$ and $AB = 12$. The second secant intersects the circle at points $C$ and $D$ such that $PC = 3$ and $C$ lies between $P$ and $D$. What is the length of segment $CD$?</p>",
@@ -1600,7 +1601,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M16",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Inverse functions",
+    "topic": "Advanced Math — Inverse functions",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>If $f(x) = \\frac{4x + 7}{x - 3}$, for what value of $x$ is $f^{-1}(x) = 5$?</p>",
@@ -1618,7 +1619,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M17",
     "section": "math",
     "module": 4,
-    "topic": "Problem-Solving & Data Analysis \u2014 Mixture and dilution rates",
+    "topic": "Problem-Solving & Data Analysis — Mixture and dilution rates",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>A chemist mixes $30\\text{ liters}$ of a $40\\%$ saline solution with $x\\text{ liters}$ of a $70\\%$ saline solution to produce a mixture that is $62\\%$ saline. What is the value of $x$?</p>",
@@ -1636,24 +1637,28 @@ const MATH_MODULE2 = [
     "code": "SH4-M18",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 AM-GM algebraic optimization (SPR)",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
     "difficulty": "Super Hard",
-    "isFillIn": true,
-    "text": "<p>For all positive real numbers $x > 0$, what is the minimum value of the expression $$5x + \\frac{125}{x}?$$</p>",
-    "options": [],
-    "answer": "50",
-    "fillAnswer": "50",
-    "acceptedAnswers": [
-      "50"
+    "isFillIn": false,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q28_quadratic_distance.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The function $f(x) = x^2 - 6x + k$, where $k$ is a constant, has two nonreal zeros. In the complex plane, the distance between the two zeros is $8$. What is the value of $k$?</p>",
+    "options": [
+      "16",
+      "17",
+      "25",
+      "41"
     ],
-    "explanation": "The correct answer is 50. By the Arithmetic Mean-Geometric Mean (AM-GM) inequality, for any two positive real quantities $a$ and $b$: $\\frac{a + b}{2} \\ge \\sqrt{ab} \\implies a + b \\ge 2\\sqrt{ab}$. Let $a = 5x$ and $b = \\frac{125}{x}$: $5x + \\frac{125}{x} \\ge 2\\sqrt{5x \\cdot \\frac{125}{x}} = 2\\sqrt{625} = 2(25) = 50$. Equality holds when $5x = \\frac{125}{x} \\implies 5x^2 = 125 \\implies x^2 = 25 \\implies x = 5 > 0$."
+    "answer": 2,
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "explanation": "Choice C is correct. Using the quadratic formula, the zeros of $x^2 - 6x + k$ are: $$x = \\frac{6 \\pm \\sqrt{36 - 4k}}{2} = 3 \\pm \\sqrt{9 - k}$$ Since the zeros are nonreal, $9 - k < 0$, so $\\sqrt{9 - k} = i\\sqrt{k - 9}$. The zeros are $3 + i\\sqrt{k - 9}$ and $3 - i\\sqrt{k - 9}$. The distance between them in the complex plane along the imaginary axis is: $$\\text{Distance} = 2\\sqrt{k - 9} = 8 \\implies \\sqrt{k - 9} = 4 \\implies k - 9 = 16 \\implies k = 25$$",
+    "image": "images/q28_quadratic_distance.png"
   },
   {
     "id": 95,
     "code": "SH4-M19",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Quadratic root difference (SPR)",
+    "topic": "Advanced Math — Quadratic root difference (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>The quadratic equation $x^2 - kx + 64 = 0$, where $k$ is a positive constant, has two real roots whose difference is $12$. What is the value of $k$?</p>",
@@ -1670,7 +1675,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M20",
     "section": "math",
     "module": 4,
-    "topic": "Advanced Math \u2014 Radical equation solving (SPR)",
+    "topic": "Advanced Math — Radical equation solving (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>What is the real solution to the equation $$\\sqrt{x + 11} - \\sqrt{x - 4} = 3?$$</p>",
@@ -1687,7 +1692,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M21",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Circle tangent to coordinate axes (SPR)",
+    "topic": "Geometry & Trigonometry — Circle tangent to coordinate axes (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>In the first quadrant of the $xy$-plane, a circle with radius $R$ is tangent to both the $x$-axis and the $y$-axis. If the circle passes through the point $(2, 9)$, what is the larger of the two possible values of $R$?</p>",
@@ -1704,7 +1709,7 @@ const MATH_MODULE2 = [
     "code": "SH4-M22",
     "section": "math",
     "module": 4,
-    "topic": "Geometry & Trigonometry \u2014 Inscribed solids and volume ratios (SPR)",
+    "topic": "Geometry & Trigonometry — Inscribed solids and volume ratios (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>A right circular cone is inscribed inside a right circular cylinder such that both solids share the exact same circular base of radius $r = 6$ and have identical height $h = 10$. The volume of the region inside the cylinder that is not occupied by the cone can be expressed as $k\\pi$. What is the value of $k$?</p>",
@@ -1718,384 +1723,16 @@ const MATH_MODULE2 = [
   }
 ];
 
-const QUESTIONS = [...RW_MODULE1, ...RW_MODULE2, ...MATH_MODULE1, ...MATH_MODULE2];
-
-const TOPIC_MAP = {
-  "Craft & Structure \u2014 Words in Context": {
-    "name": "Craft & Structure \u2014 Words in Context",
-    "questions": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33
-    ]
-  },
-  "Craft & Structure \u2014 Text Structure and Purpose": {
-    "name": "Craft & Structure \u2014 Text Structure and Purpose",
-    "questions": [
-      7,
-      34
-    ]
-  },
-  "Craft & Structure \u2014 Cross-Text Connections": {
-    "name": "Craft & Structure \u2014 Cross-Text Connections",
-    "questions": [
-      8,
-      35
-    ]
-  },
-  "Information & Ideas \u2014 Central Ideas and Details": {
-    "name": "Information & Ideas \u2014 Central Ideas and Details",
-    "questions": [
-      9,
-      39
-    ]
-  },
-  "Information & Ideas \u2014 Inferences": {
-    "name": "Information & Ideas \u2014 Inferences",
-    "questions": [
-      10,
-      13,
-      14,
-      36,
-      37,
-      40,
-      42,
-      43
-    ]
-  },
-  "Information & Ideas \u2014 Command of Evidence (Textual)": {
-    "name": "Information & Ideas \u2014 Command of Evidence (Textual)",
-    "questions": [
-      11,
-      41
-    ]
-  },
-  "Information & Ideas \u2014 Command of Evidence (Quantitative)": {
-    "name": "Information & Ideas \u2014 Command of Evidence (Quantitative)",
-    "questions": [
-      12,
-      38
-    ]
-  },
-  "Standard English Conventions \u2014 Boundaries": {
-    "name": "Standard English Conventions \u2014 Boundaries",
-    "questions": [
-      15,
-      16,
-      17,
-      21,
-      44,
-      45,
-      49
-    ]
-  },
-  "Standard English Conventions \u2014 Form, Structure, and Sense": {
-    "name": "Standard English Conventions \u2014 Form, Structure, and Sense",
-    "questions": [
-      18,
-      19,
-      20,
-      22,
-      46,
-      47,
-      48
-    ]
-  },
-  "Expression of Ideas \u2014 Transitions": {
-    "name": "Expression of Ideas \u2014 Transitions",
-    "questions": [
-      23,
-      24,
-      25,
-      50,
-      51,
-      52
-    ]
-  },
-  "Expression of Ideas \u2014 Rhetorical Synthesis": {
-    "name": "Expression of Ideas \u2014 Rhetorical Synthesis",
-    "questions": [
-      26,
-      27,
-      53,
-      54
-    ]
-  },
-  "Algebra \u2014 Linear equations & inequalities": {
-    "name": "Algebra \u2014 Linear equations & inequalities",
-    "questions": [
-      55
-    ]
-  },
-  "Algebra \u2014 Systems of two linear equations": {
-    "name": "Algebra \u2014 Systems of two linear equations",
-    "questions": [
-      56
-    ]
-  },
-  "Advanced Math \u2014 Quadratics and Parabolas": {
-    "name": "Advanced Math \u2014 Quadratics and Parabolas",
-    "questions": [
-      57
-    ]
-  },
-  "Advanced Math \u2014 Polynomial remainder theorem": {
-    "name": "Advanced Math \u2014 Polynomial remainder theorem",
-    "questions": [
-      58
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Circle equations": {
-    "name": "Geometry & Trigonometry \u2014 Circle equations",
-    "questions": [
-      59
-    ]
-  },
-  "Advanced Math \u2014 Rational expressions": {
-    "name": "Advanced Math \u2014 Rational expressions",
-    "questions": [
-      60
-    ]
-  },
-  "Advanced Math \u2014 Exponential decay": {
-    "name": "Advanced Math \u2014 Exponential decay",
-    "questions": [
-      61
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Trigonometric cofunctions": {
-    "name": "Geometry & Trigonometry \u2014 Trigonometric cofunctions",
-    "questions": [
-      62
-    ]
-  },
-  "Problem-Solving & Data Analysis \u2014 Linear models": {
-    "name": "Problem-Solving & Data Analysis \u2014 Linear models",
-    "questions": [
-      63
-    ]
-  },
-  "Problem-Solving & Data Analysis \u2014 Conditional probability": {
-    "name": "Problem-Solving & Data Analysis \u2014 Conditional probability",
-    "questions": [
-      64
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Arc length and sectors": {
-    "name": "Geometry & Trigonometry \u2014 Arc length and sectors",
-    "questions": [
-      65
-    ]
-  },
-  "Advanced Math \u2014 Function transformations": {
-    "name": "Advanced Math \u2014 Function transformations",
-    "questions": [
-      66
-    ]
-  },
-  "Advanced Math \u2014 Radical equations and extraneous roots": {
-    "name": "Advanced Math \u2014 Radical equations and extraneous roots",
-    "questions": [
-      67
-    ]
-  },
-  "Problem-Solving & Data Analysis \u2014 Sampling margin of error": {
-    "name": "Problem-Solving & Data Analysis \u2014 Sampling margin of error",
-    "questions": [
-      68
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Similar solids": {
-    "name": "Geometry & Trigonometry \u2014 Similar solids",
-    "questions": [
-      69
-    ]
-  },
-  "Advanced Math \u2014 Systems of nonlinear equations": {
-    "name": "Advanced Math \u2014 Systems of nonlinear equations",
-    "questions": [
-      70
-    ]
-  },
-  "Advanced Math \u2014 Radicals and rational exponents": {
-    "name": "Advanced Math \u2014 Radicals and rational exponents",
-    "questions": [
-      71
-    ]
-  },
-  "Advanced Math \u2014 Quartic equations (SPR)": {
-    "name": "Advanced Math \u2014 Quartic equations (SPR)",
-    "questions": [
-      72
-    ]
-  },
-  "Advanced Math \u2014 Rational equations with extraneous solutions (SPR)": {
-    "name": "Advanced Math \u2014 Rational equations with extraneous solutions (SPR)",
-    "questions": [
-      73
-    ]
-  },
-  "Algebra \u2014 Linear system constants (SPR)": {
-    "name": "Algebra \u2014 Linear system constants (SPR)",
-    "questions": [
-      74
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Rhombus area (SPR)": {
-    "name": "Geometry & Trigonometry \u2014 Rhombus area (SPR)",
-    "questions": [
-      75
-    ]
-  },
-  "Algebra \u2014 Rates of work (SPR)": {
-    "name": "Algebra \u2014 Rates of work (SPR)",
-    "questions": [
-      76
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Tangents to circles from external points": {
-    "name": "Geometry & Trigonometry \u2014 Tangents to circles from external points",
-    "questions": [
-      77
-    ]
-  },
-  "Advanced Math \u2014 Composite functions": {
-    "name": "Advanced Math \u2014 Composite functions",
-    "questions": [
-      78
-    ]
-  },
-  "Algebra \u2014 Algebraic identities": {
-    "name": "Algebra \u2014 Algebraic identities",
-    "questions": [
-      79
-    ]
-  },
-  "Problem-Solving & Data Analysis \u2014 Bayesian probability": {
-    "name": "Problem-Solving & Data Analysis \u2014 Bayesian probability",
-    "questions": [
-      80
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Conical frustum volume": {
-    "name": "Geometry & Trigonometry \u2014 Conical frustum volume",
-    "questions": [
-      81
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Double angle formulas": {
-    "name": "Geometry & Trigonometry \u2014 Double angle formulas",
-    "questions": [
-      82
-    ]
-  },
-  "Advanced Math \u2014 Rational functions and removable discontinuities": {
-    "name": "Advanced Math \u2014 Rational functions and removable discontinuities",
-    "questions": [
-      83
-    ]
-  },
-  "Algebra \u2014 Linear programming optimization": {
-    "name": "Algebra \u2014 Linear programming optimization",
-    "questions": [
-      84
-    ]
-  },
-  "Algebra \u2014 System of equations with no solution": {
-    "name": "Algebra \u2014 System of equations with no solution",
-    "questions": [
-      85
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Geometric mean in right triangles": {
-    "name": "Geometry & Trigonometry \u2014 Geometric mean in right triangles",
-    "questions": [
-      86
-    ]
-  },
-  "Advanced Math \u2014 Annualized rate conversion": {
-    "name": "Advanced Math \u2014 Annualized rate conversion",
-    "questions": [
-      87
-    ]
-  },
-  "Advanced Math \u2014 Complex conjugate root theorem": {
-    "name": "Advanced Math \u2014 Complex conjugate root theorem",
-    "questions": [
-      88
-    ]
-  },
-  "Advanced Math \u2014 Absolute value piecewise minimization": {
-    "name": "Advanced Math \u2014 Absolute value piecewise minimization",
-    "questions": [
-      89
-    ]
-  },
-  "Problem-Solving & Data Analysis \u2014 Residual analysis": {
-    "name": "Problem-Solving & Data Analysis \u2014 Residual analysis",
-    "questions": [
-      90
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Power of a Point theorem": {
-    "name": "Geometry & Trigonometry \u2014 Power of a Point theorem",
-    "questions": [
-      91
-    ]
-  },
-  "Advanced Math \u2014 Inverse functions": {
-    "name": "Advanced Math \u2014 Inverse functions",
-    "questions": [
-      92
-    ]
-  },
-  "Problem-Solving & Data Analysis \u2014 Mixture and dilution rates": {
-    "name": "Problem-Solving & Data Analysis \u2014 Mixture and dilution rates",
-    "questions": [
-      93
-    ]
-  },
-  "Advanced Math \u2014 AM-GM algebraic optimization (SPR)": {
-    "name": "Advanced Math \u2014 AM-GM algebraic optimization (SPR)",
-    "questions": [
-      94
-    ]
-  },
-  "Advanced Math \u2014 Quadratic root difference (SPR)": {
-    "name": "Advanced Math \u2014 Quadratic root difference (SPR)",
-    "questions": [
-      95
-    ]
-  },
-  "Advanced Math \u2014 Radical equation solving (SPR)": {
-    "name": "Advanced Math \u2014 Radical equation solving (SPR)",
-    "questions": [
-      96
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Circle tangent to coordinate axes (SPR)": {
-    "name": "Geometry & Trigonometry \u2014 Circle tangent to coordinate axes (SPR)",
-    "questions": [
-      97
-    ]
-  },
-  "Geometry & Trigonometry \u2014 Inscribed solids and volume ratios (SPR)": {
-    "name": "Geometry & Trigonometry \u2014 Inscribed solids and volume ratios (SPR)",
-    "questions": [
-      98
-    ]
+// Topic Map
+const TOPIC_MAP = {};
+QUESTIONS.forEach(q => {
+  const t = q.topic || 'General';
+  if (!TOPIC_MAP[t]) {
+    TOPIC_MAP[t] = { name: t, questions: [] };
   }
-};
+  TOPIC_MAP[t].questions.push(q.id);
+});
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, RW_MODULE1, RW_MODULE2, MATH_MODULE1, MATH_MODULE2, TOPIC_MAP };
+  module.exports = { QUESTIONS, TOPIC_MAP };
 }

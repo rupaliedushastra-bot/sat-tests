@@ -1,14 +1,10 @@
 // =============================================
-// SAT Hard Full Mock 3 (Maximum Rigor)
-// Module 1 = Hard R&W (27 Qs) · 32 min
-// Module 2 = Super Hard R&W (27 Qs) · 32 min
-// Module 3 = Hard Math (22 Qs) · 35 min (Desmos allowed)
-// Module 4 = Super Hard Math (22 Qs) · 35 min (Desmos allowed)
-// Total: 98 Questions (88 MCQ + 10 SPR)
-// answers: 0=A, 1=B, 2=C, 3=D for MCQ; string/number for SPR
+// SAT Hard Full Mock 3
+// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
+// With LaTeX Equations, Full Options, Solutions, and Diagrams
 // =============================================
 
-const RW_MODULE1 = [
+const QUESTIONS = [
   {
     "qnum": 1,
     "topic": "Words in Context",
@@ -602,10 +598,7 @@ const RW_MODULE1 = [
     "code": "H3-RW27",
     "section": "rw",
     "difficulty": "Hard"
-  }
-];
-
-const RW_MODULE2 = [
+  },
   {
     "qnum": 1,
     "topic": "Words in Context",
@@ -1199,10 +1192,7 @@ const RW_MODULE2 = [
     "code": "SH3-RW27",
     "section": "rw",
     "difficulty": "Super Hard"
-  }
-];
-
-const MATH_MODULE1 = [
+  },
   {
     "qnum": 1,
     "topic": "Algebra · Linear inequalities",
@@ -1271,25 +1261,26 @@ const MATH_MODULE1 = [
   },
   {
     "qnum": 4,
-    "topic": "Advanced Math · Polynomial factors and remainders",
+    "topic": "Geometry · Frustum Volume",
     "isFillIn": false,
-    "text": "<p>The polynomial $P(x) = x^4 - 3x^3 + ax^2 + bx - 12$ is divisible by both $(x - 2)$ and $(x + 1)$, where $a$ and $b$ are constants. What is the value of $a + b$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q05_find_height.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A frustum of a right circular cone has base radii of $4\\text{ cm}$ and $8\\text{ cm}$ and a volume of $336\\pi\\text{ cm}^3$. What is the height of the frustum, in centimeters?</p>",
     "options": [
-      "-11",
-      "-5",
-      "11",
-      "4"
+      "6",
+      "9",
+      "12",
+      "18"
     ],
-    "answer": 3,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. By the Factor Theorem, if $P(x)$ is divisible by $(x - 2)$ and $(x + 1)$, then $P(2) = 0$ and $P(-1) = 0$. Substituting $x = 2$: $P(2) = 2^4 - 3(2^3) + a(2^2) + b(2) - 12 = 16 - 24 + 4a + 2b - 12 = 4a + 2b - 20 = 0 \\implies 4a + 2b = 20 \\implies 2a + b = 10$. Substituting $x = -1$: $P(-1) = (-1)^4 - 3(-1)^3 + a(-1)^2 + b(-1) - 12 = 1 + 3 + a - b - 12 = a - b - 8 = 0 \\implies a - b = 8$. Adding the two linear equations: $(2a + b) + (a - b) = 10 + 8 \\implies 3a = 18 \\implies a = 6$. Then $6 - b = 8 \\implies b = -2$. The sum is $a + b = 6 + (-2) = 4$.",
+    "explanation": "Choice B is correct. Using the frustum volume formula $V = \\frac{\\pi h}{3}(R^2 + Rr + r^2)$ with $R = 8$, $r = 4$, and $V = 336\\pi$: $$336\\pi = \\frac{\\pi h}{3}(8^2 + 8 \\cdot 4 + 4^2) = \\frac{\\pi h}{3}(64 + 32 + 16) = \\frac{112\\pi}{3}h$$ Dividing both sides by $\\pi$: $$336 = \\frac{112}{3}h \\implies h = \\frac{336 \\times 3}{112} = 3 \\times 3 = 9\\text{ cm}$$",
     "id": 58,
     "module": 3,
     "prefix": "H3",
     "code": "H3-M4",
     "section": "math",
-    "difficulty": "Hard"
+    "difficulty": "Super Hard",
+    "image": "images/q05_find_height.png"
   },
   {
     "qnum": 5,
@@ -1425,25 +1416,24 @@ const MATH_MODULE1 = [
   },
   {
     "qnum": 11,
-    "topic": "Geometry & Trigonometry · Circles & radians",
-    "isFillIn": false,
-    "text": "<p>In a circle with center $O$, central angle $AOB$ has a measure of $\\frac{5\\pi}{9}$ radians. If the area of the sector formed by central angle $AOB$ is $40\\pi$, what is the length of arc $AB$?</p>",
-    "options": [
-      "$\\frac{10\\pi}{3}$",
-      "$\\frac{40\\pi}{3}$",
-      "$\\frac{20\\pi}{3}$",
-      "$20\\pi$"
+    "topic": "Geometry · Frustum Volume (SPR)",
+    "isFillIn": true,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q06_tank_half_full.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>An open water tank is shaped like a frustum of a cone with bottom radius $5\\text{ ft}$, top radius $15\\text{ ft}$, and height $20\\text{ ft}$. The tank is filled with water to exactly half its height. What fraction of the tank's capacity is filled with water? (Enter a fraction or a decimal rounded to the nearest ten-thousandth.)</p>",
+    "options": [],
+    "answer": "7/26",
+    "fillAnswer": "7/26",
+    "acceptedAnswers": [
+      "7/26",
+      "0.2692"
     ],
-    "answer": 2,
-    "fillAnswer": null,
-    "acceptedAnswers": [],
-    "explanation": "Choice C is correct. The area of a sector with central angle $\\theta$ (in radians) and radius $r$ is given by $A = \\frac{1}{2} r^2 \\theta$. Substituting $A = 40\\pi$ and $\\theta = \\frac{5\\pi}{9}$: $40\\pi = \\frac{1}{2} r^2 \\left(\\frac{5\\pi}{9}\\right) \\implies 40\\pi = \\frac{5\\pi}{18} r^2 \\implies r^2 = \\frac{40 \\times 18}{5} = 8 \\times 18 = 144 \\implies r = 12$. The length of arc $AB$ is given by $s = r\\theta = 12 \\times \\frac{5\\pi}{9} = \\frac{60\\pi}{9} = \\frac{20\\pi}{3}$.",
+    "explanation": "The correct answer is $7/26$ (or $0.2692$). At half height ($h = 10\\text{ ft}$), by linear interpolation, the radius of the water surface is $r_{\\text{mid}} = \\frac{5 + 15}{2} = 10\\text{ ft}$. The volume of water filled (from bottom radius 5 to radius 10, height 10) is: $$V_{\\text{water}} = \\frac{10\\pi}{3}(5^2 + 5 \\cdot 10 + 10^2) = \\frac{10\\pi}{3}(25 + 50 + 100) = \\frac{1750\\pi}{3}\\text{ ft}^3$$ The total capacity of the tank (from radius 5 to 15, height 20) is: $$V_{\\text{total}} = \\frac{20\\pi}{3}(5^2 + 5 \\cdot 15 + 15^2) = \\frac{20\\pi}{3}(25 + 75 + 225) = \\frac{20\\pi}{3}(325) = \\frac{6500\\pi}{3}\\text{ ft}^3$$ The fraction filled is: $$\\frac{V_{\\text{water}}}{V_{\\text{total}}} = \\frac{1750}{6500} = \\frac{7}{26} \\approx 0.2692$$ Note that the answer is less than $1/2$ because the tank widens upward.",
     "id": 65,
     "module": 3,
     "prefix": "H3",
     "code": "H3-M11",
     "section": "math",
-    "difficulty": "Hard"
+    "difficulty": "Super Hard",
+    "image": "images/q06_tank_half_full.png"
   },
   {
     "qnum": 12,
@@ -1535,25 +1525,26 @@ const MATH_MODULE1 = [
   },
   {
     "qnum": 16,
-    "topic": "Advanced Math · Systems of nonlinear equations",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
     "isFillIn": false,
-    "text": "<p>In the $xy$-plane, the line $y = 2x + c$ intersects the parabola $y = -x^2 + 6x - 1$ at exactly one point. What is the value of the constant $c$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q13_two_urns_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>Urn I contains $3$ red and $2$ blue balls. Urn II contains $1$ red and $4$ blue balls. A fair coin is flipped: heads means draw from Urn I, tails means draw from Urn II. One ball is then drawn at random from the chosen urn, and it is red. What is the probability that it came from Urn I?</p>",
     "options": [
-      "1",
-      "7",
-      "5",
-      "3"
+      "0.50",
+      "0.60",
+      "0.75",
+      "0.80"
     ],
-    "answer": 3,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. Setting the equations equal to find their points of intersection: $2x + c = -x^2 + 6x - 1 \\implies x^2 - 4x + (c + 1) = 0$. For the line to intersect the parabola at *exactly one point*, the quadratic equation must have exactly one real solution, which means its discriminant must equal zero: $\\Delta = b^2 - 4ac = (-4)^2 - 4(1)(c + 1) = 0 \\implies 16 - 4(c + 1) = 0 \\implies 16 = 4(c + 1) \\implies c + 1 = 4 \\implies c = 3$.",
+    "explanation": "Choice C is correct. The prior probability for each urn is $P(\\text{I}) = P(\\text{II}) = 0.5$. The probability of drawing a red ball from Urn I is $3/5 = 0.6$, and from Urn II is $1/5 = 0.2$. The total probability of drawing a red ball is: $$P(\\text{Red}) = (0.5)(0.6) + (0.5)(0.2) = 0.3 + 0.1 = 0.4$$ Applying Bayes' Theorem: $$P(\\text{Urn I} \\mid \\text{Red}) = \\frac{P(\\text{Urn I} \\cap \\text{Red})}{P(\\text{Red})} = \\frac{0.3}{0.4} = 0.75$$",
     "id": 70,
     "module": 3,
     "prefix": "H3",
     "code": "H3-M16",
     "section": "math",
-    "difficulty": "Hard"
+    "difficulty": "Super Hard",
+    "image": "images/q13_two_urns_tree.png"
   },
   {
     "qnum": 17,
@@ -1671,10 +1662,7 @@ const MATH_MODULE1 = [
     "code": "H3-M22",
     "section": "math",
     "difficulty": "Hard"
-  }
-];
-
-const MATH_MODULE2 = [
+  },
   {
     "qnum": 1,
     "topic": "Geometry & Trigonometry · Circle tangents & coordinate geometry",
@@ -1743,25 +1731,24 @@ const MATH_MODULE2 = [
   },
   {
     "qnum": 4,
-    "topic": "Problem-Solving and Data Analysis · Bayesian conditional probability",
-    "isFillIn": false,
-    "text": "<p>In a large population, $1\\%$ of individuals have a specific metabolic disorder. A diagnostic test correctly identifies $98\\%$ of individuals who have the disorder (sensitivity), but also produces a false positive in $4\\%$ of individuals who do not have the disorder. If an individual tests positive, what is the probability (to the nearest tenth of a percent) that they actually have the disorder?</p>",
-    "options": [
-      "96.1%",
-      "24.5%",
-      "49.0%",
-      "19.8%"
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem (SPR)",
+    "isFillIn": true,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q19_gym_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>At a gym, $40\\%$ of members attend morning classes. Of the members who attend morning classes, $50\\%$ renew their membership; of the other members, $20\\%$ renew. A member who renewed is chosen at random. What is the probability that this member attends morning classes? (Enter a fraction or a decimal.)</p>",
+    "options": [],
+    "answer": "5/8",
+    "fillAnswer": "5/8",
+    "acceptedAnswers": [
+      "5/8",
+      "0.625"
     ],
-    "answer": 3,
-    "fillAnswer": null,
-    "acceptedAnswers": [],
-    "explanation": "Choice D is correct. Consider a hypothetical cohort of $10,000$ individuals: $1\\%$ have the disorder ($100$ people) and $99\\%$ do not ($9,900$ people). Among the $100$ people with the disorder, the test correctly identifies $98\\%$, yielding $0.98 \\times 100 = 98$ true positives. Among the $9,900$ people without the disorder, the test yields a false positive in $4\\%$, giving $0.04 \\times 9,900 = 396$ false positives. The total number of positive test results is $98 + 396 = 494$. The probability that a person who tests positive actually has the disorder is $P(\\text{Disorder} \\mid \\text{Positive}) = \\frac{98}{494} \\approx 0.19838 \\approx 19.8\\%$.",
+    "explanation": "The correct answer is $5/8$ (or $0.625$). The overall probability of a member renewing is: $$P(\\text{Renew}) = (0.40)(0.50) + (0.60)(0.20) = 0.20 + 0.12 = 0.32$$ The probability that a member who renewed attends morning classes is: $$P(\\text{Morning} \\mid \\text{Renew}) = \\frac{0.20}{0.32} = \\frac{20}{32} = \\frac{5}{8} = 0.625$$",
     "id": 80,
     "module": 4,
     "prefix": "SH3",
     "code": "SH3-M4",
     "section": "math",
-    "difficulty": "Super Hard"
+    "difficulty": "Super Hard",
+    "image": "images/q19_gym_tree.png"
   },
   {
     "qnum": 5,
@@ -1919,25 +1906,26 @@ const MATH_MODULE2 = [
   },
   {
     "qnum": 12,
-    "topic": "Advanced Math · Complex numbers & polynomials",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
     "isFillIn": false,
-    "text": "<p>A cubic polynomial $P(x) = x^3 + ax^2 + bx + c$ has real coefficients $a$, $b$, and $c$. If $x = 2$ and $x = 3 - 2i$ are zeros of $P(x)$, what is the value of the coefficient $b$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q25_quartic_x2.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $f(x) = x^4 + ax^3 + bx^2 + cx + d$ has real coefficients, and two of its zeros are $1 + i$ and $3i$. What is the value of $b$?</p>",
     "options": [
+      "9",
+      "11",
       "13",
-      "19",
-      "29",
-      "25"
+      "18"
     ],
-    "answer": 3,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. By the Complex Conjugate Root Theorem, since $P(x)$ has real coefficients, the non-real root $3 - 2i$ must be accompanied by its complex conjugate, $3 + 2i$. The three roots are $r_1 = 2$, $r_2 = 3 - 2i$, and $r_3 = 3 + 2i$. In a monic cubic polynomial $x^3 + ax^2 + bx + c$, the coefficient $b$ equals the sum of pairwise products of the roots: $b = r_1 r_2 + r_1 r_3 + r_2 r_3 = r_1(r_2 + r_3) + r_2 r_3$. Notice $r_2 + r_3 = (3 - 2i) + (3 + 2i) = 6$, and $r_2 r_3 = (3 - 2i)(3 + 2i) = 3^2 - (2i)^2 = 9 - 4(-1) = 13$. Therefore, $b = 2(6) + 13 = 12 + 13 = 25$.",
+    "explanation": "Choice B is correct. Since the coefficients of $f(x)$ are real, the conjugates $1 - i$ and $-3i$ are also zeros of $f(x)$. The quadratic factor for the zeros $1 \\pm i$ is: $$(x - (1 + i))(x - (1 - i)) = (x - 1)^2 - i^2 = x^2 - 2x + 2$$ The quadratic factor for the zeros $\\pm 3i$ is: $$(x - 3i)(x + 3i) = x^2 - 9i^2 = x^2 + 9$$ Multiplying the two quadratic factors: $$f(x) = (x^2 - 2x + 2)(x^2 + 9) = x^4 + 9x^2 - 2x^3 - 18x + 2x^2 + 18 = x^4 - 2x^3 + 11x^2 - 18x + 18$$ Comparing coefficients, the coefficient of $x^2$ is $b = 11$.",
     "id": 88,
     "module": 4,
     "prefix": "SH3",
     "code": "SH3-M12",
     "section": "math",
-    "difficulty": "Super Hard"
+    "difficulty": "Super Hard",
+    "image": "images/q25_quartic_x2.png"
   },
   {
     "qnum": 13,
@@ -2051,22 +2039,26 @@ const MATH_MODULE2 = [
   },
   {
     "qnum": 18,
-    "topic": "Advanced Math · Optimization & inequalities (SPR)",
-    "isFillIn": true,
-    "text": "<p>For all real numbers $x > 0$, what is the minimum value of the expression $3x + \\frac{48}{x}$?</p>",
-    "options": [],
-    "answer": "24",
-    "fillAnswer": "24",
-    "acceptedAnswers": [
-      "24"
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
+    "isFillIn": false,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q26_cubic_a.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $p(x) = x^3 + ax^2 + bx - 26$ has real coefficients $a$ and $b$, and $2 + 3i$ is a zero of $p$. What is the value of $a$?</p>",
+    "options": [
+      "-6",
+      "-2",
+      "2",
+      "6"
     ],
-    "explanation": "The correct answer is 24. By the Arithmetic Mean-Geometric Mean (AM-GM) inequality, for positive real numbers $a$ and $b$: $\\frac{a + b}{2} \\ge \\sqrt{ab} \\implies a + b \\ge 2\\sqrt{ab}$. Letting $a = 3x$ and $b = \\frac{48}{x}$: $3x + \\frac{48}{x} \\ge 2\\sqrt{3x \\cdot \\frac{48}{x}} = 2\\sqrt{144} = 2(12) = 24$. Equality holds when $3x = \\frac{48}{x} \\implies 3x^2 = 48 \\implies x^2 = 16 \\implies x = 4 > 0$. Thus, the minimum value is 24.",
+    "answer": 0,
+    "fillAnswer": null,
+    "acceptedAnswers": [],
+    "explanation": "Choice A is correct. Since $a$ and $b$ are real, the conjugate $2 - 3i$ is also a zero of $p(x)$. Let the third zero be $r$. By Vieta's formulas, the product of all three roots is equal to $-(-26) = 26$: $$(2 + 3i)(2 - 3i) \\cdot r = 26 \\implies (4 + 9)r = 26 \\implies 13r = 26 \\implies r = 2$$ The sum of the three roots is related to $a$ by $-a$: $$\\text{Sum} = (2 + 3i) + (2 - 3i) + 2 = 6$$ Since $\\text{Sum} = -a$, we have $-a = 6 \\implies a = -6$.",
     "id": 94,
     "module": 4,
     "prefix": "SH3",
     "code": "SH3-M18",
     "section": "math",
-    "difficulty": "Super Hard"
+    "difficulty": "Super Hard",
+    "image": "images/q26_cubic_a.png"
   },
   {
     "qnum": 19,
@@ -2146,8 +2138,6 @@ const MATH_MODULE2 = [
   }
 ];
 
-const QUESTIONS = [...RW_MODULE1, ...RW_MODULE2, ...MATH_MODULE1, ...MATH_MODULE2];
-
 // Topic Map
 const TOPIC_MAP = {};
 QUESTIONS.forEach(q => {
@@ -2159,5 +2149,5 @@ QUESTIONS.forEach(q => {
 });
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, RW_MODULE1, RW_MODULE2, MATH_MODULE1, MATH_MODULE2, TOPIC_MAP };
+  module.exports = { QUESTIONS, TOPIC_MAP };
 }

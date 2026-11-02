@@ -3,6 +3,15 @@
 // Digital SAT Practice Exams
 // =============================================
 
+function sanitizeExplanation(str) {
+  if (!str) return 'No detailed explanation provided.';
+  let s = String(str);
+  s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
+  return s;
+}
+
 function loadHtml2PdfLibrary(callback) {
   if (typeof html2pdf !== 'undefined') {
     callback();
@@ -16,8 +25,9 @@ function loadHtml2PdfLibrary(callback) {
 
 function generatePDFReport(result, shouldSave = true) {
   loadHtml2PdfLibrary(() => {
-    const email = result.student.email || '';
-    const name = result.student.name || 'Student';
+    const studentObj = result.student || {};
+    const email = studentObj.email || '';
+    const name = studentObj.name || 'Student';
     const examName = result.examName || result.topic || 'Report';
 
     const tempParent = document.createElement('div');
@@ -43,12 +53,20 @@ function generatePDFReport(result, shouldSave = true) {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    html2pdf().set(opt).from(tempChild).save().then(() => {
-      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
-    }).catch(err => {
-      console.error('PDF generation failed', err);
-      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
-    });
+    const runPdf = () => {
+      html2pdf().set(opt).from(tempChild).save().then(() => {
+        if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
+      }).catch(err => {
+        console.error('PDF generation failed', err);
+        if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
+      });
+    };
+
+    if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+      MathJax.typesetPromise([tempChild]).then(runPdf).catch(runPdf);
+    } else {
+      runPdf();
+    }
   });
 }
 
@@ -80,12 +98,20 @@ function generateCombinedPDF(resultsList, studentInfo) {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    html2pdf().set(opt).from(tempChild).save().then(() => {
-      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
-    }).catch(err => {
-      console.error('PDF generation failed', err);
-      if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
-    });
+    const runPdf = () => {
+      html2pdf().set(opt).from(tempChild).save().then(() => {
+        if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
+      }).catch(err => {
+        console.error('PDF generation failed', err);
+        if (document.body.contains(tempParent)) document.body.removeChild(tempParent);
+      });
+    };
+
+    if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+      MathJax.typesetPromise([tempChild]).then(runPdf).catch(runPdf);
+    } else {
+      runPdf();
+    }
   });
 }
 
@@ -114,38 +140,28 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
       const status = d.status || (d.chosen === d.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted'));
       
       const statusBadge = status === 'correct'
-        ? '<span style="background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">✅ Correct</span>'
+        ? '<span style="background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">✅ Correct (+1 Mark)</span>'
         : status === 'wrong'
-        ? '<span style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">❌ Wrong</span>'
-        : '<span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">⏭ Skipped</span>';
-
-      const clean = str => {
-        let s = (str || '').replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, m =>
-        ({'&nbsp;':' ','&deg;':'°','&rarr;':'→','&larr;':'←','&minus;':'−','&sup2;':'²','&sup3;':'³'}[m] || ' ')
-        );
-        s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
-        s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
-        s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
-        return s;
-      };
+        ? '<span style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">❌ Wrong (0 Marks)</span>'
+        : '<span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">⏭ Skipped (0 Marks)</span>';
 
       let optsHTML = '';
       if (d.isFillIn) {
         optsHTML = `
           <div style="background:#f8fafc; border:1.5px solid ${status === 'correct' ? '#22c55e' : status === 'wrong' ? '#ef4444' : '#f59e0b'}; border-radius:8px; padding:12px 16px; margin:12px 0; font-size:0.9rem;">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-              <div><span style="color:#64748b; font-weight:600;">Your Selected Answer:</span> <strong style="color:${status === 'correct' ? '#16a34a' : '#dc2626'}; font-family:monospace; font-size:1.05rem;">${status === 'unattempted' ? 'Skipped / None' : (d.chosen || 'None')}</strong></div>
-              <div><span style="color:#64748b; font-weight:600;">Official Correct Answer:</span> <strong style="color:#16a34a; font-family:monospace; font-size:1.05rem;">${d.fillAnswer || d.answer || '–'}</strong> ${d.acceptedAnswers && d.acceptedAnswers.length > 1 ? `<span style="color:#64748b; font-size:0.8rem;">(Accepted: ${d.acceptedAnswers.join(', ')})</span>` : ''}</div>
+              <div><span style="color:#64748b; font-weight:600;">Your Marked Answer:</span> <strong style="color:${status === 'correct' ? '#16a34a' : '#dc2626'}; font-family:monospace; font-size:1.05rem;">${status === 'unattempted' ? 'Skipped / None' : (d.chosen || 'None')}</strong></div>
+              <div><span style="color:#64748b; font-weight:600;">Official Correct Answer:</span> <strong style="color:#16a34a; font-family:monospace; font-size:1.05rem;">${d.fillAnswer || (d.acceptedAnswers && d.acceptedAnswers[0]) || d.answer || '–'}</strong> ${d.acceptedAnswers && d.acceptedAnswers.length > 1 ? `<span style="color:#64748b; font-size:0.8rem;">(Accepted: ${d.acceptedAnswers.join(', ')})</span>` : ''}</div>
             </div>
           </div>
         `;
-      } else if (hasText && d.options && d.options.length > 0) {
+      } else if (d.options && d.options.length > 0) {
         const chosenLetter = d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? letters[d.chosen] : 'None';
         const correctLetter = letters[d.answer] || '–';
 
         const summaryBar = `
           <div style="display:flex; justify-content:space-between; align-items:center; background:#f1f5f9; padding:8px 14px; border-radius:6px; font-size:0.85rem; margin-bottom:10px;">
-            <div><strong>Your Selected Option:</strong> ${status === 'unattempted' ? '<span style="color:#d97706; font-weight:600;">Skipped (None)</span>' : status === 'correct' ? `<span style="color:#16a34a; font-weight:700;">Choice ${chosenLetter} ✓ (Correct)</span>` : `<span style="color:#dc2626; font-weight:700;">Choice ${chosenLetter} ✗ (Incorrect)</span>`}</div>
+            <div><strong>Your Marked Answer:</strong> ${status === 'unattempted' ? '<span style="color:#d97706; font-weight:600;">Skipped (None)</span>' : status === 'correct' ? `<span style="color:#16a34a; font-weight:700;">Choice ${chosenLetter} ✓ (Correct)</span>` : `<span style="color:#dc2626; font-weight:700;">Choice ${chosenLetter} ✗ (Incorrect)</span>`}</div>
             <div><strong>Official Correct Answer:</strong> <span style="color:#16a34a; font-weight:700;">Choice ${correctLetter} ✓</span></div>
           </div>
         `;
@@ -191,9 +207,9 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
 
       let imgHTML = '';
       if (d.image || d.useImage) {
-        const imgSrc = typeof d.image === 'string' ? d.image : (d.image && d.image.file ? d.image.file : (d.imageKey || ''));
+        const imgSrc = typeof d.image === 'string' ? d.image : (d.image && d.image.file ? d.image.file : (d.imageKey || d.diagram || ''));
         if (imgSrc && (!qText || !qText.includes(imgSrc))) {
-          imgHTML = `<div style="text-align:center; margin-bottom:16px;"><img src="${imgSrc}" style="max-width:100%; max-height:350px; border-radius:8px;" alt="Question Image" /></div>`;
+          imgHTML = `<div style="text-align:center; margin:16px 0;"><img src="${imgSrc}" style="max-width:100%; max-height:350px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px;" alt="Question Diagram" /></div>`;
         }
       }
 
@@ -202,6 +218,7 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
             <div>
               <span style="font-weight:800; font-size:1rem; font-family:'Courier New', monospace; color:#0f172a;">Question ${qId}</span>
+              ${d.topic ? `<span style="color:#64748b; font-size:0.85rem; margin-left:8px;">· ${d.topic}</span>` : ''}
             </div>
             ${statusBadge}
           </div>
@@ -215,7 +232,7 @@ function generateCleanReportHTML(t, details, emailStr, studentNameStr) {
 
           <div style="padding:12px 16px; background:#f0f9ff; border-left:4px solid #0284c7; border-radius:0 8px 8px 0; font-size:0.88rem; line-height:1.5; color:#0c4a6e;">
             <strong style="color:#0369a1; display:block; margin-bottom:4px;">💡 Solution & Explanation:</strong>
-            ${clean(expText)}
+            ${sanitizeExplanation(expText)}
           </div>
         </div>
       `;

@@ -250,7 +250,7 @@ const COUNTRY_CODES = [
 
 // ── Dropdown Population Logic ────────────────────────────────────────────────
 function populateCountrySelects() {
-  const selects = document.querySelectorAll('.country-select');
+  const selects = document.querySelectorAll('.country-select, #regCC, #regCountryCode');
   selects.forEach(select => {
     select.innerHTML = '';
     

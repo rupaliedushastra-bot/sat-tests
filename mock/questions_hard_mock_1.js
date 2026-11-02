@@ -1,13 +1,10 @@
 // =============================================
 // SAT Hard Full Mock 1
-// Module 1 = Hard (49 Qs) · Module 2 = Super Hard (49 Qs)
-// Section 1: Reading & Writing (Mod 1: 27 Qs, Mod 2: 27 Qs) - 32 min each
-// Section 2: Math (Mod 1: 22 Qs, Mod 2: 22 Qs) - 35 min each (Desmos allowed)
-// Total: 98 Questions (88 MCQ + 10 SPR)
-// answers: 0=A, 1=B, 2=C, 3=D for MCQ; string/number for SPR
+// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
+// With LaTeX Equations, Full Options, Solutions, and Diagrams
 // =============================================
 
-const RW_MODULE1 = [
+const QUESTIONS = [
   {
     "code": "H1-RW1",
     "prefix": "H1",
@@ -601,10 +598,7 @@ const RW_MODULE1 = [
     "explanation": "Choice C is correct. The prompt asks the student to *contrast the survival efficacy* of micro-catchment terracing with standard planting. Choice C directly contrasts the survival rates: 74% for micro-catchment terracing versus only 28% for standard flat planting. Choices B and D merely describe background conditions or physical trench construction without contrasting the two survival rates. Choice A reports the survival rate of standard planting alone, failing to provide a comparison.",
     "id": 27,
     "module": 1
-  }
-];
-
-const RW_MODULE2 = [
+  },
   {
     "code": "SH-RW1",
     "prefix": "SH",
@@ -1198,10 +1192,7 @@ const RW_MODULE2 = [
     "explanation": "Choice D is correct. The prompt asks the student to explain *why the meltwater pulse hypothesis has faced growing scientific skepticism*. Choice D directly provides the physical cause of skepticism: recent sediment cores from the St. Lawrence estuary lack the expected geochemical strontium isotope markers that would confirm a massive freshwater discharge from Lake Agassiz. Choice B states the original theory without explaining skepticism. Choice C discusses the alternative comet hypothesis. Choice A is a generic comparison.",
     "id": 54,
     "module": 2
-  }
-];
-
-const MATH_MODULE1 = [
+  },
   {
     "code": "H1-M1",
     "section": "math",
@@ -1272,23 +1263,24 @@ const MATH_MODULE1 = [
     "code": "H1-M4",
     "section": "math",
     "qnum": 4,
-    "topic": "Advanced Math · Polynomials & Remainder theorem",
-    "difficulty": "Hard",
+    "topic": "Geometry · Frustum Volume",
+    "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>The polynomial $P(x) = 2x^3 - kx^2 + 7x - 6$, where $k$ is a constant, leaves a remainder of $8$ when divided by $(x - 2)$. What is the remainder when $P(x)$ is divided by $(x + 1)$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q01_frustum.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The figure shows a container in the shape of a frustum of a right circular cone. The bottom base has radius $10\\text{ cm}$, the top base has radius $4\\text{ cm}$, and the slant height is $10\\text{ cm}$. What is the volume of the container, in cubic centimeters? (Cone volume: $V = \\frac{1}{3}\\pi r^2 h$)</p>",
     "options": [
-      "−7",
-      "−15",
-      "−11",
-      "−19"
+      "392\\pi",
+      "416\\pi",
+      "520\\pi",
+      "1{,}248\\pi"
     ],
-    "answer": 3,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. According to the Polynomial Remainder Theorem, the remainder of $P(x)$ divided by $(x - 2)$ is $P(2)$. Thus, $P(2) = 2(2)^3 - k(2)^2 + 7(2) - 6 = 16 - 4k + 14 - 6 = 24 - 4k$. Setting this equal to 8: $24 - 4k = 8 \\implies 4k = 16 \\implies k = 4$. The polynomial is therefore $P(x) = 2x^3 - 4x^2 + 7x - 6$. The remainder when divided by $(x + 1)$ is $P(-1) = 2(-1)^3 - 4(-1)^2 + 7(-1) - 6 = -2 - 4 - 7 - 6 = -19$.",
+    "explanation": "Choice B is correct. Let the bottom radius be $R = 10\\text{ cm}$ and top radius be $r = 4\\text{ cm}$. The horizontal difference between the radii is $R - r = 10 - 4 = 6\\text{ cm}$. With slant height $s = 10\\text{ cm}$, the vertical height $h$ is found via the Pythagorean theorem: $h = \\sqrt{s^2 - (R - r)^2} = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8\\text{ cm}$. The volume of a frustum of a cone is given by: $$V = \\frac{\\pi h}{3}(R^2 + Rr + r^2) = \\frac{8\\pi}{3}(10^2 + 10 \\cdot 4 + 4^2) = \\frac{8\\pi}{3}(100 + 40 + 16) = \\frac{8\\pi}{3}(156) = 416\\pi\\text{ cm}^3$$ Choice A incorrectly uses the average radius in a cylinder formula; Choice C uses the slant height 10 as $h$; Choice D forgets the factor of $\\frac{1}{3}$.",
     "id": 58,
     "module": 3,
-    "prefix": "H1"
+    "prefix": "H1",
+    "image": "images/q01_frustum.png"
   },
   {
     "code": "H1-M5",
@@ -1426,23 +1418,22 @@ const MATH_MODULE1 = [
     "code": "H1-M11",
     "section": "math",
     "qnum": 11,
-    "topic": "Advanced Math · Exponential modeling",
-    "difficulty": "Hard",
-    "isFillIn": false,
-    "text": "<p>A sample of a radioactive isotope decays according to the exponential function $M(t) = M_0 \\left(\\frac{1}{2}\\right)^{t/h}$, where $M_0$ is the initial mass, $t$ is the elapsed time in hours, and $h$ is the half-life in hours. If exactly $\\frac{1}{8}$ of the initial mass remains after $18$ hours, what fraction of the initial mass will remain after $30$ hours?</p>",
-    "options": [
-      "1/16",
-      "1/24",
-      "1/32",
-      "1/64"
+    "topic": "Geometry · Frustum Volume (SPR)",
+    "difficulty": "Super Hard",
+    "isFillIn": true,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q02_cone_cut.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A right circular cone has height $12$ and base radius $6$. A plane parallel to the base cuts the cone $4$ units above the base, removing a smaller cone from the top and leaving a frustum. The volume of the frustum is what fraction of the volume of the original cone? (Enter a fraction or a decimal rounded to the nearest ten-thousandth.)</p>",
+    "options": [],
+    "answer": "19/27",
+    "fillAnswer": "19/27",
+    "acceptedAnswers": [
+      "19/27",
+      "0.7037"
     ],
-    "answer": 2,
-    "fillAnswer": null,
-    "acceptedAnswers": [],
-    "explanation": "Choice C is correct. We are given that $M(18) = \\frac{1}{8} M_0$. Substituting into the decay function: $\\left(\\frac{1}{2}\\right)^{18/h} = \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^3$. Equating exponents gives $\\frac{18}{h} = 3 \\implies h = 6$ hours. The half-life is therefore 6 hours. To find the remaining fraction after 30 hours: $\\left(\\frac{1}{2}\\right)^{30/6} = \\left(\\frac{1}{2}\\right)^5 = \\frac{1}{32}$.",
+    "explanation": "The correct answer is $19/27$ (or $0.7037$). The original cone has height $H = 12$. The cut is made $4$ units above the base, so the smaller cone removed from the top has height $h = 12 - 4 = 8$. Since the smaller cone is similar to the original cone, the linear scale factor is $k = \\frac{h}{H} = \\frac{8}{12} = \\frac{2}{3}$. Volumes of similar solids scale as the cube of the linear factor: $$\\frac{V_{\\text{small}}}{V_{\\text{original}}} = \\left(\\frac{2}{3}\\right)^3 = \\frac{8}{27}$$ The volume of the remaining frustum is: $$\\frac{V_{\\text{frustum}}}{V_{\\text{original}}} = 1 - \\frac{8}{27} = \\frac{19}{27} \\approx 0.7037$$",
     "id": 65,
     "module": 3,
-    "prefix": "H1"
+    "prefix": "H1",
+    "image": "images/q02_cone_cut.png"
   },
   {
     "code": "H1-M12",
@@ -1536,23 +1527,24 @@ const MATH_MODULE1 = [
     "code": "H1-M16",
     "section": "math",
     "qnum": 16,
-    "topic": "Advanced Math · Systems of nonlinear equations",
-    "difficulty": "Hard",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
+    "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>In the $xy$-plane, the line $y = x + 1$ intersects the circle $x^2 + y^2 = 25$ at two points, $P$ and $Q$. What is the distance between points $P$ and $Q$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q11_factory_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A factory has three machines. Machine A makes $50\\%$ of all items, Machine B makes $30\\%$, and Machine C makes $20\\%$. The defect rates are $2\\%$, $3\\%$, and $5\\%$ respectively. An item is chosen at random and is found to be defective. To the nearest hundredth, what is the probability that it was made by Machine C?</p>",
     "options": [
-      "$5\\sqrt{2}$",
-      "$8\\sqrt{2}$",
-      "$10$",
-      "$7\\sqrt{2}$"
+      "0.05",
+      "0.20",
+      "0.34",
+      "0.50"
     ],
-    "answer": 3,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. Substitute $y = x + 1$ into the circle equation: $x^2 + (x + 1)^2 = 25 \\implies x^2 + x^2 + 2x + 1 = 25 \\implies 2x^2 + 2x - 24 = 0 \\implies x^2 + x - 12 = 0$. Factoring gives $(x + 4)(x - 3) = 0$, so $x = 3$ or $x = -4$. For $x = 3$, $y = 3 + 1 = 4$, yielding point $P(3, 4)$. For $x = -4$, $y = -4 + 1 = -3$, yielding point $Q(-4, -3)$. Using the distance formula: $d = \\sqrt{(3 - (-4))^2 + (4 - (-3))^2} = \\sqrt{7^2 + 7^2} = \\sqrt{49 + 49} = \\sqrt{98} = 7\\sqrt{2}$.",
+    "explanation": "Choice C is correct. By the law of total probability, the total probability of an item being defective is: $$P(\\text{Defect}) = (0.50)(0.02) + (0.30)(0.03) + (0.20)(0.05) = 0.010 + 0.009 + 0.010 = 0.029$$ Applying Bayes' Theorem: $$P(C \\mid \\text{Defect}) = \\frac{P(C) \\cdot P(\\text{Defect} \\mid C)}{P(\\text{Defect})} = \\frac{0.20 \\times 0.05}{0.029} = \\frac{0.010}{0.029} = \\frac{10}{29} \\approx 0.3448 \\approx 0.34$$",
     "id": 70,
     "module": 3,
-    "prefix": "H1"
+    "prefix": "H1",
+    "image": "images/q11_factory_tree.png"
   },
   {
     "code": "H1-M17",
@@ -1672,10 +1664,7 @@ const MATH_MODULE1 = [
     "id": 76,
     "module": 3,
     "prefix": "H1"
-  }
-];
-
-const MATH_MODULE2 = [
+  },
   {
     "code": "SH-M1",
     "section": "math",
@@ -1746,23 +1735,22 @@ const MATH_MODULE2 = [
     "code": "SH-M4",
     "section": "math",
     "qnum": 4,
-    "topic": "Problem-Solving and Data Analysis · Bayesian conditional probability",
+    "topic": "Problem Solving & Data Analysis · Bayes' Theorem (SPR)",
     "difficulty": "Super Hard",
-    "isFillIn": false,
-    "text": "<p>In a large population, $0.5\\%$ of individuals have a specific genetic mutation. A diagnostic screening test has a $98\\%$ sensitivity (testing positive for $98\\%$ of individuals who have the mutation) and a $2\\%$ false positive rate (testing positive for $2\\%$ of individuals who do not have the mutation). If an individual selected at random tests positive, what is the probability that this individual actually carries the mutation?</p>",
-    "options": [
-      "1/200",
-      "98/100",
-      "49/50",
-      "49/248"
+    "isFillIn": true,
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q14_spam_table.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>Of $1{,}000$ emails, the spam filter results are shown in the diagram. An email is chosen at random from those the filter flagged. What is the probability, to the nearest hundredth, that it is actually spam? (Enter a decimal.)</p>",
+    "options": [],
+    "answer": "0.91",
+    "fillAnswer": "0.91",
+    "acceptedAnswers": [
+      "0.91",
+      "0.9105"
     ],
-    "answer": 3,
-    "fillAnswer": null,
-    "acceptedAnswers": [],
-    "explanation": "Choice D is correct. Let $M$ denote having the mutation and $T^+$ denote testing positive. By Bayes' Theorem: $P(M \\mid T^+) = \\frac{P(M) P(T^+ \\mid M)}{P(T^+)}$. We are given $P(M) = 0.005$ and $P(M') = 0.995$. The true positive rate is $P(T^+ \\mid M) = 0.98$, yielding true positive probability $0.005 \\times 0.98 = 0.0049$. The false positive rate is $P(T^+ \\mid M') = 0.02$, yielding false positive probability $0.995 \\times 0.02 = 0.0199$. The total probability of testing positive is $P(T^+) = 0.0049 + 0.0199 = 0.0248$. Thus, $P(M \\mid T^+) = \\frac{0.0049}{0.0248} = \\frac{49}{248}$ (approximately $19.8\\%$). Choice B (98/100) is the classic base-rate fallacy.",
+    "explanation": "The correct answer is $0.91$. The total number of emails flagged by the filter is $285$ (true spam) $+ 28$ (clean emails falsely flagged) $= 313$ flagged emails. Among these flagged emails, $285$ are actually spam: $$P(\\text{Spam} \\mid \\text{Flagged}) = \\frac{285}{313} \\approx 0.9105 \\approx 0.91$$",
     "id": 80,
     "module": 4,
-    "prefix": "SH"
+    "prefix": "SH",
+    "image": "images/q14_spam_table.png"
   },
   {
     "code": "SH-M5",
@@ -1922,23 +1910,24 @@ const MATH_MODULE2 = [
     "code": "SH-M12",
     "section": "math",
     "qnum": 12,
-    "topic": "Advanced Math · Complex numbers & conjugate root theorem",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>The quadratic polynomial $P(x) = x^2 + px + q$ has real coefficients $p$ and $q$. If $3 + 2i$ is a complex root of $P(x)$, where $i = \\sqrt{-1}$, what is the value of $P(5)$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q21_cubic_roots.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $p(x) = x^3 + ax^2 + bx + c$ has real coefficients $a$, $b$, and $c$. Two of its roots are $2$ and $1 + 3i$. What is the value of $b$?</p>",
     "options": [
-      "4",
       "6",
-      "13",
-      "8"
+      "10",
+      "14",
+      "20"
     ],
-    "answer": 3,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. Because the polynomial has real coefficients, complex non-real roots must occur in conjugate pairs. Since $3 + 2i$ is a root, its complex conjugate $3 - 2i$ must also be a root. By Vieta's formulas, the sum of the roots is $(3 + 2i) + (3 - 2i) = 6 = -p \\implies p = -6$. The product of the roots is $(3 + 2i)(3 - 2i) = 3^2 - (2i)^2 = 9 - 4(-1) = 13 = q$. The polynomial is therefore $P(x) = x^2 - 6x + 13$. Evaluating at $x = 5$: $P(5) = 5^2 - 6(5) + 13 = 25 - 30 + 13 = 8$.",
+    "explanation": "Choice C is correct. By the Complex Conjugate Root Theorem, since the coefficients of $p(x)$ are real and $1 + 3i$ is a root, its complex conjugate $1 - 3i$ must also be a root. The quadratic factor with roots $1 \\pm 3i$ is: $$(x - (1 + 3i))(x - (1 - 3i)) = (x - 1)^2 - (3i)^2 = x^2 - 2x + 1 - (-9) = x^2 - 2x + 10$$ Since $2$ is the third root, the full polynomial is: $$p(x) = (x - 2)(x^2 - 2x + 10) = x(x^2 - 2x + 10) - 2(x^2 - 2x + 10)$$ $$p(x) = x^3 - 2x^2 + 10x - 2x^2 + 4x - 20 = x^3 - 4x^2 + 14x - 20$$ Comparing coefficients with $x^3 + ax^2 + bx + c$, the coefficient of $x$ is $b = 14$.",
     "id": 88,
     "module": 4,
-    "prefix": "SH"
+    "prefix": "SH",
+    "image": "images/q21_cubic_roots.png"
   },
   {
     "code": "SH-M13",
@@ -2054,20 +2043,21 @@ const MATH_MODULE2 = [
     "code": "SH-M18",
     "section": "math",
     "qnum": 18,
-    "topic": "Advanced Math · Optimization & inequalities (SPR)",
+    "topic": "Advanced Math · Complex Conjugate Root Theorem (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
-    "text": "<p>For all real numbers $x > 0$, what is the minimum value of the expression $2x + \\frac{18}{x}$?</p>",
+    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q22_quartic_roots.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $f(x) = x^4 + ax^3 + bx^2 + cx + d$ has real coefficients $a$, $b$, $c$, and $d$. Two of its zeros are $i$ and $2 - i$. What is the value of $a + b + c + d$?</p>",
     "options": [],
-    "answer": "12",
-    "fillAnswer": "12",
+    "answer": "3",
+    "fillAnswer": "3",
     "acceptedAnswers": [
-      "12"
+      "3"
     ],
-    "explanation": "The correct answer is 12. By the Arithmetic Mean-Geometric Mean Inequality (AM-GM), for any positive real numbers $a$ and $b$, $\\frac{a + b}{2} \\ge \\sqrt{ab} \\implies a + b \\ge 2\\sqrt{ab}$. Letting $a = 2x$ and $b = \\frac{18}{x}$: $$2x + \\frac{18}{x} \\ge 2\\sqrt{2x \\cdot \\frac{18}{x}} = 2\\sqrt{36} = 2(6) = 12.$$ Equality holds when $a = b \\implies 2x = \\frac{18}{x} \\implies x^2 = 9 \\implies x = 3$. Since $x = 3 > 0$, the minimum value is achieved and equals 12.",
+    "explanation": "The correct answer is $3$. Since the coefficients are real, the complex conjugates $-i$ and $2 + i$ are also zeros of $f(x)$. The quadratic factor for the roots $\\pm i$ is $(x - i)(x + i) = x^2 + 1$. The quadratic factor for $2 \\pm i$ is: $$(x - (2 - i))(x - (2 + i)) = (x - 2)^2 - i^2 = x^2 - 4x + 4 - (-1) = x^2 - 4x + 5$$ Multiplying the factors: $$f(x) = (x^2 + 1)(x^2 - 4x + 5) = x^4 - 4x^3 + 5x^2 + x^2 - 4x + 5 = x^4 - 4x^3 + 6x^2 - 4x + 5$$ Thus, $a = -4$, $b = 6$, $c = -4$, and $d = 5$. Summing these: $$a + b + c + d = -4 + 6 - 4 + 5 = 3$$ Shortcut: Note that $f(1) = 1 + a + b + c + d = (1^2 + 1)(1^2 - 4(1) + 5) = (2)(2) = 4 \\implies a + b + c + d = 3$.",
     "id": 94,
     "module": 4,
-    "prefix": "SH"
+    "prefix": "SH",
+    "image": "images/q22_quartic_roots.png"
   },
   {
     "code": "SH-M19",
@@ -2147,8 +2137,6 @@ const MATH_MODULE2 = [
   }
 ];
 
-const QUESTIONS = [...RW_MODULE1, ...RW_MODULE2, ...MATH_MODULE1, ...MATH_MODULE2];
-
 // Topic Map
 const TOPIC_MAP = {};
 QUESTIONS.forEach(q => {
@@ -2160,5 +2148,5 @@ QUESTIONS.forEach(q => {
 });
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, RW_MODULE1, RW_MODULE2, MATH_MODULE1, MATH_MODULE2, TOPIC_MAP };
+  module.exports = { QUESTIONS, TOPIC_MAP };
 }

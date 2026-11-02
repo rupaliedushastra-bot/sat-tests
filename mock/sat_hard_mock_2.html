@@ -11,6 +11,30 @@
     rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      startup: {
+        ready: () => {
+          if (window.MathJax && MathJax.startup) {
+            MathJax.startup.defaultReady();
+            const rw = document.getElementById('resWrap');
+            if (rw && rw.children.length > 0 && MathJax.typesetPromise) {
+              MathJax.typesetPromise([rw]).catch(() => {});
+            }
+          }
+        }
+      }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="questions_hard_mock_2.js"></script>
   <style>
@@ -1058,7 +1082,16 @@
 
       <div class="form-group">
         <label for="regCountryCode">Country</label>
-        <select id="regCountryCode"></select>
+        <select id="regCountryCode">
+          <option value="+91" selected>🇮🇳 +91 (India)</option>
+          <option value="+1">🇺🇸 +1 (United States)</option>
+          <option value="+44">🇬🇧 +44 (United Kingdom)</option>
+          <option value="+971">🇦🇪 +971 (UAE)</option>
+          <option value="+1">🇨🇦 +1 (Canada)</option>
+          <option value="+61">🇦🇺 +61 (Australia)</option>
+          <option value="+65">🇸🇬 +65 (Singapore)</option>
+          <option value="+49">🇩🇪 +49 (Germany)</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -1163,13 +1196,11 @@
     const $ = id => document.getElementById(id);
 
     const MODULES = [
-      { id: 1, label: 'Reading & Writing – Module 1 (Hard)', timeMin: 32, startIdx: 0, count: 27, section: 'rw' },
-      { id: 2, label: 'Reading & Writing – Module 2 (Super Hard)', timeMin: 32, startIdx: 27, count: 27, section: 'rw' },
-      { id: 3, label: 'Math – Module 1 (Hard)', timeMin: 35, startIdx: 54, count: 22, section: 'math' },
-      { id: 4, label: 'Math – Module 2 (Super Hard)', timeMin: 35, startIdx: 76, count: 22, section: 'math' },
+      { id: 1, label: 'Reading & Writing - Module 1 (Super Hard)', timeMin: 16, startIdx: 0, count: 8, section: 'rw' },
+      { id: 2, label: 'Math - Module 2 (Super Hard)', timeMin: 19, startIdx: 8, count: 9, section: 'math' },
     ];
 
-    const TEST_ID = 'sat_hard_mock_1';
+    const TEST_ID = 'sat_hard_mock_2';
     const sKey = k => 'eduquest_' + TEST_ID + '_' + k;
 
     let student = {};
@@ -1385,10 +1416,8 @@
 
       syncPalette();
 
-      // Trigger MathJax typesetting if math expressions are present
-      if (window.MathJax && MathJax.typesetPromise) {
-        MathJax.typesetPromise([$('qPrompt'), $('qOpts')]).catch(e => console.warn('MathJax:', e));
-      }
+      // Trigger MathJax typesetting
+      renderMath([$('qPrompt'), $('qOpts')]);
 
       window.scrollTo(0, 0);
     }
@@ -1421,6 +1450,24 @@
     function toggleCalculator() {
       const modal = $('calcModal');
       modal.classList.toggle('open');
+    }
+
+        function renderMath(elements) {
+      if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+        const targets = Array.isArray(elements) ? elements.filter(Boolean) : (elements ? [elements] : [document.body]);
+        if (targets.length > 0) {
+          MathJax.typesetPromise(targets).catch(err => console.warn('MathJax typesetting warning:', err));
+        }
+      }
+    }
+
+    function sanitizeExplanation(str) {
+      if (!str) return 'No detailed explanation provided.';
+      let s = String(str);
+      s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
+      s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
+      s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
+      return s;
     }
 
     function escapeHtml(str) {
@@ -1602,6 +1649,8 @@
       $('timerBox').style.display = 'none';
       $('btnCalc').style.display = 'none';
       $('btnFlag').style.display = 'none';
+      const hdrMod = $('hdrModule');
+      if (hdrMod) hdrMod.textContent = ' · Score Report';
 
       renderResults(result);
 
@@ -1617,8 +1666,16 @@
     }
 
     function buildTopics(details) {
-      return Object.entries(TOPIC_MAP).map(([key, { name, questions: qIds }]) => {
-        const rows = details.filter(d => qIds.includes(d.id));
+      const map = (typeof TOPIC_MAP !== 'undefined') ? TOPIC_MAP : {};
+      if (Object.keys(map).length === 0 && Array.isArray(details)) {
+        details.forEach(d => {
+          const t = d.topic || 'General';
+          if (!map[t]) map[t] = { name: t, questions: [] };
+          map[t].questions.push(d.id);
+        });
+      }
+      return Object.entries(map).map(([key, { name, questions: qIds }]) => {
+        const rows = details.filter(d => (qIds || []).includes(d.id));
         const attempted = rows.filter(d => d.status !== 'unattempted').length;
         const correct = rows.filter(d => d.status === 'correct').length;
         const wrong = rows.filter(d => d.status === 'wrong').length;
@@ -1628,130 +1685,160 @@
     }
 
     function renderResults(result) {
-      const { student, correct, wrong, unattempted, total, pct, scaled, rwScore, mathScore, topicAnalysis, details } = result;
-      const wrap = $('resWrap');
-      const scoreColor = pct >= 70 ? '#10b981' : pct >= 50 ? '#f59e0b' : '#ef4444';
+      try {
+        const studentInfo = result.student || {};
+        const studentName = studentInfo.name || 'Student';
+        const { correct, wrong, unattempted, total, pct, scaled, rwScore, mathScore, topicAnalysis, details } = result;
+        const wrap = $('resWrap');
+        if (!wrap) return;
 
-      wrap.innerHTML = `
-        <div class="res-hero">
-          <div class="sat-score" style="color:${scoreColor}">${scaled}</div>
-          <div class="score-line">SAT Scaled Estimated Score &nbsp;·&nbsp; ${correct} / ${total} Correct (${pct}%)</div>
-          <div class="score-sub">${student.name} &nbsp;·&nbsp; ${new Date(result.submitTime).toLocaleString()}</div>
-        </div>
+        const scoreColor = pct >= 70 ? '#10b981' : pct >= 50 ? '#f59e0b' : '#ef4444';
 
-        <div class="sec-cards">
-          <div class="sec-card">
-            <div class="sec-title">Reading &amp; Writing (Module 1)</div>
-            <div class="sec-num">${rwScore}</div>
-            <div style="font-size:0.85rem;color:var(--muted)">out of 800 (${result.rwCorrect}/54 correct)</div>
+        wrap.innerHTML = `
+          <div class="res-hero">
+            <div class="sat-score" style="color:${scoreColor}">${scaled}</div>
+            <div class="score-line">SAT Scaled Estimated Score &nbsp;·&nbsp; ${correct} / ${total} Correct (${pct}%)</div>
+            <div class="score-sub">${escapeHtml(studentName)} &nbsp;·&nbsp; ${new Date(result.submitTime || Date.now()).toLocaleString()}</div>
           </div>
-          <div class="sec-card">
-            <div class="sec-title">Math (Modules 1 &amp; 2)</div>
-            <div class="sec-num">${mathScore}</div>
-            <div style="font-size:0.85rem;color:var(--muted)">out of 800 (${result.mathCorrect}/44 correct)</div>
-          </div>
-        </div>
 
-        <div class="stats-row">
-          <div class="stat-card"><div class="num">${correct + wrong}</div><div class="lbl">Attempted</div></div>
-          <div class="stat-card c"><div class="num">${correct}</div><div class="lbl">Correct</div></div>
-          <div class="stat-card w"><div class="num">${wrong}</div><div class="lbl">Wrong</div></div>
-          <div class="stat-card s"><div class="num">${unattempted}</div><div class="lbl">Skipped</div></div>
-          <div class="stat-card"><div class="num">${pct}%</div><div class="lbl">Accuracy</div></div>
-        </div>
-
-        <div class="charts-row">
-          <div class="chart-card">
-            <h3>Score Breakdown</h3>
-            <canvas id="pieChart"></canvas>
-          </div>
-          <div class="chart-card">
-            <h3>Skill &amp; Domain Accuracy</h3>
-            <canvas id="barChart"></canvas>
-          </div>
-        </div>
-
-        <div class="topic-tbl">
-          <h3>Domain &amp; Skill Performance</h3>
-          <table class="data-table">
-            <thead>
-              <tr><th>Topic</th><th>Total</th><th>✓ Correct</th><th>✗ Wrong</th><th>Accuracy</th></tr>
-            </thead>
-            <tbody>
-              ${topicAnalysis.map(t => `
-                <tr>
-                  <td><strong>${t.name}</strong></td>
-                  <td>${t.total}</td>
-                  <td style="color:var(--green);font-weight:600;">${t.correct}</td>
-                  <td style="color:var(--red);font-weight:600;">${t.wrong}</td>
-                  <td><strong>${t.acc}%</strong></td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Question-by-Question Review -->
-        <div class="review-sec">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
-            <h3>Detailed Question Review</h3>
-            <div class="review-filter">
-              <button class="filter-btn active" onclick="filterReview('all', this)">All (${details.length})</button>
-              <button class="filter-btn" onclick="filterReview('wrong', this)">Incorrect (${wrong})</button>
-              <button class="filter-btn" onclick="filterReview('unattempted', this)">Skipped (${unattempted})</button>
-              <button class="filter-btn" onclick="filterReview('correct', this)">Correct (${correct})</button>
+          <div class="sec-cards">
+            <div class="sec-card">
+              <div class="sec-title">Reading &amp; Writing (Modules 1 &amp; 2)</div>
+              <div class="sec-num">${rwScore}</div>
+              <div style="font-size:0.85rem;color:var(--muted)">out of 800 (${result.rwCorrect !== undefined ? result.rwCorrect : (details.filter(d => d.section === 'rw' && d.status === 'correct').length)} correct)</div>
+            </div>
+            <div class="sec-card">
+              <div class="sec-title">Math (Modules 1 &amp; 2)</div>
+              <div class="sec-num">${mathScore}</div>
+              <div style="font-size:0.85rem;color:var(--muted)">out of 800 (${result.mathCorrect !== undefined ? result.mathCorrect : (details.filter(d => d.section === 'math' && d.status === 'correct').length)} correct)</div>
             </div>
           </div>
 
-          <div id="reviewContainer">
-            ${details.map((d, idx) => renderReviewItem(d, idx)).join('')}
+          <div class="stats-row">
+            <div class="stat-card"><div class="num">${correct + wrong}</div><div class="lbl">Attempted</div></div>
+            <div class="stat-card c"><div class="num">${correct}</div><div class="lbl">Correct</div></div>
+            <div class="stat-card w"><div class="num">${wrong}</div><div class="lbl">Wrong</div></div>
+            <div class="stat-card s"><div class="num">${unattempted}</div><div class="lbl">Skipped</div></div>
+            <div class="stat-card"><div class="num">${pct}%</div><div class="lbl">Accuracy</div></div>
           </div>
-        </div>
 
-        <div style="display:flex;gap:14px;justify-content:center;margin:32px 0 60px;flex-wrap:wrap;">
-          <button class="nav-btn primary" onclick="downloadPDF()">📄 Download PDF Report</button>
-          <button class="nav-btn" onclick="location.reload()">🔄 Retake Hard Mock 1</button>
-          <a href="../index.html" class="nav-btn" style="text-decoration:none">← Back to Dashboard</a>
-        </div>
-      `;
+          <div class="charts-row">
+            <div class="chart-card">
+              <h3>Score Breakdown</h3>
+              <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-card">
+              <h3>Skill &amp; Domain Accuracy</h3>
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
 
-      // Doughnut Chart
-      new Chart($('pieChart'), {
-        type: 'doughnut',
-        data: {
-          labels: ['Correct', 'Wrong', 'Skipped'],
-          datasets: [{
-            data: [correct, wrong, unattempted],
-            backgroundColor: ['#059669', '#dc2626', '#d97706'],
-            borderWidth: 0, hoverOffset: 4
-          }]
-        },
-        options: { plugins: { legend: { position: 'bottom' } }, cutout: '65%' }
-      });
+          <div class="topic-tbl">
+            <h3>Domain &amp; Skill Performance</h3>
+            <table class="data-table">
+              <thead>
+                <tr><th>Topic</th><th>Total</th><th>✓ Correct</th><th>✗ Wrong</th><th>Accuracy</th></tr>
+              </thead>
+              <tbody>
+                ${(topicAnalysis || []).map(t => `
+                  <tr>
+                    <td><strong>${t.name}</strong></td>
+                    <td>${t.total}</td>
+                    <td style="color:var(--green);font-weight:600;">${t.correct}</td>
+                    <td style="color:var(--red);font-weight:600;">${t.wrong}</td>
+                    <td><strong>${t.acc}%</strong></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
 
-      // Bar Chart for Top 12 Topics
-      const sortedTopics = [...topicAnalysis].sort((a, b) => b.total - a.total).slice(0, 12);
-      new Chart($('barChart'), {
-        type: 'bar',
-        data: {
-          labels: sortedTopics.map(t => t.name.length > 20 ? t.name.substring(0, 18) + '…' : t.name),
-          datasets: [{
-            label: 'Accuracy %',
-            data: sortedTopics.map(t => t.acc),
-            backgroundColor: sortedTopics.map(t => t.acc >= 70 ? 'rgba(5,150,105,0.25)' : t.acc >= 40 ? 'rgba(217,119,6,0.25)' : 'rgba(220,38,38,0.25)'),
-            borderColor: sortedTopics.map(t => t.acc >= 70 ? '#059669' : t.acc >= 40 ? '#d97706' : '#dc2626'),
-            borderWidth: 1.5, borderRadius: 4
-          }]
-        },
-        options: {
-          indexAxis: 'y',
-          plugins: { legend: { display: false } },
-          scales: { x: { max: 100, ticks: { callback: v => v + '%' } } }
+          <!-- Question-by-Question Review -->
+          <div class="review-sec">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+              <h3>Detailed Question Review</h3>
+              <div class="review-filter">
+                <button class="filter-btn active" onclick="filterReview('all', this)">All (${details.length})</button>
+                <button class="filter-btn" onclick="filterReview('wrong', this)">Incorrect (${wrong})</button>
+                <button class="filter-btn" onclick="filterReview('unattempted', this)">Skipped (${unattempted})</button>
+                <button class="filter-btn" onclick="filterReview('correct', this)">Correct (${correct})</button>
+              </div>
+            </div>
+
+            <div id="reviewContainer">
+              ${details.map((d, idx) => renderReviewItem(d, idx)).join('')}
+            </div>
+          </div>
+
+          <div style="display:flex;gap:14px;justify-content:center;margin:32px 0 60px;flex-wrap:wrap;">
+            <button class="nav-btn primary" onclick="downloadPDF()">📄 Download PDF Report</button>
+            <button class="nav-btn" onclick="location.reload()">🔄 Retake Hard Mock 2</button>
+            <a href="../index.html" class="nav-btn" style="text-decoration:none">🏠 Back to Home</a>
+          </div>
+        `;
+
+        // Doughnut Chart
+        try {
+          if (typeof Chart !== 'undefined' && $('pieChart')) {
+            new Chart($('pieChart'), {
+              type: 'doughnut',
+              data: {
+                labels: ['Correct', 'Wrong', 'Skipped'],
+                datasets: [{
+                  data: [correct, wrong, unattempted],
+                  backgroundColor: ['#059669', '#dc2626', '#d97706'],
+                  borderWidth: 0, hoverOffset: 4
+                }]
+              },
+              options: { plugins: { legend: { position: 'bottom' } }, cutout: '65%' }
+            });
+          }
+        } catch (e) {
+          console.warn('Pie chart render warning:', e);
         }
-      });
 
-      if (window.MathJax && MathJax.typesetPromise) {
-        MathJax.typesetPromise([$('resWrap')]).catch(e => console.warn('MathJax:', e));
+        // Bar Chart for Top 12 Topics
+        try {
+          if (typeof Chart !== 'undefined' && $('barChart')) {
+            const sortedTopics = [...(topicAnalysis || [])].sort((a, b) => b.total - a.total).slice(0, 12);
+            new Chart($('barChart'), {
+              type: 'bar',
+              data: {
+                labels: sortedTopics.map(t => t.name.length > 20 ? t.name.substring(0, 18) + '…' : t.name),
+                datasets: [{
+                  label: 'Accuracy %',
+                  data: sortedTopics.map(t => t.acc),
+                  backgroundColor: sortedTopics.map(t => t.acc >= 70 ? 'rgba(5,150,105,0.25)' : t.acc >= 40 ? 'rgba(217,119,6,0.25)' : 'rgba(220,38,38,0.25)'),
+                  borderColor: sortedTopics.map(t => t.acc >= 70 ? '#059669' : t.acc >= 40 ? '#d97706' : '#dc2626'),
+                  borderWidth: 1.5, borderRadius: 4
+                }]
+              },
+              options: {
+                indexAxis: 'y',
+                plugins: { legend: { display: false } },
+                scales: { x: { max: 100, ticks: { callback: v => v + '%' } } }
+              }
+            });
+          }
+        } catch (e) {
+          console.warn('Bar chart render warning:', e);
+        }
+
+        // Trigger MathJax LaTeX rendering across the entire results container
+        renderMath($('resWrap'));
+
+      } catch (err) {
+        console.error('Error rendering results dashboard:', err);
+        const wrap = $('resWrap');
+        if (wrap) {
+          wrap.innerHTML = `
+            <div class="res-hero">
+              <div class="sat-score">${result.scaled || 0}</div>
+              <div class="score-line">Estimated SAT Score · ${result.correct || 0} / ${result.total || 0} Correct</div>
+              <p style="color:#ef4444; margin-top:12px;">Notice: Could not load the full interactive review (${escapeHtml(err.message)}). Please refresh to try again.</p>
+            </div>
+          `;
+        }
       }
     }
 
@@ -1760,39 +1847,43 @@
       if (d.isFillIn) {
         const chosenStr = d.chosen !== undefined && d.chosen !== null && String(d.chosen).trim() !== '' ? String(d.chosen) : 'None';
         const correctStr = d.fillAnswer || (d.acceptedAnswers && d.acceptedAnswers[0]) || '–';
+        const isCorrect = d.status === 'correct';
+        const isWrong = d.status === 'wrong';
+
         ansHtml = `
-          <div style="background:#f8fafc; border:1.5px solid ${d.status === 'correct' ? '#10b981' : d.status === 'wrong' ? '#ef4444' : '#f59e0b'}; border-radius:10px; padding:14px 18px; margin:14px 0;">
+          <div style="background:#f8fafc; border:1.5px solid ${isCorrect ? '#10b981' : isWrong ? '#ef4444' : '#f59e0b'}; border-radius:10px; padding:14px 18px; margin:14px 0;">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:0.92rem;">
               <div>
-                <span style="color:#64748b; font-weight:600;">Your Selected Answer:</span> 
-                <span style="font-family:'IBM Plex Mono',monospace; font-weight:700; color:${d.status === 'correct' ? '#059669' : '#dc2626'};">
+                <span style="color:#64748b; font-weight:600;">Your Marked Answer:</span> 
+                <span style="font-family:'IBM Plex Mono',monospace; font-weight:700; color:${isCorrect ? '#059669' : '#dc2626'};">
                   ${d.status === 'unattempted' ? 'Skipped (Unattempted)' : escapeHtml(chosenStr)}
                 </span>
+                ${isCorrect ? '<span style="margin-left:8px; background:#dcfce7; color:#15803d; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px;">✓ Correct (+1 Mark)</span>' : isWrong ? '<span style="margin-left:8px; background:#fee2e2; color:#b91c1c; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px;">✗ Incorrect (0 Marks)</span>' : '<span style="margin-left:8px; background:#fef3c7; color:#92400e; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px;">➖ Skipped (0 Marks)</span>'}
               </div>
               <div>
                 <span style="color:#64748b; font-weight:600;">Official Correct Answer:</span> 
                 <span style="font-family:'IBM Plex Mono',monospace; font-weight:700; color:#059669;">
                   ${escapeHtml(correctStr)}
                 </span>
-                ${d.acceptedAnswers && d.acceptedAnswers.length > 1 ? `<span style="color:#64748b; font-size:0.8rem;">(Accepted: ${d.acceptedAnswers.join(', ')})</span>` : ''}
+                ${d.acceptedAnswers && d.acceptedAnswers.length > 1 ? `<span style="color:#64748b; font-size:0.8rem; margin-left:6px;">(Accepted: ${d.acceptedAnswers.join(', ')})</span>` : ''}
               </div>
             </div>
           </div>
         `;
       } else {
-        const chosenLetter = d.chosen !== undefined && d.chosen !== null ? LETTERS[d.chosen] : null;
-        const correctLetter = LETTERS[d.answer];
+        const chosenLetter = d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? LETTERS[d.chosen] : null;
+        const correctLetter = LETTERS[d.answer] || '–';
 
         // 1. Comparison Summary Banner
         const summaryBanner = `
           <div style="display:flex; justify-content:space-between; align-items:center; background:#f1f5f9; border-radius:8px; padding:10px 16px; margin:14px 0 12px; font-size:0.88rem; flex-wrap:wrap; gap:10px;">
             <div>
-              <span style="color:#475569; font-weight:600;">Your Selected Option:</span>
+              <span style="color:#475569; font-weight:600;">Your Marked Answer:</span>
               ${d.status === 'correct' 
-                ? `<strong style="color:#059669; margin-left:6px;">Choice ${chosenLetter} ✓ (Correct)</strong>` 
+                ? `<strong style="color:#059669; margin-left:6px;">Choice ${chosenLetter} ✓ (Correct, +1 Mark)</strong>` 
                 : d.status === 'wrong'
-                ? `<strong style="color:#dc2626; margin-left:6px;">Choice ${chosenLetter} ✗ (Incorrect)</strong>`
-                : `<strong style="color:#d97706; margin-left:6px;">Skipped / Unattempted</strong>`
+                ? `<strong style="color:#dc2626; margin-left:6px;">Choice ${chosenLetter} ✗ (Incorrect, 0 Marks)</strong>`
+                : `<strong style="color:#d97706; margin-left:6px;">Skipped / Unattempted (0 Marks)</strong>`
               }
             </div>
             <div>
@@ -1802,10 +1893,10 @@
           </div>
         `;
 
-        // 2. Full 4-Option Cards List
+        // 2. Full 4-Option Cards List with LaTeX Math support
         const optsListHtml = `
           <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
-            ${d.options.map((optText, optIdx) => {
+            ${(d.options || []).map((optText, optIdx) => {
               const isCorrect = optIdx === d.answer;
               const isSelected = optIdx === d.chosen;
 
@@ -1834,9 +1925,9 @@
               return `
                 <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; border:1.5px solid ${cardBorder}; background:${cardBg}; color:${cardColor}; border-radius:8px; font-size:0.92rem;">
                   <div style="width:26px; height:26px; border-radius:50%; background:${isCorrect ? '#16a34a' : isSelected ? '#dc2626' : '#e2e8f0'}; color:${isCorrect || isSelected ? '#fff' : '#475569'}; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.82rem; flex-shrink:0;">
-                    ${LETTERS[optIdx]}
+                    ${LETTERS[optIdx] || optIdx + 1}
                   </div>
-                  <div style="flex:1; line-height:1.45;">${escapeHtml(optText)}</div>
+                  <div style="flex:1; line-height:1.45;">${optText}</div>
                   ${badgeHtml}
                 </div>
               `;
@@ -1847,22 +1938,37 @@
         ansHtml = summaryBanner + optsListHtml;
       }
 
+      // Check for standalone diagrams/images
+      let imgHtml = '';
+      const imgSrc = typeof d.image === 'string' ? d.image : (d.image && d.image.file ? d.image.file : (d.imageKey || d.diagram || ''));
+      if (imgSrc && (!d.text || !d.text.includes(imgSrc))) {
+        imgHtml = `
+          <div class="diagram-wrapper" style="text-align:center; margin:16px 0;">
+            <img src="${imgSrc}" alt="Question Diagram" style="max-width:100%; max-height:340px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);" />
+          </div>
+        `;
+      }
+
+      const modNum = d.module ? (d.module > 2 ? d.module - 2 : d.module) : 1;
+      const secLabel = d.section === 'rw' ? 'Reading & Writing' : 'Math';
+
       return `
         <div class="review-item ${d.status}" data-status="${d.status}">
           <div class="ri-header">
             <div>
               <span style="font-size:0.95rem; font-weight:800; color:#0f172a;">Question ${idx + 1}</span>
-              <span style="color:#64748b; font-size:0.85rem; font-weight:500; margin-left:8px;">· ${d.section === 'rw' ? 'Reading & Writing' : 'Math'} (Module ${d.module > 2 ? d.module - 2 : d.module})</span>
+              <span style="color:#64748b; font-size:0.85rem; font-weight:500; margin-left:8px;">· ${secLabel} (Module ${modNum})</span>
             </div>
             <span style="color:${d.status === 'correct' ? '#059669' : d.status === 'wrong' ? '#dc2626' : '#d97706'}; font-weight:700; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">
-              ${d.status === 'correct' ? '✓ Correct' : d.status === 'wrong' ? '✗ Incorrect' : '➖ Skipped'}
+              ${d.status === 'correct' ? '✓ Correct (+1)' : d.status === 'wrong' ? '✗ Incorrect (0)' : '➖ Skipped (0)'}
             </span>
           </div>
           <div class="ri-prompt">${d.text}</div>
+          ${imgHtml}
           ${ansHtml}
           <div class="ri-exp" style="margin-top:10px;">
             <strong style="display:block; margin-bottom:4px;">💡 Detailed Solution &amp; Explanation:</strong> 
-            ${escapeHtml(sanitizeExplanation(d.explanation))}
+            <div>${sanitizeExplanation(d.explanation)}</div>
           </div>
         </div>
       `;
@@ -1882,7 +1988,7 @@
     }
 
     function downloadPDF() {
-      const result = JSON.parse(sessionStorage.getItem('result'));
+      const result = JSON.parse(sessionStorage.getItem('result') || sessionStorage.getItem(sKey('result')));
       if (result && typeof generatePDFReport === 'function') {
         generatePDFReport(result, true);
       } else {

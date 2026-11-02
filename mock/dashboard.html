@@ -5,14 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Dashboard – EduQuest SAT</title>
-  <meta name="description" content="View your SAT topic test history, individual results, and combined performance reports.">
+  <meta name="description"
+    content="View your SAT topic test history, individual results, and combined performance reports.">
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0 }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
     body {
       font-family: 'IBM Plex Sans', sans-serif;
@@ -241,9 +246,23 @@
       font-weight: 600
     }
 
-    .score-pill.high { background: rgba(5, 150, 105, 0.15); color: #6ee7b7; border: 1px solid rgba(5, 150, 105, 0.3) }
-    .score-pill.mid { background: rgba(217, 119, 6, 0.15); color: #fbbf24; border: 1px solid rgba(217, 119, 6, 0.3) }
-    .score-pill.low { background: rgba(220, 38, 38, 0.15); color: #f87171; border: 1px solid rgba(220, 38, 38, 0.3) }
+    .score-pill.high {
+      background: rgba(5, 150, 105, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(5, 150, 105, 0.3)
+    }
+
+    .score-pill.mid {
+      background: rgba(217, 119, 6, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(217, 119, 6, 0.3)
+    }
+
+    .score-pill.low {
+      background: rgba(220, 38, 38, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(220, 38, 38, 0.3)
+    }
 
     .grade-badge {
       display: inline-flex;
@@ -257,12 +276,31 @@
       font-family: 'Syne', sans-serif
     }
 
-    .grade-badge.a { background: rgba(5, 150, 105, 0.2); color: #6ee7b7 }
-    .grade-badge.b { background: rgba(96, 165, 250, 0.2); color: #93c5fd }
-    .grade-badge.c { background: rgba(217, 119, 6, 0.2); color: #fbbf24 }
-    .grade-badge.d { background: rgba(220, 38, 38, 0.2); color: #f87171 }
+    .grade-badge.a {
+      background: rgba(5, 150, 105, 0.2);
+      color: #6ee7b7
+    }
 
-    .check-col { width: 40px; text-align: center }
+    .grade-badge.b {
+      background: rgba(96, 165, 250, 0.2);
+      color: #93c5fd
+    }
+
+    .grade-badge.c {
+      background: rgba(217, 119, 6, 0.2);
+      color: #fbbf24
+    }
+
+    .grade-badge.d {
+      background: rgba(220, 38, 38, 0.2);
+      color: #f87171
+    }
+
+    .check-col {
+      width: 40px;
+      text-align: center
+    }
+
     .check-col input[type="checkbox"] {
       width: 16px;
       height: 16px;
@@ -346,8 +384,15 @@
     }
 
     @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(16px) }
-      to { opacity: 1; transform: translateY(0) }
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
     }
 
     .combined-report .report-title {
@@ -384,11 +429,25 @@
       font-weight: 800
     }
 
-    .cstat .cn.green { color: #6ee7b7 }
-    .cstat .cn.red { color: #f87171 }
-    .cstat .cn.amber { color: #fbbf24 }
-    .cstat .cn.blue { color: #93c5fd }
-    .cstat .cn.purple { color: #a78bfa }
+    .cstat .cn.green {
+      color: #6ee7b7
+    }
+
+    .cstat .cn.red {
+      color: #f87171
+    }
+
+    .cstat .cn.amber {
+      color: #fbbf24
+    }
+
+    .cstat .cn.blue {
+      color: #93c5fd
+    }
+
+    .cstat .cn.purple {
+      color: #a78bfa
+    }
 
     .cstat .cl {
       font-size: 0.72rem;
@@ -487,9 +546,18 @@
       animation: fadeSlide 0.3s ease
     }
 
-    .modal-box::-webkit-scrollbar { width: 6px }
-    .modal-box::-webkit-scrollbar-track { background: transparent }
-    .modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px }
+    .modal-box::-webkit-scrollbar {
+      width: 6px
+    }
+
+    .modal-box::-webkit-scrollbar-track {
+      background: transparent
+    }
+
+    .modal-box::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px
+    }
 
     .modal-hdr {
       display: flex;
@@ -589,9 +657,20 @@
       margin-left: 6px
     }
 
-    .q-status.correct { background: rgba(5,150,105,0.15); color: #6ee7b7 }
-    .q-status.wrong { background: rgba(220,38,38,0.15); color: #f87171 }
-    .q-status.unattempted { background: rgba(217,119,6,0.15); color: #fbbf24 }
+    .q-status.correct {
+      background: rgba(5, 150, 105, 0.15);
+      color: #6ee7b7
+    }
+
+    .q-status.wrong {
+      background: rgba(220, 38, 38, 0.15);
+      color: #f87171
+    }
+
+    .q-status.unattempted {
+      background: rgba(217, 119, 6, 0.15);
+      color: #fbbf24
+    }
 
     .q-detail {
       margin-top: 4px;
@@ -607,12 +686,14 @@
       margin-bottom: 16px;
       text-align: left;
     }
+
     .q-card-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 10px;
     }
+
     .q-card-text {
       font-size: 0.9rem;
       line-height: 1.5;
@@ -621,6 +702,7 @@
       white-space: pre-wrap;
       text-align: left;
     }
+
     .q-image-container {
       text-align: center;
       margin-bottom: 14px;
@@ -629,17 +711,20 @@
       padding: 10px;
       border: 1px dashed rgba(255, 255, 255, 0.1);
     }
+
     .q-image-container img {
       max-width: 100%;
       height: auto;
       border-radius: 4px;
     }
+
     .q-card-opts {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-bottom: 12px;
     }
+
     .q-card-opt {
       display: flex;
       align-items: center;
@@ -652,6 +737,7 @@
       transition: all 0.2s;
       text-align: left;
     }
+
     .q-card-opt-letter {
       display: flex;
       align-items: center;
@@ -664,24 +750,29 @@
       font-size: 0.75rem;
       flex-shrink: 0;
     }
+
     .q-card-opt.correct {
       border-color: #059669;
       background: rgba(5, 150, 105, 0.1);
       color: #6ee7b7;
     }
+
     .q-card-opt.correct .q-card-opt-letter {
       background: #059669;
       color: #fff;
     }
+
     .q-card-opt.wrong-chosen {
       border-color: #dc2626;
       background: rgba(220, 38, 38, 0.1);
       color: #f87171;
     }
+
     .q-card-opt.wrong-chosen .q-card-opt-letter {
       background: #dc2626;
       color: #fff;
     }
+
     .q-card-exp {
       background: rgba(124, 58, 237, 0.05);
       border-left: 3px solid #7c3aed;
@@ -730,27 +821,72 @@
     }
 
     @keyframes spin {
-      to { transform: rotate(360deg) }
+      to {
+        transform: rotate(360deg)
+      }
     }
 
     /* ── Responsive ────────────────────────── */
     @media (max-width: 768px) {
-      .charts-grid { grid-template-columns: 1fr }
-      .modal-stats { grid-template-columns: repeat(2, 1fr) }
-      .history-table { font-size: 0.8rem }
-      .history-table td, .history-table th { padding: 10px 10px }
-      .hdr { padding: 0 14px }
-      .page-title { font-size: 1.4rem }
-      .wrap { padding: 20px 14px 40px }
-      .stat-card .num { font-size: 1.5rem }
-      .history-card { overflow-x: auto }
-      .portal-switcher { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-      .portal-btn { justify-content: center; padding: 10px 12px; font-size: 0.85rem; }
+      .charts-grid {
+        grid-template-columns: 1fr
+      }
+
+      .modal-stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .history-table {
+        font-size: 0.8rem
+      }
+
+      .history-table td,
+      .history-table th {
+        padding: 10px 10px
+      }
+
+      .hdr {
+        padding: 0 14px
+      }
+
+      .page-title {
+        font-size: 1.4rem
+      }
+
+      .wrap {
+        padding: 20px 14px 40px
+      }
+
+      .stat-card .num {
+        font-size: 1.5rem
+      }
+
+      .history-card {
+        overflow-x: auto
+      }
+
+      .portal-switcher {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .portal-btn {
+        justify-content: center;
+        padding: 10px 12px;
+        font-size: 0.85rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .stats-row { grid-template-columns: repeat(2, 1fr) }
-      .hdr-email { display: none }
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .hdr-email {
+        display: none
+      }
     }
 
     /* Portal Switcher */
@@ -764,6 +900,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       width: fit-content;
     }
+
     .portal-btn {
       background: transparent;
       border: none;
@@ -779,15 +916,18 @@
       align-items: center;
       gap: 8px;
     }
+
     .portal-btn.active {
       background: #1a56db;
       color: #fff;
       box-shadow: 0 4px 15px rgba(26, 86, 219, 0.4);
     }
+
     .portal-btn:hover:not(.active) {
       background: rgba(255, 255, 255, 0.06);
       color: #fff;
     }
+
     .tmua-locked-box {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -797,6 +937,7 @@
       max-width: 550px;
       margin: 40px auto;
     }
+
     .tmua-test-card {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -809,24 +950,49 @@
       cursor: pointer;
       transition: all 0.2s;
     }
+
     .tmua-test-card:hover {
       border-color: rgba(255, 255, 255, 0.2);
       transform: translateY(-2px);
     }
   </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
 
   <!-- ── Header ──────────────────────────── -->
   <header class="hdr">
-    <div class="brand">
-      <span>📝</span><span>EduQuest</span>
-      <span class="brand-pill">Dashboard</span>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a href="../index.html" class="brand"
+        style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:10px;">
+        <span>📝</span>
+        <span style="font-weight:800; letter-spacing:-0.02em;">EduQuest</span>
+        <span class="brand-pill">Dashboard</span>
+      </a>
+      <nav class="hdr-nav" style="display:flex; align-items:center; gap:8px;">
+        <a href="../index.html" class="hdr-link">🏠 Topic Tests</a>
+        <a href="../index.html" class="hdr-link">🎯 Full Mocks</a>
+        <a href="/mock/dashboard.html" class="hdr-link active"
+          style="background:rgba(96,165,250,0.2); border-color:#60a5fa; color:#93c5fd; font-weight:600;">📊
+          Dashboard</a>
+      </nav>
     </div>
-    <div class="hdr-right">
+    <div class="hdr-right" style="display:flex; align-items:center; gap:12px;">
       <span class="hdr-email" id="userEmail"></span>
-      <a href="index.html" class="hdr-link">🏠 Home</a>
       <button class="logout-btn" id="logoutBtn">Logout</button>
     </div>
   </header>
@@ -851,11 +1017,14 @@
       <!-- Locked State Box -->
       <div id="stuLockedState" style="display:none" class="tmua-locked-box">
         <div style="font-size: 3.5rem; margin-bottom: 16px;">🔒</div>
-        <h2 style="font-family: 'Syne', sans-serif; font-size: 1.6rem; margin-bottom: 12px;" id="stuLockedTitle">Portal Locked</h2>
+        <h2 style="font-family: 'Syne', sans-serif; font-size: 1.6rem; margin-bottom: 12px;" id="stuLockedTitle">Portal
+          Locked</h2>
         <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 24px;" id="stuLockedText">
-          Your account currently does not have active access to these practice tests. Please request access from your instructor or admin.
+          Your account currently does not have active access to these practice tests. Please request access from your
+          instructor or admin.
         </p>
-        <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: #93c5fd; display: inline-block;">
+        <div
+          style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: #93c5fd; display: inline-block;">
           Admin Email: <strong>rupali.eduquest@gmail.com</strong>
         </div>
       </div>
@@ -891,7 +1060,8 @@
           <div class="combine-bar">
             <span class="selected-count" id="selCount">0 selected</span>
             <button class="btn btn-outline" id="selectAllBtn" onclick="toggleSelectAll()">Select All</button>
-            <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined Report</button>
+            <button class="btn btn-primary" id="combineBtn" disabled onclick="generateCombinedReport()">📊 Combined
+              Report</button>
           </div>
         </div>
 
@@ -961,23 +1131,103 @@
     async function fetchAllUserReports(email) {
       document.getElementById('historyContent').innerHTML = `<div class="loading-spinner">Loading your tests...</div>`;
       const cleanEmail = (email || '').toLowerCase().trim();
+      const userId = (currentSession && currentSession.user) ? currentSession.user.id : null;
+
+      async function safeFetch(tableName, candidateCols = ['email', 'student_email']) {
+        let results = [];
+        try {
+          if (cleanEmail) {
+            for (const col of candidateCols) {
+              const { data, error } = await supabaseClient
+                .from(tableName)
+                .select('*')
+                .ilike(col, cleanEmail);
+              if (!error && Array.isArray(data) && data.length > 0) {
+                results = results.concat(data);
+              }
+            }
+          }
+          if (userId && results.length === 0) {
+            const { data, error } = await supabaseClient
+              .from(tableName)
+              .select('*')
+              .eq('user_id', userId);
+            if (!error && Array.isArray(data) && data.length > 0) {
+              results = results.concat(data);
+            }
+          }
+        } catch (err) {
+          console.warn(`Safe fetch warning for ${tableName}:`, err);
+        }
+        const unique = [];
+        const seen = new Set();
+        results.forEach(r => {
+          const key = r.id ? String(r.id) : JSON.stringify(r);
+          if (!seen.has(key)) {
+            seen.add(key);
+            unique.push(r);
+          }
+        });
+        return unique;
+      }
 
       try {
-        const [mockRes, topicRes, tmuaRes, ucatRes, actRes, apRes] = await Promise.all([
-          supabaseClient.from('sat_reports').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('sat_topic_report').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('tmua_report').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('Ucat_diagnosis').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('act_results').select('*').ilike('email', cleanEmail),
-          supabaseClient.from('ap_report').select('*').ilike('email', cleanEmail)
+        const [satResultsData, topicReportData, tmuaData, ucatData, actData, apData] = await Promise.all([
+          safeFetch('sat_results', ['student_email', 'email']),
+          safeFetch('sat_topic_report', ['email', 'student_email']),
+          safeFetch('tmua_report', ['email', 'student_email']),
+          safeFetch('Ucat_diagnosis', ['email', 'student_email']),
+          safeFetch('act_results', ['student_email', 'email']),
+          safeFetch('ap_report', ['email', 'student_email'])
         ]);
 
-        allRawReports.mock = (mockRes.data || []).map(r => ({ ...r, portal: 'mock', exam_type: 'SAT Mock' }));
-        allRawReports.topic = (topicRes.data || []).map(r => ({ ...r, portal: 'topic', exam_type: 'SAT Topic' }));
-        allRawReports.tmua = (tmuaRes.data || []).map(r => ({ ...r, portal: 'tmua', exam_type: 'TMUA' }));
-        allRawReports.ucat = (ucatRes.data || []).map(r => ({ ...r, portal: 'ucat', exam_type: 'UCAT' }));
-        allRawReports.act = (actRes.data || []).map(r => ({ ...r, portal: 'act', exam_type: 'ACT' }));
-        allRawReports.ap = (apRes.data || []).map(r => ({ ...r, portal: 'ap', exam_type: 'AP' }));
+        const rawSatAll = [...satResultsData, ...topicReportData];
+        const deduppedSat = [];
+        rawSatAll.forEach(r => {
+          const isDup = deduppedSat.some(d =>
+            (d.id && r.id && String(d.id) === String(r.id)) ||
+            ((d.exam_name || d.topic) === (r.exam_name || r.topic) && Math.abs(new Date(d.submitted_at || d.submit_time || d.created_at || 0) - new Date(r.submitted_at || r.submit_time || r.created_at || 0)) < 10000)
+          );
+          if (!isDup) deduppedSat.push(r);
+        });
+
+        const mockList = [];
+        const topicList = [];
+
+        deduppedSat.forEach(r => {
+          const tName = (r.exam_name || r.topic || '').toUpperCase();
+          const isM = tName.includes('MOCK') || tName.includes('DIAGNOSTIC') || tName.includes('FULL') || tName.includes('PRACTICE') || tName.includes('PREP TEST') || r.sat_score !== undefined;
+          if (isM) {
+            mockList.push({
+              ...r,
+              portal: 'mock',
+              exam_type: 'SAT Mock',
+              topic: r.exam_name || r.topic || 'SAT Full Mock Test',
+              submit_time: r.submitted_at || r.submit_time || r.created_at,
+              pct: r.percentage !== undefined ? r.percentage : r.pct,
+              scaled: r.sat_score || r.composite_score || r.scaled || '–',
+              details: r.details_json ? (typeof r.details_json === 'string' ? JSON.parse(r.details_json) : r.details_json) : (r.details || [])
+            });
+          } else {
+            topicList.push({
+              ...r,
+              portal: 'topic',
+              exam_type: 'SAT Topic',
+              topic: r.topic || r.exam_name || 'SAT Topic Test',
+              submit_time: r.submit_time || r.submitted_at || r.created_at,
+              pct: r.pct !== undefined ? r.pct : r.percentage,
+              scaled: r.scaled || r.sat_score || r.composite_score || '–',
+              details: r.details_json ? (typeof r.details_json === 'string' ? JSON.parse(r.details_json) : r.details_json) : (r.details || [])
+            });
+          }
+        });
+
+        allRawReports.mock = mockList;
+        allRawReports.topic = topicList;
+        allRawReports.tmua = (tmuaData || []).map(r => ({ ...r, portal: 'tmua', exam_type: 'TMUA', topic: r.topic || 'TMUA Test', submit_time: r.submit_time, pct: r.pct, scaled: r.scaled || '–' }));
+        allRawReports.ucat = (ucatData || []).map(r => ({ ...r, portal: 'ucat', exam_type: 'UCAT', topic: r.topic || 'UCAT Test', submit_time: r.submit_time, pct: r.pct, scaled: r.scaled || '–' }));
+        allRawReports.act = (actData || []).map(r => ({ ...r, portal: 'act', exam_type: 'ACT', topic: r.exam_name || 'ACT Test', submit_time: r.submitted_at, pct: r.percentage, scaled: r.composite_score || '–' }));
+        allRawReports.ap = (apData || []).map(r => ({ ...r, portal: 'ap', exam_type: 'AP', topic: r.topic || 'AP Test', submit_time: r.submit_time, pct: r.pct, scaled: r.scaled || '–' }));
       } catch (err) {
         console.error("Error fetching student reports:", err);
       }
@@ -1031,6 +1281,10 @@
             <div class="empty-icon">📝</div>
             <h3>No Tests Found</h3>
             <p>You haven't completed any tests in this section yet.</p>
+            <div style="display:flex; gap:12px; justify-content:center; margin-top:16px; flex-wrap:wrap;">
+              <a href="../index.html" class="btn btn-primary" style="text-decoration:none; display:inline-block; padding:10px 18px; border-radius:8px; background:#2563eb; color:#fff; font-weight:700;">Take Topic Tests</a>
+              <a href="/mock/index.html" class="btn btn-outline" style="text-decoration:none; display:inline-block; padding:10px 18px; border-radius:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-weight:700;">Take Full Mock Tests</a>
+            </div>
           </div>
         `;
         return;
@@ -1051,11 +1305,11 @@
           </thead>
           <tbody>
             ${tests.map((t, idx) => {
-              const pct = t.percentage || t.pct || 0;
-              const dateStr = (t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' }) : '–';
-              const isChecked = selectedIds.has(idx);
-              
-              return `
+        const pct = t.percentage || t.pct || 0;
+        const dateStr = (t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '–';
+        const isChecked = selectedIds.has(idx);
+
+        return `
                 <tr style="border-bottom:1px solid rgba(255,255,255,0.05); transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.02)'" onmouseleave="this.style.background='transparent'">
                   <td style="padding:12px; text-align:center;" onclick="event.stopPropagation()">
                     <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelectTest(${idx})" style="cursor:pointer; width:16px; height:16px;" />
@@ -1074,14 +1328,14 @@
                     <span style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-left:6px;">(${t.correct || 0}/${t.total || 0})</span>
                   </td>
                   <td style="padding:12px; font-weight:700; color:#6ee7b7;" onclick="openTestDetail(${idx})">
-                    ${t.composite_score || t.scaled || '–'}
+                    ${t.sat_score || t.composite_score || t.scaled || '–'}
                   </td>
                   <td style="padding:12px; text-align:right;">
                     <button class="btn btn-outline" style="padding:4px 10px; font-size:0.8rem; cursor:pointer;" onclick="openTestDetail(${idx})">👁 View Report</button>
                   </td>
                 </tr>
               `;
-            }).join('')}
+      }).join('')}
           </tbody>
         </table>
       `;
@@ -1117,11 +1371,11 @@
       const t = allTests[testIdx];
       const pct = t.percentage || t.pct || 0;
       const scoreColor = pct >= 70 ? '#6ee7b7' : pct >= 50 ? '#fbbf24' : '#f87171';
-      
+
       let details = [];
-      try { details = JSON.parse(t.details_json || '[]'); } catch(e) {}
+      try { details = JSON.parse(t.details_json || '[]'); } catch (e) { }
       if (details.length === 0 && t.student_answers) {
-        try { details = typeof t.student_answers === 'string' ? JSON.parse(t.student_answers) : t.student_answers; } catch(e) {}
+        try { details = typeof t.student_answers === 'string' ? JSON.parse(t.student_answers) : t.student_answers; } catch (e) { }
       }
 
       const modal = document.getElementById('modalContent');
@@ -1169,7 +1423,7 @@
         });
       } else if (details.length === 0 && qs && qs.length > 0) {
         let parsedAnswers = [];
-        try { parsedAnswers = JSON.parse(t.answers_json || t.student_answers || '[]'); } catch(e) {}
+        try { parsedAnswers = JSON.parse(t.answers_json || t.student_answers || '[]'); } catch (e) { }
         details = qs.map((q, i) => {
           const chosen = parsedAnswers[i] !== undefined ? parsedAnswers[i] : -1;
           const answer = q.answer !== undefined ? q.answer : q.correctAnswer;
@@ -1190,6 +1444,11 @@
 
       currentActiveTestObj = t;
       currentActiveTestDetails = details;
+      setTimeout(() => {
+        if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+          MathJax.typesetPromise([document.getElementById('modalContent')]).catch(() => { });
+        }
+      }, 100);
 
       modal.innerHTML = `
         <div class="modal-hdr" style="display:flex; justify-content:space-between; align-items:center;">
@@ -1200,7 +1459,7 @@
           </div>
         </div>
         <div style="text-align:center;margin-bottom:8px">
-          <div style="font-family:'Syne';font-size:2.2rem;font-weight:800;color:${scoreColor}">${t.composite_score || t.scaled || '–'}</div>
+          <div style="font-family:'Syne';font-size:2.2rem;font-weight:800;color:${scoreColor}">${t.sat_score || t.composite_score || t.scaled || '–'}</div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Score · ${(t.submit_time || t.submitted_at) ? new Date(t.submit_time || t.submitted_at).toLocaleString() : '–'}</div>
         </div>
         <div class="modal-stats">
@@ -1214,21 +1473,21 @@
           <div class="q-review-hdr">📋 Question Review (${details.length} questions)</div>
           <div class="q-review-list">
           ${details.map((d, i) => {
-            const qText = d.text || d.question || d.prompt || '';
-            const hasText = !!qText;
-            const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
-            const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
-            
-            let imgSrc = '';
-            if (d.useImage && d.imageKey && imgMapping[d.imageKey]) {
-              const val = imgMapping[d.imageKey];
-              imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (dir + '/' + val);
-            }
+        const qText = d.text || d.question || d.prompt || '';
+        const hasText = !!qText;
+        const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
+        const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
 
-            return `
+        let imgSrc = '';
+        if (d.useImage && d.imageKey && imgMapping[d.imageKey]) {
+          const val = imgMapping[d.imageKey];
+          imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (dir + '/' + val);
+        }
+
+        return `
               <div class="q-card">
                 <div class="q-card-header">
-                  <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
+                  <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i + 1)}</span>
                   <span class="q-status ${statusClass}">${statusText}</span>
                 </div>
                 
@@ -1239,31 +1498,31 @@
                 ${hasText && d.options ? `
                   <div class="q-card-opts">
                     ${d.options.map((optText, optIdx) => {
-                      let optClass = '';
-                      if (optIdx === d.answer) {
-                        optClass = 'correct';
-                      }
-                      if (d.status === 'wrong' && optIdx === d.chosen) {
-                        optClass = 'wrong-chosen';
-                      }
-                      
-                      let badgeIcon = '';
-                      if (optIdx === d.answer) {
-                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
-                      } else if (d.status === 'wrong' && optIdx === d.chosen) {
-                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
-                      } else if (d.status === 'correct' && optIdx === d.chosen) {
-                        badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
-                      }
+          let optClass = '';
+          if (optIdx === d.answer) {
+            optClass = 'correct';
+          }
+          if (d.status === 'wrong' && optIdx === d.chosen) {
+            optClass = 'wrong-chosen';
+          }
 
-                      return `
+          let badgeIcon = '';
+          if (optIdx === d.answer) {
+            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
+          } else if (d.status === 'wrong' && optIdx === d.chosen) {
+            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
+          } else if (d.status === 'correct' && optIdx === d.chosen) {
+            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
+          }
+
+          return `
                         <div class="q-card-opt ${optClass}">
                           <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
                           <div class="q-card-opt-text">${optText}</div>
                           ${badgeIcon}
                         </div>
                       `;
-                    }).join('')}
+        }).join('')}
                   </div>
                 ` : `
                   <div class="q-detail" style="margin-top:8px;">
@@ -1278,7 +1537,7 @@
                 </div>
               </div>
             `;
-          }).join('')}
+      }).join('')}
           </div>
         ` : '<p style="color:rgba(255,255,255,0.3);text-align:center;padding:20px">No question details available</p>'}
       `;
@@ -1310,9 +1569,9 @@
       const testTitle = t.exam_name || t.topic || 'Practice Test Performance Report';
       const name = studentNameStr || t.name || t.student_name || (emailStr || t.email || 'Student').split('@')[0];
       const email = emailStr || t.email || '';
-      const dateStr = (t.submit_time || t.submitted_at) 
-        ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }) 
-        : new Date().toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+      const dateStr = (t.submit_time || t.submitted_at)
+        ? new Date(t.submit_time || t.submitted_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+        : new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
       const total = t.total || (details ? details.length : 0);
       const correct = t.correct || 0;
@@ -1328,12 +1587,12 @@
           const qText = d.text || d.question || d.prompt || '';
           const hasText = !!qText;
           const status = d.status || (d.chosen === d.answer ? 'correct' : (d.chosen !== undefined && d.chosen !== null && d.chosen !== -1 ? 'wrong' : 'unattempted'));
-          
+
           const statusBadge = status === 'correct'
             ? '<span style="background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">✅ Correct</span>'
             : status === 'wrong'
-            ? '<span style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">❌ Wrong</span>'
-            : '<span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">⏭ Skipped</span>';
+              ? '<span style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">❌ Wrong</span>'
+              : '<span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;">⏭ Skipped</span>';
 
           let optsHTML = '';
           if (hasText && d.options && d.options.length > 0) {
@@ -1781,7 +2040,7 @@
     function getTopicMapping(topicName) {
       if (!topicName) return null;
       const clean = topicName.trim().toLowerCase();
-      
+
       // 1. Direct or substring match against TOPIC_QUESTIONS_MAP keys
       let key = Object.keys(TOPIC_QUESTIONS_MAP).find(k => {
         const kClean = k.trim().toLowerCase();
@@ -1890,7 +2149,7 @@
                 } else {
                   resolve(null);
                 }
-              } catch(e) {
+              } catch (e) {
                 resolve(null);
               }
               document.body.removeChild(iframe);
@@ -1900,7 +2159,7 @@
               document.body.removeChild(iframe);
             };
             doc.head.appendChild(script);
-          } catch(e) {
+          } catch (e) {
             resolve(null);
           }
         };
@@ -1939,7 +2198,7 @@ return null;
               } else {
                 throw new Error("Eval did not yield array");
               }
-            } catch(e) {
+            } catch (e) {
               console.warn("Function execution failed, trying iframe loading", e);
               loadViaIframe();
             }
@@ -1975,7 +2234,7 @@ return null;
                 const imgs = iframe.contentWindow.QUESTION_IMAGES;
                 loadedImagesCache[topicName] = imgs || {};
                 resolve(imgs || {});
-              } catch(e) {
+              } catch (e) {
                 resolve({});
               }
               document.body.removeChild(iframe);
@@ -1985,7 +2244,7 @@ return null;
               document.body.removeChild(iframe);
             };
             doc.head.appendChild(script);
-          } catch(e) {
+          } catch (e) {
             resolve({});
           }
         };
@@ -2014,7 +2273,7 @@ return null;
     }
 
     // Close modal on overlay click
-    document.getElementById('testModal').addEventListener('click', function(e) {
+    document.getElementById('testModal').addEventListener('click', function (e) {
       if (e.target === this) closeModal();
     });
 
@@ -2105,14 +2364,14 @@ return null;
                 return d;
               });
             }
-            allDetails.push({ 
-              testName: t.topic || `Test ${testIndex+1}`, 
+            allDetails.push({
+              testName: t.topic || `Test ${testIndex + 1}`,
               details,
               dir: topicData ? topicData.dir : '.',
               imgMapping: topicData ? topicData.imgMapping : {}
             });
           }
-        } catch(e) {
+        } catch (e) {
           console.error("Failed to parse details for test", t, e);
         }
       });
@@ -2155,19 +2414,19 @@ return null;
             <table class="topic-breakdown">
               <thead><tr><th>Topic</th><th>Tests</th><th>Correct</th><th>Wrong</th><th>Skipped</th><th>Score</th><th>Performance</th></tr></thead>
               <tbody>${topics.map((t, i) => {
-                const d = topicMap[t];
-                const p = topicPcts[i];
-                const color = p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626';
-                return `<tr>
+        const d = topicMap[t];
+        const p = topicPcts[i];
+        const color = p >= 70 ? '#059669' : p >= 50 ? '#d97706' : '#dc2626';
+        return `<tr>
                   <td style="font-weight:600">${t}</td>
                   <td>${d.count}</td>
                   <td style="color:#6ee7b7">${d.correct}</td>
                   <td style="color:#f87171">${d.wrong}</td>
                   <td style="color:#fbbf24">${d.skipped}</td>
-                  <td><span class="score-pill ${p>=70?'high':p>=50?'mid':'low'}">${p}%</span></td>
+                  <td><span class="score-pill ${p >= 70 ? 'high' : p >= 50 ? 'mid' : 'low'}">${p}%</span></td>
                   <td><div class="perf-bar"><div class="perf-bar-fill" style="width:${p}%;background:${color}"></div></div></td>
                 </tr>`;
-              }).join('')}</tbody>
+      }).join('')}</tbody>
             </table>
           </div>
 
@@ -2200,21 +2459,21 @@ return null;
               </div>
               <div>
               ${td.details.map((d, i) => {
-                const hasText = !!d.text;
-                const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
-                const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
-                
-                // Build image source if used
-                let imgSrc = '';
-                if (d.useImage && d.imageKey && td.imgMapping[d.imageKey]) {
-                  const val = td.imgMapping[d.imageKey];
-                  imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (td.dir + '/' + val);
-                }
+        const hasText = !!d.text;
+        const statusClass = d.status === 'correct' ? 'correct' : d.status === 'wrong' ? 'wrong' : 'unattempted';
+        const statusText = d.status === 'correct' ? '✅ Correct' : d.status === 'wrong' ? '❌ Wrong' : '⏭ Skipped';
 
-                return `
+        // Build image source if used
+        let imgSrc = '';
+        if (d.useImage && d.imageKey && td.imgMapping[d.imageKey]) {
+          const val = td.imgMapping[d.imageKey];
+          imgSrc = (val.startsWith('data:') || val.startsWith('http')) ? val : (td.dir + '/' + val);
+        }
+
+        return `
                   <div class="q-card">
                     <div class="q-card-header">
-                      <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i+1)}</span>
+                      <span style="font-weight: 700; font-size: 0.95rem;">Question ${d.id || (i + 1)}</span>
                       <span class="q-status ${statusClass}">${statusText}</span>
                     </div>
                     
@@ -2225,31 +2484,31 @@ return null;
                     ${hasText && d.options ? `
                       <div class="q-card-opts">
                         ${d.options.map((optText, optIdx) => {
-                          let optClass = '';
-                          if (optIdx === d.answer) {
-                            optClass = 'correct';
-                          }
-                          if (d.status === 'wrong' && optIdx === d.chosen) {
-                            optClass = 'wrong-chosen';
-                          }
-                          
-                          let badgeIcon = '';
-                          if (optIdx === d.answer) {
-                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
-                          } else if (d.status === 'wrong' && optIdx === d.chosen) {
-                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
-                          } else if (d.status === 'correct' && optIdx === d.chosen) {
-                            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
-                          }
+          let optClass = '';
+          if (optIdx === d.answer) {
+            optClass = 'correct';
+          }
+          if (d.status === 'wrong' && optIdx === d.chosen) {
+            optClass = 'wrong-chosen';
+          }
 
-                          return `
+          let badgeIcon = '';
+          if (optIdx === d.answer) {
+            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Correct</span>';
+          } else if (d.status === 'wrong' && optIdx === d.chosen) {
+            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#ef4444;">✗ Your Choice</span>';
+          } else if (d.status === 'correct' && optIdx === d.chosen) {
+            badgeIcon = ' <span style="margin-left:auto; font-weight:bold; color:#10b981;">✓ Your Choice</span>';
+          }
+
+          return `
                             <div class="q-card-opt ${optClass}">
                               <div class="q-card-opt-letter">${LETTERS[optIdx]}</div>
                               <div class="q-card-opt-text">${optText}</div>
                               ${badgeIcon}
                             </div>
                           `;
-                        }).join('')}
+        }).join('')}
                       </div>
                     ` : `
                       <div class="q-detail" style="margin-top:8px;">
@@ -2265,7 +2524,7 @@ return null;
                     ` : ''}
                   </div>
                 `;
-              }).join('')}
+      }).join('')}
               </div>
             `).join('')}
           </div>` : ''}

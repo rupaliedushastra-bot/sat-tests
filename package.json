@@ -1,4 +1,10 @@
 {
+  "name": "sat-topic-test",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
   "dependencies": {
     "country-telephone-data": "^0.6.3",
     "nodemailer": "^6.9.0",

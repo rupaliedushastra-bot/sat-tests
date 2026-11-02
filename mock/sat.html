@@ -1077,6 +1077,31 @@
       margin-top: 8px
     }
   </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      startup: {
+        ready: () => {
+          if (window.MathJax && MathJax.startup) {
+            MathJax.startup.defaultReady();
+            const rw = document.getElementById('resWrap') || document.querySelector('.res-wrap') || document.querySelector('.test-container');
+            if (rw && rw.children.length > 0 && MathJax.typesetPromise) {
+              MathJax.typesetPromise([rw]).catch(() => {});
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -1383,6 +1408,25 @@
     }
 
     // ── Render question ───────────────────────────
+    
+function renderMath(elements) {
+  if (typeof window !== 'undefined' && window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    const targets = Array.isArray(elements) ? elements.filter(Boolean) : (elements ? [elements] : [document.body]);
+    if (targets.length > 0) {
+      MathJax.typesetPromise(targets).catch(err => console.warn('MathJax warning:', err));
+    }
+  }
+}
+
+function sanitizeExplanation(str) {
+  if (!str) return 'No detailed explanation provided.';
+  let s = String(str);
+  s = s.replace(/---\s*#*\s*ANSWER KEYS[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*R&W:\*\*[\s\S]*$/i, '').trim();
+  s = s.replace(/\*\*Routing:\*\*[\s\S]*$/i, '').trim();
+  return s;
+}
+
     function renderQ() {
       const qObj = q();
       const qs = modQuestions();
@@ -1417,6 +1461,7 @@
       $('btnSubmit').style.display = isLast ? 'inline-flex' : 'none';
       $('btnSubmit').textContent = currentMod < MODULES.length - 1 ? '⏭ End Module' : '🏁 Submit Test';
       syncPalette();
+      renderMath([$('qText'), $('qOpts')]);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -1545,6 +1590,7 @@
       sessionStorage.removeItem(sKey('timerEnd'));
       sessionStorage.removeItem('timerEnd');
       showPage('pageResult');
+      if ($('hdrModule')) $('hdrModule').textContent = ' · Score Report';
       $('timerBox').style.display = 'none';
       renderResults(result);
 
@@ -1624,30 +1670,88 @@
     </div>
 
     <div class="inc-review">
-      <h3>📝 Complete Questions &amp; Answers Review (${total})</h3>
-      <div>
-        ${details.map(qObj => `
-          <div class="inc-q">
-            <h4>Q${qObj.id} [${qObj.topic}]: ${qObj.text.substring(0, 120)}${qObj.text.length > 120 ? '…' : ''}</h4>
-            ${qObj.image ? `<div style="margin-bottom:10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px;text-align:center">
-              <img src="${qObj.image}" class="review-img" style="max-width:100%;max-height:350px;width:auto;object-fit:contain;border-radius:4px;display:block;margin:0 auto;cursor:zoom-in;transition:max-height .3s ease" alt="diagram">
-            </div>` : ''}
-            ${qObj.status === 'unattempted'
-          ? `<div class="inc-row" style="color:var(--amber)"><span class="label">➖ Your answer:</span><span>Skipped</span></div>
-                 <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[qObj.answer]}) ${qObj.options[qObj.answer]}</span></div>`
-          : qObj.status === 'correct'
-            ? `<div class="inc-row right"><span class="label">✅ Your answer:</span><span>(${LETTERS[qObj.chosen]}) ${qObj.options[qObj.chosen]} (Correct)</span></div>`
-            : `<div class="inc-row wrong"><span class="label">❌ Your answer:</span><span>(${LETTERS[qObj.chosen]}) ${qObj.options[qObj.chosen]}</span></div>
-                   <div class="inc-row right"><span class="label">✅ Correct:</span><span>(${LETTERS[qObj.answer]}) ${qObj.options[qObj.answer]}</span></div>`
-        }
-          </div>`).join('')}
+      <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:16px;">📝 Complete Questions &amp; Answers Review (${total} Questions)</h3>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        ${details.map((qObj, idx) => {
+          const chosenLetter = qObj.chosen !== undefined && qObj.chosen !== null && qObj.chosen !== -1 ? LETTERS[qObj.chosen] : null;
+          const correctLetter = LETTERS[qObj.answer] || '–';
+          const isCorrect = qObj.status === 'correct';
+          const isWrong = qObj.status === 'wrong';
+          const statusBadge = isCorrect 
+            ? '<span style="color:#059669; font-weight:700; background:#dcfce7; padding:4px 10px; border-radius:6px; font-size:0.8rem;">✓ Correct (+1 Mark)</span>'
+            : isWrong
+            ? '<span style="color:#dc2626; font-weight:700; background:#fee2e2; padding:4px 10px; border-radius:6px; font-size:0.8rem;">✗ Incorrect (0 Marks)</span>'
+            : '<span style="color:#d97706; font-weight:700; background:#fef3c7; padding:4px 10px; border-radius:6px; font-size:0.8rem;">➖ Skipped (0 Marks)</span>';
+
+          const summaryBanner = `
+            <div style="display:flex; justify-content:space-between; align-items:center; background:#f1f5f9; border-radius:8px; padding:10px 14px; margin:12px 0; font-size:0.88rem; flex-wrap:wrap; gap:8px;">
+              <div>
+                <strong>Your Marked Answer:</strong>
+                ${isCorrect ? `<span style="color:#059669; font-weight:700; margin-left:6px;">Choice ${chosenLetter} ✓ (Correct)</span>` : isWrong ? `<span style="color:#dc2626; font-weight:700; margin-left:6px;">Choice ${chosenLetter} ✗ (Incorrect)</span>` : `<span style="color:#d97706; font-weight:600; margin-left:6px;">Skipped / None</span>`}
+              </div>
+              <div>
+                <strong>Official Correct Answer:</strong>
+                <span style="color:#059669; font-weight:700; margin-left:6px;">Choice ${correctLetter} ✓</span>
+              </div>
+            </div>
+          `;
+
+          const optsHtml = (qObj.options || []).map((optText, optIdx) => {
+            const isOptCorrect = optIdx === qObj.answer;
+            const isOptSelected = optIdx === qObj.chosen;
+            let cardBg = "#ffffff";
+            let cardBorder = "#e2e8f0";
+            let cardColor = "#1e293b";
+            let badgeHtml = "";
+
+            if (isOptCorrect && isOptSelected) {
+              cardBg = "#f0fdf4"; cardBorder = "#22c55e"; cardColor = "#15803d";
+              badgeHtml = '<span style="margin-left:auto; background:#16a34a; color:#fff; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px;">✓ Correct &amp; Your Choice</span>';
+            } else if (isOptCorrect) {
+              cardBg = "#f0fdf4"; cardBorder = "#22c55e"; cardColor = "#15803d";
+              badgeHtml = '<span style="margin-left:auto; background:#16a34a; color:#fff; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px;">✓ Correct Answer</span>';
+            } else if (isOptSelected) {
+              cardBg = "#fef2f2"; cardBorder = "#ef4444"; cardColor = "#b91c1c";
+              badgeHtml = '<span style="margin-left:auto; background:#dc2626; color:#fff; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px;">✗ Your Selected Option</span>';
+            }
+
+            return `
+              <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; border:1.5px solid ${cardBorder}; background:${cardBg}; color:${cardColor}; border-radius:8px; font-size:0.9rem; margin-bottom:6px;">
+                <div style="width:24px; height:24px; border-radius:50%; background:${isOptCorrect ? '#16a34a' : isOptSelected ? '#dc2626' : '#e2e8f0'}; color:${isOptCorrect || isOptSelected ? '#fff' : '#475569'}; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.8rem; flex-shrink:0;">${LETTERS[optIdx] || optIdx + 1}</div>
+                <div style="flex:1; line-height:1.45;">${optText}</div>
+                ${badgeHtml}
+              </div>
+            `;
+          }).join('');
+
+          const expHtml = qObj.explanation ? `
+            <div style="margin-top:10px; padding:10px 14px; background:#f0f9ff; border-left:3px solid #0284c7; border-radius:0 8px 8px 0; font-size:0.86rem; color:#0c4a6e;">
+              <strong style="color:#0369a1; display:block; margin-bottom:3px;">💡 Solution &amp; Explanation:</strong>
+              ${sanitizeExplanation(qObj.explanation)}
+            </div>
+          ` : '';
+
+          return `
+            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:18px; box-shadow:var(--shadow);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid #f1f5f9; padding-bottom:8px;">
+                <span style="font-weight:700; font-size:0.95rem;">Question ${qObj.id || (idx + 1)} ${qObj.topic ? `<span style="color:var(--muted); font-size:0.85rem; font-weight:500;">· ${qObj.topic}</span>` : ''}</span>
+                ${statusBadge}
+              </div>
+              <div style="font-size:0.92rem; line-height:1.6; margin-bottom:12px;">${qObj.text}</div>
+              ${qObj.image ? `<div style="text-align:center; margin-bottom:12px;"><img src="${qObj.image}" class="review-img" style="max-width:100%; max-height:320px; border-radius:6px; border:1px solid var(--border);" alt="diagram"></div>` : ''}
+              ${summaryBanner}
+              ${optsHtml}
+              ${expHtml}
+            </div>
+          `;
+        }).join('')}
       </div>
     </div>
 
     <div class="res-actions">
       <button class="btn btn-primary" onclick="downloadPDF()">⬇ Download PDF Again</button>
       <button class="btn btn-outline" onclick="location.reload()">🔄 Retake Full Mock Test 2</button>
-      <a href="../index.html" class="btn btn-outline" style="text-decoration:none">← Back to Full Mock Tests</a>
+      <a href="../index.html" class="btn btn-outline" style="text-decoration:none">🏠 Back to Home</a>
     </div>`;
 
       new Chart($('pieChart'), {
