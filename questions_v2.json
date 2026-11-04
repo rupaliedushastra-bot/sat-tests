@@ -89259,18 +89259,18 @@
     "section": "MATH",
     "module": 3,
     "code": "H4-M4",
-    "topic": "Advanced Math \u2014 Polynomial remainder theorem",
+    "topic": "Geometry & Trigonometry \u2022 Circle equations and radius",
     "difficulty": "Hard",
     "format": "MCQ",
-    "text": "<p>When the polynomial $P(x) = 3x^3 - kx^2 + 5x - 8$ is divided by $(x - 2)$, the remainder is $14$. What is the value of the constant $k$?</p>",
+    "text": "<p>What is the radius of the circle in the $xy$-plane given by the equation $x^2 + y^2 - 8x + 14y + 29 = 0$?</p>",
     "options": [
-      "$2$",
-      "$3$",
-      "$5$",
-      "$6$"
+      "$6$",
+      "$8$",
+      "$12$",
+      "$36$"
     ],
-    "answer": "B",
-    "explanation": "Choice B is correct. According to the Polynomial Remainder Theorem, dividing a polynomial $P(x)$ by $(x - 2)$ results in a remainder equal to $P(2)$. We evaluate $P(2)$:\n$$P(2) = 3(2)^3 - k(2)^2 + 5(2) - 8 = 24 - 4k + 10 - 8 = 26 - 4k.$$\nSetting this equal to the given remainder of $14$:\n$$26 - 4k = 14 \\implies -4k = -12 \\implies k = 3.$$\nChoice A ($2$), Choice C ($5$), and Choice D ($6$) produce remainders of $18$, $6$, and $2$, respectively.",
+    "answer": "A",
+    "explanation": "Choice A is correct. Complete the square for both $x$ and $y$: $(x^2 - 8x + 16) + (y^2 + 14y + 49) = -29 + 16 + 49 \\implies (x - 4)^2 + (y + 7)^2 = 36$. The standard equation of a circle is $(x - h)^2 + (y - k)^2 = r^2$. Here $r^2 = 36$, so the radius is $r = \\sqrt{36} = 6$. Choice B and C are arithmetic errors. Choice D is $r^2$.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89392,18 +89392,13 @@
     "section": "MATH",
     "module": 3,
     "code": "H4-M11",
-    "topic": "Geometry & Trigonometry \u2014 Arc length and sectors",
+    "topic": "Algebra \u2022 Linear equations with fractional coefficients",
     "difficulty": "Hard",
     "format": "MCQ",
-    "text": "<p>A circle with radius $15$ has a sector with central angle $\\theta = \\frac{2\\pi}{3}$ radians. What is the area of this sector?</p>",
-    "options": [
-      "$75\\pi$",
-      "$50\\pi$",
-      "$25\\pi$",
-      "$100\\pi$"
-    ],
-    "answer": "A",
-    "explanation": "Choice A is correct. The area $A$ of a circle sector with central angle $\\theta$ in radians is given by $A = \\frac{1}{2} r^2 \\theta$. Substituting $r = 15$ and $\\theta = \\frac{2\\pi}{3}$: $A = \\frac{1}{2} (15^2) \\left(\\frac{2\\pi}{3}\\right) = \\frac{1}{2} (225) \\left(\\frac{2\\pi}{3}\\right) = \\frac{225\\pi}{3} = 75\\pi$.",
+    "text": "<p>What value of $x$ satisfies the equation $$\\frac{3x - 5}{4} - \\frac{2x + 1}{3} = \\frac{5}{12}?$$</p>",
+    "options": [],
+    "answer": "24",
+    "explanation": "The correct answer is 24. Multiply the entire equation by the least common denominator, $12$: $12 \\left(\\frac{3x - 5}{4}\\right) - 12 \\left(\\frac{2x + 1}{3}\\right) = 12 \\left(\\frac{5}{12}\\right) \\implies 3(3x - 5) - 4(2x + 1) = 5$. Expand terms: $(9x - 15) - (8x + 4) = 5 \\implies x - 19 = 5 \\implies x = 24$.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89487,18 +89482,18 @@
     "section": "MATH",
     "module": 3,
     "code": "H4-M16",
-    "topic": "Advanced Math \u2014 Systems of nonlinear equations",
+    "topic": "Problem-Solving and Data Analysis \u2022 Scatterplots and residuals",
     "difficulty": "Hard",
     "format": "MCQ",
-    "text": "<p>In the $xy$-plane, what is the $y$-coordinate of the point of intersection between the line $y = 3x - 3$ and the parabola $y = 2x^2 - 5x + 3$ that has the larger $x$-coordinate?</p>",
+    "text": "<p>A researcher models weekly advertising expenditure, $x$ (in hundreds of dollars), and weekly sales revenue, $y$ (in thousands of dollars), using the line of best fit $y = 3.6x + 14.2$. For a week with advertising expenditure of $\\$800$ ($x = 8$), the actual sales revenue was $\\$45,000$ ($y = 45$). What is the residual, in thousands of dollars, for this week?</p>",
     "options": [
-      "$4$",
-      "$6$",
-      "$3$",
-      "$7$"
+      "$1.5$",
+      "$2.0$",
+      "$2.8$",
+      "$3.6$"
     ],
     "answer": "B",
-    "explanation": "Choice B is correct. Set the two equations equal to find the $x$-coordinates of the intersection points:\n$$2x^2 - 5x + 3 = 3x - 3 \\implies 2x^2 - 8x + 6 = 0.$$\nDivide the entire equation by $2$:\n$$x^2 - 4x + 3 = 0 \\implies (x - 3)(x - 1) = 0.$$\nThis yields $x = 3$ and $x = 1$. The intersection with the larger $x$-coordinate occurs at $x = 3$. Substitute $x = 3$ into the linear equation to determine the corresponding $y$-coordinate:\n$$y = 3(3) - 3 = 9 - 3 = 6.$$\nChoice A ($4$), Choice C ($3$), and Choice D ($7$) correspond to evaluating at the incorrect $x$-value or making algebraic errors.",
+    "explanation": "Choice B is correct. A residual is defined as the actual value minus the predicted value: $\\text{Residual} = y - \\hat{y}$. Using the line of best fit for $x = 8$: $\\hat{y} = 3.6(8) + 14.2 = 28.8 + 14.2 = 43$. The actual value is $y = 45$. The residual is $45 - 43 = 2.0$ (thousands of dollars). Choice A, Choice C, and Choice D result from calculation errors.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89652,18 +89647,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH4-M4",
-    "topic": "Problem-Solving & Data Analysis \u2014 Bayesian probability",
+    "topic": "Problem-Solving and Data Analysis \u2022 Observational studies vs controlled experiments",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>A rare medical condition occurs in $1\\%$ of a population. A diagnostic blood test has a true positive rate (sensitivity) of $95\\%$ and a false positive rate of $5\\%$. If a randomly selected individual from this population tests positive, what is the probability that this individual actually has the condition?</p>",
+    "text": "<p>A nutritionist studied the relationship between dark chocolate consumption and blood pressure in $120$ adult volunteers over six months. The researcher tracked self-reported consumption and recorded blood pressure changes, finding that participants who consumed more dark chocolate had significantly lower blood pressure. Which of the following conclusions is most justified?</p>",
     "options": [
-      "$\\frac{19}{20} = 95.0\\%$",
-      "$\\frac{95}{1000} = 9.5\\%$",
-      "$\\frac{19}{118} \\approx 16.1\\%$",
-      "$\\frac{95}{590} \\approx 16.1\\%$"
+      "The study proves that dark chocolate consumption directly causes a reduction in blood pressure for all adults.",
+      "An association between dark chocolate consumption and lower blood pressure was observed, but cause-and-effect cannot be established because treatments were not randomly assigned.",
+      "The study is invalid because a sample size of $120$ is too small to identify meaningful statistical relationships.",
+      "The researcher can conclude that dark chocolate causes lower blood pressure, but only for adults over age 50."
     ],
-    "answer": "C",
-    "explanation": "Choice C is correct. Assume a sample of 10,000 individuals: $1\\%$ (100 people) have the condition, and $99\\%$ (9,900 people) do not. Of the 100 with the condition, $95\\%$ test positive: $0.95 \\times 100 = 95$ true positives. Of the 9,900 without the condition, $5\\%$ test positive: $0.05 \\times 9,900 = 495$ false positives. Total positive tests: $95 + 495 = 590$. The probability that a person who tests positive actually has the condition is $P = \\frac{95}{590} = \\frac{19}{118} \\approx 16.1\\%$.",
+    "answer": "B",
+    "explanation": "Choice B is correct. In an observational study where participants self-select their behaviors rather than being randomly assigned to treatment and control groups, confounding variables cannot be controlled. Therefore, researchers can establish an association (correlation) but cannot infer causation. Choice A and Choice D incorrectly claim cause-and-effect. Choice C incorrectly dismisses a statistically adequate sample size.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89671,18 +89666,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH4-M5",
-    "topic": "Geometry & Trigonometry \u2014 Conical frustum volume",
+    "topic": "Geometry & Trigonometry \u2022 Arc length and central angle relationships",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>A water reservoir in the shape of an inverted conical frustum has height $h = 9\\text{ m}$, lower base radius $r = 4\\text{ m}$, and upper opening radius $R = 8\\text{ m}$. What is the total volume of this reservoir, in cubic meters?</p>",
+    "text": "<p>In a circle with radius $r = 15$, an arc has length $10\\pi$. What is the measure, in degrees, of the central angle that intercepts this arc?</p>",
     "options": [
-      "$264\\pi$",
-      "$312\\pi$",
-      "$288\\pi$",
-      "$336\\pi$"
+      "$60^\\circ$",
+      "$90^\\circ$",
+      "$120^\\circ$",
+      "$150^\\circ$"
     ],
-    "answer": "D",
-    "explanation": "Choice D is correct. The volume of a conical frustum with height $h$ and base radii $R$ and $r$ is $V = \\frac{1}{3} \\pi h (R^2 + Rr + r^2)$. Substituting $h = 9, R = 8, r = 4$: $V = \\frac{1}{3} \\pi (9) (8^2 + 8(4) + 4^2) = 3\\pi (64 + 32 + 16) = 3\\pi (112) = 336\\pi\\text{ m}^3$.",
+    "answer": "C",
+    "explanation": "Choice C is correct. The circumference of the circle is $C = 2\\pi r = 2\\pi(15) = 30\\pi$. The ratio of arc length to total circumference equals the ratio of the central angle $\\theta$ (in degrees) to $360^\\circ$: $\\frac{10\\pi}{30\\pi} = \\frac{\\theta}{360^\\circ} \\implies \\frac{1}{3} = \\frac{\\theta}{360^\\circ} \\implies \\theta = \\frac{360^\\circ}{3} = 120^\\circ$. Choice A is half the correct angle. Choice B is $90^\\circ$. Choice D is $150^\\circ$.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89804,18 +89799,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH4-M12",
-    "topic": "Advanced Math \u2014 Complex conjugate root theorem",
+    "topic": "Advanced Math \u2022 Quadratic function zeros and horizontal shifts",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>A polynomial $P(x)$ with real coefficients has degree $3$. If $x = 5$ and $x = 2 - 3i$ are roots of $P(x) = 0$, what is the coefficient of $x$ in the expanded form of $P(x)$ given that its leading coefficient is $1$?</p>",
+    "text": "<p>The quadratic function $g(x) = (x - 4)^2 - 25$ has zeros at $x = a$ and $x = b$, where $a < b$. The function $h(x)$ is defined as $h(x) = g(x + 3)$. What are the zeros of $h(x)$?</p>",
     "options": [
-      "$13$",
-      "$-33$",
-      "$33$",
-      "$-65$"
+      "$x = -4$ and $x = 6$",
+      "$x = -1$ and $x = 9$",
+      "$x = 2$ and $x = 12$",
+      "$x = -7$ and $x = 3$"
     ],
-    "answer": "C",
-    "explanation": "Choice C is correct. By the Complex Conjugate Root Theorem, since $P(x)$ has real coefficients, the conjugate $x = 2 + 3i$ must also be a root. The quadratic factor formed by the complex conjugate pair is $(x - (2 - 3i))(x - (2 + 3i)) = (x - 2)^2 - (3i)^2 = x^2 - 4x + 4 - (-9) = x^2 - 4x + 13$. The full cubic polynomial is $P(x) = (x - 5)(x^2 - 4x + 13) = x^3 - 4x^2 + 13x - 5x^2 + 20x - 65 = x^3 - 9x^2 + 33x - 65$. The coefficient of $x$ is $13 + 20 = 33$.",
+    "answer": "A",
+    "explanation": "Choice A is correct. Find the zeros of $g(x)$: $(x - 4)^2 - 25 = 0 \\implies (x - 4)^2 = 25 \\implies x - 4 = \\pm 5 \\implies x = 9$ or $x = -1$. The function $h(x) = g(x + 3)$ represents a horizontal shift of $g(x)$ to the left by $3$ units. Every zero of $g(x)$ is therefore shifted left by $3$: $9 - 3 = 6$ and $-1 - 3 = -4$. Thus, the zeros of $h(x)$ are $x = -4$ and $x = 6$. Choice B gives the zeros of $g(x)$ without the horizontal shift. Choice C shifts to the right instead of left.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89861,18 +89856,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH4-M15",
-    "topic": "Geometry & Trigonometry \u2014 Power of a Point theorem",
+    "topic": "Geometry & Trigonometry \u2022 Right triangle trigonometry cofunction identities",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>From an external point $P$, two secant lines are drawn to a circle. The first secant intersects the circle at points $A$ and $B$ such that $PA = 4$ and $AB = 12$. The second secant intersects the circle at points $C$ and $D$ such that $PC = 3$ and $C$ lies between $P$ and $D$. What is the length of segment $CD$?</p>",
+    "text": "<p>In right triangle $PQR$ with right angle at $Q$, $\\cos(P) = \\frac{5}{13}$. What is the value of $\\tan(R)$?</p>",
     "options": [
-      "$\\frac{40}{3}$",
-      "$\\frac{55}{3}$",
-      "$\\frac{48}{3}$",
-      "$\\frac{52}{3}$"
+      "$\\frac{5}{12}$",
+      "$\\frac{12}{5}$",
+      "$\\frac{5}{13}$",
+      "$\\frac{12}{13}$"
     ],
-    "answer": "B",
-    "explanation": "Choice B is correct. By the Secant-Secant Power of a Point theorem, for two secant lines drawn from an external point $P$:\n$$PA \\cdot PB = PC \\cdot PD.$$\nThe total length of the first secant line is $PB = PA + AB = 4 + 12 = 16$. Thus:\n$$PA \\cdot PB = 4 \\times 16 = 64.$$\nSetting this equal to $PC \\cdot PD$ with $PC = 3$:\n$$3 \\cdot PD = 64 \\implies PD = \\frac{64}{3}.$$\nThe length of chord $CD$ is $PD - PC$:\n$$CD = \\frac{64}{3} - 3 = \\frac{64 - 9}{3} = \\frac{55}{3}.$$\nChoice A, Choice C, and Choice D result from forgetting to add the segment lengths or misapplying the Power of a Point theorem.",
+    "answer": "A",
+    "explanation": "Choice A is correct. In right triangle $PQR$ with right angle $Q$, the hypotenuse is $PR$. Since $\\cos(P) = \\frac{PQ}{PR} = \\frac{5}{13}$, let $PQ = 5$ and $PR = 13$. By the Pythagorean theorem, $QR = \\sqrt{PR^2 - PQ^2} = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$. For acute angle $R$, the opposite side is $PQ = 5$ and the adjacent side is $QR = 12$. Therefore, $\\tan(R) = \\frac{PQ}{QR} = \\frac{5}{12}$. Choice B is $\\tan(P) = \\frac{12}{5}$. Choice C is $\\cos(P)$. Choice D is $\\sin(P) = \\cos(R)$.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -89918,13 +89913,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH4-M18",
-    "topic": "Advanced Math \u2014 AM-GM algebraic optimization (SPR)",
+    "topic": "Advanced Math \u2022 Rational equations and extraneous roots",
     "difficulty": "Super Hard",
     "format": "SPR",
-    "text": "<p>For all positive real numbers $x > 0$, what is the minimum value of the expression $$5x + \\frac{125}{x}?$$</p>",
-    "options": [],
-    "answer": "50",
-    "explanation": "The correct answer is 50. By the Arithmetic Mean-Geometric Mean (AM-GM) inequality, for any two positive real quantities $a$ and $b$: $\\frac{a + b}{2} \\ge \\sqrt{ab} \\implies a + b \\ge 2\\sqrt{ab}$. Let $a = 5x$ and $b = \\frac{125}{x}$: $5x + \\frac{125}{x} \\ge 2\\sqrt{5x \\cdot \\frac{125}{x}} = 2\\sqrt{625} = 2(25) = 50$. Equality holds when $5x = \\frac{125}{x} \\implies 5x^2 = 125 \\implies x^2 = 25 \\implies x = 5 > 0$.",
+    "text": "<p>What is the set of all real solutions to the equation $$\\frac{2x}{x - 3} - \\frac{6}{x - 3} = 4?$$</p>",
+    "options": [
+      "$\\{3\\}$",
+      "$\\{0\\}$",
+      "$\\{6\\}$",
+      "No solution"
+    ],
+    "answer": "D",
+    "explanation": "Choice D is correct. Combine the fractions on the left side: $\\frac{2x - 6}{x - 3} = \\frac{2(x - 3)}{x - 3}$. For any $x \\ne 3$, the factor $(x - 3)$ cancels, reducing the left side to $2$. The equation then becomes $2 = 4$, which is a false statement with no solutions. Alternatively, multiplying both sides by $(x - 3)$ gives $2x - 6 = 4x - 12 \\implies 2x = 6 \\implies x = 3$. However, substituting $x = 3$ into the original equation causes division by zero ($3 - 3 = 0$), so $x = 3$ is extraneous. Therefore, there is no real solution. Choice A includes the extraneous root.",
     "exam": "SAT Hard Full Mock 4"
   },
   {
@@ -91071,18 +91071,18 @@
     "section": "MATH",
     "module": 3,
     "code": "H5-M4",
-    "topic": "Advanced Math \u2014 Polynomial remainder theorem",
+    "topic": "Geometry & Trigonometry \u2022 Special right triangles (30-60-90)",
     "difficulty": "Hard",
     "format": "MCQ",
-    "text": "<p>When the polynomial $P(x) = 2x^3 - kx^2 + 7x - 12$ is divided by $(x - 3)$, the remainder is $9$. What is the value of the constant $k$?</p>",
+    "text": "<p>In $\\triangle ABC$, angle $B$ is a right angle, and the measure of angle $A$ is $30^\\circ$. If the length of hypotenuse $AC$ is $16\\sqrt{3}$, what is the length of side $AB$?</p>",
     "options": [
-      "$4$",
-      "$5$",
-      "$6$",
-      "$7$"
+      "$12$",
+      "$16$",
+      "$24$",
+      "$24\\sqrt{3}$"
     ],
     "answer": "C",
-    "explanation": "Choice C is correct. By the Polynomial Remainder Theorem, dividing the polynomial $P(x)$ by $(x - 3)$ results in a remainder equal to $P(3)$. We evaluate $P(3)$:\n$$P(3) = 2(3)^3 - k(3)^2 + 7(3) - 12 = 2(27) - 9k + 21 - 12 = 54 - 9k + 9 = 63 - 9k.$$\nGiven that the remainder is $9$, we set $P(3) = 9$:\n$$63 - 9k = 9 \\implies -9k = -54 \\implies k = 6.$$\nChoice A ($4$), Choice B ($5$), and Choice D ($7$) produce remainders of $27$, $18$, and $0$, respectively.",
+    "explanation": "Choice C is correct. In a $30^\\circ-60^\\circ-90^\\circ$ special right triangle, the side lengths are in the ratio $1 : \\sqrt{3} : 2$. The side opposite the $30^\\circ$ angle is half the hypotenuse: $BC = \\frac{16\\sqrt{3}}{2} = 8\\sqrt{3}$. The side adjacent to the $30^\\circ$ angle ($AB$) is $\\sqrt{3}$ times the shorter leg: $AB = (8\\sqrt{3}) \\cdot \\sqrt{3} = 8 \\cdot 3 = 24$. Choice A is $8\\sqrt{3}/\\sqrt{3}$. Choice B is hypotenuse without $\\sqrt{3}$. Choice D multiplies by $\\sqrt{3}$ twice.",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91204,18 +91204,18 @@
     "section": "MATH",
     "module": 3,
     "code": "H5-M11",
-    "topic": "Geometry & Trigonometry \u2014 Arc length and sectors",
+    "topic": "Problem-Solving and Data Analysis \u2022 Successive percentage reduction",
     "difficulty": "Hard",
     "format": "MCQ",
-    "text": "<p>A circular garden with radius $18\\text{ m}$ has a floral section subtended by a central angle of $\\theta = \\frac{5\\pi}{6}$ radians. What is the area, in square meters, of this section?</p>",
+    "text": "<p>A manufacturing facility reduced its annual carbon emissions by $20\\%$ in its first year of green upgrades. In its second year, it reduced emissions by an additional $25\\%$ from the first-year level. What was the overall percentage reduction in carbon emissions across the two-year period?</p>",
     "options": [
-      "$135\\pi$",
-      "$120\\pi$",
-      "$90\\pi$",
-      "$150\\pi$"
+      "$35\\%$",
+      "$40\\%$",
+      "$45\\%$",
+      "$50\\%$"
     ],
-    "answer": "A",
-    "explanation": "Choice A is correct. The sector area formula is $A = \\frac{1}{2} r^2 \\theta$. Substituting $r = 18$ and $\\theta = \\frac{5\\pi}{6}$: $A = \\frac{1}{2} (18^2) \\left(\\frac{5\\pi}{6}\\right) = \\frac{1}{2} (324) \\left(\\frac{5\\pi}{6}\\right) = 162 \\times \\frac{5\\pi}{6} = 27 \\times 5\\pi = 135\\pi\\text{ m}^2$.",
+    "answer": "B",
+    "explanation": "Choice B is correct. Let the baseline emissions be $100$ units. After the first year's $20\\%$ reduction, emissions were $100 \\times (1 - 0.20) = 80$ units. In the second year, emissions dropped by $25\\%$ of this new level: $80 \\times (1 - 0.25) = 80 \\times 0.75 = 60$ units. The total reduction from the initial $100$ units is $100 - 60 = 40$ units, representing an overall $40\\%$ reduction. Choice A is $20 + 15$. Choice C simply adds the percentages ($20\\% + 25\\% = 45\\%$), which ignores that the second reduction applies to a smaller base. Choice D is an overestimation.",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91299,18 +91299,18 @@
     "section": "MATH",
     "module": 3,
     "code": "H5-M16",
-    "topic": "Advanced Math \u2014 Systems of nonlinear equations",
+    "topic": "Problem-Solving and Data Analysis \u2022 Mean, median, and range comparison",
     "difficulty": "Hard",
     "format": "MCQ",
-    "text": "<p>In the $xy$-plane, what is the $y$-coordinate of the intersection point between the line $y = 3x + 10$ and the parabola $y = x^2 - x + 5$ that has the larger $x$-coordinate?</p>",
+    "text": "<p>A data set consists of $8$ distinct positive numbers with a mean of $20$, a median of $19$, and a range of $14$. If the largest number in the data set is increased by $10$ while all other numbers remain unchanged, which of the following summary statistics must also increase?<br><br>I. The mean<br>II. The median<br>III. The range</p>",
     "options": [
-      "$7$",
-      "$19$",
-      "$25$",
-      "$28$"
+      "I only",
+      "I and III only",
+      "II and III only",
+      "I, II, and III"
     ],
-    "answer": "C",
-    "explanation": "Choice C is correct. Set the two equations equal: $x^2 - x + 5 = 3x + 10 \\implies x^2 - 4x - 5 = 0$. Factor the quadratic: $(x - 5)(x + 1) = 0$, which yields $x = 5$ or $x = -1$. The larger $x$-coordinate is $x = 5$. Substitute $x = 5$ into the linear equation: $y = 3(5) + 10 = 15 + 10 = 25$.",
+    "answer": "B",
+    "explanation": "Choice B is correct. Increasing the largest value increases the sum of the $8$ numbers, so the mean ($\\frac{\\text{sum}}{8}$) must increase (Statement I is true). The range is $\\text{maximum} - \\text{minimum}$. Since the maximum increases while the minimum remains unchanged, the range must increase (Statement III is true). The median depends only on the two middle values (the 4th and 5th values when ordered); increasing the largest value does not alter these middle values, so the median remains unchanged (Statement II is false). Therefore, I and III only must increase.",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91464,18 +91464,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH5-M4",
-    "topic": "Problem-Solving & Data Analysis \u2014 Bayesian probability",
+    "topic": "Problem-Solving and Data Analysis \u2022 Conditional probability from contingency tables",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>A medical screening test for a condition affecting $2\\%$ of a population has a sensitivity (true positive rate) of $95\\%$ and a false positive rate of $4\\%$. If a randomly selected person tests positive, what is the probability that they actually have the condition?</p>",
+    "text": "<p>The table below summarizes the distribution of degree candidates at a college by academic division and graduation honors:<br><br><table style=\"margin:auto; border-collapse:collapse; text-align:center;\"><thead><tr style=\"border-bottom:2px solid #ccc;\"><th style=\"padding:6px 12px;\">Division</th><th style=\"padding:6px 12px;\">Summa Cum Laude</th><th style=\"padding:6px 12px;\">Magna Cum Laude</th><th style=\"padding:6px 12px;\">Cum Laude</th><th style=\"padding:6px 12px;\">Total</th></tr></thead><tbody><tr><td style=\"padding:6px 12px;\">STEM</td><td>45</td><td>75</td><td>120</td><td>240</td></tr><tr><td style=\"padding:6px 12px;\">Humanities</td><td>35</td><td>65</td><td>100</td><td>200</td></tr><tr style=\"border-top:2px solid #ccc; font-weight:bold;\"><td style=\"padding:6px 12px;\">Total</td><td>80</td><td>140</td><td>220</td><td>440</td></tr></tbody></table><br>What is the probability that a randomly selected student who earned Magna Cum Laude is a Humanities major?</p>",
     "options": [
-      "$\\frac{19}{20} = 95.0\\%$",
-      "$\\frac{95}{291} \\approx 32.6\\%$",
-      "$\\frac{19}{58} \\approx 32.8\\%$",
-      "$\\frac{95}{392} \\approx 24.2\\%$"
+      "$\\frac{13}{40}$",
+      "$\\frac{13}{28}$",
+      "$\\frac{7}{28}$",
+      "$\\frac{13}{88}$"
     ],
     "answer": "B",
-    "explanation": "Choice B is correct. Assume a population of 10,000 individuals: $2\\%$ (200 people) have the condition, and $98\\%$ (9,800 people) do not. Of the 200 with the condition, $95\\%$ test positive: $0.95 \\times 200 = 190$ true positives. Of the 9,800 without the condition, $4\\%$ test positive: $0.04 \\times 9,800 = 392$ false positives. Total positive tests: $190 + 392 = 582$. The probability of having the condition given a positive test is $P = \\frac{190}{582} = \\frac{95}{291} \\approx 32.6\\%$.",
+    "explanation": "Choice B is correct. The condition specifies that the student earned 'Magna Cum Laude', restricting the relevant total to $140$ students. Within this group, $65$ students are Humanities majors. The probability is $\\frac{65}{140}$. Divide numerator and denominator by $5$: $\\frac{65 \\div 5}{140 \\div 5} = \\frac{13}{28}$. Choice A divides by total Humanities majors ($65/200$). Choice C is an arithmetic error. Choice D divides by the grand total ($65/440$).",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91483,18 +91483,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH5-M5",
-    "topic": "Geometry & Trigonometry \u2014 Conical frustum volume",
+    "topic": "Geometry & Trigonometry \u2022 Surface area of similar 3D solids",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>A conical frustum has height $h = 12\\text{ cm}$, upper base radius $R = 9\\text{ cm}$, and lower base radius $r = 3\\text{ cm}$. What is the volume of this frustum, in cubic centimeters?</p>",
+    "text": "<p>A rectangular container has length $10\\text{ ft}$, width $6\\text{ ft}$, and height $4\\text{ ft}$. A second similar rectangular container is constructed such that each of its linear dimensions is $1.5$ times the corresponding dimension of the first container. What is the total surface area, in square feet, of the second container?</p>",
     "options": [
-      "$360\\pi$",
-      "$432\\pi$",
-      "$396\\pi$",
-      "$468\\pi$"
+      "$372$",
+      "$496$",
+      "$558$",
+      "$837$"
     ],
-    "answer": "D",
-    "explanation": "Choice D is correct. The volume of a conical frustum is $V = \\frac{1}{3} \\pi h (R^2 + Rr + r^2)$. Substituting $h = 12, R = 9, r = 3$: $V = \\frac{1}{3} \\pi (12) (9^2 + 9(3) + 3^2) = 4\\pi (81 + 27 + 9) = 4\\pi (117) = 468\\pi\\text{ cm}^3$.",
+    "answer": "C",
+    "explanation": "Choice C is correct. The total surface area of the original rectangular container is $SA_1 = 2(lw + lh + wh) = 2(10 \\times 6 + 10 \\times 4 + 6 \\times 4) = 2(60 + 40 + 24) = 2(124) = 248\\text{ sq ft}$. For similar three-dimensional solids, surface area scales by the square of the linear scale factor: $k = 1.5 \\implies k^2 = (1.5)^2 = 2.25$. Therefore, the surface area of the second container is $SA_2 = SA_1 \\times k^2 = 248 \\times 2.25 = 558\\text{ sq ft}$. Choice A scales linearly ($248 \\times 1.5 = 372$). Choice B doubles the area. Choice D scales by $k^3$ ($248 \\times 3.375$), which is the volume scale factor.",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91616,18 +91616,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH5-M12",
-    "topic": "Advanced Math \u2014 Complex conjugate root theorem",
+    "topic": "Advanced Math \u2022 Nonlinear systems with circle and line",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>A polynomial $P(x)$ with real coefficients has degree $3$ and leading coefficient $1$. If $x = 3$ and $x = 1 + 2i$ are roots of $P(x) = 0$, what is the coefficient of $x$ in the expanded form of $P(x)$?</p>",
+    "text": "<p>In the $xy$-plane, how many points of intersection exist between the line $y = 2x - 5$ and the circle $x^2 + y^2 = 4$?</p>",
     "options": [
-      "$5$",
-      "$11$",
-      "$-11$",
-      "$15$"
+      "$0$",
+      "$1$",
+      "$2$",
+      "$4$"
     ],
-    "answer": "B",
-    "explanation": "Choice B is correct. By the Complex Conjugate Root Theorem, since $P(x)$ has real coefficients, the complex conjugate $x = 1 - 2i$ must also be a root. The quadratic factor is $(x - (1 + 2i))(x - (1 - 2i)) = ((x - 1) - 2i)((x - 1) + 2i) = (x - 1)^2 - (2i)^2 = x^2 - 2x + 1 - (-4) = x^2 - 2x + 5$. The full cubic polynomial is $P(x) = (x - 3)(x^2 - 2x + 5) = x^3 - 2x^2 + 5x - 3x^2 + 6x - 15 = x^3 - 5x^2 + 11x - 15$. The coefficient of $x$ is $5 + 6 = 11$.",
+    "answer": "A",
+    "explanation": "Choice A is correct. Substitute $y = 2x - 5$ into the circle's equation: $x^2 + (2x - 5)^2 = 4 \\implies x^2 + (4x^2 - 20x + 25) = 4 \\implies 5x^2 - 20x + 21 = 0$. Determine the number of real solutions by evaluating the discriminant: $\\Delta = b^2 - 4ac = (-20)^2 - 4(5)(21) = 400 - 420 = -20$. Because the discriminant is strictly negative ($\\Delta < 0$), the quadratic equation has no real solutions. This means the line and circle never intersect in the real $xy$-plane ($0$ points of intersection). Choice B occurs when $\\Delta = 0$ (tangent line). Choice C occurs when $\\Delta > 0$ (secant line).",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91673,18 +91673,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH5-M15",
-    "topic": "Geometry & Trigonometry \u2014 Power of a Point theorem",
+    "topic": "Geometry & Trigonometry \u2022 Arc length with radian central angles",
     "difficulty": "Super Hard",
     "format": "MCQ",
-    "text": "<p>From an external point $P$, two secants are drawn to a circle. The first secant intersects the circle at points $A$ and $B$ such that $PA = 5$ and $AB = 15$. The second secant intersects the circle at points $C$ and $D$ such that $PC = 4$ and $C$ lies between $P$ and $D$. What is the length of chord $CD$?</p>",
+    "text": "<p>In a circle with radius $r = 12$, an arc is intercepted by a central angle measuring $\\frac{5\\pi}{6}\\text{ radians}$. What is the length of this arc?</p>",
     "options": [
-      "$29$",
-      "$25$",
-      "$21$",
-      "$31$"
+      "$5\\pi$",
+      "$8\\pi$",
+      "$10\\pi$",
+      "$12\\pi$"
     ],
     "answer": "C",
-    "explanation": "Choice C is correct. By the Secant-Secant Power of a Point theorem: $PA \\cdot PB = PC \\cdot PD$. The total length of the first secant is $PB = PA + AB = 5 + 15 = 20$. Thus, $PA \\cdot PB = 5 \\times 20 = 100$. Set $PC \\cdot PD = 100 \\implies 4 \\cdot PD = 100 \\implies PD = 25$. The chord length is $CD = PD - PC = 25 - 4 = 21$.",
+    "explanation": "Choice C is correct. The formula for the length of an arc $s$ intercepted by a central angle $\\theta$ (in radians) in a circle of radius $r$ is $s = r\\theta$. Substituting $r = 12$ and $\\theta = \\frac{5\\pi}{6}$: $s = 12 \\times \\frac{5\\pi}{6} = 2 \\times 5\\pi = 10\\pi$. Choice A divides by $2$. Choice B is an arithmetic error. Choice D uses the full diameter.",
     "exam": "SAT Hard Full Mock 5"
   },
   {
@@ -91730,13 +91730,18 @@
     "section": "MATH",
     "module": 4,
     "code": "SH5-M18",
-    "topic": "Advanced Math \u2014 AM-GM algebraic optimization (SPR)",
+    "topic": "Advanced Math \u2022 Polynomial factor theorem and unknown coefficients",
     "difficulty": "Super Hard",
     "format": "SPR",
-    "text": "<p>For all positive real numbers $x > 0$, what is the minimum value of the expression $$4x + \\frac{100}{x}?$$</p>",
-    "options": [],
-    "answer": "40",
-    "explanation": "The correct answer is 40. By the Arithmetic Mean-Geometric Mean (AM-GM) inequality, for positive terms $a$ and $b$: $a + b \\ge 2\\sqrt{ab}$. Let $a = 4x$ and $b = \\frac{100}{x}$: $4x + \\frac{100}{x} \\ge 2\\sqrt{4x \\cdot \\frac{100}{x}} = 2\\sqrt{400} = 2(20) = 40$. Equality holds when $4x = \\frac{100}{x} \\implies 4x^2 = 100 \\implies x^2 = 25 \\implies x = 5 > 0$.",
+    "text": "<p>The polynomial $P(x) = x^3 - 5x^2 + kx - 18$ has $(x - 3)$ as one of its factors, where $k$ is a constant. What is the value of $k$?</p>",
+    "options": [
+      "$6$",
+      "$9$",
+      "$12$",
+      "$15$"
+    ],
+    "answer": "C",
+    "explanation": "Choice C is correct. According to the Factor Theorem, $(x - a)$ is a factor of a polynomial $P(x)$ if and only if $P(a) = 0$. Since $(x - 3)$ is a factor, $P(3) = 0$. Evaluate $P(3)$: $P(3) = 3^3 - 5(3^2) + k(3) - 18 = 27 - 5(9) + 3k - 18 = 27 - 45 + 3k - 18 = -36 + 3k$. Set $P(3) = 0$: $-36 + 3k = 0 \\implies 3k = 36 \\implies k = 12$. Choice A produces $P(3) = -18$. Choice B produces $P(3) = -9$. Choice D produces $P(3) = 9$.",
     "exam": "SAT Hard Full Mock 5"
   },
   {

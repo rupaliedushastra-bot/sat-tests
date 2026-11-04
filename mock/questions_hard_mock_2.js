@@ -1,15 +1,15 @@
 // =============================================
 // SAT Hard Full Mock 2
-// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
-// With LaTeX Equations, Full Options, Solutions, and Diagrams
+// 17 Questions • Diagrams & Graphs Focus
+// Section 1: Reading & Writing (8 Qs) • Section 2: Math (9 Qs)
 // =============================================
 
-const QUESTIONS = [
+const RW_MODULE1 = [
   {
     "code": "SH2-RW01",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Information and Ideas · Inferences (most logically completes)",
+    "topic": "Information and Ideas \u00b7 Inferences (most logically completes)",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">Paleoclimatologists reconstructing past temperatures from lake sediments face a recurring difficulty: the proxies they rely on, such as the abundance of certain algal pigments, respond to temperature but also to nutrient input, which varies independently. At one lake, two proxies expected to track temperature in the same direction diverged sharply during a period of known agricultural expansion in the surrounding watershed. This divergence is best explained if, during that period, <ins></ins>__</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice most logically completes the text?</p>",
@@ -32,7 +32,7 @@ const QUESTIONS = [
     "code": "SH2-RW02",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Craft and Structure · Cross-Text Connections",
+    "topic": "Craft and Structure \u00b7 Cross-Text Connections",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">Text 1: Statisticians have noted that Gregor Mendel's pea-plant counts match his predicted ratios more closely than chance would typically allow, which some take as evidence that he, or an assistant, unconsciously favored results that fit his hypothesis.</p>\n<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">Text 2: The unusual closeness of Mendel's counts need not imply bias. He deliberately chose traits that show clear-cut, discrete differences between plants, which makes errors in classifying individual plants rare and so reduces scatter in the counts.</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice best describes how Text 2 relates to Text 1?</p>",
@@ -55,7 +55,7 @@ const QUESTIONS = [
     "code": "SH2-RW03",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Craft and Structure · Words in Context",
+    "topic": "Craft and Structure \u00b7 Words in Context",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">The curator's catalogue entry for the vase is deliberately <ins></ins>__: it neither affirms nor rules out the attribution to the workshop, leaving the question to later scholarship.</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice completes the text with the most logical and precise word or phrase?</p>",
@@ -78,7 +78,7 @@ const QUESTIONS = [
     "code": "SH2-RW04",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Craft and Structure · Text Structure and Purpose (underlined sentence)",
+    "topic": "Craft and Structure \u00b7 Text Structure and Purpose (underlined sentence)",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">Renewable-energy advocates frequently cite falling solar costs as proof that decarbonization will be inexpensive. <ins>This inference, though, conflates the cost of generating power with the cost of delivering it reliably.</ins> Panels may be cheap, but storage, transmission, and backup capacity add expenses that fall more slowly. A fair accounting must therefore include them.</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice best states the function of the underlined sentence?</p>",
@@ -101,7 +101,7 @@ const QUESTIONS = [
     "code": "SH2-RW05",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Standard English Conventions · Boundaries",
+    "topic": "Standard English Conventions \u00b7 Boundaries",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">The archive contains letters from three decades: the 1850s, when the colony was founded <ins></ins>__ the 1870s, when it expanded rapidly; and the 1890s, when it faced economic collapse.</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
@@ -124,7 +124,7 @@ const QUESTIONS = [
     "code": "SH2-RW06",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Standard English Conventions · Form, Structure, and Sense (subject-verb agreement)",
+    "topic": "Standard English Conventions \u00b7 Form, Structure, and Sense (subject-verb agreement)",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">The discovery that several of the manuscript's marginal annotations, long attributed to a later reader, <ins></ins>__ in the same hand as the main text has prompted a reassessment.</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
@@ -147,7 +147,7 @@ const QUESTIONS = [
     "code": "SH2-RW07",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Expression of Ideas · Rhetorical Synthesis",
+    "topic": "Expression of Ideas \u00b7 Rhetorical Synthesis",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">While researching a topic, a student has taken these notes:<br>- A 2021 trial tested a nasal spray in 240 adults.<br>- The spray shortened symptom duration by an average of 1.5 days.<br>- All participants were between 18 and 35.<br>- The researchers say the results may not apply to older adults.</p>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The student wants to emphasize the finding while qualifying how far it applies. Which choice most effectively does this?</p>",
@@ -170,7 +170,7 @@ const QUESTIONS = [
     "code": "SH2-RW08",
     "prefix": "SH2",
     "section": "rw",
-    "topic": "Information and Ideas · Command of Evidence (Quantitative)",
+    "topic": "Information and Ideas \u00b7 Command of Evidence (Quantitative)",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p class=\"passage-text\" style=\"line-height:1.7; margin-bottom:12px;\">A museum director claims that although total attendance has grown considerably, first-time visitors make up a shrinking share of it.</p>\n<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/RW8_visitors.svg\" alt=\"Grouped bar chart of first-time and returning visitors in thousands for 2018, 2020, 2022 and 2024: first-time 40, 30, 45, 50; returning 60, 50, 105, 150.\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Which choice best uses data from the graph to support the director's claim?</p>",
@@ -191,25 +191,28 @@ const QUESTIONS = [
     "id": 8,
     "module": 1,
     "qnum": 8
-  },
+  }
+];
+
+const MATH_MODULE1 = [
   {
     "code": "SH2-M01",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Geometry · Frustum Volume",
+    "topic": "Geometry & Trigonometry \u2022 Circle equations and distance to origin",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q03_bucket.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A bucket is shaped like a frustum of a right circular cone. The top opening has radius $9\\text{ inches}$, the bottom base has radius $6\\text{ inches}$, and the vertical height is $8\\text{ inches}$. What is the volume of the bucket, in cubic inches?</p>",
+    "text": "<p>In the $xy$-plane, the circle given by the equation $(x - 6)^2 + (y - 8)^2 = 25$ has center $C$. What is the shortest distance from the origin $(0, 0)$ to any point on this circle?</p>",
     "options": [
-      "216\\pi",
-      "450\\pi",
-      "456\\pi",
-      "1{,}368\\pi"
+      "$3$",
+      "$5$",
+      "$7$",
+      "$10$"
     ],
-    "answer": 2,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. The volume of a frustum of a cone with top radius $R = 9$, bottom radius $r = 6$, and vertical height $h = 8$ is: $$V = \\frac{\\pi h}{3}(R^2 + Rr + r^2) = \\frac{8\\pi}{3}(9^2 + 9 \\cdot 6 + 6^2) = \\frac{8\\pi}{3}(81 + 54 + 36) = \\frac{8\\pi}{3}(171) = 456\\pi\\text{ in}^3$$ Choice A represents a cylinder of radius 6; Choice B uses the average radius; Choice D forgets the factor of $\\frac{1}{3}$.",
+    "explanation": "Choice B is correct. The circle has center $C(6, 8)$ and radius $r = \\sqrt{25} = 5$. The distance from the origin $O(0, 0)$ to the center $C(6, 8)$ is $OC = \\sqrt{(6 - 0)^2 + (8 - 0)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. The shortest distance from the origin to any point on the circle lies along the segment connecting the origin to the center: $d_{\\text{min}} = OC - r = 10 - 5 = 5$. Choice A is an arithmetic error. Choice C is $12 - 5$. Choice D is the distance to the center.",
     "image": "images/q03_bucket.png",
     "id": 9,
     "module": 2,
@@ -219,18 +222,18 @@ const QUESTIONS = [
     "code": "SH2-M02",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Geometry · Frustum Volume (SPR)",
+    "topic": "Geometry & Trigonometry \u2022 Composite volume of cylinder and cone",
     "difficulty": "Super Hard",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q04_cone_ratio.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A right circular cone has height $15$ and base radius $9$. A plane parallel to the base cuts off a small cone at the top with height $6$, leaving a frustum. What is the ratio of the volume of the frustum to the volume of the small cone? (Enter a fraction or a decimal.)</p>",
+    "text": "<p>A storage silo is composed of a right circular cylinder topped by a right circular cone. Both the cylinder and cone share a circular base of radius $r = 6\\text{ meters}$. The cylinder has height $10\\text{ meters}$, and the cone has height $6\\text{ meters}$. The total volume of the silo is $k\\pi\\text{ cubic meters}$. What is the value of $k$?</p>",
     "options": [],
-    "answer": "117/8",
-    "fillAnswer": "117/8",
+    "answer": 432,
+    "fillAnswer": "432",
     "acceptedAnswers": [
       "117/8",
       "14.625"
     ],
-    "explanation": "The correct answer is $117/8$ (or $14.625$). The original cone has height $15$, and the small cone removed from the top has height $6$. The ratio of heights is $\\frac{6}{15} = \\frac{2}{5}$. Therefore, the ratio of volumes is: $$\\frac{V_{\\text{small}}}{V_{\\text{original}}} = \\left(\\frac{2}{5}\\right)^3 = \\frac{8}{125}$$ The frustum volume is $125 - 8 = 117$ parts out of $125$. The ratio of the volume of the frustum to the small cone is: $$\\frac{V_{\\text{frustum}}}{V_{\\text{small}}} = \\frac{117}{8} = 14.625$$",
+    "explanation": "The correct answer is 432. The volume of the cylinder is $V_{\\text{cyl}} = \\pi r^2 h_{\\text{cyl}} = \\pi (6^2)(10) = 360\\pi$. The volume of the cone is $V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h_{\\text{cone}} = \\frac{1}{3}\\pi (6^2)(6) = 72\\pi$. The total volume is $V = 360\\pi + 72\\pi = 432\\pi$. Therefore, $k = 432$.",
     "image": "images/q04_cone_ratio.png",
     "id": 10,
     "module": 2,
@@ -240,20 +243,20 @@ const QUESTIONS = [
     "code": "SH2-M03",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
+    "topic": "Problem-Solving and Data Analysis \u2022 Conditional probability and two-way tables",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q12_screening_table.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A screening test was given to $10{,}000$ people, with the results shown in the diagram. A person is chosen at random from those who tested positive. Which value is closest to the probability that this person actually has the condition?</p>",
+    "text": "<p>A university surveyed $400$ undergraduate students regarding their primary study location, summarized in the table below:<br><br><table style=\"margin:auto; border-collapse:collapse; text-align:center;\"><thead><tr style=\"border-bottom:2px solid #ccc;\"><th style=\"padding:6px 12px;\">Level</th><th style=\"padding:6px 12px;\">Campus Library</th><th style=\"padding:6px 12px;\">Dorm / Home</th><th style=\"padding:6px 12px;\">Coffee Shop</th><th style=\"padding:6px 12px;\">Total</th></tr></thead><tbody><tr><td style=\"padding:6px 12px;\">First-Year</td><td>70</td><td>90</td><td>40</td><td>200</td></tr><tr><td style=\"padding:6px 12px;\">Upperclassman</td><td>110</td><td>50</td><td>40</td><td>200</td></tr><tr style=\"border-top:2px solid #ccc; font-weight:bold;\"><td style=\"padding:6px 12px;\">Total</td><td>180</td><td>140</td><td>80</td><td>400</td></tr></tbody></table><br>Given that a randomly selected student primarily studies in the Campus Library, what is the probability that the student is a First-Year student?</p>",
     "options": [
-      "1\\%",
-      "10\\%",
-      "50\\%",
-      "90\\%"
+      "$\\frac{7}{40}$",
+      "$\\frac{7}{20}$",
+      "$\\frac{7}{18}$",
+      "$\\frac{11}{18}$"
     ],
-    "answer": 1,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. From the $10{,}000$ people, those who test positive comprise true positives ($90$) and false positives ($792$), giving a total of $90 + 792 = 882$ positive tests. The probability that a person who tested positive actually has the condition is: $$P(\\text{Condition} \\mid \\text{Positive}) = \\frac{90}{882} \\approx 0.102 \\approx 10\\%$$ Even though the test has high sensitivity, most positive tests are false positives because the baseline prevalence of the condition is low ($1\\%$).",
+    "explanation": "Choice C is correct. The question conditions on students who study in the Campus Library, which is a subgroup total of $180$ students. Among these $180$ library study participants, $70$ are First-Year students. The conditional probability is $\\frac{70}{180} = \\frac{7}{18}$. Choice A incorrectly divides by the grand total ($70/400$). Choice B divides by total first-years ($70/200$). Choice D is the probability for upperclassmen ($110/180$).",
     "image": "images/q12_screening_table.png",
     "id": 11,
     "module": 2,
@@ -263,18 +266,18 @@ const QUESTIONS = [
     "code": "SH2-M04",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Problem Solving & Data Analysis · Bayes' Theorem (SPR)",
+    "topic": "Problem-Solving and Data Analysis \u2022 Weighted average and group means",
     "difficulty": "Super Hard",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q15_two_tests_table.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A condition affects $2\\%$ of a population. A test is positive for $98\\%$ of people who have the condition and for $5\\%$ of people who do not. Every person takes the test twice, independently, with the results for $1{,}000{,}000$ people shown. Given that a person tested positive on both tests, what is the probability, to the nearest hundredth, that the person has the condition? (Enter a decimal.)</p>",
+    "text": "<p>Class A has $20$ students with a mean exam score of $82$. Class B has $30$ students with a mean exam score of $92$. What is the combined mean exam score of all $50$ students in both classes?</p>",
     "options": [],
-    "answer": "0.89",
-    "fillAnswer": "0.89",
+    "answer": 88,
+    "fillAnswer": "88",
     "acceptedAnswers": [
       "0.89",
       "0.8869"
     ],
-    "explanation": "The correct answer is $0.89$. Out of $1{,}000{,}000$ people, $2\\%$ ($20{,}000$) have the condition. Testing positive twice: $20{,}000 \\times 0.98^2 = 20{,}000 \\times 0.9604 = 19{,}208$. The remaining $980{,}000$ do not have the condition. Testing positive twice (two false positives): $980{,}000 \\times 0.05^2 = 980{,}000 \\times 0.0025 = 2{,}450$. Total people testing positive twice: $19{,}208 + 2{,}450 = 21{,}658$. Probability of having the condition given two positive tests: $$P(\\text{Condition} \\mid + +) = \\frac{19{,}208}{21{,}658} \\approx 0.8869 \\approx 0.89$$",
+    "explanation": "The correct answer is 88. The total points scored by students in Class A is $20 \\times 82 = 1,640$. The total points scored by students in Class B is $30 \\times 92 = 2,760$. The combined total score across all $50$ students is $1,640 + 2,760 = 4,400$. The combined mean is $\\frac{4,400}{50} = 88$.",
     "image": "images/q15_two_tests_table.png",
     "id": 12,
     "module": 2,
@@ -284,20 +287,20 @@ const QUESTIONS = [
     "code": "SH2-M05",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Advanced Math · Complex Conjugate Root Theorem",
+    "topic": "Advanced Math \u2022 Equivalent rational expressions",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q23_quadratic_root.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The equation $x^2 + px + q = 0$, where $p$ and $q$ are real numbers, has $\\frac{5}{2 - i}$ as one of its roots. What is the value of $p + q$?</p>",
+    "text": "<p>Which of the following expressions is equivalent to $$\\frac{4x^2 - 9}{2x + 3} + \\frac{6x^2 + 7x - 3}{2x + 3},$$ for all $x \\ne -\\frac{3}{2}$?</p>",
     "options": [
-      "-1",
-      "1",
-      "9",
-      "20"
+      "$5x + 4$",
+      "$5x - 4$",
+      "$3x - 2$",
+      "$10x - 4$"
     ],
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. First simplify the given root by multiplying numerator and denominator by the conjugate $2 + i$: $$\\frac{5}{2 - i} = \\frac{5(2 + i)}{(2 - i)(2 + i)} = \\frac{5(2 + i)}{4 - i^2} = \\frac{5(2 + i)}{5} = 2 + i$$ Since $p$ and $q$ are real, the other root must be the complex conjugate $2 - i$. By Vieta's formulas: $$p = -(\\text{sum of roots}) = -((2 + i) + (2 - i)) = -4$$ $$q = \\text{product of roots} = (2 + i)(2 - i) = 4 - i^2 = 5$$ Thus: $$p + q = -4 + 5 = 1$$",
+    "explanation": "Choice B is correct. Both fractions have the common denominator $(2x + 3)$. Combine numerators: $\\frac{(4x^2 - 9) + (6x^2 + 7x - 3)}{2x + 3} = \\frac{10x^2 + 7x - 12}{2x + 3}$. Factor the numerator by grouping: $10x^2 + 15x - 8x - 12 = 5x(2x + 3) - 4(2x + 3) = (2x + 3)(5x - 4)$. Since $x \\ne -\\frac{3}{2}$, cancel the common factor $(2x + 3)$, leaving $5x - 4$. Choice A, Choice C, and Choice D result from factoring or sign errors.",
     "image": "images/q23_quadratic_root.png",
     "id": 13,
     "module": 2,
@@ -307,20 +310,20 @@ const QUESTIONS = [
     "code": "SH2-M06",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Advanced Math · Complex Conjugate Root Theorem",
+    "topic": "Advanced Math \u2022 Radical equations with extraneous solutions",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q24_cubic_real_zero.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $p(x) = x^3 - 5x^2 + 17x - 13$ has real coefficients, and $2 + 3i$ is a zero of $p$. What is the real zero of $p$?</p>",
+    "text": "<p>What is the set of all real solutions to the equation $$\\sqrt{3x + 16} = x + 2?$$</p>",
     "options": [
-      "1",
-      "5",
-      "13",
-      "17"
+      "$\\{-4, 3\\}$",
+      "$\\{3\\}$",
+      "$\\{-4\\}$",
+      "No real solution"
     ],
-    "answer": 0,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. Since $p(x)$ has real coefficients, the conjugate $2 - 3i$ must also be a zero of $p(x)$. Let $r$ be the third (real) zero. By Vieta's formulas, the sum of all three zeros is equal to the negative of the coefficient of $x^2$: $$\\text{Sum} = (2 + 3i) + (2 - 3i) + r = -(-5) = 5$$ $$4 + r = 5 \\implies r = 1$$ Check using the product of the zeros: $(2 + 3i)(2 - 3i)(1) = (4 + 9)(1) = 13$, which matches $-(-13) = 13$.",
+    "explanation": "Choice B is correct. Square both sides: $3x + 16 = (x + 2)^2 = x^2 + 4x + 4$. Rearrange into standard quadratic form: $x^2 + x - 12 = 0 \\implies (x + 4)(x - 3) = 0$, giving potential roots $x = -4$ and $x = 3$. Check $x = -4$ in the original equation: $\\sqrt{3(-4) + 16} = \\sqrt{4} = 2$, but the right side is $-4 + 2 = -2$. Since $2 \\ne -2$, $x = -4$ is extraneous. Check $x = 3$: $\\sqrt{3(3) + 16} = \\sqrt{25} = 5$, and $3 + 2 = 5$, which is valid. Thus, the solution set is $\\{3\\}$. Choice A includes the extraneous solution.",
     "image": "images/q24_cubic_real_zero.png",
     "id": 14,
     "module": 2,
@@ -330,23 +333,23 @@ const QUESTIONS = [
     "code": "SH2-M07",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Advanced Math · Nonlinear systems (circle and line)",
+    "topic": "Advanced Math \u00b7 Nonlinear systems (circle and line)",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N7_circle_line.svg\" alt=\"Circle centered at the origin with radius 5 and the line y = x + 1 meeting it at A (3, 4) and B (−4, −3).\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The line y = x + 1 intersects the circle x² + y² = 25 at points A and B, as shown. What is the length of segment AB?</p>",
+    "text": "<div class=\"diagram-wrapper\" style=\"text-align:center; margin:16px 0;\"><img src=\"images/N7_circle_line.svg\" alt=\"Circle centered at the origin with radius 5 and the line y = x + 1 meeting it at A (3, 4) and B (\u22124, \u22123).\" style=\"max-width:100%; max-height:320px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);\"></div>\n<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The line y = x + 1 intersects the circle x\u00b2 + y\u00b2 = 25 at points A and B, as shown. What is the length of segment AB?</p>",
     "options": [
       "7",
-      "7√2",
+      "7\u221a2",
       "10",
-      "5√2"
+      "5\u221a2"
     ],
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. Substituting gives x² + (x + 1)² = 25, so x² + x − 12 = 0 and x = 3 or −4. The points are (3, 4) and (−4, −3), so AB = √(7² + 7²) = 7√2. Choice A is incorrect: Used only one coordinate difference. Choice C is incorrect: Diameter of the circle, not the chord. Choice D is incorrect: Not derived from the points.",
+    "explanation": "Choice B is correct. Substituting gives x\u00b2 + (x + 1)\u00b2 = 25, so x\u00b2 + x \u2212 12 = 0 and x = 3 or \u22124. The points are (3, 4) and (\u22124, \u22123), so AB = \u221a(7\u00b2 + 7\u00b2) = 7\u221a2. Choice A is incorrect: Used only one coordinate difference. Choice C is incorrect: Diameter of the circle, not the chord. Choice D is incorrect: Not derived from the points.",
     "image": {
       "file": "images/N7_circle_line.svg",
-      "alt": "Circle centered at the origin with radius 5 and the line y = x + 1 meeting it at A (3, 4) and B (−4, −3)."
+      "alt": "Circle centered at the origin with radius 5 and the line y = x + 1 meeting it at A (3, 4) and B (\u22124, \u22123)."
     },
     "id": 15,
     "module": 2,
@@ -356,10 +359,10 @@ const QUESTIONS = [
     "code": "SH2-M08",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Advanced Math · Polynomials (factor theorem, Vieta)",
+    "topic": "Advanced Math \u00b7 Polynomials (factor theorem, Vieta)",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The polynomial p(x) = x³ − 5x² + kx − 12 is divisible by x − 3, where k is a constant. What is the sum of the other two zeros of p(x)?</p>",
+    "text": "<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">The polynomial p(x) = x\u00b3 \u2212 5x\u00b2 + kx \u2212 12 is divisible by x \u2212 3, where k is a constant. What is the sum of the other two zeros of p(x)?</p>",
     "options": [
       "2",
       "3",
@@ -369,7 +372,7 @@ const QUESTIONS = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. p(3) = 27 − 45 + 3k − 12 = 0 gives k = 10. The sum of all three zeros is 5 (from the x² coefficient), so the other two sum to 5 − 3 = 2. (They are nonreal, 1 ± i√3, but their sum is still 2.) Choice B is incorrect: Used the known zero. Choice C is incorrect: Sum of all three zeros. Choice D is incorrect: The value of k.",
+    "explanation": "Choice A is correct. p(3) = 27 \u2212 45 + 3k \u2212 12 = 0 gives k = 10. The sum of all three zeros is 5 (from the x\u00b2 coefficient), so the other two sum to 5 \u2212 3 = 2. (They are nonreal, 1 \u00b1 i\u221a3, but their sum is still 2.) Choice B is incorrect: Used the known zero. Choice C is incorrect: Sum of all three zeros. Choice D is incorrect: The value of k.",
     "image": null,
     "id": 16,
     "module": 2,
@@ -379,7 +382,7 @@ const QUESTIONS = [
     "code": "SH2-M09",
     "prefix": "SH2",
     "section": "math",
-    "topic": "Problem-Solving and Data Analysis · Statistics (weighted mean)",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Statistics (weighted mean)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p class=\"stem-text\" style=\"font-weight:600; margin-top:12px; font-size:1.02rem; line-height:1.6;\">Group X has a mean score of 70 and group Y has a mean score of 85. The two groups combined have a mean score of 79. What fraction of the combined group is in group Y? (Express as a decimal or fraction.)</p>",
@@ -399,16 +402,113 @@ const QUESTIONS = [
   }
 ];
 
-// Topic Map
-const TOPIC_MAP = {};
-QUESTIONS.forEach(q => {
-  const t = q.topic || 'General';
-  if (!TOPIC_MAP[t]) {
-    TOPIC_MAP[t] = { name: t, questions: [] };
+const QUESTIONS = [...RW_MODULE1, ...MATH_MODULE1];
+
+const TOPIC_MAP = {
+  "Information and Ideas \u00b7 Inferences (most logically completes)": {
+    "name": "Information and Ideas \u00b7 Inferences (most logically completes)",
+    "questions": [
+      1
+    ]
+  },
+  "Craft and Structure \u00b7 Cross-Text Connections": {
+    "name": "Craft and Structure \u00b7 Cross-Text Connections",
+    "questions": [
+      2
+    ]
+  },
+  "Craft and Structure \u00b7 Words in Context": {
+    "name": "Craft and Structure \u00b7 Words in Context",
+    "questions": [
+      3
+    ]
+  },
+  "Craft and Structure \u00b7 Text Structure and Purpose (underlined sentence)": {
+    "name": "Craft and Structure \u00b7 Text Structure and Purpose (underlined sentence)",
+    "questions": [
+      4
+    ]
+  },
+  "Standard English Conventions \u00b7 Boundaries": {
+    "name": "Standard English Conventions \u00b7 Boundaries",
+    "questions": [
+      5
+    ]
+  },
+  "Standard English Conventions \u00b7 Form, Structure, and Sense (subject-verb agreement)": {
+    "name": "Standard English Conventions \u00b7 Form, Structure, and Sense (subject-verb agreement)",
+    "questions": [
+      6
+    ]
+  },
+  "Expression of Ideas \u00b7 Rhetorical Synthesis": {
+    "name": "Expression of Ideas \u00b7 Rhetorical Synthesis",
+    "questions": [
+      7
+    ]
+  },
+  "Information and Ideas \u00b7 Command of Evidence (Quantitative)": {
+    "name": "Information and Ideas \u00b7 Command of Evidence (Quantitative)",
+    "questions": [
+      8
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Circle equations and distance to origin": {
+    "name": "Geometry & Trigonometry \u2022 Circle equations and distance to origin",
+    "questions": [
+      9
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Composite volume of cylinder and cone": {
+    "name": "Geometry & Trigonometry \u2022 Composite volume of cylinder and cone",
+    "questions": [
+      10
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Conditional probability and two-way tables": {
+    "name": "Problem-Solving and Data Analysis \u2022 Conditional probability and two-way tables",
+    "questions": [
+      11
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Weighted average and group means": {
+    "name": "Problem-Solving and Data Analysis \u2022 Weighted average and group means",
+    "questions": [
+      12
+    ]
+  },
+  "Advanced Math \u2022 Equivalent rational expressions": {
+    "name": "Advanced Math \u2022 Equivalent rational expressions",
+    "questions": [
+      13
+    ]
+  },
+  "Advanced Math \u2022 Radical equations with extraneous solutions": {
+    "name": "Advanced Math \u2022 Radical equations with extraneous solutions",
+    "questions": [
+      14
+    ]
+  },
+  "Advanced Math \u00b7 Nonlinear systems (circle and line)": {
+    "name": "Advanced Math \u00b7 Nonlinear systems (circle and line)",
+    "questions": [
+      15
+    ]
+  },
+  "Advanced Math \u00b7 Polynomials (factor theorem, Vieta)": {
+    "name": "Advanced Math \u00b7 Polynomials (factor theorem, Vieta)",
+    "questions": [
+      16
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Statistics (weighted mean)": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Statistics (weighted mean)",
+    "questions": [
+      17
+    ]
   }
-  TOPIC_MAP[t].questions.push(q.id);
-});
+};
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, TOPIC_MAP };
+  module.exports = { QUESTIONS, RW_MODULE1, MATH_MODULE1, TOPIC_MAP };
 }

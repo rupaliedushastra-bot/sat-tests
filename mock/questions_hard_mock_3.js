@@ -1,10 +1,12 @@
 // =============================================
 // SAT Hard Full Mock 3
-// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
-// With LaTeX Equations, Full Options, Solutions, and Diagrams
+// Module 1 = Hard (49 Qs) • Module 2 = Super Hard (49 Qs)
+// Section 1: Reading & Writing (Mod 1: 27 Qs, Mod 2: 27 Qs) - 32 min each
+// Section 2: Math (Mod 3: 22 Qs, Mod 4: 22 Qs) - 35 min each
+// Total: 98 Questions • 134 Minutes • Scaled Score 400–1600
 // =============================================
 
-const QUESTIONS = [
+const RW_MODULE1 = [
   {
     "qnum": 1,
     "topic": "Words in Context",
@@ -119,7 +121,7 @@ const QUESTIONS = [
     "qnum": 6,
     "topic": "Text Structure & Purpose (main purpose)",
     "isFillIn": false,
-    "text": "<p>For nearly a century, evolutionary biologists accepted the 'savanna hypothesis,' which proposed that bipedalism in hominins evolved primarily as an adaptation to open grassland habitats following the shrinkage of Pliocene African rainforests. However, recent paleoecological reconstructions of the Pliocene site of Aramis, Ethiopia—where the 4.4-million-year-old hominin <em>Ardipithecus ramidus</em> was discovered—revealed abundant fossilized remains of woodland colobine monkeys, tragelaphin bovids, and closed-canopy floral phytoliths. Because <em>Ardipithecus</em> clearly possessed musculoskeletal adaptations for habitual bipedality while inhabiting a densely wooded ecosystem, anthropologists must reconsider the premise that savanna expansion was the singular catalyst for upright walking.</p>\n<p>Which choice best states the main purpose of the text?</p>",
+    "text": "<p>For nearly a century, evolutionary biologists accepted the 'savanna hypothesis,' which proposed that bipedalism in hominins evolved primarily as an adaptation to open grassland habitats following the shrinkage of Pliocene African rainforests. However, recent paleoecological reconstructions of the Pliocene site of Aramis, Ethiopia\u2014where the 4.4-million-year-old hominin <em>Ardipithecus ramidus</em> was discovered\u2014revealed abundant fossilized remains of woodland colobine monkeys, tragelaphin bovids, and closed-canopy floral phytoliths. Because <em>Ardipithecus</em> clearly possessed musculoskeletal adaptations for habitual bipedality while inhabiting a densely wooded ecosystem, anthropologists must reconsider the premise that savanna expansion was the singular catalyst for upright walking.</p>\n<p>Which choice best states the main purpose of the text?</p>",
     "options": [
       "To prove that early hominins were incapable of walking upright across open grasslands",
       "To present fossil evidence that challenges a traditional evolutionary hypothesis regarding the origins of hominin bipedalism",
@@ -163,7 +165,7 @@ const QUESTIONS = [
     "qnum": 8,
     "topic": "Cross-Text Connections",
     "isFillIn": false,
-    "text": "<p><strong>Text 1</strong><br>In economic history, the 'Resource Curse' thesis posits that nations with an abundance of non-renewable mineral or petroleum wealth consistently underperform peers lacking such endowments. Windfall commodity revenues inflate the real exchange rate—rendering domestic manufacturing uncompetitive (the 'Dutch disease')—while fostering corrupt political rent-seeking and crowding out investments in education and human capital.</p>\n<p><strong>Text 2</strong><br>The concept of a deterministic resource curse oversimplifies institutional causality. Natural resource wealth is an economic amplifier, not a geopolitical destiny: countries with robust, pre-existing legal institutions, transparent sovereign wealth funds, and meritocratic civil services—such as Norway and Botswana—have successfully harnessed extractive royalties to fund world-class infrastructure and sovereign investment portfolios.</p>\n<p>Based on the texts, how would the author of Text 2 most likely respond to the claims in Text 1?</p>",
+    "text": "<p><strong>Text 1</strong><br>In economic history, the 'Resource Curse' thesis posits that nations with an abundance of non-renewable mineral or petroleum wealth consistently underperform peers lacking such endowments. Windfall commodity revenues inflate the real exchange rate\u2014rendering domestic manufacturing uncompetitive (the 'Dutch disease')\u2014while fostering corrupt political rent-seeking and crowding out investments in education and human capital.</p>\n<p><strong>Text 2</strong><br>The concept of a deterministic resource curse oversimplifies institutional causality. Natural resource wealth is an economic amplifier, not a geopolitical destiny: countries with robust, pre-existing legal institutions, transparent sovereign wealth funds, and meritocratic civil services\u2014such as Norway and Botswana\u2014have successfully harnessed extractive royalties to fund world-class infrastructure and sovereign investment portfolios.</p>\n<p>Based on the texts, how would the author of Text 2 most likely respond to the claims in Text 1?</p>",
     "options": [
       "By arguing that extractive mineral wealth invariably damages domestic manufacturing in all modern nations regardless of legal framework",
       "By claiming that the term 'Dutch disease' was historically coined to describe agricultural trade deficits rather than mineral exports",
@@ -185,7 +187,7 @@ const QUESTIONS = [
     "qnum": 9,
     "topic": "Central Ideas and Details",
     "isFillIn": false,
-    "text": "<p>In plant physiology, mycorrhizal fungi establish subterranean symbiotic networks with vascular plants, trading soil nitrogen and phosphorus for photosynthesized carbon. While botanists long viewed this exchange as a mutualistic relationship governed by egalitarian reciprocity, recent isotopic tracking demonstrates that mycorrhizal networks actively reallocate nutrients along competitive gradients. When mycorrhizal networks connect dominant canopy trees with shaded understory saplings, the fungal mycelium frequently extracts carbon from the carbon-rich canopy tree and transfers it to the light-starved sapling—not out of altruism, but to ensure the fungal network maintains multiple viable carbon sources should the dominant tree succumb to pest infestations.</p>\n<p>Which choice best summarizes the central idea of the text?</p>",
+    "text": "<p>In plant physiology, mycorrhizal fungi establish subterranean symbiotic networks with vascular plants, trading soil nitrogen and phosphorus for photosynthesized carbon. While botanists long viewed this exchange as a mutualistic relationship governed by egalitarian reciprocity, recent isotopic tracking demonstrates that mycorrhizal networks actively reallocate nutrients along competitive gradients. When mycorrhizal networks connect dominant canopy trees with shaded understory saplings, the fungal mycelium frequently extracts carbon from the carbon-rich canopy tree and transfers it to the light-starved sapling\u2014not out of altruism, but to ensure the fungal network maintains multiple viable carbon sources should the dominant tree succumb to pest infestations.</p>\n<p>Which choice best summarizes the central idea of the text?</p>",
     "options": [
       "Nutrient transfers between trees via fungal networks reflect strategic risk-diversification by the fungi rather than simple altruism or egalitarian cooperation.",
       "Mycorrhizal fungi prioritize saplings because shaded understory plants synthesize higher concentrations of nitrogen.",
@@ -207,7 +209,7 @@ const QUESTIONS = [
     "qnum": 10,
     "topic": "Central Ideas and Details",
     "isFillIn": false,
-    "text": "<p>In standard musicological histories, the invention of the pianoforte by Bartolomeo Cristofori in early 18th-century Florence is celebrated primarily as a technological breakthrough that allowed keyboard players to modulate volume dynamically through touch—an expressive nuance impossible on the harpsichord. However, historians of technology emphasize that Cristofori's crucial achievement was not merely dynamic variation, but mechanical escape: the 'escapement' mechanism that instantly detached the hammer from the key upon impact, allowing the string to vibrate freely before the hammer bounced back without restriking. Without this mechanical detachment, expressive dynamic control would have resulted in muffled, choked acoustic tones.</p>\n<p>According to the text, what made Cristofori's escapement mechanism essential to the instrument's success?</p>",
+    "text": "<p>In standard musicological histories, the invention of the pianoforte by Bartolomeo Cristofori in early 18th-century Florence is celebrated primarily as a technological breakthrough that allowed keyboard players to modulate volume dynamically through touch\u2014an expressive nuance impossible on the harpsichord. However, historians of technology emphasize that Cristofori's crucial achievement was not merely dynamic variation, but mechanical escape: the 'escapement' mechanism that instantly detached the hammer from the key upon impact, allowing the string to vibrate freely before the hammer bounced back without restriking. Without this mechanical detachment, expressive dynamic control would have resulted in muffled, choked acoustic tones.</p>\n<p>According to the text, what made Cristofori's escapement mechanism essential to the instrument's success?</p>",
     "options": [
       "It permanently replaced metal wire strings with gut strings to create warmer acoustic resonances.",
       "It enabled the hammer to rebound instantly from the struck string, preventing the note from being dampened.",
@@ -317,7 +319,7 @@ const QUESTIONS = [
     "qnum": 15,
     "topic": "Inferences (\"most logically completes\")",
     "isFillIn": false,
-    "text": "<p>In sedimentary geology, the presence of banded iron formations (BIFs)—alternating layers of iron oxides and silica-rich chert deposited over two billion years ago—was long regarded as proof that early oceans contained high dissolved ferrous iron ($Fe^{2+}$) that precipitated when atmospheric oxygen rose during the Great Oxidation Event. However, geomicrobiologists recently identified anoxygenic phototrophic bacteria that utilize dissolved iron as an electron donor during photosynthesis, oxidizing $Fe^{2+}$ into insoluble ferric iron ($Fe^{3+}$) precipitate in the complete absence of dissolved oxygen. This metabolic discovery implies that ______.</p>\n<p>Which choice most logically completes the text?</p>",
+    "text": "<p>In sedimentary geology, the presence of banded iron formations (BIFs)\u2014alternating layers of iron oxides and silica-rich chert deposited over two billion years ago\u2014was long regarded as proof that early oceans contained high dissolved ferrous iron ($Fe^{2+}$) that precipitated when atmospheric oxygen rose during the Great Oxidation Event. However, geomicrobiologists recently identified anoxygenic phototrophic bacteria that utilize dissolved iron as an electron donor during photosynthesis, oxidizing $Fe^{2+}$ into insoluble ferric iron ($Fe^{3+}$) precipitate in the complete absence of dissolved oxygen. This metabolic discovery implies that ______.</p>\n<p>Which choice most logically completes the text?</p>",
     "options": [
       "silica-rich chert deposits formed exclusively through terrestrial volcanic eruptions rather than marine sedimentation",
       "anoxygenic phototrophs were incapable of metabolic reproduction prior to the Great Oxidation Event",
@@ -405,17 +407,17 @@ const QUESTIONS = [
     "qnum": 19,
     "topic": "Boundaries",
     "isFillIn": false,
-    "text": "<p>The spacecraft's thermal protection shield—a composite structure composed of carbon-bonded carbon fibers ______ temperatures exceeding 1,600 degrees Celsius during atmospheric re-entry.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
+    "text": "<p>The spacecraft's thermal protection shield\u2014a composite structure composed of carbon-bonded carbon fibers ______ temperatures exceeding 1,600 degrees Celsius during atmospheric re-entry.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
       "withstood",
       ", withstood",
-      "—withstood",
+      "\u2014withstood",
       "; withstood"
     ],
     "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. The parenthetical appositive describing the shield begins with an em-dash ('—a composite structure composed of carbon-bonded carbon fibers'). It must be closed with a matching em-dash before the main verb 'withstood' resumes the clause. Choice B incorrectly mixes a dash with a comma. Choice A leaves the parenthetical unclosed. Choice D inserts an ungrammatical semicolon before the predicate verb.",
+    "explanation": "Choice C is correct. The parenthetical appositive describing the shield begins with an em-dash ('\u2014a composite structure composed of carbon-bonded carbon fibers'). It must be closed with a matching em-dash before the main verb 'withstood' resumes the clause. Choice B incorrectly mixes a dash with a comma. Choice A leaves the parenthetical unclosed. Choice D inserts an ungrammatical semicolon before the predicate verb.",
     "id": 19,
     "module": 1,
     "prefix": "H3",
@@ -598,7 +600,10 @@ const QUESTIONS = [
     "code": "H3-RW27",
     "section": "rw",
     "difficulty": "Hard"
-  },
+  }
+];
+
+const RW_MODULE2 = [
   {
     "qnum": 1,
     "topic": "Words in Context",
@@ -701,7 +706,7 @@ const QUESTIONS = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. 'Obviates' means removes, eliminates, or avoids the need for something. The passage explains that because client-side spyware captures text directly on the device before encryption takes place, the attacker does not need to intercept transmissions at all—the need for network interception is completely eliminated or obviated. Choice B ('engenders') means gives rise to. Choice C ('exacerbates') means worsens. Choice D ('dissembles') means conceals true motives.",
+    "explanation": "Choice A is correct. 'Obviates' means removes, eliminates, or avoids the need for something. The passage explains that because client-side spyware captures text directly on the device before encryption takes place, the attacker does not need to intercept transmissions at all\u2014the need for network interception is completely eliminated or obviated. Choice B ('engenders') means gives rise to. Choice C ('exacerbates') means worsens. Choice D ('dissembles') means conceals true motives.",
     "id": 32,
     "module": 2,
     "prefix": "SH3",
@@ -723,7 +728,7 @@ const QUESTIONS = [
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. The text sets up the tension between two traditional views—scientific realism and instrumentalism—and then introduces 'structural realism' as an integrative philosophical solution that preserves the mathematical structures across paradigm shifts without naive ontological assumptions. Choice A is too narrow and unrepresentative. Choice C contradicts the passage, which explicitly affirms cumulative scientific progress. Choice D is incorrect because the passage discusses philosophical ontology, not technical mathematical calculations.",
+    "explanation": "Choice B is correct. The text sets up the tension between two traditional views\u2014scientific realism and instrumentalism\u2014and then introduces 'structural realism' as an integrative philosophical solution that preserves the mathematical structures across paradigm shifts without naive ontological assumptions. Choice A is too narrow and unrepresentative. Choice C contradicts the passage, which explicitly affirms cumulative scientific progress. Choice D is incorrect because the passage discusses philosophical ontology, not technical mathematical calculations.",
     "id": 33,
     "module": 2,
     "prefix": "SH3",
@@ -757,7 +762,7 @@ const QUESTIONS = [
     "qnum": 8,
     "topic": "Cross-Text Connections",
     "isFillIn": false,
-    "text": "<p><strong>Text 1</strong><br>Archaeologists investigating the collapse of the Classic Maya civilization have increasingly converged on the 'megadrought hypothesis.' High-resolution stalagmite isotope records from Yok Balum Cave demonstrate that prolonged, multi-decadal droughts coincided precisely with periods of agricultural failure, mass urban abandonment, and the cessation of royal monumental stelae inscriptions between 750 and 900 CE. Without stable rainfall to recharge municipal aguadas and karst reservoirs, complex societal collapse was ecologically unavoidable.</p>\n<p><strong>Text 2</strong><br>Attributing the dissolution of Classic Maya political authority solely to climatic desiccation ignores profound regional variations in sociopolitical resilience. While southern lowland urban centers suffered rapid depopulation, northern Maya centers such as Chichén Itzá and Mayapán actually expanded trade networks and flourished during the very peak of the alleged megadrought. This striking geographical divergence demonstrates that institutional fragmentation, factional militarism, and trade route reorganization were the decisive arbiters of collapse, with climate acting as a secondary stressor.</p>\n<p>Based on the texts, how would the author of Text 2 most likely respond to the argument in Text 1 regarding the Classic Maya collapse?</p>",
+    "text": "<p><strong>Text 1</strong><br>Archaeologists investigating the collapse of the Classic Maya civilization have increasingly converged on the 'megadrought hypothesis.' High-resolution stalagmite isotope records from Yok Balum Cave demonstrate that prolonged, multi-decadal droughts coincided precisely with periods of agricultural failure, mass urban abandonment, and the cessation of royal monumental stelae inscriptions between 750 and 900 CE. Without stable rainfall to recharge municipal aguadas and karst reservoirs, complex societal collapse was ecologically unavoidable.</p>\n<p><strong>Text 2</strong><br>Attributing the dissolution of Classic Maya political authority solely to climatic desiccation ignores profound regional variations in sociopolitical resilience. While southern lowland urban centers suffered rapid depopulation, northern Maya centers such as Chich\u00e9n Itz\u00e1 and Mayap\u00e1n actually expanded trade networks and flourished during the very peak of the alleged megadrought. This striking geographical divergence demonstrates that institutional fragmentation, factional militarism, and trade route reorganization were the decisive arbiters of collapse, with climate acting as a secondary stressor.</p>\n<p>Based on the texts, how would the author of Text 2 most likely respond to the argument in Text 1 regarding the Classic Maya collapse?</p>",
     "options": [
       "By agreeing that multi-decadal drought was the sole proximate cause of societal collapse across all Maya urban centers",
       "By contending that southern lowland cities possessed superior water-storage infrastructure compared to northern cities",
@@ -779,7 +784,7 @@ const QUESTIONS = [
     "qnum": 9,
     "topic": "Central Ideas and Details",
     "isFillIn": false,
-    "text": "<p>In standard cognitive psychology, visual perception was long conceptualized as a feedforward process: sensory inputs enter the retina, pass through the lateral geniculate nucleus, and are progressively assembled into complex representations in the primary visual cortex. However, the predictive processing framework turns this classical model on its head: the brain is an active prediction engine. In this framework, top-down neural connections—which vastly outnumber bottom-up ascending pathways—constantly project internal generative hypotheses about the sensory environment. The ascending sensory signals do not convey the complete visual scene; instead, they carry only the 'prediction error'—the mathematical difference between what the brain anticipated and what sensory receptors registered—thereby minimizing computational metabolic expenditure.</p>\n<p>Which choice best summarizes the distinction between the predictive processing model and the classical feedforward model as described in the text?</p>",
+    "text": "<p>In standard cognitive psychology, visual perception was long conceptualized as a feedforward process: sensory inputs enter the retina, pass through the lateral geniculate nucleus, and are progressively assembled into complex representations in the primary visual cortex. However, the predictive processing framework turns this classical model on its head: the brain is an active prediction engine. In this framework, top-down neural connections\u2014which vastly outnumber bottom-up ascending pathways\u2014constantly project internal generative hypotheses about the sensory environment. The ascending sensory signals do not convey the complete visual scene; instead, they carry only the 'prediction error'\u2014the mathematical difference between what the brain anticipated and what sensory receptors registered\u2014thereby minimizing computational metabolic expenditure.</p>\n<p>Which choice best summarizes the distinction between the predictive processing model and the classical feedforward model as described in the text?</p>",
     "options": [
       "The classical model views perception as a bottom-up construction of sensory inputs, whereas predictive processing views perception as top-down hypothesis generation constrained by error feedback.",
       "The classical model claims the retina generates generative hypotheses, whereas predictive processing claims the geniculate nucleus processes prediction errors.",
@@ -801,7 +806,7 @@ const QUESTIONS = [
     "qnum": 10,
     "topic": "Central Ideas and Details",
     "isFillIn": false,
-    "text": "<p>While political theorists often associate constitutional judicial review with the protection of minority rights against majoritarian tyranny, legal scholar Ran Hirschl argues that the global expansion of judicial power over recent decades ('juristocracy') has frequently served a more self-interested political purpose. In countries undergoing democratization or political realignments, threatened ruling elites deliberately transfer controversial policy decisions—concerning property rights, religious neutrality, and election laws—to politically insulated constitutional courts. By depoliticizing these contentious issues, hegemonic elites effectively insulate their core socioeconomic privileges from the uncertainties of democratic electoral competition.</p>\n<p>According to the text, why do political elites in some countries delegate major policy decisions to constitutional courts?</p>",
+    "text": "<p>While political theorists often associate constitutional judicial review with the protection of minority rights against majoritarian tyranny, legal scholar Ran Hirschl argues that the global expansion of judicial power over recent decades ('juristocracy') has frequently served a more self-interested political purpose. In countries undergoing democratization or political realignments, threatened ruling elites deliberately transfer controversial policy decisions\u2014concerning property rights, religious neutrality, and election laws\u2014to politically insulated constitutional courts. By depoliticizing these contentious issues, hegemonic elites effectively insulate their core socioeconomic privileges from the uncertainties of democratic electoral competition.</p>\n<p>According to the text, why do political elites in some countries delegate major policy decisions to constitutional courts?</p>",
     "options": [
       "To promote direct grassroots democratic deliberation among marginalized voting constituencies",
       "To safeguard their economic and institutional privileges from future democratic electoral losses",
@@ -867,7 +872,7 @@ const QUESTIONS = [
     "qnum": 13,
     "topic": "Command of Evidence (Quantitative)",
     "isFillIn": false,
-    "text": "<p>A materials engineering laboratory tested the tensile strength (MPa) and fracture toughness ($MPa\\cdot m^{1/2}$) of four nanostructured titanium composites after thermal aging at 600°C:</p>\n<table style=\"width:100%; border-collapse:collapse; margin:10px 0; border:1px solid #cbd5e1;\">\n<thead><tr style=\"background:#f1f5f9;\"><th style=\"padding:8px; border:1px solid #cbd5e1;\">Composite</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Initial Tensile (MPa)</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Aged Tensile (MPa)</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Initial Toughness</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Aged Toughness</th></tr></thead>\n<tbody>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp A</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,120</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,080</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">65</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">58</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp B</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,250</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,220</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">72</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">70</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp C</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">980</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">810</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">54</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">36</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp D</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,180</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,140</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">68</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">61</td></tr>\n</tbody>\n</table>\n<p>Engineers hypothesized that incorporating scandium oxide nanoparticles into titanium composites prevents thermal embrittlement by pinning grain boundaries. Which composite best supports the performance profile expected under this hypothesis?</p>",
+    "text": "<p>A materials engineering laboratory tested the tensile strength (MPa) and fracture toughness ($MPa\\cdot m^{1/2}$) of four nanostructured titanium composites after thermal aging at 600\u00b0C:</p>\n<table style=\"width:100%; border-collapse:collapse; margin:10px 0; border:1px solid #cbd5e1;\">\n<thead><tr style=\"background:#f1f5f9;\"><th style=\"padding:8px; border:1px solid #cbd5e1;\">Composite</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Initial Tensile (MPa)</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Aged Tensile (MPa)</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Initial Toughness</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Aged Toughness</th></tr></thead>\n<tbody>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp A</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,120</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,080</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">65</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">58</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp B</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,250</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,220</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">72</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">70</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp C</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">980</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">810</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">54</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">36</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Comp D</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,180</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">1,140</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">68</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">61</td></tr>\n</tbody>\n</table>\n<p>Engineers hypothesized that incorporating scandium oxide nanoparticles into titanium composites prevents thermal embrittlement by pinning grain boundaries. Which composite best supports the performance profile expected under this hypothesis?</p>",
     "options": [
       "Composite B retained over 97% of its tensile strength and over 97% of its fracture toughness after aging, demonstrating the greatest resistance to thermal embrittlement.",
       "Composite C experienced the greatest loss in fracture toughness, proving that scandium oxide accelerates thermal degradation.",
@@ -877,7 +882,7 @@ const QUESTIONS = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The hypothesis states that pinning grain boundaries prevents thermal embrittlement (loss of strength and toughness). Composite B started with the highest properties (1,250 MPa tensile, 72 toughness) and barely degraded after 600°C aging, retaining 1,220 MPa (97.6%) and 70 toughness (97.2%), which directly demonstrates exceptional thermal stability. Choice B misinterprets severe degradation as supporting the protective mechanism. Choice C is factually false (A had 1,120 MPa, which is lower than B's 1,250 MPa). Choice D is factually false (D dropped from 1,180 to 1,140 MPa).",
+    "explanation": "Choice A is correct. The hypothesis states that pinning grain boundaries prevents thermal embrittlement (loss of strength and toughness). Composite B started with the highest properties (1,250 MPa tensile, 72 toughness) and barely degraded after 600\u00b0C aging, retaining 1,220 MPa (97.6%) and 70 toughness (97.2%), which directly demonstrates exceptional thermal stability. Choice B misinterprets severe degradation as supporting the protective mechanism. Choice C is factually false (A had 1,120 MPa, which is lower than B's 1,250 MPa). Choice D is factually false (D dropped from 1,180 to 1,140 MPa).",
     "id": 40,
     "module": 2,
     "prefix": "SH3",
@@ -977,17 +982,17 @@ const QUESTIONS = [
     "qnum": 18,
     "topic": "Boundaries",
     "isFillIn": false,
-    "text": "<p>The chemical synthesis of artemisinin—an antimalarial sesquiterpene lactone originally isolated from sweet wormwood ______ by synthetic organic chemists in 2012, significantly lowering the global cost of critical malaria treatments.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
+    "text": "<p>The chemical synthesis of artemisinin\u2014an antimalarial sesquiterpene lactone originally isolated from sweet wormwood ______ by synthetic organic chemists in 2012, significantly lowering the global cost of critical malaria treatments.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
       ", was achieved",
-      "—was achieved",
+      "\u2014was achieved",
       "was achieved",
       "; was achieved"
     ],
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. The parenthetical appositive began with an em-dash ('—an antimalarial sesquiterpene lactone originally isolated from sweet wormwood'). To maintain parallel punctuation, it must be closed with an em-dash before the main verb 'was achieved' resumes the predicate. Choice A incorrectly closes an em-dash with a comma. Choice C omits closing punctuation. Choice D incorrectly inserts a semicolon.",
+    "explanation": "Choice B is correct. The parenthetical appositive began with an em-dash ('\u2014an antimalarial sesquiterpene lactone originally isolated from sweet wormwood'). To maintain parallel punctuation, it must be closed with an em-dash before the main verb 'was achieved' resumes the predicate. Choice A incorrectly closes an em-dash with a comma. Choice C omits closing punctuation. Choice D incorrectly inserts a semicolon.",
     "id": 45,
     "module": 2,
     "prefix": "SH3",
@@ -1004,7 +1009,7 @@ const QUESTIONS = [
       ":",
       ",",
       ";",
-      "—"
+      "\u2014"
     ],
     "answer": 2,
     "fillAnswer": null,
@@ -1023,7 +1028,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "text": "<p>During the early Bronze Age, metallurgical artisans in the Levant discovered that alloying copper with arsenic or tin lowered its melting point and produced cast weapons of superior hardness ______ this technical innovation inaugurated the widespread manufacture of utilitarian socketed axes and daggers.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
-      "—while",
+      "\u2014while",
       ",",
       "where",
       ";"
@@ -1192,10 +1197,13 @@ const QUESTIONS = [
     "code": "SH3-RW27",
     "section": "rw",
     "difficulty": "Super Hard"
-  },
+  }
+];
+
+const MATH_MODULE1 = [
   {
     "qnum": 1,
-    "topic": "Algebra · Linear inequalities",
+    "topic": "Algebra \u00b7 Linear inequalities",
     "isFillIn": false,
     "text": "<p>How many integer values of $x$ satisfy the compound inequality $|4x - 17| \\le 3x + 2$?</p>",
     "options": [
@@ -1217,7 +1225,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 2,
-    "topic": "Algebra · Systems of linear equations",
+    "topic": "Algebra \u00b7 Systems of linear equations",
     "isFillIn": false,
     "text": "<p>In the system of equations below, $a$ and $b$ are constants:\n$$\\begin{cases} 3x - 5y = 14 \\\\ ax + by = 28 \\end{cases}$$\nIf the system has infinitely many solutions $(x, y)$, what is the value of $a - b$?</p>",
     "options": [
@@ -1239,7 +1247,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 3,
-    "topic": "Advanced Math · Quadratic relations & roots",
+    "topic": "Advanced Math \u00b7 Quadratic relations & roots",
     "isFillIn": false,
     "text": "<p>The quadratic equation $2x^2 - 12x + k = 0$, where $k$ is a constant, has two distinct real solutions $r_1$ and $r_2$. If $r_1^2 + r_2^2 = 26$, what is the value of $k$?</p>",
     "options": [
@@ -1261,30 +1269,30 @@ const QUESTIONS = [
   },
   {
     "qnum": 4,
-    "topic": "Geometry · Frustum Volume",
+    "topic": "Geometry & Trigonometry \u2022 Similar triangles and proportional areas",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q05_find_height.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A frustum of a right circular cone has base radii of $4\\text{ cm}$ and $8\\text{ cm}$ and a volume of $336\\pi\\text{ cm}^3$. What is the height of the frustum, in centimeters?</p>",
+    "text": "<p>In $\\triangle ABC$, point $D$ lies on side $AB$ and point $E$ lies on side $AC$ such that segment $DE$ is parallel to side $BC$. If $AD = 6$, $DB = 9$, and the area of $\\triangle ADE$ is $24$, what is the area of quadrilateral $DBCE$?</p>",
     "options": [
-      "6",
-      "9",
-      "12",
-      "18"
+      "$96$",
+      "$126$",
+      "$150$",
+      "$174$"
     ],
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. Using the frustum volume formula $V = \\frac{\\pi h}{3}(R^2 + Rr + r^2)$ with $R = 8$, $r = 4$, and $V = 336\\pi$: $$336\\pi = \\frac{\\pi h}{3}(8^2 + 8 \\cdot 4 + 4^2) = \\frac{\\pi h}{3}(64 + 32 + 16) = \\frac{112\\pi}{3}h$$ Dividing both sides by $\\pi$: $$336 = \\frac{112}{3}h \\implies h = \\frac{336 \\times 3}{112} = 3 \\times 3 = 9\\text{ cm}$$",
+    "explanation": "Choice B is correct. Because $DE \\parallel BC$, $\\triangle ADE \\sim \\triangle ABC$. The total length of side $AB$ is $AD + DB = 6 + 9 = 15$. The linear scale factor between $\\triangle ADE$ and $\\triangle ABC$ is $\\frac{AB}{AD} = \\frac{15}{6} = \\frac{5}{2}$. The ratio of their areas is the square of the linear scale factor: $\\left(\\frac{5}{2}\\right)^2 = \\frac{25}{4}$. Therefore, $\\text{Area}(\\triangle ABC) = 24 \\times \\frac{25}{4} = 6 \\times 25 = 150$. The area of quadrilateral $DBCE$ is $\\text{Area}(\\triangle ABC) - \\text{Area}(\\triangle ADE) = 150 - 24 = 126$. Choice A is $24 \\times 4$. Choice C is the area of the entire triangle. Choice D adds the areas.",
     "id": 58,
     "module": 3,
     "prefix": "H3",
     "code": "H3-M4",
     "section": "math",
-    "difficulty": "Super Hard",
+    "difficulty": "Hard",
     "image": "images/q05_find_height.png"
   },
   {
     "qnum": 5,
-    "topic": "Geometry & Trigonometry · Circle theorems & distance",
+    "topic": "Geometry & Trigonometry \u00b7 Circle theorems & distance",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, the circle $x^2 + y^2 - 6x + 8y = 0$ is tangent to the horizontal line $y = c$, where $c > 0$. What is the value of $c$?</p>",
     "options": [
@@ -1306,7 +1314,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 6,
-    "topic": "Advanced Math · Rational functions",
+    "topic": "Advanced Math \u00b7 Rational functions",
     "isFillIn": false,
     "text": "<p>For all real values of $x$ such that $x \\neq -3$ and $x \\neq 2$, the rational expression $$\\frac{2x^2 + 7x + 3}{x^2 + x - 6} - \\frac{x - 1}{x - 2}$$ is equivalent to which of the following?</p>",
     "options": [
@@ -1328,7 +1336,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 7,
-    "topic": "Problem-Solving and Data Analysis · Scatterplots & linear regression",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Scatterplots & linear regression",
     "isFillIn": false,
     "text": "<p>A marine biologist models the relationship between ocean depth $d$ (in hundreds of meters) and hydrostatic pressure $P$ (in atmospheres) using the linear equation $P = 9.87d + 1.03$. According to the model, what is the predicted increase in pressure, in atmospheres, for every increase of $250$ meters in depth?</p>",
     "options": [
@@ -1350,7 +1358,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 8,
-    "topic": "Geometry & Trigonometry · Trigonometric functions",
+    "topic": "Geometry & Trigonometry \u00b7 Trigonometric functions",
     "isFillIn": false,
     "text": "<p>In right triangle $RST$, angle $S$ is the right angle. If $\\tan(R) = \\frac{7}{24}$, what is the value of $\\sin(T) - \\cos(R)$?</p>",
     "options": [
@@ -1372,7 +1380,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 9,
-    "topic": "Advanced Math · Exponential functions",
+    "topic": "Advanced Math \u00b7 Exponential functions",
     "isFillIn": false,
     "text": "<p>A population of marine phytoplankton grows exponentially according to the function $N(t) = N_0 \\cdot 2^{t / 14}$, where $t$ is the elapsed time in hours. Which of the following expressions represents the population after $t$ hours rewritten in terms of its hourly percentage growth rate?</p>",
     "options": [
@@ -1394,7 +1402,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 10,
-    "topic": "Problem-Solving and Data Analysis · Conditional probability",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Conditional probability",
     "isFillIn": false,
     "text": "<p>The table below classifies 400 aerospace engineering components by alloy type and whether they passed a high-temperature stress test:</p>\n<table style=\"width:100%; border-collapse:collapse; margin:10px 0; border:1px solid #cbd5e1;\">\n<thead><tr style=\"background:#f1f5f9;\"><th style=\"padding:8px; border:1px solid #cbd5e1;\">Alloy</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Passed</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Failed</th><th style=\"padding:8px; border:1px solid #cbd5e1;\">Total</th></tr></thead>\n<tbody>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Titanium-Aluminide</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">152</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">28</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">180</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Nickel-Superalloy</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">186</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">34</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">220</td></tr>\n<tr><td style=\"padding:8px; border:1px solid #cbd5e1;\">Total</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">338</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">62</td><td style=\"padding:8px; border:1px solid #cbd5e1;\">400</td></tr>\n</tbody>\n</table>\n<p>If a component that passed the stress test is selected at random, what is the probability that it is made of Titanium-Aluminide?</p>",
     "options": [
@@ -1416,28 +1424,28 @@ const QUESTIONS = [
   },
   {
     "qnum": 11,
-    "topic": "Geometry · Frustum Volume (SPR)",
+    "topic": "Problem-Solving and Data Analysis \u2022 Percent markup and discount",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q06_tank_half_full.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>An open water tank is shaped like a frustum of a cone with bottom radius $5\\text{ ft}$, top radius $15\\text{ ft}$, and height $20\\text{ ft}$. The tank is filled with water to exactly half its height. What fraction of the tank's capacity is filled with water? (Enter a fraction or a decimal rounded to the nearest ten-thousandth.)</p>",
+    "text": "<p>A retailer purchases a tablet from a manufacturer for $\\$320$. The retailer marks up the wholesale price by $40\\%$ to set the initial retail price. During a clearance sale, the retailer applies a $25\\%$ discount to the retail price. What is the final sale price, in dollars, of the tablet?</p>",
     "options": [],
-    "answer": "7/26",
-    "fillAnswer": "7/26",
+    "answer": 336,
+    "fillAnswer": "336",
     "acceptedAnswers": [
       "7/26",
       "0.2692"
     ],
-    "explanation": "The correct answer is $7/26$ (or $0.2692$). At half height ($h = 10\\text{ ft}$), by linear interpolation, the radius of the water surface is $r_{\\text{mid}} = \\frac{5 + 15}{2} = 10\\text{ ft}$. The volume of water filled (from bottom radius 5 to radius 10, height 10) is: $$V_{\\text{water}} = \\frac{10\\pi}{3}(5^2 + 5 \\cdot 10 + 10^2) = \\frac{10\\pi}{3}(25 + 50 + 100) = \\frac{1750\\pi}{3}\\text{ ft}^3$$ The total capacity of the tank (from radius 5 to 15, height 20) is: $$V_{\\text{total}} = \\frac{20\\pi}{3}(5^2 + 5 \\cdot 15 + 15^2) = \\frac{20\\pi}{3}(25 + 75 + 225) = \\frac{20\\pi}{3}(325) = \\frac{6500\\pi}{3}\\text{ ft}^3$$ The fraction filled is: $$\\frac{V_{\\text{water}}}{V_{\\text{total}}} = \\frac{1750}{6500} = \\frac{7}{26} \\approx 0.2692$$ Note that the answer is less than $1/2$ because the tank widens upward.",
+    "explanation": "The correct answer is 336. The retail price after the $40\\%$ markup is $320 \\times (1 + 0.40) = 320 \\times 1.40 = 448$. The clearance sale applies a $25\\%$ discount to the retail price: $448 \\times (1 - 0.25) = 448 \\times 0.75 = 336$.",
     "id": 65,
     "module": 3,
     "prefix": "H3",
     "code": "H3-M11",
     "section": "math",
-    "difficulty": "Super Hard",
+    "difficulty": "Hard",
     "image": "images/q06_tank_half_full.png"
   },
   {
     "qnum": 12,
-    "topic": "Advanced Math · Function transformations",
+    "topic": "Advanced Math \u00b7 Function transformations",
     "isFillIn": false,
     "text": "<p>The graph of $y = f(x)$ has vertex $(4, -7)$. If $g(x) = -2 f(x + 3) + 5$, what are the coordinates of the vertex of the graph of $y = g(x)$?</p>",
     "options": [
@@ -1459,7 +1467,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 13,
-    "topic": "Advanced Math · Radical equations",
+    "topic": "Advanced Math \u00b7 Radical equations",
     "isFillIn": false,
     "text": "<p>What is the set of all real solutions to the equation $\\sqrt{3x + 16} = x + 2$?</p>",
     "options": [
@@ -1481,7 +1489,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 14,
-    "topic": "Problem-Solving and Data Analysis · Sampling & margin of error",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Sampling & margin of error",
     "isFillIn": false,
     "text": "<p>A poll of $800$ randomly selected registered voters found that $54\\%$ support a proposed municipal transit referendum, with an associated margin of error of $3.5\\%$ at a $95\\%$ confidence level. Which of the following modifications would be guaranteed to decrease the margin of error to approximately $1.75\\%$ while maintaining the same $95\\%$ confidence level?</p>",
     "options": [
@@ -1503,7 +1511,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 15,
-    "topic": "Geometry & Trigonometry · 3D geometry & similar solids",
+    "topic": "Geometry & Trigonometry \u00b7 3D geometry & similar solids",
     "isFillIn": false,
     "text": "<p>Two mathematically similar right circular cylinders have total surface areas in the ratio $16 : 49$. If the volume of the smaller cylinder is $128\\pi$, what is the volume of the larger cylinder?</p>",
     "options": [
@@ -1525,30 +1533,30 @@ const QUESTIONS = [
   },
   {
     "qnum": 16,
-    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
+    "topic": "Problem-Solving and Data Analysis \u2022 Evaluating statistical claims & sampling bias",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q13_two_urns_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>Urn I contains $3$ red and $2$ blue balls. Urn II contains $1$ red and $4$ blue balls. A fair coin is flipped: heads means draw from Urn I, tails means draw from Urn II. One ball is then drawn at random from the chosen urn, and it is red. What is the probability that it came from Urn I?</p>",
+    "text": "<p>A city council member wants to estimate the proportion of city residents who favor building a new public recreation center. The council member surveys $500$ adults exiting a private luxury health club on Saturday morning, finding that $82\\%$ support the new center. Which of the following best explains why this estimate may be unreliable as a generalization to all city residents?</p>",
     "options": [
-      "0.50",
-      "0.60",
-      "0.75",
-      "0.80"
+      "The sample size of $500$ adults is too small to draw statistically valid inferences.",
+      "The sample was not randomly selected from all city residents and overrepresents individuals with a strong personal interest in fitness facilities.",
+      "The survey failed to calculate the standard deviation of resident incomes.",
+      "The council member did not evaluate the margin of error at a $99\\%$ confidence level."
     ],
-    "answer": 2,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. The prior probability for each urn is $P(\\text{I}) = P(\\text{II}) = 0.5$. The probability of drawing a red ball from Urn I is $3/5 = 0.6$, and from Urn II is $1/5 = 0.2$. The total probability of drawing a red ball is: $$P(\\text{Red}) = (0.5)(0.6) + (0.5)(0.2) = 0.3 + 0.1 = 0.4$$ Applying Bayes' Theorem: $$P(\\text{Urn I} \\mid \\text{Red}) = \\frac{P(\\text{Urn I} \\cap \\text{Red})}{P(\\text{Red})} = \\frac{0.3}{0.4} = 0.75$$",
+    "explanation": "Choice B is correct. For a sample to yield an unbiased estimate of a broader population, every member of that population must have an equal chance of selection (random sampling). Surveying adults exiting a private luxury fitness club introduces selection bias because these patrons are likely wealthier and more enthusiastic about athletic/recreational facilities than the general city population. Choice A is incorrect because $500$ is a sufficiently large sample if randomly drawn. Choices C and D are standard statistical metrics that do not fix non-random sampling bias.",
     "id": 70,
     "module": 3,
     "prefix": "H3",
     "code": "H3-M16",
     "section": "math",
-    "difficulty": "Super Hard",
+    "difficulty": "Hard",
     "image": "images/q13_two_urns_tree.png"
   },
   {
     "qnum": 17,
-    "topic": "Advanced Math · Radicals and rational exponents",
+    "topic": "Advanced Math \u00b7 Radicals and rational exponents",
     "isFillIn": false,
     "text": "<p>For $x > 0$, the expression $$\\frac{\\sqrt[3]{x^4} \\cdot \\sqrt{x^5}}{\\sqrt[6]{x^7}}$$ can be written in the form $x^p$, where $p$ is a constant. What is the value of $p$?</p>",
     "options": [
@@ -1570,7 +1578,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 18,
-    "topic": "Advanced Math · Polynomial equations (SPR)",
+    "topic": "Advanced Math \u00b7 Polynomial equations (SPR)",
     "isFillIn": true,
     "text": "<p>What is the largest real solution to the equation $x^4 - 20x^2 + 64 = 0$?</p>",
     "options": [],
@@ -1589,7 +1597,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 19,
-    "topic": "Advanced Math · Rational equations (SPR)",
+    "topic": "Advanced Math \u00b7 Rational equations (SPR)",
     "isFillIn": true,
     "text": "<p>What is the real solution to the equation $$\\frac{x^2 - 3x}{x - 4} = \\frac{4}{x - 4} + 12$$?</p>",
     "options": [],
@@ -1608,7 +1616,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 20,
-    "topic": "Algebra · Linear systems without solutions (SPR)",
+    "topic": "Algebra \u00b7 Linear systems without solutions (SPR)",
     "isFillIn": true,
     "text": "<p>The system of linear equations below has no solution, where $k$ is a constant:\n$$\\begin{cases} 4x - 6y = 19 \\\\ kx + 9y = 15 \\end{cases}$$\nWhat is the value of $k$?</p>",
     "options": [],
@@ -1627,7 +1635,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 21,
-    "topic": "Geometry & Trigonometry · Quadrilateral properties (SPR)",
+    "topic": "Geometry & Trigonometry \u00b7 Quadrilateral properties (SPR)",
     "isFillIn": true,
     "text": "<p>A rhombus in the $xy$-plane has side length $13$. If the length of one of its diagonals is $10$, what is the area of the rhombus?</p>",
     "options": [],
@@ -1646,7 +1654,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 22,
-    "topic": "Problem-Solving and Data Analysis · Rates & combined work (SPR)",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Rates & combined work (SPR)",
     "isFillIn": true,
     "text": "<p>Pump $A$ can empty a water reservoir in $9$ hours. When Pump $A$ and Pump $B$ operate together, they empty the same reservoir in $3.6$ hours. How many hours would it take Pump $B$ operating alone to empty the reservoir?</p>",
     "options": [],
@@ -1662,10 +1670,13 @@ const QUESTIONS = [
     "code": "H3-M22",
     "section": "math",
     "difficulty": "Hard"
-  },
+  }
+];
+
+const MATH_MODULE2 = [
   {
     "qnum": 1,
-    "topic": "Geometry & Trigonometry · Circle tangents & coordinate geometry",
+    "topic": "Geometry & Trigonometry \u00b7 Circle tangents & coordinate geometry",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, a line with positive slope passes through the point $(0, -5)$ and is tangent to the circle $x^2 + y^2 = 16$. What is the slope of this line?</p>",
     "options": [
@@ -1687,7 +1698,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 2,
-    "topic": "Advanced Math · Function composition",
+    "topic": "Advanced Math \u00b7 Function composition",
     "isFillIn": false,
     "text": "<p>The functions $f$ and $g$ are defined for all real numbers by $f(x) = 3x - 5$ and $g(x) = ax^2 + bx + 1$. If $(g \\circ f)(x) = 18x^2 - 60x + 51$, what is the value of $a + b$?</p>",
     "options": [
@@ -1709,7 +1720,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 3,
-    "topic": "Advanced Math · Nonlinear systems & algebraic identities",
+    "topic": "Advanced Math \u00b7 Nonlinear systems & algebraic identities",
     "isFillIn": false,
     "text": "<p>If the positive real numbers $x$ and $y$ satisfy $x + y = 7$ and $x^2 + y^2 = 29$, what is the value of $x^3 + y^3$?</p>",
     "options": [
@@ -1731,17 +1742,17 @@ const QUESTIONS = [
   },
   {
     "qnum": 4,
-    "topic": "Problem Solving & Data Analysis · Bayes' Theorem (SPR)",
+    "topic": "Problem-Solving and Data Analysis \u2022 Margin of error and confidence intervals",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q19_gym_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>At a gym, $40\\%$ of members attend morning classes. Of the members who attend morning classes, $50\\%$ renew their membership; of the other members, $20\\%$ renew. A member who renewed is chosen at random. What is the probability that this member attends morning classes? (Enter a fraction or a decimal.)</p>",
+    "text": "<p>In a survey of a random sample of $900$ eligible voters, $63\\%$ stated they plan to vote in an upcoming election. The survey reported an estimated margin of error of $\\pm 3.2\\%$ at a $95\\%$ confidence level. Based on this survey, the true percentage of all eligible voters who plan to vote is estimated to be at least $p\\%$. What is the value of $p$, rounded to the nearest tenth?</p>",
     "options": [],
-    "answer": "5/8",
-    "fillAnswer": "5/8",
+    "answer": 59.8,
+    "fillAnswer": "59.8",
     "acceptedAnswers": [
       "5/8",
       "0.625"
     ],
-    "explanation": "The correct answer is $5/8$ (or $0.625$). The overall probability of a member renewing is: $$P(\\text{Renew}) = (0.40)(0.50) + (0.60)(0.20) = 0.20 + 0.12 = 0.32$$ The probability that a member who renewed attends morning classes is: $$P(\\text{Morning} \\mid \\text{Renew}) = \\frac{0.20}{0.32} = \\frac{20}{32} = \\frac{5}{8} = 0.625$$",
+    "explanation": "The correct answer is 59.8. The point estimate is $63\\%$ and the margin of error is $3.2\\%$. The $95\\%$ confidence interval ranges from $63\\% - 3.2\\% = 59.8\\%$ to $63\\% + 3.2\\% = 66.2\\%$. The lower bound of this plausible interval is $59.8\\%$, so $p = 59.8$.",
     "id": 80,
     "module": 4,
     "prefix": "SH3",
@@ -1752,19 +1763,19 @@ const QUESTIONS = [
   },
   {
     "qnum": 5,
-    "topic": "Geometry & Trigonometry · 3D solids & frustum volume",
+    "topic": "Geometry & Trigonometry \u2022 Right circular cone volume and radius scaling",
     "isFillIn": false,
-    "text": "<p>A container is shaped like the frustum of a right circular cone. The circular top has radius $9$, the circular bottom has radius $3$, and the height of the container is $8$. What is the volume of the container?</p>",
+    "text": "<p>A right circular cone has a base radius of $r$ and a height of $h$, with volume $V_1 = 72\\pi$. A second right circular cone has a base radius that is $50\\%$ larger than $r$ and a height that is $\\frac{1}{3}$ the height of the first cone. What is the volume of the second cone?</p>",
     "options": [
-      "$312\\pi$",
-      "$256\\pi$",
-      "$336\\pi$",
-      "$432\\pi$"
+      "$36\\pi$",
+      "$48\\pi$",
+      "$54\\pi$",
+      "$81\\pi$"
     ],
-    "answer": 0,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The volume of a conical frustum with height $h$ and base radii $R$ and $r$ is given by $V = \\frac{1}{3}\\pi h (R^2 + Rr + r^2)$. Here $h = 8$, $R = 9$, and $r = 3$. Calculating the term in parentheses: $R^2 + Rr + r^2 = 9^2 + (9)(3) + 3^2 = 81 + 27 + 9 = 117$. Substituting into the formula: $V = \\frac{1}{3}\\pi (8)(117) = 8\\pi \\times 39 = 312\\pi$.",
+    "explanation": "Choice C is correct. The volume of a cone is $V = \\frac{1}{3}\\pi r^2 h$. For the second cone, the radius is $r_2 = 1.5r = \\frac{3}{2}r$ and the height is $h_2 = \\frac{1}{3}h$. The volume of the second cone is $V_2 = \\frac{1}{3}\\pi (r_2)^2 h_2 = \\frac{1}{3}\\pi \\left(\\frac{3}{2}r\\right)^2 \\left(\\frac{1}{3}h\\right) = \\frac{1}{3}\\pi \\left(\\frac{9}{4}r^2\\right)\\left(\\frac{1}{3}h\\right) = \\frac{9}{12} \\left(\\frac{1}{3}\\pi r^2 h\\right) = \\frac{3}{4} V_1$. Since $V_1 = 72\\pi$, $V_2 = \\frac{3}{4}(72\\pi) = 54\\pi$. Choice A is $\\frac{1}{2}V_1$. Choice B is $\\frac{2}{3}V_1$. Choice D is $(1.5)^2 V_1 / 2$.",
     "id": 81,
     "module": 4,
     "prefix": "SH3",
@@ -1774,7 +1785,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 6,
-    "topic": "Geometry & Trigonometry · Advanced trigonometry identities",
+    "topic": "Geometry & Trigonometry \u00b7 Advanced trigonometry identities",
     "isFillIn": false,
     "text": "<p>For an acute angle $\\theta$ such that $0 < \\theta < \\frac{\\pi}{2}$, if $\\tan(\\theta) = \\frac{4}{3}$, what is the value of $\\sin(2\\theta)$?</p>",
     "options": [
@@ -1796,7 +1807,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 7,
-    "topic": "Advanced Math · Rational functions & hole coordinates",
+    "topic": "Advanced Math \u00b7 Rational functions & hole coordinates",
     "isFillIn": false,
     "text": "<p>The function $f$ is defined by $f(x) = \\frac{x^3 - 4x^2 - 7x + 10}{x - 5}$. In the $xy$-plane, the graph of $y = f(x)$ has a removable discontinuity (a hole) at point $(5, k)$. What is the value of $k$?</p>",
     "options": [
@@ -1818,7 +1829,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 8,
-    "topic": "Algebra · Systems of inequalities & vertex optimization",
+    "topic": "Algebra \u00b7 Systems of inequalities & vertex optimization",
     "isFillIn": false,
     "text": "<p>A region in the $xy$-plane is bounded by the inequalities $x \\ge 0$, $y \\ge 0$, $x + 2y \\le 16$, and $3x + y \\le 18$. What is the maximum value of the objective function $P(x, y) = 5x + 4y$ in this region?</p>",
     "options": [
@@ -1840,7 +1851,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 9,
-    "topic": "Algebra · Systems of equations with parameters",
+    "topic": "Algebra \u00b7 Systems of equations with parameters",
     "isFillIn": false,
     "text": "<p>In the system of equations below, $k$ is a constant:\n$$\\begin{cases} (k - 2)x + 3y = 7 \\\\ 4x + (k + 2)y = 11 \\end{cases}$$\nFor what value of $k > 0$ does the system have no solution?</p>",
     "options": [
@@ -1852,7 +1863,7 @@ const QUESTIONS = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. A system of two linear equations has no solution if the lines have equal slopes but distinct $y$-intercepts. The slopes are equal when the determinant of the coefficients is zero: $(k - 2)(k + 2) - (3)(4) = k^2 - 4 - 12 = k^2 - 16 = 0 \\implies k^2 = 16$. Since $k > 0$, $k = 4$. Substituting $k = 4$ into the system yields $2x + 3y = 7$ and $4x + 6y = 11$. Multiplying the first equation by $2$ gives $4x + 6y = 14$. Since $4x + 6y = 14$ and $4x + 6y = 11$ have identical left sides but different right sides ($14 \\neq 11$), the lines are strictly parallel and distinct, meaning there is no solution.",
+    "explanation": "Choice A is correct. A system of two linear equations has no solution if the lines have equal slopes but distinct $y$-intercepts. The slopes are equal when the cross-multiplied ratio of the $x$- and $y$-coefficients is equal: $\frac{k - 2}{4} = \frac{3}{k + 2} \implies (k - 2)(k + 2) = 12 \implies k^2 - 4 = 12 \implies k^2 = 16 \\implies k^2 = 16$. Since $k > 0$, $k = 4$. Substituting $k = 4$ into the system yields $2x + 3y = 7$ and $4x + 6y = 11$. Multiplying the first equation by $2$ gives $4x + 6y = 14$. Since $4x + 6y = 14$ and $4x + 6y = 11$ have identical left sides but different right sides ($14 \\neq 11$), the lines are strictly parallel and distinct, meaning there is no solution.",
     "id": 85,
     "module": 4,
     "prefix": "SH3",
@@ -1862,7 +1873,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 10,
-    "topic": "Geometry & Trigonometry · Triangles & geometric mean",
+    "topic": "Geometry & Trigonometry \u00b7 Triangles & geometric mean",
     "isFillIn": false,
     "text": "<p>In right triangle $ABC$ with right angle at $C$, altitude $CD$ is drawn to hypotenuse $AB$. If $AD = 4$ and $DB = 9$, what is the area of triangle $ABC$?</p>",
     "options": [
@@ -1884,7 +1895,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 11,
-    "topic": "Problem-Solving and Data Analysis · Exponential models",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Exponential models",
     "isFillIn": false,
     "text": "<p>The value of an investment portfolio grows continuously according to $V(t) = V_0 (1.08)^{t/3}$, where $t$ is measured in years. By approximately what percentage does the portfolio grow each single year?</p>",
     "options": [
@@ -1906,19 +1917,19 @@ const QUESTIONS = [
   },
   {
     "qnum": 12,
-    "topic": "Advanced Math · Complex Conjugate Root Theorem",
+    "topic": "Advanced Math \u2022 Quadratic function vertex and minimum value",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q25_quartic_x2.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $f(x) = x^4 + ax^3 + bx^2 + cx + d$ has real coefficients, and two of its zeros are $1 + i$ and $3i$. What is the value of $b$?</p>",
+    "text": "<p>The quadratic function $f(x) = 2x^2 - 12x + k$ has a minimum value of $7$. What is the value of the constant $k$?</p>",
     "options": [
-      "9",
-      "11",
-      "13",
-      "18"
+      "$18$",
+      "$21$",
+      "$25$",
+      "$29$"
     ],
-    "answer": 1,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. Since the coefficients of $f(x)$ are real, the conjugates $1 - i$ and $-3i$ are also zeros of $f(x)$. The quadratic factor for the zeros $1 \\pm i$ is: $$(x - (1 + i))(x - (1 - i)) = (x - 1)^2 - i^2 = x^2 - 2x + 2$$ The quadratic factor for the zeros $\\pm 3i$ is: $$(x - 3i)(x + 3i) = x^2 - 9i^2 = x^2 + 9$$ Multiplying the two quadratic factors: $$f(x) = (x^2 - 2x + 2)(x^2 + 9) = x^4 + 9x^2 - 2x^3 - 18x + 2x^2 + 18 = x^4 - 2x^3 + 11x^2 - 18x + 18$$ Comparing coefficients, the coefficient of $x^2$ is $b = 11$.",
+    "explanation": "Choice C is correct. The vertex of a parabola $y = ax^2 + bx + c$ occurs at $x = -\\frac{b}{2a}$. Here $a = 2$ and $b = -12$, so $x = -\\frac{-12}{2(2)} = \\frac{12}{4} = 3$. The minimum value is the $y$-value at this vertex: $f(3) = 2(3^2) - 12(3) + k = 2(9) - 36 + k = 18 - 36 + k = k - 18$. Given that this minimum value is $7$, set $k - 18 = 7 \\implies k = 25$. Choice A corresponds to setting $f(3) = 0$. Choice B subtracts $7$ instead of adding. Choice D is an arithmetic error.",
     "id": 88,
     "module": 4,
     "prefix": "SH3",
@@ -1929,7 +1940,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 13,
-    "topic": "Advanced Math · Absolute value functions & optimization",
+    "topic": "Advanced Math \u00b7 Absolute value functions & optimization",
     "isFillIn": false,
     "text": "<p>What is the minimum value of the function $f(x) = |x - 3| + |x - 7| + |x - 12|$ for all real numbers $x$?</p>",
     "options": [
@@ -1951,7 +1962,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 14,
-    "topic": "Problem-Solving and Data Analysis · Nonlinear models & residuals",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Nonlinear models & residuals",
     "isFillIn": false,
     "text": "<p>A researcher fits a linear model $\\hat{y} = 1.8x + 4.2$ to a dataset of $10$ points. The residual plot exhibits a distinct U-shaped pattern, with negative residuals for middle values of $x$ and positive residuals for low and high values of $x$. Which of the following is the most appropriate conclusion?</p>",
     "options": [
@@ -1973,19 +1984,19 @@ const QUESTIONS = [
   },
   {
     "qnum": 15,
-    "topic": "Geometry & Trigonometry · Power of a point theorem",
+    "topic": "Geometry & Trigonometry \u2022 Circle tangents and right triangles",
     "isFillIn": false,
-    "text": "<p>From an external point $P$, two secant lines are drawn to a circle. The first secant intersects the circle at points $A$ and $B$, with $PA = 4$ and $AB = 8$. The second secant intersects the circle at points $C$ and $D$, with $PC = 3$. What is the length of segment $CD$?</p>",
+    "text": "<p>In the $xy$-plane, a circle with center $O(0, 0)$ has radius $8$. A line tangent to the circle at point $T$ passes through the external point $P(17, 0)$. What is the length of segment $PT$?</p>",
     "options": [
-      "11",
-      "12",
-      "13",
-      "16"
+      "$12$",
+      "$14$",
+      "$15$",
+      "$\\sqrt{353}$"
     ],
     "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. By the Secant-Secant Power of a Point theorem, for secants $PAB$ and $PCD$ drawn from external point $P$, the product of external segment and entire secant segment is constant: $PA \\cdot PB = PC \\cdot PD$. The length of the first secant is $PB = PA + AB = 4 + 8 = 12$. The power of point $P$ is $PA \\cdot PB = 4 \\times 12 = 48$. Then $PC \\cdot PD = 48 \\implies 3 \\cdot PD = 48 \\implies PD = 16$. The internal chord length is $CD = PD - PC = 16 - 3 = 13$.",
+    "explanation": "Choice C is correct. A radius drawn to the point of tangency is perpendicular to the tangent line, meaning $\\angle PTO = 90^\\circ$. Therefore, $\\triangle PTO$ is a right triangle with right angle at $T$, hypotenuse $OP = 17$, and leg $OT = 8$. By the Pythagorean theorem: $PT^2 + OT^2 = OP^2 \\implies PT^2 + 8^2 = 17^2 \\implies PT^2 + 64 = 289 \\implies PT^2 = 225 \\implies PT = \\sqrt{225} = 15$. Choice A is $17 - 5$. Choice B is an arithmetic error. Choice D adds squares instead of subtracting.",
     "id": 91,
     "module": 4,
     "prefix": "SH3",
@@ -1995,7 +2006,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 16,
-    "topic": "Advanced Math · Rational functions and inverses",
+    "topic": "Advanced Math \u00b7 Rational functions and inverses",
     "isFillIn": false,
     "text": "<p>The function $f$ is defined for all $x \\neq 5$ by $f(x) = \\frac{3x + 4}{x - 5}$. What is the value of $f^{-1}(7)$?</p>",
     "options": [
@@ -2017,7 +2028,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 17,
-    "topic": "Algebra · Work-rate systems",
+    "topic": "Algebra \u00b7 Work-rate systems",
     "isFillIn": false,
     "text": "<p>Mechanic $A$ and Mechanic $B$ working together can overhaul an aircraft engine in $12$ hours. If Mechanic $A$ works alone for $4$ hours and then Mechanic $B$ works alone for $9$ hours, they complete $\\frac{1}{2}$ of the overhaul. How many hours would it take Mechanic $A$ alone to overhaul the entire engine?</p>",
     "options": [
@@ -2039,19 +2050,19 @@ const QUESTIONS = [
   },
   {
     "qnum": 18,
-    "topic": "Advanced Math · Complex Conjugate Root Theorem",
+    "topic": "Advanced Math \u2022 Exponential growth and decay parameters",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q26_cubic_a.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $p(x) = x^3 + ax^2 + bx - 26$ has real coefficients $a$ and $b$, and $2 + 3i$ is a zero of $p$. What is the value of $a$?</p>",
+    "text": "<p>The population of a wildlife reserve $t$ years after 2010 is modeled by the function $P(t) = 4,500(1.08)^{t/3}$. Which of the following expressions represents the estimated annual percent growth rate of the reserve's population?</p>",
     "options": [
-      "-6",
-      "-2",
-      "2",
-      "6"
+      "$\\left((1.08)^{1/3} - 1\\right) \\times 100\\%$",
+      "$\\left((1.08)^3 - 1\\right) \\times 100\\%$",
+      "$\\frac{8}{3}\\%$",
+      "$24\\%$"
     ],
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. Since $a$ and $b$ are real, the conjugate $2 - 3i$ is also a zero of $p(x)$. Let the third zero be $r$. By Vieta's formulas, the product of all three roots is equal to $-(-26) = 26$: $$(2 + 3i)(2 - 3i) \\cdot r = 26 \\implies (4 + 9)r = 26 \\implies 13r = 26 \\implies r = 2$$ The sum of the three roots is related to $a$ by $-a$: $$\\text{Sum} = (2 + 3i) + (2 - 3i) + 2 = 6$$ Since $\\text{Sum} = -a$, we have $-a = 6 \\implies a = -6$.",
+    "explanation": "Choice A is correct. The standard exponential growth model with an annual growth rate $r$ is $P(t) = P_0 (1 + r)^t$. Rewrite $(1.08)^{t/3}$ as $\\left((1.08)^{1/3}\\right)^t$. The annual growth multiplier is $(1 + r) = (1.08)^{1/3}$. Solving for $r$ gives $r = (1.08)^{1/3} - 1$. Expressed as a percentage, the annual growth rate is $\\left((1.08)^{1/3} - 1\\right) \\times 100\\%$. Choice B cubes rather than cube-roots. Choice C divides the percent directly, ignoring compound growth. Choice D multiplies by $3$.",
     "id": 94,
     "module": 4,
     "prefix": "SH3",
@@ -2062,7 +2073,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 19,
-    "topic": "Advanced Math · Quadratics & discriminant (SPR)",
+    "topic": "Advanced Math \u00b7 Quadratics & discriminant (SPR)",
     "isFillIn": true,
     "text": "<p>The quadratic equation $x^2 - kx + 81 = 0$, where $k$ is a positive constant, has two real roots whose difference is $24$. What is the value of $k$?</p>",
     "options": [],
@@ -2081,7 +2092,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 20,
-    "topic": "Advanced Math · Radical equations (SPR)",
+    "topic": "Advanced Math \u00b7 Radical equations (SPR)",
     "isFillIn": true,
     "text": "<p>What is the real solution to the equation $\\sqrt{x + 7} - \\sqrt{x - 5} = 2$?</p>",
     "options": [],
@@ -2100,7 +2111,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 21,
-    "topic": "Geometry & Trigonometry · Circle geometry & tangent axes (SPR)",
+    "topic": "Geometry & Trigonometry \u00b7 Circle geometry & tangent axes (SPR)",
     "isFillIn": true,
     "text": "<p>In the first quadrant of the $xy$-plane, a circle with radius $R$ is tangent to both the $x$-axis and the $y$-axis. If the circle passes through the point $(1, 8)$, what is the larger of the two possible values of $R$?</p>",
     "options": [],
@@ -2119,7 +2130,7 @@ const QUESTIONS = [
   },
   {
     "qnum": 22,
-    "topic": "Geometry & Trigonometry · 3D geometry & composite solids (SPR)",
+    "topic": "Geometry & Trigonometry \u00b7 3D geometry & composite solids (SPR)",
     "isFillIn": true,
     "text": "<p>A right circular cone is inscribed inside a right circular cylinder such that they share the exact same circular base and the vertex of the cone touches the center of the cylinder's top face. If the volume of the space inside the cylinder but outside the cone is $256\\pi$ and the height of the cylinder is $6$, what is the radius of the base?</p>",
     "options": [],
@@ -2138,16 +2149,404 @@ const QUESTIONS = [
   }
 ];
 
-// Topic Map
-const TOPIC_MAP = {};
-QUESTIONS.forEach(q => {
-  const t = q.topic || 'General';
-  if (!TOPIC_MAP[t]) {
-    TOPIC_MAP[t] = { name: t, questions: [] };
+const QUESTIONS = [...RW_MODULE1, ...RW_MODULE2, ...MATH_MODULE1, ...MATH_MODULE2];
+
+const TOPIC_MAP = {
+  "Words in Context": {
+    "name": "Words in Context",
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      28,
+      29,
+      30,
+      31,
+      32
+    ]
+  },
+  "Text Structure & Purpose (main purpose)": {
+    "name": "Text Structure & Purpose (main purpose)",
+    "questions": [
+      6,
+      33
+    ]
+  },
+  "Text Structure & Purpose (underlined sentence)": {
+    "name": "Text Structure & Purpose (underlined sentence)",
+    "questions": [
+      7,
+      34
+    ]
+  },
+  "Cross-Text Connections": {
+    "name": "Cross-Text Connections",
+    "questions": [
+      8,
+      35
+    ]
+  },
+  "Central Ideas and Details": {
+    "name": "Central Ideas and Details",
+    "questions": [
+      9,
+      10,
+      36,
+      37
+    ]
+  },
+  "Command of Evidence (Textual)": {
+    "name": "Command of Evidence (Textual)",
+    "questions": [
+      11,
+      12,
+      38,
+      39
+    ]
+  },
+  "Command of Evidence (Quantitative)": {
+    "name": "Command of Evidence (Quantitative)",
+    "questions": [
+      13,
+      14,
+      40,
+      41
+    ]
+  },
+  "Inferences (\"most logically completes\")": {
+    "name": "Inferences (\"most logically completes\")",
+    "questions": [
+      15,
+      16,
+      42,
+      43
+    ]
+  },
+  "Boundaries": {
+    "name": "Boundaries",
+    "questions": [
+      17,
+      18,
+      19,
+      20,
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  "Form, Structure, and Sense (SVA)": {
+    "name": "Form, Structure, and Sense (SVA)",
+    "questions": [
+      21,
+      48
+    ]
+  },
+  "Form, Structure, and Sense (modifier)": {
+    "name": "Form, Structure, and Sense (modifier)",
+    "questions": [
+      22,
+      49
+    ]
+  },
+  "Form, Structure, and Sense (verb)": {
+    "name": "Form, Structure, and Sense (verb)",
+    "questions": [
+      23
+    ]
+  },
+  "Transitions": {
+    "name": "Transitions",
+    "questions": [
+      24,
+      25,
+      51,
+      52
+    ]
+  },
+  "Rhetorical Synthesis": {
+    "name": "Rhetorical Synthesis",
+    "questions": [
+      26,
+      27,
+      53,
+      54
+    ]
+  },
+  "Form, Structure, and Sense (pronoun)": {
+    "name": "Form, Structure, and Sense (pronoun)",
+    "questions": [
+      50
+    ]
+  },
+  "Algebra \u00b7 Linear inequalities": {
+    "name": "Algebra \u00b7 Linear inequalities",
+    "questions": [
+      55
+    ]
+  },
+  "Algebra \u00b7 Systems of linear equations": {
+    "name": "Algebra \u00b7 Systems of linear equations",
+    "questions": [
+      56
+    ]
+  },
+  "Advanced Math \u00b7 Quadratic relations & roots": {
+    "name": "Advanced Math \u00b7 Quadratic relations & roots",
+    "questions": [
+      57
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Similar triangles and proportional areas": {
+    "name": "Geometry & Trigonometry \u2022 Similar triangles and proportional areas",
+    "questions": [
+      58
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle theorems & distance": {
+    "name": "Geometry & Trigonometry \u00b7 Circle theorems & distance",
+    "questions": [
+      59
+    ]
+  },
+  "Advanced Math \u00b7 Rational functions": {
+    "name": "Advanced Math \u00b7 Rational functions",
+    "questions": [
+      60
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Scatterplots & linear regression": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Scatterplots & linear regression",
+    "questions": [
+      61
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Trigonometric functions": {
+    "name": "Geometry & Trigonometry \u00b7 Trigonometric functions",
+    "questions": [
+      62
+    ]
+  },
+  "Advanced Math \u00b7 Exponential functions": {
+    "name": "Advanced Math \u00b7 Exponential functions",
+    "questions": [
+      63
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Conditional probability": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Conditional probability",
+    "questions": [
+      64
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Percent markup and discount": {
+    "name": "Problem-Solving and Data Analysis \u2022 Percent markup and discount",
+    "questions": [
+      65
+    ]
+  },
+  "Advanced Math \u00b7 Function transformations": {
+    "name": "Advanced Math \u00b7 Function transformations",
+    "questions": [
+      66
+    ]
+  },
+  "Advanced Math \u00b7 Radical equations": {
+    "name": "Advanced Math \u00b7 Radical equations",
+    "questions": [
+      67
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Sampling & margin of error": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Sampling & margin of error",
+    "questions": [
+      68
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 3D geometry & similar solids": {
+    "name": "Geometry & Trigonometry \u00b7 3D geometry & similar solids",
+    "questions": [
+      69
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Evaluating statistical claims & sampling bias": {
+    "name": "Problem-Solving and Data Analysis \u2022 Evaluating statistical claims & sampling bias",
+    "questions": [
+      70
+    ]
+  },
+  "Advanced Math \u00b7 Radicals and rational exponents": {
+    "name": "Advanced Math \u00b7 Radicals and rational exponents",
+    "questions": [
+      71
+    ]
+  },
+  "Advanced Math \u00b7 Polynomial equations (SPR)": {
+    "name": "Advanced Math \u00b7 Polynomial equations (SPR)",
+    "questions": [
+      72
+    ]
+  },
+  "Advanced Math \u00b7 Rational equations (SPR)": {
+    "name": "Advanced Math \u00b7 Rational equations (SPR)",
+    "questions": [
+      73
+    ]
+  },
+  "Algebra \u00b7 Linear systems without solutions (SPR)": {
+    "name": "Algebra \u00b7 Linear systems without solutions (SPR)",
+    "questions": [
+      74
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Quadrilateral properties (SPR)": {
+    "name": "Geometry & Trigonometry \u00b7 Quadrilateral properties (SPR)",
+    "questions": [
+      75
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Rates & combined work (SPR)": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Rates & combined work (SPR)",
+    "questions": [
+      76
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle tangents & coordinate geometry": {
+    "name": "Geometry & Trigonometry \u00b7 Circle tangents & coordinate geometry",
+    "questions": [
+      77
+    ]
+  },
+  "Advanced Math \u00b7 Function composition": {
+    "name": "Advanced Math \u00b7 Function composition",
+    "questions": [
+      78
+    ]
+  },
+  "Advanced Math \u00b7 Nonlinear systems & algebraic identities": {
+    "name": "Advanced Math \u00b7 Nonlinear systems & algebraic identities",
+    "questions": [
+      79
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Margin of error and confidence intervals": {
+    "name": "Problem-Solving and Data Analysis \u2022 Margin of error and confidence intervals",
+    "questions": [
+      80
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Right circular cone volume and radius scaling": {
+    "name": "Geometry & Trigonometry \u2022 Right circular cone volume and radius scaling",
+    "questions": [
+      81
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Advanced trigonometry identities": {
+    "name": "Geometry & Trigonometry \u00b7 Advanced trigonometry identities",
+    "questions": [
+      82
+    ]
+  },
+  "Advanced Math \u00b7 Rational functions & hole coordinates": {
+    "name": "Advanced Math \u00b7 Rational functions & hole coordinates",
+    "questions": [
+      83
+    ]
+  },
+  "Algebra \u00b7 Systems of inequalities & vertex optimization": {
+    "name": "Algebra \u00b7 Systems of inequalities & vertex optimization",
+    "questions": [
+      84
+    ]
+  },
+  "Algebra \u00b7 Systems of equations with parameters": {
+    "name": "Algebra \u00b7 Systems of equations with parameters",
+    "questions": [
+      85
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Triangles & geometric mean": {
+    "name": "Geometry & Trigonometry \u00b7 Triangles & geometric mean",
+    "questions": [
+      86
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Exponential models": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Exponential models",
+    "questions": [
+      87
+    ]
+  },
+  "Advanced Math \u2022 Quadratic function vertex and minimum value": {
+    "name": "Advanced Math \u2022 Quadratic function vertex and minimum value",
+    "questions": [
+      88
+    ]
+  },
+  "Advanced Math \u00b7 Absolute value functions & optimization": {
+    "name": "Advanced Math \u00b7 Absolute value functions & optimization",
+    "questions": [
+      89
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Nonlinear models & residuals": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Nonlinear models & residuals",
+    "questions": [
+      90
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Circle tangents and right triangles": {
+    "name": "Geometry & Trigonometry \u2022 Circle tangents and right triangles",
+    "questions": [
+      91
+    ]
+  },
+  "Advanced Math \u00b7 Rational functions and inverses": {
+    "name": "Advanced Math \u00b7 Rational functions and inverses",
+    "questions": [
+      92
+    ]
+  },
+  "Algebra \u00b7 Work-rate systems": {
+    "name": "Algebra \u00b7 Work-rate systems",
+    "questions": [
+      93
+    ]
+  },
+  "Advanced Math \u2022 Exponential growth and decay parameters": {
+    "name": "Advanced Math \u2022 Exponential growth and decay parameters",
+    "questions": [
+      94
+    ]
+  },
+  "Advanced Math \u00b7 Quadratics & discriminant (SPR)": {
+    "name": "Advanced Math \u00b7 Quadratics & discriminant (SPR)",
+    "questions": [
+      95
+    ]
+  },
+  "Advanced Math \u00b7 Radical equations (SPR)": {
+    "name": "Advanced Math \u00b7 Radical equations (SPR)",
+    "questions": [
+      96
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle geometry & tangent axes (SPR)": {
+    "name": "Geometry & Trigonometry \u00b7 Circle geometry & tangent axes (SPR)",
+    "questions": [
+      97
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 3D geometry & composite solids (SPR)": {
+    "name": "Geometry & Trigonometry \u00b7 3D geometry & composite solids (SPR)",
+    "questions": [
+      98
+    ]
   }
-  TOPIC_MAP[t].questions.push(q.id);
-});
+};
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, TOPIC_MAP };
+  module.exports = { QUESTIONS, RW_MODULE1, RW_MODULE2, MATH_MODULE1, MATH_MODULE2, TOPIC_MAP };
 }

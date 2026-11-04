@@ -1,10 +1,12 @@
 // =============================================
 // SAT Hard Full Mock 1
-// Includes Advanced Topics: Frustum Volume, Bayes' Theorem, Complex Conjugate Root Theorem
-// With LaTeX Equations, Full Options, Solutions, and Diagrams
+// Module 1 = Hard (49 Qs) • Module 2 = Super Hard (49 Qs)
+// Section 1: Reading & Writing (Mod 1: 27 Qs, Mod 2: 27 Qs) - 32 min each
+// Section 2: Math (Mod 3: 22 Qs, Mod 4: 22 Qs) - 35 min each
+// Total: 98 Questions • 134 Minutes • Scaled Score 400–1600
 // =============================================
 
-const QUESTIONS = [
+const RW_MODULE1 = [
   {
     "code": "H1-RW1",
     "prefix": "H1",
@@ -189,7 +191,7 @@ const QUESTIONS = [
     "topic": "Central Ideas and Details",
     "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<p>In standard economic models, consumer demand for durable goods is presumed to be governed by rational utility maximization, wherein individuals compute discounted future utility against current expenditures. However, behavioral experiments by economic psychologist Eldar Shafir demonstrate the phenomenon of 'cognitive tunneling' under acute resource scarcity. When households face severe liquidity constraints, cognitive bandwidth is monopolized by imminent crises—such as avoiding impending utility shutoffs or eviction—leaving virtually no executive processing capacity to evaluate long-term financial consequences. Consequently, sub-optimal borrowing decisions (such as high-interest payday loans) do not reflect inherent deficits in financial literacy or persistent irrationality, but rather an involuntary cognitive triage forced by immediate environmental stressors.</p>\n<p>Which choice best summarizes the central idea of the text?</p>",
+    "text": "<p>In standard economic models, consumer demand for durable goods is presumed to be governed by rational utility maximization, wherein individuals compute discounted future utility against current expenditures. However, behavioral experiments by economic psychologist Eldar Shafir demonstrate the phenomenon of 'cognitive tunneling' under acute resource scarcity. When households face severe liquidity constraints, cognitive bandwidth is monopolized by imminent crises\u2014such as avoiding impending utility shutoffs or eviction\u2014leaving virtually no executive processing capacity to evaluate long-term financial consequences. Consequently, sub-optimal borrowing decisions (such as high-interest payday loans) do not reflect inherent deficits in financial literacy or persistent irrationality, but rather an involuntary cognitive triage forced by immediate environmental stressors.</p>\n<p>Which choice best summarizes the central idea of the text?</p>",
     "options": [
       "Sub-optimal financial choices made under acute economic distress stem from cognitive overload caused by immediate survival pressures rather than personal irrationality.",
       "Payday loans are primarily utilized by individuals who lack basic mathematical education regarding compound interest rates.",
@@ -199,7 +201,7 @@ const QUESTIONS = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The text explicitly states that sub-optimal borrowing under severe financial distress is driven by 'cognitive tunneling'—an involuntary triage of mental bandwidth to deal with urgent survival stressors—rather than deficits in literacy or irrationality. Choice B contradicts the text, which asserts the decisions do not reflect literacy deficits. Choice C is an exaggerated claim ('completely abandoned') unsupported by the text. Choice D introduces concepts ('permanently expanded', 'workshops') never mentioned in the passage.",
+    "explanation": "Choice A is correct. The text explicitly states that sub-optimal borrowing under severe financial distress is driven by 'cognitive tunneling'\u2014an involuntary triage of mental bandwidth to deal with urgent survival stressors\u2014rather than deficits in literacy or irrationality. Choice B contradicts the text, which asserts the decisions do not reflect literacy deficits. Choice C is an exaggerated claim ('completely abandoned') unsupported by the text. Choice D introduces concepts ('permanently expanded', 'workshops') never mentioned in the passage.",
     "id": 9,
     "module": 1
   },
@@ -233,7 +235,7 @@ const QUESTIONS = [
     "topic": "Command of Evidence (Textual)",
     "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<p>In an analytical monograph on 19th-century domestic fiction, a literary scholar contends that despite surface adherence to conventional Victorian gender norms, Charlotte Brontë's novel <em>Villette</em> subtly critiques patriarchal confinement by portraying domestic interior spaces not as peaceful sanctuaries, but as psychological prisons where the protagonist, Lucy Snowe, experiences claustrophobic surveillance and emotional paralysis.</p>\n<p>Which quotation from <em>Villette</em> most directly supports the scholar's contention?</p>",
+    "text": "<p>In an analytical monograph on 19th-century domestic fiction, a literary scholar contends that despite surface adherence to conventional Victorian gender norms, Charlotte Bront\u00eb's novel <em>Villette</em> subtly critiques patriarchal confinement by portraying domestic interior spaces not as peaceful sanctuaries, but as psychological prisons where the protagonist, Lucy Snowe, experiences claustrophobic surveillance and emotional paralysis.</p>\n<p>Which quotation from <em>Villette</em> most directly supports the scholar's contention?</p>",
     "options": [
       "\"The garden was a pleasant spot in the early morning, when dew yet glistened on the pear blossoms and the air carried the perfume of lilac.\"",
       "\"I was left in a tranquil room with cheerful tapestry, where sunlight streamed upon the polished oak boards and books rested within easy reach.\"",
@@ -243,7 +245,7 @@ const QUESTIONS = [
     "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. The scholar argues that Brontë portrays domestic interior spaces as 'psychological prisons' of 'claustrophobic surveillance and emotional paralysis.' Choice C explicitly uses the metaphors of enclosure ('enclosed me like a tomb') and surveillance/imprisonment ('silent turnkey turning a key upon my captive thoughts'). Choices A, B, and D describe pleasant outdoor gardens, cheerful sunlit rooms, and glamorous ballrooms, which undermine rather than support the claim of claustrophobic domestic imprisonment.",
+    "explanation": "Choice C is correct. The scholar argues that Bront\u00eb portrays domestic interior spaces as 'psychological prisons' of 'claustrophobic surveillance and emotional paralysis.' Choice C explicitly uses the metaphors of enclosure ('enclosed me like a tomb') and surveillance/imprisonment ('silent turnkey turning a key upon my captive thoughts'). Choices A, B, and D describe pleasant outdoor gardens, cheerful sunlit rooms, and glamorous ballrooms, which undermine rather than support the claim of claustrophobic domestic imprisonment.",
     "id": 11,
     "module": 1
   },
@@ -353,7 +355,7 @@ const QUESTIONS = [
     "answer": 3,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. If disrupting the motor cortex with TMS slows down literal action comprehension but leaves metaphorical comprehension completely unaffected, then active motor cortex participation is not functionally necessary to understand the metaphors—it is merely an incidental correlate. Choice A contradicts the result (TMS did not disrupt metaphor processing). Choice C posits an unjustified claim ('exclusively within the cerebellum') not mentioned in the text. Choice B is an unsupported extreme claim ('relies entirely on unconscious physical muscle movements').",
+    "explanation": "Choice D is correct. If disrupting the motor cortex with TMS slows down literal action comprehension but leaves metaphorical comprehension completely unaffected, then active motor cortex participation is not functionally necessary to understand the metaphors\u2014it is merely an incidental correlate. Choice A contradicts the result (TMS did not disrupt metaphor processing). Choice C posits an unjustified claim ('exclusively within the cerebellum') not mentioned in the text. Choice B is an unsupported extreme claim ('relies entirely on unconscious physical muscle movements').",
     "id": 16,
     "module": 1
   },
@@ -365,7 +367,7 @@ const QUESTIONS = [
     "topic": "Boundaries",
     "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<p>During the excavation of the 6th-century Anglo-Saxon cemetery at Sutton Hoo, archaeologists discovered intricately decorated gold cloisonné belt buckles and Byzantine silver spoons ______ the burial ship also contained iron rivets from a clinker-built vessel, proving that early medieval England maintained extensive transcontinental maritime trade networks.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
+    "text": "<p>During the excavation of the 6th-century Anglo-Saxon cemetery at Sutton Hoo, archaeologists discovered intricately decorated gold cloisonn\u00e9 belt buckles and Byzantine silver spoons ______ the burial ship also contained iron rivets from a clinker-built vessel, proving that early medieval England maintained extensive transcontinental maritime trade networks.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
       "spoons; furthermore,",
       "furthermore,",
@@ -409,11 +411,11 @@ const QUESTIONS = [
     "topic": "Boundaries",
     "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<p>The James Webb Space Telescope's Near-Infrared Spectrograph—an instrument capable of observing hundreds of discrete celestial objects ______ gathered spectral emissions from GN-z11, confirming that the galaxy formed a mere 430 million years after the Big Bang.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
+    "text": "<p>The James Webb Space Telescope's Near-Infrared Spectrograph\u2014an instrument capable of observing hundreds of discrete celestial objects ______ gathered spectral emissions from GN-z11, confirming that the galaxy formed a mere 430 million years after the Big Bang.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
       "simultaneously has",
       "simultaneously, has",
-      "simultaneously—has",
+      "simultaneously\u2014has",
       "simultaneously; has"
     ],
     "answer": 2,
@@ -436,7 +438,7 @@ const QUESTIONS = [
       ": namely,",
       ",",
       "; being",
-      "—"
+      "\u2014"
     ],
     "answer": 3,
     "fillAnswer": null,
@@ -497,7 +499,7 @@ const QUESTIONS = [
     "topic": "Form, Structure, and Sense (verb)",
     "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<p>Before the French physician René Laennec invented the stethoscope in 1816, doctors ______ immediate auscultation by placing their ears directly against a patient's chest, an awkward diagnostic technique that often yielded ambiguous acoustic signals.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
+    "text": "<p>Before the French physician Ren\u00e9 Laennec invented the stethoscope in 1816, doctors ______ immediate auscultation by placing their ears directly against a patient's chest, an awkward diagnostic technique that often yielded ambiguous acoustic signals.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
       "would practice",
       "have practiced",
@@ -598,7 +600,10 @@ const QUESTIONS = [
     "explanation": "Choice C is correct. The prompt asks the student to *contrast the survival efficacy* of micro-catchment terracing with standard planting. Choice C directly contrasts the survival rates: 74% for micro-catchment terracing versus only 28% for standard flat planting. Choices B and D merely describe background conditions or physical trench construction without contrasting the two survival rates. Choice A reports the survival rate of standard planting alone, failing to provide a comparison.",
     "id": 27,
     "module": 1
-  },
+  }
+];
+
+const RW_MODULE2 = [
   {
     "code": "SH-RW1",
     "prefix": "SH",
@@ -673,7 +678,7 @@ const QUESTIONS = [
     "topic": "Words in Context",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>Despite decades of intense archival scrutiny, the historical consensus regarding the diplomat's wartime allegiance remains unresolved: while his personal diaries profess staunch loyalty to the exiled monarchy, his covert diplomatic communiqués repeatedly ______ those very claims by coordinating backchannel agreements with the insurgent military council.</p>\n<p>Which choice completes the text with the most logical and precise word or phrase?</p>",
+    "text": "<p>Despite decades of intense archival scrutiny, the historical consensus regarding the diplomat's wartime allegiance remains unresolved: while his personal diaries profess staunch loyalty to the exiled monarchy, his covert diplomatic communiqu\u00e9s repeatedly ______ those very claims by coordinating backchannel agreements with the insurgent military council.</p>\n<p>Which choice completes the text with the most logical and precise word or phrase?</p>",
     "options": [
       "recapitulated",
       "buttressed",
@@ -683,7 +688,7 @@ const QUESTIONS = [
     "answer": 3,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice D is correct. 'Gainsaid' means denied, contradicted, or opposed. The passage sets up a direct contradiction between his personal diaries (which professed loyalty) and his covert diplomatic communiqués (which cooperated with insurgents and thus contradicted or denied his professed loyalty). Choice A ('recapitulated') means summarized or restated. Choice B ('buttressed') means supported or reinforced, which fails to show contradiction. Choice C ('disseminated') means spread widely, which does not convey denial.",
+    "explanation": "Choice D is correct. 'Gainsaid' means denied, contradicted, or opposed. The passage sets up a direct contradiction between his personal diaries (which professed loyalty) and his covert diplomatic communiqu\u00e9s (which cooperated with insurgents and thus contradicted or denied his professed loyalty). Choice A ('recapitulated') means summarized or restated. Choice B ('buttressed') means supported or reinforced, which fails to show contradiction. Choice C ('disseminated') means spread widely, which does not convey denial.",
     "id": 31,
     "module": 2
   },
@@ -761,7 +766,7 @@ const QUESTIONS = [
     "topic": "Cross-Text Connections",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p><strong>Text 1</strong><br>In macroevolutionary theory, the 'Red Queen' hypothesis posits that biotic environments are in constant coevolutionary flux. Because competing predators, parasites, and competitors are continuously adapting, a species must continuously evolve just to maintain its ecological fitness relative to its peers. Under this framework, biotic interactions—such as interspecific competition and host-parasite arms races—are the primary drivers of speciation and extinction rates throughout geological time.</p>\n<p><strong>Text 2</strong><br>In contrast, the 'Court Jester' model contends that macroevolutionary turnover is governed primarily by extrinsic, abiotic environmental shocks. Paleobiological analyses of large-scale fossil turnover over hundreds of millions of years reveal that macroevolutionary cladogenesis and mass extinctions coincide overwhelmingly with stochastic abiotic upheavals—such as mantle plume volcanism, bolide impacts, and orbital climate fluctuations—rather than gradual coevolutionary pressures.</p>\n<p>Based on the texts, how would the author of Text 2 most likely characterize the view of speciation presented in Text 1?</p>",
+    "text": "<p><strong>Text 1</strong><br>In macroevolutionary theory, the 'Red Queen' hypothesis posits that biotic environments are in constant coevolutionary flux. Because competing predators, parasites, and competitors are continuously adapting, a species must continuously evolve just to maintain its ecological fitness relative to its peers. Under this framework, biotic interactions\u2014such as interspecific competition and host-parasite arms races\u2014are the primary drivers of speciation and extinction rates throughout geological time.</p>\n<p><strong>Text 2</strong><br>In contrast, the 'Court Jester' model contends that macroevolutionary turnover is governed primarily by extrinsic, abiotic environmental shocks. Paleobiological analyses of large-scale fossil turnover over hundreds of millions of years reveal that macroevolutionary cladogenesis and mass extinctions coincide overwhelmingly with stochastic abiotic upheavals\u2014such as mantle plume volcanism, bolide impacts, and orbital climate fluctuations\u2014rather than gradual coevolutionary pressures.</p>\n<p>Based on the texts, how would the author of Text 2 most likely characterize the view of speciation presented in Text 1?</p>",
     "options": [
       "As an unscientific speculation that denies the fundamental reality of natural selection in biological populations",
       "As an empirically flawless theory that has completely supplanted catastrophic geological models in paleobiology",
@@ -805,7 +810,7 @@ const QUESTIONS = [
     "topic": "Central Ideas and Details",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>While Thomas Hobbes characterized the state of nature as a war of all against all governed by brutal self-preservation, political philosopher Jean-Jacques Rousseau countered that human beings in an uncorrupted natural state were guided not by aggressive acquisitiveness, but by two innate sentiments: <em>amour de soi</em> (a legitimate instinct for physical survival) and <em>pitié</em> (an inherent aversion to witnessing the suffering of fellow sentient beings). In Rousseau's genealogy, moral corruption, institutional inequality, and interpersonal conflict did not arise from intrinsic human depravity; rather, they were engendered by the advent of private property and division of labor, which transformed self-preservation into <em>amour-propre</em>—an artificial, competitive vanity obsessed with relative status and social supremacy.</p>\n<p>According to the text, what catalyzed the emergence of interpersonal conflict and moral corruption according to Rousseau?</p>",
+    "text": "<p>While Thomas Hobbes characterized the state of nature as a war of all against all governed by brutal self-preservation, political philosopher Jean-Jacques Rousseau countered that human beings in an uncorrupted natural state were guided not by aggressive acquisitiveness, but by two innate sentiments: <em>amour de soi</em> (a legitimate instinct for physical survival) and <em>piti\u00e9</em> (an inherent aversion to witnessing the suffering of fellow sentient beings). In Rousseau's genealogy, moral corruption, institutional inequality, and interpersonal conflict did not arise from intrinsic human depravity; rather, they were engendered by the advent of private property and division of labor, which transformed self-preservation into <em>amour-propre</em>\u2014an artificial, competitive vanity obsessed with relative status and social supremacy.</p>\n<p>According to the text, what catalyzed the emergence of interpersonal conflict and moral corruption according to Rousseau?</p>",
     "options": [
       "An innate psychological impulse toward sadistic cruelty inherent in biological human nature",
       "The emergence of private property and socioeconomic specialization that reoriented self-preservation into competitive status-seeking",
@@ -815,7 +820,7 @@ const QUESTIONS = [
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. The text explicitly states: 'moral corruption, institutional inequality, and interpersonal conflict did not arise from intrinsic human depravity; rather, they were engendered by the advent of private property and division of labor, which transformed self-preservation into amour-propre—an artificial, competitive vanity obsessed with relative status and social supremacy.' Choice A directly contradicts Rousseau's view. Choice C reflects Hobbes's premise, which Rousseau rejects. Choice D introduces modern democratic transitions not mentioned in the text.",
+    "explanation": "Choice B is correct. The text explicitly states: 'moral corruption, institutional inequality, and interpersonal conflict did not arise from intrinsic human depravity; rather, they were engendered by the advent of private property and division of labor, which transformed self-preservation into amour-propre\u2014an artificial, competitive vanity obsessed with relative status and social supremacy.' Choice A directly contradicts Rousseau's view. Choice C reflects Hobbes's premise, which Rousseau rejects. Choice D introduces modern democratic transitions not mentioned in the text.",
     "id": 37,
     "module": 2
   },
@@ -849,7 +854,7 @@ const QUESTIONS = [
     "topic": "Command of Evidence (Textual)",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>Neurobiologists investigating synaptic plasticity hypothesized that long-term potentiation (LTP)—the persistent strengthening of synapses following high-frequency stimulation—is mediated by the lateral diffusion of AMPA glutamate receptors into the postsynaptic density. To test whether lateral membrane mobility is strictly required, researchers treated hippocampal pyramidal neurons with either a control vehicle or a chemical cross-linking antibody that immobilizes surface AMPA receptors without obstructing their ligand-binding clefts. If the researchers' hypothesis is correct, the neurons exposed to the cross-linking antibody should exhibit ______.</p>\n<p>Which choice most logically completes the text?</p>",
+    "text": "<p>Neurobiologists investigating synaptic plasticity hypothesized that long-term potentiation (LTP)\u2014the persistent strengthening of synapses following high-frequency stimulation\u2014is mediated by the lateral diffusion of AMPA glutamate receptors into the postsynaptic density. To test whether lateral membrane mobility is strictly required, researchers treated hippocampal pyramidal neurons with either a control vehicle or a chemical cross-linking antibody that immobilizes surface AMPA receptors without obstructing their ligand-binding clefts. If the researchers' hypothesis is correct, the neurons exposed to the cross-linking antibody should exhibit ______.</p>\n<p>Which choice most logically completes the text?</p>",
     "options": [
       "identical rates of long-term potentiation compared to control neurons treated with the inert vehicle",
       "immediate cellular apoptosis resulting from the physical blockage of glutamate neurotransmitter binding sites",
@@ -871,9 +876,9 @@ const QUESTIONS = [
     "topic": "Command of Evidence (Quantitative)",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>An agricultural research institute assessed the drought resilience of four engineered soybean genotypes by measuring stomatal conductance (mmol/m²·s) and total seed yield (kg/ha) under both well-watered (control) and prolonged drought stress conditions:</p>\n<table style=\"width:100%; border-collapse: collapse; margin: 10px 0; border: 1px solid #cbd5e1;\">\n<thead><tr style=\"background-color: #f1f5f9; border-bottom: 2px solid #94a3b8;\"><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Genotype</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Stomatal Cond. (Control)</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Stomatal Cond. (Drought)</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Yield (Control)</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Yield (Drought)</th></tr></thead>\n<tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line W</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">320</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">180</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">3,400</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">1,700</td></tr>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line X</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">310</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">95</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">3,250</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">2,600</td></tr>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line Y</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">290</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">210</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">2,900</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">1,150</td></tr>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line Z</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">305</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">140</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">3,100</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">2,050</td></tr>\n</tbody>\n</table>\n<p>Agronomists hypothesized that genotypes capable of rapidly restricting stomatal aperture under water deficit minimize transpirational moisture loss, thereby preserving higher relative grain yield. Which choice most effectively uses data from the table to support this hypothesis?</p>",
+    "text": "<p>An agricultural research institute assessed the drought resilience of four engineered soybean genotypes by measuring stomatal conductance (mmol/m\u00b2\u00b7s) and total seed yield (kg/ha) under both well-watered (control) and prolonged drought stress conditions:</p>\n<table style=\"width:100%; border-collapse: collapse; margin: 10px 0; border: 1px solid #cbd5e1;\">\n<thead><tr style=\"background-color: #f1f5f9; border-bottom: 2px solid #94a3b8;\"><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Genotype</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Stomatal Cond. (Control)</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Stomatal Cond. (Drought)</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Yield (Control)</th><th style=\"padding: 8px; border: 1px solid #cbd5e1;\">Yield (Drought)</th></tr></thead>\n<tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line W</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">320</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">180</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">3,400</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">1,700</td></tr>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line X</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">310</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">95</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">3,250</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">2,600</td></tr>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line Y</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">290</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">210</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">2,900</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">1,150</td></tr>\n<tr><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">Line Z</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">305</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">140</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">3,100</td><td style=\"padding: 8px; border: 1px solid #cbd5e1;\">2,050</td></tr>\n</tbody>\n</table>\n<p>Agronomists hypothesized that genotypes capable of rapidly restricting stomatal aperture under water deficit minimize transpirational moisture loss, thereby preserving higher relative grain yield. Which choice most effectively uses data from the table to support this hypothesis?</p>",
     "options": [
-      "Line X exhibited the greatest stomatal restriction under drought (dropping from 310 to 95 mmol/m²·s) and retained 80% of its control yield, the highest drought yield retention among all lines.",
+      "Line X exhibited the greatest stomatal restriction under drought (dropping from 310 to 95 mmol/m\u00b2\u00b7s) and retained 80% of its control yield, the highest drought yield retention among all lines.",
       "Line W maintained the highest yield under well-watered control conditions despite experiencing the steepest percentage decline in stomatal conductance.",
       "Line Y had the lowest stomatal conductance under control conditions and produced the lowest seed yield under both treatments.",
       "Line Z maintained a higher stomatal conductance under drought than Line X, resulting in higher final seed yield under drought."
@@ -881,7 +886,7 @@ const QUESTIONS = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The hypothesis claims that restricting stomatal conductance under drought preserves relative grain yield. Line X dropped from 310 to 95 mmol/m²·s (a dramatic ~69% reduction, far greater than any other line), and retained 2,600 kg/ha out of 3,250 kg/ha (80% yield retention), producing the highest drought yield of all four genotypes. This directly links rapid stomatal restriction to superior yield preservation. Choice B is factually inaccurate (Line W did not have the steepest stomatal drop). Choice C does not evaluate stomatal restriction relative to drought yield retention. Choice D is factually false (Line Z's drought yield of 2,050 kg/ha was lower than Line X's 2,600 kg/ha).",
+    "explanation": "Choice A is correct. The hypothesis claims that restricting stomatal conductance under drought preserves relative grain yield. Line X dropped from 310 to 95 mmol/m\u00b2\u00b7s (a dramatic ~69% reduction, far greater than any other line), and retained 2,600 kg/ha out of 3,250 kg/ha (80% yield retention), producing the highest drought yield of all four genotypes. This directly links rapid stomatal restriction to superior yield preservation. Choice B is factually inaccurate (Line W did not have the steepest stomatal drop). Choice C does not evaluate stomatal restriction relative to drought yield retention. Choice D is factually false (Line Z's drought yield of 2,050 kg/ha was lower than Line X's 2,600 kg/ha).",
     "id": 40,
     "module": 2
   },
@@ -981,17 +986,17 @@ const QUESTIONS = [
     "topic": "Boundaries",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>In 1938, physicist Lise Meitner—having fled Nazi Germany for exile in ______ calculated with Otto Frisch that the uranium nucleus had split in half, releasing approximately 200 million electron volts of energy and providing the first physical explanation of nuclear fission.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
+    "text": "<p>In 1938, physicist Lise Meitner\u2014having fled Nazi Germany for exile in ______ calculated with Otto Frisch that the uranium nucleus had split in half, releasing approximately 200 million electron volts of energy and providing the first physical explanation of nuclear fission.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
       "Sweden,",
-      "Sweden—",
+      "Sweden\u2014",
       "Sweden;",
       "Sweden"
     ],
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. The parenthetical participial phrase began with an em-dash ('—having fled Nazi Germany for exile in...'). To maintain parallel punctuation, it must be closed with a matching em-dash before the main verb 'calculated' resumes the clause. Choice A incorrectly attempts to close an em-dash parenthetical with a comma. Choice C improperly inserts a semicolon before the main verb. Choice D omits punctuation entirely.",
+    "explanation": "Choice B is correct. The parenthetical participial phrase began with an em-dash ('\u2014having fled Nazi Germany for exile in...'). To maintain parallel punctuation, it must be closed with a matching em-dash before the main verb 'calculated' resumes the clause. Choice A incorrectly attempts to close an em-dash parenthetical with a comma. Choice C improperly inserts a semicolon before the main verb. Choice D omits punctuation entirely.",
     "id": 45,
     "module": 2
   },
@@ -1027,7 +1032,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "text": "<p>Oceanographers studying the Antarctic Circumpolar Current deployed autonomous biogeochemical Argo floats to measure dissolved oxygen levels ______ these robotic profiling instruments descended to depths of 2,000 meters before surfacing to transmit real-time telemetry via satellite.</p>\n<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>",
     "options": [
-      "—while",
+      "\u2014while",
       ",",
       ": where",
       ";"
@@ -1192,12 +1197,15 @@ const QUESTIONS = [
     "explanation": "Choice D is correct. The prompt asks the student to explain *why the meltwater pulse hypothesis has faced growing scientific skepticism*. Choice D directly provides the physical cause of skepticism: recent sediment cores from the St. Lawrence estuary lack the expected geochemical strontium isotope markers that would confirm a massive freshwater discharge from Lake Agassiz. Choice B states the original theory without explaining skepticism. Choice C discusses the alternative comet hypothesis. Choice A is a generic comparison.",
     "id": 54,
     "module": 2
-  },
+  }
+];
+
+const MATH_MODULE1 = [
   {
     "code": "H1-M1",
     "section": "math",
     "qnum": 1,
-    "topic": "Algebra · Linear inequalities",
+    "topic": "Algebra \u00b7 Linear inequalities",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>How many integer values of $x$ satisfy the inequality $|3x - 14| \\le 2x + 1$?</p>",
@@ -1219,7 +1227,7 @@ const QUESTIONS = [
     "code": "H1-M2",
     "section": "math",
     "qnum": 2,
-    "topic": "Algebra · Linear functions & coordinate geometry",
+    "topic": "Algebra \u00b7 Linear functions & coordinate geometry",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, line $L$ is the perpendicular bisector of the line segment with endpoints $(-2, 5)$ and $(4, -3)$. If the equation of line $L$ is written in slope-intercept form as $y = mx + b$, what is the value of $m + b$?</p>",
@@ -1241,15 +1249,15 @@ const QUESTIONS = [
     "code": "H1-M3",
     "section": "math",
     "qnum": 3,
-    "topic": "Advanced Math · Nonlinear systems & tangency",
+    "topic": "Advanced Math \u00b7 Nonlinear systems & tangency",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, a line with negative slope passes through the point $(0, 5)$ and is tangent to the parabola $y = x^2 - 4x + 9$. What is the slope of this line?</p>",
     "options": [
-      "−4",
-      "−6",
-      "−8",
-      "−10"
+      "\u22124",
+      "\u22126",
+      "\u22128",
+      "\u221210"
     ],
     "answer": 2,
     "fillAnswer": null,
@@ -1263,20 +1271,20 @@ const QUESTIONS = [
     "code": "H1-M4",
     "section": "math",
     "qnum": 4,
-    "topic": "Geometry · Frustum Volume",
-    "difficulty": "Super Hard",
+    "topic": "Geometry & Trigonometry \u2022 Circle sectors and arc length in radians",
+    "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q01_frustum.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The figure shows a container in the shape of a frustum of a right circular cone. The bottom base has radius $10\\text{ cm}$, the top base has radius $4\\text{ cm}$, and the slant height is $10\\text{ cm}$. What is the volume of the container, in cubic centimeters? (Cone volume: $V = \\frac{1}{3}\\pi r^2 h$)</p>",
+    "text": "<p>In the $xy$-plane, a circle with center $O$ has a radius of $18$. Points $A$ and $B$ lie on the circle such that the area of sector $AOB$ is $54\\pi$. What is the perimeter of sector $AOB$?</p>",
     "options": [
-      "392\\pi",
-      "416\\pi",
-      "520\\pi",
-      "1{,}248\\pi"
+      "$6\\pi + 18$",
+      "$6\\pi + 36$",
+      "$12\\pi + 18$",
+      "$12\\pi + 36$"
     ],
     "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice B is correct. Let the bottom radius be $R = 10\\text{ cm}$ and top radius be $r = 4\\text{ cm}$. The horizontal difference between the radii is $R - r = 10 - 4 = 6\\text{ cm}$. With slant height $s = 10\\text{ cm}$, the vertical height $h$ is found via the Pythagorean theorem: $h = \\sqrt{s^2 - (R - r)^2} = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8\\text{ cm}$. The volume of a frustum of a cone is given by: $$V = \\frac{\\pi h}{3}(R^2 + Rr + r^2) = \\frac{8\\pi}{3}(10^2 + 10 \\cdot 4 + 4^2) = \\frac{8\\pi}{3}(100 + 40 + 16) = \\frac{8\\pi}{3}(156) = 416\\pi\\text{ cm}^3$$ Choice A incorrectly uses the average radius in a cylinder formula; Choice C uses the slant height 10 as $h$; Choice D forgets the factor of $\\frac{1}{3}$.",
+    "explanation": "Choice B is correct. The area of a sector with radius $r$ and central angle $\\theta$ (in radians) is given by $\\text{Area} = \\frac{1}{2} r^2 \\theta$. Given $r = 18$ and $\\text{Area} = 54\\pi$:\n$$\\frac{1}{2}(18^2)\\theta = 54\\pi \\implies 162\\theta = 54\\pi \\implies \\theta = \\frac{54\\pi}{162} = \\frac{\\pi}{3}\\text{ radians}.$$ \nThe arc length $s$ is $s = r\\theta = 18 \\times \\frac{\\pi}{3} = 6\\pi$. The perimeter of sector $AOB$ includes the curved arc plus the two bounding radii: $\\text{Perimeter} = s + 2r = 6\\pi + 2(18) = 6\\pi + 36$. Choice A omits one radius. Choices C and D incorrectly double the arc length.",
     "id": 58,
     "module": 3,
     "prefix": "H1",
@@ -1286,7 +1294,7 @@ const QUESTIONS = [
     "code": "H1-M5",
     "section": "math",
     "qnum": 5,
-    "topic": "Geometry & Trigonometry · Circle theorems & chord length",
+    "topic": "Geometry & Trigonometry \u00b7 Circle theorems & chord length",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, the circle $(x - 2)^2 + (y - 3)^2 = 25$ intersects the line $x + y = 9$ at two points, $A$ and $B$. What is the length of the chord $AB$?</p>",
@@ -1308,7 +1316,7 @@ const QUESTIONS = [
     "code": "H1-M6",
     "section": "math",
     "qnum": 6,
-    "topic": "Advanced Math · Rational expressions",
+    "topic": "Advanced Math \u00b7 Rational expressions",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>For all real values of $x$ where the expression is defined, which of the following is equivalent to $$\\frac{x^3 - 8}{x^2 - 4} \\cdot \\frac{x^2 + 5x + 6}{x^2 + 2x + 4}?$$</p>",
@@ -1330,7 +1338,7 @@ const QUESTIONS = [
     "code": "H1-M7",
     "section": "math",
     "qnum": 7,
-    "topic": "Advanced Math · Quadratic relations & Vieta's formulas",
+    "topic": "Advanced Math \u00b7 Quadratic relations & Vieta's formulas",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the quadratic equation $x^2 - bx + 18 = 0$, $b$ is a positive constant. If the sum of the squares of the two solutions of this equation is $45$, what is the value of $b$?</p>",
@@ -1352,7 +1360,7 @@ const QUESTIONS = [
     "code": "H1-M8",
     "section": "math",
     "qnum": 8,
-    "topic": "Problem-Solving and Data Analysis · Conditional probability",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Conditional probability",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>The table below summarizes the outcomes of a clinical pharmacology trial involving 400 participants randomized into two equal treatment cohorts:</p>\n<div style=\"overflow-x:auto;margin:14px 0;\"><table style=\"border-collapse:collapse;margin:0 auto;font-size:0.95rem;border:1px solid #cbd5e1;\">\n<thead><tr style=\"background:#f8fafc;\"><th style=\"border:1px solid #cbd5e1;padding:8px 14px;\">Treatment Cohort</th><th style=\"border:1px solid #cbd5e1;padding:8px 14px;\">Showed Significant Improvement</th><th style=\"border:1px solid #cbd5e1;padding:8px 14px;\">No Significant Improvement</th><th style=\"border:1px solid #cbd5e1;padding:8px 14px;\">Total</th></tr></thead>\n<tbody>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">Cohort Alpha</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">140</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">60</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">200</td></tr>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">Cohort Beta</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">110</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">90</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">200</td></tr>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">Total</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">250</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">150</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">400</td></tr>\n</tbody></table></div>\n<p>If a participant who showed significant improvement is selected at random, what is the probability that this participant was assigned to Cohort Beta?</p>",
@@ -1374,7 +1382,7 @@ const QUESTIONS = [
     "code": "H1-M9",
     "section": "math",
     "qnum": 9,
-    "topic": "Geometry & Trigonometry · Trigonometric identities",
+    "topic": "Geometry & Trigonometry \u00b7 Trigonometric identities",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In right triangle $ABC$, angle $C$ is the right angle. If $\\sin(A) = \\frac{3}{5}$, what is the value of $\\cos^2(B) - \\sin^2(B)$?</p>",
@@ -1396,7 +1404,7 @@ const QUESTIONS = [
     "code": "H1-M10",
     "section": "math",
     "qnum": 10,
-    "topic": "Problem-Solving and Data Analysis · Margin of error & sample size",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Margin of error & sample size",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>A sociologist surveys a random sample of $450$ university students and computes a $95\\%$ confidence interval with a margin of error of $\\pm 4.2\\%$. Assuming all population parameters remain constant, how many <em>additional</em> students must be surveyed to reduce the margin of error to $\\pm 1.4\\%$ at the same $95\\%$ confidence level?</p>",
@@ -1418,18 +1426,18 @@ const QUESTIONS = [
     "code": "H1-M11",
     "section": "math",
     "qnum": 11,
-    "topic": "Geometry · Frustum Volume (SPR)",
-    "difficulty": "Super Hard",
+    "topic": "Problem-Solving and Data Analysis \u2022 Percent increase and successive percentage change",
+    "difficulty": "Hard",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q02_cone_cut.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A right circular cone has height $12$ and base radius $6$. A plane parallel to the base cuts the cone $4$ units above the base, removing a smaller cone from the top and leaving a frustum. The volume of the frustum is what fraction of the volume of the original cone? (Enter a fraction or a decimal rounded to the nearest ten-thousandth.)</p>",
+    "text": "<p>In 2022, the enrollment of an engineering academy was $1,250$ students. In 2023, the enrollment increased by $16\\%$. In 2024, the enrollment decreased by $10\\%$ from its 2023 level. How many students were enrolled in 2024?</p>",
     "options": [],
-    "answer": "19/27",
-    "fillAnswer": "19/27",
+    "answer": 1305,
+    "fillAnswer": "1305",
     "acceptedAnswers": [
       "19/27",
       "0.7037"
     ],
-    "explanation": "The correct answer is $19/27$ (or $0.7037$). The original cone has height $H = 12$. The cut is made $4$ units above the base, so the smaller cone removed from the top has height $h = 12 - 4 = 8$. Since the smaller cone is similar to the original cone, the linear scale factor is $k = \\frac{h}{H} = \\frac{8}{12} = \\frac{2}{3}$. Volumes of similar solids scale as the cube of the linear factor: $$\\frac{V_{\\text{small}}}{V_{\\text{original}}} = \\left(\\frac{2}{3}\\right)^3 = \\frac{8}{27}$$ The volume of the remaining frustum is: $$\\frac{V_{\\text{frustum}}}{V_{\\text{original}}} = 1 - \\frac{8}{27} = \\frac{19}{27} \\approx 0.7037$$",
+    "explanation": "The correct answer is 1305. First find the enrollment in 2023 after a $16\\%$ increase: $1,250 \\times (1 + 0.16) = 1,250 \\times 1.16 = 1,450$. Next, calculate the enrollment in 2024 after a $10\\%$ decrease from the 2023 level: $1,450 \\times (1 - 0.10) = 1,450 \\times 0.90 = 1,305$.",
     "id": 65,
     "module": 3,
     "prefix": "H1",
@@ -1439,7 +1447,7 @@ const QUESTIONS = [
     "code": "H1-M12",
     "section": "math",
     "qnum": 12,
-    "topic": "Geometry & Trigonometry · Circle equations in coordinate plane",
+    "topic": "Geometry & Trigonometry \u00b7 Circle equations in coordinate plane",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, the equation of a circle is $x^2 + y^2 - 12x + 6y + 20 = 0$. The vertical line $x = k$ is tangent to the circle at exactly one point. If $k > 6$, what is the value of $k$?</p>",
@@ -1461,7 +1469,7 @@ const QUESTIONS = [
     "code": "H1-M13",
     "section": "math",
     "qnum": 13,
-    "topic": "Algebra · Systems of equations",
+    "topic": "Algebra \u00b7 Systems of equations",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>Consider the system of three linear equations below:\n$$\\begin{cases} 2x + 3y + z = 22 \\\\ x - y + 2z = 7 \\\\ 3x + 2y - z = 13 \\end{cases}$$\nWhat is the value of $x + y + z$?</p>",
@@ -1483,14 +1491,14 @@ const QUESTIONS = [
     "code": "H1-M14",
     "section": "math",
     "qnum": 14,
-    "topic": "Advanced Math · Function transformations & vertex form",
+    "topic": "Advanced Math \u00b7 Function transformations & vertex form",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>The quadratic function $f$ is defined by $f(x) = 2(x - 4)^2 - 18$. The function $g$ is defined by $g(x) = f(x + 3) + 7$. What is the minimum value of $g(x)$?</p>",
     "options": [
-      "−15",
-      "−11",
-      "−25",
+      "\u221215",
+      "\u221211",
+      "\u221225",
       "1"
     ],
     "answer": 1,
@@ -1505,7 +1513,7 @@ const QUESTIONS = [
     "code": "H1-M15",
     "section": "math",
     "qnum": 15,
-    "topic": "Geometry & Trigonometry · Similar solids & area/volume scaling",
+    "topic": "Geometry & Trigonometry \u00b7 Similar solids & area/volume scaling",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>Two mathematically similar right circular cones have total surface areas in the ratio $4 : 9$. If the volume of the smaller cone is $64\\text{ cm}^3$, what is the volume, in cubic centimeters, of the larger cone?</p>",
@@ -1527,20 +1535,20 @@ const QUESTIONS = [
     "code": "H1-M16",
     "section": "math",
     "qnum": 16,
-    "topic": "Problem Solving & Data Analysis · Bayes' Theorem",
-    "difficulty": "Super Hard",
+    "topic": "Problem-Solving and Data Analysis \u2022 Two-way tables and conditional probability",
+    "difficulty": "Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q11_factory_tree.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>A factory has three machines. Machine A makes $50\\%$ of all items, Machine B makes $30\\%$, and Machine C makes $20\\%$. The defect rates are $2\\%$, $3\\%$, and $5\\%$ respectively. An item is chosen at random and is found to be defective. To the nearest hundredth, what is the probability that it was made by Machine C?</p>",
+    "text": "<p>A clinical research firm categorized $600$ patients based on treatment type and recovery status, as shown in the table below:<br><br><table style=\"margin:auto; border-collapse:collapse; text-align:center;\"><thead><tr style=\"border-bottom:2px solid #ccc;\"><th style=\"padding:6px 12px;\">Treatment</th><th style=\"padding:6px 12px;\">Full Recovery</th><th style=\"padding:6px 12px;\">Partial Recovery</th><th style=\"padding:6px 12px;\">No Improvement</th><th style=\"padding:6px 12px;\">Total</th></tr></thead><tbody><tr><td style=\"padding:6px 12px;\">Medication A</td><td>162</td><td>90</td><td>48</td><td>300</td></tr><tr><td style=\"padding:6px 12px;\">Medication B</td><td>198</td><td>66</td><td>36</td><td>300</td></tr><tr style=\"border-top:2px solid #ccc; font-weight:bold;\"><td style=\"padding:6px 12px;\">Total</td><td>360</td><td>156</td><td>84</td><td>600</td></tr></tbody></table><br>If a patient who achieved Full Recovery is selected at random, what is the probability that the patient received Medication B?</p>",
     "options": [
-      "0.05",
-      "0.20",
-      "0.34",
-      "0.50"
+      "$\\frac{11}{20}$",
+      "$\\frac{33}{50}$",
+      "$\\frac{9}{20}$",
+      "$\\frac{11}{50}$"
     ],
-    "answer": 2,
+    "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. By the law of total probability, the total probability of an item being defective is: $$P(\\text{Defect}) = (0.50)(0.02) + (0.30)(0.03) + (0.20)(0.05) = 0.010 + 0.009 + 0.010 = 0.029$$ Applying Bayes' Theorem: $$P(C \\mid \\text{Defect}) = \\frac{P(C) \\cdot P(\\text{Defect} \\mid C)}{P(\\text{Defect})} = \\frac{0.20 \\times 0.05}{0.029} = \\frac{0.010}{0.029} = \\frac{10}{29} \\approx 0.3448 \\approx 0.34$$",
+    "explanation": "Choice A is correct. The condition restricts the sample space to only those patients who achieved 'Full Recovery'. From the table, the total number of patients with Full Recovery is $360$. Among these $360$ patients, $198$ received Medication B. The conditional probability is therefore $\\frac{198}{360}$. Divide numerator and denominator by $18$: $\\frac{198 \\div 18}{360 \\div 18} = \\frac{11}{20}$ (or $0.55$). Choice B incorrectly divides by the total Medication B group ($198/300$). Choice C is the probability for Medication A ($162/360$). Choice D divides by the grand total ($198/600$).",
     "id": 70,
     "module": 3,
     "prefix": "H1",
@@ -1550,7 +1558,7 @@ const QUESTIONS = [
     "code": "H1-M17",
     "section": "math",
     "qnum": 17,
-    "topic": "Advanced Math · Exponents and radicals",
+    "topic": "Advanced Math \u00b7 Exponents and radicals",
     "difficulty": "Hard",
     "isFillIn": false,
     "text": "<p>For $x > 0$, if $$\\frac{81^{1/2} x^{3/4}}{27^{1/3} x^{-1/4}} = 72,$$ what is the value of $x$?</p>",
@@ -1572,7 +1580,7 @@ const QUESTIONS = [
     "code": "H1-M18",
     "section": "math",
     "qnum": 18,
-    "topic": "Advanced Math · Polynomial equations (SPR)",
+    "topic": "Advanced Math \u00b7 Polynomial equations (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>What is the product of all positive solutions to the equation $x^4 - 29x^2 + 100 = 0$?</p>",
@@ -1591,7 +1599,7 @@ const QUESTIONS = [
     "code": "H1-M19",
     "section": "math",
     "qnum": 19,
-    "topic": "Advanced Math · Rational equations (SPR)",
+    "topic": "Advanced Math \u00b7 Rational equations (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>What is the real solution to the equation $$\\frac{x^2 - 2x}{x - 5} = \\frac{15}{x - 5}?$$</p>",
@@ -1610,7 +1618,7 @@ const QUESTIONS = [
     "code": "H1-M20",
     "section": "math",
     "qnum": 20,
-    "topic": "Algebra · Systems with infinite solutions (SPR)",
+    "topic": "Algebra \u00b7 Systems with infinite solutions (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>The system of linear equations below has infinitely many solutions, where $k$ is a constant:\n$$\\begin{cases} (2k - 1)x + 6y = 18 \\\\ 5x + 3y = 9 \\end{cases}$$\nWhat is the value of $k$?</p>",
@@ -1630,7 +1638,7 @@ const QUESTIONS = [
     "code": "H1-M21",
     "section": "math",
     "qnum": 21,
-    "topic": "Geometry & Trigonometry · Arc length & radian measure (SPR)",
+    "topic": "Geometry & Trigonometry \u00b7 Arc length & radian measure (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>A circle with radius $12$ has a central angle measuring $\\frac{7\\pi}{6}$ radians. If the length of the arc intercepted by this central angle is $k\\pi$, what is the value of $k$?</p>",
@@ -1649,7 +1657,7 @@ const QUESTIONS = [
     "code": "H1-M22",
     "section": "math",
     "qnum": 22,
-    "topic": "Problem-Solving and Data Analysis · Rates & unit conversions (SPR)",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Rates & unit conversions (SPR)",
     "difficulty": "Hard",
     "isFillIn": true,
     "text": "<p>A high-speed fiber-optic server transmits digital data at a constant rate of $48$ megabytes per second (MB/s). Given that $1$ gigabyte (GB) is equal to $1,024$ megabytes, how many minutes will it take for the server to transmit $36$ gigabytes of data?</p>",
@@ -1664,12 +1672,15 @@ const QUESTIONS = [
     "id": 76,
     "module": 3,
     "prefix": "H1"
-  },
+  }
+];
+
+const MATH_MODULE2 = [
   {
     "code": "SH-M1",
     "section": "math",
     "qnum": 1,
-    "topic": "Geometry & Trigonometry · Circle tangents & coordinate geometry",
+    "topic": "Geometry & Trigonometry \u00b7 Circle tangents & coordinate geometry",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>In the $xy$-plane, a line with positive slope passes through the point $(5, 0)$ and is tangent to the circle $x^2 + y^2 = 9$. What is the $y$-intercept of this line?</p>",
@@ -1691,7 +1702,7 @@ const QUESTIONS = [
     "code": "SH-M2",
     "section": "math",
     "qnum": 2,
-    "topic": "Advanced Math · Function composition & parameters",
+    "topic": "Advanced Math \u00b7 Function composition & parameters",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>The linear function $f$ is defined by $f(x) = ax + b$, where $a$ and $b$ are constants with $a > 0$. If $f(f(x)) = 16x - 15$ for all real numbers $x$, what is the value of $f(f(2))$?</p>",
@@ -1713,7 +1724,7 @@ const QUESTIONS = [
     "code": "SH-M3",
     "section": "math",
     "qnum": 3,
-    "topic": "Advanced Math · Nonlinear systems & algebraic identities",
+    "topic": "Advanced Math \u00b7 Nonlinear systems & algebraic identities",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>If the real numbers $x$ and $y$ satisfy the equations $x + y = 6$ and $x^3 + y^3 = 90$, what is the value of $x^2 + y^2$?</p>",
@@ -1735,18 +1746,18 @@ const QUESTIONS = [
     "code": "SH-M4",
     "section": "math",
     "qnum": 4,
-    "topic": "Problem Solving & Data Analysis · Bayes' Theorem (SPR)",
+    "topic": "Problem-Solving and Data Analysis \u2022 Linear transformations and standard deviation",
     "difficulty": "Super Hard",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q14_spam_table.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>Of $1{,}000$ emails, the spam filter results are shown in the diagram. An email is chosen at random from those the filter flagged. What is the probability, to the nearest hundredth, that it is actually spam? (Enter a decimal.)</p>",
+    "text": "<p>Data set A consists of $15$ distinct integers with standard deviation $s_A$. Data set B consists of the $15$ values obtained by multiplying each value in data set A by $3$ and then subtracting $10$. If the standard deviation of data set B is $s_B$, and $s_B = k \\cdot s_A$, what is the value of the constant $k$?</p>",
     "options": [],
-    "answer": "0.91",
-    "fillAnswer": "0.91",
+    "answer": 3,
+    "fillAnswer": "3",
     "acceptedAnswers": [
       "0.91",
       "0.9105"
     ],
-    "explanation": "The correct answer is $0.91$. The total number of emails flagged by the filter is $285$ (true spam) $+ 28$ (clean emails falsely flagged) $= 313$ flagged emails. Among these flagged emails, $285$ are actually spam: $$P(\\text{Spam} \\mid \\text{Flagged}) = \\frac{285}{313} \\approx 0.9105 \\approx 0.91$$",
+    "explanation": "The correct answer is 3. A linear transformation of a data set $y = ax + b$ scales the standard deviation by the absolute value of the multiplier $|a|$, while adding or subtracting a constant $b$ does not affect the spread of the data. Since each value in data set A is multiplied by $3$ and shifted by $-10$, the standard deviation of data set B is $s_B = |3| \\cdot s_A = 3 s_A$. Therefore, $k = 3$.",
     "id": 80,
     "module": 4,
     "prefix": "SH",
@@ -1756,20 +1767,20 @@ const QUESTIONS = [
     "code": "SH-M5",
     "section": "math",
     "qnum": 5,
-    "topic": "Geometry & Trigonometry · 3D geometry & frustum volume",
+    "topic": "Geometry & Trigonometry \u2022 Inscribed sphere and cylinder volume relationships",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>A container is shaped like the frustum of a right circular cone. The circular top has radius $3\\text{ cm}$, the circular base has radius $6\\text{ cm}$, and the vertical height of the container is $4\\text{ cm}$. What is the volume, in cubic centimeters, of the container?</p>",
+    "text": "<p>A sphere of radius $R$ is inscribed inside a right circular cylinder such that the sphere touches the cylinder's curved lateral wall and both circular bases. The volume of the cylinder is $54\\pi$. What is the volume of the sphere?</p>",
     "options": [
-      "$84\\pi$",
-      "$72\\pi$",
-      "$63\\pi$",
-      "$108\\pi$"
+      "$18\\pi$",
+      "$27\\pi$",
+      "$36\\pi$",
+      "$45\\pi$"
     ],
-    "answer": 0,
+    "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. The volume of the frustum of a cone with lower base radius $R$, upper base radius $r$, and height $h$ is given by $V = \\frac{1}{3}\\pi h (R^2 + Rr + r^2)$. Substituting $R = 6$, $r = 3$, and $h = 4$: $V = \\frac{1}{3}\\pi (4) [6^2 + (6)(3) + 3^2] = \\frac{4}{3}\\pi [36 + 18 + 9] = \\frac{4}{3}\\pi (63) = 4 \\times 21\\pi = 84\\pi\\text{ cm}^3$.",
+    "explanation": "Choice C is correct. An inscribed sphere touches both bases, so the cylinder has base radius $r = R$ and height $h = 2R$. The volume of the cylinder is $V_{\\text{cyl}} = \\pi r^2 h = \\pi R^2 (2R) = 2\\pi R^3$. We are given $V_{\\text{cyl}} = 54\\pi$, so $2\\pi R^3 = 54\\pi \\implies R^3 = 27 \\implies R = 3$. The volume of the sphere is $V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (27) = 36\\pi$. Choice A is half the cylinder's volume. Choice B is $R^3 \\pi$. Choice D is $(54 - 9)\\pi$.",
     "id": 81,
     "module": 4,
     "prefix": "SH"
@@ -1778,7 +1789,7 @@ const QUESTIONS = [
     "code": "SH-M6",
     "section": "math",
     "qnum": 6,
-    "topic": "Geometry & Trigonometry · Advanced trigonometry identities",
+    "topic": "Geometry & Trigonometry \u00b7 Advanced trigonometry identities",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>For an acute angle $\\theta$ such that $0 < \\theta < \\frac{\\pi}{2}$, if $\\sin^4(\\theta) - \\cos^4(\\theta) = -\\frac{7}{25}$, what is the value of $\\tan(\\theta)$?</p>",
@@ -1800,7 +1811,7 @@ const QUESTIONS = [
     "code": "SH-M7",
     "section": "math",
     "qnum": 7,
-    "topic": "Advanced Math · Rational functions & removable discontinuity",
+    "topic": "Advanced Math \u00b7 Rational functions & removable discontinuity",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>The function $f$ is defined by $f(x) = \\frac{x^3 - 2x^2 - 5x + 6}{x - 3}$. In the $xy$-plane, the graph of $y = f(x)$ has a removable discontinuity (a hole) at the point $(3, c)$. What is the value of $c$?</p>",
@@ -1822,7 +1833,7 @@ const QUESTIONS = [
     "code": "SH-M8",
     "section": "math",
     "qnum": 8,
-    "topic": "Algebra · Linear inequalities & optimization",
+    "topic": "Algebra \u00b7 Linear inequalities & optimization",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>A region in the $xy$-plane is defined by the following system of linear inequalities:\n$$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 8 \\\\ 2x + y \\le 10 \\end{cases}$$\nWhat is the maximum possible value of the objective function $P(x, y) = 3x + 5y$ in this region?</p>",
@@ -1844,7 +1855,7 @@ const QUESTIONS = [
     "code": "SH-M9",
     "section": "math",
     "qnum": 9,
-    "topic": "Algebra · Systems of equations with parameters",
+    "topic": "Algebra \u00b7 Systems of equations with parameters",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>In the system of linear equations below, $k$ is a constant:\n$$\\begin{cases} (k - 2)x + 6y = 12 \\\\ 4x + (k + 3)y = 16 \\end{cases}$$\nIf this system has infinitely many solutions, what is the value of $k$?</p>",
@@ -1866,7 +1877,7 @@ const QUESTIONS = [
     "code": "SH-M10",
     "section": "math",
     "qnum": 10,
-    "topic": "Geometry & Trigonometry · Triangles & Heron's theorem",
+    "topic": "Geometry & Trigonometry \u00b7 Triangles & Heron's theorem",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>A triangle has side lengths $13$, $14$, and $15$. What is the length of the altitude drawn to the side of length $14$?</p>",
@@ -1888,20 +1899,20 @@ const QUESTIONS = [
     "code": "SH-M11",
     "section": "math",
     "qnum": 11,
-    "topic": "Problem-Solving and Data Analysis · Nonlinear scatterplot models",
+    "topic": "Problem-Solving and Data Analysis \u2022 Margin of error and sample size interpretation",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>A researcher models the relationship between two positive variables, $x$ and $y$, using the power-law equation $y = a x^b$, where $a$ and $b$ are constants. When $\\ln(y)$ is plotted on the vertical axis against $\\ln(x)$ on the horizontal axis, the resulting line has a slope of $-1.5$ and a vertical intercept of $\\ln(32)$. Based on this model, what is the value of $y$ when $x = 4$?</p>",
+    "text": "<p>A political polling organization surveyed a representative random sample of $1,200$ registered voters in a city and found that $54\\%$ supported a municipal transit proposal, with an associated margin of error of $\\pm 2.8\\%$ at a $95\\%$ confidence level. Which of the following is the most plausible conclusion based on this study?</p>",
     "options": [
-      "2",
-      "8",
-      "4",
-      "16"
+      "It is plausible that the true proportion of all registered voters in the city who support the proposal is between $51.2\\%$ and $56.8\\%$.",
+      "Exactly $54\\%$ of all voters in the entire state support the transit proposal.",
+      "If a new random sample of $4,800$ voters were surveyed, the margin of error would increase to approximately $\\pm 5.6\\%$.",
+      "The poll proves that the transit proposal is guaranteed to pass with more than $60\\%$ of the vote."
     ],
-    "answer": 2,
+    "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. Taking the natural logarithm of both sides of the equation $y = a x^b$ gives $\\ln(y) = \\ln(a x^b) = b \\ln(x) + \\ln(a)$. This is in linear form $Y = mX + B$, where the slope is $b = -1.5 = -\\frac{3}{2}$ and the vertical intercept is $\\ln(a) = \\ln(32) \\implies a = 32$. The model equation is therefore $y = 32 x^{-3/2} = \\frac{32}{x^{3/2}}$. When $x = 4$: $y = \\frac{32}{4^{3/2}} = \\frac{32}{(\\sqrt{4})^3} = \\frac{32}{2^3} = \\frac{32}{8} = 4$.",
+    "explanation": "Choice A is correct. A point estimate of $54\\%$ with a margin of error of $\\pm 2.8\\%$ defines a confidence interval from $54\\% - 2.8\\% = 51.2\\%$ to $54\\% + 2.8\\% = 56.8\\%$. It is plausible that the true population proportion falls within this interval. Choice B overgeneralizes to the entire state and claims exact equality. Choice C is incorrect because increasing the sample size quadruples the sample and cuts the margin of error in half (to $\\pm 1.4\\%$), rather than doubling it. Choice D incorrectly asserts certainty beyond the confidence interval.",
     "id": 87,
     "module": 4,
     "prefix": "SH"
@@ -1910,20 +1921,20 @@ const QUESTIONS = [
     "code": "SH-M12",
     "section": "math",
     "qnum": 12,
-    "topic": "Advanced Math · Complex Conjugate Root Theorem",
+    "topic": "Advanced Math \u2022 Quadratic discriminant and unique real solutions",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q21_cubic_roots.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $p(x) = x^3 + ax^2 + bx + c$ has real coefficients $a$, $b$, and $c$. Two of its roots are $2$ and $1 + 3i$. What is the value of $b$?</p>",
+    "text": "<p>In the quadratic equation $3x^2 - kx + 12 = 0$, where $k$ is a positive constant, the equation has exactly one distinct real solution. What is the value of $k$?</p>",
     "options": [
-      "6",
-      "10",
-      "14",
-      "20"
+      "$6$",
+      "$12$",
+      "$18$",
+      "$24$"
     ],
-    "answer": 2,
+    "answer": 1,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. By the Complex Conjugate Root Theorem, since the coefficients of $p(x)$ are real and $1 + 3i$ is a root, its complex conjugate $1 - 3i$ must also be a root. The quadratic factor with roots $1 \\pm 3i$ is: $$(x - (1 + 3i))(x - (1 - 3i)) = (x - 1)^2 - (3i)^2 = x^2 - 2x + 1 - (-9) = x^2 - 2x + 10$$ Since $2$ is the third root, the full polynomial is: $$p(x) = (x - 2)(x^2 - 2x + 10) = x(x^2 - 2x + 10) - 2(x^2 - 2x + 10)$$ $$p(x) = x^3 - 2x^2 + 10x - 2x^2 + 4x - 20 = x^3 - 4x^2 + 14x - 20$$ Comparing coefficients with $x^3 + ax^2 + bx + c$, the coefficient of $x$ is $b = 14$.",
+    "explanation": "Choice B is correct. A quadratic equation $ax^2 + bx + c = 0$ has exactly one distinct real solution if and only if its discriminant equals zero: $\\Delta = b^2 - 4ac = 0$. Here $a = 3$, $b = -k$, and $c = 12$. Setting the discriminant to zero: $(-k)^2 - 4(3)(12) = 0 \\implies k^2 - 144 = 0 \\implies k^2 = 144$. Since $k$ is given as positive, $k = \\sqrt{144} = 12$. Choice A produces two complex solutions. Choice C and Choice D produce two distinct real solutions.",
     "id": 88,
     "module": 4,
     "prefix": "SH",
@@ -1933,7 +1944,7 @@ const QUESTIONS = [
     "code": "SH-M13",
     "section": "math",
     "qnum": 13,
-    "topic": "Advanced Math · Absolute value functions & optimization",
+    "topic": "Advanced Math \u00b7 Absolute value functions & optimization",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>What is the minimum value of the function $f(x) = |x - 2| + |x - 5| + |x - 9|$ for all real numbers $x$?</p>",
@@ -1955,7 +1966,7 @@ const QUESTIONS = [
     "code": "SH-M14",
     "section": "math",
     "qnum": 14,
-    "topic": "Problem-Solving and Data Analysis · Exponential regression & tables",
+    "topic": "Problem-Solving and Data Analysis \u00b7 Exponential regression & tables",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>The population of a bacterial colony is measured at regular intervals, as shown in the table below:</p>\n<div style=\"overflow-x:auto;margin:14px 0;\"><table style=\"border-collapse:collapse;margin:0 auto;font-size:0.95rem;border:1px solid #cbd5e1;\">\n<thead><tr style=\"background:#f8fafc;\"><th style=\"border:1px solid #cbd5e1;padding:8px 14px;\">Time $t$ (hours)</th><th style=\"border:1px solid #cbd5e1;padding:8px 14px;\">Population $P(t)$</th></tr></thead>\n<tbody>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">0</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">50</td></tr>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">3</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">200</td></tr>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">6</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">800</td></tr>\n<tr><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">9</td><td style=\"border:1px solid #cbd5e1;padding:6px 14px;\">3,200</td></tr>\n</tbody></table></div>\n<p>If the population continues to grow exponentially at this rate, after how many hours will the population reach $51,200$?</p>",
@@ -1977,20 +1988,20 @@ const QUESTIONS = [
     "code": "SH-M15",
     "section": "math",
     "qnum": 15,
-    "topic": "Geometry & Trigonometry · Power of a point theorem",
+    "topic": "Geometry & Trigonometry \u2022 Right triangle trigonometry and angles of elevation",
     "difficulty": "Super Hard",
     "isFillIn": false,
-    "text": "<p>From an external point $P$, a tangent line touches a circle at point $T$ such that $PT = 12$. A secant line from $P$ passes through the circle, intersecting it first at point $A$ and then at point $B$. If $PA = x$ and the chord length $AB = x + 7$, what is the length of chord $AB$?</p>",
+    "text": "<p>An observer at ground level stands $60\\text{ meters}$ from the base of a vertical communications tower. The angle of elevation from the observer to the top of the tower is $60^\\circ$. A platform is mounted on the tower at a point where the angle of elevation is $30^\\circ$. What is the vertical distance, in meters, between the platform and the top of the tower?</p>",
     "options": [
-      "9",
-      "13",
-      "11.5",
-      "16"
+      "$20\\sqrt{3}$",
+      "$30\\sqrt{3}$",
+      "$40\\sqrt{3}$",
+      "$60\\sqrt{3}$"
     ],
     "answer": 2,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice C is correct. By the Tangent-Secant Theorem (Power of a Point Theorem), the square of the tangent segment equals the product of the external secant segment and the entire secant segment: $PT^2 = PA \\cdot PB$. The entire secant length is $PB = PA + AB = x + (x + 7) = 2x + 7$. Substituting the given values: $12^2 = x(2x + 7) \\implies 144 = 2x^2 + 7x \\implies 2x^2 + 7x - 144 = 0$. Factoring the quadratic: $(2x - 9)(x + 16) = 0$. Since length must be positive, $2x - 9 = 0 \\implies x = 4.5$. The length of chord $AB$ is $x + 7 = 4.5 + 7 = 11.5$.",
+    "explanation": "Choice C is correct. Let the distance from the observer to the tower base be $d = 60\\text{ m}$. The height of the top of the tower is $H = d \\tan(60^\\circ) = 60 \\times \\sqrt{3} = 60\\sqrt{3}\\text{ m}$. The height of the platform is $h = d \\tan(30^\\circ) = 60 \\times \\frac{1}{\\sqrt{3}} = 20\\sqrt{3}\\text{ m}$. The vertical distance between the platform and the top of the tower is $H - h = 60\\sqrt{3} - 20\\sqrt{3} = 40\\sqrt{3}\\text{ meters}$. Choice A is the height of the platform alone. Choice B is an arithmetic error. Choice D is the total tower height.",
     "id": 91,
     "module": 4,
     "prefix": "SH"
@@ -1999,7 +2010,7 @@ const QUESTIONS = [
     "code": "SH-M16",
     "section": "math",
     "qnum": 16,
-    "topic": "Advanced Math · Inverse functions & rational modeling",
+    "topic": "Advanced Math \u00b7 Inverse functions & rational modeling",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>The function $f$ is defined for all $x \\neq 4$ by $f(x) = \\frac{2x + 5}{x - 4}$. If $f^{-1}$ represents the inverse function of $f$, what is the value of $f^{-1}(f^{-1}(3))$?</p>",
@@ -2021,7 +2032,7 @@ const QUESTIONS = [
     "code": "SH-M17",
     "section": "math",
     "qnum": 17,
-    "topic": "Algebra · Work-rate problems",
+    "topic": "Algebra \u00b7 Work-rate problems",
     "difficulty": "Super Hard",
     "isFillIn": false,
     "text": "<p>Inlet pipe $A$ can fill an empty swimming pool in $6$ hours, and inlet pipe $B$ can fill the same pool in $8$ hours. Both pipes are opened simultaneously when the pool is completely empty. After $2$ hours, drain pipe $C$, which can empty a full pool in $12$ hours, is accidentally opened and remains open. From the moment pipe $A$ and pipe $B$ were first opened, what is the total time, in hours, required to completely fill the pool?</p>",
@@ -2043,17 +2054,17 @@ const QUESTIONS = [
     "code": "SH-M18",
     "section": "math",
     "qnum": 18,
-    "topic": "Advanced Math · Complex Conjugate Root Theorem (SPR)",
+    "topic": "Advanced Math \u2022 Systems of nonlinear equations",
     "difficulty": "Super Hard",
     "isFillIn": true,
-    "text": "<div style=\"text-align:center; margin:14px 0;\"><img src=\"images/q22_quartic_roots.png\" class=\"q-img\" style=\"max-width:100%; max-height:300px; object-fit:contain; border-radius:8px; border:1px solid #e2e8f0; background:#fff; padding:4px;\" alt=\"diagram\"></div><p>The polynomial $f(x) = x^4 + ax^3 + bx^2 + cx + d$ has real coefficients $a$, $b$, $c$, and $d$. Two of its zeros are $i$ and $2 - i$. What is the value of $a + b + c + d$?</p>",
+    "text": "<p>The system of equations below has real solutions $(x_1, y_1)$ and $(x_2, y_2)$:\n$$\\begin{cases} y = x^2 - 6x + 11 \\\\ y = 2x - 4 \\end{cases}$$\nWhat is the value of $x_1 + x_2$?</p>",
     "options": [],
-    "answer": "3",
-    "fillAnswer": "3",
+    "answer": 8,
+    "fillAnswer": "8",
     "acceptedAnswers": [
       "3"
     ],
-    "explanation": "The correct answer is $3$. Since the coefficients are real, the complex conjugates $-i$ and $2 + i$ are also zeros of $f(x)$. The quadratic factor for the roots $\\pm i$ is $(x - i)(x + i) = x^2 + 1$. The quadratic factor for $2 \\pm i$ is: $$(x - (2 - i))(x - (2 + i)) = (x - 2)^2 - i^2 = x^2 - 4x + 4 - (-1) = x^2 - 4x + 5$$ Multiplying the factors: $$f(x) = (x^2 + 1)(x^2 - 4x + 5) = x^4 - 4x^3 + 5x^2 + x^2 - 4x + 5 = x^4 - 4x^3 + 6x^2 - 4x + 5$$ Thus, $a = -4$, $b = 6$, $c = -4$, and $d = 5$. Summing these: $$a + b + c + d = -4 + 6 - 4 + 5 = 3$$ Shortcut: Note that $f(1) = 1 + a + b + c + d = (1^2 + 1)(1^2 - 4(1) + 5) = (2)(2) = 4 \\implies a + b + c + d = 3$.",
+    "explanation": "The correct answer is 8. Set the two expressions for $y$ equal to find the $x$-coordinates of the intersection points: $x^2 - 6x + 11 = 2x - 4 \\implies x^2 - 8x + 15 = 0$. By Vieta's formulas, for any quadratic equation $ax^2 + bx + c = 0$, the sum of the roots is $-\\frac{b}{a} = -\\frac{-8}{1} = 8$. Alternatively, factor the quadratic $(x - 3)(x - 5) = 0$, giving roots $x_1 = 3$ and $x_2 = 5$. Their sum is $3 + 5 = 8$.",
     "id": 94,
     "module": 4,
     "prefix": "SH",
@@ -2063,7 +2074,7 @@ const QUESTIONS = [
     "code": "SH-M19",
     "section": "math",
     "qnum": 19,
-    "topic": "Advanced Math · Quadratics & integer roots (SPR)",
+    "topic": "Advanced Math \u00b7 Quadratics & integer roots (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>The quadratic equation $x^2 - kx + 144 = 0$, where $k$ is a positive constant, has two solutions that are the squares of consecutive positive integers. What is the value of $k$?</p>",
@@ -2082,7 +2093,7 @@ const QUESTIONS = [
     "code": "SH-M20",
     "section": "math",
     "qnum": 20,
-    "topic": "Advanced Math · Radical equations (SPR)",
+    "topic": "Advanced Math \u00b7 Radical equations (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>What is the real solution to the equation $\\sqrt{x + 5} - \\sqrt{x - 3} = 2$?</p>",
@@ -2101,7 +2112,7 @@ const QUESTIONS = [
     "code": "SH-M21",
     "section": "math",
     "qnum": 21,
-    "topic": "Geometry & Trigonometry · Circle geometry & tangent axes (SPR)",
+    "topic": "Geometry & Trigonometry \u00b7 Circle geometry & tangent axes (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>In the first quadrant of the $xy$-plane, a circle is tangent to both the $x$-axis and the $y$-axis. The center of the circle lies on the line $2x + 3y = 35$. If the area of this circle is $k\\pi$, what is the value of $k$?</p>",
@@ -2120,7 +2131,7 @@ const QUESTIONS = [
     "code": "SH-M22",
     "section": "math",
     "qnum": 22,
-    "topic": "Geometry & Trigonometry · 3D geometry & inscribed solids (SPR)",
+    "topic": "Geometry & Trigonometry \u00b7 3D geometry & inscribed solids (SPR)",
     "difficulty": "Super Hard",
     "isFillIn": true,
     "text": "<p>A right circular cylinder is inscribed in a cube of side length $12$, such that the cylinder touches all four vertical faces of the cube and both bases touch the top and bottom faces. The volume of the region inside the cube that is not occupied by the cylinder can be expressed in the form $A - B\\pi$, where $A$ and $B$ are positive integers. What is the value of $\\frac{A}{B}$?</p>",
@@ -2137,16 +2148,404 @@ const QUESTIONS = [
   }
 ];
 
-// Topic Map
-const TOPIC_MAP = {};
-QUESTIONS.forEach(q => {
-  const t = q.topic || 'General';
-  if (!TOPIC_MAP[t]) {
-    TOPIC_MAP[t] = { name: t, questions: [] };
+const QUESTIONS = [...RW_MODULE1, ...RW_MODULE2, ...MATH_MODULE1, ...MATH_MODULE2];
+
+const TOPIC_MAP = {
+  "Words in Context": {
+    "name": "Words in Context",
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      28,
+      29,
+      30,
+      31,
+      32
+    ]
+  },
+  "Text Structure & Purpose (main purpose)": {
+    "name": "Text Structure & Purpose (main purpose)",
+    "questions": [
+      6,
+      33
+    ]
+  },
+  "Text Structure & Purpose (underlined sentence)": {
+    "name": "Text Structure & Purpose (underlined sentence)",
+    "questions": [
+      7,
+      34
+    ]
+  },
+  "Cross-Text Connections": {
+    "name": "Cross-Text Connections",
+    "questions": [
+      8,
+      35
+    ]
+  },
+  "Central Ideas and Details": {
+    "name": "Central Ideas and Details",
+    "questions": [
+      9,
+      10,
+      36,
+      37
+    ]
+  },
+  "Command of Evidence (Textual)": {
+    "name": "Command of Evidence (Textual)",
+    "questions": [
+      11,
+      12,
+      38,
+      39
+    ]
+  },
+  "Command of Evidence (Quantitative)": {
+    "name": "Command of Evidence (Quantitative)",
+    "questions": [
+      13,
+      14,
+      40,
+      41
+    ]
+  },
+  "Inferences (\"most logically completes\")": {
+    "name": "Inferences (\"most logically completes\")",
+    "questions": [
+      15,
+      16,
+      42,
+      43
+    ]
+  },
+  "Boundaries": {
+    "name": "Boundaries",
+    "questions": [
+      17,
+      18,
+      19,
+      20,
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  "Form, Structure, and Sense (SVA)": {
+    "name": "Form, Structure, and Sense (SVA)",
+    "questions": [
+      21,
+      48
+    ]
+  },
+  "Form, Structure, and Sense (modifier)": {
+    "name": "Form, Structure, and Sense (modifier)",
+    "questions": [
+      22,
+      49
+    ]
+  },
+  "Form, Structure, and Sense (verb)": {
+    "name": "Form, Structure, and Sense (verb)",
+    "questions": [
+      23
+    ]
+  },
+  "Transitions": {
+    "name": "Transitions",
+    "questions": [
+      24,
+      25,
+      51,
+      52
+    ]
+  },
+  "Rhetorical Synthesis": {
+    "name": "Rhetorical Synthesis",
+    "questions": [
+      26,
+      27,
+      53,
+      54
+    ]
+  },
+  "Form, Structure, and Sense (pronoun)": {
+    "name": "Form, Structure, and Sense (pronoun)",
+    "questions": [
+      50
+    ]
+  },
+  "Algebra \u00b7 Linear inequalities": {
+    "name": "Algebra \u00b7 Linear inequalities",
+    "questions": [
+      55
+    ]
+  },
+  "Algebra \u00b7 Linear functions & coordinate geometry": {
+    "name": "Algebra \u00b7 Linear functions & coordinate geometry",
+    "questions": [
+      56
+    ]
+  },
+  "Advanced Math \u00b7 Nonlinear systems & tangency": {
+    "name": "Advanced Math \u00b7 Nonlinear systems & tangency",
+    "questions": [
+      57
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Circle sectors and arc length in radians": {
+    "name": "Geometry & Trigonometry \u2022 Circle sectors and arc length in radians",
+    "questions": [
+      58
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle theorems & chord length": {
+    "name": "Geometry & Trigonometry \u00b7 Circle theorems & chord length",
+    "questions": [
+      59
+    ]
+  },
+  "Advanced Math \u00b7 Rational expressions": {
+    "name": "Advanced Math \u00b7 Rational expressions",
+    "questions": [
+      60
+    ]
+  },
+  "Advanced Math \u00b7 Quadratic relations & Vieta's formulas": {
+    "name": "Advanced Math \u00b7 Quadratic relations & Vieta's formulas",
+    "questions": [
+      61
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Conditional probability": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Conditional probability",
+    "questions": [
+      62
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Trigonometric identities": {
+    "name": "Geometry & Trigonometry \u00b7 Trigonometric identities",
+    "questions": [
+      63
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Margin of error & sample size": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Margin of error & sample size",
+    "questions": [
+      64
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Percent increase and successive percentage change": {
+    "name": "Problem-Solving and Data Analysis \u2022 Percent increase and successive percentage change",
+    "questions": [
+      65
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle equations in coordinate plane": {
+    "name": "Geometry & Trigonometry \u00b7 Circle equations in coordinate plane",
+    "questions": [
+      66
+    ]
+  },
+  "Algebra \u00b7 Systems of equations": {
+    "name": "Algebra \u00b7 Systems of equations",
+    "questions": [
+      67
+    ]
+  },
+  "Advanced Math \u00b7 Function transformations & vertex form": {
+    "name": "Advanced Math \u00b7 Function transformations & vertex form",
+    "questions": [
+      68
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Similar solids & area/volume scaling": {
+    "name": "Geometry & Trigonometry \u00b7 Similar solids & area/volume scaling",
+    "questions": [
+      69
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Two-way tables and conditional probability": {
+    "name": "Problem-Solving and Data Analysis \u2022 Two-way tables and conditional probability",
+    "questions": [
+      70
+    ]
+  },
+  "Advanced Math \u00b7 Exponents and radicals": {
+    "name": "Advanced Math \u00b7 Exponents and radicals",
+    "questions": [
+      71
+    ]
+  },
+  "Advanced Math \u00b7 Polynomial equations (SPR)": {
+    "name": "Advanced Math \u00b7 Polynomial equations (SPR)",
+    "questions": [
+      72
+    ]
+  },
+  "Advanced Math \u00b7 Rational equations (SPR)": {
+    "name": "Advanced Math \u00b7 Rational equations (SPR)",
+    "questions": [
+      73
+    ]
+  },
+  "Algebra \u00b7 Systems with infinite solutions (SPR)": {
+    "name": "Algebra \u00b7 Systems with infinite solutions (SPR)",
+    "questions": [
+      74
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Arc length & radian measure (SPR)": {
+    "name": "Geometry & Trigonometry \u00b7 Arc length & radian measure (SPR)",
+    "questions": [
+      75
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Rates & unit conversions (SPR)": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Rates & unit conversions (SPR)",
+    "questions": [
+      76
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle tangents & coordinate geometry": {
+    "name": "Geometry & Trigonometry \u00b7 Circle tangents & coordinate geometry",
+    "questions": [
+      77
+    ]
+  },
+  "Advanced Math \u00b7 Function composition & parameters": {
+    "name": "Advanced Math \u00b7 Function composition & parameters",
+    "questions": [
+      78
+    ]
+  },
+  "Advanced Math \u00b7 Nonlinear systems & algebraic identities": {
+    "name": "Advanced Math \u00b7 Nonlinear systems & algebraic identities",
+    "questions": [
+      79
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Linear transformations and standard deviation": {
+    "name": "Problem-Solving and Data Analysis \u2022 Linear transformations and standard deviation",
+    "questions": [
+      80
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Inscribed sphere and cylinder volume relationships": {
+    "name": "Geometry & Trigonometry \u2022 Inscribed sphere and cylinder volume relationships",
+    "questions": [
+      81
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Advanced trigonometry identities": {
+    "name": "Geometry & Trigonometry \u00b7 Advanced trigonometry identities",
+    "questions": [
+      82
+    ]
+  },
+  "Advanced Math \u00b7 Rational functions & removable discontinuity": {
+    "name": "Advanced Math \u00b7 Rational functions & removable discontinuity",
+    "questions": [
+      83
+    ]
+  },
+  "Algebra \u00b7 Linear inequalities & optimization": {
+    "name": "Algebra \u00b7 Linear inequalities & optimization",
+    "questions": [
+      84
+    ]
+  },
+  "Algebra \u00b7 Systems of equations with parameters": {
+    "name": "Algebra \u00b7 Systems of equations with parameters",
+    "questions": [
+      85
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Triangles & Heron's theorem": {
+    "name": "Geometry & Trigonometry \u00b7 Triangles & Heron's theorem",
+    "questions": [
+      86
+    ]
+  },
+  "Problem-Solving and Data Analysis \u2022 Margin of error and sample size interpretation": {
+    "name": "Problem-Solving and Data Analysis \u2022 Margin of error and sample size interpretation",
+    "questions": [
+      87
+    ]
+  },
+  "Advanced Math \u2022 Quadratic discriminant and unique real solutions": {
+    "name": "Advanced Math \u2022 Quadratic discriminant and unique real solutions",
+    "questions": [
+      88
+    ]
+  },
+  "Advanced Math \u00b7 Absolute value functions & optimization": {
+    "name": "Advanced Math \u00b7 Absolute value functions & optimization",
+    "questions": [
+      89
+    ]
+  },
+  "Problem-Solving and Data Analysis \u00b7 Exponential regression & tables": {
+    "name": "Problem-Solving and Data Analysis \u00b7 Exponential regression & tables",
+    "questions": [
+      90
+    ]
+  },
+  "Geometry & Trigonometry \u2022 Right triangle trigonometry and angles of elevation": {
+    "name": "Geometry & Trigonometry \u2022 Right triangle trigonometry and angles of elevation",
+    "questions": [
+      91
+    ]
+  },
+  "Advanced Math \u00b7 Inverse functions & rational modeling": {
+    "name": "Advanced Math \u00b7 Inverse functions & rational modeling",
+    "questions": [
+      92
+    ]
+  },
+  "Algebra \u00b7 Work-rate problems": {
+    "name": "Algebra \u00b7 Work-rate problems",
+    "questions": [
+      93
+    ]
+  },
+  "Advanced Math \u2022 Systems of nonlinear equations": {
+    "name": "Advanced Math \u2022 Systems of nonlinear equations",
+    "questions": [
+      94
+    ]
+  },
+  "Advanced Math \u00b7 Quadratics & integer roots (SPR)": {
+    "name": "Advanced Math \u00b7 Quadratics & integer roots (SPR)",
+    "questions": [
+      95
+    ]
+  },
+  "Advanced Math \u00b7 Radical equations (SPR)": {
+    "name": "Advanced Math \u00b7 Radical equations (SPR)",
+    "questions": [
+      96
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 Circle geometry & tangent axes (SPR)": {
+    "name": "Geometry & Trigonometry \u00b7 Circle geometry & tangent axes (SPR)",
+    "questions": [
+      97
+    ]
+  },
+  "Geometry & Trigonometry \u00b7 3D geometry & inscribed solids (SPR)": {
+    "name": "Geometry & Trigonometry \u00b7 3D geometry & inscribed solids (SPR)",
+    "questions": [
+      98
+    ]
   }
-  TOPIC_MAP[t].questions.push(q.id);
-});
+};
 
 if (typeof module !== 'undefined') {
-  module.exports = { QUESTIONS, TOPIC_MAP };
+  module.exports = { QUESTIONS, RW_MODULE1, RW_MODULE2, MATH_MODULE1, MATH_MODULE2, TOPIC_MAP };
 }
