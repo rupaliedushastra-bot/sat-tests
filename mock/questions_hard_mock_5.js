@@ -1004,7 +1004,7 @@ const MATH_MODULE1 = [
     "explanation": "Choice C is correct. In a $30^\\circ-60^\\circ-90^\\circ$ special right triangle, the side lengths are in the ratio $1 : \\sqrt{3} : 2$. The side opposite the $30^\\circ$ angle is half the hypotenuse: $BC = \\frac{16\\sqrt{3}}{2} = 8\\sqrt{3}$. The side adjacent to the $30^\\circ$ angle ($AB$) is $\\sqrt{3}$ times the shorter leg: $AB = (8\\sqrt{3}) \\cdot \\sqrt{3} = 8 \\cdot 3 = 24$. Choice A is $8\\sqrt{3}/\\sqrt{3}$. Choice B is hypotenuse without $\\sqrt{3}$. Choice D multiplies by $\\sqrt{3}$ twice.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q09_trapezoid_revolve.png"
+    "image": null
   },
   {
     "id": 59,
@@ -1133,7 +1133,7 @@ const MATH_MODULE1 = [
     "explanation": "Choice B is correct. Let the baseline emissions be $100$ units. After the first year's $20\\%$ reduction, emissions were $100 \\times (1 - 0.20) = 80$ units. In the second year, emissions dropped by $25\\%$ of this new level: $80 \\times (1 - 0.25) = 80 \\times 0.75 = 60$ units. The total reduction from the initial $100$ units is $100 - 60 = 40$ units, representing an overall $40\\%$ reduction. Choice A is $20 + 15$. Choice C simply adds the percentages ($20\\% + 25\\% = 45\\%$), which ignores that the second reduction applies to a smaller base. Choice D is an overestimation.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q10_similar_planters.png"
+    "image": null
   },
   {
     "id": 66,
@@ -1226,7 +1226,7 @@ const MATH_MODULE1 = [
     "explanation": "Choice B is correct. Increasing the largest value increases the sum of the $8$ numbers, so the mean ($\\frac{\\text{sum}}{8}$) must increase (Statement I is true). The range is $\\text{maximum} - \\text{minimum}$. Since the maximum increases while the minimum remains unchanged, the range must increase (Statement III is true). The median depends only on the two middle values (the 4th and 5th values when ordered); increasing the largest value does not alter these middle values, so the median remains unchanged (Statement II is false). Therefore, I and III only must increase.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q18_weather_area.png"
+    "image": null
   },
   {
     "id": 71,
@@ -1407,7 +1407,7 @@ const MATH_MODULE2 = [
     "explanation": "Choice B is correct. The condition specifies that the student earned 'Magna Cum Laude', restricting the relevant total to $140$ students. Within this group, $65$ students are Humanities majors. The probability is $\\frac{65}{140}$. Divide numerator and denominator by $5$: $\\frac{65 \\div 5}{140 \\div 5} = \\frac{13}{28}$. Choice A divides by total Humanities majors ($65/200$). Choice C is an arithmetic error. Choice D divides by the grand total ($65/440$).",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q20_two_children_grid.png"
+    "image": null
   },
   {
     "id": 81,
@@ -1554,7 +1554,7 @@ const MATH_MODULE2 = [
     "explanation": "Choice A is correct. Substitute $y = 2x - 5$ into the circle's equation: $x^2 + (2x - 5)^2 = 4 \\implies x^2 + (4x^2 - 20x + 25) = 4 \\implies 5x^2 - 20x + 21 = 0$. Determine the number of real solutions by evaluating the discriminant: $\\Delta = b^2 - 4ac = (-20)^2 - 4(5)(21) = 400 - 420 = -20$. Because the discriminant is strictly negative ($\\Delta < 0$), the quadratic equation has no real solutions. This means the line and circle never intersect in the real $xy$-plane ($0$ points of intersection). Choice B occurs when $\\Delta = 0$ (tangent line). Choice C occurs when $\\Delta > 0$ (secant line).",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q29_function_values.png"
+    "image": null
   },
   {
     "id": 89,
@@ -1665,7 +1665,7 @@ const MATH_MODULE2 = [
     "fillAnswer": null,
     "acceptedAnswers": [],
     "explanation": "Choice C is correct. According to the Factor Theorem, $(x - a)$ is a factor of a polynomial $P(x)$ if and only if $P(a) = 0$. Since $(x - 3)$ is a factor, $P(3) = 0$. Evaluate $P(3)$: $P(3) = 3^3 - 5(3^2) + k(3) - 18 = 27 - 5(9) + 3k - 18 = 27 - 45 + 3k - 18 = -36 + 3k$. Set $P(3) = 0$: $-36 + 3k = 0 \\implies 3k = 36 \\implies k = 12$. Choice A produces $P(3) = -18$. Choice B produces $P(3) = -9$. Choice D produces $P(3) = 9$.",
-    "image": "images/q30_double_roots.png"
+    "image": null
   },
   {
     "id": 95,

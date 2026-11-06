@@ -1004,7 +1004,7 @@ const MATH_MODULE1 = [
     "explanation": "Choice A is correct. Complete the square for both $x$ and $y$: $(x^2 - 8x + 16) + (y^2 + 14y + 49) = -29 + 16 + 49 \\implies (x - 4)^2 + (y + 7)^2 = 36$. The standard equation of a circle is $(x - h)^2 + (y - k)^2 = r^2$. Here $r^2 = 36$, so the radius is $r = \\sqrt{36} = 6$. Choice B and C are arithmetic errors. Choice D is $r^2$.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q07_pyramid_frustum.png"
+    "image": null
   },
   {
     "id": 59,
@@ -1128,9 +1128,9 @@ const MATH_MODULE1 = [
     "explanation": "The correct answer is 24. Multiply the entire equation by the least common denominator, $12$: $12 \\left(\\frac{3x - 5}{4}\\right) - 12 \\left(\\frac{2x + 1}{3}\\right) = 12 \\left(\\frac{5}{12}\\right) \\implies 3(3x - 5) - 4(2x + 1) = 5$. Expand terms: $(9x - 15) - (8x + 4) = 5 \\implies x - 19 = 5 \\implies x = 24$.",
     "fillAnswer": "24",
     "acceptedAnswers": [
-      "9"
+      "24"
     ],
-    "image": "images/q08_funnel_flow.png"
+    "image": null
   },
   {
     "id": 66,
@@ -1223,7 +1223,7 @@ const MATH_MODULE1 = [
     "explanation": "Choice B is correct. A residual is defined as the actual value minus the predicted value: $\\text{Residual} = y - \\hat{y}$. Using the line of best fit for $x = 8$: $\\hat{y} = 3.6(8) + 14.2 = 28.8 + 14.2 = 43$. The actual value is $y = 45$. The residual is $45 - 43 = 2.0$ (thousands of dollars). Choice A, Choice C, and Choice D result from calculation errors.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q16_coin_tree.png"
+    "image": null
   },
   {
     "id": 71,
@@ -1404,7 +1404,7 @@ const MATH_MODULE2 = [
     "explanation": "Choice B is correct. In an observational study where participants self-select their behaviors rather than being randomly assigned to treatment and control groups, confounding variables cannot be controlled. Therefore, researchers can establish an association (correlation) but cannot infer causation. Choice A and Choice D incorrectly claim cause-and-effect. Choice C incorrectly dismisses a statistically adequate sample size.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q17_commute_tree.png"
+    "image": null
   },
   {
     "id": 81,
@@ -1551,7 +1551,7 @@ const MATH_MODULE2 = [
     "explanation": "Choice A is correct. Find the zeros of $g(x)$: $(x - 4)^2 - 25 = 0 \\implies (x - 4)^2 = 25 \\implies x - 4 = \\pm 5 \\implies x = 9$ or $x = -1$. The function $h(x) = g(x + 3)$ represents a horizontal shift of $g(x)$ to the left by $3$ units. Every zero of $g(x)$ is therefore shifted left by $3$: $9 - 3 = 6$ and $-1 - 3 = -4$. Thus, the zeros of $h(x)$ are $x = -4$ and $x = 6$. Choice B gives the zeros of $g(x)$ without the horizontal shift. Choice C shifts to the right instead of left.",
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "image": "images/q27_degree5.png"
+    "image": null
   },
   {
     "id": 89,
@@ -1662,7 +1662,7 @@ const MATH_MODULE2 = [
     "fillAnswer": null,
     "acceptedAnswers": [],
     "explanation": "Choice D is correct. Combine the fractions on the left side: $\\frac{2x - 6}{x - 3} = \\frac{2(x - 3)}{x - 3}$. For any $x \\ne 3$, the factor $(x - 3)$ cancels, reducing the left side to $2$. The equation then becomes $2 = 4$, which is a false statement with no solutions. Alternatively, multiplying both sides by $(x - 3)$ gives $2x - 6 = 4x - 12 \\implies 2x = 6 \\implies x = 3$. However, substituting $x = 3$ into the original equation causes division by zero ($3 - 3 = 0$), so $x = 3$ is extraneous. Therefore, there is no real solution. Choice A includes the extraneous root.",
-    "image": "images/q28_quadratic_distance.png"
+    "image": null
   },
   {
     "id": 95,

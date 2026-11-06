@@ -1288,7 +1288,7 @@ const MATH_MODULE1 = [
     "id": 58,
     "module": 3,
     "prefix": "H1",
-    "image": "images/q01_frustum.png"
+    "image": null
   },
   {
     "code": "H1-M5",
@@ -1416,7 +1416,9 @@ const MATH_MODULE1 = [
     ],
     "answer": 1,
     "fillAnswer": null,
-    "acceptedAnswers": [],
+    "acceptedAnswers": [
+      "1305"
+    ],
     "explanation": "Choice B is correct. The margin of error $E$ in a sample proportion is inversely proportional to the square root of the sample size: $E \\propto \\frac{1}{\\sqrt{n}}$. To reduce the margin of error from $4.2\\%$ to $1.4\\%$, the margin of error is divided by $\\frac{4.2}{1.4} = 3$. This requires the sample size to be multiplied by $3^2 = 9$. The new total sample size must therefore be $450 \\times 9 = 4,050$. The question asks for the number of *additional* students needed: $4,050 - 450 = 3,600$. Choice D (4,050) is the classic trap of calculating the new total rather than the additional participants required.",
     "id": 64,
     "module": 3,
@@ -1434,14 +1436,13 @@ const MATH_MODULE1 = [
     "answer": 1305,
     "fillAnswer": "1305",
     "acceptedAnswers": [
-      "19/27",
-      "0.7037"
+      "1305"
     ],
     "explanation": "The correct answer is 1305. First find the enrollment in 2023 after a $16\\%$ increase: $1,250 \\times (1 + 0.16) = 1,250 \\times 1.16 = 1,450$. Next, calculate the enrollment in 2024 after a $10\\%$ decrease from the 2023 level: $1,450 \\times (1 - 0.10) = 1,450 \\times 0.90 = 1,305$.",
     "id": 65,
     "module": 3,
     "prefix": "H1",
-    "image": "images/q02_cone_cut.png"
+    "image": null
   },
   {
     "code": "H1-M12",
@@ -1552,7 +1553,7 @@ const MATH_MODULE1 = [
     "id": 70,
     "module": 3,
     "prefix": "H1",
-    "image": "images/q11_factory_tree.png"
+    "image": null
   },
   {
     "code": "H1-M17",
@@ -1736,7 +1737,9 @@ const MATH_MODULE2 = [
     ],
     "answer": 2,
     "fillAnswer": null,
-    "acceptedAnswers": [],
+    "acceptedAnswers": [
+      "3"
+    ],
     "explanation": "Choice C is correct. Use the algebraic identity for the sum of cubes: $x^3 + y^3 = (x + y)(x^2 - xy + y^2) = (x + y)[(x + y)^2 - 3xy]$. Substitute the known values: $90 = 6[6^2 - 3xy] \\implies 90 = 6[36 - 3xy] \\implies 15 = 36 - 3xy \\implies 3xy = 21 \\implies xy = 7$. Now find $x^2 + y^2$: $x^2 + y^2 = (x + y)^2 - 2xy = 6^2 - 2(7) = 36 - 14 = 22$.",
     "id": 79,
     "module": 4,
@@ -1754,14 +1757,13 @@ const MATH_MODULE2 = [
     "answer": 3,
     "fillAnswer": "3",
     "acceptedAnswers": [
-      "0.91",
-      "0.9105"
+      "3"
     ],
     "explanation": "The correct answer is 3. A linear transformation of a data set $y = ax + b$ scales the standard deviation by the absolute value of the multiplier $|a|$, while adding or subtracting a constant $b$ does not affect the spread of the data. Since each value in data set A is multiplied by $3$ and shifted by $-10$, the standard deviation of data set B is $s_B = |3| \\cdot s_A = 3 s_A$. Therefore, $k = 3$.",
     "id": 80,
     "module": 4,
     "prefix": "SH",
-    "image": "images/q14_spam_table.png"
+    "image": null
   },
   {
     "code": "SH-M5",
@@ -1938,7 +1940,7 @@ const MATH_MODULE2 = [
     "id": 88,
     "module": 4,
     "prefix": "SH",
-    "image": "images/q21_cubic_roots.png"
+    "image": null
   },
   {
     "code": "SH-M13",
@@ -2044,7 +2046,9 @@ const MATH_MODULE2 = [
     ],
     "answer": 1,
     "fillAnswer": null,
-    "acceptedAnswers": [],
+    "acceptedAnswers": [
+      "8"
+    ],
     "explanation": "Choice B is correct. Let the pool's volume be 1 unit. Pipe $A$'s filling rate is $\\frac{1}{6}$ pool/hour, and pipe $B$'s filling rate is $\\frac{1}{8}$ pool/hour. During the first 2 hours, the combined filling rate is $\\frac{1}{6} + \\frac{1}{8} = \\frac{4 + 3}{24} = \\frac{7}{24}$ pool/hour. In 2 hours, they fill $2 \\times \\frac{7}{24} = \\frac{7}{12}$ of the pool, leaving $1 - \\frac{7}{12} = \\frac{5}{12}$ of the pool to be filled. When drain pipe $C$ (rate $-\\frac{1}{12} = -\\frac{2}{24}$) opens, the new net filling rate is $\\frac{7}{24} - \\frac{2}{24} = \\frac{5}{24}$ pool/hour. The time needed to fill the remaining $\\frac{5}{12}$ is $\\frac{5/12}{5/24} = \\frac{5}{12} \\times \\frac{24}{5} = 2$ hours. The total time from start to finish is $2 + 2 = 4$ hours.",
     "id": 93,
     "module": 4,
@@ -2062,13 +2066,13 @@ const MATH_MODULE2 = [
     "answer": 8,
     "fillAnswer": "8",
     "acceptedAnswers": [
-      "3"
+      "8"
     ],
     "explanation": "The correct answer is 8. Set the two expressions for $y$ equal to find the $x$-coordinates of the intersection points: $x^2 - 6x + 11 = 2x - 4 \\implies x^2 - 8x + 15 = 0$. By Vieta's formulas, for any quadratic equation $ax^2 + bx + c = 0$, the sum of the roots is $-\\frac{b}{a} = -\\frac{-8}{1} = 8$. Alternatively, factor the quadratic $(x - 3)(x - 5) = 0$, giving roots $x_1 = 3$ and $x_2 = 5$. Their sum is $3 + 5 = 8$.",
     "id": 94,
     "module": 4,
     "prefix": "SH",
-    "image": "images/q22_quartic_roots.png"
+    "image": null
   },
   {
     "code": "SH-M19",

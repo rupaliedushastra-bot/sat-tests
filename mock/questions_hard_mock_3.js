@@ -1288,7 +1288,7 @@ const MATH_MODULE1 = [
     "code": "H3-M4",
     "section": "math",
     "difficulty": "Hard",
-    "image": "images/q05_find_height.png"
+    "image": null
   },
   {
     "qnum": 5,
@@ -1431,8 +1431,7 @@ const MATH_MODULE1 = [
     "answer": 336,
     "fillAnswer": "336",
     "acceptedAnswers": [
-      "7/26",
-      "0.2692"
+      "336"
     ],
     "explanation": "The correct answer is 336. The retail price after the $40\\%$ markup is $320 \\times (1 + 0.40) = 320 \\times 1.40 = 448$. The clearance sale applies a $25\\%$ discount to the retail price: $448 \\times (1 - 0.25) = 448 \\times 0.75 = 336$.",
     "id": 65,
@@ -1441,7 +1440,7 @@ const MATH_MODULE1 = [
     "code": "H3-M11",
     "section": "math",
     "difficulty": "Hard",
-    "image": "images/q06_tank_half_full.png"
+    "image": null
   },
   {
     "qnum": 12,
@@ -1552,7 +1551,7 @@ const MATH_MODULE1 = [
     "code": "H3-M16",
     "section": "math",
     "difficulty": "Hard",
-    "image": "images/q13_two_urns_tree.png"
+    "image": null
   },
   {
     "qnum": 17,
@@ -1749,8 +1748,7 @@ const MATH_MODULE2 = [
     "answer": 59.8,
     "fillAnswer": "59.8",
     "acceptedAnswers": [
-      "5/8",
-      "0.625"
+      "59.8"
     ],
     "explanation": "The correct answer is 59.8. The point estimate is $63\\%$ and the margin of error is $3.2\\%$. The $95\\%$ confidence interval ranges from $63\\% - 3.2\\% = 59.8\\%$ to $63\\% + 3.2\\% = 66.2\\%$. The lower bound of this plausible interval is $59.8\\%$, so $p = 59.8$.",
     "id": 80,
@@ -1759,7 +1757,7 @@ const MATH_MODULE2 = [
     "code": "SH3-M4",
     "section": "math",
     "difficulty": "Super Hard",
-    "image": "images/q19_gym_tree.png"
+    "image": null
   },
   {
     "qnum": 5,
@@ -1863,7 +1861,7 @@ const MATH_MODULE2 = [
     "answer": 0,
     "fillAnswer": null,
     "acceptedAnswers": [],
-    "explanation": "Choice A is correct. A system of two linear equations has no solution if the lines have equal slopes but distinct $y$-intercepts. The slopes are equal when the cross-multiplied ratio of the $x$- and $y$-coefficients is equal: $\frac{k - 2}{4} = \frac{3}{k + 2} \implies (k - 2)(k + 2) = 12 \implies k^2 - 4 = 12 \implies k^2 = 16 \\implies k^2 = 16$. Since $k > 0$, $k = 4$. Substituting $k = 4$ into the system yields $2x + 3y = 7$ and $4x + 6y = 11$. Multiplying the first equation by $2$ gives $4x + 6y = 14$. Since $4x + 6y = 14$ and $4x + 6y = 11$ have identical left sides but different right sides ($14 \\neq 11$), the lines are strictly parallel and distinct, meaning there is no solution.",
+    "explanation": "Choice A is correct. A system of two linear equations has no solution if the lines have equal slopes but distinct $y$-intercepts. The slopes are equal when the cross-multiplied ratio of the $x$- and $y$-coefficients is equal: $\frac{k - 2}{4} = \frac{3}{k + 2} implies (k - 2)(k + 2) = 12 implies k^2 - 4 = 12 implies k^2 = 16 \\implies k^2 = 16$. Since $k > 0$, $k = 4$. Substituting $k = 4$ into the system yields $2x + 3y = 7$ and $4x + 6y = 11$. Multiplying the first equation by $2$ gives $4x + 6y = 14$. Since $4x + 6y = 14$ and $4x + 6y = 11$ have identical left sides but different right sides ($14 \\neq 11$), the lines are strictly parallel and distinct, meaning there is no solution.",
     "id": 85,
     "module": 4,
     "prefix": "SH3",
@@ -1936,7 +1934,7 @@ const MATH_MODULE2 = [
     "code": "SH3-M12",
     "section": "math",
     "difficulty": "Super Hard",
-    "image": "images/q25_quartic_x2.png"
+    "image": null
   },
   {
     "qnum": 13,
@@ -2069,7 +2067,7 @@ const MATH_MODULE2 = [
     "code": "SH3-M18",
     "section": "math",
     "difficulty": "Super Hard",
-    "image": "images/q26_cubic_a.png"
+    "image": null
   },
   {
     "qnum": 19,

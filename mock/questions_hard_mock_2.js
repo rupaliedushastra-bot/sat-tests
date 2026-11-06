@@ -211,9 +211,11 @@ const MATH_MODULE1 = [
     ],
     "answer": 1,
     "fillAnswer": null,
-    "acceptedAnswers": [],
+    "acceptedAnswers": [
+      "432"
+    ],
     "explanation": "Choice B is correct. The circle has center $C(6, 8)$ and radius $r = \\sqrt{25} = 5$. The distance from the origin $O(0, 0)$ to the center $C(6, 8)$ is $OC = \\sqrt{(6 - 0)^2 + (8 - 0)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. The shortest distance from the origin to any point on the circle lies along the segment connecting the origin to the center: $d_{\\text{min}} = OC - r = 10 - 5 = 5$. Choice A is an arithmetic error. Choice C is $12 - 5$. Choice D is the distance to the center.",
-    "image": "images/q03_bucket.png",
+    "image": null,
     "id": 9,
     "module": 2,
     "qnum": 1
@@ -230,11 +232,10 @@ const MATH_MODULE1 = [
     "answer": 432,
     "fillAnswer": "432",
     "acceptedAnswers": [
-      "117/8",
-      "14.625"
+      "432"
     ],
     "explanation": "The correct answer is 432. The volume of the cylinder is $V_{\\text{cyl}} = \\pi r^2 h_{\\text{cyl}} = \\pi (6^2)(10) = 360\\pi$. The volume of the cone is $V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h_{\\text{cone}} = \\frac{1}{3}\\pi (6^2)(6) = 72\\pi$. The total volume is $V = 360\\pi + 72\\pi = 432\\pi$. Therefore, $k = 432$.",
-    "image": "images/q04_cone_ratio.png",
+    "image": null,
     "id": 10,
     "module": 2,
     "qnum": 2
@@ -255,9 +256,11 @@ const MATH_MODULE1 = [
     ],
     "answer": 2,
     "fillAnswer": null,
-    "acceptedAnswers": [],
+    "acceptedAnswers": [
+      "88"
+    ],
     "explanation": "Choice C is correct. The question conditions on students who study in the Campus Library, which is a subgroup total of $180$ students. Among these $180$ library study participants, $70$ are First-Year students. The conditional probability is $\\frac{70}{180} = \\frac{7}{18}$. Choice A incorrectly divides by the grand total ($70/400$). Choice B divides by total first-years ($70/200$). Choice D is the probability for upperclassmen ($110/180$).",
-    "image": "images/q12_screening_table.png",
+    "image": null,
     "id": 11,
     "module": 2,
     "qnum": 3
@@ -274,11 +277,10 @@ const MATH_MODULE1 = [
     "answer": 88,
     "fillAnswer": "88",
     "acceptedAnswers": [
-      "0.89",
-      "0.8869"
+      "88"
     ],
     "explanation": "The correct answer is 88. The total points scored by students in Class A is $20 \\times 82 = 1,640$. The total points scored by students in Class B is $30 \\times 92 = 2,760$. The combined total score across all $50$ students is $1,640 + 2,760 = 4,400$. The combined mean is $\\frac{4,400}{50} = 88$.",
-    "image": "images/q15_two_tests_table.png",
+    "image": null,
     "id": 12,
     "module": 2,
     "qnum": 4
@@ -301,7 +303,7 @@ const MATH_MODULE1 = [
     "fillAnswer": null,
     "acceptedAnswers": [],
     "explanation": "Choice B is correct. Both fractions have the common denominator $(2x + 3)$. Combine numerators: $\\frac{(4x^2 - 9) + (6x^2 + 7x - 3)}{2x + 3} = \\frac{10x^2 + 7x - 12}{2x + 3}$. Factor the numerator by grouping: $10x^2 + 15x - 8x - 12 = 5x(2x + 3) - 4(2x + 3) = (2x + 3)(5x - 4)$. Since $x \\ne -\\frac{3}{2}$, cancel the common factor $(2x + 3)$, leaving $5x - 4$. Choice A, Choice C, and Choice D result from factoring or sign errors.",
-    "image": "images/q23_quadratic_root.png",
+    "image": null,
     "id": 13,
     "module": 2,
     "qnum": 5
@@ -324,7 +326,7 @@ const MATH_MODULE1 = [
     "fillAnswer": null,
     "acceptedAnswers": [],
     "explanation": "Choice B is correct. Square both sides: $3x + 16 = (x + 2)^2 = x^2 + 4x + 4$. Rearrange into standard quadratic form: $x^2 + x - 12 = 0 \\implies (x + 4)(x - 3) = 0$, giving potential roots $x = -4$ and $x = 3$. Check $x = -4$ in the original equation: $\\sqrt{3(-4) + 16} = \\sqrt{4} = 2$, but the right side is $-4 + 2 = -2$. Since $2 \\ne -2$, $x = -4$ is extraneous. Check $x = 3$: $\\sqrt{3(3) + 16} = \\sqrt{25} = 5$, and $3 + 2 = 5$, which is valid. Thus, the solution set is $\\{3\\}$. Choice A includes the extraneous solution.",
-    "image": "images/q24_cubic_real_zero.png",
+    "image": null,
     "id": 14,
     "module": 2,
     "qnum": 6
