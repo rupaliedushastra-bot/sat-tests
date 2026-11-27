@@ -8,10 +8,10 @@ const QUESTIONS = [
     "id": 1,
     "text": "In triangle ABC, angle C is a right angle. The length of side AC is 6 units, and the length of side BC is 8 units. What is the value of sin(A)?",
     "options": [
-      " (\frac{3}{5}) ",
-      " (\frac{4}{5}) ",
-      " (\frac{4}{3}) ",
-      " (\frac{3}{4}) "
+      " (\\frac{3}{5}) ",
+      " (\\frac{4}{5}) ",
+      " (\\frac{4}{3}) ",
+      " (\\frac{3}{4}) "
     ],
     "answer": 1,
     "explanation": "Choice B is correct. Hypotenuse AB = ( sqrt{AC^2 + BC^2} ) = ( sqrt{6^2 + 8^2} ) = ( sqrt{36 + 64} ) = ( sqrt{100} = 10 ). sin(A) = opposite/hypotenuse = BC/AB = (\\frac{8}{10}) = (\\frac{4}{5}) .",
@@ -19,12 +19,12 @@ const QUESTIONS = [
   },
   {
     "id": 2,
-    "text": "In triangle ABC, angle C is a right angle. If tan(A) = (\frac{3}{4}) , what is the value of cos(B)?",
+    "text": "In triangle ABC, angle C is a right angle. If tan(A) = (\\frac{3}{4}) , what is the value of cos(B)?",
     "options": [
-      " (\frac{4}{5}) ",
-      " (\frac{3}{4}) ",
-      " (\frac{3}{5}) ",
-      " (\frac{4}{3}) "
+      " (\\frac{4}{5}) ",
+      " (\\frac{3}{4}) ",
+      " (\\frac{3}{5}) ",
+      " (\\frac{4}{3}) "
     ],
     "answer": 2,
     "explanation": "Choice C is correct. tan(A) = opposite/adjacent = (\\frac{3}{4}) . So sides opposite A and adjacent A are 3 and 4; hypotenuse = ( sqrt{3^2 + 4^2} ) = 5. In a right triangle, ( A + B = 90^circ ), so ( B = 90^circ - A ). cos(B) = cos(90° − A) = sin(A) = (\\frac{3}{5}) .",
@@ -32,7 +32,7 @@ const QUESTIONS = [
   },
   {
     "id": 3,
-    "text": "In a right triangle ABC with a right angle at C, the hypotenuse AB = 25. If sin(A) = (\frac{4}{5}) , find the length of side BC.",
+    "text": "In a right triangle ABC with a right angle at C, the hypotenuse AB = 25. If sin(A) = (\\frac{4}{5}) , find the length of side BC.",
     "options": [
       "15",
       "25",
@@ -45,7 +45,7 @@ const QUESTIONS = [
   },
   {
     "id": 4,
-    "text": "In a right triangle, the tangent of an acute angle θ is (\frac{4}{7}) . If the side adjacent to θ has a length of 35, what is the area of the triangle in square units?",
+    "text": "In a right triangle, the tangent of an acute angle θ is (\\frac{4}{7}) . If the side adjacent to θ has a length of 35, what is the area of the triangle in square units?",
     "options": [
       "350",
       "700",
@@ -86,10 +86,10 @@ const QUESTIONS = [
     "id": 7,
     "text": "In a right triangle, the lengths of the legs are 8 and 15. What is the value of the sine of the smallest angle?",
     "options": [
-      " (\frac{15}{17}) ",
-      " (\frac{8}{15}) ",
-      " (\frac{17}{8}) ",
-      " (\frac{8}{17}) "
+      " (\\frac{15}{17}) ",
+      " (\\frac{8}{15}) ",
+      " (\\frac{17}{8}) ",
+      " (\\frac{8}{17}) "
     ],
     "answer": 3,
     "explanation": "Choice D is correct. Hypotenuse = ( sqrt{8^2 + 15^2} ) = ( sqrt{64 + 225} ) = ( sqrt{289} = 17 ). The smallest angle is opposite the shortest side (8). sin(smallest angle) = (\\frac{8}{17}) .",
@@ -97,12 +97,12 @@ const QUESTIONS = [
   },
   {
     "id": 8,
-    "text": "In a right triangle, one angle measures x°, where sin(x°) = (\frac{4}{5}) . What is cos(90° − x°)?",
+    "text": "In a right triangle, one angle measures x°, where sin(x°) = (\\frac{4}{5}) . What is cos(90° − x°)?",
     "options": [
-      " (\frac{4}{5}) ",
-      " (\frac{3}{5}) ",
-      " (\frac{3}{4}) ",
-      " (\frac{5}{4}) "
+      " (\\frac{4}{5}) ",
+      " (\\frac{3}{5}) ",
+      " (\\frac{3}{4}) ",
+      " (\\frac{5}{4}) "
     ],
     "answer": 0,
     "explanation": "Choice A is correct. Using the co-function identity: cos(90° − x°) = sin(x°) = (\\frac{4}{5}) .",
@@ -110,12 +110,12 @@ const QUESTIONS = [
   },
   {
     "id": 9,
-    "text": "In a right triangle, the acute angles measure a and b degrees. If sin(a) = (\frac{5}{13}) , what is the value of cos(b)?",
+    "text": "In a right triangle, the acute angles measure a and b degrees. If sin(a) = (\\frac{5}{13}) , what is the value of cos(b)?",
     "options": [
-      " (\frac{12}{13}) ",
-      " (\frac{5}{13}) ",
-      " (\frac{13}{5}) ",
-      " (\frac{5}{12}) "
+      " (\\frac{12}{13}) ",
+      " (\\frac{5}{13}) ",
+      " (\\frac{13}{5}) ",
+      " (\\frac{5}{12}) "
     ],
     "answer": 1,
     "explanation": "Choice B is correct. In a right triangle, ( a + b = 90^circ ), so ( b = 90^circ - a ). Therefore cos(b) = cos(90° − a) = sin(a) = (\\frac{5}{13}) .",
@@ -123,7 +123,7 @@ const QUESTIONS = [
   },
   {
     "id": 10,
-    "text": "An angle has a measure of ( \frac{5pi}{6} ) radians. What is the measure of this angle in degrees?",
+    "text": "An angle has a measure of ( \\frac{5pi}{6} ) radians. What is the measure of this angle in degrees?",
     "options": [
       "120°",
       "210°",
@@ -136,12 +136,12 @@ const QUESTIONS = [
   },
   {
     "id": 11,
-    "text": "The terminal side of an angle θ in standard position intersects the unit circle at the point (−√ (\frac{3}{2}) , (\frac{1}{2}) ). What is the value of sin(θ)?",
+    "text": "The terminal side of an angle θ in standard position intersects the unit circle at the point (−√ (\\frac{3}{2}) , (\\frac{1}{2}) ). What is the value of sin(θ)?",
     "options": [
-      "−√ (\frac{3}{2}) ",
-      "−( \frac{1}{sqrt{3}} )",
+      "−√ (\\frac{3}{2}) ",
+      "−( \\frac{1}{sqrt{3}} )",
       "√3",
-      " (\frac{1}{2}) "
+      " (\\frac{1}{2}) "
     ],
     "answer": 3,
     "explanation": "Choice D is correct. On the unit circle, for a point (x, y): sin(θ) = y. The y-coordinate is (\\frac{1}{2}) , so sin(θ) = (\\frac{1}{2}) .",
@@ -164,10 +164,10 @@ const QUESTIONS = [
     "id": 13,
     "text": "In right triangle PQR with a right angle at Q, PQ = 5 and PR = 13. What is the value of tan(P)?",
     "options": [
-      " (\frac{5}{12}) ",
-      " (\frac{12}{5}) ",
-      " (\frac{12}{13}) ",
-      " (\frac{5}{13}) "
+      " (\\frac{5}{12}) ",
+      " (\\frac{12}{5}) ",
+      " (\\frac{12}{13}) ",
+      " (\\frac{5}{13}) "
     ],
     "answer": 1,
     "explanation": "Choice B is correct. QR = √(PR² − PQ²) = ( sqrt{13^2 - 5^2} ) = ( sqrt{169 - 25} ) = ( sqrt{144} = 12 ). tan(P) = opposite/adjacent = QR/PQ = (\\frac{12}{5}) .",
@@ -175,11 +175,11 @@ const QUESTIONS = [
   },
   {
     "id": 14,
-    "text": "Triangles ABC and DEF are similar right triangles, where ∠C and ∠F are right angles. If sin(A) = (\frac{7}{25}) , what is the value of sin(D)?",
+    "text": "Triangles ABC and DEF are similar right triangles, where ∠C and ∠F are right angles. If sin(A) = (\\frac{7}{25}) , what is the value of sin(D)?",
     "options": [
-      " (\frac{24}{25}) ",
-      " (\frac{7}{24}) ",
-      " (\frac{7}{25}) ",
+      " (\\frac{24}{25}) ",
+      " (\\frac{7}{24}) ",
+      " (\\frac{7}{25}) ",
       "Cannot be determined"
     ],
     "answer": 2,
@@ -203,10 +203,10 @@ const QUESTIONS = [
     "id": 16,
     "text": "A right triangle has legs of length 8 and 15. What is the cosine of the smallest angle in the triangle?",
     "options": [
-      " (\frac{15}{17}) ",
-      " (\frac{8}{17}) ",
-      " (\frac{8}{15}) ",
-      " (\frac{15}{8}) "
+      " (\\frac{15}{17}) ",
+      " (\\frac{8}{17}) ",
+      " (\\frac{8}{15}) ",
+      " (\\frac{15}{8}) "
     ],
     "answer": 0,
     "explanation": "Choice A is correct. Hypotenuse = ( sqrt{8^2 + 15^2} ) = ( sqrt{64 + 225} ) = ( sqrt{289} = 17 ). The smallest angle is opposite the shortest side (8). cos(smallest angle) = adjacent/hypotenuse = (\\frac{15}{17}) .",
@@ -230,7 +230,7 @@ const QUESTIONS = [
     "text": "What is the value of ( cos^2(25^circ) + cos^2(65^circ) )?",
     "options": [
       "0",
-      " (\frac{1}{2}) ",
+      " (\\frac{1}{2}) ",
       "1",
       "Cannot be determined"
     ],
@@ -305,12 +305,12 @@ const QUESTIONS = [
   },
   {
     "id": 24,
-    "text": "In right triangle XYZ with right angle Y, sin(X) = (\frac{3}{5}) . What is tan(Z)?",
+    "text": "In right triangle XYZ with right angle Y, sin(X) = (\\frac{3}{5}) . What is tan(Z)?",
     "options": [
-      " (\frac{4}{3}) ",
-      " (\frac{3}{4}) ",
-      " (\frac{3}{5}) ",
-      " (\frac{4}{5}) "
+      " (\\frac{4}{3}) ",
+      " (\\frac{3}{4}) ",
+      " (\\frac{3}{5}) ",
+      " (\\frac{4}{5}) "
     ],
     "answer": 0,
     "explanation": "Choice A is correct. sin(X) = opposite/hypotenuse = YZ/XZ = (\\frac{3}{5}) . So YZ = 3k, XZ = 5k, and XY = √(5² − 3²)k = 4k. Since Z and X are complementary, tan(Z) = opposite/adjacent = XY/YZ = 4k/3k = (\\frac{4}{3}) .",
@@ -320,9 +320,9 @@ const QUESTIONS = [
     "id": 25,
     "text": "What is the exact value of sin(30°) + cos(60°)?",
     "options": [
-      " (\frac{1}{2}) ",
+      " (\\frac{1}{2}) ",
       "1",
-      "√ (\frac{3}{2}) ",
+      "√ (\\frac{3}{2}) ",
       "√2"
     ],
     "answer": 1,

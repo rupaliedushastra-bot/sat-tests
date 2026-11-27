@@ -113,12 +113,12 @@ const QUESTIONS = [
     "text": "Which of the following is equivalent to \\( (3a^4b^5)^2 \\)?",
     "options": [
       "\\( 9a^6b^7 \\)",
-      "\\( 9a^8b^10 \\)",
-      "\\( 6a^8b^10 \\)",
+      "\\( 9a^8b^{10} \\)",
+      "\\( 6a^8b^{10} \\)",
       "\\( 6a^6b^7 \\)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. When raising a product to a power, raise each factor to that power. \\( 3^2 = 9 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^5)^2 = b^10 \\). Combining these gives \\( 9a^8b^10 \\).",
+    "explanation": "Choice B is correct. When raising a product to a power, raise each factor to that power. \\( 3^2 = 9 \\). Multiply the exponents for variables: \\( (a^4)^2 = a^8 \\) and \\( (b^5)^2 = b^{10} \\). Combining these gives \\( 9a^8b^{10} \\).",
     "topic": "Exponents and Square Roots"
   },
   {
@@ -126,12 +126,12 @@ const QUESTIONS = [
     "text": "Which of the following is equivalent to \\( (2a^5b^2)^2 \\)?",
     "options": [
       "\\( 4a^7b^4 \\)",
-      "\\( 4a^10b^4 \\)",
+      "\\( 4a^{10}b^4 \\)",
       "\\( 4a^7b^4 \\)",
-      "\\( 4a^10b^4 \\)"
+      "\\( 4a^{10}b^4 \\)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^5)^2 = a^10 \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 4a^10b^4 \\).",
+    "explanation": "Choice B is correct. When raising a product to a power, raise each factor to that power. \\( 2^2 = 4 \\). Multiply the exponents for variables: \\( (a^5)^2 = a^{10} \\) and \\( (b^2)^2 = b^4 \\). Combining these gives \\( 4a^{10}b^4 \\).",
     "topic": "Exponents and Square Roots"
   }
 ];

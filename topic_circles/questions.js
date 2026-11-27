@@ -1,371 +1,217 @@
-// =============================================
-// Digital SAT Practice - Topic: topic_circles
-// 25 Questions
-// =============================================
-
 const QUESTIONS = [
   {
-    "id": 1,
-    "useImage": true,
-    "imageKey": "q1_triangle_345",
-    "text": "If a triangle has sides of lengths 3, 4, and 5, what is the triangle's area?",
-    "options": [
-      "6",
-      "7",
-      "8",
-      "9"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. This is a right triangle (3-4-5), with the legs of lengths 3 and 4 acting as the base and height. Area = (1/2) × base × height = (1/2) × 3 × 4 = 6. B), C), D) Incorrect; calculation errors in applying the area formula.",
-    "topic": "Triangle Area"
+    id: 1,
+    topic: "Circle Equation – Center & Radius",
+    text: "In the xy-plane, what is the radius of the circle with equation \\((x - 4)^2 + (y + 3)^2 = 49\\)?",
+    options: ["7", "49", "4", "14"],
+    answer: 0,
+    explanation: "The standard equation of a circle is \\((x - h)^2 + (y - k)^2 = r^2\\). Here \\(r^2 = 49\\), so \\(r = \\sqrt{49} = 7\\)."
   },
   {
-    "id": 2,
-    "useImage": true,
-    "imageKey": "q2_rect_8x5",
-    "text": "A rectangle has a length of 8 and a width of 5. What is its perimeter?",
-    "options": [
-      "26",
-      "30",
-      "34",
-      "40"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The perimeter of a rectangle is given by 2 × (length + width) = 2 × (8 + 5) = 2 × 13 = 26. B) Incorrect; doubles only the length. C) Incorrect; addition error. D) Incorrect; multiplies the length and width instead of adding them.",
-    "topic": "Rectangle Perimeter"
+    id: 2,
+    topic: "Circle Equation – Center Coordinates",
+    text: "What are the coordinates of the center of the circle given by \\((x + 5)^2 + (y - 2)^2 = 36\\)?",
+    options: ["\\((5, -2)\\)", "\\((-5, 2)\\)", "\\((-5, -2)\\)", "\\((5, 2)\\)"],
+    answer: 1,
+    explanation: "Rewriting as \\((x - (-5))^2 + (y - 2)^2 = 6^2\\), the center is \\((h, k) = (-5, 2)\\)."
   },
   {
-    "id": 3,
-    "useImage": true,
-    "imageKey": "q3_circle_16pi",
-    "text": "If the area of a circle is ( 16pi ), what is the radius?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. The area of a circle is given by ( A = pi r^2 ). Setting πr² = ( 16pi ) and dividing both sides by π gives ( r^2 = 16 ). Taking the square root gives ( r = 4 ). A) Incorrect; misunderstanding the area formula. B) Incorrect; wrong square root. D) Incorrect; overestimating the radius.",
-    "topic": "Circle Area & Radius"
+    id: 3,
+    topic: "Circle Area & Circumference",
+    text: "If the circumference of a circle is \\(16\\pi\\), what is the area of the circle?",
+    options: ["\\(16\\pi\\)", "\\(32\\pi\\)", "\\(64\\pi\\)", "\\(256\\pi\\)"],
+    answer: 2,
+    explanation: "From \\(C = 2\\pi r = 16\\pi\\), we get \\(r = 8\\). Thus, \\(A = \\pi r^2 = \\pi (8)^2 = 64\\pi\\)."
   },
   {
-    "id": 4,
-    "useImage": true,
-    "imageKey": "q4_circle_25pi",
-    "text": "If the area of a circle is ( 25pi ) square units, what is the radius?",
-    "options": [
-      "5",
-      "10",
-      "25",
-      "50"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The area of a circle is given by ( A = pi r^2 ). Setting πr² = ( 25pi ) and dividing both sides by π gives ( r^2 = 25 ). Taking the square root gives ( r = 5 ). B), C), D) Incorrect; arithmetic errors in solving for r, such as forgetting to take the square root.",
-    "topic": "Circle Area & Radius"
+    id: 4,
+    topic: "Completing the Square – Circle Center",
+    text: "The equation \\(x^2 - 6x + y^2 + 8y = 0\\) defines a circle in the xy-plane. What is the radius of the circle?",
+    options: ["3", "4", "5", "25"],
+    answer: 2,
+    explanation: "Complete the square: \\((x^2 - 6x + 9) + (y^2 + 8y + 16) = 9 + 16 \\Rightarrow (x - 3)^2 + (y + 4)^2 = 25\\). So \\(r = \\sqrt{25} = 5\\)."
   },
   {
-    "id": 5,
-    "useImage": true,
-    "imageKey": "q5_triangle_b10h5",
-    "text": "What is the area of a triangle with a base of 10 units and a height of 5 units?",
-    "options": [
-      "25 square units",
-      "30 square units",
-      "35 square units",
-      "40 square units"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The area of a triangle is given by ( A = \\frac{1}{2} \times \text{base} \times \text{height} = \\frac{1}{2} \times 10 \times 5 = 25 ) square units. B) Incorrect; misunderstanding the formula. C) Incorrect; incorrect multiplication. D) Incorrect; error in calculation (e.g., forgetting the 1/2 factor).",
-    "topic": "Triangle Area"
+    id: 5,
+    topic: "Arc Length",
+    text: "A circle has a radius of 12. What is the length of an arc intercepted by a central angle of \\(60^\\circ\\)?",
+    options: ["\\(2\\pi\\)", "\\(4\\pi\\)", "\\(6\\pi\\)", "\\(12\\pi\\)"],
+    answer: 1,
+    explanation: "Arc length \\(s = \\frac{60}{360} \\cdot 2\\pi(12) = \\frac{1}{6} \\cdot 24\\pi = 4\\pi\\)."
   },
   {
-    "id": 6,
-    "useImage": true,
-    "imageKey": "q6_cube_side3",
-    "text": "What is the volume of a cube with side length 3 units?",
-    "options": [
-      "9 cubic units",
-      "18 cubic units",
-      "27 cubic units",
-      "36 cubic units"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. The volume of a cube is given by ( V = s^3 ). Substituting s = 3 gives ( V = 3^3 = 27 ) cubic units. A) Incorrect; squares the side instead of cubing it. B) Incorrect; incorrect multiplication. D) Incorrect; misunderstanding the formula.",
-    "topic": "Cube Volume"
+    id: 6,
+    topic: "Sector Area",
+    text: "A sector of a circle with radius 6 has a central angle of \\(120^\\circ\\). What is the area of the sector?",
+    options: ["\\(6\\pi\\)", "\\(12\\pi\\)", "\\(18\\pi\\)", "\\(24\\pi\\)"],
+    answer: 1,
+    explanation: "Sector area \\(= \\frac{120}{360} \\cdot \\pi(6)^2 = \\frac{1}{3} \\cdot 36\\pi = 12\\pi\\)."
   },
   {
-    "id": 7,
-    "text": "If the perimeter of a rectangle is 24 units and the length is 8 units, what is the width?",
-    "options": [
-      "2 units",
-      "4 units",
-      "6 units",
-      "8 units"
-    ],
-    "answer": 1,
-    "explanation": "Choice B is correct. The perimeter of a rectangle is ( P = 2(l + w) ). Given P = 24 and l = 8: 24 = ( 2(8 + w) ), so 24 = ( 16 + 2w ). Subtracting 16 from both sides gives ( 2w = 8 ), so ( w = 4 ) units. A) Incorrect; misunderstanding the perimeter formula. C) Incorrect; error in subtraction. D) Incorrect; confuses length with width.",
-    "topic": "Rectangle Perimeter"
+    id: 7,
+    topic: "Central & Inscribed Angles",
+    text: "Points A, B, and C lie on a circle with center O. If the central angle \\(\\angle AOB = 104^\\circ\\), what is the measure of the inscribed angle \\(\\angle ACB\\)?",
+    options: ["\\(26^\\circ\\)", "\\(52^\\circ\\)", "\\(104^\\circ\\)", "\\(208^\\circ\\)"],
+    answer: 1,
+    explanation: "An inscribed angle is half the measure of the central angle that subtends the same arc: \\(\\frac{104^\\circ}{2} = 52^\\circ\\)."
   },
   {
-    "id": 8,
-    "text": "If the perimeter of a square is 20, what is the length of one side?",
-    "options": [
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "answer": 1,
-    "explanation": "Choice B is correct. The perimeter of a square is given by ( 4 \times \text{side length} ). Setting ( 4 \times \text{side length} ) = 20 and dividing by 4 gives side length = 5. A) Incorrect; misunderstanding the perimeter formula. C), D) Incorrect; results from incorrect division.",
-    "topic": "Square Perimeter"
+    id: 8,
+    topic: "Tangent Line to a Circle",
+    text: "Line segment PT is tangent to a circle with center O at point T. If \\(OT = 5\\) and \\(OP = 13\\), what is the length of PT?",
+    options: ["8", "10", "12", "18"],
+    answer: 2,
+    explanation: "A radius drawn to the point of tangency is perpendicular to the tangent, so \\(\\triangle OTP\\) is a right triangle: \\(PT = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12\\)."
   },
   {
-    "id": 9,
-    "text": "If the area of a rectangle is 24 square units and its length is 8 units, what is its width?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "6"
+    id: 9,
+    topic: "Circle Equation from Diameter Endpoints",
+    text: "A circle in the xy-plane has a diameter with endpoints \\((2, 3)\\) and \\((8, 11)\\). What is the equation of the circle?",
+    options: [
+      "\\((x - 5)^2 + (y - 7)^2 = 25\\)",
+      "\\((x - 5)^2 + (y - 7)^2 = 5\\)",
+      "\\((x - 10)^2 + (y - 14)^2 = 100\\)",
+      "\\((x + 5)^2 + (y + 7)^2 = 25\\)"
     ],
-    "answer": 1,
-    "explanation": "Choice B is correct. The area of a rectangle is given by Area = length × width. Setting ( 24 = 8 \times \text{width} ) and dividing both sides by 8 gives ( \text{width} = 3 ). A) Incorrect; results from incorrect division. C), D) Incorrect; arithmetic errors when dividing 24 by 8.",
-    "topic": "Rectangle Area"
+    answer: 0,
+    explanation: "The center is the midpoint \\(\\left(\\frac{2+8}{2}, \\frac{3+11}{2}\\right) = (5, 7)\\). The radius is the distance from \\((5, 7)\\) to \\((8, 11)\\): \\(r = \\sqrt{(8-5)^2 + (11-7)^2} = \\sqrt{9 + 16} = 5\\). So \\(r^2 = 25\\)."
   },
   {
-    "id": 10,
-    "text": "If the circumference of a circle is given by ( 2pi r ) and the radius is 5, what is the circumference?",
-    "options": [
-      "( 5pi )",
-      "( 10pi )",
-      "1( 5pi )",
-      "( 20pi )"
-    ],
-    "answer": 1,
-    "explanation": "Choice B is correct. Substitute ( r = 5 ) into the formula: Circumference = ( 2pi(5) = 10pi ). A) Incorrect; incorrect multiplication. C) Incorrect; misunderstanding the formula. D) Incorrect; arbitrary value not related to the calculation.",
-    "topic": "Circle Circumference"
+    id: 10,
+    topic: "Radian Measure & Arc Length",
+    text: "In a circle of radius 10, an arc has length \\(\\frac{5\\pi}{2}\\). What is the measure of the central angle, in radians, that intercepts this arc?",
+    options: ["\\(\\frac{\\pi}{8}\\)", "\\(\\frac{\\pi}{4}\\)", "\\(\\frac{\\pi}{2}\\)", "\\(\\frac{2\\pi}{5}\\)"],
+    answer: 1,
+    explanation: "Using \\(s = r\\theta\\), we have \\(\\frac{5\\pi}{2} = 10\\theta \\Rightarrow \\theta = \\frac{5\\pi}{20} = \\frac{\\pi}{4}\\)."
   },
   {
-    "id": 11,
-    "text": "If the volume of a cube is 64 cubic units, what is the length of one side?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. The volume of a cube is given by side³. Setting side³ = 64 and taking the cube root of both sides gives side = 4 (since 4³ = 64). A) Incorrect; misunderstanding the cube root. B) Incorrect; incorrect cube root calculation. D) Incorrect; arbitrary value not related to the calculation.",
-    "topic": "Cube Volume"
+    id: 11,
+    topic: "Point on a Circle",
+    text: "Which of the following points lies on the circle with equation \\((x - 1)^2 + (y + 2)^2 = 25\\)?",
+    options: ["\\((4, 2)\\)", "\\((5, 3)\\)", "\\((1, 5)\\)", "\\((0, 0)\\)"],
+    answer: 0,
+    explanation: "Test \\((4, 2)\\): \\((4 - 1)^2 + (2 + 2)^2 = 3^2 + 4^2 = 9 + 16 = 25\\), which satisfies the equation."
   },
   {
-    "id": 12,
-    "text": "If the area of a rectangle is 24 square units and the length is 6 units, what is the width?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
+    id: 12,
+    topic: "Completing the Square – General Form",
+    text: "The equation \\(x^2 + y^2 + 10x - 4y + 13 = 0\\) represents a circle. What is its center and radius?",
+    options: [
+      "Center \\((-5, 2)\\), radius 4",
+      "Center \\((5, -2)\\), radius 4",
+      "Center \\((-5, 2)\\), radius 16",
+      "Center \\((-10, 4)\\), radius 4"
     ],
-    "answer": 2,
-    "explanation": "Choice C is correct. Use the area formula Area = length × width: 24 = 6 × width. Dividing both sides by 6 gives width = 4. A) Incorrect; misunderstanding the division process. B) Incorrect; incorrect division. D) Incorrect; arithmetic error.",
-    "topic": "Rectangle Area"
+    answer: 0,
+    explanation: "Complete the square: \\((x^2 + 10x + 25) + (y^2 - 4y + 4) = -13 + 25 + 4 \\Rightarrow (x + 5)^2 + (y - 2)^2 = 16\\). Center is \\((-5, 2)\\) and radius is \\(\\sqrt{16} = 4\\)."
   },
   {
-    "id": 13,
-    "text": "What is the sum of the angles in a triangle?",
-    "options": [
-      "90°",
-      "180°",
-      "270°",
-      "360°"
-    ],
-    "answer": 1,
-    "explanation": "Choice B is correct. The sum of the interior angles in any triangle is always 180°. A) Incorrect; this is the measure of a right angle. C) Incorrect; misunderstanding the sum of angles in a polygon. D) Incorrect; this is the sum of angles in a circle (or a quadrilateral).",
-    "topic": "Triangle Angle Sum"
+    id: 13,
+    topic: "Inscribed Right Triangle",
+    text: "Triangle ABC is inscribed in a circle such that side AC is a diameter of the circle. If \\(AB = 9\\) and \\(BC = 12\\), what is the radius of the circle?",
+    options: ["7.5", "10.5", "15", "21"],
+    answer: 0,
+    explanation: "An angle inscribed in a semicircle is a right angle, so \\(\\angle B = 90^\\circ\\). By the Pythagorean theorem, \\(AC = \\sqrt{9^2 + 12^2} = 15\\). Since AC is the diameter, the radius is \\(\\frac{15}{2} = 7.5\\)."
   },
   {
-    "id": 14,
-    "useImage": true,
-    "imageKey": "q14_right_tri_34",
-    "text": "A right triangle has legs of lengths 3 and 4. What is the length of the hypotenuse?",
-    "options": [
-      "5",
-      "6",
-      "7",
-      "8"
+    id: 14,
+    topic: "Circle Tangent to Axes",
+    text: "A circle in the first quadrant is tangent to both the x-axis and the y-axis, and has radius 6. What is the equation of the circle?",
+    options: [
+      "\\((x - 6)^2 + (y - 6)^2 = 6\\)",
+      "\\((x - 6)^2 + (y - 6)^2 = 36\\)",
+      "\\((x + 6)^2 + (y + 6)^2 = 36\\)",
+      "\\((x - 3)^2 + (y - 3)^2 = 36\\)"
     ],
-    "answer": 0,
-    "explanation": "Choice A is correct. Use the Pythagorean theorem: a² + b² = c². Substituting a = 3 and b = 4: 3² + 4² = c², so 9 + 16 = c², giving c² = 25. Taking the square root gives c = 5. B), C), D) Incorrect; do not satisfy the Pythagorean theorem with legs of 3 and 4.",
-    "topic": "Pythagorean Theorem"
+    answer: 1,
+    explanation: "Since the circle is in the first quadrant and tangent to both axes with radius 6, its center is \\((6, 6)\\) and \\(r^2 = 36\\)."
   },
   {
-    "id": 15,
-    "text": "If the area of a square is 49 square units, what is the length of one side?",
-    "options": [
-      "6",
-      "7",
-      "8",
-      "9"
-    ],
-    "answer": 1,
-    "explanation": "Choice B is correct. The area of a square is given by side². Setting side² = 49 and taking the square root of both sides gives side = 7 (since 7² = 49). A), C), D) Incorrect; do not satisfy side² = 49.",
-    "topic": "Square Area"
+    id: 15,
+    topic: "Chord Length & Distance from Center",
+    text: "A circle has a radius of 10. A chord of the circle is 6 units away from the center. What is the total length of the chord?",
+    options: ["8", "12", "16", "20"],
+    answer: 2,
+    explanation: "The perpendicular from the center bisects the chord. Half the chord is \\(\\sqrt{10^2 - 6^2} = \\sqrt{64} = 8\\), so the full chord length is \\(2 \\times 8 = 16\\)."
   },
   {
-    "id": 16,
-    "useImage": true,
-    "imageKey": "q16_rect_8x6",
-    "text": "A rectangle has a length of 8 units and a width of 6 units. What is the perimeter of the rectangle?",
-    "options": [
-      "14 units",
-      "24 units",
-      "28 units",
-      "48 units"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. The perimeter of a rectangle is given by 2(length + width) = 2(8 + 6) = 2 × 14 = 28 units. A) Incorrect; misunderstanding the perimeter formula (this is just the sum of length and width). B) Incorrect; incorrect multiplication. D) Incorrect; multiplies the length and width instead of finding the perimeter.",
-    "topic": "Rectangle Perimeter"
+    id: 16,
+    topic: "Concentric Circles – Ring Area",
+    text: "Two concentric circles have radii 5 and 9. What is the area of the region between the two circles?",
+    options: ["\\(4\\pi\\)", "\\(16\\pi\\)", "\\(56\\pi\\)", "\\(106\\pi\\)"],
+    answer: 2,
+    explanation: "The area of the annulus (ring) is \\(\\pi(9^2 - 5^2) = \\pi(81 - 25) = 56\\pi\\)."
   },
   {
-    "id": 17,
-    "text": "If the area of a rectangle is 24 square units and the width is 4 units, what is the length of the rectangle?",
-    "options": [
-      "6",
-      "8",
-      "10",
-      "12"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The area A of a rectangle is given by A = length × width. Therefore: 24 = length × 4. Dividing both sides by 4 gives length = 6. B), C), D) Incorrect; arithmetic errors when dividing 24 by 4.",
-    "topic": "Rectangle Area"
+    id: 17,
+    topic: "Sector Area in Radians",
+    text: "A circle has radius 8. What is the area of a sector with a central angle of \\(\\frac{3\\pi}{4}\\) radians?",
+    options: ["\\(6\\pi\\)", "\\(12\\pi\\)", "\\(24\\pi\\)", "\\(48\\pi\\)"],
+    answer: 2,
+    explanation: "Sector area in radians is \\(A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(8)^2\\left(\\frac{3\\pi}{4}\\right) = 32 \\cdot \\frac{3\\pi}{4} = 24\\pi\\)."
   },
   {
-    "id": 18,
-    "text": "If the perimeter of a square is 20 units, what is the length of one side?",
-    "options": [
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "answer": 1,
-    "explanation": "Choice B is correct. The perimeter P of a square is given by P = ( 4 \times \text{side length} ). Therefore: 20 = ( 4 \times \text{side length} ). Dividing both sides by 4 gives side length = 5. A) Incorrect; miscalculation in dividing by 4. C), D) Incorrect; errors in understanding the perimeter formula.",
-    "topic": "Square Perimeter"
+    id: 18,
+    topic: "Circle Translation",
+    text: "The circle \\((x - 2)^2 + (y + 5)^2 = 16\\) is translated 4 units to the left and 3 units up. What is the center of the resulting circle?",
+    options: ["\\((-2, -2)\\)", "\\((6, -2)\\)", "\\((-2, -8)\\)", "\\((6, -8)\\)"],
+    answer: 0,
+    explanation: "Original center is \\((2, -5)\\). Translating 4 units left subtracts 4 from x (\\(2 - 4 = -2\\)) and 3 units up adds 3 to y (\\(-5 + 3 = -2\\)), giving \\((-2, -2)\\)."
   },
   {
-    "id": 19,
-    "text": "A right triangle has one angle of 30° and a right angle (90°). What is the measure of the third angle?",
-    "options": [
-      "30°",
-      "45°",
-      "60°",
-      "90°"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. Since the sum of the angles in a triangle is always 180°, the third angle is 180° − 90° − 30° = 60°. A) Incorrect; this is the value of the given angle, not the missing one. B) Incorrect; does not result from 180° − 90° − 30°. D) Incorrect; this is the measure of the right angle that is already given.",
-    "topic": "Triangle Angle Sum"
+    id: 19,
+    topic: "Arc Length Ratio",
+    text: "In a circle, arc AB has length \\(3\\pi\\) and corresponds to a central angle of \\(45^\\circ\\). What is the circumference of the circle?",
+    options: ["\\(12\\pi\\)", "\\(18\\pi\\)", "\\(24\\pi\\)", "\\(36\\pi\\)"],
+    answer: 2,
+    explanation: "Since \\(45^\\circ\\) is \\(\\frac{45}{360} = \\frac{1}{8}\\) of the full circle, the total circumference is \\(8 \\times 3\\pi = 24\\pi\\)."
   },
   {
-    "id": 20,
-    "useImage": true,
-    "imageKey": "q20_cylinder",
-    "text": "A cylinder has a radius of 3 units and a height of 4 units. What is the volume of the cylinder?",
-    "options": [
-      "12π cubic units",
-      "24π cubic units",
-      "36π cubic units",
-      "48π cubic units"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. The volume V of a cylinder is given by V = πr²h. Therefore: V = π × 3² × 4 = π × 9 × 4 = 36π cubic units. A) Incorrect; misunderstanding the formula. B) Incorrect; error in squaring the radius. D) Incorrect; arithmetic error in multiplication.",
-    "topic": "Cylinder Volume"
+    id: 20,
+    topic: "Quadrilateral Inscribed in a Circle",
+    text: "Quadrilateral ABCD is inscribed in a circle. If \\(\\angle A = 78^\\circ\\), what is the measure of the opposite angle \\(\\angle C\\)?",
+    options: ["\\(78^\\circ\\)", "\\(102^\\circ\\)", "\\(112^\\circ\\)", "\\(156^\\circ\\)"],
+    answer: 1,
+    explanation: "Opposite angles of a cyclic (inscribed) quadrilateral are supplementary: \\(\\angle C = 180^\\circ - 78^\\circ = 102^\\circ\\)."
   },
   {
-    "id": 21,
-    "useImage": true,
-    "imageKey": "q21_tri_perimeter",
-    "text": "A triangle has sides of lengths 3, 4, and 5. What is the perimeter of the triangle?",
-    "options": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "answer": 3,
-    "explanation": "Choice D is correct. The perimeter of a triangle is the sum of the lengths of its sides: 3 + 4 + 5 = 12. A) Incorrect; misunderstanding of perimeter calculation. B) Incorrect; adding only two of the three sides. C) Incorrect; arithmetic error in addition.",
-    "topic": "Triangle Perimeter"
+    id: 21,
+    topic: "Circle Equation with Scaled Terms",
+    text: "What is the radius of the circle defined by \\(2x^2 + 2y^2 - 8x + 12y - 6 = 0\\)?",
+    options: ["3", "4", "\\(\\sqrt{13}\\)", "\\(\\sqrt{16}\\)"],
+    answer: 1,
+    explanation: "Divide by 2: \\(x^2 - 4x + y^2 + 6y = 3\\). Complete the square: \\((x - 2)^2 + (y + 3)^2 = 3 + 4 + 9 = 16\\). So \\(r = \\sqrt{16} = 4\\)."
   },
   {
-    "id": 22,
-    "useImage": true,
-    "imageKey": "q22_circle_r7",
-    "text": "If the radius of a circle is 7 units, what is the circumference of the circle?",
-    "options": [
-      "14π",
-      "21π",
-      "28π",
-      "49π"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The circumference of a circle is given by C = ( 2pi r ). Substituting r = 7: C = 2π(7) = 14π. B) Incorrect; incorrect multiplication. C), D) Incorrect; confuse the circumference formula with the area formula or apply incorrect arithmetic.",
-    "topic": "Circle Circumference"
+    id: 22,
+    topic: "Tangent & Secant Angles",
+    text: "Two tangents from an external point P touch a circle at points A and B. If the minor arc AB measures \\(130^\\circ\\), what is the measure of \\(\\angle APB\\)?",
+    options: ["\\(40^\\circ\\)", "\\(50^\\circ\\)", "\\(65^\\circ\\)", "\\(130^\\circ\\)"],
+    answer: 1,
+    explanation: "The central angle \\(\\angle AOB = 130^\\circ\\). In quadrilateral OAPB, \\(\\angle OAP = \\angle OBP = 90^\\circ\\), so \\(\\angle APB = 180^\\circ - 130^\\circ = 50^\\circ\\)."
   },
   {
-    "id": 23,
-    "text": "A circle has a radius of 5 units. What is the circumference of the circle?",
-    "options": [
-      "( 10pi )",
-      "1( 5pi )",
-      "( 20pi )",
-      "( 25pi )"
-    ],
-    "answer": 0,
-    "explanation": "Choice A is correct. The circumference of a circle is given by C = ( 2pi r ). Substituting ( r = 5 ): C = ( 2pi(5) = 10pi ). B), C) Incorrect; arithmetic errors in multiplying 2 and 5. D) Incorrect; this would be the area formula result (πr²) rather than the circumference.",
-    "topic": "Circle Circumference"
+    id: 23,
+    topic: "Square Inscribed in a Circle",
+    text: "A square with side length \\(6\\sqrt{2}\\) is inscribed in a circle. What is the area of the circle?",
+    options: ["\\(18\\pi\\)", "\\(36\\pi\\)", "\\(72\\pi\\)", "\\(144\\pi\\)"],
+    answer: 1,
+    explanation: "The diagonal of the square equals the diameter of the circle: \\(d = (6\\sqrt{2})\\sqrt{2} = 12\\). Thus \\(r = 6\\), and the area is \\(\\pi(6)^2 = 36\\pi\\)."
   },
   {
-    "id": 24,
-    "useImage": true,
-    "imageKey": "q24_square_81",
-    "text": "If the area of a square is 81 square units, what is the length of one side?",
-    "options": [
-      "7",
-      "8",
-      "9",
-      "10"
-    ],
-    "answer": 2,
-    "explanation": "Choice C is correct. The area of a square is given by side². Setting side² = 81 and taking the square root of both sides gives side = 9 (since 9² = 81). A), B), D) Incorrect; misunderstanding or incorrect calculation of the square root.",
-    "topic": "Square Area"
+    id: 24,
+    topic: "Interior vs Exterior Points",
+    text: "A circle has center \\((3, -1)\\) and radius 5. Which of the following points lies strictly INSIDE the circle?",
+    options: ["\\((7, 2)\\)", "\\((8, -1)\\)", "\\((6, 2)\\)", "\\((-2, -1)\\)"],
+    answer: 2,
+    explanation: "A point lies inside if its squared distance to \\((3, -1)\\) is less than \\(5^2 = 25\\). For \\((6, 2)\\): \\((6 - 3)^2 + (2 - (-1))^2 = 9 + 9 = 18 < 25\\)."
   },
   {
-    "id": 25,
-    "useImage": true,
-    "imageKey": "q25_triangle_area24",
-    "text": "If the area of a triangle is 24 square units and the base is 8 units, what is the height of the triangle?",
-    "options": [
-      "3",
-      "4",
-      "5",
-      "6"
-    ],
-    "answer": 3,
-    "explanation": "Choice D is correct. The area A of a triangle is given by A = (1/2) × base × height. Substituting A = 24 and base = 8: 24 = (1/2) × 8 × height, so 24 = 4 × height. Dividing both sides by 4 gives height = 6. A), B), C) Incorrect; arithmetic errors when solving for the height.",
-    "topic": "Triangle Area"
+    id: 25,
+    topic: "Circumference & Area Relationship",
+    text: "If the area of a circle is increased from \\(16\\pi\\) to \\(64\\pi\\), by what factor does the circumference of the circle increase?",
+    options: ["2", "4", "8", "16"],
+    answer: 0,
+    explanation: "The radius increases from \\(\\sqrt{16} = 4\\) to \\(\\sqrt{64} = 8\\), which is a factor of 2. Since circumference \\(C = 2\\pi r\\) is proportional to \\(r\\), it also increases by a factor of 2."
   }
 ];
-
-const TOPIC_MAP = {};
-QUESTIONS.forEach(q => {
-  const key = q.topic || 'General';
-  if (!TOPIC_MAP[key]) {
-    TOPIC_MAP[key] = { name: key, questions: [] };
-  }
-  TOPIC_MAP[key].questions.push(q.id);
-});
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { QUESTIONS, TOPIC_MAP };
-}

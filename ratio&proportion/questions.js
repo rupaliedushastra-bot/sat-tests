@@ -6,11 +6,11 @@
 const QUESTIONS = [
   {
     "id": 1,
-    "text": "If (\text{Rs. } 510) be divided among A, B, C in such a way that A gets (\frac{2}{3}) of what B gets and B gets (\frac{1}{4}) of what C gets, then their shares are respectively:",
+    "text": "If (\\text{Rs. } 510) be divided among A, B, C in such a way that A gets (\\frac{2}{3}) of what B gets and B gets (\\frac{1}{4}) of what C gets, then their shares are respectively:",
     "options": [
-      "(\text{Rs. } 120), (\text{Rs. } 240), (\text{Rs. } 150)",
-      "(\text{Rs. } 60), (\text{Rs. } 90), (\text{Rs. } 360)",
-      "(\text{Rs. } 150), (\text{Rs. } 300), (\text{Rs. } 60)",
+      "(\\text{Rs. } 120), (\\text{Rs. } 240), (\\text{Rs. } 150)",
+      "(\\text{Rs. } 60), (\\text{Rs. } 90), (\\text{Rs. } 360)",
+      "(\\text{Rs. } 150), (\\text{Rs. } 300), (\\text{Rs. } 60)",
       "None of these"
     ],
     "answer": 1,
@@ -32,11 +32,11 @@ const QUESTIONS = [
   },
   {
     "id": 3,
-    "text": "A fraction which bears the same ratio to (\frac{1}{27}) that (\frac{3}{11}) does to (\frac{5}{9}), is equal to:",
+    "text": "A fraction which bears the same ratio to (\\frac{1}{27}) that (\\frac{3}{11}) does to (\\frac{5}{9}), is equal to:",
     "options": [
-      "(\frac{1}{55})",
-      "(\frac{1}{11})",
-      "(\frac{3}{11})",
+      "(\\frac{1}{55})",
+      "(\\frac{1}{11})",
+      "(\\frac{3}{11})",
       "55"
     ],
     "answer": 0,
@@ -45,41 +45,41 @@ const QUESTIONS = [
   },
   {
     "id": 4,
-    "text": "(\text{Rs. } 366) are divided amongst A, B and C so that A may get (\frac{1}{2}) as much as B and C together, B may get (\frac{2}{3}) as much as A and C together. The share of A is:",
+    "text": "(\\text{Rs. } 366) are divided amongst A, B and C so that A may get (\\frac{1}{2}) as much as B and C together, B may get (\\frac{2}{3}) as much as A and C together. The share of A is:",
     "options": [
-      "(\text{Rs. } 122)",
-      "(\text{Rs. } 129.60)",
-      "(\text{Rs. } 146.60)",
-      "(\text{Rs. } 183)"
+      "(\\text{Rs. } 122)",
+      "(\\text{Rs. } 129.60)",
+      "(\\text{Rs. } 146.60)",
+      "(\\text{Rs. } 183)"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. A = ((\\frac{1}{2}))(B+C) → A : (B+C) = (1 : 2) → A = (\\frac{366}{3}) = ( \text{Rs. } 122).",
+    "explanation": "Choice A is correct. A = ((\\frac{1}{2}))(B+C) → A : (B+C) = (1 : 2) → A = (\\frac{366}{3}) = ( \\text{Rs. } 122).",
     "topic": "Division of Amount"
   },
   {
     "id": 5,
-    "text": "A sum of (\text{Rs. } 1300) is divided amongst P, Q, R and S such that P's share / Q's share = Q's share / R's share = R's share / S's share = (\frac{2}{3}). Then P's share is:",
+    "text": "A sum of (\\text{Rs. } 1300) is divided amongst P, Q, R and S such that P's share / Q's share = Q's share / R's share = R's share / S's share = (\\frac{2}{3}). Then P's share is:",
     "options": [
-      "(\text{Rs. } 140)",
-      "(\text{Rs. } 160)",
-      "(\text{Rs. } 240)",
-      "(\text{Rs. } 320)"
+      "(\\text{Rs. } 140)",
+      "(\\text{Rs. } 160)",
+      "(\\text{Rs. } 240)",
+      "(\\text{Rs. } 320)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. P:Q:R:S = 8:12:18:27. Sum = 65. P = ((\\frac{8}{65})) × 1300 = ( \text{Rs. } 160).",
+    "explanation": "Choice B is correct. P:Q:R:S = 8:12:18:27. Sum = 65. P = ((\\frac{8}{65})) × 1300 = ( \\text{Rs. } 160).",
     "topic": "Four Quantities"
   },
   {
     "id": 6,
-    "text": "A and B together have (\text{Rs. } 1210). If (\frac{4}{15}) of A's amount is equal to (\frac{2}{5}) of B's amount, how much amount does B have?",
+    "text": "A and B together have (\\text{Rs. } 1210). If (\\frac{4}{15}) of A's amount is equal to (\\frac{2}{5}) of B's amount, how much amount does B have?",
     "options": [
-      "(\text{Rs. } 460)",
-      "(\text{Rs. } 484)",
-      "(\text{Rs. } 550)",
-      "(\text{Rs. } 664)"
+      "(\\text{Rs. } 460)",
+      "(\\text{Rs. } 484)",
+      "(\\text{Rs. } 550)",
+      "(\\text{Rs. } 664)"
     ],
     "answer": 1,
-    "explanation": "Choice B is correct. ((\\frac{4}{15}))A = ((\\frac{2}{5}))B → A:B = 3:2. B = ((\\frac{2}{5})) × 1210 = ( \text{Rs. } 484).",
+    "explanation": "Choice B is correct. ((\\frac{4}{15}))A = ((\\frac{2}{5}))B → A:B = 3:2. B = ((\\frac{2}{5})) × 1210 = ( \\text{Rs. } 484).",
     "topic": "Two Quantities"
   },
   {
@@ -149,15 +149,15 @@ const QUESTIONS = [
   },
   {
     "id": 12,
-    "text": "A sum of money is to be distributed among A, B, C, D in the proportion of (5 : 2 : 4) : 3. If C gets (\text{Rs. } 1000) more than D, what is B's share?",
+    "text": "A sum of money is to be distributed among A, B, C, D in the proportion of (5 : 2 : 4) : 3. If C gets (\\text{Rs. } 1000) more than D, what is B's share?",
     "options": [
-      "(\text{Rs. } 500)",
-      "(\text{Rs. } 1500)",
-      "(\text{Rs. } 2000)",
+      "(\\text{Rs. } 500)",
+      "(\\text{Rs. } 1500)",
+      "(\\text{Rs. } 2000)",
       "None of these"
     ],
     "answer": 2,
-    "explanation": "Choice C is correct. C−D = 4−3 = 1 part = ( \text{Rs. } 1000). Total = 14 parts = ( \text{Rs. } 14),000. B = 2 × 1000 = ( \text{Rs. } 2000).",
+    "explanation": "Choice C is correct. C−D = 4−3 = 1 part = ( \\text{Rs. } 1000). Total = 14 parts = ( \\text{Rs. } 14),000. B = 2 × 1000 = ( \\text{Rs. } 2000).",
     "topic": "Division with Condition"
   },
   {
@@ -177,9 +177,9 @@ const QUESTIONS = [
     "id": 14,
     "text": "Ratio of the earnings of A and B is (4 : 7). If the earnings of A increase by (50%) and those of B decrease by (25%), the new ratio of their earnings becomes (8 : 7). What are A's earnings?",
     "options": [
-      "(\text{Rs. } 21),000",
-      "(\text{Rs. } 26),000",
-      "(\text{Rs. } 28),000",
+      "(\\text{Rs. } 21),000",
+      "(\\text{Rs. } 26),000",
+      "(\\text{Rs. } 28),000",
       "Data inadequate"
     ],
     "answer": 3,
@@ -292,41 +292,41 @@ const QUESTIONS = [
   },
   {
     "id": 23,
-    "text": "The prices of a scooter and a T.V. are in the ratio (7 : 5). If the scooter costs (\text{Rs. } 8000) more than a T.V. set, then the price of a T.V. set is:",
+    "text": "The prices of a scooter and a T.V. are in the ratio (7 : 5). If the scooter costs (\\text{Rs. } 8000) more than a T.V. set, then the price of a T.V. set is:",
     "options": [
-      "(\text{Rs. } 20),000",
-      "(\text{Rs. } 24),000",
-      "(\text{Rs. } 28),000",
-      "(\text{Rs. } 32),000"
+      "(\\text{Rs. } 20),000",
+      "(\\text{Rs. } 24),000",
+      "(\\text{Rs. } 28),000",
+      "(\\text{Rs. } 32),000"
     ],
     "answer": 0,
-    "explanation": "Choice A is correct. Difference = 2 parts = ( \text{Rs. } 8000) → 1 part = ( \text{Rs. } 4000). T.V. = 5×4000 = ( \text{Rs. } 20),000.",
+    "explanation": "Choice A is correct. Difference = 2 parts = ( \\text{Rs. } 8000) → 1 part = ( \\text{Rs. } 4000). T.V. = 5×4000 = ( \\text{Rs. } 20),000.",
     "topic": "Price Problems"
   },
   {
     "id": 24,
-    "text": "An amount of (\text{Rs. } 735) was divided between A, B and C. If each of them had received (\text{Rs. } 25) less, their shares would have been in the ratio (1 : 3 : 2). The money received by C was:",
+    "text": "An amount of (\\text{Rs. } 735) was divided between A, B and C. If each of them had received (\\text{Rs. } 25) less, their shares would have been in the ratio (1 : 3 : 2). The money received by C was:",
     "options": [
-      "(\text{Rs. } 195)",
-      "(\text{Rs. } 200)",
-      "(\text{Rs. } 225)",
-      "(\text{Rs. } 245)"
+      "(\\text{Rs. } 195)",
+      "(\\text{Rs. } 200)",
+      "(\\text{Rs. } 225)",
+      "(\\text{Rs. } 245)"
     ],
     "answer": 3,
-    "explanation": "Choice D is correct. Reduced total = 735−75 = 660. C's reduced share = ((\\frac{2}{6}))×660 = 220. C's actual = 220+25 = ( \text{Rs. } 245).",
+    "explanation": "Choice D is correct. Reduced total = 735−75 = 660. C's reduced share = ((\\frac{2}{6}))×660 = 220. C's actual = 220+25 = ( \\text{Rs. } 245).",
     "topic": "Division with Reduction"
   },
   {
     "id": 25,
-    "text": "An amount of (\text{Rs. } 2430) is divided among A, B and C such that if their shares be reduced by (\text{Rs. } 5), (\text{Rs. } 10) and (\text{Rs. } 15) respectively, the remainders shall be in the ratio of (3 : 4 : 5). Then B's share was:",
+    "text": "An amount of (\\text{Rs. } 2430) is divided among A, B and C such that if their shares be reduced by (\\text{Rs. } 5), (\\text{Rs. } 10) and (\\text{Rs. } 15) respectively, the remainders shall be in the ratio of (3 : 4 : 5). Then B's share was:",
     "options": [
-      "(\text{Rs. } 605)",
-      "(\text{Rs. } 790)",
-      "(\text{Rs. } 800)",
-      "(\text{Rs. } 810)"
+      "(\\text{Rs. } 605)",
+      "(\\text{Rs. } 790)",
+      "(\\text{Rs. } 800)",
+      "(\\text{Rs. } 810)"
     ],
     "answer": 3,
-    "explanation": "Choice D is correct. Reduced total = 2430−30 = 2400. B's reduced = ((\\frac{4}{12}))×2400 = 800. B's actual = 800+10 = ( \text{Rs. } 810).",
+    "explanation": "Choice D is correct. Reduced total = 2430−30 = 2400. B's reduced = ((\\frac{4}{12}))×2400 = 800. B's actual = 800+10 = ( \\text{Rs. } 810).",
     "topic": "Division with Reduction"
   }
 ];

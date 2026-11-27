@@ -73,10 +73,10 @@ const QUESTIONS = [
     "id": 6,
     "text": "In triangle ABC, angle C is a right angle. The length of side AC is 6 units, and the length of side BC is 8 units. What is the value of sin(A)?",
     "options": [
-      "( \frac{3}{5} )",
-      "( \frac{4}{5} )",
-      "( \frac{3}{4} )",
-      "( \frac{4}{3} )"
+      "( \\frac{3}{5} )",
+      "( \\frac{4}{5} )",
+      "( \\frac{3}{4} )",
+      "( \\frac{4}{3} )"
     ],
     "answer": 1,
     "explanation": "Choice B is correct. Hypotenuse AB = ( sqrt{6^2 + 8^2} ) = ( sqrt{36 + 64} ) = ( sqrt{100} = 10 ). sin(A) = opposite/hypotenuse = BC/AB = ( \\frac{8}{10} ) = ( \\frac{4}{5} ).",
