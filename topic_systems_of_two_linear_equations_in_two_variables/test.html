@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAT Topic Test</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital SAT – Systems of Two Linear Equations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="../country-codes.js"></script>
+  <script src="./questions.js"></script>
+  <link rel="stylesheet" href="../test.css">
+  <style>:root{--accent:#059669;--accent2:#047857;--glow:rgba(5,150,105,0.10);}</style>
   <script>
     window.MathJax = {
       tex: {
@@ -15,86 +22,158 @@
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      startup: {
-        ready: () => {
-          if (window.MathJax && MathJax.startup) {
-            MathJax.startup.defaultReady();
-            const rw = document.getElementById('resWrap') || document.querySelector('.res-wrap') || document.querySelector('.test-container');
-            if (rw && rw.children.length > 0 && MathJax.typesetPromise) {
-              MathJax.typesetPromise([rw]).catch(() => {});
-            }
-          }
-        }
       }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script src="../report.js"></script>
   <script src="../desmos-widget.js"></script>
 </head>
 <body>
-  <div class="test-container">
-    <header class="test-header">
-      <div class="header-left">
-        <a href="../index.html" class="back-btn">← Back</a>
-        <h2>SAT Topic Test - Systems Of Two Linear Equations In Two Variables</h2>
-      </div>
-      <div class="timer">Time Remaining: <span id="time-left">--:--</span></div>
-    </header>
 
-    <div class="split-view">
-      <!-- Question Section -->
-      <section class="question-section">
-        <div class="question-header">
-          <span class="question-number">Question <span id="current-q-num">1</span> of <span id="total-q-num">25</span></span>
-          <button class="mark-review-btn" id="mark-review">⚑ Mark for Review</button>
-        </div>
-        
-        <div class="question-content" id="question-text">
-          <!-- Question text goes here -->
-        </div>
+<div class="saving-overlay" id="savingOverlay">
+  <div class="spin"></div>
+  <p id="savingMsg">Saving your result...</p>
+</div>
 
-        <div class="options-grid" id="options-container">
-          <!-- Options will be injected here -->
-        </div>
-      </section>
-    </div>
-
-    <footer class="test-footer">
-      <div class="footer-left">
-        <button class="nav-btn" id="prev-btn" disabled>Previous</button>
-      </div>
-      <div class="footer-center">
-        <button class="nav-btn" id="grid-btn">⊞ Question Grid</button>
-      </div>
-      <div class="footer-right">
-        <button class="nav-btn" id="next-btn">Next</button>
-        <button class="submit-btn" id="submit-btn" style="display: none;">Submit Test</button>
-      </div>
-    </footer>
+<header class="hdr">
+  <div class="hdr-brand">
+    <a href="../index.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.85rem;margin-right:6px;">← Home</a>
+    <span>🔢</span>
+    <span>Digital SAT</span>
+    <span class="hdr-pill">Topic Test</span>
+    <span class="hdr-module">Systems of Two Linear Equations</span>
   </div>
+  <div class="timer" id="timerBox">
+    <span>⏱</span>
+    <span id="timerDisplay">35:00</span>
+  </div>
+</header>
 
-  <!-- Question Grid Modal -->
-  <div class="modal-overlay" id="grid-modal">
-    <div class="modal-content">
-      <div class="modal-header">
+<!-- PAGE 1: REGISTRATION -->
+<div class="page active" id="pageReg">
+  <div class="reg-wrap">
+    <div class="reg-card">
+      <div class="reg-top">
+        <span class="icon">🔢</span>
+        <h2>Systems of Two Linear Equations</h2>
+        <p>SAT Math · Topic Specific &nbsp;·&nbsp; 10 Questions &nbsp;·&nbsp; 35 Minutes</p>
+      </div>
+      <div class="stat-strip">
+        <div class="s"><div class="val">10</div><div class="lbl">Questions</div></div>
+        <div class="s"><div class="val">35m</div><div class="lbl">Minutes</div></div>
+        <div class="s"><div class="val">Math</div><div class="lbl">Section</div></div>
+        <div class="s"><div class="val">SAT</div><div class="lbl">Format</div></div>
+      </div>
+      <div class="reg-body">
+        <div class="field">
+          <label>Full Name *</label>
+          <input type="text" id="regName" placeholder="Enter your full name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label>Email Address *</label>
+          <input type="email" id="regEmail" placeholder="Enter your email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label>Phone Number</label>
+          <div class="phone-row">
+            <select id="regCC">
+              <option value="+91" selected>🇮🇳 +91 (India)</option>
+              <option value="+1">🇺🇸 +1 (USA)</option>
+              <option value="+44">🇬🇧 +44 (UK)</option>
+              <option value="+971">🇦🇪 +971 (UAE)</option>
+              <option value="+1">🇨🇦 +1 (Canada)</option>
+              <option value="+61">🇦🇺 +61 (Australia)</option>
+            </select>
+            <input type="tel" id="regPhone" placeholder="Phone number">
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="startTest()">▶ &nbsp;Start Test</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: TEST -->
+<div class="page" id="pageTest">
+  <div class="test-wrap">
+    <main>
+      <div class="mod-banner">
+        <div>
+          <div class="mod-name">🔢 Systems of Two Linear Equations</div>
+          <div class="mod-info">10 Questions · SAT Format · 35 Minutes</div>
+        </div>
+        <div style="font-size:0.8rem;color:var(--muted)" id="modProgress">Q 1 of 10</div>
+      </div>
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-badge" id="qBadge">Q 1</span>
+          <span class="q-topic-tag" id="qTopicTag">Systems of Two Linear Equations</span>
+        </div>
+        <div class="q-text" id="qText">Loading question...</div>
+        <div class="opts" id="qOpts"></div>
+        <div class="q-nav">
+          <button class="btn btn-outline" id="btnPrev" onclick="prevQ()" style="visibility:hidden">← Previous</button>
+          <button class="btn btn-primary" id="btnNext" onclick="nextQ()" style="width:auto">Next →</button>
+        </div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="palette-card">
         <h3>Question Navigator</h3>
-        <button class="close-btn" id="close-grid">×</button>
+        <div class="pal-grid" id="palette"></div>
+        <div class="legend">
+          <div class="leg"><div class="leg-dot" style="background:var(--accent)"></div>Answered</div>
+          <div class="leg"><div class="leg-dot" style="background:var(--surface);border:1px solid var(--border)"></div>Not answered</div>
+        </div>
+        <div class="prog-wrap">
+          <div class="prog-bg"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+          <div class="prog-lbl" id="progLbl">0 / 10 answered</div>
+        </div>
       </div>
-      <div class="q-grid" id="question-grid">
-        <!-- Grid items injected here -->
-      </div>
+      <button class="btn btn-danger" onclick="confirmSubmit()">🏁 Submit Test</button>
+    </aside>
+  </div>
+</div>
+
+<!-- PAGE 3: RESULTS -->
+<div class="page" id="pageResult">
+  <div class="res-wrap" id="resWrap"></div>
+</div>
+
+<!-- SUBMIT MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <h3>Submit Test?</h3>
+    <p id="modalMsg">Are you sure you want to submit?</p>
+    <div class="modal-btns">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-danger" style="width:auto" onclick="doSubmit()">Submit</button>
     </div>
   </div>
+</div>
 
-  <!-- Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="../supabase.js"></script>
-  
-  <!-- Questions Data -->
-  <script src="./questions.js"></script>
-  <!-- Main Logic -->
-  <script src="./script.js"></script>
+<!-- ALERT MODAL -->
+<div class="modal-bg" id="alertBg">
+  <div class="modal">
+    <h3>EduQuest-SAT Test</h3>
+    <p id="alertMsg"></p>
+    <div class="modal-btns">
+      <button class="btn btn-primary" style="width:auto" onclick="document.getElementById('alertBg').classList.remove('open')">OK</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.TOPIC_CONFIG = {
+    title: "Systems of Two Linear Equations",
+    icon: "🔢",
+    isMath: true,
+    durationMinutes: 35
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase.js"></script>
+<script src="../report.js"></script>
+<script src="../topic_test_runner.js"></script>
 </body>
 </html>
