@@ -999,9 +999,22 @@
     <!-- DIAGNOSTIC TEST TAB -->
     <div id="diagnostic-section" class="tab-content active">
       <div class="cards">
-        <div class="exam-card">
-          <div class="card-num">01</div>
+        <!-- Official Diagnostic Test 1 (Full 98 Questions, Unlocked) -->
+        <div class="exam-card featured-hard" style="border: 2px solid #2563eb; background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(30, 58, 138, 0.03));">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="background:rgba(37, 99, 235, 0.2); color:#2563eb; border:1px solid rgba(37, 99, 235, 0.35); font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:100px; letter-spacing:0.5px; text-transform:uppercase;">FULL DIAGNOSTIC ASSESSMENT</span>
+            <span style="font-size:0.75rem; color:#16a34a; font-weight:700;">🟢 UNLOCKED FOR ALL</span>
+          </div>
+          <div class="card-num" style="color:#2563eb;">DIAG-01</div>
           <div class="card-title">Diagnostic Test 1</div>
+          <div class="card-sub">4 modules · 98 Qs · 134 min<br>Official Adaptive Diagnostic Suite (Reading &amp; Writing + Math)</div>
+          <span class="tag" style="background:#dcfce7; color:#15803d; border-color:#86efac;">Available (Free)</span>
+          <a href="./mock/sat_diagnostic_1.html" class="card-btn" style="background:#2563eb; color:#ffffff;">Start Diagnostic Test 1 →</a>
+        </div>
+
+        <div class="exam-card">
+          <div class="card-num">02</div>
+          <div class="card-title">Diagnostic Practice Test (Classic)</div>
           <div class="card-sub">2 modules · English &amp; Math mixed<br>Integrated format</div>
           <span class="tag">Available</span>
           <a href="./mock/sat2.html" class="card-btn">Start Test →</a>
@@ -1035,7 +1048,7 @@
 
       const authSection = document.getElementById('auth-section');
       const allBtns = document.querySelectorAll('.card-btn');
-      const unlockedHrefs = ['./test.html', './topic_9/test9.html', './mock/sat2.html'];
+      const unlockedHrefs = ['./test.html', './topic_9/test9.html', './mock/sat2.html', './mock/sat_diagnostic_1.html'];
 
       if (!session) {
         authSection.innerHTML = `<a href="login.html" style="color:#60a5fa; text-decoration:none; border:1px solid #60a5fa; padding:5px 12px; border-radius:4px;">Log In</a>`;
