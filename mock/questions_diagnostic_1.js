@@ -1203,7 +1203,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Algebra — Linear equations in two variables",
     "difficulty": "Hard",
-    "text": "<p>The line with equation 5x − 3y = 30 passes through the points (p, 5) and (−3, q) in the xy-plane. What is the value of p − q?</p>",
+    "text": "<p>The line with equation \\(5x - 3y = 30\\) passes through the points \\((p, 5)\\) and \\((-3, q)\\) in the xy-plane. What is the value of \\(p - q\\)?</p>",
     "options": [
       "24",
       "39",
@@ -1225,7 +1225,7 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Advanced Math — Quadratic inequalities",
     "difficulty": "Hard",
-    "text": "<p>How many positive integers n satisfy the inequality n² − 20n + 64 < 0?</p>",
+    "text": "<p>How many positive integers \\(n\\) satisfy the inequality \\(n^2 - 20n + 64 < 0\\)?</p>",
     "options": [],
     "answer": "11",
     "explanation": "Factor: n² − 20n + 64 = (n − 4)(n − 16). The product is negative when n lies strictly between the zeros 4 and 16. The integers are 5, 6, ..., 15, which is 15 − 5 + 1 = 11 integers. (The endpoints 4 and 16 make the expression equal to 0, so they are excluded.)",
@@ -1244,12 +1244,12 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Exponential equations",
     "difficulty": "Hard",
-    "text": "<p>If 2^x · 4^(x − 1) = 32, what is the value of x?</p>",
+    "text": "<p>If \\(2^x \\cdot 4^{x-1} = 32\\), what is the value of \\(x\\)?</p>",
     "options": [
       "2",
-      "7/3",
+      "\\(\\frac{7}{3}\\)",
       "3",
-      "5/2"
+      "\\(\\frac{5}{2}\\)"
     ],
     "answer": 1,
     "explanation": "Write every power with base 2: 4^(x − 1) = 2^(2(x − 1)) = 2^(2x − 2). The left side is 2^x · 2^(2x − 2) = 2^(3x − 2), and 32 = 2⁵. So 3x − 2 = 5, which gives x = 7/3 (Choice B).",
@@ -1266,10 +1266,10 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Geometry & Trigonometry — Three-dimensional figures (cube)",
     "difficulty": "Hard",
-    "text": "<p>The longest diagonal of a cube, which connects two opposite vertices through the interior, has length 6√3. What is the total surface area of the cube?</p>",
+    "text": "<p>The longest diagonal of a cube, which connects two opposite vertices through the interior, has length \\(6\\sqrt{3}\\). What is the total surface area of the cube?</p>",
     "options": [],
     "answer": "216",
-    "explanation": "For a cube with edge s, the space diagonal is s√3. So s√3 = 6√3 and s = 6. The surface area is 6s² = 6(36) = 216.",
+    "explanation": "For a cube with edge s, the space diagonal is s√3. So s√3 = \\(6\\sqrt{3}\\) and s = 6. The surface area is 6s² = 6(36) = 216.",
     "fillAnswer": "216",
     "acceptedAnswers": [
       "216"
@@ -1285,7 +1285,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Quadratic functions (maximum value)",
     "difficulty": "Hard",
-    "text": "<p>What is the maximum value of the function f(x) = −2x² + 12x − 7?</p>",
+    "text": "<p>What is the maximum value of the function \\(f(x) = -2x^2 + 12x - 7\\)?</p>",
     "options": [
       "18",
       "7",
@@ -1329,7 +1329,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Problem-Solving & Data Analysis — Conditional probability",
     "difficulty": "Hard",
-    "text": "<p>For two events A and B, P(A) = 0.4, P(B) = 0.5, and P(A or B) = 0.7. What is P(B | A), the probability of B given that A occurs?</p>",
+    "text": "<p>For two events A and B, \\(P(A) = 0.4\\), \\(P(B) = 0.5\\), and \\(P(A \\cup B) = 0.7\\). What is \\(P(B|A)\\), the probability of B given that A occurs?</p>",
     "options": [
       "0.7",
       "0.4",
@@ -1351,7 +1351,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Function notation (tables)",
     "difficulty": "Hard",
-    "text": "<p>The table gives values of the functions f and g.</p><div style=\"overflow-x:auto; margin:14px 0;\"><table style=\"margin:0 auto; border-collapse:collapse; border:1.5px solid #cbd5e1; text-align:center; font-size:0.92rem; background:#ffffff;\">\n<thead><tr style=\"background:#f1f5f9;\">\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">x</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">1</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">2</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">3</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">5</th>\n</tr></thead><tbody>\n<tr>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">f(x)</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">3</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">5</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">1</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">6</td>\n</tr>\n<tr>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">g(x)</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">2</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">4</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">4</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">7</td>\n</tr>\n</tbody></table></div><p>What is the value of f(g(1)) + g(f(2))?</p>",
+    "text": "<p>The table gives values of the functions f and g.</p><div style=\"overflow-x:auto; margin:14px 0;\"><table style=\"margin:0 auto; border-collapse:collapse; border:1.5px solid #cbd5e1; text-align:center; font-size:0.92rem; background:#ffffff;\">\n<thead><tr style=\"background:#f1f5f9;\">\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">x</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">1</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">2</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">3</th>\n<th style=\"border:1px solid #cbd5e1; padding:8px 16px; font-weight:700; color:#1e293b;\">5</th>\n</tr></thead><tbody>\n<tr>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">f(x)</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">3</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">5</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">1</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">6</td>\n</tr>\n<tr>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">g(x)</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">2</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">4</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">4</td>\n<td style=\"border:1px solid #cbd5e1; padding:7px 16px; color:#334155;\">7</td>\n</tr>\n</tbody></table></div><p>What is the value of \\(f(g(1)) + g(f(2))\\)?</p>",
     "options": [
       "11",
       "15",
@@ -1392,10 +1392,10 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Geometry & Trigonometry — Circles (arc length and sector area)",
     "difficulty": "Hard",
-    "text": "<p>A sector of a circle has a central angle of 60° and an arc length of 5π. The area of the sector is kπ. What is the value of k?</p>",
+    "text": "<p>A sector of a circle has a central angle of 60° and an arc length of \\(5\\pi\\). The area of the sector is \\(k\\pi\\). What is the value of k?</p>",
     "options": [],
     "answer": "37.5",
-    "explanation": "A 60° angle is π/3 radians, so the arc length is r(π/3) = 5π, which gives r = 15. The sector area is (60/360)πr² = (1/6)π(225) = 37.5π. So k = 37.5 (or 75/2).",
+    "explanation": "A 60° angle is π/3 radians, so the arc length is r(π/3) = \\(5\\pi\\), which gives r = 15. The sector area is (60/360)πr² = (1/6)π(225) = 37.\\(5\\pi\\). So k = 37.5 (or 75/2).",
     "fillAnswer": "37.5",
     "acceptedAnswers": [
       "37.5"
@@ -1411,7 +1411,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Geometry & Trigonometry — Trigonometric relationships",
     "difficulty": "Hard",
-    "text": "<p>For an acute angle θ, cos θ = sin(2θ − 30°). What is the measure of θ, in degrees?</p>",
+    "text": "<p>For an acute angle θ, \\(\\cos\\theta = \\sin(2\\theta - 30°)\\). What is the measure of \\(\\theta\\), in degrees?</p>",
     "options": [
       "50",
       "40",
@@ -1433,7 +1433,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Polynomials (factoring by grouping)",
     "difficulty": "Hard",
-    "text": "<p>What is the product of the positive zeros of the polynomial p(x) = x³ − 3x² − 4x + 12?</p>",
+    "text": "<p>What is the product of the positive zeros of the polynomial \\(p(x) = x^3 - 3x^2 - 4x + 12\\)?</p>",
     "options": [
       "6",
       "3",
@@ -1455,7 +1455,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Problem-Solving & Data Analysis — Linear models",
     "difficulty": "Hard",
-    "text": "<p>A researcher models the percentage of households in a region that own a landline phone as ŷ = 52 − 0.8x, where x is the number of years since 2000. According to the model, in which year will the percentage first reach 20%?</p>",
+    "text": "<p>A researcher models the percentage of households in a region that own a landline phone as \\(\\hat{y} = 52 - 0.8x\\), where x is the number of years since 2000. According to the model, in which year will the percentage first reach 20%?</p>",
     "options": [
       "2045",
       "2030",
@@ -1496,7 +1496,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Equivalent forms (completing the square)",
     "difficulty": "Hard",
-    "text": "<p>The expression x² − 10x + 7 can be written in the form (x − h)² + k, where h and k are constants. What is the value of h + k?</p>",
+    "text": "<p>The expression \\(x^2 - 10x + 7\\) can be written in the form \\((x - h)^2 + k\\), where h and k are constants. What is the value of \\(h + k\\)?</p>",
     "options": [
       "13",
       "−13",
@@ -1562,15 +1562,15 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Geometry & Trigonometry — Coordinate geometry (midpoint and distance)",
     "difficulty": "Hard",
-    "text": "<p>In the xy-plane, the midpoint of segment AB is (4, −1), and the coordinates of A are (−2, 5). What is the length of segment AB?</p>",
+    "text": "<p>In the xy-plane, the midpoint of segment AB is \\((4, -1)\\), and the coordinates of A are \\((-2, 5)\\). What is the length of segment AB?</p>",
     "options": [
       "24",
       "12",
-      "6√2",
-      "12√2"
+      "\\(6\\sqrt{2}\\)",
+      "\\(12\\sqrt{2}\\)"
     ],
     "answer": 3,
-    "explanation": "The midpoint is the average of the endpoints, so B = (2·4 − (−2), 2·(−1) − 5) = (10, −7). The distance from A(−2, 5) to B(10, −7) is √[(12)² + (−12)²] = √288 = 12√2 (Choice D). Choice C (6√2) is the distance from A to the midpoint.",
+    "explanation": "The midpoint is the average of the endpoints, so B = (2·4 − (−2), 2·(−1) − 5) = (10, −7). The distance from A\\((-2, 5)\\) to B(10, −7) is √[(12)² + (−12)²] = √288 = 12√2 (Choice D). Choice C (6√2) is the distance from A to the midpoint.",
     "fillAnswer": "",
     "acceptedAnswers": []
   },
@@ -1586,8 +1586,8 @@ const QUESTIONS = [
     "difficulty": "Hard",
     "text": "<p>A 20-foot ladder leans against a vertical wall and makes a 60° angle with the level ground. How many feet above the ground does the top of the ladder touch the wall?</p>",
     "options": [
-      "10√2",
-      "10√3",
+      "\\(10\\sqrt{2}\\)",
+      "\\(10\\sqrt{3}\\)",
       "20",
       "10"
     ],
@@ -1606,7 +1606,7 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Algebra — Systems (line and parabola)",
     "difficulty": "Hard",
-    "text": "<p>The graphs of y = x² + 4x + c and y = −2x intersect at two distinct points in the xy-plane. If c is an integer, what is the greatest possible value of c?</p>",
+    "text": "<p>The graphs of \\(y = x^2 + 4x + c\\) and \\(y = -2x\\) intersect at two distinct points in the xy-plane. If c is an integer, what is the greatest possible value of c?</p>",
     "options": [],
     "answer": "8",
     "explanation": "Setting the expressions equal gives x² + 4x + c = −2x, so x² + 6x + c = 0. Two distinct intersection points require a positive discriminant: 36 − 4c > 0, so c < 9. The greatest integer less than 9 is 8. (At c = 9, the graphs touch at only one point.)",
@@ -1647,11 +1647,11 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Exponential equations",
     "difficulty": "Hard",
-    "text": "<p>If 3^(2x − 1) = 81, what is the value of x?</p>",
+    "text": "<p>If \\(3^{2x-1} = 81\\), what is the value of x?</p>",
     "options": [
       "3",
       "2",
-      "5/2",
+      "\\(\\frac{5}{2}\\)",
       "4"
     ],
     "answer": 2,
@@ -1669,7 +1669,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Equations with rational exponents",
     "difficulty": "Super Hard",
-    "text": "<p>What is the sum of all real solutions to the equation x^(2/3) − 5x^(1/3) + 6 = 0?</p>",
+    "text": "<p>What is the sum of all real solutions to the equation \\(x^{2/3} - 5x^{1/3} + 6 = 0\\)?</p>",
     "options": [
       "13",
       "5",
@@ -1691,7 +1691,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Exponent rules",
     "difficulty": "Super Hard",
-    "text": "<p>If 3^x = 5 and 3^y = 4, what is the value of 3^(2x − y + 1)?</p>",
+    "text": "<p>If \\(3^x = 5\\) and \\(3^y = 4\\), what is the value of \\(3^{2x - y + 1}\\)?</p>",
     "options": [
       "21",
       "25/4",
@@ -1735,7 +1735,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Geometry & Trigonometry — Area of regions in the coordinate plane",
     "difficulty": "Super Hard",
-    "text": "<p>In the xy-plane, the region defined by |x| + |y| ≤ 4 is a polygon. What is the area of the region?</p>",
+    "text": "<p>In the xy-plane, the region defined by \\(|x| + |y| \\leq 4\\) is a polygon. What is the area of the region?</p>",
     "options": [
       "32",
       "16",
@@ -1757,7 +1757,7 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Geometry & Trigonometry — Trigonometric identities",
     "difficulty": "Super Hard",
-    "text": "<p>For an angle θ, sin θ − cos θ = 1/2. What is the value of sin θ · cos θ? (Enter your answer as a fraction or a decimal.)</p>",
+    "text": "<p>For an angle θ, \\(\\sin\\theta - \\cos\\theta = \\frac{1}{2}\\). What is the value of \\(\\sin\\theta \\cdot \\cos\\theta\\)? (Enter your answer as a fraction or a decimal.)</p>",
     "options": [],
     "answer": "3/8",
     "explanation": "Square both sides: (sin θ − cos θ)² = sin²θ − 2 sin θ cos θ + cos²θ = 1 − 2 sin θ cos θ, since sin²θ + cos²θ = 1. The left side is (1/2)² = 1/4, so 1 − 2 sin θ cos θ = 1/4, which gives 2 sin θ cos θ = 3/4 and sin θ cos θ = 3/8 = 0.375.",
@@ -1777,7 +1777,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Quadratic functions (zeros and vertex)",
     "difficulty": "Super Hard",
-    "text": "<p>A quadratic function f has zeros at x = 1 and x = 3, and f(0) = 3. What is the minimum value of f?</p>",
+    "text": "<p>A quadratic function f has zeros at \\(x = 1\\) and \\(x = 3\\), and \\(f(0) = 3\\). What is the minimum value of f?</p>",
     "options": [
       "0",
       "−1",
@@ -1799,7 +1799,7 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Advanced Math — Radical equations (two radicals)",
     "difficulty": "Super Hard",
-    "text": "<p>What is the solution to the equation √(x + 7) − √(x − 2) = 1?</p>",
+    "text": "<p>What is the solution to the equation \\(\\sqrt{x + 7} - \\sqrt{x - 2} = 1\\)?</p>",
     "options": [],
     "answer": "18",
     "explanation": "Isolate one radical: √(x + 7) = 1 + √(x − 2). Square both sides: x + 7 = 1 + 2√(x − 2) + (x − 2). Simplify: x + 7 = x − 1 + 2√(x − 2), so 8 = 2√(x − 2) and √(x − 2) = 4. Then x − 2 = 16 and x = 18. Check: √25 − √16 = 5 − 4 = 1 ✓.",
@@ -1837,15 +1837,15 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Geometry & Trigonometry — Circle equations",
     "difficulty": "Super Hard",
-    "text": "<p>In the xy-plane, a circle passes through the points (0, 0), (8, 0), and (0, 6). Which of the following is an equation of the circle?</p>",
+    "text": "<p>In the xy-plane, a circle passes through the points \\((0,0)\\), \\((8,0)\\), and \\((0,6)\\). Which of the following is an equation of the circle?</p>",
     "options": [
-      "(x − 4)² + (y − 3)² = 5",
-      "(x + 4)² + (y + 3)² = 25",
-      "(x − 8)² + (y − 6)² = 100",
-      "(x − 4)² + (y − 3)² = 25"
+      "\\((x-4)^2 + (y-3)^2 = 5\\)",
+      "\\((x+4)^2 + (y+3)^2 = 25\\)",
+      "\\((x-8)^2 + (y-6)^2 = 100\\)",
+      "\\((x-4)^2 + (y-3)^2 = 25\\)"
     ],
     "answer": 3,
-    "explanation": "The points (0, 0), (8, 0), and (0, 6) form a right triangle with its right angle at the origin, so the hypotenuse from (8, 0) to (0, 6) is a diameter of the circle. The center is the midpoint of that hypotenuse, (4, 3), and the diameter is √(64 + 36) = 10, so the radius is 5. The equation is (x − 4)² + (y − 3)² = 25 (Choice D). Choice A has the radius, not the radius squared, on the right side.",
+    "explanation": "The points \\((0,0)\\), \\((8,0)\\), and \\((0,6)\\) form a right triangle with its right angle at the origin, so the hypotenuse from (8, 0) to (0, 6) is a diameter of the circle. The center is the midpoint of that hypotenuse, (4, 3), and the diameter is √(64 + 36) = 10, so the radius is 5. The equation is (x − 4)² + (y − 3)² = 25 (Choice D). Choice A has the radius, not the radius squared, on the right side.",
     "fillAnswer": "",
     "acceptedAnswers": []
   },
@@ -1881,7 +1881,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Quadratic optimization (revenue)",
     "difficulty": "Super Hard",
-    "text": "<p>A company's weekly revenue, in dollars, from selling a product at a price of p dollars is modeled by R(p) = p(120 − 4p). What is the maximum weekly revenue, in dollars, according to the model?</p>",
+    "text": "<p>A company's weekly revenue, in dollars, from selling a product at a price of p dollars is modeled by \\(R(p) = p(120 - 4p)\\). What is the maximum weekly revenue, in dollars, according to the model?</p>",
     "options": [
       "1,800",
       "1,200",
@@ -1925,15 +1925,15 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Geometry & Trigonometry — Inscribed figures and area",
     "difficulty": "Super Hard",
-    "text": "<p>A square is inscribed in a circle with a radius of 5√2, so that all four vertices of the square lie on the circle. What is the area of the region inside the circle but outside the square?</p>",
+    "text": "<p>A square is inscribed in a circle with a radius of \\(5\\sqrt{2}\\), so that all four vertices of the square lie on the circle. What is the area of the region inside the circle but outside the square?</p>",
     "options": [
-      "50π − 50",
-      "25π − 50",
-      "100π − 100",
-      "50π − 100"
+      "\\(50\\pi - 50\\)",
+      "\\(25\\pi - 50\\)",
+      "\\(100\\pi - 100\\)",
+      "\\(50\\pi - 100\\)"
     ],
     "answer": 3,
-    "explanation": "The square's diagonal is a diameter of the circle, so the diagonal is 10√2 and the side is (10√2)/√2 = 10. The square's area is 100. The circle's area is π(5√2)² = 50π. The region inside the circle but outside the square has area 50π − 100 (Choice D).",
+    "explanation": "The square's diagonal is a diameter of the circle, so the diagonal is 10√2 and the side is (10√2)/√2 = 10. The square's area is 100. The circle's area is π(\\(5\\sqrt{2}\\))² = 50π. The region inside the circle but outside the square has area 50π − 100 (Choice D).",
     "fillAnswer": "",
     "acceptedAnswers": []
   },
@@ -1991,7 +1991,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Complex numbers (powers)",
     "difficulty": "Super Hard",
-    "text": "<p>Which of the following is equal to (1 + i)⁸, where i = √−1?</p>",
+    "text": "<p>Which of the following is equal to \\((1+i)^8\\), where \\(i = \\sqrt{-1}\\)?</p>",
     "options": [
       "256",
       "−16",
@@ -2013,12 +2013,12 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Algebra — Absolute value inequalities",
     "difficulty": "Super Hard",
-    "text": "<p>Which of the following gives all values of x that satisfy |2x − 6| ≥ 8?</p>",
+    "text": "<p>Which of the following gives all values of x that satisfy \\(|2x - 6| \\geq 8\\)?</p>",
     "options": [
-      "x ≤ −7 or x ≥ 1",
-      "−7 ≤ x ≤ 1",
-      "x ≤ −1 or x ≥ 7",
-      "−1 ≤ x ≤ 7"
+      "\\(x \\leq -7\\) or \\(x \\geq 1\\)",
+      "\\(-7 \\leq x \\leq 1\\)",
+      "\\(x \\leq -1\\) or \\(x \\geq 7\\)",
+      "\\(-1 \\leq x \\leq 7\\)"
     ],
     "answer": 2,
     "explanation": "An absolute value is at least 8 when the expression inside is at most −8 or at least 8. So 2x − 6 ≤ −8 gives x ≤ −1, and 2x − 6 ≥ 8 gives x ≥ 7. The solution is x ≤ −1 or x ≥ 7 (Choice C). Choice D is the solution to |2x − 6| ≤ 8, which reverses the inequality.",
@@ -2035,10 +2035,10 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Geometry & Trigonometry — Cones (surface area)",
     "difficulty": "Super Hard",
-    "text": "<p>A right circular cone has a base radius of 5 and a slant height of 13. The lateral surface area of the cone (not including the base) is kπ. What is the value of k?</p>",
+    "text": "<p>A right circular cone has a base radius of 5 and a slant height of 13. The lateral surface area of the cone (not including the base) is \\(k\\pi\\). What is the value of k?</p>",
     "options": [],
     "answer": "65",
-    "explanation": "The lateral surface area of a cone is πrl, where r is the base radius and l is the slant height. So the area is π(5)(13) = 65π, and k = 65. (The cone's height is √(13² − 5²) = 12, but it is not needed.)",
+    "explanation": "The lateral surface area of a cone is πrl, where r is the base radius and l is the slant height. So the area is π(5)(13) = 6\\(5\\pi\\), and k = 65. (The cone's height is √(13² − 5²) = 12, but it is not needed.)",
     "fillAnswer": "65",
     "acceptedAnswers": [
       "65"
@@ -2073,7 +2073,7 @@ const QUESTIONS = [
     "isFillIn": true,
     "topic": "Algebra — Systems (line and circle)",
     "difficulty": "Super Hard",
-    "text": "<p>The line y = 2x − 1 intersects the circle (x − 2)² + (y + 1)² = 20 at two points. What is the sum of the x-coordinates of the two points of intersection? (Enter your answer as a fraction or a decimal.)</p>",
+    "text": "<p>The line \\(y = 2x - 1\\) intersects the circle \\((x-2)^2 + (y+1)^2 = 20\\) at two points. What is the sum of the x-coordinates of the two points of intersection? (Enter your answer as a fraction or a decimal.)</p>",
     "options": [],
     "answer": "4/5",
     "explanation": "Substitute y = 2x − 1, so y + 1 = 2x. Then (x − 2)² + (2x)² = 20, which gives x² − 4x + 4 + 4x² = 20, so 5x² − 4x − 16 = 0. The discriminant is 16 + 320 = 336 > 0, so there are two intersection points. By Vieta's formulas, the sum of the roots is −(−4)/5 = 4/5 = 0.8.",
@@ -2093,7 +2093,7 @@ const QUESTIONS = [
     "isFillIn": false,
     "topic": "Advanced Math — Equivalent expressions (squaring)",
     "difficulty": "Super Hard",
-    "text": "<p>If x + 1/x = 3, what is the value of x² + 1/x²?</p>",
+    "text": "<p>If \\(x + \\frac{1}{x} = 3\\), what is the value of \\(x^2 + \\frac{1}{x^2}\\)?</p>",
     "options": [
       "5",
       "7",
